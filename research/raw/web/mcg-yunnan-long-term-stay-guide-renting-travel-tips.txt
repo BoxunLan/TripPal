@@ -1,0 +1,404 @@
+# source: https://mychina.guide/blog/yunnan-long-term-stay-guide-renting-travel-tips
+# final: https://mychina.guide/blog/yunnan-long-term-stay-guide-renting-travel-tips
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:31.891Z
+# bytes(raw): 76187
+# bytes(text): 19029
+# title: Yunnan Long-Term Stay Guide 2026: Dali, Lijiang, Kunming
+Yunnan Long-Term Stay Guide 2026: Dali, Lijiang, Kunming
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · March 8, 2026 · 13 min read · 1,733 views
+Yunnan Long-Term Stay Guide 2026: Renting & Travel Tips
+
+M MyChinaGuide Editorial Team · Updated September 27, 2026
+
+On this page 12 sections 01 What this guide covers
+02 Can You Actually Base Yourself in Yunnan?
+03 Visa Paths for 1-3 Months
+04 The 24-Hour Police Registration Rule
+05 Finding Accommodation: Where Long-Stayers Actually Look
+06 Kunming vs Dali: Which Base Is Right?
+07 Coworking and Digital Nomad Infrastructure
+08 Regional Transport: Kunming, Dali, Lijiang, Shangri-La
+09 Weather Windows: When to Arrive
+10 Digital Setup for Yunnan
+11 Quick Checklist for a Long Yunnan Stay
+12 Frequently Asked Questions
+
+Yunnan is the closest thing China has to a digital nomad province. Mild weather year-round, ¥1500-4500 monthly rents, easy HSR and flights to the rest of the country, and a small but real foreign community in Dali and Kunming make it viable for a 1-3 month stay. The catch is the legal layer: you need the right visa, 24-hour police registration at your actual address, and landlords willing to handle the paperwork. This 2026 guide walks through every step from visa application to Dali homestay negotiation.
+What this guide covers
+Which visa actually fits a 1-3 month stay (L, M, F, Z, X) and the real per-entry stay limits
+
+The 24-hour police registration rule and what happens if you miss it
+
+Dali, Kunming, Lijiang and Shangri-La compared for long stays
+
+Rental platforms, realistic monthly costs and deposit rules
+
+Coworking spaces, weather windows and regional transport
+
+Digital setup: Alipay, VPN, eSIM, Didi, translation apps
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Can You Actually Base Yourself in Yunnan?
+Yes, and it is increasingly common. Yunnan sits at 1500-2400 meters elevation, which means Kunming enjoys 18-24 C year-round ("City of Eternal Spring") and Dali's winters are bright and mild. High-speed rail now connects Kunming to Dali (2 hours, ¥145) and Lijiang (3 hours, ¥220), and daily flights from Kunming reach almost every major city in China.
+The provincial infrastructure makes it practical, but the hub-and-spoke model matters. Most long-stayers pick one base city and treat the rest of Yunnan as weekend trips:
+Kunming: best transit hub, largest foreign community, most English medical care, flattest and easiest for newcomers.
+
+Dali: most relaxed, biggest digital nomad scene, strongest homestay market, mountain and lake scenery.
+
+Lijiang: most touristy, prettiest old town, but weaker long-term infrastructure.
+
+Shangri-La: highest elevation (3200 m), harshest winters, only suitable for short stays.
+
+If your goal is to see Stone Forest, Tiger Leaping Gorge and the Meili snow mountains, staying in one place still works - you just supplement with 2-5 night side trips rather than one 30-day rental.
+Visa Paths for 1-3 Months
+A 30-day tourist entry is not enough for a serious long stay. You need a proper visa issued by a Chinese embassy or consulate before you arrive.
+L-visa (Tourist)
+Standard tourist visa, available at every Chinese embassy.
+
+Duration: the length of each stay is set by the consulate and printed on your visa — you cannot simply pick it. A standard single-entry tourist L visa is usually 30 days per entry. You can show a longer itinerary and ask, but 30 days is the common outcome.
+
+Multiple-entry options: US citizens can get a 10-year multiple-entry L visa. The "10 years" is only how long the visa stays valid — each individual stay is still capped, typically at 60 days for this US visa. It does not let you stay for years at a stretch.
+
+Cost: USD 140-185 for US citizens; varies by nationality.
+
+Best for: tourism and scenic visits, in stays of roughly 30 days (up to 60 for US holders of the 10-year visa). A 90-day stay usually means a business (M) or other visa, not a tourist L.
+
+M-visa (Business)
+For business meetings, conferences or trade shows. Requires an invitation letter from a Chinese company.
+
+Duration: typically 30-60 days per entry, often multiple-entry for 6-12 months.
+
+Best for: remote workers with a legitimate business purpose who can secure a letter.
+
+F-visa (Non-commercial exchange)
+For cultural exchange, study tours, research visits. Requires an invitation from a qualifying Chinese institution.
+
+Duration: similar to M-visa.
+
+Best for: academic or cultural visitors on organized programs.
+
+Z-visa (Work) and X-visa (Student)
+Z-visa requires an employer-sponsored work permit and is converted to a residence permit after arrival.
+
+X1 or X2 visas require enrollment at a Chinese university or language school. Dali has several Mandarin schools that sponsor X-visas for 1-3 month intensive programs.
+
+2026 Visa-free entry (NOT enough for long stay)
+The expanded 2026 visa-free policy allows citizens of 50 countries to enter mainland China for up to 30 days, but you cannot stretch this into a 60 or 90 day stay. If you want a month-long base in Yunnan and you are on the visa-free list, you still need to either keep your stay under 30 days or apply for a formal L-visa with a longer validity.
+Extensions
+Extending your stay locally at the Exit-Entry Administration in Kunming is possible but never guaranteed. Apply at least 7 days before your current stay expires, bring your passport, a photo, and your 24-hour registration slip, and budget around ¥160 for most nationalities but ¥760 for US citizens. An extension adds at most 30 more days, and the total extended stay cannot exceed your original visa duration — so plan a long trip around an extension you confirm locally, or a visa run out and back, never on the assumption that you can request a 90-day stay upfront.
+The 24-Hour Police Registration Rule
+This is the most critical regulatory hurdle and the one most long-stay foreigners underestimate. Chinese law requires every foreigner to register their actual residence with the local police within 24 hours of arrival at any new address.
+How it works in practice
+Hotels and licensed serviced apartments: handle registration automatically at check-in. You give them your passport, they scan it, and you receive a small slip called the "zhusu dengji." Keep this slip.
+
+Private rentals: you and your landlord must walk together to the nearest paichusuo (local police station). You bring your passport, visa, and the landlord's property ownership certificate. Together you fill out a Temporary Residence Registration Form.
+
+Consequences of failing to register: warnings for first-time offenders, fines up to ¥2000 for repeat or willful violations, and potential trouble on exit if you cannot produce a recent registration slip at the border.
+
+Why some landlords refuse foreigners
+Many individual Chinese landlords refuse to rent to foreigners purely because they do not want to visit the police station or deal with tax reporting. Do not take this personally. Move to the next listing.
+Finding Accommodation: Where Long-Stayers Actually Look
+Airbnb stopped operating inside mainland China in 2022, so the options have narrowed. Here is where real long-stayers find places in 2026.
+Serviced apartments (safest legal option)
+Serviced apartments are licensed to host foreigners and handle police registration like a hotel. Book via Trip.com, Booking.com or Agoda. Expect ¥3000-8000 per month depending on city and tier. In Kunming, look for properties around Cuihu Park or Beichen. In Dali, look around Caicun on Erhai Lake.
+Minshu (guesthouses)
+Family-run guesthouses are the backbone of Dali and Lijiang's long-stay scene. Book 3-5 nights via Trip.com first, visit in person, and negotiate a monthly rate face-to-face. Monthly rates run ¥1500-4000 in Dali and slightly higher in Lijiang's old town. Always confirm registration support before committing.
+Ziroom (长租房 - Chinese long rental platform)
+Ziroom is China's largest professional long-rental operator. Listings are real, apartments are renovated, and registration is handled cleanly. Requires a Chinese phone number for signup. Monthly rates in Kunming run ¥2500-5500 for a modern 1-bedroom. Not available in Dali or Lijiang.
+Lianjia (链家) / Beike
+Traditional residential brokerage for professional landlords. You pay one month's broker fee in addition to rent. Chinese language skills required. Best for serious 3+ month stays in Kunming.
+Meituan (美团) for short-monthly
+Meituan has hotel and apartment listings that accept monthly bookings. Often the cheapest way to secure a "30-day hotel" at ¥2500-4000 that handles registration automatically.
+Estimated monthly costs for 2026
+Location
+
+Vibe
+
+Rent (1 BR)
+
+Registration
+
+Dali (Caicun, Wase)
+
+Relaxed, nomad hub
+
+¥1500-4500
+
+High (guesthouses)
+
+Kunming (Cuihu, Beichen)
+
+Urban, transit hub
+
+¥2500-6500
+
+Medium (Ziroom OK)
+
+Lijiang (Shuhe, Old Town)
+
+Historic, touristy
+
+¥2000-5500
+
+Medium (guesthouses)
+
+Shangri-La
+
+Remote, Tibetan
+
+¥2000-4500
+
+Low (few listings)
+
+Xishuangbanna
+
+Tropical, unique
+
+¥2500-5500
+
+Low to medium
+
+Add ¥300-700 monthly for utilities (water, electricity, gas, internet) in private rentals. Standard deposits are one month's rent in private rentals, zero in most minshu and serviced apartments.
+Kunming vs Dali: Which Base Is Right?
+Kunming for urban comfort and transit
+Kunming has the biggest foreign community in Yunnan, three metro lines, a major international airport, imported groceries at Metro and Sam's Club, English-speaking hospitals at Yanan Hospital, several coworking spaces (Wework, DianShang) and the best medical care in the province. The weather is the single best in China - 18-24 C year-round. Downsides: it is a real city, not a scenic base, and the most interesting parts of Yunnan are 2-5 hour HSR rides away.
+Dali for the digital nomad scene
+Dali has the strongest bona fide nomad community in mainland China. The village of Caicun on the shore of Erhai Lake hosts 10+ coworking cafes and a rotating population of remote workers from Europe, the US and Southeast Asia. Rents are lower, the pace is slower, and you wake up to lake and mountain views. Downsides: limited medical infrastructure (major issues require a 2-hour HSR ride to Kunming), winter wind in December-February can be harsh despite mild temperatures, and tourism crowds surge during Chinese holidays.
+Lijiang for heritage
+Lijiang's Old Town is a UNESCO site and stunning, but it is the most touristy of the four options. Long-stay infrastructure exists but is thinner than Dali, and winter elevation (2400 m) makes December-February cold. Good for shorter 2-4 week cultural stays, less ideal as a 3-month base.
+Coworking and Digital Nomad Infrastructure
+Dali: Coworking cafes along Erhai Lake in Caicun and Shuanglang. Monthly memberships ¥300-600. Daily rates ¥40-60. Good fiber, reliable power.
+
+Kunming: Larger coworking operators like UCommune and DianShang in the Beichen and South Lake districts. Monthly dedicated desk ¥800-1500. Daily drop-in ¥80-120. Meeting rooms available.
+
+Lijiang: A small number of nomad cafes near Shuhe Old Town. Less professional than Dali.
+
+Shangri-La: Essentially none. Stay short-term only.
+
+Mobile 5G covers all provincial capitals. Home fiber in serviced apartments runs 300-500 Mbps. Public Wi-Fi in coworking cafes is 50-100 Mbps.
+Regional Transport: Kunming, Dali, Lijiang, Shangri-La
+Kunming to Dali: Fuxing HSR, 2 hours 4 minutes, ¥145-230 second class. 12+ departures daily from Kunming South Station.
+
+Dali to Lijiang: HSR, 1.5 hours, ¥75-120. Hourly departures.
+
+Lijiang to Shangri-La: No HSR. Daily coaches (4 hours, ¥70) or private drivers (¥400-600). Rail line under construction, not expected until 2028.
+
+Kunming to Xishuangbanna: HSR, 3.5 hours, ¥275. Runs several times per day.
+
+Kunming to Shanghai: HSR via Guiyang, 11-12 hours, ¥1200 second class. Most long-stayers fly (¥600-1500 one-way, 3 hours).
+
+Use the 12306 official app or Trip.com to book HSR 14 days in advance. Passport is required at the station, no paper ticket is issued.
+Weather Windows: When to Arrive
+Month
+
+Kunming
+
+Dali
+
+Lijiang
+
+Notes
+
+Jan-Feb
+
+Mild, dry
+
+Windy, cold
+
+Cold
+
+Lunar New Year crowds
+
+Mar-May
+
+Peak spring
+
+Peak spring
+
+Peak spring
+
+Best 2 months
+
+Jun-Aug
+
+Rainy
+
+Rainy
+
+Rainy
+
+Monsoon, green landscapes
+
+Sep-Oct
+
+Clear
+
+Clear
+
+Clear
+
+Best for photography
+
+Nov-Dec
+
+Mild, dry
+
+Dry, windy
+
+Cold
+
+Good for Kunming, harder for Dali
+
+Avoid Chinese Golden Week (October 1-7) and Spring Festival (February 17, 2026) for arrival - every train, flight and hotel surges 200-400% in price. The best arrival windows are mid-March to mid-May and mid-September to mid-October.
+Digital Setup for Yunnan
+Alipay: install before arrival, link Visa or Mastercard, upload passport for identity verification. This is how you pay for everything, buy train tickets, call Didi and top up your phone.
+
+WeChat: create an account while you still have overseas access. Once inside China, new accounts frequently require a Chinese citizen's scan to activate. WeChat mini-programs are how you book park tickets, order food and chat with landlords.
+
+Amap (Gaode): primary mapping app. Google Maps is unreliable in Yunnan.
+
+Didi: available in English as a standalone app or embedded in Alipay. A Didi ride across Kunming is ¥15-40.
+
+Meituan: food delivery and hotel booking. English support is limited but workable.
+
+VPN: install a reputable paid VPN before you cross the border. Free VPNs are blocked. A travel eSIM (Airalo, Nomad, eSIM Go) with China routing can bypass the Great Firewall without a VPN.
+
+Translation: Google Translate offline pack for Mandarin + simplified Chinese, plus Baidu Translate as backup.
+
+Quick Checklist for a Long Yunnan Stay
+[ ] Apply for the right visa at your local Chinese embassy — a 30-day (US: 60-day) tourist L visa, or an M/F/X visa if your purpose fits.
+
+[ ] Install Alipay and WeChat Pay, verify with passport.
+
+[ ] Book first 3-5 nights at a registered hotel or serviced apartment.
+
+[ ] Purchase a travel eSIM with China routing (Airalo, Nomad, Holafly).
+
+[ ] Install paid VPN as backup.
+
+[ ] Research neighborhoods on Amap before arrival.
+
+[ ] Ask every potential landlord: "Can you help register me at the paichusuo?"
+
+[ ] Complete police registration within 24 hours of moving to any new address.
+
+[ ] Keep every registration slip safe until you leave China.
+
+[ ] Register your embassy's travel advisory system for emergency contact.
+
+Frequently Asked Questions
+Can foreigners rent long-term in Yunnan?
+Yes, legally and in practice. You need a valid visa (typically a 30-day tourist L visa (up to 60 days for US holders of the 10-year visa, extendable once locally), or an M or F visa with an invitation), a cooperative landlord willing to visit the local police station, and completion of 24-hour police registration at your actual address. Serviced apartments and licensed guesthouses simplify the process; private rentals via Lianjia or Ziroom require Chinese language skills.
+What is the cheapest city in Yunnan for digital nomads?
+Dali is the cheapest city with a real nomad infrastructure. Monthly guesthouse rents start around ¥1500 in shoulder season and climb to ¥4500 for well-located 1-bedroom apartments on Erhai Lake. Kunming is slightly more expensive (¥2500-6500) but offers better medical care and transport. Remote Shangri-La is cheap but has almost no nomad community or reliable internet.
+Do I need to register with the police within 24 hours in Yunnan?
+Yes, Chinese law requires every foreigner to register their residence with the local paichusuo within 24 hours of arrival at any new address. Hotels and licensed serviced apartments handle this automatically. Private rentals require you and your landlord to visit the police station together. Failure to register can result in warnings, fines up to ¥2000, and problems when you try to leave China.
+Is Kunming or Dali better for a 1-month base in Yunnan?
+Kunming is better if you want urban comfort, medical care, transit flexibility and a larger foreign community. Dali is better if you want a slower pace, lower costs, lake views and a real digital nomad scene. Most long-stayers start with 3 nights in Kunming to acclimatize, then move to Dali as their main base, using HSR for side trips to Lijiang, Shaxi and Shangri-La.
+Does the 2026 visa-free policy cover a long stay in Yunnan?
+No. The expanded 2026 visa-free policy allows citizens of 50 countries to enter mainland China for up to 30 days, but it does not allow stays beyond that limit. If you want a full month or longer in Yunnan, apply for a proper tourist L visa before you travel (30 days, up to 60 for US citizens) and plan to extend it locally or do a visa run, or explore M, F, Z or X visa options depending on your purpose.
+If a month is what you have rather than what you want, spend it outside the obvious places. The north Yunnan villages are where long-stayers end up, Lijiang's courtyard hotels under ¥200 are cheaper by the week than by the night, and the tea guide matters more here than anywhere else in China, because you will be offered a lot of it.
+
+Share this article
+
+Tags
+# yunnan # dali # kunming # lijiang # digital nomad # long term stay # china visa
+
+Travelers also asked
+View all →
+How can I find a two-month apartment rental in Kunming if Ziroom has nothing listed? →
+
+Related articles
+View all →
+March 4, 2026 · Itinerary
+Thirty Days in Rural China: The Registration Problem Comes First
+
+March 29, 2026 · Destination
+Hidden Gems of North Yunnan: 8 Authentic Villages Guide 2026
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

@@ -1,0 +1,250 @@
+# source: https://mychina.guide/blog/beijing-subway-card-vs-mobile-payment
+# final: https://mychina.guide/blog/beijing-subway-card-vs-mobile-payment
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:22.271Z
+# bytes(raw): 75389
+# bytes(text): 16648
+# title: Beijing Subway: Yikatong Card vs Alipay (Save Up to 50%)
+
+Beijing Subway: Yikatong Card vs Alipay (Save Up to 50%)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · January 15, 2026 · 12 min read · 4,124 views
+Beijing Subway Card vs Mobile Payment: Which Is Better?
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 11 sections 01 Yikatong Card: The Old-School Workhorse
+02 Mobile Payment: Alipay & WeChat Pay QR Codes
+03 New Since 2024: Tap Your Foreign Bank Card at the Gate
+04 Multi-Day Passes and the Yitongxing App
+05 NFC Phones & Foreign Wallets: What Works at the Gate
+06 Cost Comparison: What’s Really Cheaper?
+07 Which Option Is Best for Your Trip Length?
+08 How to Set Up Mobile Payment Before Landing
+09 Frequently Asked Questions
+10 The Discount Most Tourists Miss (and Lose Money On)
+11 The New Option: Alipay "Tap-to-Ride" NFC Card (碰一下交通卡)
+
+Do you need a subway card in Beijing, or can you just use your phone like back home?
+Let me tell you something — beijing subway payment options for tourists have multiplied, and the best one depends on how long you’re staying.
+So today, I’m breaking down exactly what works, what doesn’t, and which option will save you time, money, and stress during your trip. Whether you're here for three days or three weeks, this is what you need to know before you go.
+
+Yikatong Card: The Old-School Workhorse
+This little blue card has been around since 2003 and still works flawlessly across subways, buses, even some convenience stores.
+You can buy a Yikatong card at major stations like Dongzhimen, Beijing South Railway Station, or Capital Airport Terminal 3. Head to the service counter labeled “Ticket & Card Services.” No ID needed. Just hand over ¥100 — that’s $14 — and you’ll get the card with ¥80 usable balance plus a ¥20 deposit that you get back when you return the card.
+Pro tip: Keep the card even after your trip. It never expires.
+
+Can you get a refund when you leave? Yes. Hand an undamaged card in at a station service point and you get the ¥20 deposit and your remaining balance back, as long as the balance is ¥200 or less. Damaged cards go to a Yikatong customer service center.
+Here’s the thing nobody tells you: you must tap out when exiting. If you forget, the system can charge you the maximum fare because it assumes you took the longest possible route.
+
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+
+Mobile Payment: Alipay & WeChat Pay QR Codes
+This is where things changed in July 2023, when Alipay and WeChat Pay started accepting foreign cards. Before that, foreign tourists had to jump through hoops to use mobile payments. Now? Much smoother.
+Open Alipay , search “Beijing Metro” or go to the “Transport” tab. Tap “Beijing Public Transport Card,” agree to terms, and freeze ¥20 as a virtual deposit. That’s it. You don’t need a Chinese bank account anymore.
+WeChat Pay works the same way: scan the QR code at the gate, same as Alipay. Fare? Identical to Yikatong: ¥3–4 for a typical 5–10 km ride.
+But here’s the catch: you need internet . If your data cuts out — say, underground or due to poor roaming — the QR code won’t load.
+Pro tip: Use Alipay ’s Tour Card function. Load a prepaid CNY balance (say, ¥200) using your foreign card. Avoids FX fees later and works offline for small purchases.
+
+If you’re staying less than a week and already have Alipay set up, skip the physical card.
+
+New Since 2024: Tap Your Foreign Bank Card at the Gate
+This is the option that quietly beats everything else for short visits: Beijing's metro now accepts foreign contactless bank cards directly at the fare gates. Visa and Mastercard tap-to-ride started in September 2024, and since June 15, 2025, all 29 lines and 523 stations, plus the S2 suburban railway, accept contactless cards from all five major networks — Visa, Mastercard, UnionPay, JCB, and American Express. You pay the same local fare as everyone else: no app, no registration, no Chinese phone number. You can even buy single-journey tickets for travel companions at the vending machines with the same card.
+If your bank card has the contactless symbol, try it at the gate before setting up anything fancier. The QR-code setups below still matter for buses, small shops, and cities that haven't caught up — but for the Beijing metro specifically, your own bank card is now the lowest-friction option.
+Multi-Day Passes and the Yitongxing App
+Beijing sells unlimited-ride metro passes: 1-day ¥20, 2-day ¥30, 3-day ¥40, 5-day ¥70, and 7-day ¥90 (airport lines excluded). The catch for visitors: they're sold inside Yitongxing (亿通行), Beijing's official metro app, and registering currently requires a mainland Chinese phone number. An international version supporting foreign numbers was announced in 2024, but as of mid-2026 we can't confirm it has shipped — don't build your plans around it. Double-check current pass prices in the app if you do have a way in.
+Run the math before chasing a pass at all: a typical metro ride costs ¥3–5, so the 3-day pass only wins if you ride four-plus times a day. At normal sightseeing pace, tapping your own bank card ride-by-ride costs less than the pass — and needs zero setup.
+NFC Phones & Foreign Wallets: What Works at the Gate
+Can’t you just add your credit card to Apple Pay and tap like back home?
+Possibly, but carry the card itself too. The gates take contactless cards on five networks: UnionPay, Visa, Mastercard, JCB and American Express. Beijing’s announcements for foreign cards only describe tapping the card. The one phone setup officially confirmed is Apple Pay or Huawei Pay with a UnionPay card, which the gates have accepted since December 2020.
+So if you try your phone’s wallet with a Visa or Mastercard and the gate doesn’t open, tap the physical card instead.
+Some third-party booths at the airport claim they can “activate” your phone for NFC use. Red flag. Avoid them.
+
+Cost Comparison: What’s Really Cheaper?
+Let’s break down real numbers:
+Yikatong purchase : ¥100 total (¥20 refundable deposit + ¥80 usable)
+
+Single subway ride : ¥3–10, depending on distance
+
+Mobile payment fare : Same as Yikatong — no difference
+
+Card return : deposit and remaining balance refunded
+
+Recharge cost : Free at machines or via Alipay
+
+Taxi fallback when tech fails : About ¥35 / $5
+
+Now, imagine you're here for five days, taking four rides daily. That’s 20 trips at ¥5 average = ¥100 spent.
+With Yikatong: Buy one card for ¥100, recharge once with ¥50. Total cost: ¥150, and the ¥20 deposit plus any unused balance comes back when you return the card.
+With Alipay: Freeze ¥20 virtual deposit. Spend ¥100. No loss. Reuse balance elsewhere.
+So financially, the two come out about even for a short stay.
+But for long-term visitors or repeat travelers, Yikatong is better.
+Pro tip: Buy one Yikatong and recharge it — don’t buy multiple cards.
+
+Which Option Is Best for Your Trip Length?
+For Short Stays (1–5 Days): Use Alipay
+If you’re here under a week, especially with pre-downloaded apps, Alipay is your best bet. No upfront cash, no risk of losing a card, and you can use leftover funds for food or souvenirs.
+Just make sure:
+You activate the transport pass before arriving
+
+You have roaming/data enabled
+
+You’ve tested the QR code once
+
+For Long Stays (6+ Days) or Repeat Visits: Get a Yikatong
+Staying longer? Going on day trips? Bring cash and grab a Yikatong. More reliable than QR codes, works even if your phone dies.
+Also better if you plan to take buses outside central Beijing. Some rural routes don’t scan QR codes consistently, so keep the card with you on day trips, such as out to the Great Wall .
+Plus, you can use it at 7-Eleven, Starbucks, even some parking meters.
+
+How to Set Up Mobile Payment Before Landing
+Don’t wait until you land. Do this before your flight:
+Download Alipay Global App or WeChat Pay
+
+Register with your passport and foreign phone number
+
+Go to “Transport” > Search “Beijing Metro”
+
+Select “Beijing Public Transport Card”
+
+Confirm and freeze ¥20 (this isn’t a charge — it’s held temporarily)
+
+Test the QR code
+
+Yes, you can link Visa/Mastercard directly: Alipay and WeChat Pay have accepted foreign cards since July 2023. No Chinese bank account needed.
+You might also find these guides helpful: Why Your Visa Application Got Rejected (And How to Fix It) , How to Order Coffee in China Without Speaking Chinese , and How to Use Didi in China Without a Chinese Phone Number .
+Pro tip: Save the QR code to your phone’s wallet or screenshot it. Faster than opening the app every time.
+
+Q: Can foreigners use mobile metro China systems easily?
+Yes. Both Alipay and WeChat Pay let foreign users activate Beijing subway QR codes without a Chinese bank account. Just link your Visa or Mastercard; both apps have accepted foreign cards since July 2023.
+Q: Is the Yikatong card worth it for tourists?
+Only if you're staying over a week or plan to reuse it. The ¥20 deposit comes back when you return an undamaged card, but buying and returning the card takes a stop at a station service point.
+Q: What happens if my phone dies on the subway?
+If using mobile payment, you’ll need to buy a single-journey ticket at the machine (¥3–10, depending on distance). With Yikatong, you’re safe. Always carry backup cash — about ¥50.
+Q: Can I share my Alipay login with family?
+No — each person needs their own account. But you can help them set it up. Never share verification codes — phishing scams exist.
+Q: Are there any hidden fees with mobile payments?
+No. Fares are identical to Yikatong. However, foreign card transactions may incur FX fees from your bank — using Alipay’s Tour Card minimizes this.
+
+The bottom line? For most tourists, mobile payment via Alipay is the smarter choice in 2024 . It’s cheaper, faster, and more flexible. But if you hate relying on your phone — or plan to come back — the Yikatong card still earns its keep.
+Either way, now you know what actually works. You’ll thank yourself when you breeze past the ticket line while others fumble with cash.
+The Discount Most Tourists Miss (and Lose Money On)
+Nearly every guide tells you to "just use Alipay's QR code." It works—but it quietly costs frequent riders money. Beijing gives a monthly cumulative fare discount that only applies to the Yikatong card and NFC phone cards, not to scan-the-QR payments or single-trip tickets.
+Here's how the monthly discount stacks up (resets on the 1st of each month):
+Spent this month on subway
+
+Discount on next rides
+
+Under ¥100
+
+Full price
+
+¥100 reached
+
+20% off (8折)
+
+¥150 reached
+
+50% off (5折)
+
+¥400 reached
+
+Back to full price (cap)
+
+So a commuter or heavy sightseer who hits ¥150 in a month rides at half price for the rest of the month—but only if they paid with a card, not a QR scan. If you scan an Alipay/WeChat QR code, you pay full fare every single ride, no matter how much you spend.
+Important: The basic transit QR code (支付宝乘车码 / WeChat Transit Code) is the easiest method, but it does not qualify for Beijing's monthly cumulative fare discount—the rule explicitly excludes QR-scan and single-trip fares ("刷乘车码与单程票不享受此优惠"). For occasional rides this doesn't matter; for daily use it's the most expensive way to ride.
+The New Option: Alipay "Tap-to-Ride" NFC Card (碰一下交通卡)
+In November 2025 Alipay launched a virtual transit card you add inside the app—think of it as a Yikatong card living on your phone. It solves the two biggest complaints about QR codes at once:
+It earns the monthly discount. Because it counts as a card (not a QR scan), it qualifies for the up-to-50% monthly cumulative discount.
+
+It works with your phone screen off—and even with no signal or a dead-ish battery. You don't open Alipay or pull up a code; you just hold your phone's NFC area near the gate reader and it taps through, even on a powered-off or networkless phone (NFC stays active on most phones in reserve-power mode).
+
+Foreigners can set it up. Open Alipay → 出行/Transport → pick Beijing → verify your identity (passport or an overseas phone number is now accepted) → the card is issued instantly. No Chinese bank account or Chinese SIM required.
+
+If you have an NFC Android phone, this is now the best all-round choice for a multi-day Beijing trip: passport-only setup, automatic discounts, and it won't strand you if your battery dies. (Note: it relies on phone NFC, which on iPhones is more limited.)
+Trip distance
+
+Single fare
+
+0–6 km
+
+¥3
+
+6–12 km
+
+¥4
+
+12–22 km
+
+¥5
+
+22–32 km
+
+¥6
+
+Over 32 km
+
++¥1 per extra 20 km, capped at ¥10
+
+(Airport Express lines are priced separately: Capital Airport Express ¥25; Daxing Airport Express ¥10–¥35.)
+With a typical 2–4 sightseeing rides a day at ¥3–¥6 each, a week of riding easily crosses ¥100–¥150—the exact range where a card flips to 20–50% off and a QR code does not. That's the real cost difference, not the deposit.
+Cost to start: ¥20 refundable deposit + a first top-up (minimum ¥20).
+
+Buying with a passport: Bring your passport to a subway service center (the main Yikatong customer center is at Dongzhimen; many stations also have service windows). Since 31 July 2024 there's also the BEIJING PASS (International Yikatong) aimed at overseas/HK/Macau/Taiwan visitors—the physical card needs no real-name identity binding , though you should carry your passport.
+
+Getting your deposit back: Use a self-service Yikatong kiosk in the station: tap "Refund," choose Alipay or WeChat, and the deposit + remaining balance is refunded instantly and the card is voided. Staffed windows refund in cash only. Keep your balance under ¥200 when refunding.
+
+Since June 15, 2025, the Beijing subway has accepted tap-and-go with five card networks— UnionPay, Mastercard, Visa, JCB, and American Express —at all gates on every line plus the S2 suburban railway. You tap your physical contactless card straight on the gate. The catch: foreign-card taps are billed per-ride and do not earn the monthly cumulative discount, so for daily riders they're the priciest option. They're best as a no-setup backup, not your main method.
+
+Tags
+# beijing travel tips # china subway guide # tourist payment methods # alipay china # yikatong card
+
+View all →
+Can foreigners use Alipay and WeChat Pay in China with international credit cards? →
+What are the best payment methods for travelers in China, and are credit cards or cash widely accepted? →
+How does the cashless payment system work for travelers in China? →
+For a first trip to Shanghai, what should I set up for eSIM, payments, metro, and train tickets? →
+
+View all →
+February 15, 2026 · How-To Guide
+Paying in Beijing 2026: Digital Wallet Setup Guide
+
+March 30, 2026 · How-To Guide
+Fee-Free ATMs at Beijing Daxing Airport (PKX) Arrivals 2026
+
+April 11, 2026 · How-To Guide
+China Survival Guide for Tourists: Essentials for 2026
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

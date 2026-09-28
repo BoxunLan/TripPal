@@ -1,0 +1,379 @@
+# source: https://mychina.guide/blog/how-to-use-meituan-bike-in-china
+# final: https://mychina.guide/blog/how-to-use-meituan-bike-in-china
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:28.453Z
+# bytes(raw): 77085
+# bytes(text): 17873
+# title: How to Use Meituan Bike in China (2026 Foreigner Guide)
+How to Use Meituan Bike in China (2026 Foreigner Guide)
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · January 14, 2026 · 13 min read · 5,689 views
+How to Use Meituan Bike in China: Foreigner's 2026 Rental Guide
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 14 sections 01 What This Guide Covers
+02 Meituan vs. Hello Bike vs. Qingju: Quick Context
+03 Step 1: Make Sure Your Alipay Is Fully Set Up
+04 Step 2: Find the Meituan Bike Mini-program in Alipay
+05 Step 3: Unlock and Ride (The First Time)
+06 Step 4: 2026 Pricing — Single Ride vs. Passes
+07 Step 5: Ending a Ride Without Getting Fined
+08 Which Cities Meituan Bikes Actually Work In
+09 Helmets, Traffic Rules, and Staying Alive
+10 Alternatives: Hello Bike and Qingju
+11 Common Errors and Fixes
+12 Safety Habits for Foreign Riders
+13 Cost Comparison: 7 Days of City Transport
+14 FAQ
+
+The yellow Meituan bikes on every Chinese sidewalk are the best deal in urban transport. A 15-minute ride across Beijing's hutongs costs ¥1.5. A month of unlimited commuting runs ¥29. The only reason foreigners struggle with them is the unlock flow, and the fix takes five minutes once you know where to tap.
+You do not need the standalone Meituan app. Almost no visitor should install it. Everything runs through the Meituan mini-program inside Alipay, which means you use the same Alipay account you've already set up for restaurants, taxis, and convenience stores. This guide assumes you have Alipay installed and verified with your passport. If you do not, set that up first, then come back.
+What This Guide Covers
+Why you should use Meituan through Alipay, not the Meituan app
+
+Step-by-step first-time unlock from scratch
+
+2026 pricing: pay-per-ride, daily pass, weekly pass, monthly pass
+
+How to scan, unlock, and end a ride correctly
+
+Parking zones, fines, and the white-line rule
+
+Which cities Meituan bikes actually work in
+
+Alternatives (Hello Bike, Qingju) and when to use them
+
+MyChinaGuide app · free
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Meituan vs. Hello Bike vs. Qingju: Quick Context
+Three companies dominate Chinese bike sharing in 2026: Meituan (yellow), Hello Bike (blue, owned by Alibaba/Ant), and Didi Qingju (green). They cover overlapping territory but not identical territory, and each runs on a different mini-program.
+Brand
+
+Color
+
+Mini-program Host
+
+Typical City Coverage
+
+Meituan Bike
+
+Yellow
+
+Alipay + Meituan
+
+Beijing, Shanghai, Chengdu, Guangzhou, Shenzhen, ~200 more
+
+Hello Bike
+
+Blue
+
+Alipay + Zhifubao
+
+Shanghai, Hangzhou, Nanjing, most Tier 2 cities
+
+Qingju (Didi)
+
+Green
+
+Didi app
+
+Beijing, Chengdu, Kunming, Chongqing
+
+Meituan has the widest Tier 1 coverage, which is why this guide focuses on it. In practice, you'll open whichever one has a bike sitting in front of you, and all three flows are similar. Master one and you can use all three.
+Step 1: Make Sure Your Alipay Is Fully Set Up
+Before you touch a bike, confirm three things inside Alipay:
+Passport-verified account (实名认证). Settings → Account → Verification. You should see your name, passport number, and a green verified badge.
+
+An international card linked , or Tour Pass activated. Shared bikes accept both, but foreign cards sometimes fail at the pay step if the bank is not on Alipay's accepted list. The prepaid Tour Pass avoids every card problem.
+
+Location permission granted to Alipay. The mini-program needs your GPS to find nearby bikes and confirm you're within a legal parking zone.
+
+If any of these are missing, deal with them first. A failed payment at the end of a ride means the bike stays rented and costs keep stacking until you fix it.
+Step 2: Find the Meituan Bike Mini-program in Alipay
+You have two ways to reach the bike mini-program:
+Fastest: open Alipay, tap the big yellow scan icon at the top, and scan the QR code on any Meituan bike directly. The mini-program opens automatically. This is the normal flow once you're on the street.
+First-time setup: on the Alipay home screen, search 美团单车 (or "Meituan Bike" in English) in the top search bar. The first result is the mini-program. Tap it once, and Alipay adds it to your recent services so you can pull it up faster next time.
+On the first open, the mini-program will ask for location access and display a short terms-of-service screen. Accept both. Deposit is typically waived for verified Alipay users in 2026, but some first-time users still see a ¥299 deposit prompt. If it appears, you can skip it by choosing the "credit unlock" (信用免押) option, which uses your Alipay Zhima Credit score in place of the cash deposit. No cash leaves your account.
+Step 3: Unlock and Ride (The First Time)
+Walk up to a Meituan bike parked in a legal zone.
+
+Open Alipay, tap scan (扫一扫) at the top of the home screen.
+
+Point the camera at the QR code on the handlebar or rear wheel fender. The lock clicks open in 1-3 seconds.
+
+You'll hear a mechanical click from the rear wheel lock. Push the bike forward to confirm the wheel spins freely.
+
+Ride off. The timer starts the moment the lock opens.
+
+If the lock does not open after 10 seconds, the bike may be damaged, low on battery, or flagged for service. Tap "report problem" (上报故障) in the mini-program, which frees any charge, and find another bike. Never force a stuck lock.
+Step 4: 2026 Pricing — Single Ride vs. Passes
+Pricing is identical across most Tier 1 cities and only varies slightly in smaller cities. These are the 2026 rates as of early April:
+Plan
+
+Price (CNY)
+
+Who It's For
+
+Pay-per-ride
+
+¥1.5 per 15 min (Beijing/Shanghai: first 15 min ¥1.5, then ¥0.5 each 15 min)
+
+Occasional visitor
+
+1-day pass
+
+¥3.5
+
+Day trip with 2-3 rides
+
+3-day pass
+
+¥9.9
+
+Long weekend
+
+7-day pass
+
+¥14.9
+
+Week-long stay
+
+30-day pass
+
+¥29.9
+
+Month in one city
+
+90-day pass
+
+¥59.9
+
+Expats and long-stay digital nomads
+
+The monthly pass is the single best deal in Chinese urban transport. ¥29.9 for unlimited bike rides in Beijing beats one metro round-trip per day. Buy it from the mini-program home screen under 骑行卡 (ride pass). Passes are city-specific, a Beijing pass does not work in Shanghai, so only buy if you plan to stay in one city.
+Payment deducts automatically from Alipay at the end of each ride. No confirmation taps needed once the initial authorization is granted.
+Step 5: Ending a Ride Without Getting Fined
+This is where foreigners get fined, and the fines are real. ¥10-50 gets tacked onto your next ride if you park outside a legal zone.
+Legal parking zones are painted white rectangles on the sidewalk with a bicycle icon and sometimes a small blue "P" sign. In 2026, many major cities also accept parking anywhere on the sidewalk in the "non-restricted" zone, but downtown districts inside the second ring road in Beijing, Jing'an in Shanghai, and central Chengdu all require white-line parking.
+The mini-program shows a live map of legal parking zones, marked with green dashed rectangles. Open the mini-program mid-ride and check the map if you're unsure.
+The correct end-ride flow:
+Ride to a legal parking zone (green on the mini-program map, white rectangle on the ground).
+
+Push the rear lock lever down manually. The lock clicks closed and you'll hear a beep.
+
+The mini-program auto-ends the ride and shows the fare within 10-15 seconds.
+
+Confirm the ride summary screen. It shows distance, time, fare, and the final parking location.
+
+If the ride does not end, you are not in a legal zone. Walk the bike to the nearest white rectangle and close the lock there.
+
+If you close the lock in a forbidden zone, you'll see a 调度费 (relocation fee) charge of ¥5-20. Paying it ends the ride, but you're out the money. Always check the map first.
+Which Cities Meituan Bikes Actually Work In
+Meituan bikes are reliably operable in roughly 200 cities across China. For a foreign visitor, these are the ones that matter:
+Beijing : full coverage inside 5th ring road, patchier beyond
+
+Shanghai : full coverage in central districts, Pudong along metro lines
+
+Chengdu : full coverage inside 3rd ring road
+
+Guangzhou : full coverage Yuexiu, Tianhe, Haizhu
+
+Shenzhen : good coverage in Futian and Nanshan
+
+Hangzhou : available but Hello Bike is more common, both work
+
+Xi'an : available inside the City Wall and along metro corridors
+
+Nanjing, Suzhou, Wuhan : full coverage in central districts
+
+Where they do not work: most smaller historic towns (Pingyao, Lijiang, Yangshuo), rural areas, and some protected districts inside historic cores. For Yangshuo and the Li River valley, use a private bike rental shop at ¥30-50 per day. For Pingyao inside the walls, walk.
+Helmets, Traffic Rules, and Staying Alive
+Helmets are rare on shared bikes. Most riders don't wear them. Beijing and Shanghai have soft helmet laws for e-bikes that are strictly enforced for e-bike delivery riders but loosely enforced for casual pedal bike users. If you want a helmet, buy one at any Decathlon or Miniso for ¥50-100 and carry it.
+Ride on the bike lane (the marked lane to the right of the car lane, separated by a white line or curb). Do not ride on sidewalks in Beijing or Shanghai, traffic police will stop you. In smaller cities, sidewalk riding is common but still technically illegal.
+Hand signals, yield at unmarked crossings, and assume every electric scooter behind you will pass on the wrong side. China's urban traffic is navigable by bike, but only if you ride defensively. Do not use headphones. Do not hold your phone.
+Alternatives: Hello Bike and Qingju
+If you can't find a Meituan bike, scan any bike you see. The flow is near-identical:
+Hello Bike (Hello 出行) : Alipay mini-program, same scan flow, ¥1.5 / 15 min, strong in Shanghai and Hangzhou
+
+Didi Qingju (青桔) : Didi app has the mini-program, or search 青桔 in Alipay. Cheapest in Chengdu and Kunming
+
+Private rentals in tourist towns: Yangshuo, Pingyao, Dali rent regular bikes for ¥30-50 per day, cash or WeChat Pay
+
+For a 14-day China trip covering multiple cities, the pay-per-ride model is almost always cheaper than buying passes. For a 2-week stay in a single city, get the monthly pass on day one.
+Common Errors and Fixes
+Shared bikes are reliable about 90% of the time, and the other 10% catches every new rider. Here are the real errors you'll hit and how to clear them in under a minute.
+"Unable to unlock, bike needs service"
+The lock has a known fault and Meituan flagged the bike. No charge is applied as long as you move on within 30 seconds. Tap "report bike" (上报故障) in the mini-program so the next rider doesn't waste time on the same unit. Choose a bike at least 10 meters away, repeated scans on the same flagged bike will not work.
+"Payment method failed"
+Your linked foreign card got declined by the Alipay payment gateway. This usually means the card issuer blocked a small yuan authorization as suspicious. Open Alipay, go to Payment Methods, switch to Alipay HK Tour Pass or top up a small yuan balance from your bank card (¥50 is enough). Retry the ride. The prepaid balance avoids every card-level decline.
+"Outside service area"
+The bike you scanned is flagged for a restricted zone you just rode into. You probably crossed an invisible boundary, often near a historic district gate or a park with a no-share-bike rule. The mini-program overlays a red "no parking" shadow on the map to show the restricted area. Walk the bike outside the red zone, then close the lock. No fine applies if you end the ride in a legal area.
+Long-time loop on "unlocking..."
+Weak cell signal on the bike's onboard chip. Wait 10 seconds. If nothing happens, push the rear lock lever down and tap "refresh" in the app. 9 times out of 10 this retries the Bluetooth handshake and the lock clicks open. If it still fails, abandon the bike and try another one.
+Accidental ride on someone else's account
+Happens when family members share one phone for scanning. Always scan with the Alipay account that holds the prepaid balance or the deposit-free credit. If a family member scans from their account by accident, they pay. No way to transfer the ride to a different account mid-trip.
+Safety Habits for Foreign Riders
+China's urban traffic has its own rhythm. Foreigners who assume Western cycling rules get dinged fast, sometimes literally. A few habits to build before your first ride.
+Assume electric scooters will pass you on either side. Delivery riders on Meituan's electric scooters routinely weave between pedal bikes at 40km/h. Hold your line and do not swerve.
+
+Green lights are not immunity. Right-turning cars in China often ignore the pedestrian green phase. Confirm the intersection is clear before crossing on a green bike-lane signal.
+
+Ride with the flow. Most Chinese cities have bike lanes on both sides of the street, one for each traffic direction. Going against the flow is tolerated but dangerous. Stay in the correct-direction lane.
+
+Night riding needs a light. Most Meituan bikes do not have reflectors. The front basket is plastic, the tires are not reflective, and you're practically invisible after dusk. Carry a small clip-on tail light (¥15-30 at any corner store) or avoid riding after sunset on busy roads.
+
+Never ride with earbuds. Beijing and Shanghai traffic police will stop you, and more importantly, you'll miss the horn warnings that keep you alive.
+
+Cost Comparison: 7 Days of City Transport
+Here's what a week of Beijing transport actually costs at three different combinations:
+Transport Mode
+
+7-Day Cost (¥)
+
+Notes
+
+Taxi only, 4 rides/day
+
+¥980-1,400
+
+Slow in traffic, expensive
+
+Metro only, 4 rides/day
+
+¥140-200
+
+Fast but limited to stops
+
+Metro + Meituan bike (monthly pass)
+
+¥160-240
+
+Best door-to-door coverage
+
+DiDi + metro hybrid
+
+¥420-680
+
+Comfortable, flexible
+
+The metro-plus-bike combination wins on total cost and beats every other pairing for short hops under 2km. The bike handles the "last mile" from metro exit to your destination, which in most Chinese cities is a 5-10 minute walk you'd rather skip.
+FAQ
+Do I need to install the Meituan app to use Meituan bikes?
+No. Everything works through the Meituan mini-program inside Alipay. Scan a bike with Alipay, unlock, ride, pay. The Meituan app requires a Chinese phone number, the mini-program does not.
+Why won't my bike unlock after scanning?
+Three common causes: (1) the bike is damaged and offline, try another bike; (2) your Alipay location permission is off, enable it in settings; (3) your Alipay is not passport-verified, the mini-program blocks unverified users. Check all three in order.
+Can I ride a Meituan bike between cities?
+No. Bikes are geo-fenced to their home city. If you try to leave the city boundary, the app will eventually charge you a dispatch fee and lock the bike remotely. Return the bike before you leave.
+What happens if I forget to lock the bike?
+The ride keeps running and the meter keeps ticking. If the app detects no movement for 15+ minutes, it may auto-end the ride in some cities, but do not rely on this. Always manually push the rear lock lever down. If you realize an hour later that you forgot, call Meituan customer support through the mini-program and they can end the ride with a refund in most cases.
+Are there weight limits or helmet requirements?
+Stated weight limit is 120kg / 265lbs. No helmet is required for pedal bikes, though Meituan recommends one. E-bikes (the red Meituan electric share bikes in some cities) have strict helmet laws and are best avoided by short-term visitors.
+Related: renting a scooter in Chengdu without WeChat Pay
+
+Share this article
+
+Tags
+# meituan-bike # alipay # china-transport # shared-bikes # china-travel
+
+Travelers also asked
+View all →
+What should I expect when ordering food delivery to my hotel or apartment in China? →
+What digital tools do I absolutely need before landing in China to avoid getting stuck? →
+Can foreigners use Alipay and WeChat Pay in China with international credit cards? →
+What are the best payment methods for travelers in China, and are credit cards or cash widely accepted? →
+
+Related articles
+View all →
+January 28, 2026 · How-To Guide
+Rent a Scooter in Chengdu Without WeChat Pay: Foreigner Guide 2026
+
+January 26, 2026 · Itinerary
+Beijing Hutong Cycling: Mind the Line on the Ground
+
+January 15, 2026 · How-To Guide
+How to Use DiDi in China Without a Chinese Number or Card
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

@@ -1,0 +1,271 @@
+# source: https://mychina.guide/blog/beijing-hutong-bike-tour-rent-navigate-solo
+# final: https://mychina.guide/blog/beijing-hutong-bike-tour-rent-navigate-solo
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:22.089Z
+# bytes(raw): 68102
+# bytes(text): 11475
+# title: Beijing Hutong Bike Tour Solo: Rules, Route and Real Cost
+Beijing Hutong Bike Tour Solo: Rules, Route and Real Cost
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog Itinerary · January 26, 2026 · 8 min read · 392 views
+Beijing Hutong Cycling: Mind the Line on the Ground
+
+Michael Chen · Travel Writer, China Specialist · Updated September 27, 2026
+
+On this page 9 sections 01 Do this the night before, not at the curb
+02 Which app unlocks which bike
+03 Three different restrictions, three different outcomes
+04 The loop
+05 What it costs
+06 Navigating without Chinese
+07 The actual hazards
+08 A three-hour version
+09 FAQ
+
+I spent 25 minutes locked inside a dead-end hutong last May because I parked two feet past a faded painted line nobody had told me about. The woman who eventually opened the gate looked at me the way a teacher looks at a slow class: "Stop before the red line. Not on it. Not over it. Before." Then she handed me a bag of candied hawthorns and pointed me back towards Houhai.
+The bikes are the easy part of hutong cycling. The lines on the ground are the part that costs you.
+Do this the night before, not at the curb
+Unlocking a shared bike needs real-name verification, and as a foreigner that is not instant. You pick 「Passport」 as the document type, enter the number and name, then upload a passport photo and a selfie holding it. Because the format is not a Chinese ID, a human reviews it — which can take a few hours.
+Do it on your first night in Beijing. Standing next to a bike you cannot unlock, waiting on a manual review, is a bad way to lose a morning.
+The other thing to settle in advance: you need live mobile data. Both the unlock scan and the lock at the end need a connection, and café wi-fi does not reach the middle of a hutong. Sort out a SIM or eSIM before the ride, not after.
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Which app unlocks which bike
+Three dockless systems run in central Beijing. The trap is not price — it is standing next to the wrong colour bike with the wrong app open.
+Bike
+
+Unlock through
+
+Colour
+
+Hellobike 哈啰
+
+Alipay mini-programme — no separate download
+
+Blue and white
+
+Meituan 美团单车
+
+Meituan app, or the WeChat mini-programme
+
+Yellow
+
+Qingju 青桔
+
+The Didi app you already have for taxis
+
+Its own livery, hard to miss
+
+Set up both Alipay and WeChat before you arrive and you can take whichever bike is actually there. All three cost the same: ¥1.50 for the first 30 minutes, then ¥1 per additional 15.
+None of them take a deposit any more. If something asks you for a ¥99 activation deposit, you are in a counterfeit app — back out and go through the Alipay mini-programme.
+Three different restrictions, three different outcomes
+People lump these together and then get caught by the one they did not know about.
+Restriction
+
+Where
+
+What happens
+
+No riding
+
+Yandai Xiejie, Nanluoguxiang main lane, inside the Forbidden City and Jingshan
+
+A resident or a community volunteer stops you. Firm, not rude. You get off and walk.
+
+No parking
+
+16 core streets including Nanluoguxiang and Jingshan Front Street
+
+The app refuses to close the lock. You are stuck holding a bike you cannot end.
+
+Outside the bay or the geofence
+
+Anywhere outside a painted rectangle, or beyond roughly the 5th Ring Road
+
+¥20 relocation fee added to the ride.
+
+Nanluoguxiang is now fully pedestrianised and carries both bans at once. Do not plan to walk your bike through it — park at a marked bay outside the north or south gate (the cluster by the subway's exit E works), then do the 800 m lane and its side hutongs on foot. Come back for the bike.
+The painted lines exist for reasons that are usually visible once you look: the alley is too narrow to pass a pedestrian, there is a school and the neighbourhood committee banned bikes during school hours, or there is a government or embassy compound on it. And if you ride deep into somewhere you should not be, the failure mode is the one I found — a courtyard whose only exit is a residential gate that gets locked at 19:00, whether or not a confused foreigner is inside it.
+The loop
+6.2 km, three to four hours with stops, flat throughout. It follows the corridor the city itself signposts as 胡同漫游, so you are not improvising.
+Drum Tower to Houhai, 1.2 km. Line 2 to Gulou Dajie or Line 8 to Shichahai. Walk past the rickshaw drivers quoting ¥150. Unlock at the racks by the metro exit, west on Gulou Xi Dajie, then down to the Silver Ingot Bridge area.
+
+Houhai loop, 2.1 km. Clockwise on the lake path — wide, flat, officially for bikes. Stops at the Silver Ingot Bridge, Prince Gong's Mansion gate, the Song Qingling residence. In summer the willows make this the best two kilometres of cycling in the city.
+
+Yandai Xiejie, 500 m, on foot. Dismount at the red line at the entrance. Coffee at Metal Hands or Seesaw, both on this alley.
+
+Nanluoguxiang and its side lanes, 1.5 km. Park outside, walk the main lane, then ride Maoer Hutong, Yuer Hutong and Beibingmasi Hutong, which are quieter and rideable. This is where it gets good.
+
+Shichahai back to the Drum Tower, 900 m. South through the small hutongs, out at Qianhai, west shore, cut north. End the ride inside a white painted rectangle and wait for the lock to click.
+
+What it costs
+Less than you would expect, and less than the passes suggest. Each time you stop to look at something you end the ride and take a fresh bike afterwards, so the clock keeps resetting at ¥1.50. The whole loop comes to ¥9–13.
+Ignore the day and month passes. They advertise at ¥12 to ¥29 and most of them require Chinese residency verification to activate, so as a visitor you will pay per ride regardless. Budget ¥15 for the half day and stop thinking about it.
+For comparison, a private guided hutong tour is ¥150–300 per person for three hours and a group one ¥100–180. There is a case for that on your first day, for the history. There is no case for the rickshaw drivers at the Drum Tower: that is a commission package that ends at a tea shop where you will be pushed to spend ¥400 on pu'er. If you would rather do the same ground on foot, the self-guided walking route covers it.
+Navigating without Chinese
+Amap is the one that works. Google Maps is still offset by 100 to 500 metres inside Beijing because of the Chinese coordinate system, and Apple Maps has no cycling routes here.
+Install Amap (高德地图), switch to English in settings, then pick the bicycle icon rather than the car — cycling mode keeps you on the bike and pedestrian lanes and routes you around the alleys where bikes are banned, which Google does not know about. Download the offline tiles for Dongcheng and Xicheng before you start.
+If the pinyin search misses, paste the characters: 鼓楼东大街, 南锣鼓巷, 后海.
+The actual hazards
+Not helmets. Adults are not required to wear one in Beijing and shared bikes do not carry them, so you will ride bare-headed like everyone else. At 8 to 12 km/h through a hutong, that is a reasonable call — Decathlon on Wangfujing sells one for ¥69–119 if you would rather not.
+Cars turning right across the bike lane without looking. Treat every right-turn junction as a stop.
+
+Electric delivery scooters, which are fast and weave.
+
+Cyclists coming the wrong way down a one-way lane. Keep right and let the faster e-bikes past.
+
+Stay off Chang'an Jie, the ten-lane avenue past Tiananmen, and off the 2nd Ring Road. Both are hostile to bikes and there is no reason to be on either. And do not ring your bell at a grandmother. It does not go the way you think.
+A three-hour version
+Time
+
+What
+
+09:30
+
+Line 2 to Gulou Dajie, walk to the Drum Tower
+
+09:45
+
+Unlock, ride
+
+10:00
+
+Houhai north shore, Silver Ingot Bridge
+
+10:30
+
+Park, walk Yandai Xiejie, coffee
+
+11:00
+
+Maoer Hutong into the Nanluoguxiang side lanes
+
+11:45
+
+Dumplings on Jiaodaokou, ¥30–60
+
+12:30
+
+Back through Shichahai
+
+13:00
+
+Lock up at the Drum Tower
+
+Rental ¥9–13. With lunch and coffee, ¥80–120 for the morning. Beijing has cheaper days but not many better ones — the rest of the city is in the Beijing guide , and the Great Wall day is in the Mutianyu guide .
+FAQ
+Can I rent a bike in Beijing without a Chinese phone number?
+Yes. Alipay's Tour Pass takes a foreign Visa or Mastercard and unlocks Hellobike through its mini-programme; no Chinese number or bank account. Complete the passport verification on your first evening, though — it is reviewed manually and can take hours.
+Why will the app not let me end my ride?
+You are inside a no-parking zone. Sixteen core streets, Nanluoguxiang among them, refuse the lock entirely. Open the in-app map, find the nearest white rectangle marked 共享单车, walk the bike there. Ending outside a bay anywhere else adds a ¥20 relocation fee.
+Is it safe to cycle in Beijing traffic?
+In the hutongs and around Houhai, yes — wide lanes, gentle traffic, drivers who expect bikes. The dangerous parts are Chang'an Jie and the 2nd Ring Road, and you have no reason to ride either.
+When is the best time of year?
+April to May and September to October. Summer is hot but fine before 10:00. Winter is dry and clear and your hands will freeze in the headwind. March dust storms pass quickly — check Amap's air quality layer before you set off.
+
+Share this article
+
+Tags
+# beijing # cycling # hutong # self-guided-tour # solo-travel
+
+Travelers also asked
+View all →
+Is it necessary to hire a tour guide for the Great Wall and Summer Palace, or is a private driver sufficient for a family visit? →
+Where can I find the best traditional Chinese architecture and aesthetics in Beijing? →
+Which section of the Great Wall did you visit near Beijing, and what was the most convenient transportation method to get there? →
+
+Related articles
+View all →
+January 14, 2026 · Itinerary
+The Hutong Walk That Stays Ahead of the Crowd
+
+January 14, 2026 · How-To Guide
+How to Use Meituan Bike in China: Foreigner's 2026 Rental Guide
+
+January 11, 2026 · City Guide
+Beijing Travel Guide 2026: Costs, Tickets and a Four-Day Route
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

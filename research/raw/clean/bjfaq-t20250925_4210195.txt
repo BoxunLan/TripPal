@@ -1,0 +1,31 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210195.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210195.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.349Z
+# bytes(raw): 8374
+# bytes(text): 2022
+# title: Home 12345 hotline 12345 hotline FAQs All
+
+Dear Sir or Madam, I haven't found any information on retirement, retirement pension or retirement calculation in your APP. Can you tell me where I can find it?
+
+Home 12345 hotline 12345 hotline FAQs All
+
+Dear Sir or Madam, I haven't found any information on retirement, retirement pension or retirement calculation in your APP. Can you tell me where I can find it?
+
+2025-09-25
+
+Hello. Regarding the issue you raised, as verified according to Article 2 of the Notice on Issuing the "Specific Measures for Implementing the 'Beijing Basic Pension Insurance Regulations'" (Jing Lao She Yang Fa [2007] No. 21)(《关于印发《关于贯彻实施＜北京市基本养老保险规定＞有关问题的具体办法》的通知》（京劳社养发[2007]21号）), the basic pension is calculated as follows:
+Basic Monthly Pension:
+The standard is calculated based on the average of the city's average monthly wage in the previous year at the time of the insured's retirement and the individual's indexed average monthly contribution wage. For each full year of the insured’s total contribution period (including deemed contribution years, the same below), 1% will be granted.
+Monthly Personal Account Pension:
+The standard is determined by dividing the total accumulated savings in the insured’s personal account by the number of months specified in the national calculation table (see Appendix 1).
+Monthly Transitional Pension:
+The standard is the sum of the transitional pension calculated based on deemed contribution years and the transitional pension calculated based on actual contribution years.
+The document can be accessed on the official website of the Beijing Municipal Government under:
+Government Affairs > Policy Disclosure > Policy Documents (政务公开>政策公开>政策文件)
+URL: https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/200804/t20080414_567066.html
+Thank you for your understanding and support!
+Beijing Municipal Bureau of Human Resources and Social Security
+
+Attachment

@@ -1,0 +1,220 @@
+# source: https://www.scam.travel/en/scams/black-taxi-transport-scams-china
+# final: https://www.scam.travel/en/scams/black-taxi-transport-scams-china
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:20:08.828Z
+# bytes(raw): 283187
+# bytes(text): 21951
+# title: Black Taxi and Transport Scams in China — Unlicensed Drivers, Rigged Meters, and Rickshaw Traps | scam.travel
+
+Black Taxi and Transport Scams in China — Unlicensed Drivers, Rigged Meters, and Rickshaw Traps | scam.travel
+Skip to main content
+
+S
+SCAM .travel
+Scam Database Scam Checker Safety Gear Report a Scam About Search ⌘K
+en es
+
+← Back to Scam Database Medium | 2026-04-01 | 15 min read
+Black Taxi and Transport Scams in China — Unlicensed Drivers, Rigged Meters, and Rickshaw Traps
+Unlicensed 'black taxis' at Chinese airports and train stations quote 3-8x the real fare, while rigged meters, fake pricing cards, and rickshaw traps target tourists in Beijing, Shanghai, and beyond.
+
+0 views this month
+0 reports filed
+Actively tracked
+
+Black Taxis: How Unlicensed Drivers Operate in China
+
+The term "black taxi" (黑车, hēi chē) refers to unlicensed, unregistered vehicles operating as taxis without any government authorization. These drivers are not part of any regulated taxi fleet, carry no commercial insurance, and answer to no dispatch system. They are a fixture at virtually every major airport and train station in China, and they specifically target foreign tourists and first-time visitors who have not yet figured out the local transport system.
+
+The operation is straightforward. As you exit the arrivals hall at Beijing Capital International Airport, Shanghai Pudong Airport, or any major train station like Beijing West or Shanghai Hongqiao, you will be approached — sometimes aggressively — by individuals asking "Taxi? Taxi?" or holding signs with destination names. They position themselves between the exit doors and the official taxi queue, intercepting travelers before they reach the legitimate taxi stand. Some wear lanyards or carry clipboards to appear official. Others simply block your path and start grabbing your luggage.
+
+The fares they quote bear no relationship to reality. A legitimate metered taxi from Beijing Capital Airport to central Beijing costs roughly 80-120 RMB depending on your exact destination. A black taxi driver will quote 300-500 RMB for the same trip. From Shanghai Pudong to central Shanghai, the metered fare runs about 150-200 RMB; black taxis routinely demand 500-800 RMB. One widely shared Reddit account described being quoted 400 RMB for a ride that cost 50 RMB by meter — an eight-fold markup. The drivers know exactly what they are doing. They target passengers who look confused, who are struggling with luggage, or who clearly do not speak Mandarin.
+
+Black taxis are not merely overpriced. They are genuinely unsafe. The vehicles are uninsured, uninspected, and the drivers have not passed any background checks or licensing requirements. There have been documented cases of black taxi drivers taking passengers to remote locations and demanding higher payments under threat, or driving circuitous routes through unfamiliar areas while the meter (if they have one) climbs. Female solo travelers are particularly vulnerable. The Chinese government has conducted periodic crackdowns on black taxis, but enforcement is inconsistent, and the drivers simply relocate to different pickup points.
+
+At train stations, the situation can be even more aggressive. Beijing West Railway Station and Guangzhou Railway Station are notorious for black taxi touts who work in teams. One person engages you in conversation while another grabs your suitcase and starts walking toward a vehicle. The social pressure of having your luggage in someone else's hands makes it psychologically difficult to refuse. In some cases, the drivers refuse to return luggage until you agree to their fare.
+
+The Broken Meter Scam
+
+Even when you successfully avoid the black taxis and get into a licensed, regulated cab, you are not necessarily safe from overcharging. The broken meter scam is one of the most common taxi frauds in China, and it works because most tourists do not know the standard fare structure well enough to challenge it.
+
+The scam begins the moment you settle into the back seat. You ask the driver to start the meter, and they respond with one of several rehearsed excuses: the meter is broken, the meter does not work for this destination, there is a "special rate" for the area you are going to, or the meter only works for local fares, not airport runs. Some drivers will gesture at the meter and show you that it is indeed not functioning — because they have deliberately switched it off or disconnected it.
+
+Having established that the meter is unavailable, the driver then pulls out a laminated card showing a grid of fixed prices between various destinations. This card looks official — it may even have a government logo photocopied onto it — but the prices are fabricated and typically two to four times the actual metered fare. The card creates an illusion of standardization and authority. A tourist who does not know the real fare structure has no way to evaluate whether the prices are legitimate.
+
+A more sophisticated variation involves drivers who do start the meter but then "accidentally" reset it partway through the ride. The reset switches the meter to the nighttime surcharge rate (which is 20-30% higher than daytime) or simply restarts the count from a higher base fare. The driver may tap the meter or adjust something on the dashboard, and the fare suddenly jumps. If you question it, they blame a malfunction and offer to "estimate" the remainder of the fare — invariably at an inflated rate.
+
+Another variant is the scenic route meter scam. The driver starts the meter legitimately but takes an unnecessarily long route. In a city like Shanghai, where traffic patterns and one-way streets are genuinely complex, it is difficult for a visitor to know whether a detour is legitimate or deliberate. The driver may claim that the direct road is closed, that there is heavy traffic on the usual route, or that a new one-way system requires the longer path. Meanwhile, the meter ticks upward with every unnecessary kilometer.
+
+Didi Route Inflation and Off-App Demands
+
+Didi Chuxing (滴滴出行) is China's dominant ride-hailing platform, the equivalent of Uber in the West. It is widely used by locals and is generally considered safer and more transparent than street-hailed taxis. However, Didi is not immune to driver manipulation, and tourists face specific vulnerabilities that locals do not.
+
+The most common Didi scam is route inflation. The driver accepts your ride request through the app but then takes a deliberately longer route to increase the fare. This is most frequently reported in smaller tourist cities like Yangshuo, where the limited road network makes detours less obviously suspicious. One long-term expat in Yangshuo reported being overcharged 150 RMB on a single Didi ride that should have cost approximately 40 RMB — the driver took a route that was nearly four times the optimal distance. In larger cities like Guangzhou and Shanghai, drivers may add small detours that add 20-50 RMB to the fare, counting on the passenger not noticing or not considering it worth disputing.
+
+A more brazen variant involves drivers who accept the ride through the Didi app, arrive at your location, and then ask you to cancel the in-app ride and pay them directly in cash. They claim the app is having technical problems, or that they will give you a discount for paying cash. In reality, the cash fare they demand is higher than what the app would have charged, and you lose all the consumer protections that come with in-app payment — no receipt, no route record, no ability to dispute the charge, and no driver accountability.
+
+Foreign tourists face an additional challenge with Didi: the app interface is primarily in Chinese (though an English version exists, it is less reliable), and communication with drivers often requires Mandarin. Drivers may call you after accepting the ride to confirm the pickup location, and if you cannot communicate effectively, they may cancel or simply not show up. Some drivers take advantage of the language barrier to claim that the destination was farther than expected and demand additional payment at the end of the ride.
+
+There is also the issue of Didi drivers switching vehicles. The app shows you the car make, model, color, and license plate of the vehicle that is coming to pick you up. Some drivers send a different vehicle — often a friend's car or a cheaper model — to pick you up. This matters because it means the person driving you is not the verified, background-checked driver on the account. Getting into an unverified vehicle eliminates the safety guarantees that make ride-hailing preferable to street taxis.
+
+Rickshaw and Pedicab Traps
+
+Rickshaw scams in China are theatrical, aggressive, and specifically designed to exploit tourists who do not understand the pricing or who are too polite to refuse. The hotspots are the hutong (traditional alley) neighborhoods of Beijing, the area around the Drum Tower and Bell Tower, and the Muslim Quarter and city wall area of Xi'an. In these locations, rickshaw drivers line up along tourist routes and compete aggressively for passengers.
+
+The basic scam works like this. A friendly rickshaw driver approaches you and offers a ride through the hutongs for what seems like a trivially low price — "3 RMB" or "5 RMB" or even "free, just for fun." The price is quoted verbally, quickly, and sometimes with deliberately ambiguous phrasing. "Three" could mean 3 RMB per person, 3 RMB per minute, 30 RMB, or 300 RMB — the driver will later claim whichever interpretation yields the highest payment. Some drivers show a number on their phone screen, but the number changes after the ride.
+
+The ride itself is often pleasant. The driver pedals through narrow hutong lanes, points out historical buildings, and may stop at a temple or courtyard for photos. This creates a false sense of trust and goodwill. When the ride ends — typically after 15-30 minutes — the driver presents a bill for 200-500 RMB. If you protest, the driver becomes aggressive, blocks your path, or summons other rickshaw drivers who surround you and back up their colleague's demands. The group intimidation is highly effective, particularly for solo travelers or couples who find themselves outnumbered in an unfamiliar neighborhood.
+
+In Xi'an, the rickshaw scam has a commercial dimension. Drivers offer "free sightseeing tours" that include stops at specific shops — jade stores, silk factories, tea houses, and calligraphy shops. These are commission shops that pay the driver a kickback for every tourist they deliver. The "free" ride is not free at all; you are the product being delivered to the shops, where you will face high-pressure sales tactics for overpriced goods. If you refuse to enter the shops or refuse to buy, the driver may demand payment for the ride that was supposedly free, or simply abandon you in an unfamiliar part of the city.
+
+In the worst cases, rickshaw drivers in Beijing have been known to take tourists to ATMs and demand payment while physically blocking them from leaving. These incidents are rare but documented, and they tend to happen in quieter hutong areas away from main streets where police presence is minimal. The drivers rely on the tourist's fear, confusion, and desire to avoid confrontation in a foreign country.
+
+Warning Signs
+
+Anyone approaching you at an airport or train station offering a taxi before you reach the official queue. Licensed taxis in China operate from designated stands with dispatchers. Anyone intercepting you before the official stand is unlicensed.
+
+A driver who refuses to start the meter or claims it is broken. All licensed taxis in Chinese cities are required to have functioning meters. A broken meter is grounds to refuse the ride and report the driver.
+
+A laminated pricing card with fixed fares between destinations. These cards are fabricated. Chinese taxis operate on metered fares, not zone-based fixed pricing. The only exception is some airport express routes, which are posted on official signs at the taxi stand, not on cards carried by individual drivers.
+
+A Didi driver asking you to cancel the in-app ride and pay cash. This eliminates your consumer protections and always results in a higher fare. Never agree to off-app payment.
+
+A rickshaw driver quoting an absurdly low fare. If the price sounds too good to be true, it is. No rickshaw driver operates a 30-minute tour for 3 RMB. The low quote is bait for a much higher demand at the end.
+
+Verbal-only pricing with no written confirmation. Any legitimate transaction should involve a clear, agreed-upon price displayed on a screen or written down before you begin. Verbal quotes are designed to be ambiguous and disputable.
+
+A driver who grabs your luggage before you agree to a ride. This is a pressure tactic. A legitimate driver waits for you to agree to the fare and get in the car before handling your belongings.
+
+Group pressure from multiple drivers at a rickshaw stand. If other drivers gather around to support a fare demand, you are being scammed. Walk away toward a main road or any business establishment.
+
+How to Protect Yourself
+
+🛡️ Smart Travelers Pack This
+Gear that helps you avoid or detect this scam
+
+🚨 Personal Safety Alarm (130dB) Prevent
+Pull-pin emergency alarm with strobe light — loud enough to scare off attackers and draw attention instantly.
+
+We earn a small commission when you buy through these links — at no extra cost to you. This helps fund scam.travel.
+
+Download and set up Didi before you arrive in China. The app requires a Chinese phone number for full functionality, but you can link an international credit card and use the English interface. Having Didi ready on your phone means you never need to negotiate with a street taxi or black taxi driver. Request your ride through the app, verify the license plate matches, and pay through the app. The route is recorded, the fare is calculated algorithmically, and you have a dispute mechanism if anything goes wrong.
+
+Screenshot your route before every ride. Whether you are using Didi or a metered taxi, open a map application (Baidu Maps or Amap/Gaode are the most accurate in China; Google Maps is unreliable due to the Great Firewall) and screenshot the suggested route from your origin to your destination. Note the estimated distance and time. If the driver takes a significantly longer route, you have evidence for a dispute.
+
+Only use licensed taxis from official stands. At airports and train stations, follow the signs to the official taxi queue. In Beijing, licensed taxis are typically gold or green-and-yellow. In Shanghai, they come in various company colors but always have a rooftop light and a visible meter. If you are unsure, ask airport staff to direct you to the taxi stand. Never accept a ride from someone who approaches you inside the terminal.
+
+Pay via Alipay or WeChat Pay whenever possible. Digital payments create an automatic transaction record that is difficult to dispute or inflate. Set up Alipay or WeChat Pay before your trip — both now accept international credit cards. When paying a metered taxi, the fare on the meter is the fare you pay. If the driver claims additional charges, ask for an official receipt (发票, fāpiào) which itemizes the fare.
+
+Never negotiate fares with taxi drivers. In China, legitimate taxis use meters. There is no negotiation. If a driver wants to negotiate a fare instead of using the meter, get out and find another taxi. The only exception is in very remote rural areas where metered taxis do not operate, but in any city or tourist destination, metered taxis are the standard.
+
+For rickshaws, agree on a written price before boarding. If you want the hutong rickshaw experience, type the agreed price on your phone screen and show it to the driver. Have them confirm by nodding or typing their agreement. Take a photo of the screen showing the agreed price. This eliminates the "misunderstanding" that rickshaw drivers rely on. A reasonable price for a 30-minute hutong tour in Beijing is 50-100 RMB, not 3 RMB and not 300 RMB.
+
+Learn the approximate fares for common routes. Before arriving at any Chinese city, research the taxi fare from the airport or train station to your hotel. Most travel forums and hotel websites provide this information. Knowing that the ride should cost roughly 100 RMB makes it immediately obvious when someone quotes you 400 RMB.
+
+Keep your luggage with you until you have agreed to a ride and fare. Do not allow anyone to take your bags. If someone grabs your luggage, say "bù yào" (不要, meaning "don't want" or "no") firmly and take it back. You are under no obligation to accept a ride from someone who has taken your bags.
+
+What to Do If It Happens
+
+If you are currently in a black taxi or unlicensed vehicle and feel unsafe, call the police at 110 . This is the general emergency number in China and operates 24 hours. If you can share your location via WeChat or a map app with a friend, do so immediately. In most cases, telling the driver that you are calling the police will cause them to stop and let you out.
+
+For overcharging disputes with licensed taxis, note the taxi number (displayed on the dashboard and on a card attached to the back of the front passenger seat), the license plate, and the time of the ride. You can file a complaint with the local transportation bureau. The national tourism complaint hotline is 12301 , and operators can assist in multiple languages. In Beijing, the taxi complaint line is 010-68351150. In Shanghai, it is 021-63232150.
+
+For Didi ride disputes, use the in-app complaint function. Open the ride in your trip history, select "Report a Problem," and describe the issue. Didi has a fare adjustment process that can refund overcharges if the route taken was significantly longer than the optimal route. Include your screenshot of the expected route as evidence.
+
+If you were a victim of a rickshaw scam involving intimidation or threats, go to the nearest police station and file a report. In Beijing's hutong areas, there are police substations (派出所, pàichūsuǒ) at regular intervals. Ask any shopkeeper to point you to the nearest one. While the police may not recover your money, the report creates a record that can be useful for travel insurance claims, and increased reports from tourists lead to greater enforcement.
+
+If you paid an inflated fare and want to dispute a credit card charge, contact your card issuer as soon as possible. Provide the details of the legitimate fare (based on your route research) versus what you were charged. For Alipay or WeChat Pay transactions, both platforms have dispute mechanisms accessible through their customer service interfaces.
+
+Document everything while it is fresh in your memory. The driver's appearance, the vehicle description, the license plate if you caught it, the route taken, the fare demanded versus the fare paid, and any threats or intimidation. Share your experience on travel forums like Reddit's r/China or r/travel, TripAdvisor, and local expat forums. These reports help other travelers avoid the same traps and collectively put pressure on local authorities to improve enforcement.
+
+Save for later
+Copy link
+
+Was this article helpful?
+Yes, thanks Not really
+
+Severity Level
+Compare
+🟡 Medium
+Can cause financial loss, stay alert
+
+Scam Type
+taxi overcharge hustle
+
+Locations
+China / Beijing
+China / Shanghai
+China / Xi'an
+China / Guangzhou
+China / Yangshuo
+
+Reported
+2026-04-01
+
+taxi overcharge hustle China Beijing China Shanghai China Xi'an China Guangzhou China Yangshuo
+
+Community Reports & Discussions
+Real reports and discussions from travelers who encountered this scam.
+other If You're Flying Into China, Avoid Black Taxis At All Costs - Explore explore.com
+
+youtube China's Black Taxi SCAM! China's most successful SCAM? - YouTube youtube.com
+
+other My Worst Travel Experiences - The Beijing Taxi Scam travelbabbo.com
+
+other How To Identify Taxi Scams In China - Asia Car Service asiacarservice.com
+
+Related Scams
+4 similar scam s found
+
+Travelers who researched scams in China also found these reports helpful
+Medium | 2026-04-01
+fraud hustle street
+
+Art School Gallery Exhibition Scam in China — Fake Students Selling Mass-Produced Prints
+Fake art students near tourist sites in Beijing, Shanghai, and Chengdu invite travelers to 'graduation exhibitions' where high-pressure tactics push overpriced mass-produced prints for hundreds of dollars.
+
+Beijing / Shanghai / Chengdu
+
+High | 2026-04-01
+fraud hustle overcharge street
+
+Bar Girl and Nightlife Scams in China — Drink Spiking, Bill Inflation, and Fake Police Stings
+Friendly locals lure solo tourists into hidden bars in Beijing and Shanghai where drink bills reach $1,000+, bouncers escort victims to ATMs, and staged 'police' raids extract bribes.
+
+Beijing / Shanghai / Guangzhou
+
+Medium | 2026-04-01
+fraud currency
+
+Counterfeit Money and Fake Currency Scam in China — How Tourists Get Stuck with Fake Bills
+Taxi drivers, street vendors, and market sellers in China give tourists counterfeit ¥50 and ¥100 notes as change, or swap real bills for fakes during transactions.
+
+Beijing / Shanghai / Xi'an / Guangzhou
+
+High | 2026-04-01
+technology fraud theft
+
+Digital Payment and WiFi Scams in China — WeChat QR Code Swaps, Fake VPN Apps, and Evil Twin Hotspots
+Scammers in China replace legitimate WeChat Pay QR codes with their own, sell malicious fake VPN apps that steal credentials, and deploy fake WiFi hotspots at airports and hotels to intercept tourist data.
+
+Beijing / Shanghai / Guangzhou / China
+
+Browse all scams in database
+
+Stay Updated
+Get scam alerts for Beijing straight to your inbox.
+Subscribe
+
+Know about a scam? Help fellow travelers.
+Report a Scam in Beijing Back to Scam Database
+
+S
+SCAM .travel
+
+Scam Database Report a Scam About
+
+Privacy Policy Terms of Use Cookie Policy
+Stay informed. Travel safe.
+hello@scam.travel © 2026 scam.travel. All rights reserved.

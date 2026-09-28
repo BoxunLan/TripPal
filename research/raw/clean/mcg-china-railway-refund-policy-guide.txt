@@ -1,0 +1,195 @@
+# source: https://mychina.guide/blog/china-railway-refund-policy-guide
+# final: https://mychina.guide/blog/china-railway-refund-policy-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.770Z
+# bytes(raw): 65066
+# bytes(text): 9921
+# title: China Railway Refunds: The 8-Day Rule, Fees and Changes
+
+China Railway Refunds: The 8-Day Rule, Fees and Changes
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · March 23, 2026 · 7 min read · 1,255 views
+In China, Booking the Train Early Is Free
+
+M MyChinaGuide Editorial Team · Updated September 14, 2026
+
+On this page 8 sections 01 The ladder
+02 Change, or refund?
+03 Missing the train
+04 Where you actually do it
+05 When the money arrives
+06 The exceptions worth knowing
+07 How to use this
+08 FAQ
+
+Booking a Chinese train early costs you nothing. Cancel more than eight days before departure and the fee is zero — not reduced, zero. That is the opposite of an airline, and it changes how you should plan.
+Tickets open fifteen days out. If your dates are anywhere near firm, book the moment they open, take the seat and the berth you actually want, and keep a calendar reminder for the eight-day mark. You have bought an option, not a commitment.
+The ladder
+Inside eight days the fee climbs in three steps. The clock runs to the train's departure time, not to when you bought the ticket.
+Cancelled
+
+Fee
+
+You get back
+
+On a ¥515 ticket
+
+More than 8 days out
+
+0%
+
+100%
+
+¥515
+
+48 hours to 8 days
+
+5%
+
+95%
+
+¥489.25
+
+24 to 48 hours
+
+10%
+
+90%
+
+¥463.50
+
+Under 24 hours
+
+20%
+
+80%
+
+¥412
+
+¥515 is a Beijing to Xi'an second-class seat, so those are real numbers rather than a round example. The minimum fee is about ¥2, which only bites on tickets under roughly ¥40.
+The eight-day boundary is exact and unforgiving. A train leaving Shanghai Hongqiao at 10:00 on Friday has to be cancelled by 10:00 on the Thursday of the previous week. One minute later and a ¥553 Beijing to Shanghai second-class ticket costs ¥27.65 to cancel, purely for the timing.
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+Change, or refund?
+Two different operations with different economics, and people reach for the wrong one.
+改签 (gǎi qiān), a change, moves the ticket to a different train. Under the current published framework some changes are free while moving to certain later trains triggers a fee, and the exact treatment depends on when you ask and which train you move to. Before confirming anything, compare the change fee the app shows against the cost of refunding and rebooking — a change is not automatically cheaper, and the app tells you both numbers.
+A ticket can generally be changed once. Seat availability on the replacement train still has to exist; the right to change does not create a seat.
+Then the trap nobody warns you about: once you have changed a ticket, the refund fee is calculated from the new departure time. Move a ticket from three weeks out to the day after tomorrow, then cancel, and you are in the 10% tier rather than the free one. If there is any chance you will cancel entirely, refund first and rebook rather than changing.
+Missing the train
+If the departure time passes and you neither boarded nor cancelled, the ticket is void and there is no refund. That is the default.
+There is a recovery. At many major stations you can go to the counter within two hours of the missed departure and ask for a miss-train change (改签) onto a later same-day train to the same destination, paying only the fare difference if there is one. It depends on seats being available, so it is a rescue rather than a plan.
+Where you actually do it
+Booked through
+
+Refund where
+
+Notes
+
+12306 app or website
+
+12306, under 我的订单 → 退票
+
+Fastest. Money returns to the original payment method
+
+Trip.com, Ctrip, Klook
+
+The platform that sold it
+
+12306 does not show third-party bookings in your account
+
+A station window, tied to a paper ticket
+
+Any station's 退票窗口
+
+Bring the passport used to book, and the paper ticket
+
+Third-party tickets are still 12306 tickets underneath; the difference is who processes the cancellation. Resellers often add ¥10–20 of their own service fee on top of the railway's, and that part is usually not refundable — worth knowing before you book if flexibility matters more than convenience. Booking direct on 12306 avoids it, and the English interface handles refunds too.
+A station window refund works at any major station, not only where you departed from. Leave buffer: the 退票窗口 at Beijing West, Shanghai Hongqiao and Guangzhou South runs 20 to 40 minutes deep at peak times, and you must complete the refund before the train departs.
+When the money arrives
+Alipay, WeChat Pay and UnionPay: same day to three days.
+
+International Visa and Mastercard: up to 15 business days, because of cross-border settlement. This is normal and not a sign anything went wrong.
+
+The exceptions worth knowing
+Railway-caused cancellation or a schedule change. Full refund with no fee, or a free rebooking onto a comparable train. You are not penalised for their change.
+
+Bought it by mistake in the last half hour. China Railway added a narrow protection in 2026: an eligible online order can get one fee-free refund per day if cancelled within 30 minutes of payment. It covers the wrong-date click, not a change of heart a week later.
+
+Spring Festival and Golden Week (1–7 October). 12306 sometimes publishes temporary stricter rules for the rush. Check the app's announcements before booking around those dates.
+
+The paper reimbursement voucher (报销凭证). Not the ticket — it is a VAT document for expense claims. You can refund an unused e-ticket whether or not you printed one.
+
+Cancellation insurance sold at OTA checkout for ¥5–15. It may reimburse the railway's fee, and the exclusions are extensive. Read it rather than assuming.
+
+How to use this
+Three habits follow from the table, and they are worth more than memorising the percentages.
+Book trunk routes the day tickets open. Lower sleeper berths and second-class seats on flagship G-trains go first, and the free-cancellation window means you are risking nothing. This matters most on overnight legs — see sleeping on Chinese trains for why the berth you get is not a detail.
+
+Set the reminder for the eight-day mark, not the day before travel. That is the only deadline with real money attached.
+
+When plans wobble inside 48 hours, look at moving to an earlier train the same day before you look at cancelling. It is often the cheaper move and it keeps the seat.
+
+Where this shows up in practice: a Beijing to Pingyao sleeper booked three weeks out for the lower berth costs nothing to abandon, and a fifteen-day route across five cities can have every leg locked in early for the same reason.
+FAQ
+Can I get a refund less than 8 days before departure?
+Yes, right up until the departure time, at 5%, 10% or 20% depending on how close you are. Once the departure time passes without cancelling or boarding, the ticket is void and nothing comes back.
+How long does a 12306 refund take?
+One to three days to Alipay, WeChat Pay or UnionPay. Up to 15 business days to an international Visa or Mastercard, which is cross-border settlement rather than a problem.
+I booked through Trip.com — where do I cancel?
+On Trip.com. The 12306 app does not show third-party bookings in your account. Trip.com processes the cancellation with the railway and refunds through its own payment flow, usually keeping its ¥10–20 service fee.
+Is changing a ticket cheaper than refunding it?
+Sometimes, and not automatically. Compare the two figures the app shows you. And remember that after a change, any later refund fee is calculated from the new departure time — so if cancelling entirely is on the cards, refund and rebook instead of changing.
+What happens if I miss my train?
+The ticket is void and cannot be refunded. At many major stations you can ask at the counter within two hours for a miss-train change onto a later same-day train to the same destination, paying any fare difference, if seats exist.
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Tags
+# china-railway # 12306 # refund # train-travel # high-speed-rail
+
+View all →
+Should I book China train tickets through 12306 or Trip.com? →
+Do I need to book short-distance train tickets in advance for China day trips? →
+
+View all →
+January 18, 2026 · How-To Guide
+How to Book China Train Tickets Without WeChat (2026 Guide)
+
+July 28, 2026 · How-To Guide
+China Railway Map (2026): The Whole Network and Every Train Type
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

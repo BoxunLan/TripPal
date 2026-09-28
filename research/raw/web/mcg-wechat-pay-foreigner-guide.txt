@@ -1,0 +1,339 @@
+# source: https://mychina.guide/blog/wechat-pay-foreigner-guide
+# final: https://mychina.guide/blog/wechat-pay-foreigner-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:31.083Z
+# bytes(raw): 74509
+# bytes(text): 15056
+# title: WeChat Pay for Foreigners 2026: The ¥200 Fee Rule
+WeChat Pay for Foreigners 2026: The ¥200 Fee Rule
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · January 11, 2026 · 11 min read · 10,934 views
+WeChat Pay for Foreigners in 2026: What It Costs and Where It Breaks
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 12 sections 01 What you actually pay
+02 The ceilings
+03 Which cards work
+04 TenPayGo is a separate app
+05 Setup, in four moves
+06 Two ways to pay, and knowing which is which
+07 When verification rejects you
+08 Red packets and transfers
+09 What a passport-verified wallet can and can't do
+10 WeChat Pay or Alipay
+11 FAQ
+12 Sources
+
+The rule that decides what WeChat Pay costs you is a single number: ¥200. At ¥200 or less, foreign cards pay nothing. Above it, Tencent takes 3% of the whole payment.
+A metro ride, a bowl of noodles and most of what you buy from a stall fall under the line. A hotel night and a sit-down dinner for two do not — unless you split the bill, which is the one habit worth forming before you land.
+None of this was true before July 2023. Until then a foreign card only worked through a narrow pilot, started in 2019 and tied to specific merchants, and most visitors genuinely did need a Chinese bank account and a cooperative local friend. Tencent opened it up that month, and the ¥200 line has been part of the service since that launch.
+What you actually pay
+You spend
+
+Fee
+
+What that looks like
+
+¥6
+
+¥0
+
+A metro ride across Beijing
+
+¥28
+
+¥0
+
+A street food meal
+
+¥200
+
+¥0
+
+The last fee-free yuan
+
+¥201
+
+¥6.03
+
+One yuan more, and the 3% starts
+
+¥380
+
+¥11.40
+
+Dinner for two — or ¥0 if you each pay ¥190
+
+¥1,200
+
+¥36.00
+
+A hotel night
+
+Those first two rows are not cherry-picked: a street food meal in China realistically runs ¥15–35, and Beijing's subway fares start at ¥3. Most of a tourist's day sits below ¥200 without trying. ( what street food actually costs )
+Splitting is normal here, not awkward. Chinese diners settle bills this way by default, and every restaurant QR code accepts several payers for one table. Two people paying ¥190 each is a fee-free ¥380 dinner.
+There is also a window worth using. If you link an international card to WeChat for the first time by 31 December 2026, Tencent waives the fee on up to ¥1,000 of spending a day for 90 consecutive days. The clock starts with your first payment, not with the day you add the card, so adding it before you fly does not use up any of those days.
+
+MyChinaGuide app · free
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+The ceilings
+People's Bank of China ceiling
+
+Amount
+
+Per transaction
+
+US$5,000
+
+Per year
+
+US$50,000
+
+The People's Bank of China announced that ceiling on 1 March 2024, when it told Tenpay, the company behind WeChat Pay, and Alipay to raise it from US$1,000 per transaction and US$10,000 a year. Your own limits sit inside it. WeChat Pay sets them per transaction, per month and per year, raises them once you have verified your identity, and changes them from time to time, so go by the figures WeChat shows you rather than any printed in a guide. Everyday spending on a two-week trip stays well inside them. If you are staying long enough to hit them, you want a Chinese bank account instead.
+Which cards work
+Seven card brands bind directly: Visa, Mastercard, American Express, JCB, Discover and Diners Club since Tencent opened this up in July 2023, and overseas-issued UnionPay since November 2024. No Chinese bank account, no Chinese phone number.
+Two cases the English guides skip:
+If your home bank issues a UnionPay-branded card — common across Asia, the Middle East and Russia — bind that one. UnionPay has run promotions that drop the 3% on larger payments as well, but only for a promotional period, so check the fee on the payment screen before you confirm.
+
+If you already have WeChat Pay HK, you do not need a mainland setup: the Hong Kong wallet pays mainland merchants in Hong Kong dollars. It stays a separate wallet, though, with its own limits, and money cannot move between it and a mainland WeChat Pay wallet.
+
+TenPayGo is a separate app
+Tencent launched TenPayGo publicly on 24 September 2026. It is a standalone payment app for visitors, built by the WeChat Pay team, and it pays at merchants that accept WeChat Pay. It is not the wallet inside WeChat, though, and the two work differently:
+Sign-up: TenPayGo registers you with an email address. The WeChat wallet needs a WeChat account first, set up with a phone number that can receive SMS codes.
+
+What you can link: TenPayGo takes cards from seven international networks, Visa and Mastercard among them, plus Apple Pay and a growing list of overseas e-wallets. Inside WeChat, you link one of the seven card brands above.
+
+What it covers: TenPayGo's service terms limit it to paying merchants in mainland China, so there are no red packets and no transfers between people. Its terms say any card fee is set out on the payment page.
+
+If you only need to pay for things on a short trip, TenPayGo is worth a look. If you want WeChat for messaging anyway, its wallet pays at the same shops without a second app.
+Setup, in four moves
+The app walks you through most of this. The parts that go wrong are in the next section.
+Install WeChat before you fly. Google Play is blocked in China; on Android you would otherwise be side-loading an APK from wechat.com. Get the Tencent app, not WeCom — that's the business version.
+
+Register with your home phone number and country code. Me → Pay and Services → Wallet turns on WeChat Pay.
+
+Bank Cards → Add Card. Expect a small verification charge that gets refunded, or a 3D Secure prompt from your bank.
+
+Identity Verification → Foreigner / Foreign Passport. Photograph the passport page flat, then the selfie. Tencent says a passport check can clear in seconds, though some take longer.
+
+Until that last step clears, the wallet only lets you spend up to a limited amount. Verification is what raises that cap.
+Two ways to pay, and knowing which is which
+Chinese merchants use two opposite QR flows, and picking the wrong one is the most common way a foreigner holds up a queue.
+Small restaurants, street stalls and taxis: you scan them. Plus icon → Scan, point at the printed code on the counter, type the amount yourself, confirm.
+
+Convenience stores, supermarkets and chains: they scan you. Plus icon → Money, and hold up the rotating code for the cashier's scanner.
+
+Typing your own amount feels wrong the first time. It is normal — the stall owner watches the screen and nods.
+When verification rejects you
+Almost every rejection is one of four things, and three of them are photography.
+What you see
+
+Why
+
+Fix
+
+Rejected, no reason given
+
+Name mismatch — the most common cause by far
+
+Set your WeChat profile name to the Latin name exactly as printed in your passport's machine-readable zone, including every given name. Then reverify.
+
+Photo unclear
+
+Glare, shadow, or a cropped edge
+
+Daylight, passport flat on a white surface, camera about 20 cm back, machine-readable zone sharp in frame.
+
+Face check failed
+
+Glasses, hat, or an angled face
+
+Remove both, look straight at the camera, don't smile.
+
+Country rejected
+
+Phone number country differs from passport country
+
+Pick the passport's issuing country on the first verification screen, not the phone's.
+
+A card that gets refused is usually your own bank, not Tencent — an anti-fraud hold on an unfamiliar merchant name. Wait five minutes and retry the same card. If it fails again, call your bank and tell them Tencent Pay is legitimate.
+If verification still fails after you have matched the name and cleaned up the photo, call WeChat Pay support: 95017 inside China, +86 571 95017 from abroad. One more thing that catches people — a failed attempt sends the retry prompt over data, not SMS, so being offline at that moment stalls you. A travel eSIM installed before departure avoids it; our eSIM comparison covers which ones reach Google and WhatsApp without a VPN.
+Red packets and transfers
+Red packets — hóngbāo, 红包 — are where a foreign-card wallet differs most from a Chinese user's. Don't plan on a Chinese friend's holiday hóngbāo reaching you.
+Paying merchants: fine. That is what the wallet is for.
+
+Red packets and money transfers: not supported with international cards, according to WeChat's help center.
+
+Withdrawing a balance to your card: not possible. Withdrawals only go to debit cards issued in mainland China.
+
+If money does end up in your balance, the practical move is to spend it on your last few meals rather than leave it sitting.
+What a passport-verified wallet can and can't do
+A foreign card plus passport verification gets you a consumption wallet, not a bank. You can scan to pay merchants, use mini-programs, and buy inside apps. You cannot move money the way a Chinese user does — no red packets, no transfers, no withdrawals to your own card.
+In practice that covers everything a visitor does. Shanghai Disney, the Forbidden City ticket mini-program and Trip.com all take it, as does every metro gate.
+WeChat Pay or Alipay
+
+WeChat Pay
+
+Alipay
+
+Verification
+
+Passport photo; Tencent says it can clear in seconds
+
+Passport photo; Alipay allows up to 24 hours for review
+
+Fees
+
+Free up to ¥200, 3% above
+
+Same ¥200 line, 3% above it
+
+Red packets
+
+Not with a foreign card
+
+Not with a foreign card
+
+Most people end up with both: WeChat for daily spending, Alipay as the fallback when a merchant's WeChat terminal is being difficult. The fees match — the same ¥200 line, the same 3% — so switching apps won't save you anything on a large payment. Setting up Alipay takes similar steps, and it is worth doing on the same evening.
+For what happens when neither wallet works — and it happens, mostly at small vendors and older taxis — foreign credit cards in China covers the cash fallback.
+FAQ
+Do I need a Chinese bank account?
+No. Foreign Visa, Mastercard, Amex, Discover, JCB and Diners Club cards have bound directly since July 2023, and overseas-issued UnionPay cards since November 2024. No Chinese account, no Chinese phone number.
+Is there a minimum top-up?
+No. A linked foreign card pays each purchase directly, so there is nothing to top up. The top-ups older guides mention were for Alipay's Tour Pass. That prepaid card was gone from Alipay by May 2023, when its issuer, Bank of Shanghai, launched a new card called TourCard.
+What if I lose my phone in China?
+Log in from another device with your phone number and password, or freeze the account at weixin110.qq.com, WeChat's security center. A friend can also freeze it for you from their own WeChat. Then call your card issuer.
+Sources
+Tenpay: rules for international card payments — ¥200 or less is fee-free, above ¥200 the fee is 3% of the whole payment and is shown on the payment page; 95017 hotline. Notice dated 15 January 2026.
+
+Tencent: Weixin Pay opens to international cards — the July 2023 opening, the 2019 pilot and the card brands at launch. 20 July 2023.
+
+UnionPay International: overseas UnionPay cards on WeChat Pay and Alipay — UnionPay binding from November 2024 and its launch fee waiver. 6 November 2024.
+
+Tencent: 2026 inbound payment initiatives — the 90-day fee waiver for first-time card users, counted from the first payment; the Chinese version gives the 31 December 2026 end date. 27 May 2026.
+
+State Council of China: mobile payment limit raised to US$5,000 — the People's Bank of China ceiling of US$5,000 per transaction and US$50,000 a year. 1 March 2024.
+
+Tencent: payment services for visitors to China — higher limits after identity verification, passport checks in seconds, WeChat Pay HK in the mainland. 12 April 2024.
+
+WeChat Help Center: add and use international cards — setup path, international phone numbers, per-transaction, monthly and yearly limits, no red packets or transfers with international cards. Checked 27 September 2026.
+
+Tenpay: TenPayGo Payment User Service Agreement — TenPayGo covers merchant payments in mainland China only; card fees are set out on the payment page. Version of 11 June 2026.
+
+South China Morning Post: Tencent rolls out payment app for foreign travellers — TenPayGo's launch date, email sign-up and seven card networks. 24 September 2026.
+
+WeChat security center: freezing an account — freezing an account yourself or from a friend's WeChat. Checked 27 September 2026.
+
+Alipay Service Center: verification review time — submitted ID documents are reviewed within 24 hours. Checked 27 September 2026.
+
+Chaoyang District Government: overseas cards on Weixin Pay and Alipay — Alipay's ¥200 line and 3% fee. Checked 27 September 2026.
+
+Facts checked on 2026-09-27.
+
+Share this article
+
+Tags
+# wechat pay # china payments # foreigner in china # alipay tour pass # china travel tips
+
+Travelers also asked
+View all →
+Can foreigners use Alipay and WeChat Pay in China with international credit cards? →
+How can I pay a Chinese university application fee from abroad if Alipay and WeChat reject my foreign card? →
+What can I do if Alipay verification fails before my first trip to China? →
+What are the best payment methods for travelers in China, and are credit cards or cash widely accepted? →
+
+Related articles
+View all →
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+May 12, 2026 · Travel Tip
+Can You Use Credit Cards in China? A 2026 Reality Check
+
+January 11, 2026 · How-To Guide
+How to Use Alipay in China as a Foreigner: 2026 Setup Guide
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

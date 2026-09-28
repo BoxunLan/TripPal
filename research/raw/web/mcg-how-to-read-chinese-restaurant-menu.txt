@@ -1,0 +1,414 @@
+# source: https://mychina.guide/blog/how-to-read-chinese-restaurant-menu
+# final: https://mychina.guide/blog/how-to-read-chinese-restaurant-menu
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:28.238Z
+# bytes(raw): 78884
+# bytes(text): 19652
+# title: How To Read a Chinese Restaurant Menu: 2026 Guide
+How To Read a Chinese Restaurant Menu: 2026 Guide
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · March 9, 2026 · 14 min read · 1,076 views
+How To Read a Chinese Restaurant Menu (2026 Foreigner Guide)
+
+Michael Chen · Travel Writer, China Specialist · Updated September 27, 2026
+
+On this page 12 sections 01 What this guide covers
+02 Why The Paper Menu Is Dead In China
+03 The 40 Characters That Cover 80% Of A Chinese Menu
+04 The Three Apps You Actually Need
+05 The QR Code Ordering Workflow Step By Step
+06 The Big Traps That Blow Up Your Bill
+07 Chinese Restaurant Menu Red Flags Table
+08 How To Pay As A Foreigner In 2026
+09 Ordering Phrases That Work Anywhere
+10 Vegetarian And Allergy Handling
+11 Splitting The Bill And Tipping
+12 Frequently Asked Questions
+
+Physical paper menus are disappearing in Chinese restaurants. In Shanghai, Beijing, Shenzhen, and most tier-1 cities, around 90% of restaurants now run on QR-code ordering with a mini-program inside WeChat or Alipay. The menu is on your phone, in Chinese, and the server is not coming over to help. If you cannot read it, you cannot eat.
+This is the actual workflow foreign travelers can use in 2026. Which apps to install, the 40 key characters that cover 80% of menu decisions, how to avoid the seafood "price per 500g" trap that turns a ¥60 fish into a ¥240 bill, and the Alipay setup that lets your Visa or Mastercard pay the QR code at checkout.
+What this guide covers
+Why physical Chinese menus are gone and what QR code ordering actually looks like
+
+The 40 key Chinese menu characters to memorize
+
+Pleco, Google Translate, and Dianping: which app does what
+
+Step-by-step QR code ordering workflow
+
+Seafood price traps, spice levels, and tea service charges
+
+How to pay as a foreigner (Alipay and WeChat Pay with a foreign card)
+
+Ordering phrases in Mandarin that work at any counter
+
+Vegetarian and allergy handling
+
+Splitting the bill and tipping norms
+
+FAQ on bill disputes, QR failures, and English receipts
+
+MyChinaGuide app · free
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Why The Paper Menu Is Dead In China
+Back in 2018 you could walk into any Shanghai restaurant and get a laminated menu with photos, often with broken English on the second page. By 2026, that is the exception in tier-1 and tier-2 cities. Roughly 90% of urban restaurants have moved to QR code ordering through WeChat or Alipay mini-programs. You scan, you order on your own phone, you pay on your own phone, and the only human interaction is the runner dropping plates on your table.
+The driver is efficiency, not technology for its own sake. Restaurants turn tables faster when customers order from their phones, staffing costs go down, and kitchen tickets arrive faster and cleaner. The side effect for foreign travelers is brutal: the mini-program is almost never in English, Google Translate does not always work inside WeChat, and there is often no printed backup.
+Exceptions where paper menus still exist: international hotel restaurants, most airport restaurants, some tourist-zone restaurants that keep paper for foreign customers, regional restaurants in smaller cities, and traditional banquet-style restaurants.
+Everywhere else, you need a system.
+The 40 Characters That Cover 80% Of A Chinese Menu
+You do not need to learn Chinese. You need to recognize four categories of characters: proteins, vegetables, cooking methods, and modifiers. These 40 get you through almost any menu.
+Proteins:
+猪肉 zhūròu pork
+
+牛肉 niúròu beef
+
+羊肉 yángròu lamb
+
+鸡肉 jīròu chicken (also 鸡, just "chicken")
+
+鸭 yā duck
+
+鱼 yú fish
+
+虾 xiā shrimp
+
+蟹 xiè crab
+
+蛋 dàn egg
+
+豆腐 dòufu tofu
+
+Vegetables:
+菜 cài vegetable (generic)
+
+白菜 báicài cabbage
+
+青菜 qīngcài leafy greens / bok choy
+
+茄子 qiézi eggplant
+
+土豆 tǔdòu potato
+
+蘑菇 mógu mushroom
+
+香菇 xiānggū shiitake mushroom
+
+韭菜 jiǔcài Chinese chives
+
+辣椒 làjiāo chili pepper
+
+葱 cōng green onion / scallion
+
+Cooking methods:
+炒 chǎo stir-fried
+
+煮 zhǔ boiled
+
+蒸 zhēng steamed
+
+炸 zhá deep-fried
+
+烤 kǎo roasted / grilled
+
+烧 shāo braised
+
+煎 jiān pan-fried
+
+煲 bāo clay pot / stew
+
+Modifiers and key single characters:
+辣 là spicy
+
+麻 má numbing (Sichuan peppercorn)
+
+甜 tián sweet
+
+酸 suān sour
+
+咸 xián salty
+
+面 miàn noodles
+
+饭 fàn rice
+
+汤 tāng soup
+
+素 sù vegetarian
+
+小 xiǎo small portion
+
+大 dà large portion
+
+特色 tèsè house specialty
+
+Memorize these and you can parse 80% of any standard Chinese restaurant menu. The remaining 20% is covered by your translation app.
+The Three Apps You Actually Need
+Different apps do different jobs. Using one app for everything is where travelers get stuck.
+Pleco (essential)
+Pleco is the definitive Chinese-English dictionary app for travelers and students. Free on iOS and Android. The feature that matters for menus is the OCR (optical character recognition) mode : point your phone camera at a character or a full menu line, and Pleco identifies characters in real time and gives you dictionary definitions.
+For ¥60 one-time you can unlock the full OCR "live" mode that processes the entire camera feed at once. This is the single best menu-reading tool that exists. Works offline once dictionaries are downloaded, which matters when restaurant Wi-Fi is slow and cell signal drops in basements.
+Google Translate (backup)
+Free, works offline once you download the Chinese language pack. The camera mode auto-translates text through your camera lens, which is faster than Pleco for getting the gist of an entire menu. Accuracy is lower than Pleco for food terms (it consistently mistranslates some dish names), so use it for speed and cross-check with Pleco for anything you want to be sure about.
+Install Google Translate before you arrive in China. Google services are blocked, and while the Translate app itself still works because the language data is local, you cannot download new language packs once inside mainland China without a VPN.
+Dianping or Meituan (the secret weapon)
+Dianping (大众点评) is China's equivalent of Yelp. The critical feature is that users upload photos of every dish they order. You can search a restaurant name, open the dish list, and see hundreds of photos with the dish name in Chinese and star ratings.
+The move: before you sit down (or while the server is walking away from the table), open Dianping, search the restaurant, and scroll to the "recommended dishes" section. Screenshot the top three. When the server comes back, hand them your phone and point at a photo. Done. No character recognition required.
+Meituan (美团) is Dianping's sister app and has overlapping coverage. Either works.
+The QR Code Ordering Workflow Step By Step
+This is the exact sequence I use in 2026 when a QR code lands on the table.
+Scan the QR code with WeChat or Alipay camera. The restaurant's mini-program opens inside the app. You will see menu categories, dish photos (if you are lucky), and prices.
+
+Pinch to zoom and screenshot the main category pages. You will translate these.
+
+Open Google Translate camera mode in a second app and point it at the screenshot. Auto-translation renders over the original characters.
+
+Cross-check mystery dishes with Pleco using OCR mode. Pleco gives you character-level detail and the actual dish meaning.
+
+Cross-check with Dianping if the dish is unclear. Search the restaurant name and look at the photos other users uploaded.
+
+Select quantity and spice level. The mini-program usually has a modifier menu. Spice options are typically: 不辣 bù là (no spice), 微辣 wēi là (mild, and this can still be hot), 中辣 zhōng là (medium), 特辣 tè là (extra spicy). Sichuan and Hunan "micro spicy" can floor an average Western palate.
+
+Confirm the order and pay inside the mini-program. A Visa or Mastercard linked to Alipay or WeChat Pay works here; see the payment section below.
+
+Screenshot the order confirmation. If a dish arrives wrong, you have proof of what you ordered.
+
+Total time for a first attempt is about 5-8 minutes. By your third restaurant you will be doing it in under 2.
+The Big Traps That Blow Up Your Bill
+1. Seafood priced per 500g (per jin)
+This is the single worst trap in Chinese restaurants, especially seafood restaurants in coastal cities. Fish and crab are often priced per 500g (one jin, 一斤) on the menu, not per dish. A menu shows "¥58" for a steamed fish, you order it, the fish comes out at 1.2 kg, and you pay ¥140. Worst case, some tourist-zone seafood places weigh the live fish on tampered scales and bill you for 2.5 kg of what looked like a 1 kg fish.
+How to avoid it. Always ask "多少一条?" (duōshǎo yītiáo, how much for one fish) instead of reading the per-jin price. Watch the weighing process if possible. Avoid ordering seafood at unfamiliar tourist-area restaurants unless you have a local with you.
+2. Spice levels that lie
+"Micro spicy" (微辣) in Sichuan and Hunan is not "micro" by Western standards. It is enough to make a first-time eater sweat. If you cannot handle heat, explicitly order "不要辣" (bú yào là, no spice) and still be prepared for residual chili oil from the wok. Cross-contamination is common in busy kitchens.
+3. Tea service charge
+Many Chinese restaurants auto-charge a tea service fee (茶位费, chá wèi fèi) of ¥5-15 per person. It is legal, it is on the menu in small print, and it appears on the final bill. Not a scam, just a surprise. Budget ¥20-40 extra for a table of four.
+4. Hidden service fee at high-end restaurants
+Upscale restaurants sometimes add a 10-15% service fee not prominently displayed. Always review the subtotal before confirming payment on the mini-program.
+5. Fake QR codes
+A real, active scam. Someone sticks a fake payment QR code over the restaurant's legitimate one, and the money goes to the scammer instead of the restaurant. Check that the QR code looks like part of the table setup (printed, laminated, or affixed properly) and not like a peel-off sticker layered over another sticker. If anything looks odd, ask staff to confirm.
+Chinese Restaurant Menu Red Flags Table
+Trap
+
+What happens
+
+What it costs
+
+Fix
+
+Seafood per 500g
+
+Billed on weight, not per dish
+
++¥100-300
+
+Ask "multo per one" before ordering
+
+Micro spice
+
+Burns Western palate
+
+Ruined meal
+
+Say "bu yao la" explicitly
+
+Tea service charge
+
+Auto-added per person
+
+¥20-40
+
+Expected, budget for it
+
+Hidden 10-15% service
+
+Added at high-end spots
+
+¥30-100
+
+Review subtotal before paying
+
+Fake QR code
+
+Payment goes to scammer
+
+Full bill + dispute
+
+Inspect sticker, ask staff
+
+Cash refused
+
+Phone-only payment
+
+A slower checkout
+
+Link a card to Alipay; since Feb 2026 businesses taking payment in person can't refuse cash
+
+How To Pay As A Foreigner In 2026
+Since July 2023, Alipay and WeChat Pay have accepted cards issued abroad. Alipay takes Visa, Mastercard, American Express, JCB, Diners Club, Discover and UnionPay cards. If a restaurant's mini-program won't take your linked card, ask to pay at the counter or pay cash.
+Alipay setup (do it before you fly):
+Download Alipay from your app store before arriving in China.
+
+Sign up with your phone number; your home number works. Switch the app to English if you need to.
+
+Verify your identity with your passport when asked. Alipay says the review can take up to 24 hours.
+
+Add your Visa, Mastercard or other card issued abroad in the bank-card section. Your bank may ask you to approve it (3DS).
+
+Done. You can now scan QR codes at restaurants and pay directly.
+
+Fees and limits. Payments of ¥200 or less are free; above ¥200, Alipay and WeChat Pay each charge 3% of the whole amount, shown on the payment screen before you confirm. Each app sets your spending limits and shows them in the app, and most meals are well under them.
+WeChat Pay now offers similar international card linking. Set up both if you plan on being in China longer than a week, some restaurants only support one.
+Cash as a backup. Always carry ¥200-500 in small bills. It is rare to need it, but when the phone fails or the restaurant's Wi-Fi is down, cash is the safety net. Small bills (¥10, ¥20, ¥50) are easier than ¥100 notes. Since February 1, 2026, businesses that take payment in person may not refuse cash.
+Ordering Phrases That Work Anywhere
+Print these on a card or save them in your notes app.
+"我要这个" (wǒ yào zhège) - I want this one. Point at a photo.
+
+"不要辣" (bú yào là) - No spice.
+
+"不要肉" (bú yào ròu) - No meat.
+
+"多少钱?" (duōshǎo qián) - How much?
+
+"可以看菜单吗?" (kěyǐ kàn càidān ma) - Can I see the menu?
+
+"有英文菜单吗?" (yǒu yīngwén càidān ma) - Is there an English menu?
+
+"招牌菜是什么?" (zhāopái cài shì shénme) - What is your house specialty?
+
+"本地人喜欢什么?" (běndì rén xǐhuān shénme) - What do locals like?
+
+"请给我账单" (qǐng gěi wǒ zhàngdān) - Please give me the bill.
+
+"结账" (jiézhàng) - Check please (the quicker version).
+
+"我对虾过敏" (wǒ duì xiā guòmǐn) - I am allergic to shrimp.
+
+"我是素食者" (wǒ shì sùshí zhě) - I am vegetarian.
+
+Even broken pronunciation gets you understood in most cases. Staff are usually patient with foreigners making a genuine attempt.
+Vegetarian And Allergy Handling
+Vegetarian is harder than you expect. A dish labeled "vegetable" may be cooked in a pork-based stock, stir-fried with lard, or include oyster sauce. The character 素 (sù) means vegetarian, but always confirm: "没有肉, 没有肉汤" (méiyǒu ròu, méiyǒu ròutāng, no meat, no meat stock).
+Strict Buddhist-style vegetarian restaurants (素食餐厅, sùshí cāntīng) exist in most cities and are fully plant-based. Search "素食" on Dianping.
+Allergies. Peanut and tree nut allergies are especially tricky in Chinese cooking because peanut oil is common in the wok. Print an allergy card in Chinese and show it at every restaurant. Google "Chinese allergy card" and you will find free printable templates in simplified Chinese.
+Soy, sesame, and shellfish are also common and hard to avoid. If you have severe allergies, stick to restaurants where you can read the mini-program menu carefully and ask detailed questions.
+Splitting The Bill And Tipping
+Tipping is not customary in China. Do not leave cash on the table. Staff will sometimes run after you to return money they think you forgot. High-end Western restaurants and some hotel restaurants may add a service charge, which replaces tipping.
+Splitting the bill is generally awkward in China. The cultural default is that one person pays for the whole table and is repaid later, or the oldest / host insists on paying and everyone else thanks them. For foreigners in casual restaurants, splitting is fine but not always easy through the mini-program. Some systems allow per-person split via a share link, most do not. If you need to split precisely, the simplest move is: one person pays the full amount on Alipay, others pay that person back in cash. A card issued abroad and linked to Alipay or WeChat Pay can pay businesses but can't send money to friends.
+Frequently Asked Questions
+Can I just use Google Translate on Chinese restaurant menus?
+Yes, but with caveats. Google Translate's camera mode auto-translates menu text but gets food terms wrong often. Use it for speed, then cross-check uncertain dishes with Pleco (more accurate for Chinese) or Dianping (photos of the actual dish). Install Google Translate and download the Chinese language pack before you arrive in China, Google services are blocked in mainland China and downloading inside requires a VPN.
+What if the QR code menu does not work or crashes?
+Ask staff for help: "二维码坏了" (èrwéimǎ huài le, the QR code is broken). In most cases, they will restart it or bring a paper backup. In rare cases you may need to move tables. A small minority of restaurants still keep paper menus for exactly this situation.
+Is it safe to link my international credit card to Alipay in China?
+Yes, as of 2026 Alipay's international card linking is widely used and transactions are encrypted. Monitor your card's notifications for each charge. The main practical risk is the per-transaction limit rather than fraud. WeChat Pay offers the same feature if you prefer.
+Do I need to tip at Chinese restaurants?
+No. Tipping is not customary in mainland China at any price level. Any required service charge will be automatically added to the bill. Leaving cash on the table will usually result in staff chasing you to return it.
+How do I ask for an English receipt or fapiao?
+Say "我要发票" (wǒ yào fāpiào, I want an official invoice) at payment time. The fapiao is a tax invoice used for business expense claims. It is usually in Chinese only. For business expense reporting, take a photo of the fapiao and have it translated later. Some high-end hotels and chain restaurants can print an English receipt, but it is not standard.
+Reading the menu is half of it; knowing what should be on it is the other half. The regional cuisine guide covers which dishes are worth ordering in which city and what a bowl should cost, and what street food actually costs is the check against tourist pricing. Since the QR menu wants a wallet attached, setting up WeChat Pay with a foreign card is the prerequisite for all of it.
+
+Share this article
+
+Tags
+# china food # chinese menu # pleco # alipay # travel apps
+
+Travelers also asked
+View all →
+What should I know about using translation apps for Chinese menus? →
+Is Western-style Chinese food available in China, and why is the local cuisine so different? →
+What should I expect when ordering food delivery to my hotel or apartment in China? →
+Is it necessary to speak fluent Chinese to have positive interactions with locals while traveling? →
+
+Related articles
+View all →
+January 11, 2026 · How-To Guide
+How to Order Food in China Without Speaking Chinese
+
+January 12, 2026 · How-To Guide
+How to Order Coffee in China Without Speaking Chinese
+
+April 6, 2026 · Destination
+Best Local Food in China for Tourists: Regional Dishes, Prices & How to Order
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

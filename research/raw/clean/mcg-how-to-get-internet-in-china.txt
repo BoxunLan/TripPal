@@ -1,0 +1,315 @@
+# source: https://mychina.guide/blog/how-to-get-internet-in-china
+# final: https://mychina.guide/blog/how-to-get-internet-in-china
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:28.444Z
+# bytes(raw): 72018
+# bytes(text): 18062
+# title: How to Get Internet in China: eSIM, SIM & Wi-Fi (2026)
+
+How to Get Internet in China: eSIM, SIM & Wi-Fi (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · August 18, 2026 · 13 min read · 293 views
+How to Get Internet in China: eSIM, SIM & Wi-Fi Options
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 12 sections 01 The Great Firewall in 30 Seconds
+02 The 5 Ways to Get Online in China (Ranked)
+03 Option 1: International eSIM (The Best Bet for Most People)
+04 Option 2: Chinese Physical SIM (Cheap, but Firewalled)
+05 Option 3: International Roaming (Expensive but Zero Setup)
+06 Option 4: China Wi-Fi in Hotels and Public Spaces (Backup Only)
+07 Option 5: Hong Kong SIM (The Transit Traveler's Secret)
+08 Option 6: VPN (A Workaround With Legal Limits)
+09 Which Option Should You Pick?
+10 Pre-Flight Setup Checklist
+11 Frequently Asked Questions
+12 Sources
+
+The moment you land in Beijing, Google stops working. Your WhatsApp freezes. Instagram Stories upload forever, then fail. Here's the short version: you have 5 options for China internet , and only 3 of them get you past the Great Firewall without a fight. An international eSIM with 10GB for 30 days costs US$17 to US$26.50 (Nomad and Airalo, September 27, 2026) and works as soon as you land. A Chinese SIM gives you a local number but leaves you stuck behind the wall. Below is what works in 2026 and which one to pick.
+For the full brand rundown, our eSIM comparison for China is the pillar guide. This article zooms out to every way you can get china internet that actually does what you need.
+What this covers:
+What the Great Firewall blocks and why your apps stop working
+
+The 5 ways to get online in China, ranked
+
+Prices for eSIM, SIM, roaming, Wi-Fi and VPN, with the date checked
+
+A pre-flight checklist so you land online
+
+The Great Firewall in 30 Seconds
+Here's the thing nobody tells you at check-in. Your internet connection in China isn't like internet anywhere else. China runs the world's most aggressive internet filter. It's called the Great Firewall, and it blocks a lot of what you probably use every day.
+Blocked in mainland China (as of September 2026):
+Google : Search, Gmail, Drive, Maps, YouTube, Photos, Translate
+
+Meta : Facebook, Instagram, WhatsApp, Messenger, Threads
+
+X (Twitter) , Snapchat, Telegram, Signal
+
+News sites : NYT, BBC, Bloomberg, WSJ, The Guardian
+
+Wikipedia (English), Reddit, Dropbox, Twitch
+
+What does work: Apple services (iMessage, iCloud, Apple Music, Apple Maps), Microsoft Outlook and Teams, LinkedIn, and Bing. OneDrive and DuckDuckGo, often listed as working, were blocked in GreatFire's latest tests.
+So when someone says "just connect to the hotel Wi-Fi," sure, you'll get online. You just won't reach any app your friends are on. That's the trap.
+If you are here to check one specific app rather than to plan connectivity generally, the individual answers are more useful: Facebook , Discord , Google Translate — that last one matters more than it sounds, because the camera-translate feature is what gets you through a menu, and it is the one people assume will work offline.
+
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+
+The 5 Ways to Get Online in China (Ranked)
+Every option has trade-offs. Here's the honest comparison.
+Method
+
+Bypasses Firewall?
+
+Cost
+
+Setup Time
+
+Speed
+
+Best For
+
+International eSIM
+
+Yes
+
+Most plans US$4-73.90
+
+Minutes, before your flight
+
+4G/5G
+
+Most travelers
+
+Chinese Physical SIM
+
+No
+
+Varies by carrier and city
+
+At the counter, with your passport
+
+4G/5G
+
+Budget + need +86
+
+International Roaming
+
+Usually yes
+
+US$10-12/day (US carriers)
+
+Zero
+
+4G/5G
+
+Short trips
+
+Hotel / Public Wi-Fi
+
+No
+
+Free
+
+1 min
+
+Varies
+
+Backup only
+
+Hong Kong SIM (roaming)
+
+Yes
+
+From HK$68
+
+In Hong Kong, with your passport
+
+4G
+
+Transit via HK
+
+Quick reminder: "bypasses the firewall" means you can use Google, WhatsApp, and Instagram without a VPN. That's the line most travelers care about.
+Option 1: International eSIM (The Best Bet for Most People)
+This is the option most travelers should start with. Fast, cheap, it just works.
+An international eSIM routes your data through gateways outside mainland China before it reaches the internet. The traffic never passes through China's firewall filters. Google, WhatsApp, Instagram, YouTube all load like you're back home. No VPN needed.
+Prices (as listed on September 27, 2026):
+Nomad : 10GB / 30 days for US$17 (a sale price; regular US$22). Runs on China Unicom and China Telecom.
+
+Airalo Chinacom : 10GB / 30 days for US$26.50 . Runs on China Unicom; huge country catalog.
+
+Holafly : Unlimited / 7 days for US$27.50 . Pricier, with no published daily data cap.
+
+For the head-to-head brand breakdown, see our Nomad vs Airalo vs Holafly comparison .
+Critical rule : Install the eSIM and download the QR code before you leave home . You can't count on setting one up after you land: Nomad won't sell a new China plan inside mainland China, and installing needs an internet connection, which there usually means filtered Wi-Fi. For the policy backstory, see why China doesn't support eSIM .
+Option 2: Chinese Physical SIM (Cheap, but Firewalled)
+This is the budget pick. It's also the one I'd warn you about.
+A local SIM from China Mobile, China Unicom, or China Telecom is sold as a short-term package at airport counters and at the carriers' own stores in town. Prices depend on the carrier, the city and the plan length; at Kunming airport, for example, China Mobile's short-term plans for foreign visitors start at RMB 30. Bring your passport: every mobile line in China is registered under a real name, and the counter checks your passport and records your face. You'll get a real +86 number, and your phone needs to support 5G or VoLTE.
+The catch? Every byte routes through Chinese networks. The Great Firewall sits between you and Google. So:
+Gmail: no
+
+Instagram: no
+
+WhatsApp: no
+
+Google Maps: no
+
+Your entire day-to-day app stack: no
+
+You get Baidu, WeChat, Alipay, Didi, Meituan. Which is fine if you're committing to Chinese apps. If you want your real inbox, you'll need a VPN on top (see Option 6).
+When a physical SIM makes sense :
+You need a +86 phone number for something specific
+
+You're staying 30+ days and eSIM data caps feel tight
+
+You're fine living inside the Chinese app ecosystem
+
+Our China SIM card guide walks through the whole airport-counter process.
+Option 3: International Roaming (Expensive but Zero Setup)
+Your home carrier probably has a day pass for China. Here's the 2026 reality.
+US carriers :
+AT&T International Day Pass : $12/day on land, plus $6/day for each extra line used the same day. Unlimited talk, text and data on eligible unlimited plans.
+
+Verizon TravelPass : $12/day in China. 5GB of high-speed data per session, then slower data.
+
+T-Mobile : Experience More and Experience Beyond plans (and Go5G Plus and Next) include 5GB or 15GB of high-speed data abroad, then data at up to 256kbps. A 1-day International Pass with 2GB is $10 .
+
+Google Fi : international data works in China on the Flexible plan ($20 a month for one line, plus $10 per GB at home or abroad) and on Unlimited Premium. Like other roaming data, it bypasses the firewall by default .
+
+UK and Australia : carriers there sell their own roaming add-ons, and China rates vary by carrier and plan. Check yours before you fly.
+The math : A 10-day trip on AT&T's day pass costs $120 (AT&T charges at most 10 daily fees per bill). A Nomad eSIM with 10GB for 30 days is $17. Do the math and you'll switch.
+When roaming beats eSIM : You're in China for 2-3 days and hate QR codes, so $36 for zero setup is fair. Or you have Google Fi . Just use it. It bypasses the firewall natively.
+Option 4: China Wi-Fi in Hotels and Public Spaces (Backup Only)
+China has a lot of free Wi-Fi. That part is true. The china wifi problem is two-layered.
+Layer 1: It's firewalled. Every hotel, café, or KFC Wi-Fi runs through Chinese networks. You get the same Google-is-dead experience as with a physical SIM.
+Layer 2: Public Wi-Fi wants a Chinese phone number. China's Cybersecurity Law requires real-name registration for network access, so airports, train stations, subways, and many restaurants ask for SMS verification to a +86 number before granting access. Without one, you often can't log in.
+What actually works without a +86 number :
+Most hotel rooms (code from reception)
+
+Starbucks, KFC, McDonald's in first-tier cities
+
+Apple Stores : no gate, fast Wi-Fi, useful in a bind
+
+Four- and five-star hotel lobbies
+
+Speed varies from hotel to hotel. Good enough for streaming if you have a VPN. Not reliable enough to build your trip around.
+China Wi-Fi is a fine backup when you're parked in a hotel room and don't want to burn eSIM data. Not a primary plan. Anyone telling you "just use hotel Wi-Fi" hasn't tried WhatsApp in Shanghai at 9pm.
+Option 5: Hong Kong SIM (The Transit Traveler's Secret)
+Flying into Hong Kong first? Buy a prepaid SIM that includes mainland China data. csl, for example, sells a 3-day China-Hong Kong-Macau roaming SIM for HK$68 , and SmarTone a Chinese Mainland-Hong Kong-Macau SIM for HK$98 with data packs from HK$18 (prices listed September 27, 2026). Hong Kong SIM cards need real-name registration, so keep your passport handy.
+The magic: these SIMs roam into mainland China but your data still routes through Hong Kong, which isn't behind the firewall. Google, WhatsApp, Instagram all work. No VPN.
+Pick this if you're transiting via HK for a week or two, you don't want eSIM QR codes, or you want a working phone number (HK SIM gives you a +852 that Alipay accepts). Buy at HK airport arrivals, 7-Eleven, Circle K, or pre-order online.
+Option 6: VPN (A Workaround With Legal Limits)
+A VPN is what people reach for when they're stuck behind the firewall on a Chinese SIM or hotel Wi-Fi. It tunnels your traffic out to a server abroad.
+The legal bit : China requires international connections to go through state-approved channels. Under the State Council's rules on international networking (last revised in March 2024), police can warn, disconnect and fine any organization or individual that uses an unapproved channel, up to RMB 15,000. I'm not a lawyer, and there are no official figures I could find on enforcement against foreign visitors, so keep your use low-key.
+Main options, September 2026 (full comparison in our best VPN for China guide ):
+Astrill : US$12.50-30/month , depending on plan length. Its StealthVPN protocol and Smart Mode target restrictive networks like China's.
+
+LetsVPN : ended its mainland China service on April 28, 2026. Don't count on it.
+
+ExpressVPN : from US$2.99/month on a 28-month plan. Its support pages give a protocol order to try in heavily censored countries.
+
+NordVPN : its obfuscated servers now run on the NordWhisper protocol, and its help center has separate steps for China.
+
+Surfshark : from US$2.49/month on a 27-month plan. Its NoBorders mode turns on automatically in China, and Surfshark says it can't guarantee access.
+
+Non-negotiable : Install the VPN before you fly. VPN sites are blocked inside China.
+Which Option Should You Pick?
+Here's my honest decision tree.
+Staying 1-7 days : Buy an international eSIM (Nomad or Holafly). US$4 to US$27.50 on September 27, 2026. Done.
+Staying 7-30 days : eSIM still wins. Bigger plan, same logic. Or a Hong Kong SIM if you transit via HK.
+Staying 30+ days : Get both. eSIM for the first days, then a physical Chinese SIM from an in-town carrier store plus a VPN for Google access.
+You have Google Fi : Just use it. You're set.
+You forgot to prepare and you're at the airport : Buy a physical SIM at the carrier counter (bring your passport). Accept Instagram is dead this trip, or find an Apple Store and download a VPN over their Wi-Fi.
+Pre-Flight Setup Checklist
+Before you board, do these 5 things. 30 minutes total.
+Buy an eSIM (Nomad, Airalo, or Holafly). Save the QR code. Install it on your phone.
+
+Install a backup VPN (Astrill, ExpressVPN or Surfshark). You might not need it, but you can't download it in China.
+
+Register Alipay with your home phone number. The foreign-card link is now built in.
+
+Download WeChat and sign up with your home phone number; overseas numbers are accepted.
+
+Download the My China Guide app for offline city maps, offline translator, and a survival kit for when data fails.
+
+That last one matters. Even the best eSIM drops signal in a train tunnel outside Xi'an or a basement hot pot spot. Offline backup isn't optional, it's the insurance policy.
+Does China block all foreign apps?
+Not all. On Chinese networks, Google, Facebook, Instagram, WhatsApp, YouTube, Twitter, and most Western news sites are blocked. Apple services (iMessage, iCloud, Maps), Microsoft (Outlook, Teams), Bing, and LinkedIn mostly work. If it's a Google or Meta product, assume it's dead.
+Is it illegal to use a VPN in China?
+China's rules bar anyone, not only VPN sellers, from using unapproved cross-border channels, with warnings and fines of up to RMB 15,000, but I couldn't find any official figures on enforcement against foreign tourists. Keep it low-key, and install it before you arrive, because the download sites are blocked.
+Do I need a Chinese phone number for anything?
+Not really, not anymore. Alipay and WeChat both let you sign up with a foreign phone number. The old "you must have +86 to survive" advice is outdated. A Chinese number helps for public Wi-Fi access, but you can skip it.
+Will my US phone just work in China?
+Hardware-wise, yes. Any modern unlocked iPhone or Android that supports 5G or VoLTE works on Chinese networks. Connectivity-wise, only if your carrier offers international roaming. AT&T, Verizon, T-Mobile, and Google Fi all have China coverage.
+Is China Wi-Fi fast?
+In first-tier cities, usually yes, though speeds vary by hotel and network. Speed isn't the problem in China. The firewall is.
+Can I use Starlink in China?
+No. Starlink doesn't operate in mainland China, and in December 2025 China penalized a foreign ship for using it in Chinese waters. Don't bring a terminal.
+
+The bottom line on china internet : For accessing the internet in China without losing the apps you actually use, buy an international eSIM before you fly. Cheap, fast, least fussy. Keep a VPN installed as backup. Have an offline plan for when connectivity drops.
+Written by Michael Chen. Prices change, so confirm before you book.
+Sources
+Nomad: China eSIM plans — 10GB/30-day price (sale US$17, regular US$22), 1GB/7-day price, China Unicom and China Telecom networks; checked 2026-09-27.
+
+Holafly: eSIM for China — unlimited plans from 3 to 30 days, including 7 days for US$27.50 and 30 days for US$73.90; checked 2026-09-27.
+
+Airalo Help Center: VPN in China — eSIM data is routed through gateways outside mainland China, no VPN needed, hotel Wi-Fi is still filtered; accessed 2026-09-27.
+
+Tianjin Communications Administration (MIIT): SIM card guide for foreign nationals (in Chinese) — passport accepted at carrier-owned stores, prices as published by each carrier, 5G or VoLTE phone needed; published 2026-04-14.
+
+InKunming (Kunming news portal): China Mobile's airport counter for foreign visitors — passport check and face registration at the counter, 2- to 30-day plans from RMB 30; published 2026-02-14.
+
+Cyberspace Administration of China: Cybersecurity Law, 2025 revision (in Chinese) — Article 26, real identity required for network access and mobile phone service; in force 2026-01-01.
+
+AT&T Support: International Day Pass — US$12 a day on land, US$6 for each extra line, at most 10 daily fees per bill; page dated 2026-03-02 (China is on AT&T's destination list, updated 2026-04-27).
+
+Verizon: TravelPass countries — China at US$12 a day; checked 2026-09-27.
+
+csl: Prepaid SIM cards — 3-day China-Hong Kong-Macau roaming SIM for HK$68, real-name registration required; checked 2026-09-27.
+
+GreatFire Analyzer — test results for the blocked and working sites listed above (DuckDuckGo and OneDrive blocked; Bing, LinkedIn, iCloud and Teams reachable); tests between 2026-03 and 2026-09, checked 2026-09-27.
+
+Ministry of Justice regulations database: Provisional Regulations on International Networking of Computer Information Networks (in Chinese) — Articles 6 and 14, warning, disconnection and fines up to RMB 15,000; revised 2024-03-10, accessed 2026-09-27.
+
+LetsVPN: notice to users (in Chinese) — end of LetsVPN's mainland China business; published 2026-04-28.
+
+Facts checked on 2026-09-27.
+
+Tags
+# internet # esim # wifi # vpn # great-firewall
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

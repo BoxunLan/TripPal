@@ -1,0 +1,373 @@
+# source: https://mychina.guide/blog/send-package-in-china-as-foreigner
+# final: https://mychina.guide/blog/send-package-in-china-as-foreigner
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:29.662Z
+# bytes(raw): 69454
+# bytes(text): 16656
+# title: Send Package in China as a Foreigner 2026: SF Express, EMS, JD
+Send Package in China as a Foreigner 2026: SF Express, EMS, JD
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · January 11, 2026 · 12 min read · 2,690 views
+How to Send a Package in China as a Foreigner (2026 Guide)
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 9 sections 01 What this guide covers
+02 The four couriers foreigners should know
+03 What you need at the counter
+04 Real 2026 prices
+05 Prohibited items
+06 How to actually ship souvenirs home
+07 Numbered steps for a typical SF Express tourist shipment
+08 Customs and import duties on the receiving end
+09 FAQ
+
+You bought a 3 kg porcelain vase in Jingdezhen, a box of tea in Hangzhou, and a rolled silk painting in Suzhou, and now your carry-on does not close. Every Chinese will tell you the same thing — just use SF Express (顺丰, shun feng) — but the moment you walk into the bright red-and-white storefront on the corner you discover that the intake form wants a Chinese ID number, the clerk does not speak English, and the payment screen defaults to a WeChat Pay account tied to a Chinese bank card. Sending a package in China as a foreigner is entirely possible in 2026, but the process is not the one your hostel front desk described.
+Here is how to actually ship a box domestically or internationally without getting stuck at the counter.
+What this guide covers
+The four courier options foreigners can realistically use in 2026
+
+What SF Express, EMS, China Post, and JD Logistics do differently
+
+What you need at the counter as a passport-holding tourist
+
+Real 2026 prices for domestic and international shipping
+
+Prohibited items that will get your package rejected or destroyed
+
+How international customs clearance actually works
+
+Shipping souvenirs — tea, silk, porcelain, and other tourist favorites
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+The four couriers foreigners should know
+China has dozens of parcel companies. For practical tourist use there are only four that matter, because they have either international service, English-friendly counters, or enough scale that you can find a branch in any major city.
+Courier
+
+Chinese name
+
+Domestic
+
+International
+
+Tourist friendliness
+
+SF Express
+
+顺丰速运 shun feng su yun
+
+Yes, premium
+
+Yes, to 200+ countries
+
+High
+
+China EMS
+
+中国邮政速递 zhong guo you zheng su di
+
+Yes, economy
+
+Yes, postal treaty network
+
+Highest for international
+
+China Post
+
+中国邮政 zhong guo you zheng
+
+Yes, slow
+
+Yes, slow and cheap
+
+Medium
+
+JD Logistics
+
+京东物流 jing dong wu liu
+
+Yes, fast
+
+Yes, via partners
+
+Medium
+
+The rule of thumb in 2026 is simple: SF Express for anything inside China when speed matters, and China EMS for anything leaving the country. If you are shipping a fragile souvenir home, those are the only two names you need to remember.
+SF Express (顺丰)
+The FedEx of China. Uniformed couriers, tracked pickups, air freight on long routes, and branches in almost every neighborhood of every Chinese city. Domestic SF deliveries typically reach their destination within 24-48 hours within a province and 48-72 hours across the country. International service covers more than 200 countries but is noticeably more expensive than EMS for parcels over 2 kg.
+China EMS (中国邮政速递物流)
+The dedicated express arm of the state postal service. EMS is the best option for international shipments out of China because it is tied into the Universal Postal Union treaty network, which means it hands off directly to USPS, Royal Mail, Australia Post, Deutsche Post, and most other national postal services at the destination. EMS international pricing is predictable, customs handling is standardized, and the branch staff at big post offices are used to foreign customers.
+China Post (中国邮政)
+The regular state postal service. Slower than EMS, much cheaper, and available at every green-and-yellow post office you see. Small parcels under 2 kg to international destinations are often 30-50 percent cheaper than EMS but take 2-6 weeks to arrive. Fine for non-urgent souvenir shipments, wrong choice for anything you actually need on a timeline.
+JD Logistics (京东物流)
+JD's in-house courier, used mostly for JD.com orders but available for third-party drop-offs in major cities. Fast domestic delivery, occasionally cheaper than SF on short routes. International service exists but is inconsistent for tourist drop-ins and better avoided unless you already have a JD account.
+What you need at the counter
+Every courier in China now requires real-name registration on parcels. This rule dates to 2015 but has been more strictly enforced since 2022 in response to anti-smuggling and fraud crackdowns. For a foreigner this means:
+Your actual passport at the counter (not a photo or photocopy)
+
+A Chinese phone number that can receive SMS for the sender registration, or the clerk's workaround phone
+
+The recipient's full name, phone, and address in the destination country
+
+Payment in cash, Alipay, WeChat Pay, or occasionally UnionPay — foreign Visa/Mastercard are rarely accepted at parcel counters
+
+An open, unsealed box so the clerk can visually inspect the contents before you close and tape it
+
+Point 5 is the one that catches tourists off guard. You cannot bring a pre-sealed box and drop it off. The counter clerk is legally required to verify the contents before accepting the parcel, and they will open any sealed box or ask you to open it.
+The phone number issue is solvable. SF Express clerks and major post offices will usually register the parcel under the storefront's phone number and simply give you the waybill number for tracking. Some branches also have a tourist workflow that registers the parcel against your passport number instead of a phone number. Ask for 外国人寄件 (wai guo ren ji jian), which means "foreigner shipping," and most clerks will know the workflow.
+Real 2026 prices
+Prices vary by city, weight, volumetric weight, and whether the courier considers the route "remote." The table below reflects standard 2026 pricing for regular Chinese cities, not remote Tibetan or Xinjiang destinations.
+Route
+
+Weight
+
+2026 Price
+
+SF Express Beijing to Shanghai (domestic)
+
+1 kg
+
+¥23
+
+SF Express Beijing to Shanghai
+
+3 kg
+
+¥45
+
+SF Express Beijing to Shanghai
+
+5 kg
+
+¥68
+
+China Post Shanghai to Chengdu
+
+2 kg
+
+¥18
+
+EMS China to USA
+
+1 kg
+
+¥280
+
+EMS China to USA
+
+3 kg
+
+¥520
+
+EMS China to USA
+
+5 kg
+
+¥780
+
+EMS China to UK
+
+3 kg
+
+¥480
+
+EMS China to Germany
+
+3 kg
+
+¥450
+
+EMS China to Australia
+
+3 kg
+
+¥460
+
+EMS China to Japan
+
+3 kg
+
+¥240
+
+SF Express China to Singapore
+
+3 kg
+
+¥520
+
+China Post air mail to USA (economy)
+
+2 kg
+
+¥190
+
+EMS international shipments usually arrive in 6-12 days. SF Express international shipments in 4-8 days. China Post economy mail in 2-6 weeks. Express service is worth the premium when sending anything fragile because EMS and SF handle boxes more carefully than China Post's economy stream.
+Prohibited items
+Chinese couriers will reject or confiscate a long list of items at the counter, and customs on the destination side will catch anything that slipped through. The most common tourist-related problems in 2026:
+Lithium batteries over 100 Wh — cannot be shipped internationally at all, and loose cells under 100 Wh need approved packaging
+
+Power banks — same rules as lithium batteries, routinely confiscated
+
+Liquids over 500 ml — alcohol, sauces, oils, perfumes all hit this limit
+
+Tea in loose leaf form over 2 kg — allowed domestically, regulated internationally
+
+Traditional Chinese medicine — banned from many international destinations due to CITES wildlife protection rules
+
+Antiques older than 100 years — cannot be legally exported without a cultural relics permit
+
+Fresh food, meat, dairy, eggs — banned internationally
+
+Cash, credit cards, passports — cannot be shipped
+
+Aerosols and compressed gas — cannot be shipped internationally
+
+The CITES rule is the one that catches tourists most often. Tiger balm is fine. Anything containing ingredients like rhinoceros horn, pangolin, or bear bile is criminally banned in most Western countries and will be destroyed at customs even if somehow accepted at the Chinese counter.
+How to actually ship souvenirs home
+The three most common tourist shipments out of China are tea, silk, and porcelain. Each has specific handling rules.
+Tea
+Loose leaf tea in factory-sealed packaging ships fine. Loose tea in paper bags should be repackaged into a proper plastic pouch or the box will stink of leaves on arrival. On the customs form, describe it accurately as "tea, leaves, dried, for personal consumption" and declare its real value — under-declaring to dodge duty is illegal and can get the package held. Some countries (Australia, New Zealand) have strict biosecurity rules and require tea to be commercially packaged.
+Silk
+Silk scarves, ties, and small textiles ship without issue. Larger silk paintings and framed works need a rigid tube or flat cardboard to prevent creasing. Use SF Express rather than EMS for silk over ¥1,000 in declared value because SF handles textiles more gently. Declare at actual value; underreporting silk value is a common tourist mistake that causes customs issues in the destination country.
+Porcelain
+The most fragile and most commonly damaged tourist shipment. Pack in a double-walled box with at least 5 cm of bubble wrap on every side, and mark the box as fragile with the Chinese word 易碎 (yi sui). SF Express has an explicit "fragile packaging service" at larger branches that costs ¥30-60 extra and includes professional bubble-wrap and foam inserts. Always pay for it when shipping ceramics.
+Numbered steps for a typical SF Express tourist shipment
+Here is what a normal 3 kg international shipment actually looks like from the moment you walk into an SF Express storefront:
+Walk in with your unsealed parcel and your passport
+
+Tell the clerk the destination country in English; they will usually understand "America," "UK," "Germany," "Japan," or "Australia"
+
+The clerk places your parcel on the scale to weigh it
+
+The clerk opens your box and visually inspects the contents for prohibited items
+
+The clerk hands you a paper waybill or asks you to fill in the recipient details on a tablet
+
+You write or type the recipient's full name, street address, city, postal code, phone number, and country
+
+The clerk scans your passport for the sender real-name registration
+
+The clerk quotes the total price and payment options
+
+You pay with Alipay, WeChat Pay, or cash
+
+The clerk seals the box in front of you, prints the waybill label, and attaches it
+
+You receive a tracking number and the estimated delivery date
+
+The entire process takes 10-20 minutes for an experienced clerk and 30-45 minutes if you are in a small-town branch that has rarely handled a foreign customer.
+Customs and import duties on the receiving end
+Customs rules on the receiving end changed sharply in 2025, so do not assume a small package slips through duty-free. The big one is the United States: it scrapped its old USD 800 "de minimis" duty-free allowance — that ended for parcels from China on 2 May 2025, was suspended for every country on 29 August 2025, and is still suspended in 2026. In practice almost any package arriving in the US now clears formal customs and can be charged duty regardless of value. Other countries still have low-value thresholds, but they are shrinking: the UK clears goods under GBP 135 of customs duty (import VAT is still charged), the EU under EUR 150 (VAT applies from the first euro, and a flat EUR 3 per-parcel charge starts 1 July 2026), Australia assesses GST and duty above AUD 1,000, and Canada charges on most things above CAD 20. Assume a gift sent home will likely attract some tax or fee on arrival.
+Two common mistakes:
+Splitting one big shipment into multiple small ones on the same day can be flagged as duty evasion
+
+Under-declaring value on the customs form is technically illegal in most countries and can cause the whole package to be seized
+
+Declare honestly, keep receipts, and expect to pay roughly 10-20 percent in duties and tax on anything your home customs assesses — and for US-bound parcels, assume that is now any package, since the de minimis allowance is gone.
+FAQ
+Can foreigners send packages in China without a Chinese ID?
+Yes. SF Express, China EMS, and China Post all accept foreign passports at the counter. The clerk will register the parcel under your passport number (or occasionally under the storefront's phone number as a workaround for SMS verification). You do not need a Chinese ID card.
+Which is cheaper for international shipping, SF Express or China EMS?
+EMS is consistently cheaper than SF Express for international parcels over 2 kg going to the USA, UK, and Europe. SF Express is slightly cheaper or comparable to EMS for very small parcels under 1 kg and for nearby Asian destinations like Japan, Singapore, and Korea. For the typical souvenir shipment of 3-5 kg home to Europe or North America, EMS wins on price by 20-30 percent.
+How do I ship something home from China without speaking Chinese?
+Use EMS at a major post office, or SF Express at a branch inside a large shopping mall, department store, or hotel. Both have staff who handle foreign customers regularly in big cities. Bring your passport, an unsealed box, the recipient's full address written in English, and pre-loaded Alipay or WeChat Pay. Ask for 国际快递 (guo ji kuai di), which means "international express."
+Can I send tea, silk, and porcelain home as souvenirs?
+Yes, all three are routinely shipped internationally from China without issues. Pack porcelain in double-walled boxes with bubble wrap, keep silk flat or rolled in a tube, and use sealed packaging for tea. Declare at accurate value and be aware that some countries (Australia, New Zealand) have strict biosecurity rules for tea and plant matter.
+What is the fastest way to send a package from China to the USA?
+SF Express International Express typically delivers to major US cities in 4-7 days, while EMS takes 6-12 days. SF Express is roughly 50 percent more expensive than EMS for the same package. For anything time-sensitive like documents or gifts needed within a week, SF Express wins. For typical souvenir shipments without a deadline, EMS is the better value.
+Shipping is usually the answer to a luggage problem you created shopping, so it is worth knowing the limits you are shipping around: what you can carry on a Chinese train is stricter than most people expect, and the racks fill early. If the purchase is tea, the Yunnan tea guide explains why the original cotton wrapper matters at customs, and Suzhou silk bargaining covers the other thing people end up posting home.
+If the porcelain in that opening sentence is the reason you are here, Jingdezhen's markets run on a weekly clock — and most stallholders will pack and ship for you, which is usually better than doing it yourself.
+
+Share this article
+
+Tags
+# china shipping # sf express # ems # logistics # tourist
+
+Travelers also asked
+View all →
+How to ship luggage between cities in China SF Express →
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

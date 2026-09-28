@@ -1,0 +1,357 @@
+# source: https://mychina.guide/blog/china-visa-free-transit-requirements
+# final: https://mychina.guide/blog/china-visa-free-transit-requirements
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:25.434Z
+# bytes(raw): 80507
+# bytes(text): 19074
+# title: China Visa-Free Transit: 240-Hour Rules Explained (2026)
+
+China Visa-Free Transit: 240-Hour Rules Explained (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · February 12, 2026 · 13 min read · 10,833 views
+China Visa-Free Transit Requirements: 240-Hour Rules (2026)
+
+Michael Chen · Travel Writer, China Specialist · Updated September 27, 2026
+
+On this page 12 sections 01 What this guide covers
+02 What the 240-hour rule actually is
+03 The 57 eligible countries (2026)
+04 Approved ports of entry and exit
+05 The stay-zone rules in 2026
+06 What documents you need at immigration
+07 240-hour transit vs. the 30-day visa-free scheme: not the same thing
+08 Common reasons people get turned away
+09 How to actually apply at the airport
+10 Practical tips
+11 Frequently Asked Questions
+12 Sources
+
+China now offers 240 hours (10 days) of visa-free transit to travelers from 57 countries who arrive at an approved port with a confirmed onward ticket to a third country or region. This is a major expansion from the old 72/144-hour rules and it covers almost every popular arrival airport in the country. If you are a US, UK, Canadian, Australian, German, French, Italian, Spanish, Japanese, or Korean passport holder with a layover or short trip through China, you probably qualify.
+Below is how the 240-hour rule works in 2026: who qualifies, what you need at immigration, and the mistakes that get people turned away at the desk.
+What this guide covers
+The 240-hour transit policy and who qualifies in 2026
+
+Which countries are on the list (and how to check yours)
+
+Approved ports of entry and exit
+
+What documents you must show at immigration
+
+The stay-zone rules and how they work
+
+240-hour transit vs. the separate 30-day visa-free scheme (the two are different)
+
+How to actually apply at the airport desk
+
+Common reasons people get turned away
+
+FAQs on overlapping flights, rail exits, and extensions
+
+What the 240-hour rule actually is
+China's visa-free transit is called Transit Without Visa (TWOV) . It is not a tourist visa - it is a temporary entry permit issued at the border to passport holders from eligible countries who are passing through China on their way to a third country or region.
+In late 2024, China expanded the program from 72 and 144 hours up to 240 hours (10 days) and added more ports. As of 2026, the key rules are:
+You must hold a passport from one of the 57 eligible countries (list below).
+
+You must arrive and depart at one of the approved ports (airports, some rail and sea ports).
+
+You must have a confirmed onward ticket to a third country or region - not a return to your origin. "Third country" means somewhere other than your arrival country. Hong Kong, Macau, and Taiwan count as separate regions.
+
+Your passport must have at least 3 months of validity left.
+
+You must stay within the permitted areas of the 24 regions in the scheme; you can travel between them.
+
+No visa fee and no application ahead of time - you apply at the port on arrival.
+
+The 240 hours start ticking at midnight the day after you clear immigration , not at the moment of entry. So if you clear immigration on a Monday at 14:00, your 240 hours begin Tuesday at 00:00 and you must exit by Thursday the following week at 23:59.
+The 57 eligible countries (2026)
+The eligible list is announced by China's National Immigration Administration and has been expanding. It was last expanded on 20 August 2026, when Kyrgyzstan and Vietnam were added, bringing the total to 57. It covers all G7 nations, most of Europe, Oceania, and several Asian partners:
+North America: United States, Canada, Mexico
+
+Europe (Schengen and wider): Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Monaco, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland, United Kingdom
+
+Balkan and others: Albania, Bosnia and Herzegovina, North Macedonia, Montenegro, Serbia
+
+Middle East: United Arab Emirates, Qatar
+
+Asia-Pacific: Australia, Brunei, Indonesia, Japan, Kyrgyzstan, New Zealand, Singapore, South Korea, Vietnam. Malaysia is not on this list, despite appearing on many outdated ones — Malaysians enter under the separate China–Malaysia mutual visa exemption that took effect on 17 July 2025.
+
+South America: Argentina, Brazil, Chile
+
+Other: Russia, Ukraine, Belarus
+
+Double-check your exact nationality against the current list at China's National Immigration Administration (nia.gov.cn) or at your nearest Chinese consulate website before booking. China has been adding countries, not removing them, but policy changes happen.
+Approved ports of entry and exit
+The 240-hour policy now covers 65 ports across China, including every major international gateway. The big ones:
+Port
+
+Code
+
+City
+
+Beijing Capital International
+
+PEK
+
+Beijing
+
+Beijing Daxing International
+
+PKX
+
+Beijing
+
+Shanghai Pudong International
+
+PVG
+
+Shanghai
+
+Shanghai Hongqiao International
+
+SHA
+
+Shanghai
+
+Guangzhou Baiyun International
+
+CAN
+
+Guangzhou
+
+Shenzhen Bao'an International
+
+SZX
+
+Shenzhen
+
+Chengdu Tianfu International
+
+TFU
+
+Chengdu
+
+Chengdu Shuangliu International
+
+CTU
+
+Chengdu
+
+Chongqing Jiangbei International
+
+CKG
+
+Chongqing
+
+Xi'an Xianyang International
+
+XIY
+
+Xi'an
+
+Hangzhou Xiaoshan International
+
+HGH
+
+Hangzhou
+
+Nanjing Lukou International
+
+NKG
+
+Nanjing
+
+Kunming Changshui International
+
+KMG
+
+Kunming
+
+Xiamen Gaoqi International
+
+XMN
+
+Xiamen
+
+Qingdao Jiaodong International
+
+TAO
+
+Qingdao
+
+Harbin Taiping International
+
+HRB
+
+Harbin
+
+Only two rail ports are on the list: West Kowloon Station on the Guangzhou–Shenzhen–Hong Kong Express Rail Link, and Mohan Railway Port on the Yunnan–Laos border. Beijing West and Shanghai Hongqiao railway stations do not qualify, whatever older guides say — Hongqiao the airport is on the list, Hongqiao the train station is not. Fourteen passenger sea ports also qualify, including Shanghai, Tianjin, Qingdao, Dalian and Xiamen, along with two road crossings in Zhuhai: Hengqin and the Hong Kong–Zhuhai–Macao Bridge.
+You do not have to enter and exit the same port. You can fly into Shanghai Pudong and fly out of Beijing Daxing on your way to Tokyo, for example, as long as both are on the approved list and you stay inside the permitted areas in between.
+The stay-zone rules in 2026
+This is the part that trips people up. Your 240 hours are not valid across all of China. They are valid inside the permitted areas of the 24 provinces, autonomous regions and municipalities that operate the scheme.
+Since the December 2024 expansion you can move between those areas. The National Immigration Administration states that transit travellers may make cross-province visits within the permitted areas of all 24 regions. Entering at Shanghai Pudong does not lock you into the Yangtze River Delta — Beijing, Guangdong and Sichuan are all reachable , as long as you leave on time from an approved port.
+What still constrains you is how each region defines its permitted area. Most open the entire province or municipality. Six do not:
+Shanxi: Taiyuan and Datong only.
+
+Heilongjiang: Harbin only.
+
+Jiangxi: Nanchang and Jingdezhen only.
+
+Guangxi: 12 cities, including Nanning, Guilin, Beihai and Liuzhou.
+
+Sichuan: 11 cities, including Chengdu, Leshan, Yibin and Ya'an.
+
+Yunnan: nine cities and prefectures — Kunming, Yuxi, Chuxiong, Honghe, Wenshan, Pu'er, Xishuangbanna, Dali and Lijiang. Entering at Kunming does not open the whole province.
+
+The seven mainland regions outside the scheme are off-limits entirely: Jilin, Inner Mongolia, Gansu, Qinghai, Ningxia, Xinjiang and Tibet. Leaving a permitted area counts as illegal stay, which brings a warning and, in serious cases, a fine of ¥500 a day up to ¥10,000, or 5 to 15 days' detention. Check your entry port's permitted area on the National Immigration Administration site before booking internal travel.
+What documents you need at immigration
+Have everything ready before you reach the desk. The immigration officer will ask for:
+Your passport , with at least 3 months of validity left.
+
+Your confirmed onward ticket to a third country or region, with a confirmed date and seat. A paper or electronic ticket is fine.
+
+The Arrival Card , filed online before you fly (possible since 20 November 2025) or completed at the airport by QR code, self-service machine or paper card.
+
+Your destination address inside China - hotel name and street address. Officers may ask.
+
+The officer will then:
+Scan your passport and the e-ticket
+
+Ask one or two clarifying questions ("where are you going in China?")
+
+Issue a Temporary Entry Permit
+
+Stamp your passport for entry
+
+Some airports have a separate counter for visa-free transit passengers; if yours does not, join the queue for foreign passports.
+240-hour transit vs. the 30-day visa-free scheme: not the same thing
+China also lets citizens of a separate, longer list of countries enter without a visa for up to 30 days, for business, tourism, family visits, exchanges or transit. It includes most of Europe, the UK, Canada, Australia, Japan and South Korea, but not the US. The visa-free countries list has the current list.
+If your passport qualifies for the 30-day scheme, use it - it is simpler. It does not require an onward ticket to a third country and works at any port open to foreigners. The 240-hour rule is for travelers whose nationality is not on that list.
+Common reasons people get turned away
+The onward ticket is back to your origin country
+If your ticket is London-Shanghai-London, that is a round trip , not a transit, and you are not eligible for the 240-hour rule. You must be going from country A through China to country C, where C is not A.
+The onward ticket is unconfirmed
+A reservation placeholder or a refundable booking with no seat assignment may be rejected. Show a ticketed, confirmed e-ticket with a six-character PNR.
+The onward flight is more than 240 hours later
+You cannot stretch. If your flight is day 11 at 00:05, you will be denied transit entry and told to apply for a tourist visa.
+Crossing into a restricted region
+Hong Kong and Macau are considered separate regions for transit purposes - a flight to Hong Kong counts as an onward international departure. Taiwan also counts as a separate region.
+Missing the Arrival Card
+You need an arrival card. File it online before you fly (possible since 20 November 2025), or complete it at the airport by QR code, self-service machine or paper card before you queue.
+Nationality not on the list
+Worth double-checking. If your country is not currently on the 57-nation list, you need a regular visa.
+A past immigration violation
+Border officers do not grant visa-free transit to anyone with a record of illegal entry, illegal stay or illegal work in China within the past five years, according to the Guangzhou Baiyun border inspection station.
+How to actually apply at the airport
+The process is much the same at every approved port:
+Deplane and follow "Immigration / 入境" signs.
+
+Look for a visa-free transit counter. If the airport has none, use the counters for foreign passports.
+
+Hand over your passport, Arrival Card, and onward e-ticket. Have them open on your phone or printed.
+
+Receive your temporary entry permit and entry stamp.
+
+Clear customs (green channel if nothing to declare) and you are in.
+
+Practical tips
+Book an onward ticket you can change. If plans shift, you can move your departure within the 240 hours; the window itself does not stretch.
+
+Download a map app that works in China , such as Amap, before you land.
+
+Keep your onward ticket accessible on your phone , with a printed copy as backup.
+
+Hotel registration still applies. Hotels register you when you check in with your passport. Anywhere else, such as an Airbnb or a friend's home, you or your host must register within 24 hours, online since 21 September 2026 or at the local police station.
+
+Can I enter on 240-hour transit and exit by high-speed train to Hong Kong?
+Yes. The Guangzhou–Shenzhen–Hong Kong high-speed line counts, because Hong Kong is a separate region, and West Kowloon station, where you clear mainland exit checks, is one of the approved ports. The only other railway port is Mohan on the Laos border; stations such as Shanghai Hongqiao are not on the list. Print the booking reference in case the officer wants to verify it.
+Does my layover hour count against the 240 hours?
+If you are just changing planes in the international transfer area without clearing immigration, no - you are still "airside" and no clock is running. If you clear immigration and enter China proper, even for a few hours, your 240 hours start at 00:00 the next day.
+What happens if I overstay?
+If illness, a cancelled flight or another emergency will keep you past the deadline, apply to the exit-entry office of the local public security bureau for a stay permit before your expiry . Staying on without one is illegal stay: a warning and, in serious cases, a fine of ¥500 a day up to ¥10,000 or 5 to 15 days' detention, and anyone repatriated for it can be barred from re-entering China for one to five years.
+Can I work or study on 240-hour transit?
+No. TWOV is strictly for tourism, short business meetings, and transit. Work and study require the appropriate visa type.
+What if my flight is delayed past the 240-hour limit?
+Go to the exit-entry office of the local public security bureau before your deadline, with the airline's delay or cancellation notice, and apply for a stay permit. Do not wait until the last hour.
+Is the 240-hour rule free?
+Yes. It is a visa exemption, so there is no visa fee to pay. If anyone at the airport asks you for a "transit visa fee", it is not an official charge.
+Two adjacent things worth reading before you fly. The 240-hour itinerary guide turns these rules into a route that actually works inside the window, and the visa-free countries list sets transit against the separate 30-day scheme — different list, different rules, and confusing the two is what puts people at the wrong counter.
+For US passport holders specifically, what transit allows and where it stops is the version written for the most common case.
+Sources
+National Immigration Administration: Visa-Free Transit Policies — the 57 countries, 65 ports in 24 provinces, 10-day stay, onward ticket with confirmed date and seat, 24-hour direct transit. Page dated August 20, 2026.
+
+National Immigration Administration: Kyrgyzstan and Vietnam added — effective August 20, 2026, bringing the list to 57. Dated August 20, 2026.
+
+National Immigration Administration: 过境免签政策 (port and permitted-area table) — all 65 ports by type and the permitted area of each region. Page dated August 20, 2026.
+
+National Immigration Administration: ten measures, November 2025 — West Kowloon station, Hengqin, the Hong Kong–Zhuhai–Macao Bridge and two Guangdong passenger ports added from November 5, 2025, taking entry ports from 60 to 65. Dated November 3, 2025.
+
+Chinese Embassy in Canada: 240-hour visa-free transit — passport valid for at least 3 months, clock from 00:00 the day after entry, stay permits for illness or force majeure. Updated June 2025.
+
+China Southern Airlines: 240-hour transit notes from Guangzhou Baiyun border inspection — Hong Kong, Macau and Taiwan count as third regions; paper or electronic tickets; no permit after illegal entry, stay or work within 5 years. Dated December 30, 2024.
+
+Chinese Embassy in the US: China launches online arrival card — online filing from November 20, 2025; QR code, kiosks or paper card at the port. Dated December 3, 2025.
+
+Beijing Municipal Government: online accommodation registration nationwide — online registration for stays outside hotels from September 21, 2026. Dated September 23, 2026.
+
+Exit and Entry Administration Law — Article 78 (illegal stay: warning, or ¥500 a day up to ¥10,000, or 5 to 15 days' detention) and Article 62 (1–5 year re-entry ban after repatriation). Accessed September 27, 2026.
+
+Ministry of Public Security: definitions of illegal stay — activity outside the permitted area counts as illegal stay under Article 78. Issued 2017, republished September 21, 2023.
+
+Chinese Embassy in the US: FAQ on visa-free entry — the 30-day visa-free list (the US is not on it); entry through any port open to foreigners. Updated February 2026.
+
+Chinese Embassy in Malaysia: China–Malaysia mutual visa exemption — in force from July 17, 2025. Dated July 16, 2025.
+
+Facts checked on 2026-09-27.
+
+Tags
+# china-visa # transit-visa # travel-requirements # 240-hour # visa-free
+
+View all →
+I'm a US citizen planning about 9 days in China (Beijing and Shanghai). My flights connect through South Korea both on the way in and on the way out, and then I fly back to the US. Does the 240-hour visa-free transit apply, or do my two transit points have to be in different countries? →
+Can a US passport holder born in China use the 240-hour TWOV policy? →
+Will I face boarding issues if I don't provide visa information for Beijing transit? →
+On a 240-hour China transit itinerary, should I keep a one-day Hangzhou stop or spend more time in Shanghai? →
+
+View all →
+February 13, 2026 · Itinerary
+China 240-Hour Visa-Free Transit Itinerary: Three 10-Day Routes
+
+April 19, 2026 · How-To Guide
+Flying Through China: Layover & Transit Guide
+
+February 12, 2026 · Travel Tip
+China 144-Hour Visa-Free Cities List: Updated 2026 Rules
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

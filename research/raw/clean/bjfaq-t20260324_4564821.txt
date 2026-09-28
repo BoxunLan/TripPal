@@ -1,0 +1,25 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564821.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564821.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.401Z
+# bytes(raw): 7356
+# bytes(text): 1386
+# title: I was wondering what the combined ticket include for the Temple of Heaven. Also, can students get the discount tickets?
+
+I was wondering what the combined ticket include for the Temple of Heaven. Also, can students get the discount tickets?
+
+Home 12345 hotline 12345 hotline FAQs All
+
+I was wondering what the combined ticket include for the Temple of Heaven. Also, can students get the discount tickets?
+
+2026-03-24
+
+Hello!
+The Temple of Heaven Park offers free admission to individuals under the age of 18 (excluding 18), who hold valid documents. If you are over 18, you may purchase a discounted ticket at the park's comprehensive service window by presenting your passport and a valid student ID card/certificate (for undergraduate level or below). Alternatively, you can purchase a discounted ticket online through the park's official booking platform (畅游公园) or the official WeChat account of the Temple of Heaven (天坛).
+The combo ticket covers general admission and access to three major attractions within the park: the Hall of Prayer for Good Harvests, the Echo Wall, and the Circular Mound Altar. If you meet the criteria for discounted tickets, you may purchase a discounted combo ticket costing 17 yuan.
+For more information, please call the park's 24-hour service hotline at +86-10-67028866 / 010-67028866 (English services are available from 8:00 to 17:00).
+Thank you for your understanding and support!
+Beijing Municipal Administration Center of Parks
+
+Attachment

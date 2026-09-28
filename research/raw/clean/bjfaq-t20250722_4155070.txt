@@ -1,0 +1,32 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155070.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155070.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.315Z
+# bytes(raw): 7723
+# bytes(text): 1600
+# title: Hello! I would like to ask the matter of purchasing real estate in China. I couldn’t find your contact number.
+
+Hello! I would like to ask the matter of purchasing real estate in China. I couldn’t find your contact number.
+
+Home 12345 hotline 12345 hotline FAQs All
+
+Hello! I would like to ask the matter of purchasing real estate in China. I couldn’t find your contact number.
+
+2025-07-22
+
+Hello.
+
+Foreign individuals holding a work visa or journalist visa and working within the Chinese mainland are allowed to purchase one residential property in Beijing for self-use. At the time of purchase, the buyer must be physically present in the Chinese mainland and must complete temporary residence registration with the public security authorities.
+
+Specific steps:
+Go to the official website of the Beijing Municipal Commission of Planning and Natural Resources → Homepage (首页) → Government Services (政务服务) → Beijing Online Real Estate Registration Service Platform (北京市不动产登记领域网上办事服务平台) → Business Handling (业务办理) → Personal Home Purchase Qualification Review (个人购房资格审核) → Beijing Home Purchase Eligibility Verification Platform (北京市购房资格核验平台) . Once registered, you can submit your application for eligibility review.
+Website: https://ghzrzyw.beijing.gov.cn/
+
+For inquiries about home purchase policies for foreign nationals in Beijing, please call +86-010-55598501 or +86-010-55597026 (Note: currently no foreign language service is available).
+
+Thank you for your understanding and support of our work!
+
+Beijing Municipal Commission of Housing and Urban-rural Development
+
+Attachment

@@ -1,0 +1,30 @@
+# TripPal seed list 02 — official guides, JS-heavy guides, Reddit workarounds, expat Q&A
+
+# --- official / policy ---
+chinadaily-foreign-bank-cards-mobile-pay	https://govt.chinadaily.com.cn/s/202502/25/WS67bd6c5a498eec7e1f730389/using-foreign-bank-cards-for-mobile-payments-in-china.html
+chinadaily-240h-transit-route-faq	https://govt.chinadaily.com.cn/s/202602/04/WS69831274498e36855033a64e/im-a-us-citizen-flying-from-the-us-south-korea-transit-shanghai-south-korea-does-this-route-qualify-for-the-240-hour-visa-free-transit-policy-or-does-it-have-to-involve-a-third-country.html
+consulate-240h-faq-cn	https://montreal.china-consulate.gov.cn/chn/zjfw/lszj/fhqz/cjwd2/202505/t20250530_11637915.htm
+
+# --- guides covering the friction points ---
+tripcom-china-map-apps-en	https://uk.trip.com/guide/phone/china-map-app.html
+tripcom-china-map-apps-cn	https://my.trip.com/guide/phone/%E4%B8%AD%E5%9B%BD%E5%9C%B0%E5%9B%BEapp.html
+tripcom-collect-train-tickets	https://uk.trip.com/guide/train/how-to-collect-train-tickets.html
+tripcom-book-attractions	https://us.trip.com/guide/attraction/how-to-book-china-attraction-tickets.html
+altery-how-to-pay-alipay	https://altery.com/personal/use-cases/travel/china/how-to-pay-with-alipay/
+thepaper-inbound-service-chain	https://m.thepaper.cn/newsDetail_forward_33236005
+
+# --- Reddit workarounds: does a reader proxy reach Reddit from this IP? ---
+jina-reddit-travelchina-top	https://r.jina.ai/https://www.reddit.com/r/travelchina/top.json?t=all&limit=100&raw_json=1
+jina-reddit-travelchina-alipay	https://r.jina.ai/https://www.reddit.com/r/travelchina/search.json?q=alipay&restrict_sr=1&sort=relevance&t=all&limit=50&raw_json=1
+jina-reddit-travelchina-vpn	https://r.jina.ai/https://www.reddit.com/r/travelchina/search.json?q=vpn&restrict_sr=1&sort=relevance&t=all&limit=50&raw_json=1
+jina-reddit-china-tourist-payment	https://r.jina.ai/https://www.reddit.com/r/China/search.json?q=tourist%20payment&restrict_sr=1&sort=relevance&t=all&limit=50&raw_json=1
+redlib-2	https://safereddit.com/r/travelchina/top/?t=all
+
+# --- Stack Exchange Expatriates (foreigners living in / arriving in China) ---
+se-expat-china-payment	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20payment&site=expatriates&filter=withbody&pagesize=100
+se-expat-alipay	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=alipay&site=expatriates&filter=withbody&pagesize=100
+se-expat-wechat	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=wechat&site=expatriates&filter=withbody&pagesize=100
+se-expat-vpn-internet	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20internet%20vpn&site=expatriates&filter=withbody&pagesize=100
+se-expat-hotel	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20hotel&site=expatriates&filter=withbody&pagesize=100
+se-expat-bank-card	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=foreign%20card%20china&site=expatriates&filter=withbody&pagesize=100
+se-expat-china-votes	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china&site=expatriates&filter=withbody&pagesize=100

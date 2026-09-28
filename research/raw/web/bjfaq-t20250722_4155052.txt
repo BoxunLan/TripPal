@@ -1,0 +1,35 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155052.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155052.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.198Z
+# bytes(raw): 9351
+# bytes(text): 2559
+# title: Home 12345 hotline 12345 hotline FAQs All
+Hello, I am planning on visiting Beijing soon. I learned that some tickets are only available via WeChat. Unfortunately, WeChat does not work on my phone. I found third party providers like Klook, Viator, GetYourGuide which provide tickets for the Heaven Temple and the Summer Palace. Are these tickets valid and accepted, or do I have to buy them on place? Thank you in advance for your answer!
+
+Home 12345 hotline 12345 hotline FAQs All
+
+Hello, I am planning on visiting Beijing soon. I learned that some tickets are only available via WeChat. Unfortunately, WeChat does not work on my phone. I found third party providers like Klook, Viator, GetYourGuide which provide tickets for the Heaven Temple and the Summer Palace. Are these tickets valid and accepted, or do I have to buy them on place? Thank you in advance for your answer!
+
+2025-07-22
+
+Hello. You can choose to purchase tickets for the Temple of Heaven and the Summer Palace either online or offline based on your own needs.
+
+Online Ticketing:
+You need to have a Chinese mobile phone number first. You can register and use the Chinese mainland version of WeChat, and follow the "Changyou Gongyuan" (畅游公园) WeChat account.
+
+Offline Ticketing:
+You can go to the comprehensive service window at your preferred park's gate area with your valid ID document. The staff will place the order for you. You can pay with cash (CNY), BEIJING PASS, and bank cards (VISA, MasterCard, etc.) using foreign currencies.
+
+We have not authorized any third-party ticket-purchasing platform to sell tickets. "Changyou Gongyuan" (畅游公园) is the official ticketing platform of the Beijing Municipal Administration Center of Parks. No reservation is required for visiting the municipal parks of Beijing. You can purchase the e-tickets of 9 parks (Summer Palace, Temple of Heaven, Beihai Park, Jingshan Park, Zhongshan Park, Xiangshan Park, Beijing Zoo, Yuyuantan Park, and Taoranting Park) 1-7 days in advance through its WeChat account or the official website ( https://www.bjgyol.com.cn ). You can also search for "畅游公园" on your mobile device.
+
+It should be noted that you will need to finish real-name verification if this is your first time buying a ticket to a municipal park in Beijing. Since foreign mobile phone numbers cannot be used for verification, please obtain a Chinese mobile phone number first at a service outlet of a telecommunications operator in China.
+
+Thank you for your understanding and support!
+
+Beijing Municipal Administration Center of Parks
+
+Attachment
+
+Related Articles

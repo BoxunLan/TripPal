@@ -1,0 +1,1561 @@
+{
+ "fetchedAt": "2026-09-28T17:18:17.354Z",
+ "source": "trends.google.com/trends/api",
+ "batch": "us-head-terms-1",
+ "results": [
+  {
+   "keyword": "china travel",
+   "geo": "US",
+   "time": "today 12-m",
+   "timeline": [
+    [
+     "Sep 28, 2025",
+     22
+    ],
+    [
+     "Oct 5, 2025",
+     20
+    ],
+    [
+     "Oct 12, 2025",
+     22
+    ],
+    [
+     "Oct 19, 2025",
+     20
+    ],
+    [
+     "Oct 26, 2025",
+     35
+    ],
+    [
+     "Nov 2, 2025",
+     56
+    ],
+    [
+     "Nov 9, 2025",
+     55
+    ],
+    [
+     "Nov 16, 2025",
+     77
+    ],
+    [
+     "Nov 23, 2025",
+     78
+    ],
+    [
+     "Nov 30, 2025",
+     86
+    ],
+    [
+     "Dec 7, 2025",
+     86
+    ],
+    [
+     "Dec 14, 2025",
+     81
+    ],
+    [
+     "Dec 21, 2025",
+     86
+    ],
+    [
+     "Dec 28, 2025",
+     88
+    ],
+    [
+     "Jan 4, 2026",
+     86
+    ],
+    [
+     "Jan 11, 2026",
+     85
+    ],
+    [
+     "Jan 18, 2026",
+     89
+    ],
+    [
+     "Jan 25, 2026",
+     97
+    ],
+    [
+     "Feb 1, 2026",
+     83
+    ],
+    [
+     "Feb 8, 2026",
+     77
+    ],
+    [
+     "Feb 15, 2026",
+     86
+    ],
+    [
+     "Feb 22, 2026",
+     88
+    ],
+    [
+     "Mar 1, 2026",
+     97
+    ],
+    [
+     "Mar 8, 2026",
+     80
+    ],
+    [
+     "Mar 15, 2026",
+     81
+    ],
+    [
+     "Mar 22, 2026",
+     71
+    ],
+    [
+     "Mar 29, 2026",
+     73
+    ],
+    [
+     "Apr 5, 2026",
+     76
+    ],
+    [
+     "Apr 12, 2026",
+     83
+    ],
+    [
+     "Apr 19, 2026",
+     72
+    ],
+    [
+     "Apr 26, 2026",
+     65
+    ],
+    [
+     "May 3, 2026",
+     66
+    ],
+    [
+     "May 10, 2026",
+     77
+    ],
+    [
+     "May 17, 2026",
+     85
+    ],
+    [
+     "May 24, 2026",
+     92
+    ],
+    [
+     "May 31, 2026",
+     87
+    ],
+    [
+     "Jun 7, 2026",
+     100
+    ],
+    [
+     "Jun 14, 2026",
+     80
+    ],
+    [
+     "Jun 21, 2026",
+     80
+    ],
+    [
+     "Jun 28, 2026",
+     89
+    ],
+    [
+     "Jul 5, 2026",
+     76
+    ],
+    [
+     "Jul 12, 2026",
+     46
+    ],
+    [
+     "Jul 19, 2026",
+     39
+    ],
+    [
+     "Jul 26, 2026",
+     31
+    ],
+    [
+     "Aug 2, 2026",
+     25
+    ],
+    [
+     "Aug 9, 2026",
+     34
+    ],
+    [
+     "Aug 16, 2026",
+     26
+    ],
+    [
+     "Aug 23, 2026",
+     21
+    ],
+    [
+     "Aug 30, 2026",
+     20
+    ],
+    [
+     "Sep 6, 2026",
+     41
+    ],
+    [
+     "Sep 13, 2026",
+     23
+    ],
+    [
+     "Sep 20, 2026",
+     20
+    ],
+    [
+     "Sep 27, 2026",
+     17
+    ]
+   ],
+   "region": [
+    [
+     "Wyoming",
+     100
+    ],
+    [
+     "California",
+     24
+    ],
+    [
+     "District of Columbia",
+     22
+    ],
+    [
+     "Washington",
+     20
+    ],
+    [
+     "Kansas",
+     19
+    ],
+    [
+     "New York",
+     17
+    ],
+    [
+     "Hawaii",
+     17
+    ],
+    [
+     "Utah",
+     15
+    ],
+    [
+     "Virginia",
+     15
+    ],
+    [
+     "Nevada",
+     13
+    ],
+    [
+     "Florida",
+     13
+    ],
+    [
+     "Massachusetts",
+     13
+    ],
+    [
+     "Louisiana",
+     13
+    ],
+    [
+     "Illinois",
+     12
+    ],
+    [
+     "Delaware",
+     11
+    ],
+    [
+     "Colorado",
+     11
+    ],
+    [
+     "New Jersey",
+     11
+    ],
+    [
+     "Oregon",
+     11
+    ],
+    [
+     "Texas",
+     11
+    ],
+    [
+     "Maryland",
+     11
+    ],
+    [
+     "Georgia",
+     10
+    ],
+    [
+     "Arizona",
+     10
+    ],
+    [
+     "Connecticut",
+     10
+    ],
+    [
+     "Rhode Island",
+     10
+    ],
+    [
+     "Iowa",
+     9
+    ],
+    [
+     "Pennsylvania",
+     9
+    ],
+    [
+     "New Mexico",
+     9
+    ],
+    [
+     "Alaska",
+     9
+    ],
+    [
+     "North Carolina",
+     8
+    ],
+    [
+     "Missouri",
+     8
+    ]
+   ],
+   "related": {
+    "QUERY": {
+     "top": [
+      [
+       "travel to china",
+       100
+      ],
+      [
+       "travel in china",
+       71
+      ],
+      [
+       "china travel news",
+       24
+      ],
+      [
+       "travel news",
+       23
+      ],
+      [
+       "china travel visa",
+       14
+      ],
+      [
+       "japan",
+       14
+      ],
+      [
+       "china visa",
+       14
+      ],
+      [
+       "google travel",
+       10
+      ],
+      [
+       "travel insurance",
+       10
+      ],
+      [
+       "air china",
+       10
+      ],
+      [
+       "travel news today",
+       8
+      ],
+      [
+       "china travel guide",
+       8
+      ],
+      [
+       "china travel advisory",
+       7
+      ],
+      [
+       "best time to travel to china",
+       6
+      ],
+      [
+       "china airlines",
+       6
+      ],
+      [
+       "taiwan",
+       5
+      ],
+      [
+       "shanghai",
+       4
+      ],
+      [
+       "china map",
+       4
+      ],
+      [
+       "china travel agency",
+       4
+      ],
+      [
+       "china travel agent",
+       3
+      ],
+      [
+       "japan travel news",
+       3
+      ],
+      [
+       "beijing",
+       3
+      ],
+      [
+       "travel trends 2026",
+       2
+      ],
+      [
+       "ai news today",
+       2
+      ],
+      [
+       "japan travel news today",
+       1
+      ]
+     ],
+     "rising": [
+      [
+       "japan travel news today",
+       82850
+      ],
+      [
+       "openai news today",
+       27600
+      ],
+      [
+       "anthropic news",
+       21500
+      ],
+      [
+       "travel itinerary template",
+       17000
+      ],
+      [
+       "best travel hacks",
+       14550
+      ],
+      [
+       "best stroller travel systems",
+       14100
+      ],
+      [
+       "best restaurants near me",
+       8700
+      ],
+      [
+       "travel trends 2026",
+       5650
+      ],
+      [
+       "sports scores today",
+       5000
+      ],
+      [
+       "pet care tips",
+       3500
+      ],
+      [
+       "us travel advisory china detention",
+       3050
+      ],
+      [
+       "technology news today",
+       2000
+      ],
+      [
+       "openai news",
+       1750
+      ],
+      [
+       "ai news today",
+       1350
+      ],
+      [
+       "nvidia news today",
+       1350
+      ],
+      [
+       "china economy news today",
+       1150
+      ],
+      [
+       "best travel apps for planning",
+       1100
+      ],
+      [
+       "best budget travel destinations",
+       900
+      ],
+      [
+       "best travel wallets",
+       800
+      ],
+      [
+       "travel news today",
+       750
+      ],
+      [
+       "japan travel news",
+       550
+      ],
+      [
+       "china travel news",
+       250
+      ],
+      [
+       "travel news",
+       250
+      ],
+      [
+       "google travel",
+       110
+      ],
+      [
+       "travel insurance",
+       90
+      ]
+     ]
+    }
+   },
+   "errors": []
+  },
+  {
+   "keyword": "china visa",
+   "geo": "US",
+   "time": "today 12-m",
+   "timeline": [
+    [
+     "Sep 28, 2025",
+     36
+    ],
+    [
+     "Oct 5, 2025",
+     28
+    ],
+    [
+     "Oct 12, 2025",
+     29
+    ],
+    [
+     "Oct 19, 2025",
+     28
+    ],
+    [
+     "Oct 26, 2025",
+     39
+    ],
+    [
+     "Nov 2, 2025",
+     59
+    ],
+    [
+     "Nov 9, 2025",
+     58
+    ],
+    [
+     "Nov 16, 2025",
+     59
+    ],
+    [
+     "Nov 23, 2025",
+     61
+    ],
+    [
+     "Nov 30, 2025",
+     69
+    ],
+    [
+     "Dec 7, 2025",
+     66
+    ],
+    [
+     "Dec 14, 2025",
+     66
+    ],
+    [
+     "Dec 21, 2025",
+     67
+    ],
+    [
+     "Dec 28, 2025",
+     69
+    ],
+    [
+     "Jan 4, 2026",
+     74
+    ],
+    [
+     "Jan 11, 2026",
+     78
+    ],
+    [
+     "Jan 18, 2026",
+     74
+    ],
+    [
+     "Jan 25, 2026",
+     74
+    ],
+    [
+     "Feb 1, 2026",
+     67
+    ],
+    [
+     "Feb 8, 2026",
+     61
+    ],
+    [
+     "Feb 15, 2026",
+     61
+    ],
+    [
+     "Feb 22, 2026",
+     65
+    ],
+    [
+     "Mar 1, 2026",
+     77
+    ],
+    [
+     "Mar 8, 2026",
+     63
+    ],
+    [
+     "Mar 15, 2026",
+     82
+    ],
+    [
+     "Mar 22, 2026",
+     57
+    ],
+    [
+     "Mar 29, 2026",
+     59
+    ],
+    [
+     "Apr 5, 2026",
+     62
+    ],
+    [
+     "Apr 12, 2026",
+     64
+    ],
+    [
+     "Apr 19, 2026",
+     62
+    ],
+    [
+     "Apr 26, 2026",
+     58
+    ],
+    [
+     "May 3, 2026",
+     55
+    ],
+    [
+     "May 10, 2026",
+     68
+    ],
+    [
+     "May 17, 2026",
+     91
+    ],
+    [
+     "May 24, 2026",
+     93
+    ],
+    [
+     "May 31, 2026",
+     100
+    ],
+    [
+     "Jun 7, 2026",
+     95
+    ],
+    [
+     "Jun 14, 2026",
+     78
+    ],
+    [
+     "Jun 21, 2026",
+     94
+    ],
+    [
+     "Jun 28, 2026",
+     92
+    ],
+    [
+     "Jul 5, 2026",
+     83
+    ],
+    [
+     "Jul 12, 2026",
+     49
+    ],
+    [
+     "Jul 19, 2026",
+     48
+    ],
+    [
+     "Jul 26, 2026",
+     41
+    ],
+    [
+     "Aug 2, 2026",
+     42
+    ],
+    [
+     "Aug 9, 2026",
+     45
+    ],
+    [
+     "Aug 16, 2026",
+     39
+    ],
+    [
+     "Aug 23, 2026",
+     33
+    ],
+    [
+     "Aug 30, 2026",
+     34
+    ],
+    [
+     "Sep 6, 2026",
+     33
+    ],
+    [
+     "Sep 13, 2026",
+     32
+    ],
+    [
+     "Sep 20, 2026",
+     30
+    ],
+    [
+     "Sep 27, 2026",
+     25
+    ]
+   ],
+   "region": [
+    [
+     "Wyoming",
+     100
+    ],
+    [
+     "California",
+     41
+    ],
+    [
+     "District of Columbia",
+     37
+    ],
+    [
+     "Washington",
+     34
+    ],
+    [
+     "New York",
+     27
+    ],
+    [
+     "Kansas",
+     25
+    ],
+    [
+     "Hawaii",
+     25
+    ],
+    [
+     "Utah",
+     21
+    ],
+    [
+     "Massachusetts",
+     21
+    ],
+    [
+     "Nevada",
+     20
+    ],
+    [
+     "Illinois",
+     17
+    ],
+    [
+     "New Jersey",
+     17
+    ],
+    [
+     "Oregon",
+     17
+    ],
+    [
+     "Virginia",
+     17
+    ],
+    [
+     "Texas",
+     16
+    ],
+    [
+     "Alaska",
+     16
+    ],
+    [
+     "Maryland",
+     16
+    ],
+    [
+     "Florida",
+     15
+    ],
+    [
+     "Colorado",
+     15
+    ],
+    [
+     "Arizona",
+     15
+    ],
+    [
+     "Delaware",
+     14
+    ],
+    [
+     "Georgia",
+     13
+    ],
+    [
+     "Connecticut",
+     13
+    ],
+    [
+     "Vermont",
+     12
+    ],
+    [
+     "Louisiana",
+     12
+    ],
+    [
+     "Rhode Island",
+     11
+    ],
+    [
+     "Minnesota",
+     11
+    ],
+    [
+     "Pennsylvania",
+     11
+    ],
+    [
+     "Michigan",
+     10
+    ],
+    [
+     "Tennessee",
+     10
+    ]
+   ],
+   "related": {
+    "QUERY": {
+     "top": [
+      [
+       "visa to china",
+       100
+      ],
+      [
+       "visa for china",
+       84
+      ],
+      [
+       "us china visa",
+       49
+      ],
+      [
+       "china visa requirements",
+       27
+      ],
+      [
+       "china visa free",
+       23
+      ],
+      [
+       "visa application china",
+       21
+      ],
+      [
+       "china travel visa",
+       19
+      ],
+      [
+       "chinese visa",
+       18
+      ],
+      [
+       "china visa cost",
+       15
+      ],
+      [
+       "china business visa",
+       13
+      ],
+      [
+       "china visa policy",
+       12
+      ],
+      [
+       "china work visa",
+       12
+      ],
+      [
+       "tourist visa china",
+       11
+      ],
+      [
+       "china visa service",
+       11
+      ],
+      [
+       "visa for china for us citizens",
+       9
+      ],
+      [
+       "china visa for us citizens",
+       8
+      ],
+      [
+       "how to get china visa",
+       8
+      ],
+      [
+       "china transit visa",
+       8
+      ],
+      [
+       "hong kong",
+       7
+      ],
+      [
+       "china visa status",
+       7
+      ],
+      [
+       "apply for china visa",
+       7
+      ],
+      [
+       "visa policy of china",
+       6
+      ],
+      [
+       "visa bulletin",
+       6
+      ],
+      [
+       "shanghai",
+       5
+      ],
+      [
+       "china airlines",
+       4
+      ]
+     ],
+     "rising": [
+      [
+       "china economy news today",
+       19600
+      ],
+      [
+       "technology news today",
+       17350
+      ],
+      [
+       "ai news today",
+       2300
+      ],
+      [
+       "openai news today",
+       1300
+      ],
+      [
+       "openai news",
+       800
+      ],
+      [
+       "new york times",
+       650
+      ],
+      [
+       "what is a transit visa",
+       350
+      ],
+      [
+       "visa bulletin",
+       300
+      ],
+      [
+       "visa policy of china",
+       250
+      ],
+      [
+       "lidl near me",
+       200
+      ],
+      [
+       "china visa application forms",
+       200
+      ],
+      [
+       "china visa policy",
+       160
+      ],
+      [
+       "china visa status",
+       150
+      ],
+      [
+       "china visa requirements",
+       140
+      ],
+      [
+       "china visa service",
+       130
+      ],
+      [
+       "china business visa",
+       120
+      ],
+      [
+       "china visa service center",
+       120
+      ],
+      [
+       "china visa cost",
+       110
+      ],
+      [
+       "china work visa",
+       90
+      ]
+     ]
+    }
+   },
+   "errors": []
+  },
+  {
+   "keyword": "alipay",
+   "geo": "US",
+   "time": "today 12-m",
+   "timeline": [
+    [
+     "Sep 28, 2025",
+     48
+    ],
+    [
+     "Oct 5, 2025",
+     56
+    ],
+    [
+     "Oct 12, 2025",
+     72
+    ],
+    [
+     "Oct 19, 2025",
+     51
+    ],
+    [
+     "Oct 26, 2025",
+     59
+    ],
+    [
+     "Nov 2, 2025",
+     47
+    ],
+    [
+     "Nov 9, 2025",
+     83
+    ],
+    [
+     "Nov 16, 2025",
+     66
+    ],
+    [
+     "Nov 23, 2025",
+     60
+    ],
+    [
+     "Nov 30, 2025",
+     64
+    ],
+    [
+     "Dec 7, 2025",
+     56
+    ],
+    [
+     "Dec 14, 2025",
+     57
+    ],
+    [
+     "Dec 21, 2025",
+     62
+    ],
+    [
+     "Dec 28, 2025",
+     63
+    ],
+    [
+     "Jan 4, 2026",
+     56
+    ],
+    [
+     "Jan 11, 2026",
+     56
+    ],
+    [
+     "Jan 18, 2026",
+     56
+    ],
+    [
+     "Jan 25, 2026",
+     59
+    ],
+    [
+     "Feb 1, 2026",
+     59
+    ],
+    [
+     "Feb 8, 2026",
+     52
+    ],
+    [
+     "Feb 15, 2026",
+     47
+    ],
+    [
+     "Feb 22, 2026",
+     53
+    ],
+    [
+     "Mar 1, 2026",
+     75
+    ],
+    [
+     "Mar 8, 2026",
+     62
+    ],
+    [
+     "Mar 15, 2026",
+     89
+    ],
+    [
+     "Mar 22, 2026",
+     66
+    ],
+    [
+     "Mar 29, 2026",
+     68
+    ],
+    [
+     "Apr 5, 2026",
+     64
+    ],
+    [
+     "Apr 12, 2026",
+     69
+    ],
+    [
+     "Apr 19, 2026",
+     69
+    ],
+    [
+     "Apr 26, 2026",
+     56
+    ],
+    [
+     "May 3, 2026",
+     58
+    ],
+    [
+     "May 10, 2026",
+     68
+    ],
+    [
+     "May 17, 2026",
+     87
+    ],
+    [
+     "May 24, 2026",
+     100
+    ],
+    [
+     "May 31, 2026",
+     97
+    ],
+    [
+     "Jun 7, 2026",
+     100
+    ],
+    [
+     "Jun 14, 2026",
+     96
+    ],
+    [
+     "Jun 21, 2026",
+     92
+    ],
+    [
+     "Jun 28, 2026",
+     90
+    ],
+    [
+     "Jul 5, 2026",
+     79
+    ],
+    [
+     "Jul 12, 2026",
+     64
+    ],
+    [
+     "Jul 19, 2026",
+     46
+    ],
+    [
+     "Jul 26, 2026",
+     47
+    ],
+    [
+     "Aug 2, 2026",
+     47
+    ],
+    [
+     "Aug 9, 2026",
+     47
+    ],
+    [
+     "Aug 16, 2026",
+     41
+    ],
+    [
+     "Aug 23, 2026",
+     39
+    ],
+    [
+     "Aug 30, 2026",
+     39
+    ],
+    [
+     "Sep 6, 2026",
+     42
+    ],
+    [
+     "Sep 13, 2026",
+     37
+    ],
+    [
+     "Sep 20, 2026",
+     34
+    ],
+    [
+     "Sep 27, 2026",
+     33
+    ]
+   ],
+   "region": [
+    [
+     "Wyoming",
+     100
+    ],
+    [
+     "California",
+     34
+    ],
+    [
+     "Washington",
+     32
+    ],
+    [
+     "Kansas",
+     30
+    ],
+    [
+     "District of Columbia",
+     26
+    ],
+    [
+     "New York",
+     26
+    ],
+    [
+     "Hawaii",
+     20
+    ],
+    [
+     "Massachusetts",
+     19
+    ],
+    [
+     "New Jersey",
+     18
+    ],
+    [
+     "Utah",
+     18
+    ],
+    [
+     "Nevada",
+     18
+    ],
+    [
+     "Virginia",
+     17
+    ],
+    [
+     "Oregon",
+     16
+    ],
+    [
+     "Colorado",
+     16
+    ],
+    [
+     "Arizona",
+     15
+    ],
+    [
+     "Connecticut",
+     15
+    ],
+    [
+     "Georgia",
+     15
+    ],
+    [
+     "Maryland",
+     15
+    ],
+    [
+     "Florida",
+     15
+    ],
+    [
+     "Rhode Island",
+     14
+    ],
+    [
+     "Illinois",
+     14
+    ],
+    [
+     "Texas",
+     13
+    ],
+    [
+     "North Carolina",
+     12
+    ],
+    [
+     "Pennsylvania",
+     12
+    ],
+    [
+     "Alaska",
+     12
+    ],
+    [
+     "Louisiana",
+     12
+    ],
+    [
+     "Delaware",
+     12
+    ],
+    [
+     "Oklahoma",
+     11
+    ],
+    [
+     "Missouri",
+     11
+    ],
+    [
+     "Michigan",
+     10
+    ]
+   ],
+   "related": {
+    "QUERY": {
+     "top": [
+      [
+       "alipay china",
+       100
+      ],
+      [
+       "wechat",
+       71
+      ],
+      [
+       "alipay card",
+       59
+      ],
+      [
+       "what is alipay",
+       45
+      ],
+      [
+       "alipay us",
+       40
+      ],
+      [
+       "alipay app",
+       33
+      ],
+      [
+       "alipay international",
+       32
+      ],
+      [
+       "alipay news",
+       30
+      ],
+      [
+       "alipay account",
+       24
+      ],
+      [
+       "how to use alipay",
+       16
+      ],
+      [
+       "alipay usa",
+       16
+      ],
+      [
+       "alipay fees",
+       10
+      ],
+      [
+       "alipay in usa",
+       10
+      ],
+      [
+       "wise alipay",
+       9
+      ],
+      [
+       "wechat pay vs alipay",
+       9
+      ],
+      [
+       "alipay in chinese",
+       8
+      ],
+      [
+       "what is alipay payment",
+       8
+      ],
+      [
+       "taobao",
+       8
+      ],
+      [
+       "alipay for foreigners",
+       7
+      ],
+      [
+       "alibaba",
+       7
+      ],
+      [
+       "alipay plus",
+       6
+      ],
+      [
+       "is alipay safe",
+       6
+      ],
+      [
+       "alipay hk",
+       6
+      ]
+     ],
+     "rising": [
+      [
+       "alipay news",
+       350
+      ],
+      [
+       "alipay international",
+       140
+      ],
+      [
+       "what is alipay payment",
+       140
+      ],
+      [
+       "wechat pay vs alipay",
+       140
+      ],
+      [
+       "wechat",
+       110
+      ],
+      [
+       "alipay china",
+       100
+      ],
+      [
+       "alipay fees",
+       70
+      ],
+      [
+       "alipay plus",
+       60
+      ],
+      [
+       "alipay app",
+       40
+      ]
+     ]
+    }
+   },
+   "errors": []
+  }
+ ]
+}

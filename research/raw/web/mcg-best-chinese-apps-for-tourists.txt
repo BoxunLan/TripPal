@@ -1,0 +1,337 @@
+# source: https://mychina.guide/blog/best-chinese-apps-for-tourists
+# final: https://mychina.guide/blog/best-chinese-apps-for-tourists
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:23.024Z
+# bytes(raw): 68127
+# bytes(text): 17206
+# title: Best Chinese Apps for Tourists: 8 to Install (2026)
+Best Chinese Apps for Tourists: 8 to Install (2026)
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog Travel Tip · August 11, 2026 · 13 min read · 1,559 views
+Best Chinese Apps Every Tourist Should Download (2026)
+
+Sarah Liu · Senior Travel Writer, MyChinaGuide · Updated September 27, 2026
+
+On this page 9 sections 01 The Must-Install Chinese Apps: WeChat and Alipay
+02 Navigation Chinese Apps: Amap and the Apple Maps Shortcut
+03 Transport Chinese Apps: DiDi and Trip.com
+04 Food, Reviews, and Translation Chinese Apps
+05 The Chinese Apps You Do NOT Need (and a VPN Warning)
+06 Chinese Apps Install-Before-You-Fly Checklist
+07 Which of these work offline
+08 The three apps first-timers forget
+09 FAQ
+
+You can't survive a China trip on Google Maps and Gmail. Both are blocked at the border. Here are the 8 chinese apps to install BEFORE you land , plus the one Western app that works with zero setup. WeChat and Alipay are non-negotiable . The other six chinese apps save you money, time, and that awkward moment at a noodle stand when the owner holds up a QR code and you don't know what to do with it.
+I've run food tours out of Chengdu for three years. Tourists who install these chinese apps at home walk out of the airport ordering a DiDi in English. The ones who don't spend their first morning on hotel WiFi, panicking. Don't be them.
+What this covers:
+The 8 apps every tourist needs, in the order to install them
+
+Which apps accept foreign credit cards in 2026
+
+Which apps have English (and which are Chinese-only)
+
+The install-before-you-fly checklist
+
+The Must-Install Chinese Apps: WeChat and Alipay
+Start here. These two chinese apps are not optional. If you install nothing else, install these.
+WeChat (微信) is a messaging app the way a Swiss Army knife is a knife. Chat, sure. But also: pay for things, scan metro QR codes, book museum tickets, check into hotels, translate voice messages, top up your transit card, split dinner bills. Chinese locals don't use email, they use WeChat. The English UI is built in: Me, Settings, General, Language, English.
+Alipay (支付宝) is WeChat's payment twin plus an ecosystem of mini-programs . Inside Alipay you can hail a DiDi, book a Trip.com train ticket, order Meituan delivery, and pay for the metro without leaving the app. The English version is automatic: if your phone is set to English, Alipay opens in English.
+Both chinese apps now accept foreign credit cards. This is newer than most blog posts tell you. Since late 2023, WeChat Pay International lets you link Visa, Mastercard, JCB, Discover, and Diners directly in your wallet. Alipay goes one better with the TourCard mini-program (formerly called TourPass), a prepaid virtual card you load from your home bank card, then spend anywhere that takes Alipay. Both options are explained on Alipay's international site .
+Heads up on fees: Both charge around 3% on single transactions over ¥200 ($28). Payments under ¥200 go through fee-free. So street food, metro rides, small restaurants: no fee. Hotel rooms and nice dinners: small fee. Honestly? Worth it.
+The 8 top chinese apps at a glance
+App
+
+Purpose
+
+English UI?
+
+Needs Chinese phone?
+
+Takes foreign card?
+
+Offline?
+
+WeChat
+
+Messaging, payments, mini-apps
+
+Yes
+
+No
+
+Yes
+
+Partial
+
+Alipay
+
+Payments, TourCard, mini-apps
+
+Yes
+
+No
+
+Yes (TourCard)
+
+Partial
+
+Amap
+
+Navigation
+
+Yes (globe icon)
+
+No
+
+N/A
+
+Yes
+
+DiDi
+
+Ride-hail
+
+Yes
+
+No
+
+Via Alipay/WeChat
+
+No
+
+Trip.com
+
+Flights, trains, hotels
+
+Yes
+
+No
+
+Yes
+
+No
+
+Dianping
+
+Restaurant reviews
+
+Chinese only
+
+No
+
+N/A
+
+No
+
+Pleco
+
+Dictionary + OCR camera
+
+Yes
+
+No
+
+Yes ($15 IAP)
+
+Yes
+
+MyChinaGuide
+
+Offline guide + translator
+
+Yes
+
+No
+
+Yes
+
+Yes (full)
+
+The WeChat Disaster (real story)
+Alex from Toronto landed in Shanghai without installing WeChat at home. He tried to register at the airport and his new account got flagged instantly. WeChat requires that a friend who's been on the platform 6+ months scan a verification QR code for new accounts from abroad. Alex didn't know anyone on WeChat. He spent two days paying cash, unable to join his tour's group chat. Install WeChat a week before you fly.
+
+MyChinaGuide app · free
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Navigation Chinese Apps: Amap and the Apple Maps Shortcut
+Google Maps is blocked in China. Even if you get it loaded via VPN, the map data is a decade out of date and entire subway lines are missing. Don't bother. This is where native chinese apps actually beat Western ones.
+Amap (高德地图, also written Gaode) is the one every local uses. Tap the globe icon in the top-right corner and the whole UI flips to English: street names, metro lines, bus stops, everything. Walking directions are accurate. It knows which subway exit to take. It shows real-time bus arrivals. And it works offline if you download the city map before losing signal. Size per city: around 150-300 MB.
+The Apple Maps shortcut: In iOS 18 and later, Apple Maps in China uses AutoNavi (that's Amap's parent company) for its map data. It shows English labels natively, needs zero setup, and works without any registration. For iPhone users who don't want another app, Apple Maps quietly became the easiest option in 2026. It's not as feature-rich as Amap (you won't get bus timings or bike-share pickup), but for walking and metro directions, it just works.
+What about Baidu Maps? It's the most popular among Chinese users but has barely any English. Skip it unless you read Mandarin. For a deeper breakdown, our guide to the best map app in China compares all three side by side.
+The Lost Traveler (real story)
+James from Melbourne landed in Beijing, opened Google Maps, and found it loaded because his eSIM routed outside the firewall. But the bus routes were ghosts from 2014. He missed his transfer and walked 40 minutes the wrong way. That evening he installed Amap. Next day he rode Line 10 across the city in English with zero issues. "Should have installed it the night I landed," he said.
+Transport Chinese Apps: DiDi and Trip.com
+DiDi (滴滴出行) is Uber for China, except it does it better. The English version is built in. Open the app, tap the menu icon, Settings, Language, English. You type your destination in English, the driver gets the Chinese address. No language barrier. No haggling. No "I only take cash."
+Payment goes through your Alipay or WeChat Pay wallet automatically once those are set up. Rides are cheap: a 20-minute cross-town ride in Chengdu costs me around ¥35-55 ($5-8). The same trip in a metered taxi from the airport queue runs ¥80-120 ($11-17), and I've watched drivers take the long route on tourists who don't know the city.
+Trip.com is the international version of Ctrip, China's biggest travel site. Full English, takes all foreign cards, books what you need: high-speed rail tickets (like the ¥553 / $77 G-train from Beijing to Shanghai), domestic flights, hotel rooms with your passport on file for check-in, and attraction tickets for the Forbidden City, Great Wall, and pandas. The official 12306 railway site has an English interface too, but Trip.com is gentler for newcomers. Our guide on credit cards in China covers which cards work best for Trip.com bookings.
+Food, Reviews, and Translation Chinese Apps
+Three apps here. Two are chinese apps, one is Western.
+Dianping (大众点评) is the Yelp of China, the most honest review app locals use. The problem: Chinese-only UI. So why include it? You don't need Chinese to use star ratings and popularity scores. Search "火锅" (hot pot) near your hotel, sort by rating. Anything with 4.5+ stars and 500+ reviews is legit. Most expats I know use Dianping for restaurant discovery and Alipay to pay.
+Meituan (美团) is food delivery, DoorDash meets Groupon. Chinese-only UI. Access it as a mini-program inside Alipay for partial English. For most tourists, hotel front desks and Dianping walk-ins are simpler.
+Pleco is the one Western-made app on this list. It's an offline Chinese dictionary and the free version is already great. The ¥108 ($15) one-time OCR upgrade lets you point your camera at a menu or street sign for instant English translation, no internet needed. Every expat in China has it. I've used it to read prescription labels, translate contracts, and survive rural Yunnan. Install Pleco before you fly , free on the official Pleco site .
+Google Translate works in China if your phone has an international-roaming eSIM that routes outside the firewall. Download the offline Chinese language pack (around 500 MB) at home first. For menu scanning it's decent. For real conversations it's hit and miss, especially with Sichuan dialect.
+The Alipay TourCard Hero (real story)
+Rachel from London did the boring thing. She set up Alipay and the TourCard mini-program at her kitchen table the week before her trip and loaded ¥1,500 ($210) from her Mastercard. Her partner ordered a physical UnionPay prepaid travel card from a currency exchange shop ($40 fee, 3-5 days to ship). Rachel paid for everything from day one, from ¥15 ($2) jianbing breakfasts to the ¥50 ($7) Shanghai maglev. Her partner's card arrived two weeks after the trip ended.
+The Chinese Apps You Do NOT Need (and a VPN Warning)
+Every "ultimate china apps download" list piles on 20+ entries. Skip most of them.
+Skip these chinese apps unless you specifically want them:
+Weibo : Twitter for China. Fun if you're into Chinese celebrity culture. Useless for trip logistics.
+
+Xiaohongshu (小红书 / RedNote) : Instagram meets Pinterest, Chinese-first. Great content, minimal English.
+
+Douyin : the Chinese TikTok. If you want the videos, open your regular TikTok. It'll load on an international eSIM.
+
+Taobao / JD.com : shopping apps. Only useful if you want to buy things and ship them home.
+
+Baidu : the search engine. Useless unless you read Chinese.
+
+You don't need a Chinese app store either. Huawei AppGallery, Xiaomi GetApps, Tencent MyApp. Every guide mentions them. But the international Apple App Store and Google Play already carry every one of the top chinese apps you need: WeChat, Alipay, Amap, DiDi, Trip.com, Pleco, MyChinaGuide. All of your china apps download straight from the regular stores, no region switching required. The exception: a few niche Android brands in China ship without Google Play. If that's you, use APKPure.
+Real talk on VPNs. You probably don't need one. If your eSIM is an international roaming brand like Nomad, Airalo, or Holafly, your data routes through Hong Kong or Singapore before hitting the global internet. WhatsApp, Gmail, Google Maps, Instagram, Facebook, and YouTube all load without a VPN. Our Nomad vs Airalo vs Holafly eSIM comparison has the details.
+If you do want a VPN, install it BEFORE you fly. ExpressVPN, NordVPN, and Surfshark all work in China but their websites are blocked from inside the country. Download the app, log in, test it, then board your flight. Our guide on why China doesn't support eSIM covers the connectivity rules.
+Chinese Apps Install-Before-You-Fly Checklist
+Do this at home, ideally a week before your flight.
+Install WeChat. Register with your home phone number. Ask a China-based friend to scan your verification QR if you don't know anyone on the platform.
+
+Install Alipay. Sign up with your passport. Either link a Visa/Mastercard directly, or load ¥500-1,000 ($70-140) onto the TourCard mini-program.
+
+Install Amap (or Apple Maps on iOS 18+). Download the offline map of every city on your itinerary. Shanghai alone is around 180 MB.
+
+Install DiDi. Switch language to English. Link payment via your Alipay or WeChat wallet.
+
+Install Trip.com. Add your passport number and book your trains, flights, and hotels before you fly.
+
+Install Pleco. Free is fine. ¥108 ($15) OCR upgrade if you plan to eat where there are no English menus (which is where the best food lives).
+
+If you want a VPN , install and test it on your home WiFi. ExpressVPN runs around $13/month. The websites are blocked inside China so you cannot install after landing.
+
+Eight chinese apps. About an hour of setup at your kitchen table.
+The biggest mistake I see: tourists trying to download chinese apps on the plane or during their first day in China. Airline WiFi is slow. Hotel WiFi routes through Chinese networks and breaks some registration flows. Do the setup at home, on regular internet, one calm sitting with a coffee.
+Which of these work offline
+Internet in China is good in cities but sketchy in rural areas and inside the high-speed rail tunnels. These apps work offline once set up:
+Google Maps (downloaded offline map only)
+
+Amap (cached routes)
+
+Pleco (full dictionary offline)
+
+Google Translate (offline language pack)
+
+Downloaded music and podcasts (Spotify, Apple Music — Spotify needs VPN to work)
+
+Kindle books
+
+Your hotel confirmations (screenshot them)
+
+Apps that require active internet: Alipay, WeChat Pay (payments fail without data), Didi, 12306, Meituan, Trip.com.
+The three apps first-timers forget
+Three that get left off every packing list, in the order people regret them.
+Pleco. They rely on Google Translate and burn their data quota. Pleco is faster and free.
+
+A VPN. They assume hotel Wi-Fi will have one. It won't. Install before you fly.
+
+Trip.com or 12306. They show up at a train station thinking they can buy a ticket in person, then discover their train is sold out.
+
+FAQ
+Can I download chinese apps without a Chinese phone number?
+Yes. WeChat, Alipay, DiDi, Amap, and Trip.com all accept international phone numbers at registration. You'll get an SMS verification code to your home number. The only friction is WeChat, which sometimes asks for a verification scan from an existing user for new accounts. Ask a friend in China before you fly.
+Do I need a VPN to use chinese apps?
+No. The top chinese apps (WeChat, Alipay, Amap, DiDi, Pleco, Trip.com, MyChinaGuide) all work without a VPN because they're Chinese-made or designed for China. A VPN is only needed for blocked Western services like Gmail, WhatsApp, Instagram, Facebook, and YouTube, and even then an international roaming eSIM often handles that for you.
+What's the best translator app for China?
+Pleco for reading (menus, signs, text messages). Google Translate offline for speaking (download the Chinese language pack before flying). Use all three. They're free or cheap, and each covers different situations.
+Which chinese apps accept foreign credit cards?
+WeChat Pay International, Alipay (both direct card linking and the TourCard mini-program), Trip.com, and DiDi (via your Alipay/WeChat wallet) all accept foreign Visa, Mastercard, JCB, Discover, and Diners cards as of 2026. Pleco charges ¥108 ($15) for OCR on foreign cards. Most other chinese apps either don't need payment (Amap) or route through Alipay.
+Can tourists use Alipay without a Chinese bank account?
+Yes. Since 2024, Alipay offers two paths for tourists without a Chinese bank account: direct foreign card linking (Visa, Mastercard, JCB, Discover, Diners) or the TourCard mini-program (a prepaid virtual card you load from your home bank). Both work at any Alipay-accepting merchant, which is basically every business in China. Fees are about 3% on transactions over ¥200 ($28).
+How much phone storage do I need for all these apps?
+Budget 2-3 GB total. Biggest space hogs: Amap's offline city maps (150-300 MB per city), MyChinaGuide's full city guides and food database (around 500 MB), and WeChat which bloats over time with photos. Pleco is tiny. Alipay is around 300 MB. Delete a few movies before you fly.
+
+Updated April 2026. App versions and fees current as of publication. Verify current prices on each app's official site before loading a prepaid card.
+
+Share this article
+
+Tags
+# apps # wechat # alipay # didi
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

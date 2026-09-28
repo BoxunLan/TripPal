@@ -1,0 +1,440 @@
+# source: https://mychina.guide/blog/fuxing-high-speed-train-first-time-tips
+# final: https://mychina.guide/blog/fuxing-high-speed-train-first-time-tips
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:27.011Z
+# bytes(raw): 74807
+# bytes(text): 17267
+# title: Fuxing Bullet Train First-Time Tips 2026: Seats, Routes, Hacks
+Fuxing Bullet Train First-Time Tips 2026: Seats, Routes, Hacks
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · January 12, 2026 · 12 min read · 1,435 views
+Fuxing High-Speed Train First-Time Tips (2026 Guide)
+
+Michael Chen · Travel Writer, China Specialist · Updated September 27, 2026
+
+On this page 10 sections 01 What this guide covers
+02 What is a Fuxing train, exactly?
+03 The three seat classes and what they actually look like
+04 Real 2026 prices on the major routes
+05 Booking a Fuxing train as a foreigner
+06 Boarding timings and the rookie mistake
+07 Onboard amenities and what to expect
+08 Routes where Fuxing actually runs in 2026
+09 Rookie mistakes to avoid on your first trip
+10 FAQ
+
+The Fuxing (复兴号, pronounced fu xing hao) is the train that makes China's high-speed rail network famous. At a sustained 350 km/h top speed, a single Fuxing G train covers Beijing to Shanghai — a distance roughly equal to London to Milan — in 4 hours and 28 minutes. It runs on more than 40 major corridors in 2026, has replaced most of the older Hexie Hao (CRH2) fleet on the premier routes, and carries more high-speed passengers than any single train family on earth.
+If you are taking your first Fuxing ride as a foreign visitor, the technical train itself is the easiest part. The boarding process, the seat classes, and the 12306 booking window are what typically trip travelers up. Here is exactly what to expect from the train, the ticket, and the station.
+What this guide covers
+What a Fuxing train is and how it differs from the older CRH fleet
+
+The three seat classes and real 2026 prices on the biggest routes
+
+Booking windows, ID rules, and how to buy tickets as a foreigner
+
+Boarding timings that every first-time rider gets wrong
+
+Onboard amenities: outlets, WiFi, luggage, food
+
+The routes where Fuxing actually runs in 2026
+
+Rookie mistakes to avoid on your first trip
+
+MyChinaGuide app · free
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+What is a Fuxing train, exactly?
+Fuxing means "rejuvenation" in Chinese, and the name launched in 2017 as a brand replacing the older Hexie Hao ("harmony") fleet. Fuxing trains are the CR400AF (built by CRRC Qingdao Sifang) and CR400BF (built by CRRC Tangshan), both designed entirely in China to a shared specification rather than licensed from German, Japanese, or French partners. In practice, what matters for riders is this:
+Top operating speed : 350 km/h, sustained, not just momentary
+
+Seat pitch : slightly larger than older CRH2 and CRH3 fleets
+
+Ride smoothness : noticeably better than the older trains at 300+ km/h
+
+WiFi : installed on most new-build sets (CR400AF-Z and later generations)
+
+Power outlets : universal at every seat in all classes including second class
+
+Boarding door count : more doors per carriage than older trains
+
+On the prestige corridors (Beijing-Shanghai, Beijing-Guangzhou, Shanghai-Kunming, Beijing-Chongqing) Fuxing is now the default. On secondary corridors (most east-west provincial lines) you might still get an older Hexie Hao CRH380, which is slower but functionally similar from a passenger experience standpoint.
+The three seat classes and what they actually look like
+Fuxing trains have three passenger classes, plus a small number of sleeper variants (the Beijing-Hong Kong overnight G75/G76 is the main example). Most daytime G trains offer second class, first class, and business class.
+Class
+
+Layout
+
+Seat pitch
+
+Recline
+
+2026 Beijing-Shanghai fare
+
+Second class 二等座
+
+3+2
+
+100 cm
+
+30 degrees
+
+¥553
+
+First class 一等座
+
+2+2
+
+115 cm
+
+40 degrees
+
+¥933
+
+Business class 商务座
+
+2+1
+
+180 cm
+
+180 degrees (flat bed)
+
+¥1,748
+
+Second class (二等座, er deng zuo)
+The workhorse class. Every Fuxing has dozens of second class carriages and this is how most Chinese travelers actually ride. Seats are arranged 3+2 across the carriage, with armrests, a tray table, a footrest, universal 220V outlets at every seat, reading lights, and a reclining back. On a 4-hour Beijing-Shanghai trip second class is perfectly comfortable for an adult of average height. Taller travelers (over 6'2") will find the legroom tight but bearable. Second class is air-conditioned, clean, and has a dedicated luggage area at each carriage end for larger bags.
+First class (一等座, yi deng zuo)
+First class costs roughly 1.7 times second class. You get a 2+2 layout, significantly larger seat pitch, a deeper recline, and more aisle space. Carriages are quieter because there are fewer passengers per square meter, and the seats rotate manually so groups of 4 can face each other. First class does not include food, but the on-train service cart does make stops. First class is worth it on longer journeys (over 5 hours) or on busy holiday periods when second class carriages are packed.
+Business class (商务座, shang wu zuo)
+Business class on a Fuxing is a genuine lie-flat seat. The 2+1 layout gives each passenger significantly more space, the seat reclines to 180 degrees (true flat bed), has a personal screen on newer sets, and comes with a free meal, bottled water, a blanket, and sometimes slippers. At ¥1,748 for Beijing-Shanghai it is more expensive than a one-way economy flight on the same route, and three to four times the price of second class. Worth it on overnight-length routes, or on long daytime trips where you want to actually sleep.
+Real 2026 prices on the major routes
+Fuxing G-train fares are fixed by the National Railway Administration and adjust infrequently. The 2026 pricing below is current as of the latest adjustment in late 2024.
+Route
+
+Distance
+
+Duration
+
+2nd class
+
+1st class
+
+Business
+
+Beijing to Shanghai
+
+1,318 km
+
+4 h 28 min
+
+¥553
+
+¥933
+
+¥1,748
+
+Beijing to Guangzhou
+
+2,298 km
+
+7 h 58 min
+
+¥862
+
+¥1,380
+
+¥2,727
+
+Beijing to Xi'an
+
+1,216 km
+
+4 h 15 min
+
+¥515
+
+¥824
+
+¥1,553
+
+Shanghai to Kunming
+
+2,252 km
+
+10 h 43 min
+
+¥870
+
+¥1,394
+
+¥2,736
+
+Shanghai to Shenzhen
+
+1,587 km
+
+6 h 30 min
+
+¥645
+
+¥1,035
+
+¥2,050
+
+Shanghai to Hangzhou
+
+202 km
+
+45 min
+
+¥73
+
+¥117
+
+¥219
+
+Beijing to Harbin
+
+1,288 km
+
+5 h 30 min
+
+¥551
+
+¥883
+
+¥1,765
+
+Beijing to Chengdu
+
+1,875 km
+
+7 h 30 min
+
+¥747
+
+¥1,196
+
+¥2,343
+
+These are the standard fares for the flagship Fuxing G trains. Slower D trains and older CRH services on the same routes are typically 15-25 percent cheaper but take longer.
+Booking a Fuxing train as a foreigner
+Since 2019, China Railway has allowed passport-based booking through the official 12306 app in English, and since 2022 the Trip.com and Ctrip international platforms have sold tickets reliably for most G trains. The booking window opens 15 days before departure for 12306 and 14 days for Trip.com.
+Step by step for a first-time foreign booking:
+Install the 12306 app or use Trip.com — both work on iOS and Android with English interfaces
+
+Enter your passport details exactly as printed — hyphens, middle names, and punctuation all matter
+
+Search by station names in English — "Beijing South" not "Beijing," "Shanghai Hongqiao" not "Shanghai Station"
+
+Pick your train — G-prefixed trains are Fuxing or Hexie Hao high-speed; D-prefixed are slower regional EMU; K-prefixed are old-style expresses
+
+Select seat class — second class fills first on popular routes
+
+Pay with Alipay, WeChat Pay, or in some cases Visa/Mastercard — Trip.com accepts foreign credit cards reliably; 12306 is more restrictive
+
+Receive a confirmation with a PNR code — bring your passport to the station, no paper ticket needed in 2026
+
+You do not need to print a ticket. Since 2020, almost all Fuxing trains use passport-gate automated entry for foreigners, which means you scan your passport at the gate and your seat assignment is pulled from the reservation system. Some smaller stations still have manual passport checks at a dedicated foreign-passenger window, usually marked with an English sign.
+Boarding timings and the rookie mistake
+The single biggest mistake first-time riders make is showing up too late. Chinese high-speed rail boarding works nothing like a European or American train:
+Gates open 15-30 minutes before departure
+
+Gates close 5 minutes before departure, exactly
+
+Once the gate closes, you do not board, period — no exceptions, no running onto the platform
+
+Large stations like Beijing South, Shanghai Hongqiao, Guangzhou South, and Chengdu East are enormous. Security screening, ticket check, and the walk to your platform can take 15-25 minutes. Plan to arrive at the station entrance at least 45 minutes before departure, 60 minutes if you are not familiar with the station layout.
+The actual arrival process looks like this:
+Walk into the station and immediately go through security (X-ray plus metal detector)
+
+Look up at the departure board for your train number and waiting zone (候车厅 hou che ting) or platform number
+
+Walk to the correct waiting zone, which usually has a gate labeled with the train number
+
+When the gate opens (marked by staff and an electronic sign), queue up with your passport
+
+Scan your passport at the automated gate (foreigners) or hand it to a staff member at manual gates
+
+Descend the escalator to the platform
+
+Find your carriage number painted on the platform floor; stand at that spot
+
+Board when the train stops and doors open, typically 3-5 minutes before departure
+
+Do not leave the waiting zone before your gate opens. Do not go shopping in the main station hall if your train is less than 30 minutes away.
+Onboard amenities and what to expect
+Fuxing trains are noticeably nicer than the older Hexie Hao fleet, and significantly nicer than Western travelers typically expect.
+Power outlets at every seat in every class (Type A and Type C sockets, 220V)
+
+WiFi available on most new-build CR400AF-Z sets, free with a Chinese phone number or with an English workaround on some trains
+
+Large windows with electric blinds that passengers can adjust
+
+Dining cart selling instant noodles, hot meals, snacks, tea, and coffee at moderate prices
+
+Hot water dispensers at the end of every carriage for making instant noodles or tea
+
+Clean toilets including both squat and western-style; toilet paper is usually provided
+
+Overhead luggage shelves plus dedicated large luggage areas at carriage ends
+
+English announcements before every station stop
+
+Dining cart service is a cultural experience worth trying. Instant noodles cost ¥15-25, hot meals ¥40-65, coffee ¥25-35. The quality is fine but most Chinese passengers bring their own food or buy from the station before boarding, which is cheaper.
+Routes where Fuxing actually runs in 2026
+Not every G train in China is a Fuxing. The premium corridors have fully transitioned to Fuxing rolling stock, but some secondary routes still run CR380 Hexie Hao fleets at lower 300 km/h speeds. The confirmed 2026 Fuxing corridors include:
+Beijing-Shanghai (G1-G38 series)
+
+Beijing-Shenzhen/Hong Kong (G79-G85 series)
+
+Beijing-Harbin (G1201 onward)
+
+Beijing-Xi'an and onward to Chengdu and Chongqing
+
+Shanghai-Kunming (cross-country G-series launched 2021)
+
+Shanghai-Wuhan-Chongqing
+
+Beijing-Taiyuan-Xi'an corridor
+
+Zhengzhou-Wuhan-Guangzhou main line
+
+Fuxing sleeper service Beijing-Hong Kong G75/G76
+
+If you want a guaranteed Fuxing experience, pick a Beijing-Shanghai G1, G7, G13, or G17 train. These are the flagship services and always use the newest CR400AF-Z sets.
+Rookie mistakes to avoid on your first trip
+The first-time rider traps that keep repeating in traveler forums:
+Arriving 10 minutes before departure — you will miss the train, the gate closes 5 minutes early
+
+Showing up without your passport — there is no workaround; passport is mandatory at every gate
+
+Booking "Shanghai" instead of "Shanghai Hongqiao" — Shanghai has three major rail stations and they are not close to each other
+
+Bringing liquids over 100 ml — security screens the same as airport security, liquids get confiscated
+
+Packing lithium batteries loose in a checked bag — power banks over 100 Wh are banned; 100-160 Wh need airline-style approval
+
+Assuming second class is crowded and bad — it is not; most seasoned travelers ride second class
+
+Eating only at the dining cart — stock up on food at the station before boarding; selection is better and cheaper
+
+Ignoring carriage number on the platform — the train is 400+ meters long and stops for 2-3 minutes; run to the wrong end and you are out of luck
+
+FAQ
+What is the difference between Fuxing and Hexie Hao?
+Fuxing (复兴号, CR400 series) is the newer Chinese-designed generation of high-speed trains with a 350 km/h top speed, universal power outlets, and slightly better ride comfort. Hexie Hao (和谐号, CRH series) is the older generation launched from 2007 using licensed German, Japanese, and French technology, running at 300 km/h. Both are comfortable; Fuxing is faster and has newer amenities. On G-series services across flagship corridors, Fuxing is the default in 2026.
+How far in advance can I book a Fuxing train as a foreigner?
+The booking window opens 15 days before departure on 12306 and most travel platforms. Popular routes like Beijing-Shanghai and Beijing-Guangzhou fill up 3-7 days in advance during peak periods (summer, Golden Week, Spring Festival). For off-peak weekdays you can usually book same-day or day-of-travel without issue.
+Is second class comfortable enough for a Beijing to Shanghai trip?
+Yes. Most Chinese travelers ride second class, and at 4.5 hours the Beijing-Shanghai trip is short enough to be comfortable for adults of average height. Second class has power outlets, reading lights, a reclining seat, and a dedicated luggage area. First class is a modest upgrade mainly valuable on trips over 5 hours; business class is a lie-flat seat worth it only for long routes or special occasions.
+Do Fuxing trains have WiFi and charging outlets?
+All Fuxing trains have universal 220V power outlets at every seat in every class. WiFi is available on newer CR400AF-Z and CR400BF-Z sets, including most trains on the Beijing-Shanghai, Beijing-Guangzhou, and Shanghai-Kunming corridors. Free WiFi typically requires a Chinese phone number for registration; some trains now support passport-based login as a workaround.
+How early should I arrive for a Fuxing train as a first-time rider?
+Arrive at the station entrance at least 45 minutes before departure, or 60 minutes for large stations like Beijing South, Shanghai Hongqiao, and Guangzhou South. You need time for security screening, passport verification, walking to the correct waiting zone, and lining up at the gate. Gates close 5 minutes before departure, and there are no exceptions.
+Before the platform, two things decide how the day goes. Booking on 12306 with a foreign passport avoids the OTA fee and gives you the seat you want if you book when tickets open fifteen days out — which costs nothing, because cancelling more than eight days ahead is free . And what you can bring aboard matters more on a Fuxing than people expect, because the racks fill early.
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Share this article
+
+Tags
+# high speed rail # fuxing # china train # g train # china transport
+
+Travelers also asked
+View all →
+What is a realistic pace and preparation strategy for a multi-city High-Speed Rail trip in China? →
+Where can I purchase sleeper train tickets in China, and is it worth choosing trains over flights for short stops? →
+
+Related articles
+View all →
+April 7, 2026 · How-To Guide
+Beijing to Shanghai by Train: Complete Guide for Foreigners
+
+July 7, 2026 · How-To Guide
+China High-Speed Rail Guide: Routes, Speed & How to Ride (2026)
+
+April 8, 2026 · How-To Guide
+Beijing to Xi'an by Train: Complete Guide for Foreigners
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

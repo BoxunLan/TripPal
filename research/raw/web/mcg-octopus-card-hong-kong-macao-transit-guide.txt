@@ -1,0 +1,336 @@
+# source: https://mychina.guide/blog/octopus-card-hong-kong-macao-transit-guide
+# final: https://mychina.guide/blog/octopus-card-hong-kong-macao-transit-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:29.267Z
+# bytes(raw): 78171
+# bytes(text): 20025
+# title: Octopus Card for Hong Kong & Macao: Does It Work in 2026?
+Octopus Card for Hong Kong & Macao: Does It Work in 2026?
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · March 15, 2026 · 15 min read · 6,295 views
+Octopus Card Hong Kong to Macao Transit Guide 2026
+
+M MyChinaGuide Editorial Team · Updated September 14, 2026
+
+On this page 9 sections 01 What this guide covers
+02 Buying an Octopus Card at HKIA
+03 The Mobile Octopus Option
+04 Card Types and Pricing (2026)
+05 What Octopus Does (and Doesn't) Cover in Hong Kong
+06 Octopus in Macao: What Actually Happens
+07 Payment Methods That Actually Work in Macao
+08 Critical Transit Tips
+09 Frequently Asked Questions
+
+Buy your Octopus card in Hong Kong, not Macao. The standard Sold Card costs HK$150 (HK$50 stored value + HK$100 refundable deposit). The Tourist Octopus runs about HK$39 with HK$20 stored value and is non-refundable but comes as a souvenir design. For airside transit travelers who never leave HKIA immigration, the Mobile Octopus in Apple Wallet or the Octopus app is the only realistic option. In Macao, your Octopus card almost certainly won't work — you'll need Alipay , WeChat Pay, Macau Pass, or cash (MOP).
+I've crossed between Hong Kong and Macao more times than I can count — ferry via Sheung Wan, the Hong Kong–Zhuhai–Macau Bridge (HZMB) shuttle, and most recently the SkyPier from HKIA directly to Macao. The Octopus logistics depend entirely on whether you actually enter Hong Kong, so the first question is: are you clearing immigration or not?
+What this guide covers
+Where to buy Octopus cards at HKIA (airside vs landside rules)
+
+Mobile Octopus setup on iPhone and Android
+
+Card types, starter costs, and refund rules for 2026
+
+Why Octopus doesn't solve your Macao payment problem
+
+Alternative payment methods for Macao
+
+MyChinaGuide app · free
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Buying an Octopus Card at HKIA
+Whether you can buy a physical card depends on which side of Hong Kong immigration you're on.
+Airside (transit zone, not clearing immigration)
+If you're transiting HKIA for a connecting flight or taking the SkyPier ferry directly to Macao without entering Hong Kong:
+No Octopus Card counter exists airside . The SkyPier ticketing desk sells ferry tickets only.
+
+7-Eleven stores near the Terminal 1 departure gates occasionally stock standard Octopus Deposit Cards (HK$150), but inventory is unreliable. I've seen them in stock twice out of four attempts.
+
+Currency exchanges (Travelex, other booths) do not sell transit cards.
+
+Realistic airside option: Mobile Octopus . Install the Octopus app and set it up in your phone's digital wallet. No physical card needed, no immigration crossing required. More on this below.
+Landside (cleared Hong Kong immigration)
+If you have a visa or visa-free entry to Hong Kong and plan to enter the city:
+Airport Express Customer Service Centre in the Arrival Hall. This is the most reliable place to buy a Tourist Octopus or standard Octopus. Hours are typically 06:00 to 00:00 daily, but confirm on arrival.
+
+MTR station customer service centers at Hong Kong Station or Kowloon Station sell both versions.
+
+7-Eleven and Circle K convenience stores across Hong Kong sell standard Deposit Cards.
+
+Warning : leaving the restricted transit area at HKIA legally counts as entering Hong Kong. If you're on a visa-free transit and planning to continue to Macao within 24 hours, this is usually fine — but it consumes one of your visa-free entry days if applicable. Check your visa situation before walking through immigration just to buy a card.
+The Mobile Octopus Option
+Mobile Octopus is the right answer for most travelers, especially transit passengers and tech-comfortable visitors.
+iPhone setup (Apple Wallet)
+Install the Octopus app from the App Store (available globally, no region switching needed)
+
+Open the app and tap "Add Octopus to Apple Wallet"
+
+Follow the prompts — you can add funds from any international credit card (Visa, Mastercard, Amex)
+
+Apple Wallet integrates the Octopus so you tap your phone on any MTR gate or bus reader
+
+No physical deposit fee for the first Octopus added to Apple Wallet on most device-locked versions. Top-ups are instant via credit card, Apple Pay, or bank transfer.
+Android setup (Octopus app)
+Android users install the Octopus for Tourists or standard Octopus app. You can store and use Octopus via NFC directly from the app — no Apple Wallet equivalent on Android, but the app itself acts as the Octopus wallet. Top-ups work the same way with international cards.
+Why Mobile Octopus is the best answer for transit travelers
+No physical card to lose
+
+Works offline — once loaded, tapping at gates doesn't require a data connection
+
+Top up from anywhere with a credit card
+
+Close the card in-app when you leave Hong Kong and get the balance refunded via bank transfer or credit card credit
+
+No queue at MTR counters
+
+The only reason to still buy a physical card in 2026 is if you want a souvenir design (Tourist Octopus), if your phone doesn't support NFC, or if you specifically want to share a card with someone.
+Card Types and Pricing (2026)
+Octopus Cards Limited sells several versions. Prices shift occasionally, but these are current in early 2026.
+Card Type
+
+Starter Cost (HK$)
+
+Contents
+
+Refundable
+
+Best For
+
+Standard Octopus (Deposit)
+
+HK$150
+
+HK$50 stored value + HK$100 refundable deposit
+
+Yes, deposit refundable
+
+Long stays, repeat visits
+
+Tourist Octopus (Sold)
+
+~HK$39
+
+HK$20 stored value, souvenir card
+
+No (card itself is non-refundable)
+
+Short trips, souvenir hunters
+
+Mobile Octopus (Apple Wallet / App)
+
+HK$0 deposit on most devices
+
+Load any amount
+
+Yes, close card in-app
+
+Airside transit, convenience users
+
+Gold Octopus
+
+HK$150 deposit + credit card link
+
+Auto top-up from linked card
+
+Yes
+
+HK residents with credit card
+
+Note: pricing is set by Octopus Cards Limited and can change without notice. The Tourist Octopus and Standard Deposit versions are what most visitors end up buying.
+Handling fees for early refunds
+If you refund a physical Octopus card within 3 months of purchase at an MTR or Airport Express counter, there's a HK$7 handling fee deducted from your balance. After 3 months there's no fee. Mobile Octopus closures have no handling fee in most cases.
+What Octopus Does (and Doesn't) Cover in Hong Kong
+Where it works
+Octopus is the universal transit and small-payment card across Hong Kong. You can tap-pay at:
+MTR (all lines, fares roughly HK$5-HK$57)
+
+Buses (KMB, Citybus, NWFB, green minibuses)
+
+Light Rail and MTR Bus
+
+Star Ferry (Tsim Sha Tsui to Central, HK$5)
+
+7-Eleven, Circle K, ParknShop, Watsons and most convenience/drugstore chains
+
+McDonald's, Starbucks, Pacific Coffee and many fast food outlets
+
+Airport Express (HK$115-HK$135 one-way)
+
+Octopus-enabled parking meters and taxi machines (taxis opt in individually)
+
+Daily loading cap for personal Octopus is HK$3,000 in stored value. You can reload at MTR stations, 7-Eleven, Circle K, or via the Octopus app.
+Where it partially works
+Some taxis accept Octopus (opt-in); most still prefer cash or Alipay HK / WeChat Pay HK
+
+Certain restaurants (mid-range chains)
+
+Where it doesn't work
+Most sit-down restaurants — cash, card, or Alipay HK
+
+Markets and street vendors — cash or Alipay HK
+
+Hotels — credit cards only
+
+Octopus in Macao: What Actually Happens
+A common misunderstanding: the Octopus card is a Hong Kong system that mostly doesn't cross into Macao. Here's the 2026 reality.
+Can you buy an Octopus card in Macao?
+No. There are no retail outlets in Macao selling standard Octopus cards. You must buy the card in Hong Kong before crossing to Macao.
+Does your Hong Kong Octopus work in Macao?
+Mostly no , with one narrow exception:
+Standard Octopus : does not work for retail, buses, or casinos in Macao
+
+Octopus Card for Tourists with China T-Union logo : this specific variant works on Macao public buses (the city bus system). Look for the T-Union logo printed on the card. Most standard tourist Octopus cards sold in 2025-2026 include this feature
+
+Regular retail in Macao : not accepted anywhere (no convenience stores, no restaurants, no taxis)
+
+What's the T-Union version?
+China T-Union is a national transit card interoperability standard across mainland China. Some Octopus card variants sold in Hong Kong since 2021 carry the T-Union logo and can tap into buses in over 300 cities in mainland China and Macao. Fares are deducted in local currency at roughly 1:1 HKD to MOP. It's convenient but limited to transit only.
+Refund rules across the border
+You cannot refund an Octopus card in Macao . Refunds must be processed at a Hong Kong MTR station, Airport Express counter, or via the Octopus app for Mobile Octopus. Plan to either use up your balance before leaving Hong Kong or keep the card for a future visit.
+Payment Methods That Actually Work in Macao
+Since Octopus is mostly useless in Macao, prepare alternatives before crossing.
+Alipay and WeChat Pay
+Both apps work extensively across Macao — taxis, buses, restaurants, shops, casinos (for non-gambling spending), and hotels. You can link an international credit card to either app via the Tour Card feature, no Chinese bank account needed. This is my default for Macao trips.
+Cash (MOP or HKD)
+Hong Kong Dollars (HKD) are accepted almost everywhere in Macao at roughly 1:1 exchange, which is slightly unfavorable since HKD is stronger than MOP. Actual market rate is about HKD 1 = MOP 1.03. For best value, exchange to Macau Patacas (MOP) at a bank or exchange counter on arrival. Cash is still king at small shops, wet markets, and some older establishments.
+Macau Pass
+The local equivalent to Octopus for Macao transit and small retail. Issuing a new Macau Pass as a tourist is cumbersome — you need to visit a Macau Pass office with ID, pay a deposit (MOP 30), and load value. For visits shorter than a week, it's usually not worth the effort versus Alipay or cash. If you're in Macao for an extended trip, buying a Macau Pass at a Circle K or 7-Eleven in Macao is straightforward.
+International credit cards
+Visa, Mastercard, and Amex work at hotels, larger restaurants, and malls in Macao. Smaller shops and taxis often don't accept them. Always have cash or mobile pay as a backup.
+Critical Transit Tips
+Practical points from repeated transit experience:
+If you're crossing via HKIA SkyPier
+You're airside the whole time. Physical Octopus is impractical. Set up Mobile Octopus in advance if you want to use Hong Kong transit on the return leg.
+If you're crossing via Sheung Wan Ferry
+You've cleared HK immigration. Buy a Tourist Octopus at any Hong Kong MTR station before heading to the ferry terminal.
+If you're crossing via Hong Kong–Zhuhai–Macau Bridge (HZMB)
+Buy your Octopus at the Hong Kong Port before exiting immigration. No Octopus sales counters exist at the Macao Port, and you cannot backtrack.
+Currency value loading
+Don't load excessive value onto your Octopus if Macao is your primary destination. You cannot spend the balance there, and refunding a nearly-empty card is pointless. HK$100-HK$200 is enough for a day or two of HK transit + small retail.
+Immigration counts
+Every time you leave and re-enter Hong Kong, it counts against any visa-free entry allowance. If you're a visitor on multiple short transits, keep track.
+Frequently Asked Questions
+Is Mobile Octopus better than a physical card in 2026?
+For most foreign travelers, yes. No deposit, no lost cards, instant top-up from international credit cards, and you can close the card remotely when you leave Hong Kong. Physical cards still make sense if you want a souvenir design or your phone lacks NFC.
+How much stored value should I load on an Octopus card?
+For a short Hong Kong trip (2-3 days), HK$100-HK$200 covers most transit and small retail. You can top up incrementally at any MTR counter or 7-Eleven. Don't pre-load more than you'll use, especially if you're heading to Macao.
+Can I use my Octopus card in mainland China or Shenzhen?
+Only if your Octopus has the China T-Union logo , and only on transit (buses and some subways) in cities that accept T-Union. Shenzhen Metro accepts T-Union cards. Standard retail in mainland China does not accept Octopus — use Alipay or WeChat Pay with linked international cards.
+What's the best payment method for taxis in Macao?
+Alipay or WeChat Pay if the driver has the QR code displayed (most do in 2026). Cash in MOP or HKD is always accepted. Credit cards rarely work in Macao taxis.
+Where do I refund my Octopus card before leaving?
+MTR Customer Service Centres at major stations (Central, Admiralty, Hong Kong, Kowloon), Airport Express Customer Service Centre at HKIA, or via the Octopus app for Mobile Octopus. You cannot refund outside Hong Kong. Refunds take 2-4 weeks for Mobile Octopus to process to your credit card; physical cards are refunded on the spot minus the HK$7 handling fee if within 3 months of purchase.
+A standard Hong Kong Octopus card is NOT accepted on Macao's public buses or the Light Rail (LRT). The two territories run separate, incompatible systems: Hong Kong uses Octopus, Macao uses Macau Pass (澳门通). Octopus is only accepted at a small, scattered set of Macao convenience stores and fast-food outlets — not transit. So a tourist crossing from Hong Kong to Macao should not rely on Octopus for getting around once across the border; plan a separate Macao payment method (see the Macao section below).
+(1) Adult On-Loan Octopus — HK$150 total = HK$100 starting value + HK$50 refundable deposit; full balance + deposit refundable at any MTR Customer Service Centre, but a HK$11 handling fee applies if you refund within 90 days of issue. (2) Tourist Octopus (Sold) — HK$39 for the card with no stored value and no deposit; the HK$39 card fee is NON-refundable, only unused stored value can be refunded. (3) Mobile Octopus (iPhone/Apple Watch or Android app) — minimum HK$100 initial value + HK$50 deposit; deposit is refundable in-app. Note: if remaining value is under HK$1,000 you get an immediate cash refund at MTR counters; HK$1,000+ takes longer.
+Critical for transit travelers: if you connect through HKIA on the SkyPier ferry to Macao WITHOUT clearing Hong Kong immigration, there is no Octopus sales counter airside — the SkyPier desk sells ferry tickets only, and 7-Eleven near the gates stocks physical cards unreliably. A Mobile Octopus added to your phone before you fly is the only dependable option in that case. Also note SkyPier's direct HKIA-to-Macao sailings are now very infrequent (roughly a few per week), as most traffic has shifted to the HZMB bridge bus.
+Important nuance most guides get wrong: adding a Mobile Octopus directly through Apple Wallet only accepts a Chinese-Mainland-issued UnionPay card for top-up. If you hold a foreign Visa/Mastercard/UnionPay, you must add and top up the Octopus through the separate 'Octopus for Tourists' app (it accepts a non-HK Visa/Mastercard/UnionPay via Apple Pay, a non-HK Mastercard linked in-app, WeChat Pay, or the e-CNY app). Install 'Octopus for Tourists' before you fly to avoid getting stuck at the airport.
+What actually works for getting around Macao in 2026: (1) Macau Pass (澳门通) — the local equivalent of Octopus; a card costs MOP130 (MOP100 stored value + MOP30 fee), sold at all 7-Eleven and Circle K stores, and gives roughly half-price bus fares (about MOP3 on normal routes, MOP4 on express). (2) Ride-codes — Macao buses accept AlipayHK and WeChat Pay HK QR ride-codes (note: it must be the Macao/HK version of the wallet, not mainland Alipay scanning a merchant code). (3) Cash — Macao buses take MOP coins/notes (and usually HKD at par, but give no change). For the Macao LRT (Light Rail), the only accepted methods today are Macau Pass and cash; the operator is rolling out QR-code and tap-to-pay gates in phases from the second half of 2026, after which AlipayHK/WeChat ride-codes and direct contactless card tapping will be supported. Until then, do NOT count on tapping a foreign credit card on the LRT.
+this special version works as a normal Octopus in Hong Kong AND taps for transit across 336 mainland Chinese cities (e.g. Shenzhen metro, where ~75% of cross-border taps happen) with automatic HKD-to-RMB conversion — no need to load RMB. Two key facts: in mainland China it works for TRANSPORT ONLY (not shops/dining), and the cross-border foreign-exchange transaction fee was cut from 3% to 1% effective 5 March 2025. The card's exchange rate expires annually and must be refreshed before it works on the mainland again. Important for this guide: T-Union covers the mainland (Zhuhai, Shenzhen) — it does NOT make Octopus work on Macao buses or LRT.
+For the HZMB crossing, you board the 'Golden Bus' (金巴) shuttle at Hong Kong Port. From the HK side the fare is HK$65 daytime / HK$70 night (00:00–05:59), buses run 24/7 every 5–10 minutes by day. You CAN buy the shuttle ticket with Octopus at the HK Port machines (also accepted: Alipay, WeChat Pay, UnionPay, BOC Pay, M Pay, cash). Keep enough Octopus balance loaded, or have AlipayHK/WeChat Pay HK as backup — but remember Octopus only pays for the shuttle ticket; once in Macao you still need Macau Pass or a ride-code for local buses.
+The TurboJET ferry between Hong Kong (Sheung Wan / Hong Kong–Macau Ferry Terminal at Shun Tak Centre) and Macao (Outer Harbour or Taipa) is running normally in 2026, with night sailings defined as departures from 18:30. The terminal connects directly to MTR Sheung Wan. Note you cannot pay the ferry fare with Octopus — buy the ferry ticket separately; Octopus is for the MTR ride to the terminal, not the boat.
+
+Share this article
+
+Tags
+# hong-kong # macao # octopus-card # transit # payment
+
+Travelers also asked
+View all →
+Where can I purchase an Octopus card at Hong Kong International Airport if I am transferring directly to Macao, and will it work there? →
+What is the most cost-effective method for topping up a Tourist Octopus card in Hong Kong to avoid hidden currency conversion fees? →
+Why isn't my Octopus for Tourists card appearing in Apple Wallet after payment? →
+Is Hong Kong still worth visiting given the recent political and cultural changes? →
+
+Related articles
+View all →
+June 15, 2026 · City Guide
+Hong Kong Travel Guide for First-Timers (2026): Visas, Transport, Districts & Costs
+
+March 27, 2026 · Itinerary
+Hong Kong Side Trips to Guangzhou & Shenzhen: 2026 Guide
+
+March 13, 2026 · Itinerary
+9-Day Hong Kong, Macau & Shenzhen Itinerary for 2026
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

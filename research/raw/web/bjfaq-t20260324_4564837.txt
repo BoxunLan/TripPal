@@ -1,0 +1,32 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564837.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564837.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.723Z
+# bytes(raw): 7532
+# bytes(text): 1452
+# title: How to contact 12306 custom service via a US cell phone in China?
+How to contact 12306 custom service via a US cell phone in China?
+
+Home 12345 hotline 12345 hotline FAQs All
+
+How to contact 12306 custom service via a US cell phone in China?
+
+2026-03-24
+
+Hello,
+Regarding the issue you reported, please first confirm with your home carrier in the United States whether international roaming has been activated for your number. If it has, upon your arrival in Beijing, China, your number will automatically connect to one of the three networks: China Mobile Beijing, China Unicom Beijing, or China Telecom Beijing.
+If connected to China Mobile Beijing, you can dial the railway customer service hotline using +861012306. You can also long-press the "0" key on the dial pad to bring up the "+" sign.
+If connected to China Unicom Beijing, please dial 00861012306 to reach the railway customer service hotline.
+If connected to China Telecom Beijing, you can dial +8612306 to contact the railway customer service hotline, without the need to add the city area code.
+You may try each of the above methods, or alternatively, you can contact the customer service hotlines of the three carriers in China for further assistance:
+China Mobile Beijing: 10086
+China Unicom Beijing: 10010
+China Telecom Beijing: 10000
+Please note that charges will be based on the international roaming rates of your U.S. home carrier.
+Thank you for your understanding and support!
+Beijing Communications Administration
+
+Attachment
+
+Related Articles

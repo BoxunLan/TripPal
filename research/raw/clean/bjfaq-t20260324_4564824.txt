@@ -1,0 +1,21 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564824.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564824.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.460Z
+# bytes(raw): 6431
+# bytes(text): 611
+# title: How can I obtain the application contact information for the Biomedical and Biotechnology programs at Peking University?
+
+How can I obtain the application contact information for the Biomedical and Biotechnology programs at Peking University?
+
+Home 12345 hotline 12345 hotline FAQs All
+
+How can I obtain the application contact information for the Biomedical and Biotechnology programs at Peking University?
+
+2026-03-24
+
+Hello. According to Peking University, you may find the relevant information on the website of the Office of International Relations (https://www.oir.pku.edu.cn/). You may also send an email to study@pku.edu.cn for further consultation.
+Thank you for your understanding and support.
+
+Attachment

@@ -1,0 +1,47 @@
+# TripPal seed list 01 — pain-point evidence sources
+# format: <slug>\t<url>   ('#' comments allowed)
+
+# --- direct Reddit probes (does a plain UA get through where headless Chrome did not?) ---
+reddit-travelchina-top-all-json	https://www.reddit.com/r/travelchina/top.json?t=all&limit=100&raw_json=1
+reddit-travelchina-search-alipay-json	https://www.reddit.com/r/travelchina/search.json?q=alipay&restrict_sr=1&sort=relevance&t=all&limit=100&raw_json=1
+
+# --- Stack Exchange Travel.SE (public API, with bodies) ---
+se-travel-china-votes	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china&site=travel&filter=withbody&pagesize=100
+se-travel-china-payment	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20payment&site=travel&filter=withbody&pagesize=100
+se-travel-alipay	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=alipay&site=travel&filter=withbody&pagesize=100
+se-travel-wechat-pay	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=wechat%20pay&site=travel&filter=withbody&pagesize=100
+se-travel-china-visa	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20visa&site=travel&filter=withbody&pagesize=100
+se-travel-china-train	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20train&site=travel&filter=withbody&pagesize=100
+se-travel-china-internet	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20internet&site=travel&filter=withbody&pagesize=100
+se-travel-china-hotel	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20hotel&site=travel&filter=withbody&pagesize=100
+se-travel-china-taxi	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20taxi&site=travel&filter=withbody&pagesize=100
+se-travel-china-sim	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20sim%20card&site=travel&filter=withbody&pagesize=100
+se-travel-china-tag	https://api.stackexchange.com/2.3/questions?order=desc&sort=votes&tagged=china&site=travel&filter=withbody&pagesize=100
+
+# --- official / government ---
+beijing-12345-forbidden-city-phone	https://english.beijing.gov.cn/12345hotline/faqs/all/202506/t20250620_4117980.html
+chinadaily-forbidden-city-tickets	https://govt.chinadaily.com.cn/s/202508/12/WS689afa0d498edec913ce08c6/how-to-buy-advance-general-admission-tickets-for-the-forbidden-city.html
+shanghai-ciie-dining	https://english.shanghai.gov.cn/en-CIIE2025Service-Onsite/20251016/a8cde7a821ae4df5a957b6014f7c3814.html
+shanghai-ciie-immigration	https://english.shanghai.gov.cn/en-CIIE2025Service-EE/20251104/80cffb2341a24b5c8bc6ff3b5a2814ea.html
+
+# --- industry / media describing the friction explicitly ---
+ttgchina-payment-friction	https://ttgchina.com/2026/05/20/%e6%94%af%e4%bb%98%e4%be%bf%e5%88%a9%e6%80%a7%e6%88%90%e5%85%a5%e5%a2%83%e6%b8%b8%e7%bb%8a%e8%84%9a%e7%9f%b3-%e4%b8%89%e5%a4%a7%e9%97%ae%e9%a2%98%e5%88%b6%e7%ba%a6%e6%b6%88%e8%b4%b9/
+cnr-inbound-blockpoints	https://travel.cnr.cn/2011lvpd/lvyw/20250312/t20250312_527097438.shtml
+cnr-shanghai-selfservice	https://china.cnr.cn/yaowen/20250929/t20250929_527379765.shtml
+wenweipo-shanghai-inbound	https://www.wenweipo.com/a/202508/21/AP68a62a55e4b0a29c28a721e6.html
+vnexpress-hotels-refuse-foreigners	https://e.vnexpress.vn/news/travel/why-many-chinese-hotels-don-t-accept-foreign-guests-4952211.html
+tempo-hotels-turn-away-foreigners	https://en.tempo.co/read/2058792/why-many-small-hotels-in-china-are-turning-away-foreign-tourists
+tandfonline-payment-experience	https://www.tandfonline.com/doi/pdf/10.1080/19388160.2026.2623246
+
+# --- practical guides that document the failure modes ---
+tripcom-withdraw-cash-foreign-card	https://www.trip.com/guide/payments/withdraw-cash-in-china-foreign-card.html
+tripcom-hotels-fr	https://fr.trip.com/guide/china/reserver-hotels-en-chine-etrangers.html
+tripcom-hotels-it	https://it.trip.com/guide/china/stranieri-possono-soggiornare-hotel-in-cina.html
+tripcom-didi-intl	https://ae.trip.com/guide/transport/didi-china-for-international-travellers.html
+tripcom-money-exchange	https://my.trip.com/guide/info/%E6%8D%A2%E9%92%B1.html
+nomadesim-vpn-china	https://www.nomadesim.com/zh-hant/blog/do-you-need-a-vpn-for-travel-to-china
+nomadesim-sim-card-china	https://www.nomadesim.com/fil/blog/how-to-buy-sim-card-china
+nomadesim-esim-china-help	https://www.nomadesim.com/help-center/en/articles/9886332-stay-connected-in-china-with-nomad-esim
+holafly-mobile-internet-china	https://esim.holafly.com/en-au/blog/mobile-internet-china/
+scamtravel-black-taxi-china	https://www.scam.travel/en/scams/black-taxi-transport-scams-china
+chiebukuro-pudong-fingerprint	https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q11322494311

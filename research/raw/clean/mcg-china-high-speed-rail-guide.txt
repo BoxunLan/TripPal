@@ -1,0 +1,308 @@
+# source: https://mychina.guide/blog/china-high-speed-rail-guide
+# final: https://mychina.guide/blog/china-high-speed-rail-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.415Z
+# bytes(raw): 79755
+# bytes(text): 20785
+# title: China High-Speed Rail: Routes, Speed & How to Ride (2026)
+
+China High-Speed Rail: Routes, Speed & How to Ride (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · July 7, 2026 · 15 min read · 1,968 views · Featured
+China High-Speed Rail Guide: Routes, Speed & How to Ride (2026)
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 11 sections 01 What Is China High-Speed Rail (And Why It's The Best On Earth)
+02 G, D, C: China Speed Train Types Explained
+03 The 7 Routes You'll Actually Ride
+04 Seat Classes and 2026 Prices (¥ and $)
+05 How to Book China High Speed Rail Tickets
+06 Station Procedures: Arrival, Security, Boarding
+07 Onboard: Food, Wi-Fi, Luggage, Toilets, Power
+08 Passport and ID Rules for Foreigners
+09 Tips, Gotchas, and Things First-Timers Mess Up
+10 FAQ: China High-Speed Rail
+11 Related Guides
+
+China has built more than 50,000 kilometers of high-speed rail in 15 years , more than the rest of the world combined, and you can book a 350 km/h G-train from Beijing to Shanghai for about ¥553 ($77) . The fastest run does 1,318 km in 4 hours 18 minutes . This guide walks you through the china speed train system end to end: train types, top routes, seat classes, how to book, what happens at the station, and the mistakes first-timers make. I've taken more than 200 china speed train rides in the last four years, and most of them were my favorite way to cross this country.
+First-time riders are usually scared of one of two things: booking the ticket, or finding the right platform. Both are easier than they look once someone walks you through them. Consider this me walking you through it.
+What you'll get:
+The scale and speed of China high speed rail and why it beats every other HSR network
+
+G, D, and C trains explained (the letter on your ticket matters)
+
+The 7 routes foreign travelers actually ride
+
+Seat classes and real 2026 prices (¥ and $)
+
+Booking on 12306, Trip.com, Klook, or at the station counter
+
+Station procedures, passport rules, and gotchas
+
+What Is China High-Speed Rail (And Why It's The Best On Earth)
+China HSR is the network of dedicated high-speed lines operated by China Railway , where trains run at 200 km/h or faster. G-series china speed train services top out at 350 km/h (217 mph) . The first line, Beijing South to Tianjin, opened in August 2008, just ahead of the Olympics. In the 17 years since, the network has grown to more than 50,000 km , according to Wikipedia's data on China HSR , roughly two-thirds of the planet's entire high-speed rail network.
+For context: Japan, the country that invented the Shinkansen, has about 3,000 km. France has ~2,800 km of TGV lines. Spain has ~3,900 km. Add Germany, Italy, Korea, Taiwan, and the whole lot, and China still has more track than all of them combined.
+The system connects over 500 cities . Every provincial capital except Lhasa is on the network. You can ride from Harbin in the frozen northeast to Sanya in the tropical south almost entirely on a china speed train .
+Here's the thing nobody tells you: it's not just fast. It's extremely punctual . The Beijing-Shanghai line's on-time rate hovers around 98%. I've had exactly one late chinese high speed rail arrival in four years, 11 minutes, thunderstorm.
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+G, D, C: China Speed Train Types Explained
+The letter at the front of your train number tells you what kind of train you're on. It affects speed, price, and sometimes which station you leave from.
+Type
+
+Name
+
+Top speed
+
+Example routes
+
+G
+
+Gaotie (高铁)
+
+350 km/h (217 mph)
+
+Beijing-Shanghai, Beijing-Guangzhou
+
+D
+
+Dongche (动车)
+
+200-250 km/h
+
+Regional runs, some overnight sleepers
+
+C
+
+Chengji (城际)
+
+200-350 km/h
+
+Beijing-Tianjin, Guangzhou-Shenzhen
+
+G-trains are what most people mean when they say chinese bullet train . These run on fully-dedicated high-speed lines and use the newest rolling stock, mostly the indigenous CR400 Fuxing sets introduced in 2017. If your ticket starts with G, you're on the fast one.
+D-trains are a mix. Some are older Hexie (CRH1-5) sets. A few overnight D-trains even have lie-flat sleeper berths. Prices run 20-40% lower than G-trains on equivalent routes. Worth it if you're not in a rush.
+C-trains are commuter workhorses. Beijing to Tianjin in 30 minutes, Guangzhou to Shenzhen in 30 minutes, Shanghai to Suzhou in 25. Barely time to finish a podcast.
+There are also K, T, Z, and Y trains. Those are not high-speed. K is the slow green train; Z is direct express. If your ticket starts with one of those, you're on a classic train that takes 12-24 hours to do what a china speed train does in 5.
+The 7 Routes You'll Actually Ride
+Let me save you a spreadsheet. These are the routes foreign travelers end up on, in rough order.
+1. Beijing ↔ Shanghai . The flagship. 1,318 km, fastest time 4 hours 18 minutes on the G7 service, ¥553 ($77) second class. Over 90 trains a day each direction. This shanghai to beijing train carried 210 million passengers in 2019 alone and 1.35 billion in its first decade (per Wikipedia ). If you only take one china speed train on your trip, make it a morning G7.
+2. Shanghai ↔ Hangzhou . 202 km, 45-60 minutes, ¥73 ($10) second class. Trains every 10 minutes in peak hours. Easy West Lake day trip from Shanghai.
+3. Beijing ↔ Guangzhou . 2,298 km, about 8 hours straight through, ¥862 ($120) second class. The longest fully high-speed run on earth. Most people split it with an overnight in Wuhan or Changsha.
+4. Beijing ↔ Xi'an . 1,216 km, 4-5 hours, ¥515 ($72). Terracotta Warriors day-and-a-half from the capital.
+5. Guangzhou ↔ Shenzhen . 102 km, 30 minutes, ¥75 ($10). You'll almost certainly ride this if you cross between Hong Kong and the Pearl River Delta.
+6. Hong Kong ↔ Guangzhou / Beijing . The West Kowloon line opened in 2018. Hong Kong to Guangzhou is 47 minutes for HK$215 (~$28). Hong Kong straight to Beijing is a 9-hour run once a day, and it's honestly one of the great chinese bullet train journeys.
+7. Shanghai ↔ Suzhou / Nanjing . 84 km / 25 min to Suzhou (¥40 / $5.50), 301 km / 73 min to Nanjing (¥140 / $19). Classic Yangtze Delta weekend loop.
+Our Beijing to Shanghai distance comparison breaks the flagship route down by train vs flight vs drive if you want to go deeper.
+Seat Classes and 2026 Prices (¥ and $)
+Four classes on a G-train, with a rare fifth on the premium Beijing-Shanghai service. Prices below are for the flagship Beijing-Shanghai run as a reference. Shorter routes scale down roughly proportionally.
+Class
+
+Beijing-Shanghai
+
+What you get
+
+Standing
+
+~¥170 ($24) on short hops
+
+Same train, no assigned seat
+
+Second class (二等座)
+
+¥553 / $77
+
+2+3 seating, recline, tray, power outlet
+
+First class (一等座)
+
+¥933 / $130
+
+2+2 seating, more recline, quieter
+
+Business class (商务座)
+
+¥1,748 / $243
+
+Lie-flat pod, meal, slippers, blanket
+
+VIP (select trains)
+
+¥2,588 / $360
+
+Private compartment feel
+
+Let me be direct: second class is fine. It's not punishment. The seats are wider than most domestic economy flights, they recline, they have power outlets, and the ride is so smooth you can work on a laptop. I've done Beijing-Shanghai in second class 40+ times. I only upgrade when I'm reimbursing it or I'm feeling soft.
+First class is nicer if you're tall or want a quieter car. You pay ~70% more for maybe 20% more comfort. Good on early-morning runs when you want to nap.
+Business class is a genuine experience. The pod fully reclines flat. Hot meals, slippers, pillow, blanket, free drinks. On the Beijing-Shanghai G7 it's actually cheaper than business class on a 2-hour domestic flight, and you arrive in the city center, not an airport 45 minutes out. Worth it once.
+Sophie from Melbourne told me her Beijing business class trip was the first time in her life she fell asleep on public transit and woke up rested.
+How to Book China High Speed Rail Tickets
+Four main ways to book china high speed rail tickets , and the right one depends on how much friction you can tolerate.
+Channel
+
+Fee
+
+English
+
+Ease
+
+Best for
+
+12306.cn / app
+
+None
+
+Yes
+
+Medium
+
+Price-sensitive riders
+
+Trip.com
+
+¥20-40 ($3-6)
+
+Yes
+
+Easy
+
+First-timers, credit cards
+
+Klook
+
+~¥30 ($4)
+
+Yes
+
+Easy
+
+Travelers in the Klook ecosystem
+
+Station counter
+
+None
+
+Minimal
+
+Hard
+
+Mandarin speakers, last minute
+
+12306 is the official China Railway booking platform. The English version has been live since 2019 and 12306.cn now accepts international credit cards on most routes. The app ("Railway 12306") is on both iOS and Android. Tickets open 15 days in advance at 6am Beijing time. This is the cheapest option, but the UX has rough edges, vague errors, silent payment failures, and a passport registration step. Budget 30 minutes for initial setup.
+Trip.com is the backup most foreign travelers end up using. English throughout, accepts Visa/Mastercard/Amex, mobile app works, and you can book in under 2 minutes. You pay ¥20-40 ($3-6) per ticket. I push most first-timers here because it just works. The tradeoff: sometimes china high speed rail tickets "sell out" on Trip.com before they do on 12306, because the inventory allocation lags.
+Klook is a newer option. Similar commission, English UI, solid app. Useful if you're already booking attractions and hotels through them.
+The station counter works if you speak Mandarin or travel with someone who does. Lines at Beijing South or Shanghai Hongqiao during holidays can be 30-60 minutes. Don't show up 30 minutes before departure expecting to walk on.
+Quick real-world comparison: I booked Beijing-Xi'an last October. 12306 showed ¥515 ($72). Trip.com showed ¥535 ($74). Klook showed ¥540 ($75). Same train. The 12306 difference was basically a coffee for 15 minutes of UX friction. Your call.
+Holiday booking is a different beast. For Spring Festival and National Day Golden Week, china high speed rail tickets on popular routes sell out within minutes of going live. If you're traveling in those windows, set a 6am Beijing time alarm exactly 15 days out and hammer refresh.
+Our how to buy China high-speed rail tickets walkthrough covers 12306 registration step by step.
+Station Procedures: Arrival, Security, Boarding
+China's china speed train stations are more like airports than train stations. Beijing South, Shanghai Hongqiao, Guangzhou South, Xi'an North, these are genuinely huge. Beijing South is 320,000 square meters, bigger than most international airports.
+Arrive 45-60 minutes before departure at major stations , 30 minutes at smaller ones. First-timers should lean toward the longer end. You pass three checkpoints before the platform, and each can surprise you.
+Step 1: ID check at entrance. Every major station has an airport-style entrance. Show your actual passport (not a photo) to the guard.
+Step 2: Security screening. X-ray for bags, metal detector for you. Water bottles sometimes get pulled, you may be asked to sip to prove it's not flammable. I'm not kidding. Power banks are fine under 100Wh. Lighters get confiscated about half the time.
+Step 3: Ticket gate to the waiting hall. As a foreigner you booked with your passport, so you can scan it at the e-gate. Some stations still send foreigners to the manual gate where staff type your passport number. Takes 30-60 seconds.
+Once inside, it looks like an airport gate area. Big screens show your train, gate, and status. Boarding opens 15 minutes before departure . The gate closes 5 minutes before departure . That's not a warning, it's a hard rule. I watched a family from Germany sprint across Shanghai Hongqiao and miss the gate by 90 seconds last April. They had to rebook.
+When the gate opens, scan your passport again and go down the escalator to the platform. The platform has markers showing where each car number will stop. Find yours (the car number is on your ticket) and get on when the train arrives.
+Onboard: Food, Wi-Fi, Luggage, Toilets, Power
+Once you're seated, china bullet train life is actually pretty nice.
+Food : A snack cart rolls through every 20-30 minutes with hot water, instant noodles (¥15-25 / $2-3.50), beer (¥10-15 / $1.50-2), coffee, and fruit. The middle of the train has a buffet car selling hot boxed meals for ¥45-70 ($6-10). Fair warning: the food is mediocre. Most Chinese travelers bring their own (street snacks from the station, or full sit-down meals in disposable containers). Copy them.
+Wi-Fi : Don't count on it. Some newer CR400 Fuxing sets have Wi-Fi that requires a Chinese phone number. Most trains have either broken Wi-Fi or none. Download what you need before boarding.
+Luggage : Overhead racks fit up to a ~24-inch roller. Bigger bags go on racks at the ends of each carriage. Official limit is 20 kg for adults, 10 kg for children. I've never seen it weighed, but don't show up with a 40 kg checked bag.
+Power outlets : Every seat has at least one (sometimes shared). First and business class have USB too. Chinese socket accepts US plugs but not European ones.
+Toilets : Each carriage has 1-2, mix of squat and Western. Bring your own tissues , they're not always stocked. Most common first-timer complaint, easiest to solve.
+Smoking : Absolutely not. Even in vestibules. The trains have smoke sensors that automatically slow the train and flag your name. Fine is ¥1,000+ ($140+). Chew gum.
+Passport and ID Rules for Foreigners
+China Railway runs a real-name ticketing system , meaning every ticket is tied to a specific passport number. Introduced in 2011, tightened since. Three things matter for foreigners.
+First: use your actual passport when you book. The name on the ticket must match your passport exactly. Middle names, hyphens, accents, all of it. If the e-gate flags a mismatch, you're arguing with a station agent in a language you don't speak.
+Second: bring the same passport to the station. Not a copy, not a photo, not a different passport. The one you booked with is the one that opens the gate. If you renew mid-trip, update the 12306 record or swap at the counter.
+Third: your passport is your ticket. No printed paper required at any major station in 2026. Scan at the e-gate and walk through. Screenshots are not accepted, only the physical passport.
+For the entry process before you reach a station, see our China visa for US citizens step-by-step guide .
+Tips, Gotchas, and Things First-Timers Mess Up
+A few more things I wish someone had told me on my first chinese bullet train ride.
+Spring Festival is a warzone. The 40-day travel period around Chinese New Year is called Chunyun, and it's the largest annual human migration on earth, roughly 9 billion trips in 2024. Major-route tickets sell out within minutes. If you're traveling late January or early February, book the second tickets go live, 15 days out, 6am Beijing time. Or fly.
+Golden Week (Oct 1-7) and Labour Day (May 1-5) are almost as bad. I avoid china speed train travel in those windows when I can.
+Station names are confusing. Many big cities have multiple HSR stations. Shanghai has Hongqiao, Shanghai Railway Station, and a couple smaller ones. Beijing has South, West, and Beijing Station. Guangzhou has South (HSR, far from the city), East, and the main one. Double-check which station your train leaves from before you leave your hotel.
+Don't just show up during peak travel. Even regional routes sell out at weekday rush hour.
+Mind the metro gap. At most HSR stations, the connecting subway is a 5-10 minute walk away. Budget that in.
+Carlos from Mexico City bought a Beijing-Shanghai G-train ticket, showed up at Beijing West (wrong station; Shanghai G-trains leave from Beijing South), realized 40 minutes before departure, took a taxi through traffic, and watched the gate close as he ran across the concourse. He ended up on a different china speed train three hours later. Don't be Carlos.
+For planning HSR into a full itinerary, our planning your China trip guide ties train routes into day-by-day plans, and our best time to visit China post will help you dodge the holiday crush.
+FAQ: China High-Speed Rail
+How fast does a Chinese high speed rail train go? G-trains run at a commercial top speed of 350 km/h (217 mph) on flagship lines like Beijing-Shanghai and Beijing-Tianjin. D-trains run 200-250 km/h. The CR400 Fuxing is rated to 400 km/h but isn't run that fast in regular service.
+Do foreigners need a passport to ride the china speed train? Yes. Every foreign traveler must book with a passport number and present the same passport at the station. No passport, no ride. No workaround.
+Can you buy china high speed rail tickets at the station the day of travel? Usually yes for regional or off-peak trains. During holidays, popular routes sell out days in advance. Don't rely on walking up.
+Is there a luggage limit? Adults 20 kg, children 10 kg. Rarely weighed, but don't show up with an airline-checked-bag-sized suitcase. A carry-on and personal item fit easily.
+Can I eat on the train? Yes. Snack cart every 20-30 minutes, buffet car in the middle. Most travelers bring their own food from station shops, which is better.
+Is there Wi-Fi on the china bullet train? Some newer Fuxing sets have it but it requires a Chinese phone number and is slow. Download podcasts and offline maps before boarding.
+How early should I arrive at the station? 45-60 minutes at big stations (Beijing South, Shanghai Hongqiao, Guangzhou South), 30 minutes at smaller ones.
+Is the shanghai to beijing train better than flying? For most people, yes. 4.5 hours city-center to city-center vs. ~5 hours door-to-door by plane, more legroom, no security theater, arrive rested. Train every time.
+Can foreigners use the 12306 app? Yes. The app and 12306.cn have full English versions and now accept international credit cards. First-time setup takes 15-30 minutes because of passport registration.
+Related Guides
+Beijing to Shanghai Distance: Train vs Flight Compared
+
+How to Buy China High-Speed Rail Tickets (2026)
+
+Planning a Trip to China: A First-Timer's Guide
+
+Best Time to Visit China: Month-by-Month Guide
+
+China Visa for US Citizens: Step-by-Step
+
+The china speed train network is the single best argument for skipping domestic flights in China. It's fast, punctual, cheap, and the ride itself is part of the trip. Book through 12306 or Trip.com, arrive 45 minutes early with your passport, and don't be Carlos. Safe travels.
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Tags
+# hsr # bullet-train # g-train # 12306
+
+View all →
+What is a realistic pace and preparation strategy for a multi-city High-Speed Rail trip in China? →
+Where can I purchase sleeper train tickets in China, and is it worth choosing trains over flights for short stops? →
+What is the recommended strategy for booking domestic flights and optimizing a long-term China itinerary? →
+How can a wheelchair user book assistance or wheelchair space on Chinese high-speed trains? →
+
+View all →
+July 14, 2026 · Topic
+China High-Speed Rail Map: All Routes Visualized (2026)
+
+July 28, 2026 · How-To Guide
+China Railway Map (2026): The Whole Network and Every Train Type
+
+February 4, 2026 · Itinerary
+Fifteen Days in China Is Really Nine
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

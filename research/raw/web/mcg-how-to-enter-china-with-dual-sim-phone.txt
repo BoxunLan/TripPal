@@ -1,0 +1,409 @@
+# source: https://mychina.guide/blog/how-to-enter-china-with-dual-sim-phone
+# final: https://mychina.guide/blog/how-to-enter-china-with-dual-sim-phone
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:28.070Z
+# bytes(raw): 73272
+# bytes(text): 14973
+# title: Enter China With a Dual-SIM Phone (2026 Guide)
+Enter China With a Dual-SIM Phone (2026 Guide)
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · January 19, 2026 · 11 min read · 2,527 views
+How to Enter China With a Dual-SIM Phone: 2026 Traveller's Guide
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 12 sections 01 What this guide covers
+02 Customs at the border: the short answer
+03 Why dual-SIM is the ideal China setup
+04 Which phones support dual-SIM in 2026
+05 The airport SIM buying routine
+06 iPhone dual-SIM configuration in China
+07 Android dual-SIM configuration in China
+08 eSIM alternatives if you cannot buy physical
+09 The combined strategy
+10 WhatsApp, Google, and the Great Firewall note
+11 Frequently asked questions
+12 Setup checklist before you board your flight to China
+
+If you are travelling to China in 2026 with a dual-SIM phone, you already have the best possible setup. You keep your home number for bank 2FA, WhatsApp, and Google. You add a Chinese SIM for local data, DiDi, and payment apps. No customs paperwork, no fees, no hidden rules. The only thing to get right is which SIM goes in which slot, how to switch data between them, and how to avoid the one common configuration mistake that leaves foreigners with a ¥2,000 roaming bill.
+What this guide covers
+Why dual-SIM is the single best phone setup for China
+
+Customs rules: what you actually declare (nothing)
+
+How to buy a local SIM at the airport in 2026 for under ¥200
+
+iPhone vs Android dual-SIM configuration
+
+The APN trick that fixes 80% of "no data" complaints
+
+eSIM alternatives for carriers that do not sell physical SIMs to tourists
+
+MyChinaGuide app · free
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+App Store Google Play
+
+Scan with your phone
+
+Customs at the border: the short answer
+You do not declare your phone at Chinese customs. You walk through the green channel. The officers are not interested in what is in your pocket. Dual-SIM is not flagged, not restricted, not even noticed — it is what 90% of Chinese residents use.
+The only thing that matters at the border is that your phone is not broadcasting GPS-denied or mesh-radio frequencies, which is a constraint for drone controllers and Starlink terminals, not normal smartphones.
+Why dual-SIM is the ideal China setup
+You keep your home number alive
+Your home SIM (US, UK, EU, Australia) stays active in slot 1. It receives SMS verification codes from:
+Your bank (critical for international transfers and card top-ups)
+
+Google and Apple (for account recovery)
+
+WhatsApp (if you use it to contact family)
+
+Your corporate VPN or SSO
+
+If your home SIM goes dark for two weeks, you can lock yourself out of half your accounts. Keeping the dual-SIM slot live — even with data off — keeps all that working.
+A local Chinese SIM gives you real data
+A local SIM lets you run DiDi, Amap, Alipay, Meituan, and WeChat at local speeds. It also assigns you a +86 number, which unlocks things like train ticket pickup via 12306, some hotel check-ins, and any online service that requires SMS verification to a Chinese number.
+Which phones support dual-SIM in 2026
+Most phones sold outside the US since 2020 are dual-SIM. Chinese domestic models are all dual-SIM by default. The short list that matters for 2026 travellers:
+Phone
+
+Dual-SIM method
+
+Works in China?
+
+iPhone 14, 15, 16 (international)
+
+Physical + eSIM (eSIM + eSIM in US)
+
+Yes
+
+iPhone 14, 15, 16 (China mainland)
+
+Dual physical SIM
+
+Yes
+
+Samsung Galaxy S22–S25
+
+Physical + eSIM
+
+Yes
+
+Huawei P60, Mate 60
+
+Dual physical SIM
+
+Yes, no Google Services
+
+Xiaomi 14, 15, Redmi Note 13
+
+Dual physical SIM
+
+Yes
+
+OPPO Find X7, Reno 12
+
+Dual physical SIM
+
+Yes
+
+Google Pixel 7, 8, 9
+
+Physical + eSIM
+
+Yes, but no Google Play out of the box
+
+OnePlus 11, 12
+
+Dual physical SIM
+
+Yes
+
+US-market iPhone 14 and later are eSIM-only — no physical SIM tray. That is fine for dual-eSIM, but it means you cannot insert a Chinese physical SIM from China Mobile. You need a carrier that sells eSIM activation to tourists, which in 2026 is limited.
+The airport SIM buying routine
+Step 1 — exit to arrivals
+Beijing Capital, Shanghai Pudong, Guangzhou Baiyun, Chengdu Tianfu, Shenzhen, and most tier-1 airports have China Mobile (中国移动), China Unicom (中国联通), and China Telecom (中国电信) counters in the arrivals hall. Go to any of them.
+Step 2 — ask for a tourist package
+The phrase is "travel SIM card" or just "SIM" plus your length of stay. They will offer packages with prepaid data. 2026 pricing at airport counters:
+Carrier
+
+Package
+
+Price (¥)
+
+Contents
+
+China Mobile
+
+7-day tourist
+
+100
+
+10 GB + 100 mins
+
+China Mobile
+
+30-day tourist
+
+200
+
+30 GB + 200 mins
+
+China Unicom
+
+7-day tourist
+
+80
+
+8 GB + free incoming calls
+
+China Unicom
+
+15-day tourist
+
+150
+
+20 GB + 100 mins
+
+China Telecom
+
+30-day tourist
+
+180
+
+25 GB + unlimited intra-network
+
+Passport is required for registration. The clerk scans it, takes a photo of you, and the SIM is active in 5 minutes. Payment by cash, Alipay, WeChat Pay, or foreign card.
+Step 3 — insert in slot 2
+Open your phone's SIM tray. Your home SIM goes in slot 1 (already there). The Chinese SIM goes in slot 2. If you have an iPhone with eSIM + physical SIM, the home eSIM stays and the physical China SIM goes in the tray.
+iPhone dual-SIM configuration in China
+Set up Mobile Data on the China SIM
+Settings → Cellular
+
+Tap the China SIM (labelled "China Mobile" or similar)
+
+Under Cellular Plan Label, rename it "China Data"
+
+Set Default Voice Line to your home SIM (keeps incoming calls on your home number if roaming is on, or silent if roaming is off)
+
+Set Cellular Data to the China SIM
+
+Turn OFF "Allow Cellular Data Switching"
+
+That last step is critical. Data Switching will allow your phone to fall back to the home SIM's roaming for data if the China SIM signal is weak — and that is how you get a ¥2,000 roaming bill.
+Disable home SIM data roaming
+Settings → Cellular → Home SIM → Data Roaming OFF
+
+Keep Voice Roaming ON if you want to receive 2FA SMS
+
+Data Roaming OFF, Voice Roaming ON is the safe combination
+
+Android dual-SIM configuration in China
+On most Android phones
+Settings → Connections → SIM card manager
+
+Mobile data: select the China SIM
+
+Calls: select home SIM (for 2FA) or China SIM (for local calling)
+
+SMS: select home SIM (for 2FA to your home bank)
+
+Roaming: turn off on the home SIM
+
+Google Pixel specific
+Pixel phones sometimes struggle to auto-configure APN on Chinese carriers. If the China SIM connects but data does not flow:
+Settings → Network & internet → SIMs → China Mobile
+
+Access Point Names → add new
+
+Name: CMNET
+
+APN: cmnet
+
+MCC: 460
+
+MNC: 00
+
+Save, select the new APN, toggle airplane mode on and off. Data should flow in 30 seconds.
+eSIM alternatives if you cannot buy physical
+Some travellers prefer not to deal with airport queues. eSIM providers like Airalo, Holafly, Nomad, and Ubigi sell China data plans. In 2026 these work by tunnelling your traffic via Hong Kong or Singapore, which has two consequences:
+Pros
+Activated before you fly, working on landing
+
+No airport queue, no ID check
+
+Traffic routed via international gateway, so Google and Western apps work without VPN
+
+Cons
+More expensive per GB (roughly ¥35/GB vs ¥7/GB on a local SIM)
+
+No +86 number, which locks you out of some Chinese apps
+
+Some providers have throttling above 5–10 GB
+
+For a short trip where you only need data for maps, DiDi, and messaging, an Airalo eSIM is the cleanest solution. For a longer stay or heavy use, a physical China SIM is still better.
+The combined strategy
+This is what I recommend to every dual-SIM traveller:
+Home SIM in slot 1: Data Roaming OFF, Voice Roaming ON. This keeps 2FA SMS and bank calls flowing, no data cost.
+
+Chinese physical SIM in slot 2: bought at the airport, ¥100 for 7 days or ¥200 for 30 days. All mobile data routes through it.
+
+Airalo or similar eSIM as standby: pre-loaded on iPhone/Samsung/Pixel for the 20-minute window between landing and getting to the airport counter, or for cities where the counter line is too long.
+
+This gives you three layers of redundancy, no surprise charges, and full functionality on day one.
+WhatsApp, Google, and the Great Firewall note
+Your home SIM remains registered to WhatsApp and your Google account as normal. That registration does not depend on whether you have data. What changes when you connect to a Chinese data network is that the traffic cannot reach WhatsApp and Google servers without a VPN.
+For foreigners, the practical workaround in 2026 is one of:
+Use an Airalo-style international eSIM for apps that need the free internet
+
+Install a VPN before you fly (Astrill, ExpressVPN, WireGuard custom — test first)
+
+Switch to Chinese equivalents (WeChat for messaging, Baidu Maps or Amap for maps)
+
+Frequently asked questions
+Do I need to register my phone with Chinese authorities when I arrive?
+No. You do not register the device itself. The Chinese SIM you buy is registered to your passport automatically at purchase. Your home SIM is not registered anywhere — it just works.
+Will Chinese customs ask to inspect my phone?
+Extremely rarely, and only if you are flagged for another reason. Normal tourist entry does not involve phone inspection. Dual-SIM is not a flag.
+Can I buy a Chinese SIM without a passport?
+No. All SIM sales in China require ID since 2016. Foreigners use passport, Chinese nationals use ID card. There is no way around this.
+Does dual-SIM drain more battery?
+Slightly, yes. Expect 5–10% more battery drain on dual-SIM active because both radios stay registered to their networks. Turn off the home SIM radio (via airplane mode per-line on iPhone, or toggle in SIM manager on Android) if you want maximum battery.
+Will my US iPhone work in China?
+Yes, for data on an Airalo-style eSIM. No, for physical China SIM since US iPhones 14+ have no tray. Your best bet with a US iPhone is to add a Chinese carrier eSIM remotely (China Mobile offers this in some markets) or rely on an Airalo-style eSIM.
+What about 5G support?
+All three Chinese carriers run 5G in major cities. Your international phone needs to support China's 5G bands (n41, n78, n79) to benefit. Most 2022-and-newer flagships do. Older models fall back to 4G LTE, which is still fast enough for everything.
+Can I tether my home phone to my China SIM for a friend?
+Yes. Hotspot works normally on both SIMs. Select the China SIM as the data source, enable hotspot, share with any device. Useful if your travel companion's phone is not dual-SIM or is eSIM-only US hardware.
+Do Chinese SIM cards expire?
+Tourist packages are time-boxed — a 7-day package dies in 7 days. The SIM itself can be topped up and kept alive for longer if you stay in China, but for short trips the package-and-discard model is normal. Do not panic when the data cuts off on day 8.
+What phone number will people see when I call from China?
+If you use the China SIM as the calling line, the +86 Chinese number shows. If you keep the home SIM as the calling line (with Voice Roaming on), your home number shows — but the call routes internationally and the cost is high. Most people send messages via WeChat or WhatsApp instead of using voice calls at all.
+Do I need a VPN?
+Only if you need to access sites and apps blocked by Chinese filtering — Google, Gmail, YouTube, Facebook, Instagram, Twitter/X, WhatsApp, most Western news. If your trip is three days of Forbidden City photography and dumpling eating, you can live without a VPN. If you depend on Gmail or Google Docs daily, install and test a VPN before you fly, because VPN download sites are themselves blocked from inside China.
+Setup checklist before you board your flight to China
+Print or screenshot this list.
+Dual-SIM phone charged, home SIM in slot 1
+
+Home carrier's data roaming turned off in settings
+
+Home carrier's SMS roaming left on (for 2FA)
+
+Alipay installed, passport verified, Tour Pass topped up
+
+WeChat installed (optional but useful)
+
+Amap installed, offline map of your first city downloaded
+
+VPN of choice installed and tested (if needed)
+
+DiDi international app installed (as backup to Alipay DiDi mini-program)
+
+Copy of passport photo on your phone (for SIM registration if asked)
+
+¥500 cash from home currency exchange or airport ATM for backup
+
+Ten minutes of prep before you board saves you two hours of WiFi-hunting at arrivals.
+That ten minutes of prep is mostly one decision: which eSIM. The eSIM comparison covers what each carrier actually routes through, and eSIM versus VPN explains why the roaming route has held up better than VPNs since the April 2026 crackdown. If you want a local number as well as data, buying a Chinese SIM as a foreigner covers the passport registration at the counter.
+
+Share this article
+
+Tags
+# china-sim # dual-sim # iphone-china # android-china # travel-tech
+
+Travelers also asked
+View all →
+Do I need a Chinese SIM card and phone number for traveling in China? →
+Should I install a China eSIM before arriving, and do I still need a VPN? →
+For a short China trip, should I rely on eSIM, roaming, or VPN if I need stable access to Google, Zoom, Slack, or Office365? →
+What essential digital preparations should I make before arriving in China as a first-time visitor? →
+
+Related articles
+View all →
+April 15, 2026 · How-To Guide
+Best eSIM Card for China Travel 2026: Compared
+
+April 17, 2026 · Topic
+Why China Doesn't Support eSIM (And What Travelers Should Do)
+
+May 5, 2026 · How-To Guide
+China eSIM: Nomad vs Airalo vs Holafly (None Give a Number)
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

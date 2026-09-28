@@ -1,0 +1,7 @@
+﻿C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-alipay.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-cash.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-money.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-payment.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-tag.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-votes.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-wechat-pay.txt

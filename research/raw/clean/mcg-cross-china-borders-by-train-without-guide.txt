@@ -1,0 +1,188 @@
+# source: https://mychina.guide/blog/cross-china-borders-by-train-without-guide
+# final: https://mychina.guide/blog/cross-china-borders-by-train-without-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:25.974Z
+# bytes(raw): 64526
+# bytes(text): 10369
+# title: Cross China Borders by Train Solo 2026: Routes, Visas, Tickets
+
+Cross China Borders by Train Solo 2026: Routes, Visas, Tickets
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog Itinerary · January 20, 2026 · 7 min read · 2,769 views
+How to Cross China's Borders by Train Without a Guide (2026)
+
+Michael Chen · Travel Writer, China Specialist · Updated September 14, 2026
+
+On this page 8 sections 01 What actually runs in 2026
+02 Route 1: Kunming to Vientiane — the easy one
+03 Route 2: Nanning to Hanoi — back after five years
+04 Route 3: Beijing to Ulaanbaatar — the real Trans-Mongolian taster
+05 The Trans-Siberian dream is still on hold
+06 The two routes that aren't really yours to book
+07 Before you go, whichever route you take
+08 Frequently asked questions
+
+Almost every guidebook tells you that taking a train out of China across an international border needs a specialist agency and a two-week head start. That's mostly outdated — but so is the optimism. The famous Beijing-to-Moscow trains people picture when they hear "leave China by rail" have been suspended for years and still aren't back in 2026. What you actually have is a short list of three cross-border trains an ordinary traveler can book with a passport and the right visa, plus a couple that exist only on paper or only through a tour company. Here's the honest, current picture.
+What actually runs in 2026
+Route
+
+Train
+
+Can you DIY it?
+
+Status
+
+Kunming → Vientiane (Laos)
+
+D87 / D88
+
+Yes
+
+Running, daily
+
+Nanning → Hanoi (Vietnam)
+
+T8701 / T8702
+
+Yes
+
+Running, daily (resumed 2025)
+
+Beijing → Ulaanbaatar (Mongolia)
+
+#23 / #24
+
+Yes
+
+Running, weekly
+
+Beijing → Moscow (Trans-Mongolian)
+
+K3 / K4
+
+No
+
+Suspended since 2020
+
+Beijing → Moscow (Trans-Manchurian)
+
+K19 / K20
+
+No
+
+Suspended since 2020
+
+Beijing → Pyongyang (North Korea)
+
+K27 / K28
+
+No
+
+Running, but agency-only entry
+
+Urumqi → Almaty (Kazakhstan)
+
+K9795 etc.
+
+No
+
+Suspended
+
+So three routes are genuinely yours to book. The rest are either down, or wrapped inside a tour you can't unbundle. Let's take the three live ones in order of how easy they are.
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+Route 1: Kunming to Vientiane — the easy one
+This is the cross-border train to take if you've never done one. The China-Laos Railway runs a single through train, D87 (and a second pair, D85), from Kunming South all the way to Vientiane. You do not change trains. Everyone gets off briefly at Mohan to clear Chinese exit formalities and again at Boten for Lao entry — about an hour of stamping in total — then reboards the same train.
+Frequency and time: Daily, around 9.5 hours end to end.
+
+Price: ¥542 second class, ¥864 first class for the full run.
+
+No bogie change. Both sides run standard gauge, so there's none of the wheel-swapping drama you'll read about on the Mongolian route.
+
+Booking: China-to-Laos tickets are sold only inside China — on the 12306 app or website , or at international ticket counters in Kunming, Kunming South, Yuxi, Pu'er, Xishuangbanna and Mohan. Buy with your passport; if you book online you still collect a paper ticket at the station.
+
+One thing the old guides get dangerously wrong: get your Laos eVisa online before you board. The Boten railway station issues no visa on arrival — it accepts the eVisa only. Visa-on-arrival exists at the Boten road checkpoint, not the train station, so turning up expecting to pay cash will strand you.
+Route 2: Nanning to Hanoi — back after five years
+The Nanning-Hanoi sleeper, T8701 southbound, was suspended through the pandemic and finally resumed on 25 May 2025. It runs daily and overnight: out of Nanning around 18:05, into Hanoi's Gia Lâm station around 06:30, roughly twelve and a half hours including the border stop.
+Class: Soft sleeper only.
+
+Price: Sources still disagree — somewhere in the rough range of ¥200 to ¥420 depending on segment and service fees. Confirm the exact fare when you book rather than trusting a number online.
+
+Border: Pingxiang on the Chinese side, Đồng Đăng on the Vietnamese side. Everyone clears immigration here.
+
+Booking and visa: Buy in person at the station with your original passport, up to ten days ahead. Important: this crossing needs a paper visa or genuine visa-free status — Vietnam e-visas are not accepted on this train. Sort your Vietnam entry out before you go.
+
+Route 3: Beijing to Ulaanbaatar — the real Trans-Mongolian taster
+A weekly Beijing-Ulaanbaatar train, #23 northbound, resumed in mid-2025. It's about a 31-hour ride and it's the genuine Trans-Mongolian experience in miniature — including the part everyone talks about. At Erenhot, on the China-Mongolia border, the train enters a shed and each carriage is jacked up so its bogies can be swapped: China runs standard gauge, Mongolia runs the wider Russian gauge, and the wheels physically change underneath you. It takes a few hours, usually late at night.
+Two honest caveats. First, this train terminates in Ulaanbaatar — it does not carry on to Moscow. Second, departure days and current fares shift; check the live schedule and price on 12306 rather than relying on a fixed figure. Most nationalities get 30 days visa-free in Mongolia (a policy currently extended through the end of 2026, with US citizens getting up to 90 days), but verify your own passport before you travel.
+The Trans-Siberian dream is still on hold
+If your plan was Beijing to Moscow by rail, 2026 is not your year. Both through trains — the Trans-Mongolian K3/K4 via Ulaanbaatar and the Trans-Manchurian K19/K20 via Manzhouli — have been suspended since February 2020 and have not resumed. A single passenger-free test run of the K3 rolled in early 2025, but no scheduled service followed. Anyone telling you that you can board a weekly Beijing-Moscow train in 2026 is working from a pre-2020 timetable.
+The two routes that aren't really yours to book
+North Korea. The Beijing-Pyongyang train (K27) actually came back on 12 March 2026 after a six-year halt. But independent tourists effectively cannot get a DPRK visa — entry is handled only through approved agencies like Koryo Tours. The train runs; the do-it-yourself trip does not.
+Kazakhstan. The regular Urumqi-Almaty and Urumqi-Astana trains are still suspended. The new Xi'an-Almaty "cultural tourism train" that launched in May 2025 is an all-inclusive ten-day tour package, not a ticket you buy for a single leg. To reach Kazakhstan from China on your own, the practical move is a bus from Yining to the Khorgos border, then onward transport — not a train.
+Before you go, whichever route you take
+China-origin international tickets are sold inside China — on 12306 or at station international counters — not on foreign booking sites. Bring your passport.
+
+Make sure your Chinese visa actually permits the exit , and a re-entry if you plan to come back. A single-entry visa ends the moment you cross out.
+
+Sort the destination country's visa before you board. Border officers won't improvise for you.
+
+Visa rules for Mongolia, Laos, Vietnam and Kazakhstan all change often. Re-check close to your travel date.
+
+Can I still take a train from Beijing to Moscow in 2026? No. Both Beijing-Moscow services have been suspended since 2020 and have not resumed. If reaching Moscow by rail is the goal, you'd have to piece the journey together separately, and Russia's own entry rules make that hard for many travelers right now.
+Which cross-border train is easiest for a first-timer? Kunming to Vientiane, without question. It's a single through train, sold on 12306, with no gauge change and a straightforward Laos eVisa you arrange online beforehand.
+Do I need a visa on arrival for Laos at the train border? No — and this trips people up. The Boten railway station takes the Laos eVisa only, not visa-on-arrival. Get the eVisa online before you leave China.
+Is the Nanning-Hanoi train really running again? Yes, since 25 May 2025, daily and overnight. Just remember it needs a paper Vietnam visa or visa-free status; the Vietnam e-visa is not accepted at this crossing.
+What's the bogie change at the Mongolian border? China and Mongolia use different track gauges, so at Erenhot the carriages are lifted and their wheel sets are swapped. It's a slow, late-night process and a genuine part of the experience on the Beijing-Ulaanbaatar train.
+
+Tags
+# china border # international train # trans-mongolian # overland travel # visa
+
+View all →
+Where can I purchase sleeper train tickets in China, and is it worth choosing trains over flights for short stops? →
+
+View all →
+July 28, 2026 · How-To Guide
+China Railway Map (2026): The Whole Network and Every Train Type
+
+January 18, 2026 · How-To Guide
+How to Book China Train Tickets Without WeChat (2026 Guide)
+
+February 28, 2026 · How-To Guide
+Beijing to Lhasa on the Z21: Start Sixty Days Out
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

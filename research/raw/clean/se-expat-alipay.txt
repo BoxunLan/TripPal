@@ -1,0 +1,10 @@
+# source: https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=alipay&site=expatriates&filter=withbody&pagesize=100
+# final: https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=alipay&site=expatriates&filter=withbody&pagesize=100
+# status: 200
+# contentType: application/json; charset=utf-8
+# fetchedAt: 2026-09-28T17:21:50.756Z
+# bytes(raw): 67
+# bytes(text): 67
+# title: {"items":[],"has_more":false,"quota_max":300,"quota_remaining":286}
+
+{"items":[],"has_more":false,"quota_max":300,"quota_remaining":286}

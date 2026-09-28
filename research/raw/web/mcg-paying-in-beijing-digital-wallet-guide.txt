@@ -1,0 +1,303 @@
+# source: https://mychina.guide/blog/paying-in-beijing-digital-wallet-guide
+# final: https://mychina.guide/blog/paying-in-beijing-digital-wallet-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:29.325Z
+# bytes(raw): 75970
+# bytes(text): 16176
+# title: Paying in Beijing 2026: Digital Wallet Guide
+Paying in Beijing 2026: Digital Wallet Guide
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · February 15, 2026 · 11 min read · 2,780 views
+Paying in Beijing 2026: Digital Wallet Setup Guide
+
+M MyChinaGuide Editorial Team · Updated September 14, 2026
+
+On this page 10 sections 01 What this guide covers
+02 Why Digital Wallets Own Beijing
+03 Setup Steps Before You Fly
+04 The ¥2,000 Transaction Cap (and How to Live With It)
+05 Where Cards Still Work in Beijing
+06 Beijing Subway Payment
+07 Cash: How Much and Where to Get It
+08 Practical Beijing Payment Cheat Sheet
+09 Frequently Asked Questions
+10 Beyond Beijing: Does This Setup Work Elsewhere?
+
+Beijing in 2026 runs on QR codes, not cards. Alipay Tour Pass and WeChat Pay — both of which now accept Visa, Mastercard, and Discover from foreign tourists — handle nearly every transaction from Mutianyu cable-car tickets to ¥6 bottled water at a convenience store. Foreign-card top-ups are capped at roughly ¥2,000 per transaction and ¥50,000 per year, so pair the apps with a ¥500-1,000 cash reserve and you're covered for anything the city throws at you.
+What this guide covers
+Why Alipay and WeChat Pay are non-negotiable in Beijing today
+
+Step-by-step foreign card setup before your flight
+
+The ¥2,000 per-transaction limit and how to work with it
+
+Subway payment: Alipay Beijing Metro Lite, WeChat Pay QR, or Yikatong card
+
+Where Visa and Mastercard actually still work (and where they don't)
+
+How much cash to carry and which ATMs accept foreign cards
+
+MyChinaGuide app · free
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Why Digital Wallets Own Beijing
+Over 90 percent of in-person transactions in mainland China ran through mobile payments in the most recent People's Bank of China data, and Beijing sits at the upper end of that curve. Street-food vendors, hutong tea shops, Line 1 subway gates, Didi drivers, and even some 798 Art Zone galleries all expect a QR code scan. Paper RMB still works as legal tender, but the practical experience is that many younger vendors don't carry change and a few temple donation boxes now display "QR only" stickers.
+For a foreign visitor this means one simple rule: arrive with Alipay or WeChat Pay fully set up, or spend your first afternoon stranded outside a noodle shop. Both apps added proper foreign-card support back in 2023 and the flows have been refined every year since. Setup in 2026 takes roughly 15-25 minutes if you prepare at home.
+Alipay vs WeChat Pay: pick one, install both
+Alipay is the cleaner choice for tourists because its "Tour Pass" feature is explicitly designed around foreign cards and short-stay passport verification. WeChat Pay handles foreign cards too, but the user experience is grafted onto a messaging app and real-name verification can be pickier about card issuers. The pragmatic move is to set up Alipay first, use it as your daily driver, and install WeChat Pay as a backup for any vendor whose scanner misreads Alipay QR (it happens once or twice on a two-week trip).
+Setup Steps Before You Fly
+Do every step below on stable home Wi-Fi using your home SIM. Setup is much harder once you're standing in the Beijing Capital Airport (PEK) arrivals hall with a fresh Chinese number.
+Alipay Tour Pass setup
+Download Alipay from the App Store or Google Play. Do not side-load an APK.
+
+Open the app, tap "Sign up," enter your home mobile number, and complete SMS verification.
+
+Tap the search bar and type "Tour Pass." Select the official Alipay Tour Pass mini-program.
+
+Upload a clear photo of your passport bio page and a selfie for facial verification.
+
+Enter your estimated arrival and departure dates. Tour Pass is valid for up to 90 days per activation.
+
+Link a Visa, Mastercard, or Discover card. No Chinese bank account required.
+
+Top up in increments (Tour Pass limits each top-up to roughly ¥2,000 but allows multiple top-ups).
+
+Tap the "Pay" button on the Alipay home screen to display your personal payment QR. This is the code vendors scan.
+
+WeChat Pay setup
+Install WeChat and register an account with your home mobile number.
+
+Tap "Me" > "Services" > "Wallet."
+
+Complete real-name verification by uploading your passport bio page.
+
+Tap "Cards" and add a Visa or Mastercard. WeChat Pay accepts foreign cards directly without a separate "Tour Pass" layer.
+
+Keep the app open to "Me" > "Services" > "Receive/Pay Money" to show or scan QR codes.
+
+Foreign-card transactions incur a 3 percent service fee on anything above ¥200 per payment, and payments of ¥200 or less are fee-free. The same rule applies on Alipay — despite what older guides claim, neither wallet is free above the ¥200 line.
+
+The ¥2,000 Transaction Cap (and How to Live With It)
+Alipay Tour Pass tops up your balance in increments of roughly ¥2,000 at a time, but you can top up repeatedly. The real ceiling for foreign cards is far higher: since 2024 the regulator allows about US$5,000 per single transaction and US$50,000 per year across all your foreign cards. WeChat Pay follows the same US$5,000 / US$50,000 limits once you complete identity verification; before you verify, its annual cap is lower (around ¥60,000).
+This matters for two specific situations:
+Big hotel bills. A ¥1,800 per-night Sanlitun hotel for four nights totals ¥7,200. Split it into multiple top-ups, pay at the front desk with your physical Visa card directly (most four-star and above hotels still run card terminals), or book through Trip.com with your home card before arrival so the bill is already settled.
+
+High-end tour bookings. A ¥3,500 private full-day Mutianyu Great Wall tour exceeds a single top-up. Either pre-pay the operator by card or wire before arrival, or top up Tour Pass twice over two days.
+
+For everything else — meals, subway, attractions, souvenirs — a single ¥2,000 top-up typically lasts a well-budgeted solo traveler two to four days in Beijing.
+Where Cards Still Work in Beijing
+Credit cards are accepted in a narrow but reliable set of venues. If your payment toolkit is "Visa and Mastercard only," you're limited to roughly the following:
+Venue type
+
+Accepts Visa/Mastercard?
+
+Notes
+
+International hotel chains (Peninsula, Four Seasons, Hilton, Marriott)
+
+Yes
+
+Standard at check-in; 2-3 percent FX fee common
+
+Upscale Sanlitun and Guomao Western restaurants
+
+Sometimes
+
+Call ahead; many prefer Alipay or WeChat
+
+Beijing Capital Airport duty-free and international terminals
+
+Yes
+
+Reliable
+
+Major attraction ticket windows (Summer Palace, Forbidden City official booths)
+
+Occasionally
+
+Online advance booking via Alipay works better
+
+SKP, China World Mall, and Sanlitun Taikoo Li luxury retail
+
+Yes
+
+UnionPay universally accepted; Visa/Mastercard at most stores
+
+Hutong restaurants, street vendors, subway gates, convenience stores
+
+No
+
+Alipay or WeChat Pay only
+
+Didi and taxi rides
+
+No (in practice)
+
+Pay through Alipay or WeChat Pay link inside the Didi app
+
+UnionPay Diamond and high-tier credit cards are accepted at a wider set of merchants than Visa or Mastercard because UnionPay is the domestic rail. If your bank issues UnionPay cards in your home country, bring one as a backup.
+Beijing Subway Payment
+The Beijing Metro runs 27 lines in 2026 and accepts three main payment methods. Pick the one that matches your app setup.
+Option 1: Alipay Beijing Metro Lite
+Open Alipay, search "Beijing Metro" or the Yitongxing mini-program, activate it once with a facial scan, and tap the in-app QR against the scanner at any gate. Fare deducts automatically from your Tour Pass balance. This is the fastest option for Alipay users.
+Option 2: WeChat Pay subway QR
+WeChat Pay has a similar "Ride Code" mini-program. Search "乘车码" or "Beijing Subway" inside WeChat, complete a one-time setup, and use the generated QR at gates.
+Option 3: Yikatong physical card
+The Yikatong (一卡通) is Beijing's contactless IC card. Buy one at any subway station customer service window or self-service kiosk for a ¥20 refundable deposit. Top up with Alipay, WeChat Pay, or cash at kiosks. The card covers subway, buses, and some taxis. Works offline, never runs out of battery, and sits quietly in your wallet. The refundable deposit is returned when you hand the card back at any staffed customer service window.
+Individual subway trips cost ¥3-10 depending on distance. A daily cap of roughly ¥150 applies to rail transit spending in most payment apps.
+Cash: How Much and Where to Get It
+Treat cash as emergency fuel, not your primary payment method. Bring ¥500-1,000 equivalent in ¥20, ¥50, and ¥100 notes. Use it for:
+Rural taxi drivers outside the fifth ring road who still prefer cash
+
+Temple donation boxes at the Lama Temple and Yonghegong
+
+Tipping housekeeping or tour guides when digital transfers feel awkward
+
+A backup if your phone battery dies or a QR scanner fails
+
+Getting cash on arrival
+ATMs at Beijing Capital (PEK Terminal 3) and Daxing (PKX) both dispense RMB to foreign Visa, Mastercard, and UnionPay cards. Expect a ¥25-50 withdrawal fee on top of your home bank's foreign ATM fee. Bank of China, ICBC, and China Merchants Bank ATMs are the most reliable. Avoid ATMs in small independent shops — skimmers exist and the exchange rates are uncompetitive.
+Breaking a ¥100 note at a street stall can be awkward: vendors often don't carry enough change for a ¥15 jianbing purchase. Break big notes at 7-Eleven, FamilyMart, or a hotel front desk.
+Practical Beijing Payment Cheat Sheet
+Download Alipay, activate Tour Pass, and test a small ¥5 transfer before you leave home.
+
+Install WeChat and complete real-name verification as a backup.
+
+Carry ¥500-1,000 in ¥20 and ¥50 notes for backup.
+
+Save screenshots of your Alipay and WeChat Pay QR codes in case of patchy reception.
+
+Download Amap with offline Beijing maps before landing.
+
+Buy a local SIM from China Unicom at PEK arrivals (around ¥150-220 for 10 GB, 15-30 days).
+
+Carry a power bank. Every app here needs a live battery.
+
+Avoid tapping "NFC" or "contactless" expecting it to work — Beijing runs on QR scans, not tap-to-pay.
+
+Frequently Asked Questions
+Can I really link a foreign Visa to Alipay in 2026?
+Yes. Alipay Tour Pass officially supports Visa, Mastercard, JCB, Discover, and Diners Club issued outside mainland China. Setup requires your passport and takes 15-25 minutes. Transaction caps apply: roughly ¥2,000 per top-up and ¥50,000 annually.
+What happens if my phone dies while I'm paying?
+Pull out cash. This is exactly why the ¥500-1,000 backup exists. For taxi and Didi rides, pay the driver in cash at the original meter price — most Beijing taxi drivers will accept it without complaint.
+Does WeChat Pay charge a fee for foreign cards?
+Both WeChat Pay and Alipay charge the same 3 percent service fee on foreign-card payments above ¥200 (anything ¥200 or under is free), so neither has a fee advantage. New WeChat Pay users do get one perk: the 3 percent fee is waived on up to ¥1,000 of payments per day for the first 60 days after your first transaction.
+Is the Yikatong subway card worth it?
+For a stay of 5 days or longer riding the subway daily, yes. The ¥20 deposit is refundable and the card saves you from depending on QR scanners at busy stations during morning rush hour. For short 2-3 day trips, Alipay Beijing Metro Lite or WeChat Pay subway QR is simpler.
+Can I use Apple Pay or Google Pay in Beijing?
+Apple Pay works at a small number of merchants that run UnionPay card terminals and have specifically enabled Apple Pay. It is not a reliable primary payment method. Google Pay is not supported at all in mainland China because Google services are blocked. Use Alipay or WeChat Pay.
+What if I arrive without setting up Alipay at all?
+You can register at PEK arrivals, but expect delays. The Beijing Capital airport Wi-Fi requires a Chinese phone number for captive-portal registration, which creates a chicken-and-egg problem. Buy a China Unicom tourist SIM at the arrivals hall first (around ¥150-220 for 10-15 GB, 15-30 days; passport required), then activate Alipay on the new connection. Budget 45-60 minutes before leaving the terminal.
+Can two people share one Alipay account?
+Technically yes, but Tour Pass is linked to one passport per activation and the QR code displayed is tied to a single login. For couples or families, each adult should run their own Alipay on their own phone. Children under 16 can ride subways and pay for snacks on a parent's scanner without issue — the parent simply uses their own QR to pay.
+Are there any transactions that still require cash?
+A shrinking list. Temple donation boxes at older sites like the Lama Temple and some hutong shrines. A few elderly street vendors selling jianbing or roasted sweet potatoes who haven't upgraded. Rural taxi drivers outside Beijing's sixth ring road. Occasional train-station porter tips in older terminals. In central Beijing during a typical 2026 visit, you might go six days without pulling out a single yuan note.
+Beyond Beijing: Does This Setup Work Elsewhere?
+Yes. Alipay Tour Pass and WeChat Pay work identically across mainland China. A setup that works for Beijing also covers Shanghai, Xi'an, Chengdu, Guangzhou, Shenzhen, Hangzhou, Nanjing, and every other city you're likely to visit on a first trip. The subway mini-programs vary slightly by city — Beijing's is called Yitongxing, Shanghai uses Metro Daduhui, Guangzhou has its own branded app — but all share the same Alipay or WeChat Pay login and payment backend. Activate the relevant subway mini-program on arrival in each new city, confirm your face scan, and you're through the gates.
+Hong Kong and Macau are the exception: both still lean heavily on Octopus (HK) and MacauPass (MO) physical cards, though Alipay HK and WeChat Pay HK exist as separate accounts from the mainland versions. If your trip includes Hong Kong, treat it as a distinct payment system rather than an extension of your Beijing setup.
+
+Share this article
+
+Tags
+# alipay # wechat-pay # beijing # payments # digital-wallet
+
+Travelers also asked
+View all →
+Can foreigners use Alipay and WeChat Pay in China with international credit cards? →
+What are the best payment methods for travelers in China, and are credit cards or cash widely accepted? →
+How does the cashless payment system work for travelers in China? →
+Do I need both Alipay and WeChat Pay for China? →
+
+Related articles
+View all →
+January 15, 2026 · How-To Guide
+Beijing Subway Card vs Mobile Payment: Which Is Better?
+
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+March 30, 2026 · How-To Guide
+Fee-Free ATMs at Beijing Daxing Airport (PKX) Arrivals 2026
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

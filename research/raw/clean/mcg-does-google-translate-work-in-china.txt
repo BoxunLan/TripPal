@@ -1,0 +1,155 @@
+# source: https://mychina.guide/blog/does-google-translate-work-in-china
+# final: https://mychina.guide/blog/does-google-translate-work-in-china
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:26.277Z
+# bytes(raw): 68548
+# bytes(text): 13600
+# title: Does Google Translate Work in China? 2026 Guide
+
+Does Google Translate Work in China? 2026 Guide
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · July 22, 2026 · 9 min read · 1,412 views
+Does Google Translate Work in China? What Actually Works in 2026
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 14, 2026
+
+On this page 6 sections 01 What happened to Google Translate in China
+02 What still works: the offline pack almost nobody sets up
+03 What breaks without a VPN
+04 Alternatives that work in China in 2026
+05 Frequently asked questions
+06 Sources
+
+Mostly no — with one exception that matters. Google shut down its mainland China translation service in October 2022, citing low usage, and the Great Firewall blocks the Google Translate website, the app's online features, and Chrome's built-in page translation. Type a phrase into the app on Beijing hotel Wi-Fi and it simply times out. The exception is offline mode: if you download the free Chinese offline language pack before you arrive, typed text translation and instant camera translation run entirely on your phone — no internet, no VPN, and no blocked Google servers involved. Voice conversation mode and web translation still fail without a VPN. For a 2026 trip you have three workable setups: download the offline pack at home before you fly, install a reliable VPN before arrival, or carry an alternative that is not blocked, such as Apple Translate or Microsoft Translator.
+Honestly, this is the single most common question my clients ask before they land — usually about 48 hours before their flight, which is cutting it close but still enough time to fix. I have been running inbound tours out of Beijing since 2018, and every season someone steps off the plane, opens Google Translate at baggage claim, and watches it spin forever. So let me walk you through exactly what happened, what still works, and the one piece of preparation that saves the whole trip.
+What happened to Google Translate in China
+Google Translate used to be one of the few Google products that worked in mainland China. In 2017, Google launched a dedicated China version at translate.google.cn, hosted on Chinese servers and accessible without a VPN. For five years, travelers and Chinese users could rely on it.
+That ended in the fall of 2022. In late September, users across China noticed the service failing, and in early October Google confirmed it had discontinued Google Translate in mainland China, citing "low usage." The China site was replaced with a generic search bar linking to the Hong Kong version — which is blocked by the Great Firewall, so the redirect leads nowhere for anyone inside the mainland.
+Two knock-on effects caught people by surprise:
+The mobile app lost its connection. With the China servers gone, the Google Translate app routes every online request through Google's global infrastructure, and all of that is blocked in China — the same wall that blocks Gmail, Google Maps, and Search. If you want the full picture of what else fails, see our rundown of which apps are blocked in China in 2026 .
+
+Chrome's built-in translation broke. The "translate this page" feature in Chrome calls the same Google servers, so it stopped working for users in China too.
+
+Nothing about this has changed as of mid-2026. Google has not restored any translation service in the mainland, and there is no sign it plans to.
+
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+
+What still works: the offline pack almost nobody sets up
+Here's the thing nobody tells you: the Google Translate app has a fully offline mode, and offline mode does not care about the Great Firewall.
+When you download an offline language pack, the app stores a compressed translation model directly on your phone. After that, translating happens locally — your phone never contacts a Google server. A blocked server you never contact cannot block you. This is why a phone prepared at home in Chicago keeps translating perfectly in a Chengdu noodle shop with airplane mode on, while the identical phone belonging to the traveler next to you shows an endless loading spinner.
+The catch — and it is a hard catch — is that the pack itself downloads from Google's servers. You must grab it before you enter China. Once you are inside the firewall without a VPN, the download will fail, and on Android you cannot even install the app, because the Google Play Store is blocked.
+Step-by-step: set it up before you fly
+Install the Google Translate app (free, iOS and Android) while you are still at home.
+
+Open the language selector , find Chinese (Simplified) , and tap the download icon next to it. The pack is a small download — do it on Wi-Fi and it takes a minute or two.
+
+Download English too if it is not already on the device, plus any other language you might want.
+
+Test it in airplane mode. Turn off all connectivity, type "Where is the toilet?", and confirm you get 洗手间在哪里. If that works at home, it will work in Xi'an.
+
+That is the entire preparation. Four steps, five minutes, and it removes the most common tech panic I see on tour.
+What offline mode handles well
+Typed text, both directions. You type English, show the Chinese; a shopkeeper types Chinese, you read the English. This covers most real interactions — hotel questions, shopping, directions.
+
+Instant camera translation. Point the camera at a menu or sign and the app overlays an English translation live on screen for downloaded languages. It is imperfect with stylized menu fonts, but for standard printed Chinese it is genuinely usable — my clients read subway station notices with it all the time.
+
+Tap to Translate (Android). Copied Chinese text can be translated from the bubble without a connection.
+
+One honest caveat: the offline model is a slimmed-down version of what Google runs in the cloud. Expect slightly clunkier phrasing and occasional literal translations. For "how much is this" and "no cilantro, please," it is more than good enough. For negotiating anything nuanced, keep sentences short and simple.
+What breaks without a VPN
+Everything that needs to touch a Google server fails inside China unless you have a VPN or foreign roaming data:
+The website (translate.google.com) — blocked outright.
+
+Online translation in the app — higher-quality results, long paragraphs, and rare language pairs all route online, so they fail.
+
+Conversation mode — the two-way live voice interpreter needs a connection. Offline, voice features are unreliable at best; plan on typing instead.
+
+Importing photos for scan translation — the photo-scan workflow leans on Google's servers, unlike the live camera overlay.
+
+Downloading new language packs — the download source is blocked, so you cannot fix a missed pack after arrival without a VPN.
+
+Chrome page translation — same servers, same block.
+
+There is one clean workaround on the connectivity side: data that exits China through a foreign carrier is not filtered the same way. A travel eSIM with international roaming routes your traffic through your home carrier, which is why Google services typically work on a travel eSIM for China even with no VPN app installed. If you would rather fix the problem at the network level, a properly tested VPN — installed and configured before you board — restores the full Google Translate experience; see our current picks in the best VPN for China guide .
+Alternatives that work in China in 2026
+If you would rather not depend on Google at all, several capable options work inside China with zero workarounds.
+Apple Translate (iPhone)
+Apple's built-in Translate app, preinstalled since iOS 14, is the quiet winner for iPhone travelers. Apple's services are not blocked in China, and once you download English and Chinese for offline use, translation runs on-device. It handles typed text and two-way voice conversation, and the translations for Mandarin are solid. If you carry an iPhone, this is the first app I point clients to.
+Microsoft Translator
+Microsoft Translator remains accessible in China without a VPN, and it is free with offline language packs and camera translation. One 2026 change to know: Microsoft retired the app's multi-device "Converse" group-chat feature on June 30, 2026, but single-device text, voice, and camera translation continue to work. For Android users who cannot use Google's online features in China, this is the best connected translator available.
+Pleco
+Pleco is a Chinese dictionary rather than a sentence translator, and it has been the serious China-hand's tool for two decades. The core dictionary is free and fully offline; the Basic bundle at US $29.99 (about ¥215) adds camera OCR that recognizes characters live — brilliant for menus and ingredient labels. If you are staying longer than a couple of weeks or learning any Chinese at all, it earns its place on your home screen.
+An offline phrasebook as a safety net
+Machine translation still fails in the exact moments you need it most — dead battery on your VPN, a menu in handwritten script, a pharmacist who speaks fast. This is why I tell clients to keep a curated offline layer too: the MyChinaGuide app stores survival phrases, menu vocabulary, and sign explanations entirely offline, so the taxi, restaurant, and pharmacy basics work even on a phone with no connection at all.
+For the full head-to-head — including where Baidu Translate fits and which app to use at a restaurant versus a pharmacy — see our complete comparison of the best translation apps for China . And before you fly, run through the wider checklist of essential apps to install for a China trip so translation is not the only thing you prepared.
+Does Google Translate's camera work in China?
+The live camera overlay works offline for languages you downloaded in advance, so pointing your camera at a printed menu or sign works in China with no VPN. The photo-import scan mode is a different feature that relies on Google's servers, so it fails without a VPN or foreign roaming data.
+Can I download the offline Chinese pack after I land in China?
+Not without a VPN. The language packs download from Google's servers, which the Great Firewall blocks, and on Android the Play Store itself is blocked. Download the app and the Chinese (Simplified) pack at home, then test in airplane mode before you fly.
+Does Google Translate work in China with a VPN?
+Yes, fully. With a working VPN, the website, app, conversation mode, and Chrome page translation all behave exactly as they do at home. The catch is that the VPN must be installed and tested before arrival, since VPN provider websites and app stores are themselves hard to reach from inside China.
+Why did Google shut down Translate in China?
+Google officially cited low usage of the mainland service when it discontinued translate.google.cn in October 2022. It was one of the last consumer Google products still operating in China; its removal left Search, Maps, Gmail, and Translate all inaccessible without a VPN.
+Sources
+TechCrunch — Google appears to have disabled Google Translate in parts of China (September 30, 2022)
+
+The Seattle Times / AP — Google discontinues Google Translate in mainland China
+
+VOA News — Google Discontinues Translate Service in Mainland China
+
+Google Translate Help — Download and use languages offline
+
+WhistleOut — Microsoft Translator without its best feature (Converse retirement, June 30, 2026)
+
+Tags
+# translation # apps # china-travel # internet-access # vpn # offline
+
+View all →
+Can I just use Chinese alternatives instead of a VPN after moving to China? →
+What essential digital preparations should I make before arriving in China as a first-time visitor? →
+What digital tools do I absolutely need before landing in China to avoid getting stuck? →
+
+View all →
+July 22, 2026 · Travel Tip
+Best Translation App for China - 6 Apps That Actually Work in 2026
+
+June 29, 2026 · How-To Guide
+Does Google Maps Work in China? (and the Maps That Actually Do)
+
+June 29, 2026 · How-To Guide
+What Apps Are Blocked in China? The Complete 2026 List
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

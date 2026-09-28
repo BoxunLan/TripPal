@@ -1,0 +1,239 @@
+# source: https://mychina.guide/blog/beijing-pek-airport-layover-timing-guide
+# final: https://mychina.guide/blog/beijing-pek-airport-layover-timing-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:22.184Z
+# bytes(raw): 70318
+# bytes(text): 13537
+# title: Beijing PEK Layover Timing Guide 2026: Minimum Connect
+
+Beijing PEK Layover Timing Guide 2026: Minimum Connect
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · March 30, 2026 · 9 min read · 8,509 views
+Beijing PEK Layover Timing Guide 2026: Is Your Connection Safe?
+
+M MyChinaGuide Editorial Team · Updated September 27, 2026
+
+On this page 10 sections 01 First: PEK or PKX? Check which airlines fly where
+02 PEK terminal layout in 2026
+03 Getting between terminals
+04 Minimum connection times at PEK
+05 How much time is actually safe
+06 Do you need a visa just to wait?
+07 Leaving the airport: how the hours add up
+08 If your connection crosses PEK and PKX
+09 Frequently asked questions
+10 Sources
+
+Before you worry about minimum connection times at Beijing Capital, settle one thing: are both your flights actually using the same airport? Beijing has two major ones — Capital (PEK) in the northeast and Daxing (PKX) in the far south — and they sit about 67 kilometres apart. Booking a "Beijing layover" that lands at one and departs from the other is the single most expensive mistake travelers make here. This guide is about connecting at PEK, and it starts by making sure you're in the right place.
+Besides connection times, this guide covers leaving the airport, from the visa-free entry procedure to the trip into the city and back; the Beijing layover itinerary guide covers what to see with the hours you have.
+First: PEK or PKX? Check which airlines fly where
+When Daxing opened in 2019, a big chunk of traffic moved out of Capital. The split that matters for connections in 2026:
+Stays at PEK (Capital): Air China (its main global hub) and Hainan Airlines.
+
+Moved to PKX (Daxing): China Eastern , China Southern, and China United.
+
+So if one leg is Air China and the other is China Southern, you may well be connecting between two different airports — check the airport code (PEK vs PKX) on every segment before you trust the layover. If you really are crossing between them, skip to the cross-airport section near the end.
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+PEK terminal layout in 2026
+Capital has three terminals, but one has changed role:
+Terminal 1 is no longer a standalone terminal. Since August 2023 it reopened as a satellite extension of Terminal 2, so you won't be assigned "T1" as a separate building the way older guides imply.
+
+Terminal 2 handles Hainan Airlines (all its international flights), most SkyTeam carriers still at PEK, and a few others.
+
+Terminal 3 is the big one — Air China's hub and the Star Alliance terminal, plus OneWorld carriers. It's split into T3C, T3D and T3E, with T3E handling international departures.
+
+A wrinkle worth knowing: Air China is a Star Alliance member, not SkyTeam, and most of the SkyTeam heavyweights (China Eastern, China Southern) are the ones that left for Daxing. The only SkyTeam carrier over in T3 is China Airlines. If a guide tells you SkyTeam dominates PEK's terminals, it's out of date.
+Getting between terminals
+T2 and T3 are connected by a free shuttle bus running every 10 to 15 minutes, with a ride of roughly 10 to 15 minutes. Treat a T2-to-T3 connection as changing buildings: budget the shuttle time plus a fresh security and, if relevant, immigration check. It is not a same-terminal walk.
+Minimum connection times at PEK
+These are the airline systems' minimums — the floor below which they won't sell you the connection. They are not your safety margin (more on that next).
+Connecting within Terminal 3:
+Connection
+
+Minimum
+
+Domestic to domestic
+
+50 minutes
+
+Domestic to/from international
+
+120 minutes
+
+International to international
+
+60 minutes
+
+Connecting between T3 and T2 (changing terminals):
+Connection
+
+Minimum
+
+Domestic to domestic
+
+120 minutes
+
+Domestic to/from international
+
+160 minutes
+
+International to international
+
+120 minutes
+
+The jump is big — an international-to-international connection doubles from 60 to 120 minutes the moment you change terminals. When you book, favour connections that keep both flights in T3. (These figures come from published airline connection tables; the number your ticket is actually held to is whatever the issuing airline's system uses, so treat them as a guide.)
+How much time is actually safe
+The minimums above will get a ticket issued. For a layover you can relax into, give yourself more:
+International to international, same terminal (T3): aim for 2.5 to 3 hours. International transfer security and the long walk through T3E eat time.
+
+Anything crossing T2 and T3: 3.5 to 4 hours, to absorb the shuttle plus a second security and border check.
+
+Domestic to or from international: plan on at least 3 hours — this almost always means collecting bags, clearing immigration, re-checking, and going back through security.
+
+If your two flights are on separate tickets (a self-transfer), none of the airline minimums protect you. You must collect your bags and re-check from scratch, so plan as if you're starting a brand-new check-in.
+Do you need a visa just to wait?
+Three situations, three answers:
+Staying airside on an international-to-international connection: generally no visa needed, as long as you fly out within 24 hours, never leave the secure transit area and your bags are checked through. At PEK this is cleanest entirely within T3E; if you'd have to change to T2 or your bags can't be through-checked, you may be forced to enter China and re-check, which changes things.
+
+24-hour transit: open to all nationalities at all open ports, if you hold a confirmed onward ticket to a third country or region and stay no more than 24 hours. It covers waiting inside the airport; to go into the city under this rule you first need a temporary entry permit from the border officers.
+
+240-hour (10-day) visa-free transit: this applies at both PEK and PKX for citizens of 57 countries (as of August 2026). If you qualify and want to actually leave the airport and see Beijing, this is the route — the conditions (onward ticket to a third country, eligible nationality) are covered in our China visa-free guide . For the wider picture on connecting through China, see our layover and transit basics .
+
+Leaving the airport: how the hours add up
+With 240-hour visa-free transit you show your passport and onward ticket at immigration, and the officer puts a temporary entry permit label in your passport. Keep it handy: it also gets one bag stored free at the airport's left-luggage counters. After that, these are planning figures for a trip into the city from Terminal 3:
+Step
+
+Time
+
+Notes
+
+Immigration and the 240-hour entry
+
+60 to 90 min
+
+Slower during peak arrivals
+
+Left luggage, if your bags are not checked through
+
+15 to 30 min
+
+One bag free with the entry permit label
+
+Airport Express, Terminal 3 to Dongzhimen
+
+About 45 min
+
+¥25; the train calls at Terminal 2 first, about 40 minutes on board, plus the walk to the platform
+
+Metro to your sight and back to the station
+
+30 to 60 min
+
+Depends on the sight
+
+Airport Express, Dongzhimen to Terminal 3
+
+About 30 min
+
+About 22 minutes on board; the last train leaves Dongzhimen at 22:30
+
+Check-in deadline
+
+60 min
+
+A common cut-off for international flights; your airline's may differ
+
+Security, exit immigration and the walk to the gate
+
+60 min
+
+Peak queues are long
+
+Safety buffer
+
+30 to 60 min
+
+For traffic and delays
+
+Add it up and the fixed time is roughly five and a half to seven hours. An 8-hour layover leaves about 90 minutes at one sight and a 10-hour layover about three hours; for what fits in that time, see the Beijing layover itinerary guide .
+A taxi is the other way in. Official taxis at the rank run on the meter: ¥13 for the first 3 km, ¥2.3 per km after that, 50% more per km beyond 15 km and 20% more per km between 23:00 and 05:00, plus a ¥1 fuel surcharge, and you pay the road tolls. Journey time depends on traffic.
+If your connection crosses PEK and PKX
+This is the scenario to plan around carefully. The two airports are about 67 km apart with no airside link — you leave one, travel across the city, and check in at the other from scratch:
+Taxi or private car: the most direct option, but allow for heavy traffic at peak times.
+
+Airport shuttle bus: three departures a day each way, stopping at Universal Beijing Resort on the way, ¥65. From PEK Terminal 3 they leave at 07:00, 12:00 and 15:00; from PKX at 14:00, 16:00 and 18:30.
+
+Public transit: Capital Airport Express to Sanyuanqiao, Line 10 to Caoqiao, then the Daxing Airport Line, which means two changes with your luggage.
+
+There is no through-baggage between the two airports. You'll reclaim your luggage, cross town, and re-check, so give yourself at least 4 to 5 hours between flights — more if either is international. And triple-check those airport codes when booking; PEK and PKX look alike on a screen and getting it wrong can cost you the trip.
+Are PEK and PKX the same airport? No. They're two separate Beijing airports about 67 km apart, with no connection between them airside. A connection that splits across both means leaving one airport and checking in again at the other.
+How long is a safe international layover at PEK? If both flights are in Terminal 3, aim for 2.5 to 3 hours. If you change between T2 and T3, give yourself 3.5 to 4. The airline minimum (as little as 60 minutes same-terminal) is the floor, not a comfortable margin.
+Can I leave the airport during my PEK layover? Yes, if you qualify for 240-hour visa-free transit, which works at PEK and lets you spend up to 10 days in the permitted area, provided you're flying onward to a third country or region and your nationality is eligible. The 24-hour rule covers every nationality but only for waiting at the airport; to go into the city under it you need a temporary entry permit from the border officers.
+Which terminal is Air China at PEK? Terminal 3, the Star Alliance terminal and Air China's hub. Hainan Airlines uses Terminal 2.
+My flights are Air China and China Eastern — same airport? Probably not. Air China is at PEK; China Eastern moved to Daxing (PKX). Check the airport code on each segment and, if they differ, plan for a cross-city transfer with 4 to 5 hours' buffer.
+Sources
+National Immigration Administration: Visa-Free Transit Policies — the 24-hour rule, including the temporary entry permit needed to leave the airport, and the 240-hour rule for 57 countries. Published 2026-08-20.
+
+National Immigration Administration: 过境免签政策 (ports and permitted areas) — Beijing Capital and Beijing Daxing are both 240-hour entry ports. Published 2026-08-20.
+
+Beijing Capital International Airport: getting to and from the airport (往来机场) — Airport Express fare, stations, frequency and first and last trains, from which the journey times above are worked out; taxi meter rates and tolls; the bus between the two airports. Accessed 2026-09-27.
+
+Beijing Capital International Airport: 240-hour visa-free transit (240小时过境免签政策) — the temporary entry permit label and one free bag at left luggage. Accessed 2026-09-27.
+
+Beijing Daxing International Airport: Daxing Airport Line (地铁大兴机场线) — the Daxing Airport Line runs from Caoqiao, where it meets Line 10. Accessed 2026-09-27.
+
+Tags
+# beijing airport # pek # layover # transit visa # minimum connection time
+
+View all →
+Is a 6.5-hour Beijing layover enough to leave the airport? →
+What are the recommended options for handling a 19-hour layover at Beijing Capital International Airport? →
+Will I face boarding issues if I don't provide visa information for Beijing transit? →
+Is it possible to visit the Great Wall and Forbidden City during a 10-hour layover in Beijing, and what is the best way to arrange transportation? →
+
+View all →
+March 5, 2026 · Destination
+Beijing Layover Guide 2026: Dragons, Lanterns & Logistics
+
+April 19, 2026 · How-To Guide
+Flying Through China: Layover & Transit Guide
+
+February 12, 2026 · Travel Tip
+China 144-Hour Visa-Free Cities List: Updated 2026 Rules
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

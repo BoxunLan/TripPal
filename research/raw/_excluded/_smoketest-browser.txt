@@ -1,0 +1,7 @@
+This domain is for use in documentation examples without needing permission. This is not a service, avoid relying on it for testing and monitoring purposes.
+
+هذا النطاق مُخصص للاستخدام في أمثلة التوثيق دون الحاجة إلى إذن. هذه ليست خدمة، يُرجى تجنب الاعتماد عليها لأغراض الاختبار والمراقبة.
+
+该域名仅用于文档示例，无需获得许可。这并非一项服务，请勿将其用于测试和监控目的。
+
+L’usage de ce domaine est réservé à des exemples de documentation, 

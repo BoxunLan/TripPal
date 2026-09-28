@@ -1,0 +1,97 @@
+# source: https://govt.chinadaily.com.cn/s/202502/25/WS67bd6c5a498eec7e1f730389/using-foreign-bank-cards-for-mobile-payments-in-china.html
+# final: https://govt.chinadaily.com.cn/s/202502/25/WS67bd6c5a498eec7e1f730389/using-foreign-bank-cards-for-mobile-payments-in-china.html
+# status: 200
+# contentType: text/html;charset=UTF-8
+# fetchedAt: 2026-09-28T17:21:48.165Z
+# bytes(raw): 26244
+# bytes(text): 2780
+# title: Using foreign bank cards for mobile payments in China | govt.chinadaily.com.cn
+Using foreign bank cards for mobile payments in China | govt.chinadaily.com.cn
+
+chinadaily.com.cn | english.gov.cn
+
+Home
+
+Policies
+
+News
+
+Specials
+
+Topics
+
+Regions
+
+Home >
+Topics
+
+>
+Travel and Tourism
+
+>
+Travel Info
+
+>
+Practical Info
+
+Practical Info
+
+Using foreign bank cards for mobile payments in China
+
+Updated: Feb 25, 2025
+
+chinaservicesinfo.com
+
+Print
+
+Share - WeChat
+
+Using foreign bank cards for payments in China has become increasingly convenient, thanks to the widespread adoption of mobile payment platforms such as WeChat and Alipay. Here’s a guide on how to get started and what to consider:
+
+1.Account registration
+You can download and install WeChat or Alipay APPs and follow the instructions to input foreign or Chinese mobile phone numbers for account registration.
+
+WeChat Pay and Alipay are key mobile payment platforms in China. [Photo/VCG]
+
+2.Binding bank cards
+You can bind the APP with international bank cards with the Mastercard, Visa, JCB, Diners Club, and Discover logos or Chinese bank cards with the logo of UnionPay.
+
+3.Making payments
+You can scan the collection QR code or show the payment QR code when making payments.
+
+Notes for binding international bank cards
+
+1. Authorization from issuing bank
+When binding an international bank card to Alipay or WeChat, it is necessary to obtain authorization from the foreign issuing bank. However, some issuing banks may reject the binding request due to their system's inability to recognize the connection information. In such cases, it is advisable to contact the issuing bank's customer service center or consider using a Chinese bank card instead.
+
+2. Transactoin fees
+When using WeChat or Alipay for QR code payments through the bound international bank card, users are not required to pay an additional service fee if the transaction amount does not exceed 200 yuan ($27.61); or users need to pay a service fee at three percent of the transaction amount if the amount exceeds 200 yuan.
+
+3. Transaction limits
+WeChat and Alipay have set transaction limits for bound international bank cards, with an annual limit of $50,000 and a single transaction limit of $5,000. It is recommended that users who have bound international bank cards to the APPs consider your specific use cases before using mobile payment.
+
+News
+
+Guiyang holds cultural and tourism innovation event
+
+Mountain town keeps French romance alive
+
+Free entry hoped to spur spending at scenic spots
+
+China to enhance convenience for inbound tourism
+
+Top Picks
+
+Kunshan lights up for Mid-Autumn Festival
+
+Shanghai's Changning district ranks among the world's 40 coolest neighborhoods
+
+LEAVE YOUR MESSAGE
+
+*Your E-mail Address
+
+Copyright©2026 China Daily. All rights reserved.
+
+京ICP备13028878号-6
+
+京公网安备 11010502032503号

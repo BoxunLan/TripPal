@@ -1,0 +1,313 @@
+# source: https://mychina.guide/blog/best-vpn-for-china-2025
+# final: https://mychina.guide/blog/best-vpn-for-china-2025
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:23.291Z
+# bytes(raw): 82310
+# bytes(text): 22364
+# title: Best VPN for China 2026: Astrill vs ExpressVPN vs Surfshark
+
+Best VPN for China 2026: Astrill vs ExpressVPN vs Surfshark
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · January 11, 2026 · 16 min read · 16,377 views
+Best VPN for China 2026: Astrill vs ExpressVPN vs Surfshark
+
+Michael Chen · Travel Writer, China Specialist · Updated September 27, 2026
+
+On this page 12 sections 01 What This Best VPN for China Guide Covers
+02 The 2026 Reality: Why Most VPN Rankings Are Useless
+03 The Best VPN for China Options in 2026
+04 What About NordVPN, VyprVPN, and Others?
+05 Protocols: WireGuard vs OpenVPN vs Stealth
+06 Critical: Install Before You Fly
+07 Mobile vs Desktop
+08 What to Do If Your VPN Stops Working Mid-Trip
+09 Legal Status
+10 Sample Pre-Trip VPN Setup Checklist
+11 Frequently Asked Questions
+12 Sources
+
+The VPN market for China is not like the VPN market for anywhere else. A service that ranks number one on every YouTube affiliate review can be completely unusable the moment you land in Shanghai or Chengdu. This guide compares the main paid options on what you can check before you buy: price, device limits, protocols, and what each provider says about China. We didn't run our own connection tests; prices and features are as listed on each provider's website on September 27, 2026.
+A few things to know before we start. The Great Firewall does not just block specific sites. It actively inspects outbound traffic, identifies VPN protocol signatures, and throttles or drops connections that look like VPN traffic. That is why a VPN's obfuscation (stealth) options matter more in China than its speed ratings, and why you should install a second VPN from a different company as a backup.
+Before you buy one, it is worth asking whether you need it at all. Mobile data on a roaming eSIM goes out through a network outside mainland China and reaches the same services without any VPN software; hotel and café Wi-Fi is still filtered. Our guide to whether you actually need a VPN for China works through the cases where the answer is no.
+What This Best VPN for China Guide Covers
+The reality of using VPNs in mainland China in 2026
+
+Astrill, ExpressVPN and Surfshark compared on price, devices and China features, and what happened to LetsVPN
+
+WireGuard vs OpenVPN vs custom stealth protocols
+
+Why you must download and configure your VPN before entering China
+
+Mobile vs desktop client differences
+
+What to do if your VPN stops working mid-trip
+
+Legal status: what Chinese rules say about VPNs
+
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+
+The 2026 Reality: Why Most VPN Rankings Are Useless
+Many "best VPN for China" lists don't say when, or whether, anything on them was checked. The Great Firewall evolves constantly. In April 2026, a US-based censorship analyst told ABC News that a new round of VPN crackdowns had begun, with telecom carriers in parts of China asked to block VPN services. LetsVPN, which appeared in earlier versions of this guide, ended its mainland China service on April 28, 2026, after about 20 days of trying to fix connection failures. A ranking without dates tells you very little.
+The three things that actually determine whether a VPN works in mainland China today are:
+Server IP rotation frequency — The firewall keeps blocklists of known VPN server IPs, so services that keep replacing blocked servers stay usable longer than services with a fixed set of IPs.
+
+Protocol obfuscation — Standard OpenVPN and even standard WireGuard traffic are detectable. Services need stealth layers (Astrill's StealthVPN, NordVPN's NordWhisper, Proton VPN's Stealth, or Shadowsocks-style wrapping) to slip through.
+
+Client auto-reconnect behavior — VPN connections in China drop often, especially around key political dates. A good client reconnects on its own; a bad one leaves you without access until you restart it manually.
+
+With that framework, here is how the main paid options compare in 2026.
+The Best VPN for China Options in 2026
+1. Astrill — The Most China-Specific Features, at a Price
+Astrill's StealthVPN protocol adds a second layer of encryption that Astrill says makes it hard for countries with heavy censorship, such as China, to detect and block, and its Smart Mode sends only international sites through the VPN. It is not the cheapest and its marketing is rough.
+2026 price : US$12.50/month on the 2-year plan (US$300 up front), US$15/month on the 1-year plan (US$180) or US$30 month to month, as listed on September 27, 2026. StealthVPN is included in every plan; the optional VIP add-on starts at US$10/month
+
+Protocols : StealthVPN (proprietary), OpenWeb, OpenVPN, WireGuard
+
+Device limit : Up to 5 devices connected at the same time on every personal plan, only one of them a router
+
+Client platforms : macOS, Windows, iOS, Android, Linux, routers
+
+China-specific feature : Smart Mode, which sends only international sites through the VPN and lets local sites such as Taobao and Baidu load directly
+
+The main downside is the price. Astrill is the most expensive of the three options here. If you only need a VPN for a 2-week holiday, the math is rough: the month-to-month plan is US$30. If you are staying for a month or longer, or need the VPN for work, the longer plans bring the monthly price down.
+2. ExpressVPN — The Mid-Range Option
+ExpressVPN's apps default to an Automatic protocol setting, which usually picks its own Lightway protocol. For users in countries with heavy internet censorship, its support pages list the protocols to try next and say to contact its support team if none of them connects. Its entry plan covers 10 devices, enough for a couple or a family on a 10-day trip.
+2026 price : From US$2.99/month on the Basic plan, billed US$83.72 for the first 28 months and then US$99.95 a year, as listed on September 27, 2026 (a limited-time offer)
+
+Protocols : Lightway (UDP and TCP), WireGuard, OpenVPN, IKEv2 (iOS only)
+
+Device limit : 10, 12 or 14 simultaneous devices, depending on the plan
+
+Client platforms : macOS, Windows, iOS, Android, Linux, routers, smart TVs
+
+China-specific feature : A troubleshooting guide for heavily censored countries (a protocol order to try, then its support team)
+
+If Automatic doesn't connect, ExpressVPN's own troubleshooting order is Lightway UDP, Lightway TCP, WireGuard, then OpenVPN TCP and UDP. The ExpressVPN website is blocked in mainland China, so if your subscription lapses while you are in the country, renewing is painful.
+3. Surfshark — The Budget-Friendly Contender
+Surfshark offers a Camouflage Mode, which hides typical VPN traffic patterns when you use the OpenVPN protocol, and a NoBorders mode that its app turns on automatically when it detects network restrictions, including in China. If the app still won't connect, Surfshark's China help page suggests setting up WireGuard manually. Surfshark says it cannot guarantee flawless access in China at all times, and it is the cheapest of the three to start.
+2026 price : US$2.49/month on the Starter plan, billed US$67.23 for the first 27 months, as listed on September 27, 2026
+
+Protocols : WireGuard, OpenVPN, IKEv2, Dausos (Surfshark's own)
+
+Device limit : Unlimited simultaneous devices
+
+Client platforms : macOS, Windows, iOS, Android, Linux, browser extensions
+
+China-specific feature : NoBorders mode, Camouflage Mode
+
+If you have a family traveling together on multiple devices and want coverage without paying for each person, Surfshark's unlimited device policy is genuinely useful. Keep a backup plan all the same.
+What Happened to LetsVPN
+LetsVPN (快连) was on earlier versions of this list. On April 28, 2026, it announced that it was ending its mainland China business. It said its team had spent about 20 days trying to fix connection failures caused by ongoing blocking, that it had closed its mainland payment channels, and that refunds would be calculated from April 8. In May it resumed normal operations elsewhere but said it could not guarantee service in mainland China.
+Don't count on it as a backup for a trip to mainland China. Pick your second VPN from a different company in the list above.
+What About NordVPN, VyprVPN, and Others?
+NordVPN : Its obfuscated servers, the option NordVPN offers for networks that block VPN traffic, now run on its NordWhisper protocol, and its help center has separate steps for connecting from China. NordLynx is not one of its obfuscation options.
+
+VyprVPN : Its Chameleon protocol scrambles OpenVPN packet metadata so deep packet inspection doesn't recognize it, and VyprVPN says its Chameleon with Smart IP option makes blocking by the Great Firewall harder. Check its current status before buying.
+
+ProtonVPN : Its Stealth protocol, built to get past VPN blocking, is available on every plan, including the free one.
+
+Protocols: WireGuard vs OpenVPN vs Stealth
+Standard WireGuard is fast and modern but has a distinctive traffic signature that Chinese DPI (deep packet inspection) systems recognize. Standard OpenVPN is the same — recognizable, blockable. What you actually need in China is one of:
+Obfuscated WireGuard — WireGuard wrapped in a second layer that hides the signature (Mullvad's UDP-over-TCP and Shadowsocks options, for example)
+
+Stealth protocols — Proprietary wrappers designed to hide VPN traffic from deep packet inspection (Astrill StealthVPN, NordVPN NordWhisper, Proton VPN Stealth, Surfshark Camouflage)
+
+Shadowsocks — A separate proxy technology (not a VPN) that many Chinese residents use alongside or instead of a VPN
+
+For most travelers, stick with your VPN's built-in stealth protocol and leave the details alone. If the default protocol does not connect, try Lightway TCP (ExpressVPN), StealthVPN (Astrill), or NoBorders/Camouflage (Surfshark).
+Critical: Install Before You Fly
+This is the single most important rule in this guide. Apple's China App Store doesn't carry VPN apps: a 2024 check of 240 VPN apps by AppleCensorship.com found none available there, so an Apple Account set to mainland China can't download one. Google services, including the Google Play Store, are blocked in mainland China. Direct-download .exe and .dmg files from VPN vendor websites often fail because the vendor sites themselves are blocked.
+Before you fly , on your home wifi:
+Sign up and pay for the VPN
+
+Download and install the client on every device you plan to use
+
+Log in and run a test connection successfully at least once
+
+Download backup installer files to a USB drive or your laptop
+
+Note your subscription details — account email, password, device login limits
+
+If you land in China without a working VPN installed, your options shrink drastically. Mobile data on a roaming SIM or travel eSIM goes out through a network outside mainland China and isn't filtered, which gives you a window to sign up and download the app. A temporary Hong Kong SIM with China roaming works the same way. On an iPhone, this assumes your Apple Account is not set to mainland China.
+Pay before you fly, too. ExpressVPN's payment help page lists cards, PayPal, Apple Pay and Google Pay, but not Alipay, and its website is blocked in mainland China, so you can't count on paying after you arrive. If you want to pay with Alipay, StrongVPN's plans page lists it alongside cards and PayPal (both checked September 27, 2026).
+Mobile vs Desktop
+Most travelers use their phone for the majority of internet access in China. The VPN experience is similar across mobile and desktop, with a few differences:
+iOS : Astrill, ExpressVPN and Surfshark all have iPhone apps. Check that the app reconnects on its own when the screen wakes before you rely on it.
+
+Android : Android's own VPN settings can interfere with an app's kill-switch feature. Test before you go.
+
+macOS and Windows : All three providers have desktop apps. Set them up and test them at home, the same as your phone.
+
+Router-level VPN : If you are staying in a long-term apartment, consider a travel router with VPN installed directly. All your devices route through it automatically. Astrill and ExpressVPN both offer router firmware guides.
+
+What to Do If Your VPN Stops Working Mid-Trip
+It can happen on any trip. Here is the order of things to try:
+Restart the app — Kill it completely and reopen
+
+Switch protocols — If you were on UDP, try TCP. If you were on Lightway, try OpenVPN.
+
+Switch servers — Try a different city within the same country, then a different country entirely.
+
+Switch networks — China Unicom cellular sometimes works when China Mobile does not (and vice versa). Hotel wifi sometimes works when 4G does not.
+
+Use your backup service — Always install two VPNs before coming. If your primary fails for 24+ hours, fall back.
+
+Ask your provider's support — ExpressVPN, for example, tells users in heavily censored countries to contact its support team when its troubleshooting steps don't work.
+
+Use eSIM international roaming — Travel eSIMs such as Airalo and Nomad send your mobile data through gateways outside mainland China, so it isn't filtered and your phone doesn't need the VPN.
+
+For phone data, a China eSIM can stand in for the VPN. Klook's China eSIM runs on China Unicom and China Telecom and routes data through Singtel, outside mainland China, so Google, WhatsApp, and Instagram load on mobile data without any VPN at all. Klook prices it per package and gives a full refund if you cancel before the eSIM connects (checked September 27, 2026). It won't cover hotel Wi-Fi, which is still filtered, or replace a VPN if you need a fixed IP for work logins, but for a short trip where you just want messages and maps to work, it skips the firewall fight entirely.
+Legal Status
+The legal situation around VPN use in mainland China is widely misunderstood. Chinese rules require international internet connections to go through state-approved channels. Under the State Council's regulation on international networking (last revised in March 2024), any organization or individual that sets up or uses another channel can be warned, ordered to disconnect and fined up to RMB 15,000. A 2017 notice from the Ministry of Industry and Information Technology (MIIT) bars companies from setting up or leasing VPNs for cross-border business without approval. The UK government's current travel advice for China says VPNs need to be licensed by the Chinese government.
+The penalties in that regulation are administrative (warnings and fines), not criminal, and we could not find official figures on enforcement against foreign visitors. Keep your use low-key: don't broadcast it on Chinese social media, and don't use the VPN for anything you wouldn't want inspected.
+Sample Pre-Trip VPN Setup Checklist
+Task
+
+When
+
+Where
+
+Research and choose primary VPN
+
+2 weeks before
+
+Home
+
+Purchase subscription
+
+10 days before
+
+Home
+
+Install on phone
+
+1 week before
+
+Home
+
+Install on laptop
+
+1 week before
+
+Home
+
+Test connection on all devices
+
+1 week before
+
+Home
+
+Install backup VPN
+
+5 days before
+
+Home
+
+Save offline login credentials
+
+3 days before
+
+Home
+
+Download offline Google Translate (Chinese)
+
+3 days before
+
+Home
+
+Final VPN test
+
+Day of flight
+
+Home or airport wifi
+
+What is the single best VPN for China in 2026 if I only want to install one? Astrill, if the price doesn't put you off. It has the most China-specific features of the three here (StealthVPN and Smart Mode) and costs US$12.50 to US$30 a month, depending on the plan. Choose ExpressVPN or Surfshark if you want something cheaper and more mainstream.
+Will a free VPN work in China? Don't count on one. LetsVPN, whose free tier earlier versions of this guide suggested, ended its mainland China service in April 2026. Proton VPN's free plan includes its Stealth protocol, but a free plan is not a dependable primary solution.
+Do I need a VPN for my phone if I just want Google Maps? On a Chinese SIM card or Chinese Wi-Fi, yes: Google Maps is blocked in mainland China. Roaming data from a travel eSIM isn't filtered, so Google Maps loads there without a VPN. Consider downloading Amap or Baidu Maps for offline China navigation and saving the VPN for Gmail, WhatsApp, and Instagram.
+Can I use a Hong Kong SIM to skip the VPN? Partially. A Hong Kong physical SIM or eSIM roaming on China's networks routes your data through the Hong Kong network, which is uncensored. Google, WhatsApp, and Instagram all work. It only covers mobile data, though: hotel and café Wi-Fi in China is still filtered, so a laptop on hotel Wi-Fi still needs a VPN.
+What about iCloud Private Relay? Apple doesn't list mainland China among the places where Private Relay is available. You cannot rely on it.
+Will my VPN slow down my internet significantly? Expect it to be slower than your plain connection, because your traffic has to cross the border to a server abroad and pass through the obfuscation layer. How much slower depends on the provider, the server and the time of day, so run a speed test before an important video call.
+Is Telegram blocked in China? Yes. GreatFire's tests show telegram.org blocked in mainland China (most recent test on September 23, 2026). You need a VPN or roaming data for Telegram, just like for WhatsApp, Google, and Instagram.
+What about using the VPN for Chinese apps like WeChat? You do not need the VPN for Chinese apps — WeChat, Alipay , Didi, and Meituan all work without a VPN. In fact, you may want to disable the VPN when using Chinese apps since some of them (especially Alipay and mobile banking) sometimes flag unusual IP patterns.
+Which airport can I arrive at without worrying about the VPN? None in mainland China. Beijing Capital, Shanghai Pudong , Guangzhou, Chengdu, Shenzhen — all operate under the same filtering on airport Wi-Fi and Chinese SIM cards. Roaming data isn't filtered at any of them, and Hong Kong International is outside the mainland firewall.
+How much data does the VPN use? Your normal traffic plus some overhead for encryption and obfuscation. Factor this into any eSIM or travel SIM data plan.
+Related: the best map app in China · essential apps to install before you fly
+Sources
+Astrill: Pricing — plan prices (US$30 monthly, US$15/month yearly, US$12.50/month over two years), StealthVPN in every plan, VIP add-on from US$10/month; checked 2026-09-27.
+
+Astrill: VPN for China — Smart Mode sends only international sites through the VPN; up to 5 simultaneous connections; checked 2026-09-27.
+
+ExpressVPN: Choose your plan — Basic, Advanced and Pro prices and renewal prices, 10, 12 or 14 simultaneous devices; checked 2026-09-27.
+
+ExpressVPN Support: Can't connect to ExpressVPN — Automatic protocol, the protocol order to try, contacting support from heavily censored countries; page updated 2026-09-23.
+
+Surfshark: Pricing — Starter plan price, unlimited devices; checked 2026-09-27.
+
+Surfshark: Can you use a VPN in China in 2026? — NoBorders turns on automatically in China, Camouflage Mode, no guarantee of flawless access; page updated 2026-05-18.
+
+LetsVPN: notice to users (in Chinese) — end of mainland China business, about 20 days of failed fixes, refunds counted from April 8, mainland payment channels closed; published 2026-04-28.
+
+ABC News: As Beijing cracks down on VPNs, internet users in China find ways around the Great Firewall — new round of VPN crackdowns in April 2026, LetsVPN's May statement; published 2026-06-04.
+
+Ministry of Justice regulations database: Provisional Regulations on International Networking of Computer Information Networks (in Chinese) — Articles 6 and 14, warning, disconnection and fines up to RMB 15,000; revised 2024-03-10, accessed 2026-09-27.
+
+MIIT: Notice on cleaning up and regulating the internet access service market (in Chinese) — no self-built or leased VPN lines for cross-border business without approval; published 2017-01-22.
+
+UK government: China travel advice, safety and security — Google, Facebook, YouTube and X blocked, access limited around political dates, VPNs need a Chinese government licence; page updated 2026-08-27.
+
+Airalo Help Center: VPN in China — eSIM data is routed through gateways outside mainland China, no VPN needed, hotel Wi-Fi is still filtered; accessed 2026-09-27.
+
+Facts checked on 2026-09-27.
+
+Tags
+# vpn # china # great firewall # travel tech # internet
+
+View all →
+For a short China trip, should I rely on eSIM, roaming, or VPN if I need stable access to Google, Zoom, Slack, or Office365? →
+Should I install a China eSIM before arriving, and do I still need a VPN? →
+Can I just use Chinese alternatives instead of a VPN after moving to China? →
+
+View all →
+June 29, 2026 · How-To Guide
+Do You Need a VPN for China in 2026? An Honest Answer
+
+June 29, 2026 · How-To Guide
+What Apps Are Blocked in China? The Complete 2026 List
+
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

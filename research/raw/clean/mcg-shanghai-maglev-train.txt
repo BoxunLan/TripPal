@@ -1,0 +1,314 @@
+# source: https://mychina.guide/blog/shanghai-maglev-train
+# final: https://mychina.guide/blog/shanghai-maglev-train
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:29.807Z
+# bytes(raw): 76292
+# bytes(text): 18624
+# title: Shanghai Maglev Train: Speed, Route & Tickets (2026)
+
+Shanghai Maglev Train: Speed, Route & Tickets (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog Destination · July 21, 2026 · 14 min read · 3,124 views
+Shanghai Maglev Train: Speed, Route, Tickets & Tips (2026)
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 10 sections 01 What Is the Shanghai Maglev (And Why It's the Only One)
+02 The Route: PVG to Longyang Road (Not Downtown)
+03 Shanghai Maglev Speed and Schedule
+04 Shanghai Maglev Fare and How to Buy Tickets
+05 Is the Shanghai Maglev Worth It? (Comparison)
+06 The 8-Minute Experience: Best Seat and Filming Tips
+07 Connecting to Downtown Shanghai From Longyang Road
+08 The German Transrapid Story (Why Only Shanghai)
+09 Shanghai Maglev FAQ
+10 Sources
+
+The Shanghai Maglev is the only commercial high-speed maglev train running anywhere on Earth. It floats (literally, no wheels) between Pudong Airport (PVG) and Longyang Road metro station , covering 30 km (19 mi) in about 8 minutes . Top speed today: 300 km/h (186 mph) . A standard ticket costs ¥50 , or ¥40 if you show a same-day flight ticket. It's wild, it's unique, and it doesn't actually go downtown. Here's everything you need before you ride.
+What you'll get in 10 minutes:
+Exact speed, route, schedule, and fares
+
+Whether the maglev beats the metro, taxi, or Didi from PVG
+
+The best seat for filming and the VIP trap to skip
+
+Why Germans built it and why it only runs in Shanghai
+
+What Is the Shanghai Maglev (And Why It's the Only One)
+The Shanghai Maglev Train (上海磁悬浮) is a magnetically levitated high-speed train . No wheels. No contact with the track. It hovers about 10 mm above an electromagnetic guideway, pushed forward by alternating magnetic fields in the track. No friction. Just an eerie silence and a firm push when it accelerates.
+It opened for previews on December 31, 2002, with regular revenue service from October 10, 2003. The technology is Transrapid SMT , built by Germany's ThyssenKrupp and Siemens .
+Here's the wild part: the Shanghai line is the only commercial high-speed maglev in the world . Japan's Chuo Shinkansen is still under construction. Germany, where the tech came from? Nothing. Munich's Transrapid airport line was cancelled in 2008 when its cost estimate passed €3 billion. The Emsland test track closed in 2011. Shanghai is the only place you can buy a ticket and ride one.
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+The Route: PVG to Longyang Road (Not Downtown)
+The line runs east-west between two stations:
+Shanghai Pudong International Airport (PVG) . The "Maglev Station" is above ground, between Terminal 1 and Terminal 2. Follow the big "Maglev" signs after you clear immigration and baggage claim.
+
+Longyang Road Station (龙阳路站) . In the Pudong district, connected to Shanghai Metro Lines 2, 7, 16, and 18 . This is where most travelers catch Line 2 to continue into the city.
+
+Track length : 29.863 km (about 18.6 mi), all elevated. You can see it from the highway between PVG and downtown. A long concrete viaduct that looks like an airport tram line on steroids.
+Now the big catch: Longyang Road is not downtown Shanghai . It's in the middle of Pudong, 8-10 km from The Bund. Understand this now: the maglev is PVG-to-edge-of-Pudong, not PVG-to-your-hotel .
+Shanghai Maglev Speed and Schedule
+Here's where older blogs get it wrong. The Shanghai Maglev speed story has two parts:
+Historical top speed (until April 2020, and only in certain time slots): 431 km/h (268 mph) , held for about 50 seconds mid-route. Whole trip: 7 minutes 20 seconds. The speedometer display at the end of each car counted up like a sports car. It was the fastest scheduled train in the world.
+Current top speed (since May 1, 2020): 300 km/h (186 mph) on every departure, according to the published timetable. The trip now takes about 8 minutes 10 seconds . The operator made the cut when airport passenger numbers fell during the pandemic.
+Operating hours (2026) :
+First train : 06:45 from Longyang Road, 07:02 from Pudong Airport
+
+Last train : 21:40 from Longyang Road, 21:42 from Pudong Airport
+
+Frequency : every 20 minutes (every 15 minutes from Longyang Road before 07:00)
+
+Boarding : doors close 1 minute before departure, and ticket checks for the last train stop 5 minutes before it leaves
+
+300 km/h is still fast enough to feel fast. You'll pass a parallel expressway where the cars look parked. The 431 version was cooler. The 300 version is still a novelty ride that no other city can offer.
+Shanghai Maglev Fare and How to Buy Tickets
+The Shanghai Maglev fare structure is simple and unchanged for years:
+Ticket type
+
+Price (¥)
+
+What you get
+
+Economy one-way
+
+¥50
+
+Standard seat, valid on the day of purchase
+
+Economy round-trip
+
+¥80
+
+Two trips within 7 days; saves ¥20 if you're coming back
+
+VIP one-way
+
+¥100
+
+Seat in the VIP section, same train and speed
+
+VIP round-trip
+
+¥160
+
+Two VIP trips within 7 days
+
+With same-day flight ticket
+
+¥40
+
+Economy one-way; one per air ticket
+
+Shanghai Public Transportation Card
+
+¥40
+
+Tap in at the gate for an economy one-way ride
+
+Children 1.3 m or shorter
+
+Free
+
+Up to two per paying adult
+
+On VIP : skip it. It costs double for a seat in the VIP section, and the speed, journey time and view are the same as in economy.
+How to buy tickets :
+At PVG . Ticket counter on the second floor of the Maglev Station. Cash and Alipay/WeChat Pay work, and the counter takes foreign bank cards such as Visa and Mastercard.
+
+At Longyang Road . Counter and self-serve machines inside the station.
+
+As a combo or online . Some metro station service centers sell a maglev ride bundled with a 24-hour metro pass: ¥55 with a one-way maglev ride, ¥85 with a round trip. Klook also sells a one-way maglev ticket from Pudong Airport with a metro pass; its product page shows the price and how to collect the ticket.
+
+With your flight ticket . Show your own air ticket for a flight that day to get the ¥40 economy fare. Each air ticket covers one one-way maglev ticket.
+
+Tap at the gate . A Shanghai Public Transportation Card is charged ¥40 for an economy ride. Since June 2025 you can also tap a contactless Visa, Mastercard, Amex, JCB or UnionPay card, as long as small no-PIN payments are turned on for the card.
+
+If Alipay is giving you trouble, our guide on using credit cards and mobile pay in China walks through setup. Do it before you land.
+Is the Shanghai Maglev Worth It? (Comparison)
+Should you take the maglev or just grab a Didi? It depends on whether you care about the experience or just want to get to your hotel. Here's how the options compare.
+PVG to The Bund, all options compared (2026) :
+Transport
+
+Cost
+
+Pros
+
+Cons
+
+Best for
+
+Maglev + Metro Line 2
+
+¥50 maglev (¥40 with a same-day flight ticket) plus a few yuan for the metro
+
+The ride itself; 8 minutes to Longyang Road
+
+One change at Longyang Road; luggage on the metro is a pain
+
+Solo, couples, experience hunters
+
+Metro Line 2 (direct)
+
+A few yuan, by distance
+
+Cheapest; one seat all the way
+
+Slow; packed at rush hour
+
+Budget backpackers
+
+Didi / Taxi
+
+Metered, or quoted in the app before you book
+
+Door to door; A/C; luggage handled
+
+Rush hour traffic; surge pricing
+
+Families, 3+ bags
+
+Airport bus (Lines 4 and 7)
+
+Up to ¥28 (Line 4) or ¥20 (Line 7)
+
+Cheap
+
+Ends at Shanghai Railway Station or Shanghai South Railway Station, not the Bund
+
+Hotels near those two stations
+
+Pre-booked private transfer
+
+Quoted when you book
+
+Meet and greet; English driver
+
+Expensive
+
+First-timers with kids
+
+The maglev plus Line 2 costs more than the metro alone but much less than a taxi, and the maglev covers the 30 km from the airport to Longyang Road in about 8 minutes.
+Solo or couple with carry-ons, take the maglev . It costs much less than a Didi, and the ride itself is memorable. Family of four with six suitcases, book a Didi . Dragging luggage through a metro transfer is misery, and a car takes you to the door.
+If you want to nerd out on trains that brought you here from another city, our China high-speed rail guide covers the G-trains. Those drop you at Hongqiao, a different beast from the maglev.
+The 8-Minute Experience: Best Seat and Filming Tips
+Boarding is airport-style. Show your ticket, pass a small security check, wait at the platform. The train glides in silently. It doesn't clack like a regular rail train. It just shows up. Hiss.
+Doors close with a soft chime. Then you lurch forward. Not lurch, exactly. Surge . It's more like a plane on takeoff roll than a train leaving a station. By the time you've looked out the window to orient yourself, the outside world is already moving weird.
+Best seat for filming :
+Best speedometer shot: walk to the front of your car. The digital display sits above the forward bulkhead. Clean shot without other passengers in frame.
+
+What to listen for : not much. That's the point. No rail clacking. No wheel squeal. Just a soft hum and the occasional whoosh as a support column flicks past.
+Connecting to Downtown Shanghai From Longyang Road
+OK so you stepped off at Longyang Road. Now what. You're in Pudong, not downtown, and Google Maps probably isn't working without a VPN.
+Your options :
+Metro Line 2 toward People's Square / Nanjing Road East . The fare is a few yuan, based on distance. Buy a single-journey ticket at the machine, tap a contactless bank card at the gate, or use the Alipay metro QR if you have it set up.
+
+Metro Line 7 . Runs straight to Jing'an Temple, with a stop at Changshu Road in the former French Concession.
+
+Didi from Longyang Road . Open the Didi app or Alipay's ride-hail widget, set pickup to the Longyang Road metro taxi stand. The app shows the fare before you book.
+
+Taxi rank . Use the official queue. Don't listen to drivers approaching you on the platform. They are scams.
+
+If your hotel is near People's Square, Jing'an Temple, or Lujiazui, Metro Line 2 is fine and usually faster than a Didi in rush hour. Line 7 covers part of the former French Concession. For other areas south of Huaihai Road, a Didi saves you a metro transfer.
+The German Transrapid Story (Why Only Shanghai)
+Short version: Germans built this train, couldn't figure out where to run it at home, and sold it to Shanghai.
+Transrapid started in Germany in the late 1960s. A test track opened in Emsland in 1983 . By the early 1990s, the tech was ready for commercial deployment. The problem: Germany already had the ICE (InterCityExpress) high-speed network, politicians resisted the budget, and the closest domestic project (a 40 km Munich Airport link ) was cancelled in March 2008 after its cost estimate ballooned from €1.85 billion to over €3 billion.
+In September 2006, a Transrapid train on the Emsland test track collided with a maintenance vehicle, killing 23 people. Public confidence died with them. The Emsland test track closed in 2011.
+Meanwhile in 2000, China signed with ThyssenKrupp and Siemens to build the 30 km line from PVG to Longyang Road. Construction took two years. The line opened for previews on December 31, 2002, with then-Chancellor Gerhard Schröder and then-Premier Zhu Rongji onboard. Total cost: about ¥10 billion .
+So when the platform sign at PVG reads "磁悬浮", or a German tourist says "Magnetschwebebahn", you're looking at the last working example of a technology that Germany invented, Germany rejected, and Shanghai bought. Per Wikipedia's Transrapid entry , no other city has since ordered one.
+Shanghai Maglev FAQ
+How fast is the Shanghai Maglev now?
+The Shanghai Maglev speed is currently 300 km/h (186 mph) on every departure, according to the published timetable. Until April 2020, some departures reached 431 km/h (268 mph) for about 50 seconds per trip. The operator cut the speed from May 1, 2020, when airport passenger numbers fell during the pandemic.
+How long does the Shanghai Maglev take?
+About 8 minutes 10 seconds at the current 300 km/h cruising speed for the 30 km (19 mi) trip. The historical 431 km/h service completed the trip in 7 minutes 20 seconds.
+How much does the Shanghai Maglev cost in 2026?
+¥50 economy, ¥100 VIP for a one-way trip. A round trip is ¥80 / ¥160 and is valid for 7 days. Show your own same-day air ticket at the counter and economy drops to ¥40, the same fare a Shanghai Public Transportation Card pays. Each paying adult can bring up to two children 1.3 m or shorter for free.
+Where does the Shanghai Maglev go?
+The Shanghai Maglev route runs from Shanghai Pudong International Airport (PVG) to Longyang Road metro station in Pudong, a 30 km (19 mi) one-way track. Longyang Road connects to Shanghai Metro Lines 2, 7, 16, and 18 for the rest of your trip into downtown.
+Does the Shanghai Maglev go to The Bund or downtown directly?
+No. Longyang Road station is still 8-10 km from The Bund , so you continue on Metro Line 2. For door-to-door from PVG to a downtown hotel, a Didi is often more convenient than the maglev + metro transfer, though it costs more.
+Is the Shanghai Maglev worth it for tourists?
+Yes, but as an experience, not a transport shortcut. For ¥50 , you're riding the only commercial high-speed maglev on Earth. The ride itself is 8 minutes of genuine novelty. Families with lots of luggage are often better off in a Didi. Solo travelers and couples should ride it at least once.
+Does the Shanghai Maglev go to Hongqiao Airport?
+No. The Shanghai Maglev only serves Pudong (PVG) . For Hongqiao Airport (SHA) or Hongqiao Railway Station , take the Airport Link Line (市域机场线) from Pudong Airport to Hongqiao Airport Terminal 2, or ride Metro Line 2 the whole way. Old proposals to extend the maglev to Hongqiao exist, but nothing has been built.
+For more rail context, check our China high-speed rail map and the Beijing to Shanghai train vs flight guide . And if you're still figuring out when to go, the best time to visit China breakdown has month-by-month weather notes.
+The Shanghai Maglev is slower than it used to be, doesn't go where you actually sleep, and the VIP cabin is a rip-off. It's also the only one of its kind on the planet, and you can ride it for 8 minutes and say you did. Worth the ¥50.
+Sources
+Shanghai Municipal People's Government: metro first and last trains, including the maglev line — first and last trains from each station, 15- and 20-minute intervals, 300 km/h all day, door and last-train check-in times. Published 2026-01-13.
+
+Shanghai Airport Authority: maglev at Pudong Airport — operating hours, ¥50/¥80 economy and ¥100/¥160 VIP fares, 300 km/h top speed. Updated 2025-08-13.
+
+Shanghai Maglev Transportation Development Co.: ticket types and fares — same-day one-way tickets, 7-day round trips, ¥40 with a same-day air ticket or a Shanghai Public Transportation Card. Archived copy of 2026-05-18.
+
+Shanghai Maglev Transportation Development Co.: passenger notice — ticket offices on the second floor, one discounted ticket per air ticket, two free children up to 1.3 m per adult. Archived copy of 2025-01-21.
+
+Sohu, reposting the maglev operator's notice on the 300 km/h timetable — 300 km/h on all departures from May 1, 2020; 431 km/h had run only in some time slots. Published 2020-05-09.
+
+Sohu, reposting the maglev operator's statement on the speed cut — the cut followed the fall in airport passengers during the pandemic. Published 2020-05-11.
+
+Shanghai Municipal Transportation Commission: foreign cards at all metro service centers — foreign bank cards already accepted on the maglev line; maglev and metro combo tickets at some stations. Published 2024-04-17.
+
+Shanghai government English portal: Shanghai Metro expands Tap to Ride pilot to entire network — contactless Visa, Mastercard, Amex, JCB and UnionPay cards at the gates after the maglev trial; small no-PIN payments must be on. Published 2025-06-27.
+
+Shanghai government English portal: getting around Shanghai, transport options and fares — distance-based metro fares from ¥3, single-journey tickets and transport cards. Accessed 2026-09-27.
+
+Shanghai Airport Authority: Pudong Airport ground transport — airport bus Lines 4 and 7, their end points and fares. Updated 2026-05-31.
+
+Shanghai Airport Authority: Airport Link Line — Airport Link Line trains between Pudong Airport and Hongqiao Airport Terminal 2. Updated 2026-06-15.
+
+Wikipedia: Transrapid — Emsland test track from 1983 to 2011, the 2006 accident, the Munich cancellation and its cost estimates, no other Transrapid line in service. Accessed 2026-09-27.
+
+Facts checked on 2026-09-27.
+
+Tags
+# maglev # shanghai # transrapid # pvg
+
+View all →
+How to transfer between Hongqiao and Pudong airports Shanghai →
+What is the fastest transportation option from Shanghai PVG Airport to the cruise terminal when facing a tight boarding deadline? →
+
+View all →
+February 5, 2026 · How-To Guide
+Shanghai PVG Airport Transfer Guide: Metro, Maglev, Taxi 2026
+
+January 11, 2026 · City Guide
+Shanghai Travel Guide 2026: Neighborhoods, Food, Itinerary
+
+February 17, 2026 · How-To Guide
+BA vs China Eastern to Shanghai 2026: Full Comparison
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

@@ -1,0 +1,398 @@
+# source: https://mychina.guide/blog/china-visa-photo-requirements
+# final: https://mychina.guide/blog/china-visa-photo-requirements
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:25.613Z
+# bytes(raw): 74573
+# bytes(text): 18358
+# title: China Visa Photo Requirements 2026: Size, Specs & COVA Fix
+China Visa Photo Requirements 2026: Size, Specs & COVA Fix
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · June 16, 2026 · 14 min read · 58 views
+China Visa Photo Requirements: Size, Specs & 7 Rejection Fixes (2026)
+
+Jenny Wang · Travel Planning Expert, MyChinaGuide · Updated September 27, 2026
+
+On this page 8 sections 01 The Official China Visa Photo Specification (Verified From the Embassy)
+02 The 7 Mistakes That Break China Visa Photo Requirements
+03 The 10-Minute DIY Chinese Visa Photo (Phone Method)
+04 DIY vs CVS vs Online: China Visa Picture Requirements Price Comparison
+05 Uploading to COVA (the File Size Trap)
+06 Printed vs Digital: You Need Both
+07 International Applicants: China Visa Photo Requirements Worldwide
+08 FAQ
+
+The current chinese visa photo requirements are exact: 33mm wide × 48mm tall , pure white background, no glasses, no smile, head height 28-33mm, and a JPEG between 40-120 KB for the online upload. That is the full official spec enforced by every Chinese consulate and the COVA online system. Get any one of those numbers wrong and you lose 3-5 business days to a rejection email.
+I'm Jenny, and I've been walking clients through Chinese visa paperwork since 2018. The photo is the single most rejected part of the application. Last month alone, four clients bounced on the photo step. Three had paid CVS $16.99 for photos CVS literally cannot cut to China size.
+Since the COVA system launched September 30, 2025 , photo validation is automated and stricter than the old human review. The algorithm does not care that your hair looks nice. It cares about 33 by 48 millimeters, a white pixel, and a JPEG between 40-120 KB.
+This guide covers the exact china visa photo requirements, the 7 rejection reasons, a 10-minute DIY walkthrough, a photo service price comparison, and the COVA upload rules nobody explains clearly. For the bigger picture on the application itself, here is our step-by-step China visa guide for US citizens .
+The Official China Visa Photo Specification (Verified From the Embassy)
+Below is the complete china visa photo specification and china visa picture specifications as published by the Chinese Visa Application Service Center and confirmed against the Chinese Embassy in the US photo requirements page . Every number here is enforced.
+Attribute
+
+Requirement
+
+Common mistake
+
+Photo size
+
+33mm wide × 48mm tall
+
+Using US 2"×2" (51×51mm)
+
+Head height
+
+28-33mm from chin to crown
+
+Head too small or cropped
+
+Head width
+
+15-22mm ear-to-ear
+
+Too zoomed in or out
+
+Background
+
+Pure white (no patterns/shadows)
+
+Off-white or cream walls
+
+Expression
+
+Neutral, mouth closed, eyes open
+
+Smiling, showing teeth
+
+Glasses
+
+Remove all glasses (safest)
+
+Wearing any frames
+
+Hats
+
+None (except religious)
+
+Baseball cap, headband
+
+Ears
+
+Both fully visible
+
+Hair covering ears
+
+Forehead
+
+Fully visible
+
+Bangs over eyebrows
+
+Head tilt
+
+≤20° left/right, ≤25° up/down
+
+Angled selfie pose
+
+Age of photo
+
+Taken within last 6 months
+
+Using last year's headshot
+
+Color
+
+Color only, natural tone
+
+Black & white, filters
+
+Print finish
+
+Glossy paper (for printed copies)
+
+Matte or plain paper
+
+Yes, the written rule on glasses technically allows thin, non-tinted, non-glare frames. But I tell every client the same thing: take them off. I have seen plain prescription glasses get rejected for a faint lens reflection. The 2016 rule change pushed the system toward "no glasses" and COVA's algorithm flags almost anything over the eyes. Easy call.
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+The 7 Mistakes That Break China Visa Photo Requirements
+These are the rejection reasons I see over and over. Most applications that fail the china visa photo requirements check fail for one of these seven reasons.
+1. Wrong Size (US 2×2 Instead of China 33×48)
+This is the number one killer. US passport photos are 51mm × 51mm (2 inches square). The correct chinese passport photo size is 33mm × 48mm , narrower and taller. They are not the same. CVS and Walgreens only cut US passport size. If you hand in a 2×2, you get bounced immediately.
+2. Off-White or Cream Background
+The US State Department accepts "white or off-white" for US passports. China does not. Background must be pure white, RGB ~255,255,255. That cream-colored hallway wall your spouse photographed you against photographs as gray. It fails.
+3. Wearing Glasses
+Since the 2016 rule change, glasses are the second-most-common rejection. The COVA algorithm flags even thin frames. Take them off and give your eyes 30 seconds to adjust before the shot.
+4. Hair Covering Ears
+Both ears must be clearly visible. Tuck long hair behind both ears. I once had a client retake three times before I pointed out a single strand crossing her left earlobe.
+5. Smiling or Showing Teeth
+Neutral expression, closed mouth. No smile, no smirk, no "slight grin for personality." Think DMV face.
+6. Bangs Covering the Forehead
+Full forehead and both eyebrows must be visible. Pin bangs back with a clip or push them aside. The COVA system rejects photos where bangs drop below the eyebrow line.
+7. Wrong File Size or Pixel Dimensions for COVA
+For the digital upload, the JPEG must be 40-120 KB with pixel dimensions between 354×472 and 420×560 . Outside that range, the uploader bounces the file before a human sees it. See the COVA section below for how to hit these.
+The 10-Minute DIY Chinese Visa Photo (Phone Method)
+You do not need a studio to meet the chinese visa photo requirements. You need a phone, a white wall, one window, and 10 minutes. I have walked about 150 clients through this exact process.
+Setup : Stand 2 feet (60 cm) from a plain white wall, facing a window for even daylight. Skip ceiling lights, they shadow your eyes. Wear a non-white top. Tuck hair behind both ears, pin back bangs, remove glasses and dangly earrings.
+Shoot : Have a friend stand 5 feet (1.5m) away at chest height and take 5-10 shots with the rear camera (selfies distort the face). Head straight, eyes open, mouth closed.
+Crop : Open the best shot, tap Edit, Crop, choose Custom ratio 33:48. Your head should fill 60-70% of the vertical frame, centered.
+Fix background : If the wall photographed gray, use Photoroom or Remove.bg (both free) to swap to pure white. Takes 10 seconds.
+Resize : Use Image Size (iOS) or Photo Compress (Android). Set output to 420 × 560 pixels, JPEG, target 80-100 KB. This file is ready for COVA upload.
+Print it separately for the in-person appointment, see the next section.
+DIY vs CVS vs Online: China Visa Picture Requirements Price Comparison
+Here is the honest comparison. I have used every option on this list at least once, and I have clients who have used all of them. Only the services in the "Yes" column actually hit the china visa picture requirements for size.
+Service
+
+Price
+
+China 33×48 size?
+
+Turnaround
+
+My verdict
+
+DIY phone + Walgreens print
+
+$0.39 + free app
+
+Yes, if you DIY crop
+
+30 min
+
+Cheapest. Best if you follow the steps.
+
+CVS passport photo
+
+$16.99 / 2 prints
+
+No, US 2×2 only
+
+15 min
+
+Skip for China. Will get rejected.
+
+Walgreens passport photo
+
+$16.99 / 2 prints
+
+No, US 2×2 only
+
+15 min
+
+Skip for China. Same issue.
+
+PhotoAiD (online)
+
+~$5.95 digital
+
+Yes
+
+1-3 minutes
+
+Solid. Upload a phone photo, they size it.
+
+Snap2Pass (online)
+
+~$5-7 digital
+
+Yes
+
+Instant
+
+Built specifically for China. Good backup.
+
+Atlys photo tool
+
+~$6-8 bundled
+
+Yes
+
+Instant
+
+Bundled with their visa service.
+
+Chinatown studio (US)
+
+$10-20 / 2 prints
+
+Yes
+
+10 minutes
+
+Ask specifically for "China visa size."
+
+In-China photo shop
+
+¥40-80 ($6-11)
+
+Yes (standard)
+
+10 minutes
+
+Easy if you are already in China.
+
+Here is what nobody tells you about CVS. The CVS website says they do "visa photos." In practice, the clerk uses the standard US passport cutter and hands you 2×2 inch squares. I have had three clients get bounced at the consulate with CVS photos. Same with Walgreens. If you want to use a drugstore, bring your own correctly-sized digital file and pay $0.39 for print only , skip the $16.99 photo service.
+My go-to recommendation: take the phone photo yourself, use PhotoAiD or Snap2Pass for $6 to size and validate it, then print at Walgreens for forty cents. Total: under $7.
+Uploading to COVA (the File Size Trap)
+The COVA uploader enforces these numbers and bounces your photo instantly if anything is off:
+Format : JPEG (JPG)
+
+File size : 40 KB to 120 KB
+
+Pixel dimensions : 354 × 472 minimum, 420 × 560 maximum
+
+Color mode : RGB, 24-bit
+
+Aspect ratio : 33:48 (same as the print)
+
+To hit those specs, resize to 420 × 560 pixels and target 80-100 KB. If the file is over 120 KB, re-export at lower JPEG quality.
+The "photo check failed" bug : Since September 2025, COVA sometimes shows "The photo check failed" on photos that meet every spec. Known platform bug. Log out, clear browser cache, log back in, and retry. I had a client hit this six times before a fresh session worked.
+A rejected photo adds 3-5 business days to your timeline, see how long a Chinese visa takes for the full processing math.
+Printed vs Digital: You Need Both
+Yes, you need both a digital file for COVA upload AND a printed photo for the in-person appointment. They are not interchangeable.
+Digital file : uploaded to COVA during online application. 420×560 pixels, JPEG, 80-120 KB.
+Printed photo : brought to your visa appointment at the Chinese Visa Application Service Center (CVASC). Glossy photo paper, 33mm × 48mm exact. Some locations want you to glue or tape it to the printed COVA form. Bring two printed copies for safety.
+If you only bring one or the other, you get turned away. Both. Always both. For the full fee breakdown, see our China visa cost guide for US citizens , the photo is one of the smaller line items.
+International Applicants: China Visa Photo Requirements Worldwide
+The chinese visa photo requirements are identical worldwide, 33×48mm, pure white, no glasses, 6 months recent. Only the local service options differ.
+UK : Boots and Snappy Snaps cut to China size on request (£8-12). London's Chinatown has photo booths for under £7.
+
+EU : Ask for "Chinavisum Foto" or "photo visa Chine" at any drogerie or photo shop (€6-12).
+
+Canada : Walmart, Shoppers Drug Mart, and London Drugs (BC) all handle it (CAD $15-20).
+
+Australia : Officeworks and Australia Post do 33×48mm for AUD $15-20, ask for "China visa photo" specifically.
+
+No local option? PhotoAiD, Snap2Pass, or passport-pix.com work globally for around $5-7 USD.
+
+China switched to a new fully electronic visa application system (COVA) that went live at most Chinese embassies and consulates around September 30, 2025. Under the new flow you create an account, fill the form, and upload your photo digitally; the system runs an automated photo check before you can submit. You only travel to the visa center later, after the order reaches the 'waiting to submit passport' (待递交护照) stage, to hand over your physical passport and printed order confirmation. This is why the digital pixel and file-size specs now matter more than the printed photo for most applicants. Keep a printed copy on glossy paper anyway, because if the online photo check fails repeatedly the center can upload a physical photo for you on the spot.
+Using a beauty filter, FaceApp, Meitu, an auto-smoothing camera mode, or any retouching is one of the fastest ways to get a China visa photo refused. The official Chinese-language embassy rules state plainly that the photo may not be altered and synthesized or composite photos are not accepted (不得对照片进行修改，不得使用合成照片). Most US-facing photo guides never mention this. Skin-smoothing, slimming filters, and AI background replacement that leaves halo edges around the hair all read as a modified photo. Shoot in a plain, unfiltered camera mode, and if you remove the background digitally, check the hairline at full zoom for any fringing before you upload.
+Different Chinese consulates publish slightly different head-width numbers. The Los Angeles consulate spec lists head width 21-24mm, while the Sydney visa center lists 15-22mm; head height is 28-33mm across both. To stay safe at any post, aim for a head width of roughly 21-22mm (the overlapping range) and head height near 30mm, leaving about 3-5mm above the crown and at least 7mm below the chin. If your face fills the frame at one consulate's reading but not another's, the conservative middle range clears the automated COVA check and manual review alike.
+The COVA automated check is known to reject photos that actually meet every requirement. If you have verified your JPEG is 354-420px wide, 472-560px tall, 40-120KB, RGB, on a clean white background and it still returns 'photo check failed,' you are not stuck. After roughly three failed upload attempts the system lets you proceed by bringing a printed photo to the visa center, where staff scan and upload it for you. The aspect ratio is the part people get wrong most: it must stay close to 3:4 (33:48), so a US 2x2 inch square photo will always fail because the proportions are off, not just the size.
+The COVA system treats any shadow behind your head or shoulders as a non-white area, so even a faint shadow on the wall counts as a colored background and triggers a failure. Light yourself from the front and stand at least 30cm (about 12 inches) away from a white wall to push shadows out of frame. One more trap that catches people: do not wear white or very pale clothing, because it blends into the white background and the system can lose your shoulder outline.
+FAQ
+Can I use my US passport photo for a Chinese visa?
+No . US passport photos are 51×51mm (2"×2"), which fails the chinese visa photo requirements entirely. The correct china passport photo size is 33×48mm. Using a US passport photo is the number one rejection reason I see.
+How old can my visa photo be?
+Taken within the last 6 months , maximum. If you have lost or gained noticeable weight, changed hair significantly, or the photo just looks stale, retake it. Consular officers will reject photos that no longer match your current appearance.
+Can I wear glasses in my China visa photo?
+Officially, thin non-tinted frames are allowed. In practice, since 2016 the system rejects most glasses photos, especially the COVA automated validator. Take them off . It is not worth the re-submission risk.
+Do I need to print my COVA photo?
+Yes . You need both a digital file for the COVA online upload AND a printed 33×48mm copy on glossy paper to bring to your in-person appointment. Bring two prints for safety.
+What if COVA says "photo check failed" but my photo is correct?
+Known bug since the September 2025 system launch. Log out, clear browser cache, log back in, and try again. If it still fails after a fresh session, your photo may be slightly out of the 40-120 KB or 354×472-to-420×560 pixel range. Re-export and retry.
+Can I smile in a China visa photo?
+No . Neutral expression, mouth closed, no teeth showing. Think DMV face.
+Is CVS or Walgreens a good option?
+Skip the $16.99 photo service for China visas. Both only cut US 2×2 size. Bring your own correctly-sized digital file and pay $0.39 for print-only.
+What is the COVA file size limit?
+40 KB to 120 KB JPEG , pixel dimensions between 354×472 and 420×560, RGB color mode.
+
+One last thing. The single biggest mistake I watch clients make is rushing the photo. They treat the china visa application photo requirements as an afterthought and do it the night before submission, with bad lighting and a cream wall. Then they spend three days re-doing everything. Spend 15 honest minutes on the photo. It is the cheapest insurance in your whole visa application.
+Related reads: National ID field for the China visa form and the US Department of State China travel advisory for official entry requirements.
+If your photo does not meet the requirements, the embassy can refuse to accept your application at intake, and the official rules state the resulting delay and responsibility fall on the applicant (由此引起的责任由申请人本人承担). There is no penalty for getting it wrong twice, but each rejected upload or refused intake costs you a trip or a re-submission, so it is worth getting the file right the first time.
+
+Share this article
+
+Tags
+# visa # photo # specs # 33x48mm
+
+Travelers also asked
+View all →
+What happens if I choose the wrong Chinese consulate for my visa application? →
+Which reputable visa agencies are recommended for processing China visas through the San Francisco Consulate? →
+
+Related articles
+View all →
+January 11, 2026 · How-To Guide
+China Tourist Visa Guide 2026: L Visa, Fees, Processing Time, Documents
+
+January 15, 2026 · How-To Guide
+Why Your Visa Application Got Rejected (And How to Fix It)
+
+June 2, 2026 · How-To Guide
+China Visa for US Citizens: Step-by-Step Guide (2026)
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

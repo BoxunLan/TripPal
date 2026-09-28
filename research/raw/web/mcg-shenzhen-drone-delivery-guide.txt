@@ -1,0 +1,313 @@
+# source: https://mychina.guide/blog/shenzhen-drone-delivery-guide
+# final: https://mychina.guide/blog/shenzhen-drone-delivery-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:30.228Z
+# bytes(raw): 72098
+# bytes(text): 15901
+# title: Shenzhen Drone Delivery 2026: Order Meituan as a Tourist
+Shenzhen Drone Delivery 2026: Order Meituan as a Tourist
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog City Guide · March 21, 2026 · 11 min read · 7,225 views
+Shenzhen Drone Delivery Guide 2026: Where and How to Order
+
+M MyChinaGuide Editorial Team · Updated September 27, 2026
+
+On this page 10 sections 01 What this guide covers
+02 Where Is Drone Delivery Available in Shenzhen?
+03 How to Order Drone Delivery — Step by Step
+04 Cost, Speed, and Operating Rules
+05 Quick Reference Table
+06 Other Drone Services in Shenzhen
+07 What You Can and Cannot Order by Drone
+08 Practical Tips for Travelers
+09 Frequently Asked Questions
+10 Sources
+
+Yes, drone delivery actually works for regular people in Shenzhen. You open Meituan, order from a shop on a drone route, and pick up your order from a drone locker (无人机空投柜); Meituan puts the average delivery at about 15 minutes. The delivery fee isn't fixed and can be higher in parks, and hours vary by route. The catch: you can only order to the lockers on each route, and the app is mostly in Chinese.
+What this guide covers
+Which parks and other spots have drone lockers
+
+Step-by-step ordering in the Meituan app (with Chinese interface workarounds)
+
+What drone delivery costs and how long it takes
+
+Weight, weather, and hour limits
+
+Other drone operators in Shenzhen
+
+MyChinaGuide app · free
+Order what the locals order
+1,000+ restaurants across 24 cities with English menus and photos. The first three dishes of every menu are free.
+App Store Google Play
+
+Scan with your phone
+
+Where Is Drone Delivery Available in Shenzhen?
+Shenzhen's consumer drone deliveries are run mainly by Meituan's drone unit (美团无人机). It began regular operations in the city in 2021 and had delivered more than 600,000 orders by September 2025, according to the Longhua district government. In April 2025 it became the first company cleared by the Civil Aviation Administration of China to run low-altitude logistics flights anywhere in the country. Its lockers sit in city parks, scenic areas, offices, residential communities, campuses, and libraries.
+Parks with confirmed drone delivery
+As of September 2024, Shenzhen's parks authority listed 10 regular drone routes in 8 parks:
+Futian District : Shenzhen Central Park (深圳中心公园), Lianhua Hill Park (莲花山公园), and Bijiashan Sports Park (笔架山体育公园)
+
+Along Shenzhen Bay : three routes in Shenzhen Bay Park (北湾鹭港, 海风运动公园, and the coastal ecological park 深圳湾海滨生态公园), plus Talent Park (人才公园)
+
+Longhua District : North Station Central Park (北站中心公园) and Baishilong Music Park (白石龙音乐公园)
+
+Longgang District : Longcheng Park (龙城公园)
+
+Each route ends at a drone locker inside the park. The drone lands on top, the order drops into the locker, and you open it by entering the last four digits of your phone number on its screen.
+Since August 2025, McDonald's has been available by drone in 10 Shenzhen parks, including Shenzhen Bay Park, Bijiashan Sports Park, and Central Park. The lockers sit inside the parks rather than at the gates, and at Bijiashan Sports Park a drone lands about every two minutes at peak times, according to Shenzhen News.
+Beyond parks: a border port, offices, and libraries
+Parks aren't the only drop points:
+Futian Port (福田口岸): since October 2024, a locker on the port's front plaza has served people crossing to and from Hong Kong. Meituan says the route takes Hong Kong phone numbers and WeChat Pay HK, and orders arrive in as little as 10 minutes
+
+Shenzhen Library North (深圳图书馆北馆) in Longhua, one of the landmark drop points the district government lists
+
+Offices and homes : some routes serve office towers, residential communities, and hotels, for example around the Star River (星河) business district in Longhua
+
+Coverage is tied to specific lockers, so the building next door may not be served. The reliable way to check is to search 无人机 in Meituan's food delivery section and see which zones and lockers it lists.
+How to Order Drone Delivery — Step by Step
+This is where foreign travelers get stuck. The Meituan app is mostly in Chinese, and you can only order drone delivery to the lockers on each route.
+Step 1: Install Meituan
+Download Meituan (美团) or Meituan Waimai (美团外卖) from your phone's app store; both are listed in Apple's US App Store. Skip third-party APK sites. Meituan also runs a Meituan Drone (美团无人机) mini-program inside WeChat, which you can use if the app gives you trouble.
+Step 2: Link a payment method
+Meituan accepts Alipay , WeChat Pay , and cards issued outside mainland China , which you can add to Meituan's own wallet; its payment terms have a separate appendix for overseas cards, last updated in March 2026. This matters because drone delivery won't work if checkout fails. Set up payment before you're standing in a park hungry.
+Step 3: Open the drone page
+In the Meituan app, tap 外卖 (food delivery) at the top left, then search 无人机 (drone) to open the drone delivery page. In Meituan Waimai, search 无人机 from the home screen.
+Step 4: Pick your zone and a shop
+Choose the zone (商圈) or route that matches where you are, and note the name of its drone locker. The page then lists the shops on that route. Big chains such as KFC, Pizza Hut, Heytea, and Nayuki are regulars.
+Step 5: Use the locker as your address
+At checkout, add a new delivery address and choose the drone locker you noted. Meituan's own ordering guide uses the locker as the delivery address.
+Step 6: Pay and wait
+Once the order shows 无人机已接单 (the drone has accepted the order), it is going by drone, and you also get a text message. Meituan puts the average drone delivery at about 15 minutes.
+Step 7: Pick up at the locker
+When the order shows 无人机已送达 (delivered by drone), walk to the locker and enter the last four digits of your phone number on its screen. Take your food, then fold the box and drop it in the recycling slot as the locker instructs.
+Critical point : drones do not fly to your doorstep. You must walk to the locker. If you're physically incapable of that, order rider delivery instead.
+Chinese interface workaround
+Use your phone's built-in translation tools . On iPhone, take a screenshot, open it in Photos, tap the Live Text button, then Translate. On Android, Google Lens can translate a screenshot if your connection can reach Google. Alternatively, ask your hotel concierge to help set up your first order — once your saved address and payment are configured, subsequent orders are visual and easier to navigate.
+The real hurdle isn't the drone — it's getting Meituan set up. If the app won't accept your phone number, open WeChat and search for the Meituan Drone (美团无人机) mini-program, which Meituan lists as an ordering channel. WeChat itself can be registered with a foreign phone number, though it may ask you to verify a bank card.
+Cost, Speed, and Operating Rules
+Delivery fee
+The drone delivery fee isn't fixed. Meituan told Yicai (第一财经) in September 2026 that for homes and offices it is usually about the same as rider delivery, but it can rise temporarily in bad weather, at holiday peaks, and in scenic areas and parks. The app shows the fee before you pay.
+Delivery speed
+Meituan's average drone delivery takes about 15 minutes, against nearly 30 minutes for conventional delivery, according to figures cited by the Longhua district government in September 2025. On the Futian Port route, Meituan says orders can arrive in as little as 10 minutes.
+Operating hours
+Check the drone page for your route's hours when you order. Night delivery started on September 28, 2025, first at Talent Park (人才公园) and Haifeng Sports Park (海风运动公园), and ends at 8:00 PM (20:00) each day. Meituan says it upgraded the drones' visual positioning so they can land precisely using street and building lights.
+Weight, volume, and item limits
+Maximum payload : 2.5 kg for Meituan's current drone
+
+Fragile items : soup, cakes, and open containers are better sent by rider
+
+Weather dependence
+Weather is the main limit. Meituan says its fourth-generation drone, launched in 2023, flies in temperatures from -20°C to 50°C, in moderate rain or snow, and in winds up to force 6. Beyond that, don't count on it:
+Heavy rain
+
+Typhoons
+
+Winds stronger than force 6
+
+Meituan has also said fees can rise temporarily when bad weather stretches its delivery capacity. Don't count on drone delivery as your primary plan during typhoon season.
+Quick Reference Table
+Feature
+
+Detail
+
+Primary operator
+
+Meituan drone unit (美团无人机)
+
+Main coverage
+
+Parks in Futian, Longhua, Longgang, and along Shenzhen Bay; Futian Port; some offices
+
+Drone delivery fee
+
+Not fixed; can be higher in parks and scenic areas
+
+Typical delivery time
+
+About 15 minutes on average
+
+Max payload
+
+2.5 kg
+
+Operating hours
+
+Varies by route; night service ends at 8:00 PM
+
+Pickup method
+
+Drone locker; enter the last 4 digits of your phone number
+
+App language
+
+Mostly Chinese (translation tools recommended)
+
+Weather limits
+
+Moderate rain or snow and force-6 wind; not heavy rain or typhoons
+
+Other Drone Services in Shenzhen
+Meituan runs the drone deliveries you order as a customer, but other companies fly drones over Shenzhen too.
+SF Express (Shunfeng) drones
+SF Express's drone arm, Phoenix Wings (丰翼科技), flies SF's own parcels within Shenzhen and across the water to Zhuhai and Zhongshan, and carries blood and other medical supplies for hospitals. A route from Shekou to Hong Kong was still being planned in August 2025. It isn't a service you order directly.
+What You Can and Cannot Order by Drone
+Realistic drone orders
+Coffee and tea from chains (such as Heytea and Nayuki)
+
+Single-person fast food (KFC Combo, McDonald's meal, Pizza Hut personal pizza)
+
+Light Chinese takeout (noodle bowls, rice boxes, dumplings)
+
+Snacks and convenience items (chips, fruit, bottled drinks)
+
+Bakery items (individual cakes, sandwiches)
+
+Not a fit for drones
+Hot pot (too heavy, too awkward)
+
+Large group orders (over 2.5 kg)
+
+Soup with loose lids
+
+Anything requiring a delivery person to bring utensils or condiments in quantity
+
+Practical Tips for Travelers
+Order to a locker, not a hotel room . Drones only drop at the fixed lockers on each route, so check the drone page for the nearest one.
+
+First order takes longer to set up . Create the account, link payment, and save the locker address before you head out.
+
+Screenshot your order . Note the locker name too; Meituan's ordering guide tells you to remember it, and you'll need it if you ask for help.
+
+Try Shenzhen Central Park for a first order . It was the first city-run park to get a drone route, in April 2024.
+
+Don't stand under the landing pad . Wait until the order shows as delivered before you walk up to the locker.
+
+Check weather on the day . Moderate rain is within the drone's limits, but heavy rain, strong wind, or a typhoon is not.
+
+Frequently Asked Questions
+Does drone delivery in Shenzhen work for foreign tourists?
+Yes, if you can install Meituan (or use its drone mini-program in WeChat), pay with a credit card or wallet it accepts, and walk to a drone locker. The interface is mostly in Chinese, but visual navigation plus phone screen translation make it workable.
+How much does Meituan drone delivery cost?
+The delivery fee isn't fixed. Meituan says it is usually about the same as rider delivery for homes and offices, but it can rise temporarily in bad weather, at holiday peaks, and in parks and scenic areas. You pay that fee plus the food cost, and the app shows it before you pay.
+What's the maximum weight I can order by drone?
+Meituan's current drone carries up to 2.5 kg, so bigger orders aren't a fit for drone delivery.
+Can I order to my hotel room via drone?
+No. Drones deliver only to fixed lockers on each route, not to building entrances or hotel lobbies. Expect to walk to a nearby park, plaza, or office locker to collect your order.
+What happens if the drone can't fly because of weather?
+Meituan's current drone is rated for moderate rain or snow and force-6 winds. Beyond that, don't count on the drone option and order rider delivery instead. Meituan has said fees can rise temporarily when bad weather stretches capacity.
+Is Meituan drone delivery the only drone service in China?
+No. By mid-2025 Meituan had 64 drone routes across Shenzhen, Beijing, Shanghai, Guangzhou, Hong Kong, and Dubai, and SF Express flies parcels by drone in the Greater Bay Area. Shenzhen is still the best place to actually try it as a visitor.
+Sources
+Shenzhen Urban Management Bureau: drone delivery in city parks — the 10 park routes in 8 parks; published 2024-09-30.
+
+Longhua District Government: first night-time drone delivery — night service from 2025-09-28 ending at 20:00, 600,000+ orders, about 15 minutes on average; published 2025-09-30.
+
+Longhua District Government: drone delivery in Longhua — Shenzhen Library North and the Star River business district; published 2024-08-07.
+
+Meituan: Futian Port drone route — the port locker, Hong Kong phone numbers, WeChat Pay HK and the Meituan Drone mini-program; published 2024-10-23.
+
+Meituan: fourth-generation drone — -20°C to 50°C, moderate rain or snow and force-6 wind; published 2023-07-05.
+
+China Daily: nationwide low-altitude logistics certificate — the CAAC certificate covering the whole country; published 2025-04-23.
+
+Shenzhen News: McDonald's joins drone delivery in 10 parks — McDonald's in 10 parks, lockers inside the parks, 64 routes by mid-2025; published 2025-08-12.
+
+Yicai: Meituan's Shanghai drone network — Meituan's statement that drone delivery fees vary and can rise in parks and bad weather; published 2026-09-11.
+
+Meituan Payment Service Agreement, overseas card appendix — adding cards issued outside mainland China; updated 2026-03-30.
+
+Qianhai Authority: Phoenix Wings drone logistics — SF's drone parcel and medical routes and the planned Shekou–Hong Kong route; published 2025-08-04.
+
+Apple Support: Copy and translate text from photos — translating a screenshot with Live Text; accessed 2026-09-27.
+
+Facts checked on 2026-09-27.
+
+Share this article
+
+Tags
+# shenzhen # drone-delivery # meituan # food-delivery # technology
+
+Travelers also asked
+View all →
+Which parks in Shenzhen offer Meituan drone delivery, and how do I use the service? →
+What should I expect when ordering food delivery to my hotel or apartment in China? →
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

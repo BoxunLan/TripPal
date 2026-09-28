@@ -1,0 +1,269 @@
+# source: https://mychina.guide/blog/flying-through-china-layover-transit-guide
+# final: https://mychina.guide/blog/flying-through-china-layover-transit-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:26.981Z
+# bytes(raw): 69628
+# bytes(text): 13796
+# title: Flying Through China: Layover & Transit Guide (2026)
+
+Flying Through China: Layover & Transit Guide (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · April 19, 2026 · 9 min read · 4,694 views
+Flying Through China: Layover & Transit Guide
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 8 sections 01 The 240-Hour Visa-Free Transit Rule (And How to Actually Use It)
+02 Which Airport to Pick When Flying Through China
+03 Flying With Chinese Airlines: What It's Actually Like
+04 Domestic Air Travel China: The Process Nobody Explains
+05 Flying Through China: On-Time Performance and the Delay Reality
+06 What You Actually Need Before You Fly
+07 FAQ
+08 Ready to Fly?
+
+Flying through China sounds intimidating. It's really not. As of August 20, 2026, 57 nationalities can transit visa-free for up to 240 hours (10 days) through 65 eligible ports, per China's National Immigration Administration. That's a free mini-vacation.
+I'm a Shanghai native. This guide to flying through China covers: the 240-hour transit rule, which airport to pick, what Chinese airlines are actually like, how domestic air travel works, and the stuff nobody tells you about delays. Let's get into it.
+The 240-Hour Visa-Free Transit Rule (And How to Actually Use It)
+Here's the headline. Since December 17, 2024, China expanded its transit visa exemption from 144 hours to 240 hours (10 full days). It now covers 65 entry ports across 24 provinces , up from 39 previously. The last five, all in Guangdong, were added on November 5, 2025.
+Eligible: 57 nationalities including the US, UK, Canada, Australia, most EU countries, and Japan. Check the official National Immigration Administration site for the current list.
+The catch? Three rules you have to follow:
+You must be transiting to a third country , not back to where you came from. So USA → China → Thailand works. USA → China → USA does not.
+
+You need a confirmed onward ticket within the 240-hour window, with dates and seat assignment.
+
+You can move between the 24 approved provinces but not fly to, say, Xinjiang unless it's on the list.
+
+Here's where most guides get it wrong: they say "you get off the plane and it's automatic." It isn't. You have to tell the immigration officer at arrival that you're applying for the 240-hour TWOV (Transit Without Visa) stamp. Have your onward boarding pass printed or on your phone. The officer will stamp a special exit date.
+For country-specific requirements, check our full China visa guide for Americans and the 10-year China visa guide if you're planning to come back often.
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+Which Airport to Pick When Flying Through China
+Not all Chinese hubs are equal. Here's the honest breakdown.
+Airport
+
+Code
+
+City
+
+Min Connect Time
+
+English Signage
+
+Transit Hotel?
+
+Capital
+
+PEK
+
+Beijing
+
+90 min domestic / 2 hrs intl
+
+Excellent
+
+Yes
+
+Daxing
+
+PKX
+
+Beijing
+
+90 min
+
+Good
+
+Yes
+
+Pudong
+
+PVG
+
+Shanghai
+
+60 min domestic / 2 hrs intl
+
+Excellent
+
+Yes
+
+Baiyun
+
+CAN
+
+Guangzhou
+
+60 min domestic / 90 min intl
+
+Good
+
+Yes
+
+Shuangliu
+
+CTU
+
+Chengdu
+
+60 min
+
+Fair
+
+Limited
+
+Meilan
+
+HAK
+
+Haikou (Hainan)
+
+45 min
+
+Fair
+
+Yes
+
+My pick for most travelers flying through China : PVG (Shanghai). Maglev to downtown in 7 minutes, ¥50 ($7) one-way. Pudong itself is fast, clean, and English signage is good. If you're doing the 240-hour transit and want to actually see the country, Shanghai delivers more per hour than anywhere else.
+Skip : PKX (Daxing) unless your onward flight requires it. It's beautiful (designed by Zaha Hadid) but it's 46 km from central Beijing, an extra 90 minutes of transit time you didn't budget for.
+Flying With Chinese Airlines: What It's Actually Like
+Let's talk about flying with Chinese carriers. People worry about this part of flying through China way more than they should. The four big ones:
+Air China (CA) : flag carrier, Beijing based, Star Alliance. Solid, predictable, slightly formal. 777s and A350s on long-haul.
+
+China Eastern (MU) : Shanghai based, SkyTeam. The one I fly most. Launched the domestic COMAC C919 in 2023. Good meal service.
+
+China Southern (CZ) : Guangzhou based, largest fleet in China. Best for southern China routes.
+
+Hainan Airlines (HU) : private carrier, consistently rated top-10 globally by Skytrax. The service gap between Hainan and the Big Three is real. Fly Hainan if you can.
+
+Safety isn't the concern. China's commercial aviation safety record has been strong for over a decade. The Big Four operate modern fleets; average aircraft age is under 8 years, which is younger than most US carriers.
+What you actually notice:
+English on board : Safety announcements in English, crew speak basic English. Don't expect fluent conversation.
+
+Meals : Two hot meals on long-haul. Chinese options (rice, vegetables, some protein) plus a Western option (pasta or chicken). Request vegetarian, halal, or kosher 24+ hours in advance through the booking platform.
+
+Seat comfort : Economy legroom is similar to Delta/United on comparable routes. Business class on Hainan is genuinely excellent: lie-flat, Chinese wines included, priority everything.
+
+Wi-Fi : Available on about 60% of long-haul flights, but it's subject to the same internet restrictions as on the ground. No Google, no Facebook, no WhatsApp.
+
+Booking from abroad : This is where it gets annoying. Chinese airline websites often reject foreign credit cards. My workaround: book through Trip.com (owned by Chinese parent company Ctrip but the international site accepts Visa, Mastercard, Amex without issues). Skyscanner works for finding prices but almost always kicks you to Trip.com for the actual purchase anyway.
+Domestic Air Travel China: The Process Nobody Explains
+Okay, say you're flying through China on a connection and then catching a domestic flight to Chengdu. Here's domestic air travel in china in real terms.
+Step 1: Arrival time . Show up 90 minutes before a domestic flight, 3 hours before international. Chinese airports get crowded. Not LaGuardia crowded, more like Newark on a Friday evening but every day.
+Step 2: Check-in . You've got three options:
+Counter : Slowest but the fallback if anything goes wrong. Bring your passport.
+
+Self-serve kiosk : Requires Chinese ID (fails for foreigners). Skip.
+
+App check-in : Open Trip.com or the airline app, tap your booking, grab the QR boarding pass. This is the option I recommend.
+
+Step 3: Bag drop . If you have checked luggage, you still need to hit a counter. Domestic allowance is 20 kg (44 lbs) economy, 30 kg business. Carry-on is 5 kg. They enforce this more strictly than US carriers.
+Step 4: Security . Liquids 100ml, same as everywhere. But here's the one that surprises people: power banks over 20,000 mAh are confiscated on the spot. Under 20,000 mAh, carry-on only. Since June 28, 2025, domestic flights also bar power banks that lack a clear CCC (3C) certification mark or come from a recalled model or batch.
+Step 5: Face-ID gates . Most major airports now use facial recognition at domestic boarding gates. Foreigners can still use the manual gate: scan your passport, look at the camera, done. It takes under 10 seconds.
+Typical one-way domestic fares (booked 2-3 weeks ahead, economy):
+Beijing ↔ Shanghai: ¥550-900 ($77-125)
+
+Beijing ↔ Guangzhou: ¥800-1,500 ($112-210)
+
+Shanghai ↔ Chengdu: ¥600-1,100 ($84-154)
+
+Guangzhou ↔ Kunming: ¥450-800 ($63-112)
+
+Last-minute fares can triple. If your plans are fixed, book 3+ weeks out.
+Flying Through China: On-Time Performance and the Delay Reality
+Here's the thing nobody in the glossy travel guides mentions: when you're flying through china on domestic legs, flights run late a lot . The CAAC reported moving 94.39 million passengers during the 2026 Spring Festival alone. That's volume. Volume means delays.
+Biggest delay triggers:
+July-August thunderstorms : routine 1-4 hour holds in Beijing, Shanghai, Shenzhen
+
+ATC flow control : military airspace restrictions can hold your flight on the tarmac with no warning
+
+Winter fog in Chengdu : CTU is infamous for morning fog delays, November-February
+
+If a delay or cancellation puts your connection at risk, message the airline through WeChat . Most Chinese airlines have WeChat customer service with surprisingly fast English replies, 24/7. Add the official account, message "I need to rebook due to delay," and they'll handle it without the counter line.
+Add a 3-4 hour buffer between any domestic flight and an international connection in peak summer. Not optional.
+For internet access to actually use WeChat during a delay, you need either a Chinese SIM or a travel eSIM that works in China. See our guide to the best eSIM for China travel , or read why China doesn't support eSIM on most phones.
+What You Actually Need Before You Fly
+Quick checklist. Pack this before you start flying through China:
+Trip.com app installed and logged in (your flight confirmation lives here)
+
+WeChat for airline support, translation, payments
+
+Alipay set up with a foreign card ( how to set up Alipay as a foreigner covers this)
+
+Offline maps : Google Maps won't load past the firewall; download offline maps before you fly
+
+Translator with airport/flight vocabulary for paper menus, gate signs, airline staff
+
+Printed copy of your onward boarding pass (for the 240-hour transit stamp)
+
+Power bank under 20,000 mAh , with a clear CCC (3C) mark for domestic flights. Don't pack a bigger one in checked baggage either; it's not allowed
+
+Everything on that list except the boarding pass and power bank is in the My China Guide app. That's the pitch. Flying through China is 80% prep and 20% execution, and this app handles most of the prep.
+FAQ
+Can I leave the airport if I'm flying through China on a layover?
+Yes, if your nationality qualifies for the 240-hour visa-free transit and you're flying onward to a third country. You apply at immigration on arrival; they stamp a 240-hour exit date. Works at 65 eligible ports; the list grew from 60 on 5 November 2025.
+Do Chinese airlines speak English?
+Basic English, yes; fluent English, no. Safety announcements are bilingual. Cabin crew on international routes handle simple requests. For anything complex like rebooking or medical issues, use Google Translate or WeChat.
+Is Trip.com safe for foreigners booking Chinese flights?
+Yes. Trip.com is the international arm of Ctrip, China's largest travel platform. They accept foreign Visa, Mastercard, Amex without the payment-failure issues you'll hit on Chinese airline websites directly.
+How much buffer time should I budget when flying through China?
+Minimum : 90 minutes domestic-to-domestic, 2 hours domestic-to-international. In peak summer (July-August) : add 3-4 hours if your second flight is international. Weather delays are genuinely unpredictable between June and September.
+Ready to Fly?
+You don't need to over-prepare for flying through China. The system works and the 240-hour transit rule is a gift. The details are what trip up first-timers: which booking platform accepts your card, which terminal your connection is in, what happens when your flight is delayed and nobody speaks your language.
+Safe flights.
+Michael Chen, Shanghai native and the guy who's lost count of his domestic boarding passes. Last updated April 2026.
+
+Tags
+# flights # airlines # transit # layover
+
+View all →
+When flying into China internationally and connecting to a domestic flight, do I clear immigration at the first airport and does my luggage check through? →
+I'm a US citizen planning about 9 days in China (Beijing and Shanghai). My flights connect through South Korea both on the way in and on the way out, and then I fly back to the US. Does the 240-hour visa-free transit apply, or do my two transit points have to be in different countries? →
+What is the recommended strategy for booking domestic flights and optimizing a long-term China itinerary? →
+Is China worth visiting despite negative media portrayals? →
+
+View all →
+February 26, 2026 · Travel Tip
+Domestic Flights in China: A Foreigner's 2026 Airport Guide
+
+February 3, 2026 · How-To Guide
+Connecting Through Chengdu to Changsha: Two Questions That Decide Everything
+
+August 4, 2026 · Itinerary
+Planning Your China Trip: Where to Go & How to Prepare (2026)
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

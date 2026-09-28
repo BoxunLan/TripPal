@@ -1,0 +1,123 @@
+# source: https://mychina.guide/blog/apps-blocked-in-china-2026
+# final: https://mychina.guide/blog/apps-blocked-in-china-2026
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:21.798Z
+# bytes(raw): 68298
+# bytes(text): 12935
+# title: Apps Blocked in China 2026: The Complete List + Fix
+
+Apps Blocked in China 2026: The Complete List + Fix
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · June 29, 2026 · 9 min read · 12,532 views
+What Apps Are Blocked in China? The Complete 2026 List
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 14, 2026
+
+On this page 7 sections 01 The short answer: most of what you use is blocked
+02 The complete 2026 blocked list (and what to use instead)
+03 Why VPNs became unreliable after the April 2026 crackdown
+04 The most reliable 2026 fix: a roaming eSIM
+05 The WiFi-gap trap that catches almost everyone
+06 Set everything up before you land — a quick checklist
+07 FAQ
+
+Yes — a lot is blocked. In 2026 mainland China blocks the entire Google suite (Gmail, Maps, YouTube), WhatsApp, Instagram, Facebook, Messenger, X, Telegram, Signal, Reddit, and most Western news sites. WeChat, Apple services, and Bing work fine. The most reliable fix is a roaming eSIM, set up before you land.
+The short answer: most of what you use is blocked
+If your phone home screen looks like a typical Western one, expect most of it to go dark the moment you connect to a Chinese network. The Great Firewall blocks by category as much as by app, so it is not just one or two services — it is nearly the whole stack you rely on for messaging, maps, search, and social.
+The good news is that the block is predictable. The same names have been blocked for years, the list rarely shrinks, and there are clean alternatives or workarounds for every single one. The trap is not knowing which is which until you have already landed, when the app stores and circumvention sites you would use to fix it are themselves blocked. Read the table below before you fly, not after.
+
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+
+The complete 2026 blocked list (and what to use instead)
+Here is the practical breakdown by function. Everything in the blocked column fails on a normal Chinese connection in 2026.
+Messaging — Blocked: WhatsApp, Facebook Messenger, Telegram, Signal, Line, Viber. Works / alternative: WeChat (the default for everyone in China), plus iMessage and FaceTime if you are on Apple.
+Email — Blocked: Gmail and all Google Mail, plus Google-hosted Workspace inboxes. Works: Outlook, Hotmail, and most other providers; QQ Mail and 163 if you want a local one.
+Search — Blocked: Google Search and Google-owned tools. Works: Bing (with Chinese political results filtered) and Baidu, the dominant local engine.
+Maps — Blocked: Google Maps (and it is offset by 50 to 500 metres even through a workaround — more on that below). Works: Apple Maps, Amap (Gaode), and Baidu Maps.
+Social — Blocked: Instagram, Facebook, X (Twitter), Reddit, Snapchat, Pinterest, Tumblr, plus the global version of TikTok. Works: the China-only app Xiaohongshu (RED), Weibo, and Douyin (China's TikTok).
+Video and streaming — Blocked: YouTube, Netflix, Twitch, Vimeo, and most Western streamers. Works: Bilibili, Tencent Video, iQiyi, Youku.
+News and reference — Blocked: many Western outlets and Wikipedia in several languages, on and off. Works: Bing and Baidu searches return local sources fine.
+If you only remember one line: anything Google, anything Meta, plus X, WhatsApp, YouTube, and Telegram are all blocked. Apple's own services, WeChat, and Bing are the reliable survivors.
+Why VPNs became unreliable after the April 2026 crackdown
+For years the standard advice was simply install a VPN. That advice is now shaky. In early April 2026 the three Chinese carriers — China Mobile, China Unicom, and China Telecom — began blocking IP addresses that carry a VPN signature the instant they detect them, with no grace period, as part of a coordinated cross-border crackdown reported by Radio Free Asia. Thousands of relay servers inside China were physically pulled offline at the same time.
+The result is that VPNs can still work, but they are increasingly unreliable. Long-term residents report that connections drop without warning, that protocols which were rock solid for years now get throttled or killed, and that finding a stable server has become a daily chore rather than a one-time setup. A VPN is still worth having as a backup, especially for a laptop, but in 2026 it is no longer something you can simply install and trust. If you do go this route, choose carefully — see what long-term users currently report in our guide to the best VPN for China before you pick one.
+One more reason VPNs frustrate travelers: even when a VPN gets Google Maps loading, the map is still wrong. China uses a deliberately offset coordinate system (GCJ-02), so Google Maps tiles sit 50 to 500 metres away from where you actually are. The fix for maps is not a VPN — it is using a map app built for Chinese data, which we cover next.
+The most reliable 2026 fix: a roaming eSIM
+The single most reliable way to keep your normal apps working in 2026 is not a VPN at all — it is a roaming travel eSIM. Here is why it works where VPNs struggle: a roaming eSIM connects to a Chinese cell tower for signal, but your actual mobile data exits through a foreign network in Singapore, Hong Kong, or elsewhere before reaching the internet. Your traffic never passes through the Chinese internet that the Great Firewall filters, so there is nothing to block. WhatsApp, Instagram, Gmail, and Google Maps just work, with no VPN app and no configuration.
+Because it bypasses the firewall at the network level rather than fighting it with software, an eSIM is not affected by the April 2026 VPN-signature blocking — there is no VPN signature to detect. For most travelers it is the cleanest, lowest-effort answer. Providers like Nomad, Airalo, and Holafly all sell China-capable roaming plans; we compare the current options in our roundup of the best eSIM for China .
+Critically, you must buy and install the eSIM before you arrive. App stores and circumvention sites are blocked once you land, so an eSIM you have not set up is an eSIM you cannot set up. Install it at home, keep it ready to switch on, and you walk off the plane already connected.
+The WiFi-gap trap that catches almost everyone
+This is the mistake that quietly ruins a working setup. A roaming eSIM only bypasses the Great Firewall on its own mobile data. The second you connect to hotel WiFi, café WiFi, or any local hotspot, your traffic is back on Chinese infrastructure and fully filtered again — Google, WhatsApp, and the rest stop working, even though your eSIM is sitting right there in the phone.
+So the habit to build is counter-intuitive: in China you often want to stay on mobile data and leave WiFi off when you need your blocked apps. If you must use WiFi — for a laptop, or to save data — that is exactly where a VPN earns its keep, because the eSIM trick does not extend to other devices on the same WiFi. Set the VPN up before you travel for that reason, and treat it as the WiFi backup rather than your primary plan.
+Set everything up before you land — a quick checklist
+Everything you would use to fix your connection in China is blocked in China, so the whole job has to be done at home. Before you fly: install your roaming eSIM and confirm it activates; install a VPN as a WiFi backup and test that it connects; download Apple Maps or Amap so navigation works on day one; and grab any blocked apps you will want, since you cannot reach Google Play or some app updates inside the firewall.
+On the maps front specifically, if you are on an iPhone set to a non-China region, Apple Maps automatically switches to Amap's data the moment you arrive and works with no VPN at all — accurate, in English, and on the correct coordinate system. It is the easiest navigation fix there is; we go deeper in our guide to the best map app in China .
+Finally, keep the MyChinaGuide app handy as your offline reference for what works, the Chinese alternatives, and city-by-city practical help — useful precisely because it does not depend on the apps the firewall takes away.
+FAQ
+Does WhatsApp work in China in 2026?
+No. WhatsApp is fully blocked on normal Chinese networks in 2026, along with all other Meta apps. It works only if you route around the firewall — most reliably with a roaming eSIM whose data exits through a foreign network, or less reliably with a VPN. Locals use WeChat instead.
+Is Google blocked in China?
+Yes — the entire Google suite is blocked, including Google Search, Gmail, Google Maps, YouTube, Drive, and Google Play. There is no Google service that works on a standard Chinese connection. Use Bing or Baidu for search, Outlook for email, and Apple Maps or Amap for navigation.
+Do I need a VPN in China in 2026?
+Not necessarily. After the April 2026 carrier crackdown that blocks VPN-signature IPs on detection, VPNs have become unreliable. A roaming eSIM is now the more dependable fix because it bypasses the firewall at the network level with no VPN signature to detect. Keep a VPN only as a WiFi backup.
+Will a VPN or eSIM make Google Maps accurate in China?
+Loading and accuracy are two different problems. A VPN may get Google Maps to load, but China's GCJ-02 coordinate system leaves it offset by 50 to 500 metres regardless. For accurate navigation use Apple Maps, which auto-switches to Amap data when you arrive, or use Amap or Baidu Maps directly.
+Why does my eSIM stop bypassing the firewall on hotel WiFi?
+Because the bypass only applies to the eSIM's own mobile data, which exits through a foreign network. Hotel and café WiFi route through Chinese infrastructure, so they are still filtered. Stay on mobile data for blocked apps, or use a VPN when you connect a laptop to local WiFi.
+Can I set up a VPN or eSIM after I arrive in China?
+Generally no. App stores, VPN provider sites, and many app updates are blocked once you are inside the firewall, so you may not be able to download or activate anything. Install and test your eSIM and VPN before you fly — that is the single most important step.
+The blocks are not identical in the way they fail, which is why each of these has its own answer. Gmail stops syncing silently because IMAP and SMTP are blocked at the protocol level, so you notice nothing until the mail stops arriving. Google Maps is the odd one out entirely — a VPN restores access and still leaves you standing 100 to 700 metres from where you actually are, because of the GCJ-02 coordinate offset. YouTube is the bandwidth stress test: a VPN that loads a web page fine can still be unwatchable at 1080p. And Instagram cannot even be downloaded from the China App Store, so installing it before you fly is not optional.
+
+Tags
+# apps blocked in China # Great Firewall # China travel 2026 # VPN China # eSIM China # WhatsApp China # Google Maps China # China connectivity
+
+View all →
+For a short China trip, should I rely on eSIM, roaming, or VPN if I need stable access to Google, Zoom, Slack, or Office365? →
+Should I install a China eSIM before arriving, and do I still need a VPN? →
+Can I just use Chinese alternatives instead of a VPN after moving to China? →
+Which apps should I install before traveling to China? →
+
+View all →
+June 29, 2026 · How-To Guide
+eSIM vs VPN for China: Which Do You Actually Need in 2026?
+
+June 29, 2026 · How-To Guide
+Does WhatsApp Work in China? (2026 Answer + How to Fix It)
+
+June 29, 2026 · How-To Guide
+Does Google Maps Work in China? (and the Maps That Actually Do)
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

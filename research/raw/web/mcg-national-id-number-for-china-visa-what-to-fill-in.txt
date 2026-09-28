@@ -1,0 +1,312 @@
+# source: https://mychina.guide/blog/national-id-number-for-china-visa-what-to-fill-in
+# final: https://mychina.guide/blog/national-id-number-for-china-visa-what-to-fill-in
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:29.183Z
+# bytes(raw): 72636
+# bytes(text): 16695
+# title: National ID Number for China Visa: What to Fill In (2026)
+National ID Number for China Visa: What to Fill In (2026)
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · April 20, 2026 · 12 min read · 5,290 views
+National ID Number for China Visa: What to Fill In (2026)
+
+Jenny Wang · Travel Planning Expert, MyChinaGuide · Updated September 27, 2026
+
+On this page 9 sections 01 The 10-Second Answer by Nationality
+02 Why the China Visa Form Asks for a "National ID Number" at All
+03 What US Citizens Should Actually Enter (Step by Step)
+04 UK, EU, Canadian, Australian, and Other Nationalities
+05 The "Local ID/Citizenship Number" Field (The One Everyone Misses)
+06 What Does "Duty" Mean on the Chinese Visa Application?
+07 The Occupation Field Without a "Freelancer" Option
+08 What Happens If You Enter the Wrong Thing
+09 Frequently Asked Questions
+
+If you're a US citizen stuck on the National ID Number field in the China visa form, here's the 10-second answer: enter your driver's license number . Not your SSN. Not "N/A" (unless you have no driver's license). Match it exactly to the number on your physical license. This is the single most common field people get wrong, and it delays applications by 3-5 business days.
+I'm Jenny, and I've been helping tourists navigate Chinese visa paperwork since 2018. Honestly, 8 out of 10 clients ask me this exact question. The form is bilingual and designed with Chinese citizens in mind first, so half the fields feel like they're speaking a different language even when the English is right there.
+Here's the thing nobody tells you. There's no "correct" SSN-style answer for foreigners, because most countries outside China don't issue what China considers a national ID. So the form lets you improvise, but only with certain inputs. Get it wrong and the New COVA System (launched September 30, 2025) will bounce your application back with a vague "information mismatch" error. That's a lost week.
+This guide walks you through the exact answer by nationality, then tackles the two other fields that trip people up: Local ID/Citizenship Number and the weird Duty field. Plus the Occupation dropdown that has no "freelancer" option.
+The 10-Second Answer by Nationality
+This is the table I wish existed when my first client called me panicking from a Starbucks in Seattle. Save this, screenshot it, tattoo it on your forearm.
+Nationality
+
+National ID Number Field
+
+Local ID/Citizenship Field
+
+United States
+
+Driver's license number (preferred) or passport number
+
+Same as National ID, or "N/A"
+
+United Kingdom
+
+UK driving licence number (16 characters)
+
+Same, or "N/A"
+
+Canada
+
+Provincial driver's licence number
+
+Same, or "N/A"
+
+Australia
+
+Driver's licence number (state-issued)
+
+Same, or "N/A"
+
+Germany, France, Italy, Spain, Netherlands
+
+National ID card number (Personalausweis, CNI, carta d'identità, DNI)
+
+Same number
+
+Ireland, Denmark, Sweden, Finland
+
+Personal ID / CPR / personnummer
+
+Same number
+
+New Zealand
+
+Driver's licence number
+
+Same, or "N/A"
+
+Japan
+
+My Number (12 digits) or driver's license
+
+Same
+
+South Korea
+
+Resident Registration Number
+
+Same
+
+Other (no government ID)
+
+Passport number
+
+"N/A"
+
+One rule that applies to everyone : whatever you enter here, you'll need to enter it the exact same way on any future Chinese filings (work permit, SAFEA registration, residence permit). Inconsistency between forms is another top reason for delays.
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Why the China Visa Form Asks for a "National ID Number" at All
+Quick backstory, because knowing this actually helps you make the right call.
+Every Chinese citizen has an 18-digit national ID card called a shenfenzheng (身份证). It's used for train tickets, hotel check-ins, SIM cards, bank accounts, everything. The visa form was originally designed for overseas Chinese applicants, so that field was front and center.
+For everyone else, China needs some government ID that can be verified against your home country's records. SSNs don't qualify. They're tax numbers, not verification IDs, and the IRS won't respond to embassy inquiries. Driver's licenses sit in state DMV databases, which are technically accessible for law-enforcement verification. That's why visa officers accept them but push back on SSNs.
+What US Citizens Should Actually Enter (Step by Step)
+Look, I'll give it to you straight.
+Step 1 : Open your wallet. Pull out your driver's license. Step 2 : Find the license number. On California licenses it starts with a letter. On New York licenses it's 9 digits. On Texas it's 8 digits. Step 3 : Type it into the National ID Number field exactly as printed, including any leading letters. Step 4 : If there's a second field called Local ID/Citizenship Number , type the same driver's license number there. If it won't let you duplicate, type "N/A". Step 5 : Move on. This field is done.
+Do not enter your SSN . Every visa agent I've worked with has told me the same thing: SSNs trigger a manual review flag because Chinese visa officers know SSNs aren't meant for identity verification. That means a human has to look at your file, which means delays.
+Do not enter your passport number as National ID unless you don't have a driver's license. The passport number has its own field higher up on the form, and entering it twice looks like you got confused.
+What if you don't have a US driver's license? Enter your passport number in the National ID field and type "N/A" in the Local ID field. I've seen maybe 15 clients go this route in the last five years. All approved.
+UK, EU, Canadian, Australian, and Other Nationalities
+UK citizens : Use your UK driving licence number (the 16-character code on the back of your photocard). Don't use your National Insurance number. NI numbers confuse the form validator because of their letter pattern.
+Canadians : Provincial driver's licence number. Canada has no federal ID, so this is your cleanest option. Health card numbers work in a pinch.
+Australians : State-issued driver's licence (NSW, VIC, QLD, etc.) is the standard answer. Medicare numbers technically work but I've seen a handful get flagged.
+EU citizens with a national ID card (Germany, France, Italy, Spain, most of continental Europe): Use the number on your government-issued national ID card, not your driver's licence. Your country has exactly what China means by "national ID".
+EU citizens without a national ID card (Ireland, Denmark): Driver's licence or passport number, same as US citizens.
+Everyone else : Passport number is your universal fallback. Avoid leaving blanks when you can.
+Quick real-talk: I've had clients from 20+ countries, and the pattern is that the form accepts almost any government-issued alphanumeric ID as long as it's consistent across your whole application . Consistency matters more than which number you pick.
+The "Local ID/Citizenship Number" Field (The One Everyone Misses)
+This field confused me the first time I saw it too. It's usually hidden under Section 1.5 or Section 1.6 of the online application, right below the National ID field.
+Here's the short answer: put the same thing you put in the National ID field . If the system rejects a duplicate value, type "N/A" and move on. Visa officers don't care that it's duplicated. They care that neither field is empty.
+The field exists because the original form was designed for Chinese citizens who might have both a national ID AND a separate household registration (hukou) number. Foreign applicants don't have two IDs, so the field is legacy. The embassy hasn't removed it because removing fields from government forms requires an act of God.
+I had a client last October who left both the National ID and Local ID fields blank because she couldn't decide what to enter. Application rejected in 48 hours. She re-filed with her driver's license in both fields. Approved in 3 business days. Total delay: 5 days and one rescheduled flight.
+What Does "Duty" Mean on the Chinese Visa Application?
+This is where everyone freaks out. I get DMs about this field almost every week.
+Duty does NOT mean customs duty or import tax . It has nothing to do with money you'll pay entering China.
+Duty means your job responsibilities . It's Section 3.3D (Position) and 3.3E (Duty) on the form. You write your job title in Position, then describe what you actually do in Duty.
+Here are real examples from my files:
+Software engineer : Position: "Senior Backend Engineer". Duty: "Design and maintain server infrastructure and APIs for payment processing."
+
+Teacher : Position: "High School English Teacher". Duty: "Teach English literature and writing to grades 9-12."
+
+Nurse : Position: "Registered Nurse". Duty: "Patient care and medication administration in emergency department."
+
+Retired : Position: "Retired". Duty: "Retired since [year]" or "N/A - retired".
+
+Student : Position: "Student". Duty: "Full-time undergraduate student, [major] at [university]."
+
+Self-employed : Position: "Owner" or "Freelance [job]". Duty: Describe what your business does, e.g., "Freelance graphic designer providing branding services to small businesses."
+
+Critical gotcha : the online form marks Position and Duty as optional, but visa officers treat them as mandatory. A client of mine named Priya from Manchester left Duty blank because the asterisk wasn't there. Her app was returned with a "please complete all fields" notice. She refilled with "Lead software developer responsible for backend systems for a fintech startup." Approved three days later.
+Just fill it in. Keep it short. 1-2 sentences max. Don't get creative, don't write a cover letter, don't leave it blank.
+The Occupation Field Without a "Freelancer" Option
+The Occupation dropdown has limited options: Employee, Employer, Self-employed, Retired, Student, Housewife, Unemployed, Other.
+Pick the closest match . Here's the translation I give clients:
+Freelancer or consultant → "Self-employed"
+
+Remote worker with full-time employer → "Employee"
+
+Between jobs → "Unemployed" (don't lie, visa officers check)
+
+Stay-at-home parent → "Housewife" (yes, the form is that dated)
+
+Digital nomad → "Self-employed" or "Other"
+
+Contract worker → "Employee" if W-2, "Self-employed" if 1099
+
+Your choice must match your supporting documents. If you pick "Employee" you'll need an employer letter. If you pick "Self-employed" you'll need business registration or tax returns. Pick based on which documents you actually have.
+What Happens If You Enter the Wrong Thing
+Worst case? Your application gets returned for correction. Chinese consulates are actually pretty forgiving, outright refusals for form errors are rare. What's common is delays.
+Here's the escalation path I've seen:
+Minor error (wrong ID format, duplicate info): Email from consulate asking you to resubmit one section. 1-2 day delay.
+
+Bigger error (blank mandatory field, SSN in wrong place): Full application returned. Resubmit and pay again if you already paid. 3-5 day delay.
+
+Red flag error (fake number, inconsistent info across sections): Potential refusal. You'd have to reapply fresh after 30 days.
+
+According to the Chinese Embassy in Washington DC , standard processing takes 4 business days, express takes 3. Add whatever delay you triggered on top of that. If you're flying out in a week, one correction cycle means missing your trip. I've seen it happen. Twice in 2025 alone.
+How to Fix an Already-Submitted Application
+If you've already submitted with the wrong value and you catch it early, here's what to do:
+Before the consulate has processed it : Call or email the visa office directly. They can sometimes amend minor fields manually. The DC office number is listed on the embassy website.
+
+After it's been returned : Log into the COVA system, correct the field, resubmit. You usually don't need to re-pay if the error was caught in the first review.
+
+If it was approved with a wrong value : Leave it alone. If the visa is already in your passport, the field on the original application doesn't follow you. It only matters if you later apply for a work permit or residence permit.
+
+Frequently Asked Questions
+Can I use my Social Security Number for the National ID Number field?
+Technically you can type it in, but don't. SSNs trigger manual review in the Chinese visa system and add 3-5 days to processing. Use your driver's license instead. This advice is consistent across every visa service I've worked with for the last 6 years.
+Is "N/A" accepted for the National ID Number field?
+Yes, but only as a last resort. If you don't have a driver's license, a national ID card, or any other government-issued alphanumeric ID, you can enter "N/A" and then enter your passport number in the Local ID field instead. Don't leave both fields blank.
+What if I don't have any driver's license or national ID?
+Enter your passport number in the National ID Number field. It's not ideal but it's valid. Kids under 16 applying with their parents often have no ID beyond a passport. This is normal, and consulates expect it.
+Do I need to use the same National ID number if I apply for a visa again later?
+Yes. Chinese visa records are linked to your passport, so any number you entered on a previous form will show up when you apply again. Use the same value or expect questions. If your driver's license expired and you got a new number, write a short note in the Remarks section explaining the change.
+Does this apply to the new COVA system launched in 2025?
+Yes. The September 30, 2025 New COVA System uses the same field structure. The interface looks different but the rules haven't changed. The only real change is that you now upload documents online before the in-person submission.
+I'm applying for a tourist (L) visa. Does any of this matter for short trips?
+Yes, every visa category (L, M, F, Z, X1/X2, Q1/Q2, S1/S2) uses the same application form with the same National ID field. Tourist visas have become easier since January 1, 2024 (no more flight bookings or hotel reservations required), but the form fields are identical.
+
+Getting the National ID field right takes 30 seconds once you know the answer. The hard part is figuring out that driver's license is the answer in the first place. Now you know. Screenshot the table up top, fill in your form, and go book your trip.
+Related guides you might want :
+Our complete China visa guide for Americans : requirements, costs, processing times
+
+Current China visa fees by nationality
+
+China visa photo requirements : specs and common rejection reasons
+
+240-hour visa-free transit policy : skip the visa entirely if you qualify
+
+Official sources :
+Chinese Embassy in the US, Visa Requirements (Updated Sep 2025)
+
+US State Department China page
+
+Chinese Visa Application Service Center (CVASC)
+
+Related: what your visa photo must look like
+
+Share this article
+
+Tags
+# visa # form # application # cova
+
+Travelers also asked
+View all →
+What happens if I choose the wrong Chinese consulate for my visa application? →
+
+Related articles
+View all →
+June 2, 2026 · How-To Guide
+China Visa for US Citizens: Step-by-Step Guide (2026)
+
+January 11, 2026 · How-To Guide
+China Tourist Visa Guide 2026: L Visa, Fees, Processing Time, Documents
+
+January 15, 2026 · How-To Guide
+Why Your Visa Application Got Rejected (And How to Fix It)
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

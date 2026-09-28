@@ -1,0 +1,107 @@
+# source: https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260206/5e553f89f82644f0855ed65766db06f0.html
+# final: https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260206/5e553f89f82644f0855ed65766db06f0.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:41.290Z
+# bytes(raw): 18073
+# bytes(text): 7676
+# title: China unveils digital upgrades to improve visitor experience
+
+China unveils digital upgrades to improve visitor experience 
+
+Home
+
+What's New
+
+Latest
+
+China unveils digital upgrades to improve visitor experience
+
+China Daily Website |
+February 06, 2026 
+
+​A consumer scans an Alipay QR code to make a payment. [Photo/VCG]
+
+China's cyberspace regulator, along with 10 other agencies, has rolled out new guidance to make the country's app-driven daily life easier for foreign visitors and people from outside the Chinese mainland, addressing persistent challenges in mobile payments, telecom sign-ups, and transportation, as Beijing seeks to deepen its high-standard opening-up.
+
+The "Implementation Guidelines on Improving the Convenience of Digital Services for Inbound Overseas Visitors", posted on Feb 5 on the Cyberspace Administration of China's website, outlines a two-phase roadmap to modernize the visitor experience.
+
+The initiative, which serves a broader push for "high-standard opening-up", sets a 2027 target to remove key "bottlenecks" in telecommunications, payments, tourism and public transportation, with the ultimate goal of achieving a world-leading level of inbound digital services, where local systems are seamlessly integrated with international standards.
+
+For seasoned travelers like Denis Simon, a longtime China-based academic administrator who served as executive vice-chancellor of Duke Kunshan University in China from 2015 to 2020, the obstacles were not about a lack of technology but about systems built around domestic assumptions.
+
+"I just wanted to buy a train ticket," Simon recalled, describing a frustrating attempt to buy a high-speed rail ticket using the official 12306 app for a trip from Beijing to Shanghai.
+
+Simon, now a non-resident fellow at the Quincy Institute, has traveled to China more than 150 times since 1981.
+
+He found that while he could browse schedules, he could not complete the purchase because the system prompted him for "real-name verification" using a foreign passport.
+
+"The system worked, but only if you already knew where the digital system broke," Simon told China Daily, adding that his eventual success required standing in a manual line to obtain a paper ticket.
+
+The new guidance explicitly targets such issues, urging improvements in foundational digital services and the "internationalization" of the user experience.
+
+In terms of transportation, the initiative promotes the adoption of international standards by encouraging urban rail systems to accept international bank cards for ticket purchases. Transportation apps will also be required to offer multilingual services and digital tools to help visitors navigate cross-city commuting.
+
+To address immediate connectivity issues, the policy requires telecommunications providers to simplify their online service portals for foreigners.
+
+Specifically, the plan proposes setting up physical service outlets at major airports with high international traffic to help travelers manage their mobile and data needs upon arrival.
+
+In the realm of finance, the policy seeks to align China's domestic payment systems with global standards.
+
+It encourages supporting more overseas electronic wallets for use in China and expanding "deposit-free" policies on digital platforms.
+
+Simon said he encountered the flip side of China's near-frictionless mobile payments culture in Shanghai.
+
+He had linked his foreign Mastercard to Alipay and made a small test payment. But at a café, his payment attempt froze and the app demanded SMS verification sent to a Chinese phone number, which he did not have at the time. With no alternative method offered, he ended up paying with cash.
+
+"The problem wasn't hostility," Simon said. "It was assumption. The system assumed I lived there."
+
+This is exactly the kind of friction the new policy aims to address -- decoupling mobile payments from domestic phone numbers and recognizing short-term visitors as legitimate users, not anomalies, he said.
+
+The digital transformation also extends to lodging and tourism, with the guidelines promoting the development of digital international medical platforms in collaboration with major international insurance companies to facilitate secure health record sharing.
+
+While pushing for greater openness, the document emphasizes the importance of data security and privacy.
+
+The guidance calls for stronger protection of critical information infrastructure and improved security standards in high-frequency scenarios such as cross-border payments and online reservations, while emphasizing stronger data governance and personal information protection to prevent misuse or leaks of sensitive data.
+
+"If today's new initiative had been in place — clearer error messages, consistent identification rules across platforms — I probably never would have had a problem," Simon said.
+
+He said the 11-agency guidance improves coordination across systems.
+
+Elyn MacInnis, a cultural expert who spent 30 years working and living in China, noted that the "first bottleneck" for international travelers actually arises before they even set foot in the country.
+
+The Rhode Island resident said that many travelers are not aware that mobile applications like WeChat are the primary means of payment throughout China.
+
+Once on the ground, the struggle for connectivity becomes a costly and isolating experience, as international roaming plans through providers like AT&T can cost between $10 and $12 a day.
+
+"These changes will make it much easier for people from other countries to visit China and to be happy and not to have to waste a lot of time or not to have to suffer trying to figure out how to do something," MacInnis said of the new guidelines.
+
+"It will take away the anxiety about what might go wrong," she added.
+
+Her husband, Peter MacInnis, proposed having a team of skilled people interviewing international visitors about their travel experiences after their trips.
+
+"Having teams interview people as they leave China could provide recent, firsthand accounts of where the process was difficult," MacInnis said.
+
+The team would specifically identify "pain points", such as slow processes or areas that cause frustration. By listening to their feedback, authorities can gain valuable insights into how to streamline and expedite the process, he said.
+
+In response to reporters' questions, a Cyberspace Administration of China official said smoother digital payments and tourism services could unlock more spending by inbound visitors, boost sectors such as travel and lodging, and add momentum to the digital economy.
+
+The guideline is also expected to provide important support for attracting foreign investment, expanding domestic demand, and promoting growth, injecting new momentum into high-quality development, the official said, according to a release posted on the CAC website.
+
+The official said helping visitors better plug into China's digital services could make cross-border travel and exchanges smoother and encourage deeper international cooperation, turning the initiative into a "golden calling card" for higher-level, broader opening-up.
+
+In Focus
+
+Major exhibitions in Shanghai in September
+
+Sports events in third quarter 2026
+
+FAQs
+
+Can an X2 visa holder apply for an internship endorsement in Shanghai? 
+
+Can I claim a departure tax refund after leaving China? 
+
+Can a service dog transit through Shanghai Pudong Airport without quarantine? 
+
+Is there a mandatory retirement age for a foreign employee in Shanghai?

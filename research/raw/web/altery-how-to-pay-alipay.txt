@@ -1,0 +1,356 @@
+# source: https://altery.com/personal/use-cases/travel/china/how-to-pay-with-alipay/
+# final: https://altery.com/personal/use-cases/travel/china/how-to-pay-with-alipay/
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:21:51.226Z
+# bytes(raw): 91595
+# bytes(text): 6656
+# title: How to Pay With Alipay in China (Foreigner's Guide) - Altery
+How to Pay With Alipay in China (Foreigner's Guide) - Altery
+
+&bull;
+Personal
+
+&bull;
+Business
+
+Open account
+
+Open account
+
+&bull;
+Personal
+
+&bull;
+Business
+
+Help
+
+Get the app
+
+Features
+
+Features
+
+Features
+
+Multi-currency account
+
+Bank transfers
+
+Card payments
+
+Currency exchange
+
+Internal transfers
+
+Top up
+
+Pricing
+
+Pricing
+
+Pricing
+
+Personal pricing
+
+Use cases
+
+Use cases
+
+Use cases
+
+Send money abroad
+
+Travel
+
+Daily spending
+
+Multi-currency life
+
+Digital nomads
+
+Receive salary
+
+Freelance income
+
+Resources
+
+Resources
+
+Resources
+
+Send money
+
+Personal guides
+
+Blog
+
+Help Centre
+
+Company
+
+Company
+
+Company
+
+Contacts
+
+Paying, spending and sending money just feels easy
+
+Discover
+
+Get the app
+
+Help
+
+&bull;
+Personal
+
+&bull;
+Business
+
+Help
+
+Log in
+
+Open account
+
+Solutions
+
+Solutions
+
+Solutions
+
+Global account
+
+Currency wallets and FX
+
+Cross-border payments
+
+Mass payments
+
+Cards issuing at scale
+
+API
+
+Multi-company management
+
+Manage team finances
+
+Pricing
+
+Pricing
+
+Pricing
+
+Business plans
+
+Industries
+
+Industries
+
+Industries
+
+Game Studios
+
+Affiliate marketing
+
+Wholesale
+
+IT services
+
+Logistics
+
+EdTech
+
+Sports
+
+Travel
+
+Real Estate
+
+Digital assets native
+
+Resources
+
+Resources
+
+Resources
+
+Business guides
+
+Blog
+
+Events
+
+Help Centre
+
+Company
+
+Company
+
+Company
+
+Contacts
+
+Everything you need to keep your business flowing
+
+Discover
+
+Log in
+
+Open account
+
+Help
+
+Home
+
+Use cases
+
+Travel
+
+China
+
+How to pay with Alipay in China
+
+China
+
+5 Jun, 2026
+|
+6 min read
+
+How to pay with Alipay in China
+
+Zara Chechi
+
+In this article
+
+01. What Alipay is, and why it matters
+
+02. Setting up Alipay as a foreigner
+
+03. Paying with Alipay
+
+04. The catches to expect
+
+05. A simpler route: an Altery UnionPay card
+
+06. FAQ
+
+Alipay is one of the two super-apps that run daily payments in China. As a visitor you can use it, and it's far easier than it used to be — but there are still steps, checks and limits worth knowing before you depend on it. Here's how it works, and how to keep a simpler backup in your pocket.
+
+The easiest way to pay in China? A UnionPay card.
+
+Get your card
+
+What Alipay is, and why it matters
+
+Alipay is a phone app that pays by QR code: you either scan a merchant's code or show your own for them to scan. It's accepted almost everywhere a Chinese person pays, which is why visitors reach for it. Since 2023 foreigners can link an international card (Visa, Mastercard or JCB) directly — no Chinese bank account needed — and Alipay tends to onboard foreign cards more smoothly than WeChat Pay.
+
+Setting up Alipay as a foreigner
+
+The broad steps: download Alipay, register with your home mobile number, and complete real-name verification with your passport (expect a photo of the passport page and a quick facial scan). You then add an international card (Visa, Mastercard or JCB) to pay from. Verify fully — unverified accounts are capped at much lower limits. Set this up before you fly, on a reliable connection — sorting it out at a checkout counter while a queue forms behind you is where trips go wrong.
+
+Paying with Alipay
+
+At the till you either open the scan function and point your phone at the merchant's QR code, or open your payment code for them to scan. Smaller vendors usually display a static code you scan and then type the amount into. It's quick once it works — the friction is in the setup and the occasional declined or flagged transaction.
+
+The catches to expect
+
+A few things trip visitors up: identity checks that resurface for larger or more frequent payments; per-transaction and annual limits on foreign-card spending; merchant fees that can apply above a small payment threshold, on top of your card's FX; and the simple fact that a linked foreign card sometimes gets declined with little explanation. None of it is a dealbreaker, but it's why a card that works on its own is a good thing to carry.
+
+A simpler route: an Altery UnionPay card
+
+You have a simpler option. Because UnionPay is China's domestic network, an overseas UnionPay card from Altery is accepted directly at the terminal — tapped or inserted, with no wallet app to set up, link or verify. UK residents set it up in about a minute, top up in GBP and have the card posted before they travel — a dependable fallback for any time the app won't cooperate.
+
+Frequently asked questions
+
+Do I need a Chinese bank account to use Alipay?
+
+No. Tourists can register with a home phone number and pay using a foreign card or a topped-up balance — a Chinese bank account is not required.
+
+Why does Alipay keep declining my card?
+
+Foreign-card declines happen for many reasons — issuer blocks, verification prompts, or merchant settings. Carrying a UnionPay card that's accepted directly is the most reliable fallback.
+
+Are there limits or fees?
+
+Yes — expect per-transaction and annual limits on foreign-card spending (unverified accounts are capped much lower), and a fee can apply above a small payment threshold on top of currency conversion. The exact figures change, so check in-app.
+
+This guide is for general information only and is not financial advice. Payment acceptance, app features and fees in China change over time, so check the latest details before you travel.
+
+Travel China with Altery UnionPay
+
+Get UnionPay-ready
+
+Keep reading
+
+5 Jun, 2026
+|
+6 min read
+
+How to pay with WeChat Pay in China
+
+Setting up WeChat Pay as a visitor, where it gets stuck, and the cleaner way to pay across China.
+
+5 Jun, 2026
+|
+6 min read
+
+How to pay in China as a tourist
+
+Where foreign cards work, what the Alipay and WeChat workaround actually involves, and the simplest way for UK travellers to pay.
+
+Legal Information
+
+Terms and conditions
+
+Cookies policy
+
+Card terms & conditions
+
+Bug hunting terms & conditions
+
+Non-solicitation statement
+
+Raise a complaint
+
+Privacy policy
+
+Altery
+
+Altery Fees
+
+Altery Status
+
+Financial Statements
+
+Contacts
+
+Open Banking
+
+Resources
+
+Help Centre
+
+App Store
+
+Google Play
+
+Telegram mini app
+
+Apple Pay
+
+Altery Ltd. , registered in England and Wales under company number 06984177, with registered office at One Canada Square, Office 24, Hgs 24, London, England, E14 5AB, is authorised by the Financial Conduct Authority as an Electronic Money Institution (FCA Firm Reference Number 901037).
+Electronic money services are regulated under the Electronic Money Regulations 2011.
+Client funds are safeguarded in accordance with FCA requirements, not the Financial Services Compensation Scheme (FSCS).
+You may verify our authorisation on the Financial Services Register .
+
+All rights reserved. &copy; 2026
+
+Get the app
+
+Set up before you land in China.
+
+Scan the QR code to open your Altery account in minutes.

@@ -1,0 +1,254 @@
+# source: https://mychina.guide/blog/how-to-use-didi-china-without-chinese-number
+# final: https://mychina.guide/blog/how-to-use-didi-china-without-chinese-number
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:28.449Z
+# bytes(raw): 71354
+# bytes(text): 13430
+# title: How to Use DiDi in China Without a Chinese Number
+How to Use DiDi in China Without a Chinese Number
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · January 15, 2026 · 9 min read · 9,178 views
+How to Use DiDi in China Without a Chinese Number or Card
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 14, 2026
+
+On this page 14 sections 01 The recommended setup
+02 Registering with a foreign phone number
+03 Adding an international card
+04 How to choose the correct pickup point
+05 Entering a destination that has no useful English name
+06 Selecting a ride category
+07 Communicating with the driver
+08 Airports and railway stations
+09 Safety and trip checks
+10 Common problems and fixes
+11 Does DiDi Work in Hong Kong?
+12 What DiDi Rides Actually Cost in 2026
+13 Frequently asked questions
+14 Sources
+
+Foreign visitors can use DiDi in China with an international mobile number and an eligible international bank card. DiDi's official China app offers an English interface, global-number registration, bilingual in-app messages and support for international cards. A Chinese SIM and a Chinese bank account are not mandatory for the standard setup.
+Install and configure the app before you need an airport pickup. The payment card is rarely the hard part; choosing a legal, easy-to-find pickup point is where most journeys go wrong.
+The recommended setup
+Download the official “DiDi: China Ride Hailing” app from your phone's app store.
+
+Select your international country code and verify the phone number.
+
+Switch the interface to English if it is not selected automatically.
+
+Add an international bank card in the payment section.
+
+Save your hotel in Chinese and English.
+
+Allow location access while using the app.
+
+Make the first request from a simple street pickup, not a crowded airport lane.
+
+The official app is the clearest primary method because it keeps ride details, support and payment in one account. DiDi mini-programs inside Alipay or WeChat can be useful fallbacks, but their menus and payment behavior may differ.
+
+MyChinaGuide app · free
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Registering with a foreign phone number
+Choose the correct country code instead of typing it into the phone-number field twice. Keep the SIM or eSIM able to receive verification messages. A data-only travel eSIM cannot receive an SMS unless it also includes a phone number and messaging service.
+If the code does not arrive:
+check that the number includes the correct country code;
+
+turn off aggressive SMS filtering;
+
+confirm that the home SIM has roaming for incoming messages;
+
+wait before requesting repeated codes;
+
+try again on a stable connection.
+
+Do not buy a Chinese SIM solely because an old guide says DiDi rejects every foreign number. DiDi's current official listing and the Chinese Ministry of Commerce's guide for foreign nationals both state support for foreign mobile numbers.
+Adding an international card
+Add a card before ordering. The current official app listing says international bank cards are supported, but a particular card can still fail because of issuer controls, online-payment settings or risk checks.
+If the card is rejected, try these steps in order:
+Confirm that online and overseas transactions are enabled with the card issuer.
+
+Re-enter the name, card number, expiry date and security code carefully.
+
+Try another card from a different network or issuer.
+
+Use DiDi through Alipay or WeChat if you have already linked and verified a foreign card there.
+
+Do not assume cash will solve every failure. Payment methods and driver handling vary by service and city. Confirm a working in-app method before the ride rather than negotiating at the destination.
+How to choose the correct pickup point
+DiDi uses a pickup pin, not your intention. In airports, railway stations, shopping centers and old-city districts, cars may only stop in designated zones. The nearest-looking road on the map may be separated from you by a fence, elevated road or security barrier.
+Use this sequence:
+stand at the signed ride-hailing pickup area first;
+
+search the exact pickup bay or entrance in the app;
+
+compare the pin with a current local map;
+
+read the car plate and vehicle color before entering;
+
+use the in-app message templates if the driver asks where you are.
+
+At a hotel, ask reception to confirm the pickup pin. At a railway station, follow signs for online ride-hailing rather than requesting a car while still inside the arrivals hall.
+Our China map-app guide explains why Apple Maps or AMap Global is a better cross-check than an old Google Maps pin in mainland China.
+Entering a destination that has no useful English name
+Paste the Chinese address from the hotel, attraction or booking confirmation. Confirm the district and nearby landmark before requesting. For chain hotels, railway stations and airports, similar English names can represent different branches or terminals.
+If a venue sent an AMap location link, open it and copy the Chinese name into DiDi. Do not select a destination only because the English translation looks close.
+For large attractions, choose the gate you intend to use. The center pin for the Forbidden City, Summer Palace or a mountain park can leave you far from the ticket entrance.
+Selecting a ride category
+The categories shown depend on city, time and availability. The basic economy option is usually enough for one or two travelers with light luggage. A larger vehicle is a better choice when the luggage will not fit safely in a normal trunk.
+Do not rely on a category name to override passenger or baggage limits. If you have several full-size suitcases, select a vehicle with appropriate capacity rather than making the driver solve it at the curb.
+The app shows an estimate before confirmation. Tolls, waiting, route changes and other disclosed charges can affect the final total. Review the fare details in the current order screen; do not use a price screenshot from another city or year as a quote.
+Communicating with the driver
+DiDi provides bilingual in-app messaging and common phrase templates. Keep communication inside the app when possible so the pickup and message history remain attached to the trip.
+Useful messages usually concern one of four things:
+the pickup bay;
+
+what you are wearing;
+
+which entrance you are standing beside;
+
+whether the car can legally reach your pin.
+
+Avoid sending a long machine-translated paragraph. A short message such as “I am at Gate 3, beside the blue sign” is easier to act on. If hotel staff are available, they can speak to the driver through the in-app call without changing the destination.
+Airports and railway stations
+Do not request the ride immediately after landing. First clear immigration or exit the train, collect luggage, reach the designated pickup zone and confirm the terminal or station exit.
+At Beijing, Shanghai and other multi-terminal airports, the terminal is part of the address. At large rail hubs, “north square” and “south square” can lead to different road systems. Screenshot the order and plate in case you temporarily lose data while walking to the bay.
+When traveling to a railway station, enter the exact station from your ticket. Read our 12306 guide for foreign passengers before booking; a DiDi ride to Beijing West cannot fix a ticket departing from Beijing South.
+Safety and trip checks
+Before entering the vehicle, match the plate, car model or color, and driver details shown in the app. Sit where you are comfortable, wear the seat belt and keep the trip in the app. If the details do not match, do not enter.
+Share the trip through the app when that feature is available. For urgent danger, contact local emergency services; app support is not a replacement for the police or medical services.
+After the ride, check the receipt before rating. If the route or charge appears wrong, open the trip record and use the in-app support path. DiDi's official listing advertises 24/7 bilingual customer support, but response channel and resolution time can vary.
+Common problems and fixes
+The driver cannot find me
+Move only if the app or driver directs you to a legal pickup area. Send a short landmark message and verify the plate. Cancelling repeatedly can create fees or delay.
+The destination pin is wrong
+Do not start the ride. Edit the destination using the Chinese address or choose the correct branch. If the trip has started, use the app's destination-change option if offered and confirm the change with the driver.
+The payment fails after the ride
+Keep the trip record. Follow the app's payment prompt, try the verified backup card or contact support. Do not create a new account to hide an unpaid order.
+I cannot read a Chinese notice
+Use screenshot translation for the notice, but make payment and safety decisions only after understanding the result. Hotel staff can help with a one-off message; official support is better for account or charge disputes.
+Does DiDi Work in Hong Kong?
+Sort of — but not the way it works on the mainland. Hong Kong law doesn't allow private-car ride-hailing, so there's no DiDi Express there. What DiDi offers in Hong Kong is licensed taxi hailing plus cross-border chauffeur rides to Shenzhen, Guangzhou, and other Greater Bay Area cities — and the same mainland DiDi app covers it. For getting around Hong Kong itself, most visitors have an easier time with Uber, which runs both UberX and Uber Taxi there and takes foreign cards natively.
+If you're crossing from Hong Kong into the mainland, sort out the entry rules first — the border is the part that catches people out, not the ride.
+What DiDi Rides Actually Cost in 2026
+DiDi doesn't publish a national price table, and fares vary by city and hour, so treat these as planning ranges: base fares in most big cities run roughly ¥6–13 / $1–2, and a typical 5 km cross-town Express ride lands around ¥15–25 / $2–3.50. Airport runs cost several times a downtown hop.
+Honestly, the sticker shock for most of my clients goes the other way — rides cost a fraction of what they'd pay at home. The app shows an upfront price estimate before you confirm, so you're never guessing. If the number looks wrong, cancel before a driver accepts and re-enter the destination.
+Frequently asked questions
+Can tourists use DiDi without a Chinese phone number?
+Yes. DiDi officially supports registration with global mobile numbers. The number must be able to receive the verification code.
+Can I pay DiDi with Visa or Mastercard?
+DiDi says it supports international bank cards. Acceptance of a specific card depends on the issuer and account checks, so add and verify a backup before the first ride.
+Is DiDi available in English?
+Yes. The official China ride-hailing app includes an English interface and bilingual in-app messages.
+Should I use DiDi inside Alipay instead?
+It is a useful fallback if Alipay and its linked card already work. For frequent rides, the standalone DiDi app gives a clearer place for trip history, settings and support.
+Sources
+DiDi: China Ride Hailing official App Store listing , checked 2026-07-16.
+
+Ministry of Commerce guide for foreign nationals in China , checked 2026-07-16.
+
+Share this article
+
+Tags
+# DiDi # China apps # transport # first-time visitors
+
+Travelers also asked
+View all →
+What digital tools do I absolutely need before landing in China to avoid getting stuck? →
+What digital and logistical preparations are most critical for a first-time trip to mainland China? →
+What essential digital preparations should I make before arriving in China as a first-time visitor? →
+What are the best payment methods for travelers in China, and are credit cards or cash widely accepted? →
+
+Related articles
+View all →
+April 11, 2026 · How-To Guide
+China Survival Guide for Tourists: Essentials for 2026
+
+May 19, 2026 · Travel Tip
+Best Map App in China (2026): Amap vs Apple vs Baidu
+
+January 28, 2026 · How-To Guide
+Rent a Scooter in Chengdu Without WeChat Pay: Foreigner Guide 2026
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

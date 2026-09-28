@@ -1,0 +1,345 @@
+# source: https://mychina.guide/blog/hong-kong-to-mainland-china-high-speed-rail
+# final: https://mychina.guide/blog/hong-kong-to-mainland-china-high-speed-rail
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:27.848Z
+# bytes(raw): 66902
+# bytes(text): 14377
+# title: Hong Kong High Speed Rail Tickets: Fares & Routes (2026)
+Hong Kong High Speed Rail Tickets: Fares & Routes (2026)
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · September 8, 2026 · 11 min read · 768 views
+Hong Kong to Mainland China by High-Speed Rail (2026)
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 9 sections 01 The Express Rail Link in 60 Seconds
+02 West Kowloon Station: What to Expect
+03 Destinations & Fares From West Kowloon
+04 How to Buy Hong Kong High Speed Rail Tickets
+05 The Passport + Visa Check (Don't Skip This)
+06 What It's Actually Like to Ride
+07 Day Trip Idea: Hong Kong → Guangzhou and Back
+08 FAQ
+09 Bottom Line
+
+You can step onto a high-speed train in Hong Kong at 9:00 AM and walk out in Beijing at 6:02 PM the same day, 2,400 km (1,491 mi) away. The fastest run to Shenzhen? 14 minutes. Fares start at HK$78 (US$10) . And the weird part: you clear both Hong Kong exit immigration and mainland China entry immigration without ever leaving West Kowloon Station. Everything happens under one roof, before you board.
+That single trick, called co-located immigration , is what turns a miserable 2-hour border crawl through Lo Wu into a 14-minute train ride. It also catches first-timers off guard. The moment you walk past the yellow line on level B3 at West Kowloon, you're legally standing on mainland Chinese soil, still in Hong Kong.
+What this guide covers:
+Every destination, fare, and travel time from West Kowloon in 2026
+
+How co-located immigration works (and when to arrive)
+
+Buying hong kong high speed rail tickets on MTR vs 12306
+
+The visa rule that stops some travelers at the gate
+
+Luggage, classes, real-name ID: what actually matters
+
+The Express Rail Link in 60 Seconds
+The line is officially the Guangzhou-Shenzhen-Hong Kong Express Rail Link (XRL) , sometimes called Guangshen'gang. It opened on 23 September 2018 after nearly a decade of political fighting over the border arrangement. From Hong Kong's side, 26 km of dedicated underground track runs from West Kowloon to the Shenzhen boundary. From the mainland side, it plugs into the national HSR grid.
+Once you're on the mainland network you can go almost anywhere. Futian in 14 minutes. Guangzhou in 47. Changsha in under 3 hours. Beijing West in about 9 hours flat.
+Operated jointly by MTR Hong Kong (local stretch) and China Railway (everything past Futian). Trains run at 200 km/h inside Hong Kong and 350 km/h on the mainland , on the same CR400AF Fuxing sets you'd see on the Beijing-Shanghai corridor.
+One line. Two jurisdictions. Zero border stops.
+
+MyChinaGuide app · free
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+West Kowloon Station: What to Expect
+West Kowloon is a massive underground terminus directly above Kowloon Station on the Tung Chung and Airport Express lines. From the Airport Express platform to the HSR ticket hall is a 5-minute walk with luggage. Cross-platform signs are in English, Cantonese, and Mandarin.
+When you arrive, you'll drop into four levels:
+Ground floor : Ticket counters, cafes, 7-Eleven, waiting area
+
+B1 : Security screening (think airport X-ray, but faster)
+
+B2 : Hong Kong exit immigration + mainland entry immigration (the co-location zone)
+
+B3 : Departure hall and 15 train platforms
+
+The whole walkthrough from the ticket hall to your seat takes about 25-35 minutes on a normal day, and longer around Chinese New Year and other holiday peaks. MTR officially tells you to arrive 45 minutes before departure. Don't push that window. The gates close 5 minutes before the train leaves and they do not wait.
+The Co-Located Immigration Trick
+Here's the thing nobody tells you before your first ride. At West Kowloon, after security, you walk up to the Hong Kong exit counter, get your HK stamp (or e-Channel scan), walk ten meters forward , and immediately face mainland China's entry counter. Two separate border controls, Hong Kong immigration and mainland immigration, ten meters apart inside the same building.
+The moment you cross the second counter, you are legally in mainland China . Full mainland law applies. There's a yellow line on the floor and a small sign that most people walk past without noticing.
+This matters for one reason: West Kowloon counts as a mainland port of entry. If you need a Chinese visa, you need it here , not when you arrive in Guangzhou. If you're using 240-hour visa-free transit, this is where it activates. More on that in a minute.
+The payoff? Your train doesn't stop at the border. It tunnels straight through and the first stop is Futian in downtown Shenzhen. No Lo Wu queue. No Shenzhen Bay shuttle bus. No passport stamp at the other end. I still find it surreal.
+Destinations & Fares From West Kowloon
+Here's what you can actually book in 2026, sorted by travel time. Second Class fares shown. First Class adds roughly 60%, Business Class doubles or triples the price.
+Destination
+
+Distance
+
+Fastest time
+
+2nd Class (HK$)
+
+US$
+
+Notes
+
+Futian (Shenzhen)
+
+26 km
+
+14 min
+
+HK$78
+
+$10
+
+Downtown Shenzhen, CBD
+
+Shenzhen North
+
+35 km
+
+19 min
+
+HK$82
+
+$10.50
+
+Hub for onward mainland HSR
+
+Humen
+
+85 km
+
+33 min
+
+HK$125
+
+$16
+
+Dongguan manufacturing belt
+
+Guangzhou South
+
+142 km
+
+47 min
+
+HK$247
+
+$31.60
+
+Main Guangzhou HSR terminus
+
+Foshan West
+
+176 km
+
+1h 22m
+
+HK$250
+
+$32
+
+Bruce Lee's ancestral town
+
+Chaoshan
+
+412 km
+
+2h 17m
+
+HK$450
+
+$57.60
+
+Teochew food trip
+
+Xiamen North
+
+647 km
+
+3h 44m
+
+HK$760
+
+$97
+
+Coastal Fujian
+
+Changsha South
+
+700 km
+
+2h 50m
+
+HK$540
+
+$69
+
+Hunan hot pot, Mao's hometown
+
+Wuhan
+
+1,069 km
+
+4h 30m
+
+HK$768
+
+$98
+
+Yangtze crossing
+
+Shanghai Hongqiao
+
+1,800 km
+
+8h 10m
+
+HK$1,008
+
+$129
+
+Direct long-haul
+
+Beijing West
+
+2,400 km
+
+8h 56m
+
+HK$1,077
+
+$138
+
+The 9-hour epic
+
+Fares in the table are from MTR's published fare search for April 2026 runs. They shift seasonally. Chinese New Year, Golden Week, and summer holidays see prices peak at the top of each band. Off-peak Wednesday afternoon? You'll sometimes see Futian runs for less.
+A few things worth knowing. The Beijing run is one train a day, G80 in the southbound direction, G79 leaving West Kowloon around 9:00 AM. Miss it and your next option is flying or breaking the trip at Guangzhou. The Shanghai run is similar: one or two daily departures, typically G100 / G102 out of West Kowloon. Bank on it being sold out on weekends.
+For short hops to Futian and Shenzhen North , trains run every 15-20 minutes through the day. Walk in, buy, board. No reservation anxiety.
+How to Buy Hong Kong High Speed Rail Tickets
+Four real options for hong kong high speed rail tickets , ranked by how I'd actually use them.
+1. MTR High Speed Rail website (the official HK portal)
+URL: highspeed.mtr.com.hk . Run by MTR Hong Kong, plugs straight into China Railway's 12306 inventory. Tickets sold in RMB with automatic HKD conversion. Booking window opens 15 days before departure . Accepts Visa, Mastercard, UnionPay, Alipay HK. English interface, no mainland phone required, passport + email to register. Customer service answers phones in Hong Kong.
+2. China Railway 12306 (the mainland platform)
+URL: 12306.cn/en . The source. If MTR doesn't have a route, 12306 probably does. You'll need a passport-verified account , which now works without a mainland phone number (full walkthrough in our China HSR guide ). Full inventory, lowest prices, occasional CAPTCHA headaches. For your first HK-to-mainland trip, the MTR portal is easier.
+3. Klook or Trip.com
+Resell 12306 inventory with a US$2-5 service fee per ticket. Worth it for Apple Pay or buying multiple destinations in one checkout without re-entering passports. Skip if you hate service fees on principle.
+4. West Kowloon ticket counter
+Counters open at 06:30 until the last train. Futian or Shenzhen North tickets 30 minutes before departure , no drama. For anything further, don't gamble on walk-ups. By 10 AM the good Beijing and Shanghai seats are gone.
+Real-name policy : Whichever channel you use, the passport number on the booking must match the passport you show at the gate. One typo and you get bounced to the service counter. Triple-check before you submit.
+The Passport + Visa Check (Don't Skip This)
+Because West Kowloon is a port of entry to mainland China, you need valid status to board . Not to buy the ticket. To actually cross the second counter.
+Your options in 2026:
+Regular Chinese visa (10-year L visa, single-entry, etc.)
+
+240-hour visa-free transit , which now covers 57 countries including the US, UK, Canada, Australia, and most of the EU, at 65 ports (West Kowloon included)
+
+Hainan or Guangdong visa-free entry (limited use, zone restricted)
+
+Guangdong 144-hour ASEAN regional waiver
+
+If you're American or European and you're transiting China within 10 days, the 240-hour policy is usually the move. Our guide on Hong Kong visa for US citizens covers the HK side; the mainland side is a separate check at West Kowloon.
+Don't assume your Hong Kong visa-free status extends to the mainland. It does not. Hong Kong and mainland China are separate immigration jurisdictions, even though you're crossing inside one building.
+What It's Actually Like to Ride
+Luggage : 20 kg per adult, 10 kg per child, max linear dimension 130 cm (length + width + height). No checked bags. You carry it onto the train. Overhead racks and end-of-carriage shelves swallow a standard carry-on easily. A full 30-inch checked suitcase? Tight, but doable.
+Seating : Second Class is 3+2 across, reclining, lots of legroom, tray tables and power outlets. It's more comfortable than a European regional train. First Class is 2+2 with extra recline. Business/Premier is lie-flat-ish lounge seats, more than double the price, honestly not worth it for under 4 hours unless you're in love with the experience.
+Food : Dining car on long-haul runs, trolley every 30 minutes. Instant noodles, dumplings, Coke, beer. Bring your own snacks. Free hot water dispensers at the end of each carriage.
+Phones : 4G/5G works in most of the Hong Kong tunnel, cuts at the mainland border, returns above ground near Futian. Use that minute to download offline maps before you lose signal.
+Day Trip Idea: Hong Kong → Guangzhou and Back
+My favorite use of this line is a Guangzhou day trip . Catch the 8:17 AM G6502, arrive Guangzhou South at 9:04. Taxi 20 minutes to Yuexiu: Chen Clan Ancestral Hall in the morning, dim sum at Tao Heung, Shamian Island in the afternoon. Back on the 6:32 PM train, in Hong Kong by 7:19 for dinner in Mong Kok.
+Total cost: HK$494 round trip (US$63) in Second Class. You'll eat better Cantonese food in Guangzhou than in Hong Kong, and most travelers don't realize how close it actually is.
+FAQ
+Can I buy tickets at West Kowloon the day I travel? Yes for Futian and Shenzhen North, almost always. Yes for Guangzhou on weekdays. No for Beijing, Shanghai, or Wuhan on a weekend. Those sell out 2-3 days ahead.
+Do I need to print my ticket? No. Your passport is the ticket. Since late 2020 the whole system is paperless for foreigners.
+Can I use HKD or do I need RMB? MTR charges in HKD on your card. On board, staff take Alipay, WeChat Pay, and RMB cash. HKD works in the Hong Kong section only.
+What if I miss my train? You forfeit long-haul tickets. On short hops, the service desk will often switch you to the next train if there's space. Be polite. It helps.
+Can I break the trip? No. HSR tickets are point-to-point. To stop in Guangzhou on your way to Changsha, book two separate tickets.
+Does the 240-hour transit clock start when I board? No. It starts when you clear the mainland entry counter at West Kowloon, not when you arrive in Beijing.
+Bottom Line
+The XRL is the easiest way to get from Hong Kong to mainland China . Fares start at HK$78 for a 14-minute Futian run, max out around HK$1,077 for the 9-hour haul to Beijing West, and the whole thing routes through co-located immigration at West Kowloon so you clear both immigration checks without leaving the building. Book on highspeed.mtr.com.hk for the cleanest HK experience, or 12306.cn/en for the full mainland inventory. Show up 45 minutes early, bring your passport, and don't assume Hong Kong visa-free status covers the mainland side. It doesn't.
+For the broader picture of where every line goes, check our China high-speed rail map and the full China railway network guide . If you're weighing the Hong Kong-Beijing rail option against a flight, we broke down the math on the similar Beijing to Shanghai train vs flight comparison .
+For the official source, MTR Hong Kong High Speed Rail publishes live fares and timetables at highspeed.mtr.com.hk , and China Railway runs the mainland inventory at 12306.cn/en . Travel China Guide has a solid deep-dive at travelchinaguide.com .
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Share this article
+
+Tags
+# xrl # hong-kong # hsr # west-kowloon
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

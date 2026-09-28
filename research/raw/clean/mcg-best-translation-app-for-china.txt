@@ -1,0 +1,239 @@
+# source: https://mychina.guide/blog/best-translation-app-for-china
+# final: https://mychina.guide/blog/best-translation-app-for-china
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:23.233Z
+# bytes(raw): 75189
+# bytes(text): 16332
+# title: Best Translation App for China 2026 - 6 Real Picks
+
+Best Translation App for China 2026 - 6 Real Picks
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog Travel Tip · July 22, 2026 · 11 min read · 2,839 views
+Best Translation App for China - 6 Apps That Actually Work in 2026
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 14, 2026
+
+On this page 12 sections 01 How I judge a translation app for China
+02 The comparison at a glance
+03 1. Google Translate — best offline all-rounder, useless online
+04 2. Apple Translate — best overall for iPhone users
+05 3. Microsoft Translator — best connected translator that is not blocked
+06 4. Pleco — best dictionary, and the pro's menu tool
+07 5. Baidu Translate — powerful engine, rough ride for visitors
+08 6. MyChinaGuide — the offline safety net (full disclosure: this is our app)
+09 Which app for which situation
+10 The realistic 2026 setup
+11 Frequently asked questions
+12 Sources
+
+The best translation app for China in 2026 is Apple Translate for iPhone users and Google Translate's offline mode for Android users — but only if you download the Chinese language packs before you arrive. Google's online services are blocked in mainland China, while Apple Translate and Microsoft Translator both work there without a VPN. For a dedicated dictionary, Pleco is unmatched, and its US $29.99 (about ¥215) Basic bundle adds live camera character recognition. Baidu Translate is powerful and unblocked, but its mostly-Chinese interface frustrates travelers who cannot read the menus inside the app itself. Whatever you pick, the rule that matters most is simple: set everything up at home, because Google Play is blocked in China and downloads there range from slow to impossible. Pair one general translator with an offline phrasebook and you can handle menus, taxi rides, pharmacies, and hotel check-ins even with no data connection.
+I take somewhere north of 200 foreign visitors around China every year, and I watch them use translation apps daily — at hotpot tables, in pharmacy aisles, leaning into taxi windows. The gap between apps that look good in an app-store listing and apps that survive contact with the Great Firewall is enormous. This list only cares about the second kind.
+How I judge a translation app for China
+Reviews written outside China miss the one criterion that decides everything: does it work without a VPN? Google, and everything that runs on Google's servers, is blocked in mainland China. An app that is brilliant in Barcelona can be a blank screen in Shanghai. So every app below is judged on five things, in order of importance:
+Works without a VPN — the deal-breaker. If it needs blocked servers and you have no VPN or foreign roaming data, nothing else matters.
+
+Offline support — subway stations, elevators, and rural stretches still have dead zones, and offline mode also sidesteps the firewall entirely.
+
+Camera and menu translation — the feature you will use most at restaurants.
+
+Conversation mode — two-way voice for real back-and-forth.
+
+Price — most of these are free; I flag the exceptions.
+
+One connectivity note before the list: if you use a travel eSIM with international roaming , your data exits through your home carrier and is not filtered by the firewall, so even blocked apps work online. The rankings below assume the harder case — local Wi-Fi or a Chinese SIM with no VPN.
+
+Menus and signs, in English
+Point the camera at any menu or sign to translate it. Every restaurant in the app shows its first three dishes free, with photos and English names.
+
+The comparison at a glance
+App
+
+Works in China without VPN
+
+Offline mode
+
+Camera / menu
+
+Conversation mode
+
+Price
+
+Google Translate
+
+Offline features only
+
+Yes (text + live camera, with pre-downloaded packs)
+
+Yes, offline live overlay
+
+No (needs connection + VPN)
+
+Free
+
+Apple Translate
+
+Yes
+
+Yes (downloaded languages, on-device)
+
+Yes (iOS 16+)
+
+Yes
+
+Free, built into iPhone
+
+Microsoft Translator
+
+Yes
+
+Yes (downloadable packs)
+
+Yes
+
+Two-way on one device (multi-device Converse retired June 2026)
+
+Free
+
+Pleco
+
+Yes
+
+Yes (fully offline dictionary)
+
+OCR in paid bundle
+
+No
+
+Free core; Basic bundle US $29.99 (about ¥215)
+
+Baidu Translate
+
+Yes
+
+Yes
+
+Yes
+
+Yes
+
+Free
+
+Yes (offline-first)
+
+Yes (phrasebook + guides)
+
+Curated menu and sign guides, not general camera translation
+
+No
+
+Free to download
+
+1. Google Translate — best offline all-rounder, useless online
+Google discontinued its mainland China service in October 2022, so the website, the app's online mode, and Chrome page translation are all dead in China without a VPN. That is the bad news, and it surprises travelers every single week.
+The good news: the offline mode runs entirely on your phone and works perfectly inside China. Download the Chinese (Simplified) pack before you fly and you keep typed translation in both directions plus the live camera overlay for menus and signs — no connection needed, so nothing to block. Voice conversation mode and photo-import scanning still need Google's servers, so they stay broken.
+The full breakdown, including the exact setup steps and a test to run before you board, is in our companion guide: does Google Translate work in China?
+Get it if: you use Android, you prepare before the flight, and you want the most polished offline text and camera translation available.
+2. Apple Translate — best overall for iPhone users
+Apple's services are not blocked in China, which makes the preinstalled Translate app the lowest-effort answer on this list. Download English and Chinese (Mandarin, Simplified) for offline use and translation runs on-device; stay online and it simply works, VPN or not. You get typed text, a genuinely usable two-way conversation mode, and camera translation on iOS 16 and later.
+Its Mandarin output is accurate for travel purposes, and the conversation view — two panes facing opposite directions — is the most natural way I have seen for clients to talk with a hotel receptionist. The limitation is scope: it translates between far fewer languages than Google or Microsoft, and there is no Android version.
+Get it if: you carry an iPhone. For most of my iPhone clients this is the only general translator they end up using.
+3. Microsoft Translator — best connected translator that is not blocked
+Microsoft Translator has quietly become the best online translation app you can actually use in China. It is free, reachable without a VPN, supports over 100 languages, and offers downloadable offline packs plus camera translation for signs and menus.
+One 2026 update to know about: Microsoft retired the multi-device "Converse" feature — the group mode where several phones joined one translated conversation — on June 30, 2026. The single-device experience continues, including two-way voice on one shared phone, text, and camera translation. For Android users, this app plus Google's offline packs is the strongest realistic combination.
+Get it if: you are on Android and want a translator whose online features work in China.
+4. Pleco — best dictionary, and the pro's menu tool
+Pleco is not a sentence translator; it is the definitive Chinese-English dictionary app, fully offline, and beloved by every long-term China resident I know. Where Google gives you a sentence's gist, Pleco tells you exactly what a character means, how it is pronounced, and what dishes it appears in.
+The core app is free. The Basic bundle — US $29.99 (about ¥215), one-time — adds the live OCR that reads characters through your camera, plus handwriting input and flashcards; a Professional bundle with more dictionaries runs US $59.99 (about ¥430). For a one-week trip it is overkill. For a month, a study program, or anyone who wants to know the difference between 牛肉 (beef) and 牛杂 (beef offal) before ordering, it pays for itself the first evening.
+Get it if: you are staying longer, learning Chinese, or want precise answers instead of approximate sentences.
+5. Baidu Translate — powerful engine, rough ride for visitors
+Baidu Translate is what Chinese users reach for, and the engine itself is excellent — 200+ languages, strong English-Chinese quality, offline packs, camera and conversation modes, all free and obviously unblocked. Chinese official travel guidance regularly recommends it to foreign visitors.
+The problem is the packaging. The app's interface, store listing, and settings lean heavily on Chinese, and English-interface support is inconsistent enough that I stopped recommending it to first-time visitors: an app you need translated in order to use is solving the wrong problem. If a Chinese friend sets it up for you, it is arguably the strongest translator in this list. Without that help, expect to fumble.
+Get it if: you read some Chinese, or a local can configure it for you.
+6. MyChinaGuide — the offline safety net (full disclosure: this is our app)
+Full disclosure: this is our app, so weigh this entry accordingly. MyChinaGuide is not a general machine translator and does not pretend to be one. It is an offline survival guide: a curated phrasebook of the sentences travelers actually need — taxi, restaurant, pharmacy, hotel, emergencies — with characters you can show a local, plus menu vocabulary and explanations of common signs, all stored on the device.
+The reason it earns a slot on this list is failure modes. Machine translation depends on a working phone doing live inference, and the moments you most need help — no signal in a subway transfer, 3% battery, a handwritten menu the camera cannot parse — are exactly when live translation quits. A pre-written 我要去这个地址 ("I want to go to this address") card works regardless. My own clients use a general translator for conversation and the curated phrases for high-stakes moments like medication questions.
+Get it if: you want the basics guaranteed to work offline, alongside — not instead of — a general translator.
+Which app for which situation
+Ordering food
+Point Google Translate's offline camera (or Microsoft Translator's camera) at the printed menu for the overall picture, and use Pleco's OCR when one mystery character decides the dish — 辣 means spicy, and you want to know that in advance. A German client of mine last October ordered entirely by camera overlay for two weeks and his only casualty was accidentally doubling his rice orders. Many restaurants also use QR-code ordering through WeChat, where you can long-press dish photos and work from pictures.
+Showing a taxi driver your destination
+Do not rely on speaking. Show characters: paste your destination into any translator and present the Chinese, or better, show the address saved in Chinese from your hotel's booking or a phrasebook card. Drivers scan it in two seconds and go. If you ride with the DiDi app instead, destinations are set in-app and no translation is needed — and since payment is digital there too, have Alipay set up as a foreigner before your first ride.
+At the pharmacy
+This is where I tell clients to slow down. Type full sentences — "I need something for a fever, I am allergic to penicillin" — rather than pointing cameras at boxes, and show the translated text to the pharmacist. Apple Translate's or Microsoft's typed mode handles this well offline. Keep any existing medication's generic name written in your notes, because brand names differ completely in China.
+Hotel front desk
+Conversation mode shines here: quiet room, patient staff, standard vocabulary. Apple Translate's two-pane conversation view or Microsoft Translator's split-screen mode both work without a VPN. Chain hotels in big cities usually have some English at the desk anyway; the app earns its keep at smaller guesthouses.
+The realistic 2026 setup
+If I were packing your phone today: iPhone users take Apple Translate plus Google's offline Chinese pack as backup; Android users take Google's offline pack plus Microsoft Translator for online work; anyone staying more than two weeks adds Pleco; and everyone keeps an offline phrasebook for the moments apps fail. Round out the phone with the rest of our essential apps for China travel checklist, and do every download and test at home — the single most common mistake is assuming you can fix your app situation after landing.
+Do I need a VPN to use translation apps in China?
+Not necessarily. Apple Translate, Microsoft Translator, Baidu Translate, and Pleco all work in China without a VPN, and Google Translate's offline features work because they never contact a server. You only need a VPN (or foreign eSIM roaming data) for Google's online features, such as conversation mode and the website.
+What is the best free translation app for China?
+On iPhone, Apple Translate — preinstalled, unblocked, and offline-capable. On Android, the combination of Google Translate's pre-downloaded offline pack for camera and text plus Microsoft Translator for online voice work costs nothing and covers every common situation.
+Can translation apps work fully offline in China?
+Yes, if you prepare. Google Translate, Apple Translate, Microsoft Translator, and Baidu Translate all offer downloadable language packs that enable offline text translation, and Google's live camera overlay also works offline. Download packs before your trip — inside China, Google's pack downloads are blocked without a VPN.
+Is Baidu Translate good for foreigners?
+The translation engine is excellent and it works without any workarounds, but the app experience leans heavily on a Chinese-language interface, which is a real obstacle if you cannot read it. Most short-term visitors are happier with Apple Translate or Microsoft Translator, both of which have fully English interfaces.
+Sources
+The Seattle Times / AP — Google discontinues Google Translate in mainland China (October 2022)
+
+Google Translate Help — Download and use languages offline
+
+Apple App Store — Translate
+
+WhistleOut — Microsoft Translator without its best feature (Converse retired June 30, 2026)
+
+Pleco — Pricing and bundles
+
+China Daily (govt) — What is a good free and easy-to-use translation app for China?
+
+Tags
+# translation # apps # china-travel # offline # food # transport # health
+
+View all →
+Which apps should I install before traveling to China? →
+What digital tools do I absolutely need before landing in China to avoid getting stuck? →
+What essential digital preparations should I make before arriving in China as a first-time visitor? →
+How difficult is independent travel in China regarding transport and payments, and are local guides necessary? →
+
+View all →
+July 22, 2026 · How-To Guide
+Does Google Translate Work in China? What Actually Works in 2026
+
+March 15, 2026 · How-To Guide
+Independent Travel in China: The Real Guide (2026)
+
+January 11, 2026 · How-To Guide
+How to Order Food in China Without Speaking Chinese
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

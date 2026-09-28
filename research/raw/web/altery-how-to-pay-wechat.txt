@@ -1,0 +1,356 @@
+# source: https://altery.com/personal/use-cases/travel/china/how-to-pay-with-wechat/
+# final: https://altery.com/personal/use-cases/travel/china/how-to-pay-with-wechat/
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:58.714Z
+# bytes(raw): 91390
+# bytes(text): 6424
+# title: How to Pay With WeChat Pay in China (Foreigner's Guide) - Altery
+How to Pay With WeChat Pay in China (Foreigner's Guide) - Altery
+
+&bull;
+Personal
+
+&bull;
+Business
+
+Open account
+
+Open account
+
+&bull;
+Personal
+
+&bull;
+Business
+
+Help
+
+Get the app
+
+Features
+
+Features
+
+Features
+
+Multi-currency account
+
+Bank transfers
+
+Card payments
+
+Currency exchange
+
+Internal transfers
+
+Top up
+
+Pricing
+
+Pricing
+
+Pricing
+
+Personal pricing
+
+Use cases
+
+Use cases
+
+Use cases
+
+Send money abroad
+
+Travel
+
+Daily spending
+
+Multi-currency life
+
+Digital nomads
+
+Receive salary
+
+Freelance income
+
+Resources
+
+Resources
+
+Resources
+
+Send money
+
+Personal guides
+
+Blog
+
+Help Centre
+
+Company
+
+Company
+
+Company
+
+Contacts
+
+Paying, spending and sending money just feels easy
+
+Discover
+
+Get the app
+
+Help
+
+&bull;
+Personal
+
+&bull;
+Business
+
+Help
+
+Log in
+
+Open account
+
+Solutions
+
+Solutions
+
+Solutions
+
+Global account
+
+Currency wallets and FX
+
+Cross-border payments
+
+Mass payments
+
+Cards issuing at scale
+
+API
+
+Multi-company management
+
+Manage team finances
+
+Pricing
+
+Pricing
+
+Pricing
+
+Business plans
+
+Industries
+
+Industries
+
+Industries
+
+Game Studios
+
+Affiliate marketing
+
+Wholesale
+
+IT services
+
+Logistics
+
+EdTech
+
+Sports
+
+Travel
+
+Real Estate
+
+Digital assets native
+
+Resources
+
+Resources
+
+Resources
+
+Business guides
+
+Blog
+
+Events
+
+Help Centre
+
+Company
+
+Company
+
+Company
+
+Contacts
+
+Everything you need to keep your business flowing
+
+Discover
+
+Log in
+
+Open account
+
+Help
+
+Home
+
+Use cases
+
+Travel
+
+China
+
+How to pay with WeChat Pay in China
+
+China
+
+5 Jun, 2026
+|
+6 min read
+
+How to pay with WeChat Pay in China
+
+Zara Chechi
+
+In this article
+
+01. WeChat Pay in everyday China
+
+02. Setting up WeChat Pay as a visitor
+
+03. Making payments
+
+04. Where it gets stuck
+
+05. The cleaner alternative: Altery UnionPay
+
+06. FAQ
+
+WeChat is China's everything-app — messaging, social, and one of the two dominant ways to pay. WeChat Pay lives inside it, so many travellers end up using it simply because their contacts and mini-programs do. Here's how to set it up as a visitor, where it tends to get stuck, and a steadier alternative.
+
+The easiest way to pay in China? A UnionPay card.
+
+Get your card
+
+WeChat Pay in everyday China
+
+WeChat Pay works by QR code, just like Alipay, and is accepted at much the same enormous range of merchants. Because WeChat is also how people chat and use mini-programs, payments are woven into everyday interactions — splitting a bill, paying inside a chat, topping up a service. For a visitor, though, it's a payment tool first.
+
+Setting up WeChat Pay as a visitor
+
+The steps mirror Alipay: install WeChat, create an account with your home number, then open WeChat Pay (Wallet) and add an international card (Visa or Mastercard). You'll complete real-name verification with your passport — a passport-page photo and a live facial scan — before you can spend. WeChat is generally fussier than Alipay at this step, so it's worth setting up both. As with Alipay, do this before you travel — verification can take a few attempts and is far less stressful from your sofa than from a shop counter.
+
+Making payments
+
+To pay, open WeChat Pay and either scan the merchant's QR code or show your own payment code to be scanned. Small vendors typically show a static code; you scan it and enter the amount. When everything is verified and your card is happy, it's seamless — the trouble is keeping it that way.
+
+Where it gets stuck
+
+WeChat Pay is known for occasional friction for foreigners: identity or security checks that can temporarily lock payments, foreign cards that get declined, and limits on how much you can spend by card. Some travellers sail through; others spend an evening wrestling with verification. It's a great convenience when it works, but not something to be your only way to pay.
+
+The cleaner alternative: Altery UnionPay
+
+A UnionPay card sidesteps the single-point-of-failure problem. It's accepted directly across China on the domestic network — so if WeChat is being awkward, you simply tap or insert the card instead of relying on the app at all. Altery issues one to UK residents with minute onboarding, GBP top-ups and the card posted before you fly.
+
+Frequently asked questions
+
+Do I need an existing user to vouch for me?
+
+Short-term visitors can generally register and verify with a passport and home phone number. Heavier requirements mostly affect residents and long-term users, not tourists.
+
+Why is my WeChat Pay locked or restricted?
+
+Security and identity checks can temporarily restrict payments, especially for new foreign accounts. A directly-accepted UnionPay card is the most dependable backup if that happens.
+
+Are there spending limits or fees?
+
+Expect limits on foreign-card spending and a possible fee above a small payment threshold, plus your card's currency conversion. Figures change over time, so verify in-app.
+
+This guide is for general information only and is not financial advice. Payment acceptance, app features and fees in China change over time, so check the latest details before you travel.
+
+Travel China with Altery UnionPay
+
+Get UnionPay-ready
+
+Keep reading
+
+5 Jun, 2026
+|
+6 min read
+
+How to pay with Alipay in China
+
+Setting up Alipay as a visitor, paying by QR, the catches to expect, and a simpler way to pay.
+
+5 Jun, 2026
+|
+6 min read
+
+How to pay in China as a tourist
+
+Where foreign cards work, what the Alipay and WeChat workaround actually involves, and the simplest way for UK travellers to pay.
+
+Legal Information
+
+Terms and conditions
+
+Cookies policy
+
+Card terms & conditions
+
+Bug hunting terms & conditions
+
+Non-solicitation statement
+
+Raise a complaint
+
+Privacy policy
+
+Altery
+
+Altery Fees
+
+Altery Status
+
+Financial Statements
+
+Contacts
+
+Open Banking
+
+Resources
+
+Help Centre
+
+App Store
+
+Google Play
+
+Telegram mini app
+
+Apple Pay
+
+Altery Ltd. , registered in England and Wales under company number 06984177, with registered office at One Canada Square, Office 24, Hgs 24, London, England, E14 5AB, is authorised by the Financial Conduct Authority as an Electronic Money Institution (FCA Firm Reference Number 901037).
+Electronic money services are regulated under the Electronic Money Regulations 2011.
+Client funds are safeguarded in accordance with FCA requirements, not the Financial Services Compensation Scheme (FSCS).
+You may verify our authorisation on the Financial Services Register .
+
+All rights reserved. &copy; 2026
+
+Get the app
+
+Travel China, pay with ease.
+
+Scan the QR code to get your account ready before you go.

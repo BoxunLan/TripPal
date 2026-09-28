@@ -1,0 +1,183 @@
+# source: https://mychina.guide/blog/how-to-order-coffee-in-china-without-chinese
+# final: https://mychina.guide/blog/how-to-order-coffee-in-china-without-chinese
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:28.156Z
+# bytes(raw): 67866
+# bytes(text): 11408
+# title: How to Order Coffee in China Without Speaking Chinese
+
+How to Order Coffee in China Without Speaking Chinese
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · January 12, 2026 · 8 min read · 1,401 views
+How to Order Coffee in China Without Speaking Chinese
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 6 sections 01 How to Order Coffee in China Without Speaking Chinese (Even If You Can’t Read a Single Character)
+02 How to Order Luckin Coffee (China's Biggest Chain, No Counter Ordering)
+03 Common Coffee Terms on Chinese Menus (With Pinyin & English)
+04 How to Use Translation Apps Efficiently at Cafés
+05 Ordering via Meituan/Dianping Like a Local
+06 Frequently Asked Questions
+
+You land at Beijing Daxing Airport, walk into a Luckin Coffee, and run into the first practical question of the trip: how do you order coffee in China without speaking Chinese?
+Let me tell you something: ordering coffee in China as a foreigner isn’t hard. But it is different. And if you don’t prepare, you’ll end up in line for 40 minutes, sweating, trying to mime “less sugar” while someone behind you sighs dramatically.
+
+How to Order Coffee in China Without Speaking Chinese (Even If You Can’t Read a Single Character)
+Small independent cafés often have no card reader, just a QR code on the counter. Scan it with Alipay or WeChat Pay and pay with the card you’ve linked.
+Here’s the thing nobody tells you: mobile payments are everything . Cash? Rare. Credit cards? Not widely accepted. If you don’t have WeChat Pay or Alipay , you’re going to struggle — not just with coffee, but with almost everything in urban China.
+But don’t worry. You don’t need to speak Chinese. You just need the right tools.
+Step-by-Step: How to Actually Pay for Coffee in China
+Pro tip: Download WeChat and Alipay before you land. The foreign versions work fine, and you can link your Visa/Mastercard directly.
+
+Download WeChat & Alipay from your home app store
+
+Do this before arriving. Once you're in China, Google Play is blocked, and downloading apps gets messy. Just search "Alipay Global" or "WeChat" in the App Store or Play Store back home.
+Link your international card
+
+In WeChat: Go to Wallet > Cards > Add Card. Same in Alipay: Profile > Payment Methods > Add Card. Since July 2023, both apps have let you pay with a linked foreign card directly, without topping up a balance. Huge win.
+At the café, scan the menu QR code or use self-service kiosk
+
+Most places — even Starbucks — have digital menus. Scan the code, toggle to English (if needed), pick your drink, size, sugar level. Tap “Pay.”
+Use the app to complete payment
+
+Your phone will open WeChat or Alipay automatically. Confirm the amount (e.g., ¥38 / $5.30 for a Starbucks grande latte), hit pay, show the green checkmark to staff.
+Pro tip: Set your phone language to English. Many local apps — including Luckin’s new Q1 2024 update — auto-display English menus when they detect English system settings.
+
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+
+How to Order Luckin Coffee (China's Biggest Chain, No Counter Ordering)
+Luckin has more stores in China than Starbucks, prices that embarrass Western chains — and no cashier. Stores expect you to order through an app or mini-program, and the main Luckin app needs a +86 Chinese number, which rules most visitors out. The workaround is easy once you know it: open Alipay, search "Luckin" (or scan the QR code on the counter or table), and order through the Luckin mini-program inside Alipay with your linked foreign card. Alipay's built-in translation handles the menu. The same trick works in WeChat if you have WeChat Pay set up.
+Expect list prices around ¥25–35 / $3.50–5, but almost nobody pays that — the mini-program hands out coupons constantly, and ¥10–15 / $1.50–2 per drink is normal. My go-to order for first-timers: the Coconut Latte (生椰拿铁), the drink that made Luckin famous. Set up Alipay with your foreign card before you try this — it's the key that opens every mini-program door.
+Common Coffee Terms on Chinese Menus (With Pinyin & English)
+You don’t need to memorize Mandarin, but knowing a few terms helps when the translation glitch happens.
+拿铁 (nátiě) = Latte
+
+美式 (měishì) = Americano
+
+卡布奇诺 (kǎbùqínuò) = Cappuccino
+
+摩卡 (mókǎ) = Mocha
+
+冷萃 (lěngcuì) = Cold Brew
+
+燕麦奶 (yànmài nǎi) = Oat Milk
+
+少糖 (shǎo táng) = Less Sugar
+
+去冰 (qù bīng) = No Ice
+
+热 (rè) = Hot
+
+中杯 (zhōng bēi) = Medium (Tall)
+
+大杯 (dà bēi) = Large (Grande/Venti)
+
+If you want to sound polite, say qǐngwèn (请问) before asking, as in “Excuse me, where’s the bathroom?” So if you’re pointing at a menu and unsure, try: “Qǐngwèn, zhè ge shì shénme yìsi?” (“What does this mean?”). Staff usually switch to broken English fast.
+If the menu says tèbié tuījiàn (特别推荐), that means “special recommendation.” It’s marketing, not something you have to order.
+Pro tip: Always scan the QR code yourself. Some staff might quote higher prices to foreigners — especially in tourist zones like Wangfujing.
+
+How to Use Translation Apps Efficiently at Cafés
+Google Translate still works in China — barely. But it’s slow and unreliable. Better options?
+Pleco — my go-to. Download the OCR (camera) pack. Point your camera at any menu, and it translates text instantly.
+Apple Translate — if you’re on iOS, it works offline. Bonus: voice mode lets you speak English, and it plays back in Mandarin audio.
+But here’s the thing nobody tells you: don’t rely on real-time speech translation in noisy cafés . Too much background chatter. Instead, type your order in advance:
+“Medium oat milk latte, less sugar, hot”
+
+Save it in your Notes app. Show it to the barista. Takes 3 seconds.
+Not sure whether something at the counter is safe to eat? If it’s in a branded café like Starbucks or Luckin, yes. If it’s a random street stall selling “coffee” from a thermos, maybe skip it.
+Pro tip: Avoid third-party vendors selling “pre-loaded” WeChat top-up cards — these are often scams. Only use official channels like Alipay Global .
+
+Ordering via Meituan/Dianping Like a Local
+Most locals don’t walk into cafes. They order ahead using Meituan or Dianping (China’s Yelp + Uber Eats combo).
+Yes, it’s mostly in Chinese. But here’s how to hack it:
+Set your phone to English
+
+Open Meituan or Dianping (download before arrival)
+
+Search “coffee” — the app shows nearby shops with ratings
+
+Tap a store, select drink, add to cart, pay via linked card
+
+Pick up at counter — they call your number
+
+Ordering ahead is most useful at busy train stations during rush hour, when it lets you skip the queue.
+Starbucks China also has its own app with full English support. A grande latte costs ¥38 ($5.30), same as in the U.S., but you get rewards points. Worth it if you’re here more than 3 days.
+Pro tip: Visit between 10 AM–11 AM or after 2 PM. Avoid 7:30–9:30 AM — that’s when office workers swarm. Queue for 40 minutes? Not worth it.
+
+You might also find these guides helpful: How to Order Food in China Without Speaking Chinese , How to Use Alipay in China as a Foreigner , and How to Use Didi in China Without a Chinese Phone Number .
+
+Q: Can I use credit cards in Chinese coffee shops?
+Most small cafes only accept WeChat or Alipay. Larger chains like Starbucks may take cards, but mobile payment is faster. Link your Visa to Alipay before arrival — it’s free and takes 5 minutes.
+Q: Is the Starbucks menu in English in China?
+Yes, all major Starbucks in Beijing, Shanghai, Guangzhou have bilingual menus. Some even have iPad-style self-order kiosks with English toggle.
+Q: How much does coffee cost in China?
+Luckin: ¥18–21 ($2.50–3) for basic drinks
+
+Starbucks: ¥32–42 ($4.50–6) for a grande latte
+
+Specialty shops (like Seesaw): ¥45–55 ($6.30–7.70)
+
+Q: What if I don’t have a Chinese SIM card?
+No problem. You don’t need one for WeChat Pay or Alipay. A tourist SIM from China Unicom (¥100 / $14 for 7GB/7 days) helps with data, but the apps work on Wi-Fi.
+Q: Are there English-speaking baristas in big cities?
+In central areas like Sanlitun, Xintiandi, or The Bund — yes. But don’t count on fluency. Stick to simple words: “latte,” “hot,” “no sugar.”
+
+Look, I get it. Arriving in a new country and not knowing how to buy a simple coffee feels stressful.
+You don’t need to learn Chinese. You just need to prep: download WeChat , Alipay , set your phone to English, and know that ¥38 gets you a solid latte at Starbucks. Or ¥21 at Luckin — which, by the way, is now China’s largest coffee chain by store count.
+And if you’re heading to a train station or airport, check this: Beijing Daxing Airport and Shanghai Hongqiao Station have self-service kiosks with English interfaces . You can order and pay without saying a word.
+My final piece of advice? Don’t overthink it. Grab your coffee. Sit down. Breathe. You’re in China now.
+
+Tags
+# travel china # coffee in china # wechat pay # alipay # beijing travel tips
+
+View all →
+Is it necessary to speak fluent Chinese to have positive interactions with locals while traveling? →
+What digital tools do I absolutely need before landing in China to avoid getting stuck? →
+How does the cashless payment system work for travelers in China? →
+What are the best payment methods for travelers in China, and are credit cards or cash widely accepted? →
+
+View all →
+January 11, 2026 · How-To Guide
+How to Order Food in China Without Speaking Chinese
+
+March 9, 2026 · How-To Guide
+How To Read a Chinese Restaurant Menu (2026 Foreigner Guide)
+
+July 22, 2026 · Travel Tip
+Best Translation App for China - 6 Apps That Actually Work in 2026
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

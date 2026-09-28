@@ -1,0 +1,237 @@
+# source: https://mychina.guide/blog/china-embassy-consulate-locations
+# final: https://mychina.guide/blog/china-embassy-consulate-locations
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.343Z
+# bytes(raw): 69025
+# bytes(text): 15903
+# title: China Embassy & Consulate Locations: Where to Apply for a Visa
+China Embassy & Consulate Locations: Where to Apply for a Visa
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog Topic · June 15, 2026 · 11 min read · 1,960 views
+China Embassy and Consulate Locations: Where to Apply for Your China Visa
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 14, 2026
+
+On this page 7 sections 01 Where to Apply in the United States
+02 How the US Application Actually Works
+03 The UK, Canada, and Australia: Visa Centers, Not the Embassy
+04 How to Find Your Consular District
+05 Documents, Timing, and Fees at a Glance
+06 Common Reasons Applications Get Rejected
+07 Frequently Asked Questions
+
+Here is the short answer most people are looking for: you do not get to pick where you apply for a China visa. The Chinese embassy or consulate that handles your case is decided by where you live. Apply to the wrong one and your passport comes back with no visa, no refund of your time, and a polite note telling you to start over somewhere else.
+The other thing to clear up right away: in some countries you go to the embassy itself, and in others you never see the embassy at all. In the United States you submit straight to the Chinese embassy or a consulate visa office. In the UK, Canada, Australia, and about 40 other countries, you go to a separate Chinese Visa Application Service Center (CVASC), and the embassy only sees your file after the center forwards it. People mix these two systems up constantly, so figure out which one applies to you before you book anything.
+This page lays out the addresses, the consular districts (which states or regions each office covers), and the process, so you know exactly where your application goes.
+Where to Apply in the United States
+The United States has one Chinese embassy and four consulates general. There used to be five consulates. The Houston consulate was ordered shut in July 2020 and never reopened, so its old territory (Texas and most of the South) now runs through the Washington DC embassy. If an older blog or forum post tells you to mail your Texas application to Houston, ignore it.
+In the US you apply directly to the embassy or consulate that covers your state. There is no third-party visa center here, which trips up people who have applied in other countries. Since September 30, 2025, every US post uses the China Online Visa Application System (COVA): you fill in the form online at the official portal, upload your documents for a pre-review, and only then bring the printed barcode page and your passport to the visa office in person.
+Office
+
+Visa office address
+
+States and territories it covers
+
+Embassy of China, Washington DC
+
+2201 Wisconsin Avenue NW, Suite 110, Washington, DC 20007
+
+Washington DC, Maryland, Virginia, West Virginia, North Carolina, South Carolina, Kentucky, Tennessee, Delaware, plus the former Houston district: Alabama, Arkansas, Florida, Georgia, Louisiana, Mississippi, Oklahoma, Texas, and Puerto Rico
+
+Consulate General, New York
+
+520 12th Avenue, New York, NY 10036
+
+New York, New Jersey, Connecticut, Massachusetts, Maine, New Hampshire, Vermont, Rhode Island, Pennsylvania, Ohio
+
+Consulate General, Chicago
+
+1 East Erie Street, Suite 500, Chicago, IL 60611
+
+Illinois, Indiana, Iowa, Kansas, Michigan, Minnesota, Missouri, Wisconsin, Nebraska, North Dakota, South Dakota
+
+Consulate General, San Francisco
+
+1450 Laguna Street, San Francisco, CA 94115 (entrance on Geary Blvd)
+
+Northern California, Alaska, Nevada, Oregon, Washington, Idaho, Montana, Wyoming
+
+Consulate General, Los Angeles
+
+500 Shatto Place, 3rd Floor, Los Angeles, CA 90020
+
+Southern California, Arizona, New Mexico, Utah, Colorado, Hawaii, and the US Pacific islands (Guam, Northern Mariana Islands, American Samoa)
+
+The main embassy building sits at 3505 International Place NW, Washington, DC 20008, but that is the diplomatic compound, not where you hand in a passport. Visas go through the Wisconsin Avenue office. Note that California is split: San Diego and Los Angeles belong to the LA consulate, while San Francisco and Sacramento residents go to the SF consulate.
+Office hours are short, usually a few hours each weekday morning or midday, and they close for both US and Chinese holidays. Check the specific office's site for the current window before you drive over.
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+How the US Application Actually Works
+The flow looks like this once you know your office:
+Fill out the COVA form online and upload your passport bio page, photo, and supporting documents (flight booking, hotel reservation or invitation letter).
+
+Wait for the online pre-review. The system tells you when your status changes to "passport to be submitted."
+
+Go to your consulate's visa office in person. As of late 2023, US posts dropped the appointment requirement, so you can walk in during office hours. You bring the printed application page with the barcode, your passport, and the original documents.
+
+Pay and pick up. Regular processing runs about four business days. Express service (around two to three business days) costs extra and is meant for genuine emergencies.
+
+A visa agency can drop off and collect for you if you do not live near a consulate. They charge a service fee on top of the consular fee, but you avoid two trips.
+On fees: the consular fee for US passport holders has historically been the highest of any nationality. The standard tourist visa fee is $185, but a temporary reduction in effect through the end of 2026 brings it down to a flat $140 for US citizens, the same price whether you get a single, double, or multiple-entry visa. Express service adds a surcharge on top. These numbers have moved around before, so confirm the current fee on your consulate's site, which is the authority. For a full breakdown see our guide on China visa cost for US citizens , and for the whole walkthrough read the China visa for US citizens step by step .
+The UK, Canada, and Australia: Visa Centers, Not the Embassy
+Outside the US, most English-speaking countries route China visas through CVASC offices run under the visaforchina.org / visaforchina.cn portal. You still complete the China online application first, then book and visit the center to drop off your passport and pay. The embassy or consulate makes the decision behind the scenes.
+United Kingdom. Four Chinese Visa Application Service Centres handle everything: London, Manchester, Edinburgh, and Belfast. You cannot apply at the embassy in London directly. Which center you use depends on your address in the UK. Apply online at visaforchina.cn, then visit your assigned center in person. Standard turnaround is about four working days from submission, similar to the US, not the weeks a UK visa takes the other direction.
+Canada. Applications go through CVASC locations tied to the embassy in Ottawa and consulates in Toronto, Vancouver, Calgary, and Montreal. From December 2023 through the end of 2026, the fee for Canadian passport holders dropped to around CAD 75 regardless of the number of entries, a real saving. Regular processing is four working days, with express and rush options for more money. Before you apply at all, check whether you even need a visa: Canadian passport holders currently have visa-free entry to China for stays of up to 30 days, a policy running through the end of 2026, so a short trip may not need a visa at all. Confirm the current rules on the official site before booking.
+Australia. This one changed recently. As of September 15, 2025, the Canberra, Perth, and Brisbane visa centers stopped taking applications. Now there are two: residents of the ACT, Northern Territory, New South Wales, and Queensland use the Sydney center, while Victoria, Tasmania, Western Australia, and South Australia residents use the Melbourne center. Double-check this if you read older instructions pointing to Perth or Brisbane.
+In all three countries the rule is identical to the US: the center that serves your region is set by your residential address, and applying to the wrong one gets you bounced.
+How to Find Your Consular District
+This is the step people skip, and it is the one that causes rejections. Your office is decided by your registered home address, not your citizenship, not where you happen to be traveling, not the closest consulate on the map.
+To pin it down:
+Find your country's consular jurisdiction list. In the US, the official embassy site publishes the full state-by-state breakdown (the table above reflects the current split after the 2024 jurisdiction update).
+
+Match your state or region to the office. If your state was moved in a recent reshuffle, the current list wins over anything older.
+
+When you start the online form, the system asks you to select your consular jurisdiction. Pick the one that matches your address, not the one nearest you.
+
+Edge cases that catch people: students living on a campus in one state but registered in another, recent movers, and anyone in a state that got reassigned (the 2024 US update and the 2025 Australia change both moved things around). When in doubt, your jurisdiction follows where you currently and provably live.
+Documents, Timing, and Fees at a Glance
+The generic checklist for a tourist (L) visa, wherever you apply, looks like this:
+Passport valid at least six months with two blank pages
+
+Completed online application form with the printed confirmation/barcode page
+
+One recent passport-style photo to spec (white background, no glasses)
+
+Proof of travel: round-trip flights and hotel bookings, or an invitation letter from a host in China
+
+Sometimes proof of residence or status if you are not a citizen of the country you are applying in
+
+Timing to plan around: standard processing is about four working days from the day your passport is accepted (US, UK, Canada), and express runs two to three working days for an added fee, emergencies only. Don't count the day you submit, and don't count holidays, local or Chinese.
+A note on fingerprints, because the rule shifted: China previously collected fingerprints from most applicants in person. From December 2025, short-term visa applicants (stays of 180 days or less) are exempt from fingerprinting through the end of 2026. Long-term categories that convert to a residence permit (work, study, family reunion) still require an in-person fingerprint scan. This is a recent change, so verify it for your category before assuming you can skip the visit.
+One thing to settle before you apply at all: you might not need a visa. China's transit policy lets many nationalities stay visa-free for a set window if you are passing through to a third country. See if you qualify in our breakdown of China visa-free transit requirements before you pay for a visa you may not need.
+Common Reasons Applications Get Rejected
+Going to the wrong office is the number one first-timer mistake. The consular district rules have been strictly enforced since 2012, and an application filed at the wrong jurisdiction gets returned without processing. Other frequent trip-ups:
+Photo problems. Wrong size, glasses, a smile that is too wide, a background that is not pure white. Get it done to Chinese spec, not generic passport spec.
+
+Thin travel proof. No confirmed flights, no hotel or invitation letter. The officer wants to see a real, dated plan.
+
+Passport too close to expiry or fewer than two blank pages.
+
+Form mismatches. The dates, names, and details on the online form have to match your documents exactly.
+
+If you have already been refused and you are not sure why, work through the specific causes and fixes in our guide on China visa rejection reasons and how to fix them . Most rejections are fixable on a second try once you find the actual cause.
+Frequently Asked Questions
+What is the Chinese embassy address in Washington DC? The embassy compound is at 3505 International Place NW, Washington, DC 20008, but visa applications go to the separate visa office at 2201 Wisconsin Avenue NW, Suite 110, Washington, DC 20007. Use the Wisconsin Avenue address when you submit a passport.
+Do I go to the embassy or a visa center to apply? It depends on the country. In the United States you go directly to the embassy or consulate visa office, since there is no Chinese visa center there. In the UK, Canada, Australia, and many other countries you go to a Chinese Visa Application Service Center (CVASC), and the embassy never deals with you in person.
+Which Chinese consulate covers my state? Your consulate is set by your home address. As a quick map: New York covers the Northeast and Ohio, Chicago covers the upper Midwest, San Francisco covers the Pacific Northwest and Northern California, Los Angeles covers the Southwest, Southern California, and Hawaii, and Washington DC covers the mid-Atlantic, the South, and Texas. The full state list is in the table above.
+Is the Houston Chinese consulate still open? No. It was closed in July 2020 and has not reopened. Everything it used to handle (Texas, Oklahoma, Louisiana, Arkansas, Mississippi, Alabama, Georgia, Florida, and Puerto Rico) now goes through the Washington DC embassy.
+Do I need an appointment to apply for a China visa in the US? Not at US posts. Since late 2023 you can walk in during office hours after your online application clears pre-review. In the UK, Canada, and Australia, the visa centers usually do ask you to book a slot first.
+How long does a China visa take? Standard processing is about four business days from the day your passport is accepted, in the US, UK, and Canada. Express service shortens that to two or three days for an extra fee. Add buffer for mailing and holidays, and apply two to three weeks before you fly.
+
+Share this article
+
+Tags
+# china-visa # embassy # visa-application # practical
+
+Travelers also asked
+View all →
+Which reputable visa agencies are recommended for processing China visas through the San Francisco Consulate? →
+What happens if I choose the wrong Chinese consulate for my visa application? →
+Do UK and Canada citizens need a visa for China travel? →
+What should I do if my China L visa online review at the NYC consulate takes more than two weeks? →
+
+Related articles
+View all →
+June 2, 2026 · How-To Guide
+China Visa for US Citizens: Step-by-Step Guide (2026)
+
+February 16, 2026 · Travel Tip
+Can Americans Enter China Without a Visa? What Happens When You Land
+
+April 16, 2026 · How-To Guide
+How Long Does It Take to Get a Chinese Visa? (2026)
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

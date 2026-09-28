@@ -1,0 +1,101 @@
+# source: https://mychina.guide/blog/chongqing-vertical-city-navigation-guide
+# final: https://mychina.guide/blog/chongqing-vertical-city-navigation-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:25.808Z
+# bytes(raw): 55893
+# bytes(text): 7602
+# title: Chongqing Guide: Why Navigation Fails in a Vertical City
+
+Chongqing Guide: Why Navigation Fails in a Vertical City
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog City Guide · September 14, 2026 · 6 min read · 96 views
+In Chongqing, Your Address Needs a Floor Number
+
+M MyChinaGuide Editorial Team · Updated September 14, 2026
+
+On this page 5 sections 01 What actually goes wrong
+02 Three buildings that explain the city
+03 The hotpot is not Chengdu's hotpot
+04 Two days, and which two
+05 FAQ
+
+In Chongqing, "where are you" is not answered by an address. It is answered by an address and a floor number, and if you cannot give the floor number the driver cannot reach you.
+This is not a quirk. The city is built up the sides of two river gorges, so roads stack vertically and a map that tells you a place is 200 metres away is describing a horizontal distance across a 60-metre drop. Amap has publicly said Chongqing is the city it gets blamed for most.
+What actually goes wrong
+Your GPS pin drifts onto a road directly above or below the one you are standing on. The driver arrives, is 30 metres from you, and neither of you can see the other.
+
+Walking directions give a distance that is technically right and useless, because the connection between the two levels is a lift in a building three hundred metres back.
+
+You describe your location by what you can see, and what you can see is also visible from four other levels.
+
+The fix is to stop using the map pin as the answer. Give a named landmark plus the level: the name of the road you are on, which is usually signed, and the building entrance. If you are in a mall, give the floor. Screenshot the Chinese name of your hotel's street, not just the hotel, because the hotel may have entrances on two different streets at two different heights.
+Practical version: when you order a car, walk to a named road with traffic on it before you confirm the pickup, and use the in-app chat to send the road name in Chinese. Didi works without a Chinese phone number , and in this city the chat function matters more than the map.
+
+Order what the locals order
+1,000+ restaurants across 24 cities with English menus and photos. The first three dishes of every menu are free.
+
+Three buildings that explain the city
+Once you accept the vertical logic, the famous sites stop being gimmicks and start being demonstrations.
+Hongyadong (洪崖洞) has eleven floors and two ground floors. Floor 1 opens onto Jiabin Road at river level; floor 11 opens onto Cangbai Road at the top of the cliff. Both are street level. Most visitors photograph it from the outside at night and never go in, which means they miss that the inside is an eleven-storey maze.
+
+Kuixinglou (魁星楼) is the one people post about. Its floors 1 to 8 are a car park, the outdoor plaza on floor 9 connects to Beiqu Road, floor 1's exit connects to the riverside road, and two sky bridges run from the floor-9 plaza across to the 22nd floor of an office tower. You walk out of a 22nd floor onto a street.
+
+Liziba station (李子坝) is where the Line 2 monorail runs through floors 6 and 7 of a residential and commercial building at No. 39 Liziba Main Street — 132 metres of train inside a building people live in. It is the first station in China built into an occupied building rather than beside one. There is a dedicated viewing platform below, and the trains are frequent enough that you will not wait.
+
+The hotpot is not Chengdu's hotpot
+Chongqing hotpot is beef tallow, heavier on the chilli and lighter on the sweetness than the Chengdu version, and traditionally served in a nine-square grid (九宫格) rather than a divided pot. The grid is not decoration: the centre square boils hardest and is for things that cook fast, the corners are cooler and are for things that need time.
+Expect ¥80–150 a head at a mid-range place. If you are ordering solo, say so — a single pot costs roughly what two people each pay to share one. The regional cuisine guide covers where Sichuan and Chongqing cooking diverge, and the Chengdu guide is the comparison if you are doing both cities.
+Two days, and which two
+Chongqing rewards evenings. The cliff buildings are lit, the rivers reflect them, and the daytime version of the same view is a lot of concrete.
+Day 1. Arrive, Liziba in the afternoon, Hongyadong from the Qiansimen bridge after dark rather than from inside, then hotpot.
+
+Day 2. The Yangtze cableway across the river, Ciqikou old town in the morning before the coaches, and either Kuixinglou or the Great Hall of the People depending on your tolerance for crowds.
+
+If you have a third day, the Dazu Rock Carvings are two hours out and are a UNESCO site of Song-dynasty cliff sculpture that almost no foreign itinerary includes.
+Chongqing is on the 240-hour visa-free transit list, so an eligible passport can come without applying for anything provided the route continues to a third country — the transit rules cover what qualifies. By rail it is about 12 hours from Shanghai and four and a half from Chengdu; booking on 12306 with a passport is the cheap way in.
+FAQ
+Why does navigation fail in Chongqing?
+The city is built up two river gorges, so roads stack vertically and GPS drifts between levels. A pin can put you on a road directly above or below the one you are on. Give drivers a named road and a floor rather than relying on the map pin.
+Which floor of Hongyadong is the entrance?
+Both floor 1 and floor 11 are street level, on different streets: floor 1 on Jiabin Road by the river and floor 11 on Cangbai Road at the top of the cliff. Which one is your entrance depends on which street you arrive from.
+Where is the monorail that goes through a building?
+Liziba station on Line 2, where the train passes through floors 6 and 7 of the building at No. 39 Liziba Main Street for 132 metres. There is a viewing platform below the station, and trains run often enough that waiting is short.
+How is Chongqing hotpot different from Chengdu's?
+It is beef-tallow based, hotter and less sweet, and traditionally served in a nine-square grid where the centre boils hardest and the corners stay cooler. Budget ¥80-150 per person at a mid-range restaurant.
+
+Tags
+# Chongqing # Navigation # Hotpot # Sichuan # City Guide
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

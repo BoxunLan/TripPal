@@ -1,0 +1,10 @@
+# TripPal seed list 05 — more first-person / practical / official sources
+
+altery-how-to-pay-wechat	https://altery.com/personal/use-cases/travel/china/how-to-pay-with-wechat/
+mychinaguide-independent-travel	https://mychina.guide/blog/independent-travel-china-guide
+shanghai-240h-policy-official	https://english.shanghai.gov.cn/en-Individuals-ImmigrationandVisas-Visa-freepolicies/20260709/d70a1231ba4641ff9a024e53751ad480.html
+shanghai-240h-country-list	https://wsb.sh.gov.cn/ztzl/lstx/20260820/f4b8510709544ce8a06ef9978055bed9.html
+imtaweb-foreign-tourists-complaints	http://imtaweb.net/xwzx/xyxw/202508/20250807_61473815.shtml
+britacom-living-in-china-guide	https://www.britacom.org/zt/ThemeDay/Eleventh/Resources/BOOKLETS/Germany/202607/P020260708568821055056.pdf
+tandfonline-payment-full	https://www.tandfonline.com/doi/full/10.1080/19388160.2026.2623246
+govt-chinadaily-alipay-binding	https://govt.chinadaily.com.cn/s/202502/25/WS67bd6c5a498eec7e1f730389/using-foreign-bank-cards-for-mobile-payments-in-china.html

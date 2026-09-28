@@ -1,0 +1,519 @@
+# source: https://mychina.guide/blog/china-railway-map-train-network-guide
+# final: https://mychina.guide/blog/china-railway-map-train-network-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.789Z
+# bytes(raw): 79479
+# bytes(text): 18873
+# title: China Railway Map 2026: Whole Network, Every Train Type
+China Railway Map 2026: Whole Network, Every Train Type
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · July 28, 2026 · 13 min read · 1,047 views · Featured
+China Railway Map (2026): The Whole Network and Every Train Type
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 10 sections 01 The Scale of China's Rail Network
+02 HSR, Conventional, and Sleeper — What's Different
+03 The Train Category Letters, Decoded
+04 Seat and Sleeper Classes — Every Option, What It Costs
+05 The Best Interactive China Railway Maps
+06 Long-Distance Sleeper Routes Worth Riding
+07 International Rail From China
+08 How to Buy China Train Tickets
+09 Station Arrival, Security, Boarding
+10 FAQ — China Railway Map Questions
+
+The full china railway map is 162,000 km long — the world's second-largest rail network, more than twice the length of the entire US Interstate Highway System. It moves 4.31 billion passenger trips a year . Most travelers only ever see the bullet-train slice of it. The real china railway map is bigger, older, and weirder than the HSR press photos suggest.
+Of those 162,000 km, about 50,000 km is high-speed rail — the shiny G-trains everyone photographs. The other 112,000 km is conventional rail : olive-green slow trains, overnight sleepers to Tibet, the K3 Trans-Mongolian to Moscow, and the 2021 China-Laos Railway. This guide covers all of it.
+What you'll get in the next 12 minutes:
+The full china railway map in context — HSR, conventional, international
+
+The 8 train category letters (G, D, C, Z, T, K, Y, no-letter) decoded
+
+Every seat and sleeper class, with ¥ and $ prices
+
+The best free interactive china railway map tools
+
+Long-distance sleeper routes worth riding
+
+International trains to Laos, Vietnam, Mongolia, Russia, Kazakhstan
+
+How to buy tickets on 12306 vs Trip.com
+
+The Scale of China's Rail Network
+The numbers are hard to picture. Here's a frame.
+162,000 km (2024, per China State Railway Group, cited on Wikipedia ). Long enough to wrap around the equator four times. Electrified: 119,000 km. Double-tracked: 95,000 km. The network moved 4.31 billion passenger trips in 2024 — more than half the planet's population on Chinese trains in one year.
+The US has about 220,000 km of total rail , but roughly 95% is freight-only. China runs a larger passenger rail system than the US, Russia, India, and Germany combined.
+From steam to 350 km/h — three eras
+Era 1 — "green skin" (1949-1997). Olive-green CR25 carriages hauled by steam, then diesel. Hard seat was default. Average speed 40-60 km/h. The last regular revenue steam train in the world finished its run in Jitong, Inner Mongolia, December 2005 . People still call slow trains 绿皮车 (lǜ pí chē) — "green skin cars" — even though the paint is now red and blue.
+Era 2 — speed-up campaigns (1997-2007). Six rounds of upgrades pushed conventional trains from 120 to 160 km/h. When the Z and T categories were born.
+Era 3 — HSR (2007-present). First CRH trains April 2007. Beijing-Tianjin opened August 2008 at 350 km/h. Wuhan-Guangzhou 2009. Beijing-Shanghai 2011. By 2013 the HSR network passed 10,000 km. By 2025 it crossed 50,000 km — two-thirds of all high-speed rail on the planet. If you only care about bullet trains, see our complete China HSR guide and HSR map with all 16 corridors .
+
+MyChinaGuide app · free
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+HSR, Conventional, and Sleeper — What's Different
+Three questions I get all the time: are all fast trains "HSR"? Are sleepers all slow? Is G always better than K?
+Short answer: HSR runs on dedicated tracks at 250-350 km/h, all-electric. Conventional runs on the older green skin network up to 160 km/h, shares track with freight. Sleepers can be either — overnight D-series HSR sleepers (Beijing-Shenzhen, Beijing-Shanghai) and traditional Z/T/K sleepers that crawl 15-30 hours across the interior.
+Network
+
+Length
+
+Speed
+
+Train Letters
+
+Best For
+
+High-speed rail
+
+~50,000 km
+
+250-350 km/h
+
+G, D, C
+
+Trips under 8 hours
+
+Conventional rail
+
+~112,000 km
+
+100-160 km/h
+
+Z, T, K, Y, no-letter
+
+Sleepers, budget, views
+
+Overnight sleeper
+
+Both
+
+Varies
+
+D, Z, T, K
+
+Saving a hotel night
+
+Here's the thing nobody tells you: conventional trains aren't worse. They're different. Shanghai-Kunming by G-train takes 11 hours for ¥900. The K181 takes 37 hours for ¥251, with a bunk and the middle of China rolling past the window. If the trip is about the journey, the slow train wins.
+The Train Category Letters, Decoded
+Every Chinese train number starts with a letter (or no letter). The letter tells you the category. The number narrows it down.
+Letter
+
+Pinyin
+
+Meaning
+
+Max Speed
+
+Example
+
+Price
+
+G
+
+Gaotie
+
+High-speed
+
+350 km/h
+
+G1 Beijing-Shanghai 4h 18m
+
+¥¥¥¥
+
+D
+
+Dongche
+
+EMU / high-speed
+
+250 km/h
+
+D301 Beijing-Shanghai sleeper
+
+¥¥¥
+
+C
+
+Chengji
+
+Intercity HSR
+
+350 km/h
+
+C2201 Beijing-Tianjin 30m
+
+¥¥
+
+Z
+
+Zhida
+
+Direct express
+
+160 km/h
+
+Z1 Beijing-Changsha sleeper
+
+¥¥
+
+T
+
+Tekuai
+
+Extra fast
+
+140 km/h
+
+T28 Beijing-Guangzhou
+
+¥¥
+
+K
+
+Kuaisu
+
+Fast
+
+120 km/h
+
+K599 Beijing-Xiamen
+
+¥
+
+Y
+
+Youlan
+
+Tourist
+
+120 km/h
+
+Y535 Beijing-Badaling
+
+¥
+
+(none)
+
+Pukuai
+
+Ordinary
+
+100 km/h
+
+7266 Bijie-Shuicheng
+
+¥
+
+Two extras you'll occasionally see: L-series (临客) Spring Festival temporary trains, and S-series (市郊) suburban commuter lines. Both rare for tourists.
+The rule I use: G if I'm in a hurry, D if G isn't running, Z or T for sleepers on the classic network, K if I'm broke or the route has no HSR. No-letter trains are rural lifelines — ¥5 tickets from one coal town to another.
+Seat and Sleeper Classes — Every Option, What It Costs
+Chinese trains have more class tiers than an airline. This is the part that confuses first-timers.
+Class
+
+Chinese
+
+Found On
+
+What You Get
+
+Cost
+
+Business
+
+商务 SW
+
+G, D
+
+180° recliner, meals
+
+¥¥¥¥¥
+
+First class
+
+一等 ZY
+
+G, D, C
+
+2+2 wide seats, USB power
+
+¥¥¥¥
+
+Second class
+
+二等 ZE
+
+G, D, C
+
+3+2 seats, the default
+
+¥¥¥
+
+HSR sleeper
+
+动卧 WR
+
+Overnight D
+
+4-berth cabin, bedding
+
+¥¥¥¥
+
+Deluxe soft sleeper
+
+高软 GR
+
+Z
+
+2-berth private cabin
+
+¥¥¥¥¥
+
+Soft sleeper
+
+软卧 RW
+
+Z, T, K
+
+4-berth lockable, 2 upper/2 lower
+
+¥¥¥
+
+Hard sleeper
+
+硬卧 YW
+
+Z, T, K
+
+6-berth open bay
+
+¥¥
+
+Soft seat
+
+软座 RZ
+
+Some T, K
+
+Padded recliners, rare
+
+¥¥
+
+Hard seat
+
+硬座 YZ
+
+K, T, no-letter
+
+Upright padded benches
+
+¥
+
+Standing
+
+无座
+
+K, T, no-letter
+
+No seat assignment
+
+¥
+
+Real numbers — Beijing to Chengdu, 1,900 km:
+G-train 2nd class: ¥780 ($109), 7h
+
+G-train 1st class: ¥1,250 ($175), 7h
+
+Z-train soft sleeper: ¥589 ($82), 26h
+
+Z-train hard sleeper: ¥381 ($53), 26h
+
+K-train hard seat: ¥180 ($25), 32h
+
+A sleeper saves a hotel night (¥300-500), so the math on a Z-train soft sleeper gets surprisingly close to a G-train once you factor that in.
+My honest take on sleepers:
+Soft sleeper is where I always try to book. Lockable cabin, real pillows, wake up in a new province. ¥400-900 for most routes.
+
+Hard sleeper is fine — the name lies, bunks are padded. Get a bottom berth (下铺), you sit on it during the day. Upper (上铺) is cheapest but you bonk your head.
+
+Hard seat is only OK under 6 hours. I once took a hard seat Shanghai to Lanzhou, 32 hours. Don't ask how I know — let's just say I paid the tuition. Sleeper if your trip is longer than 10 hours.
+
+The Best Interactive China Railway Maps
+Okay but honestly? Most " china rail map " and " china train map " results on Google are outdated static images. These three are the ones I actually use when I need a real china railway route map .
+1. cnrail.geogv.org — the gold standard. Free, open-data, shows every line on the Chinese railway network including under-construction and planned segments. Color-coded by speed. Click any line for name, speed, opening year, length. Works on mobile, loads inside China without a VPN. Every China-rail nerd on Reddit links it. Bookmark it.
+2. TravelChinaGuide Railway Map — static but clean. Tourist-friendly PNG with cities in English. Good big-picture view, PDF for offline.
+3. Wikipedia HSR diagram — the schematic on the High-speed rail in China page is the cleanest abstracted china train map of the 8+8 grid. Tube-map style.
+Skip: 12306.cn's built-in china railway map (Chinese only), Google Maps (railway layer inconsistent), paper maps at kiosks. For a zoomable china train station map , cnrail.geogv.org and Amap are best.
+Long-Distance Sleeper Routes Worth Riding
+Not all sleepers are equal. These are the ones worth riding for the journey itself, not just the destination.
+Z1 Beijing → Changsha. 1,600 km, 13 hours. Soft sleeper ¥473 ($66). Wake to Hunan rice paddies.
+T28 Beijing → Guangzhou. 2,300 km, 22 hours. Old Beijing-Kowloon corridor. Hard sleeper ¥459 ($64).
+K181 Shanghai → Kunming. 37 hours, ¥251 hard seat or ¥546 hard sleeper. Back-door tour of southwest China via Nanchang, Changsha, Guiyang.
+Z265 Guangzhou → Lhasa. 54 hours , ¥850 hard sleeper. The Qinghai-Tibet line hits 5,072 m at Tanggula Pass — the highest point of any railway on Earth. Oxygen supply on board. You will not sleep well. You will not care.
+Y535 Beijing North → Badaling. Short tourist train to the Great Wall. 1h 20m, ¥6 ($0.85). Not a sleeper, just rail history on the 1909 Beijing-Zhangjiakou line.
+For the Beijing-Shanghai corridor I wrote a full train vs flight comparison — HSR wins on that route.
+International Rail From China
+China has more cross-border rail routes than most travelers realize. The ones you can actually buy tickets for:
+Trans-Mongolian (K3/K4) — Beijing → Ulaanbaatar → Moscow. Six nights, 7,621 km. Every Wednesday from Beijing Main. Joint service by China Railway, Mongolian UBTZ, and Russian RZhD. Second-class 4-berth soft sleeper ¥4,200-6,500 ($588-910). At Erenhot on the China-Mongolia border, the entire train is lifted and the bogies swapped — China uses 1,435 mm gauge, Russia and Mongolia 1,520 mm. Takes about 4 hours. Bring snacks.
+Trans-Manchurian (K19/K20) — Beijing → Harbin → Moscow. 8,984 km, no Mongolia stop, weekly.
+Beijing → Pyongyang (K27/K28). Four times a week, 24 hours. DPRK visa and tour booking required.
+Nanning → Hanoi (T8701/T8702). Daily overnight, 12 hours, about ¥430 ($60) soft sleeper. Bogie change at Pingxiang border.
+Kunming → Vientiane (China-Laos Railway). Opened December 2021 , 422 km. Cross-border express EMU launched April 2023 . Kunming South → Vientiane now takes 10 hours including immigration at Boten. Second-class ¥542 ($76) . Book via LCR app or 12306. This one line replaced a 28-hour bus and turned Laos from landlocked into land-linked overnight.
+Urumqi → Almaty (K9795/K9796). Twice weekly, ~32 hours via Alashankou border, ¥900-1,400 ($126-196). The modern Silk Road.
+Hong Kong from mainland. The Guangzhou-Shenzhen-Hong Kong Express Rail Link connects West Kowloon to China's HSR grid. Beijing-HK 8h 45m, Shanghai-HK 8h, Guangzhou-HK 48 minutes . Border control inside West Kowloon station. See our Hong Kong to mainland train guide for the logistics.
+How to Buy China Train Tickets
+Five options. Ranked for foreigners.
+1. 12306.cn English site — official, cheapest. Run by China State Railway Group. Real-name ticketing since 2011. Foreigners can register with a passport; English interface exists. The 12306 app is better than the website but the English toggle is finicky. No booking fee.
+2. Trip.com — easiest English UX. Same tickets, and the checkout page shows any Trip.com service fee before you pay. Accepts international cards. Better search, better seat map. First choice if you don't read Chinese. See our how to buy China train tickets guide for walkthroughs.
+3. Klook / China Highlights. Similar markup, sometimes queues your request before the 15-day window opens. Useful for Spring Festival when tickets vanish in minutes.
+4. Station counter. Always works, even when the app won't. Bring your passport. Write the route in Chinese on paper if you don't speak Mandarin — the agent types it in and shows you options. No fee.
+5. Hotel / hostel agents. Small cash fee. Last resort.
+Advance booking window: 15 days. For normal routes, 3-5 days is plenty. For sleeper trains on Spring Festival or October National Day, tickets vanish the instant they release. Set an alarm.
+What you need: Passport, valid visa, payment method (Alipay, WeChat Pay, international Visa/Mastercard on Trip.com).
+Station Arrival, Security, Boarding
+Chinese train stations are airport-sized. Beijing South has 24 platforms. Shanghai Hongqiao connects directly to a metro and an airport. Don't show up 10 minutes early.
+The procedure:
+Arrive 45-60 min early for HSR, 75-90 min for conventional. Big stations have 10-15 minute walks entrance to platform.
+
+Security. X-ray bags, metal detector, bottled water sometimes tapped. Lighters, knives, power banks over 20,000 mAh get confiscated.
+
+ID check. At HSR stations (as of 2024), automatic gates scan your passport directly. Older conventional stations check passport plus paper ticket. Most HSR is paperless.
+
+Waiting hall. Find your train on the board, note the gate (检票口).
+
+Gate opens 15-20 min before departure. Scan passport, walk to platform, find your carriage number.
+
+On sleepers , the attendant takes your paper ticket and gives you a plastic chip. They wake you 15 min before your stop and swap it back.
+
+Exit. Scan passport at the exit gate. Metro, taxi, Didi.
+
+First time I connected at Zhengzhou East, I walked 1.2 km between platforms. Plan for the walk.
+FAQ — China Railway Map Questions
+How long is China's railway network in 2026?
+About 162,000 km (2024 figure from China State Railway Group). The china railway map now covers around 50,000 km of high-speed rail plus 112,000 km of conventional network. Second-largest network globally and the world's largest passenger rail system.
+Is there an official English China railway map?
+Not really. 12306.cn has a Chinese-only diagram. The best English-labeled interactive china railway map is cnrail.geogv.org — open-source, community-built, uses official China Railway data. For static images, TravelChinaGuide and the Wikipedia HSR diagram are the ones travelers bookmark.
+What's the difference between G-trains and K-trains?
+G-trains are high-speed (300-350 km/h) on dedicated HSR lines. K-trains are conventional fast trains (120 km/h) on the older network, with seats and sleeper cars. G is faster, K is cheaper and usually has overnight sleeper berths. Under 8 hours take G. Overnight on a budget, K or Z with a soft sleeper.
+Can I book China train tickets without a Chinese bank card?
+Yes. Trip.com accepts international Visa and Mastercard, and the checkout page shows any service fee before you pay. Klook and China Highlights also work. The 12306.cn English site now accepts some international cards too. At the station counter, cash always works.
+How far in advance do tickets go on sale?
+15 days is the current 12306 advance-booking window. During Spring Festival and October National Day, sleeper trains sell out within minutes of release. For normal weekends, 3-5 days ahead is fine.
+Are there still slow "green skin" trains in China?
+Yes, hundreds. No-letter and K-series trains are the modern descendants of the 绿皮车 (green skin) era. The famous 7266 from Bijie to Shuicheng in Guizhou costs ¥5 ($0.70) — cheaper than a bottle of water.
+Can I take an international train from China?
+Yes, several. K3/K4 Trans-Mongolian runs weekly Beijing → Moscow via Ulaanbaatar. China-Laos Railway runs daily Kunming → Vientiane (~10 hours, ¥542). Nanning-Hanoi overnight into Vietnam. Urumqi-Almaty to Kazakhstan twice weekly. The HSR connects directly to Hong Kong West Kowloon.
+Is the China train station map available offline?
+Not as a single file.
+
+About the author : Michael Chen is a Shanghai native with 3 years of backpacking across China, 200+ train journeys, and an embarrassingly detailed color-coded spreadsheet tracking every line he's ridden on the 162,000 km Chinese railway network. He writes transport and logistics guides for MyChinaGuide.
+Two edges of the network worth knowing about. Crossing China's land borders by train covers the services that leave the country, which are not on most rail maps. And the Shanghai maglev is the outlier at 431 km/h — not part of the national network at all, and worth the trip once.
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Share this article
+
+Tags
+# railway # trains # network # sleeper-trains
+
+Travelers also asked
+View all →
+Where can I purchase sleeper train tickets in China, and is it worth choosing trains over flights for short stops? →
+What is a realistic pace and preparation strategy for a multi-city High-Speed Rail trip in China? →
+What is the recommended strategy for booking domestic flights and optimizing a long-term China itinerary? →
+Should I book China train tickets through 12306 or Trip.com? →
+
+Related articles
+View all →
+July 14, 2026 · Topic
+China High-Speed Rail Map: All Routes Visualized (2026)
+
+July 7, 2026 · How-To Guide
+China High-Speed Rail Guide: Routes, Speed & How to Ride (2026)
+
+February 4, 2026 · Itinerary
+Fifteen Days in China Is Really Nine
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

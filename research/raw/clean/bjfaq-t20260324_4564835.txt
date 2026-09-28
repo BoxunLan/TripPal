@@ -1,0 +1,23 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564835.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564835.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.657Z
+# bytes(raw): 7092
+# bytes(text): 1228
+# title: Hello. Could you let me know if you offer employment health checks? If you do, how much is this check?
+
+Hello. Could you let me know if you offer employment health checks? If you do, how much is this check?
+
+Home 12345 hotline 12345 hotline FAQs All
+
+Hello. Could you let me know if you offer employment health checks? If you do, how much is this check?
+
+2026-03-24
+
+Hello. The General Administration of Customs (Beijing) International Travel Health Care Center offers physical examination services for foreign nationals. Please also check the items (especially the items not included in the common physical examination) required for specific cases.
+The General Administration of Customs (Beijing) International Travel Health Care Center provides information on the examination items and fees, which can be found via the WeChat account "General Administration of Customs International Travel Health Care Center" (海关总署国际旅行卫生保健中心). You can also call the General Administration of Customs (Beijing) International Travel Health Care Center at 010-64274239 (which offers English services) or 010-82403675 (which offers basic English services). The working hours of the two hotlines are 8:00–11:30 and 13:00–16:00.
+Thank you for your understanding and support.
+Beijing Customs
+
+Attachment

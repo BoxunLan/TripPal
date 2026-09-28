@@ -1,0 +1,358 @@
+# source: https://mychina.guide/blog/how-to-order-food-in-china-without-chinese
+# final: https://mychina.guide/blog/how-to-order-food-in-china-without-chinese
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:28.221Z
+# bytes(raw): 76802
+# bytes(text): 17400
+# title: How to Order Food in China Without Speaking Chinese (2026)
+
+How to Order Food in China Without Speaking Chinese (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · January 11, 2026 · 12 min read · 943 views
+How to Order Food in China Without Speaking Chinese
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 12 sections 01 What this guide covers
+02 The three apps you need before arriving in China
+03 Picture menus: the easy mode for ordering food in China
+04 Pleco camera mode step by step
+05 Google Translate camera for whole-page scanning
+06 The five phrases that handle 90 percent of situations
+07 Dianping and Meituan: the secret weapon
+08 Handling spice, allergies, and dietary restrictions
+09 Which restaurant types are easiest for foreigners
+10 Paying the bill without Chinese
+11 What NOT to do when ordering food in China
+12 Frequently asked questions
+
+The fear of staring at an all-Chinese menu and panicking is one of the top reasons people avoid eating at real Chinese restaurants and end up at KFC for the third time. You do not need to learn Chinese to eat well in China in 2026. You need three apps, five phrases, and a willingness to point. I have helped foreign friends order at Chengdu hotpot joints, Xi'an noodle shops, and Shanghai tea houses without a word of Chinese, and they always eat better than the people who stick to hotel restaurants.
+This guide shows exactly how to order food in China without speaking Chinese, based on what actually works in real restaurants. Not the useless HSK-1 lessons, not the "learn 500 characters first" advice. The real playbook.
+What this guide covers
+How to order food in China without speaking Chinese using three free apps
+
+Pleco camera mode vs Google Translate vs Apple Translate
+
+Picture menus and where to find them
+
+Dianping and Meituan for English filters
+
+The five phrases that handle 90 percent of restaurant situations
+
+How to specify no spice, no cilantro, no peanuts
+
+Which restaurant types are easiest for non-Chinese speakers
+
+How to split bills and pay when the server only speaks Chinese
+
+Menus and signs, in English
+Point the camera at any menu or sign to translate it. Every restaurant in the app shows its first three dishes free, with photos and English names.
+
+The three apps you need before arriving in China
+Before you even land, install these three apps. All three work offline for basic translation, which matters because your VPN might be flaky.
+Pleco is the most important app. It is a free Chinese dictionary with an OCR camera mode that reads printed Chinese characters and gives you English definitions. Point the camera at any menu and Pleco highlights each character with its meaning. The free version is enough. The paid Pro OCR (~$15) is faster and smoother but not required. Download it before you leave home because the App Store and Play Store work differently inside China.
+Google Translate with the Chinese offline pack downloaded. The camera mode is the fastest way to read whole dishes at once. Point, tap, and the entire menu page overlays in English. The translation is sometimes weird ("Husband and Wife Lung Slices" is real) but you get the idea. Download the offline pack before leaving home so you do not need a VPN.
+Dianping (or Meituan for some features) is the Chinese Yelp. The app is Chinese-language but the photo reviews are universal. Search a neighborhood, see what people actually ordered, screenshot the photos, and point at them at the restaurant. This is the single biggest hack for how to order food in China without speaking Chinese.
+App
+
+Main use
+
+Offline?
+
+Foreigner-friendly
+
+Pleco
+
+OCR character-by-character
+
+Yes
+
+High
+
+Google Translate
+
+Full page OCR
+
+Yes with pack
+
+High
+
+Dianping
+
+Photo reviews of real dishes
+
+Photos yes, menu no
+
+Medium
+
+Apple Translate
+
+Camera + voice
+
+Yes
+
+Medium
+
+Baidu Translate
+
+Chinese-native translator
+
+Partly
+
+Medium
+
+Picture menus: the easy mode for ordering food in China
+The fastest way to order food in China without speaking Chinese is to use restaurants that already have picture menus. In 2026 this covers more places than you think. Reliable picture-menu categories: hotpot chains like Haidilao, Shujiuxiang, Xiabuxiabu and Liuyishou (Haidilao has English menus in every location); chain noodle shops like Lao Xiangji, Weizhen Chuanyan, Yonghe Soy Milk; mall food courts in any Tier 1 or Tier 2 city; malatang places where you pick raw ingredients from a counter and weigh them; dim sum and yum cha restaurants with roving carts; baozi and jianbing carts with everything visible; shabu shabu and Korean BBQ with raw ingredients displayed; and Dianping "must-eat" restaurants in Tier 1 cities.
+Places where picture menus are rare and you will need an app: small family-run noodle shops with handwritten menus, regional specialty restaurants in smaller cities, traditional Beijing or Shanghai old-style establishments, and restaurants frequented only by locals in residential areas. For those, Pleco or Google Translate are essential.
+Pleco camera mode step by step
+Pleco has the best OCR for menu reading because it works character by character, which is exactly how Chinese menus are structured (each dish is 3-6 characters). Here is how to use it:
+Open Pleco, tap the magnifying glass, then the camera icon.
+
+Hold the camera over one dish name. Keep it steady.
+
+Pleco highlights each character. Tap a character to see the English meaning.
+
+Slide your finger across the characters to see the full dish name translated.
+
+For compound words (like 回锅肉 huiguo rou, twice-cooked pork), Pleco recognizes the whole phrase and gives you "twice-cooked pork".
+
+Pleco is slower than Google Translate for reading a whole page, but it is far more accurate for individual dishes. Use Pleco when you want to understand one item and Google Translate when you want an overview.
+Google Translate camera for whole-page scanning
+Google Translate camera is the fastest way to scan an entire menu page and decide what you want. Open the app, tap camera, point at the menu. The English overlay appears in real time. You can freeze the frame by tapping anywhere. The results are not always beautiful (dish names get weirdly literal) but you can quickly spot "beef," "chicken," "noodles," "dumpling," and pick something.
+The limitations:
+Cursive or handwritten menus do not scan well. Switch to Pleco.
+
+Dim lighting kills OCR. Use your phone flashlight or ask to sit near the window.
+
+Some regional characters (traditional Chinese in Hong Kong menus, old-style variants in Shanxi) get mistranslated.
+
+Prices sometimes scan as translation text by accident.
+
+A trick that works: screenshot the Google Translate overlay, then compare against Pleco for any dish you want to order. Double-check saves you from ordering "pork lung with duck blood" when you thought you were getting fried rice.
+The five phrases that handle 90 percent of situations
+You do not need fluent Mandarin. You need exactly these five phrases. Learn the pronunciation from a voice clip before your trip.
+Phrase
+
+Pinyin
+
+English
+
+When to use
+
+一个这个
+
+yi ge zhe ge
+
+"One of this"
+
+Pointing at a menu item
+
+不要辣
+
+bu yao la
+
+"No spicy"
+
+At any Sichuan, Hunan, or generic restaurant
+
+不要香菜
+
+bu yao xiang cai
+
+"No cilantro"
+
+Almost every northern dish
+
+买单
+
+mai dan
+
+"Check please"
+
+End of the meal
+
+谢谢
+
+xie xie
+
+"Thank you"
+
+All the time
+
+"Yi ge zhe ge" while pointing is the single most useful phrase in China for ordering food without speaking Chinese. You can literally walk into any restaurant, point at what someone else is eating, say "yi ge zhe ge," and get served. Servers understand instantly.
+"Bu yao la" is important in Sichuan, Hunan, Yunnan, and Guizhou. Without it, your default spice level is what locals eat, which can be punishingly spicy. Note that "bu yao la" often gets interpreted as "mild spicy" because Sichuan cooks cannot conceive of truly no spice. For truly no spice, say "yi dian dian la bu yao" and make a zero with your fingers, or have Google Translate write "完全不要辣 wan quan bu yao la" on your phone screen.
+Dianping and Meituan: the secret weapon
+Dianping is the app locals use to find restaurants, read reviews, and see photos of every single dish before going. The interface is 95 percent Chinese but the photos and star ratings are universal. Here is the workflow:
+Open Dianping, allow location access.
+
+Tap the search bar and type in pinyin (chengdu huoguo) or use a VPN for Google Translate Dianping.
+
+Filter by distance or rating.
+
+Tap a restaurant. Scroll past the Chinese text to the photo reviews section.
+
+Screenshot the dish photos you want.
+
+At the restaurant, show the server the screenshot.
+
+Meituan works similarly but includes mini-program ordering (some restaurants let you order directly from Meituan with photos, no human interaction needed). This is increasingly common at Tier 1 city chain restaurants and is great if you are introverted and do not want to talk to anyone.
+The English version of Dianping does not really exist, but workable alternatives for Tier 1 cities are The Beijinger, SmartShanghai, and LSC Chengdu, all of which list English menus.
+Handling spice, allergies, and dietary restrictions
+Explaining a peanut allergy in Chinese is not something you want to improvise with charades. Here is how to handle the common issues.
+Spice level. Sichuan, Hunan, Guizhou restaurants assume spice. For no spice, use Google Translate to show "我对辣椒过敏 wo dui la jiao guo min" (I am allergic to chili). They will take this more seriously than "bu yao la". For Sichuan peppercorn specifically (the numbing spice), show "不要花椒 bu yao hua jiao".
+Peanut allergy. Peanuts are everywhere in Chinese cooking, including in unexpected dishes like kung pao chicken. Show the Chinese text "严重花生过敏，请确认没有花生和花生油 yan zhong hua sheng guo min, qing que ren mei you hua sheng he hua sheng you" (severe peanut allergy, please confirm no peanuts or peanut oil). Save it as a photo on your home screen.
+Vegetarian. "我吃素 wo chi su" means "I eat vegetarian," but Chinese vegetarian often includes fish broth and lard. For strict vegetarian, show "严格素食，不要肉、鱼、蛋、葱蒜 yan ge su shi, bu yao rou, yu, dan, cong suan" (strict vegetarian, no meat, fish, eggs, scallion, garlic).
+Halal. Look for restaurants with 清真 (qingzhen) on the sign. These are Muslim-owned and strictly halal. They are common in Xi'an, Lanzhou, Yunnan, and most major cities.
+Gluten-free. Genuinely difficult in China. Most soy sauce contains wheat. Rice-based dishes like guilin mifen or Yunnan mixian are naturally gluten-free but cross-contamination is likely.
+Which restaurant types are easiest for foreigners
+Here is the difficulty ranking for how to order food in China without speaking Chinese:
+Difficulty
+
+Restaurant type
+
+Why
+
+Easy
+
+Hotpot chains (Haidilao, Shujiuxiang)
+
+English menus, picture ordering, English-speaking staff
+
+Easy
+
+Mall food courts
+
+Picture menus, pay-at-counter
+
+Easy
+
+Malatang / spicy skewer self-serve
+
+Pick ingredients by hand
+
+Easy
+
+Dim sum carts (Guangzhou, Hong Kong)
+
+Point at carts
+
+Easy
+
+Korean BBQ and Japanese chains
+
+Picture menus everywhere
+
+Medium
+
+Chain noodle shops
+
+Picture menus but limited English
+
+Medium
+
+Western-adjacent restaurants in Tier 1 cities
+
+Some English menus
+
+Medium
+
+Upscale local restaurants in tourist districts
+
+English menus increasingly common
+
+Hard
+
+Family-run noodle shops
+
+Handwritten Chinese menu only
+
+Hard
+
+Breakfast stalls
+
+Chinese only, fast pace
+
+Hard
+
+Regional specialty spots outside city centers
+
+Dialect + no English
+
+Hardest
+
+Small town restaurants in Tier 3/4 cities
+
+No menu, no English, no pictures
+
+For your first few meals in China, start easy. Haidilao and mall food courts give you confidence. Then branch out with Pleco and pointing.
+Paying the bill without Chinese
+At the end of the meal, most restaurants in China in 2026 work one of three ways:
+Table QR code ordering and paying. You scan a QR code at the table, browse the mini-program menu (often with Chinese only but pictures), add items, and pay through Alipay or WeChat Pay . Bill is settled automatically. You just get up and leave.
+
+Server-delivered bill, pay at the counter. You say "mai dan" (check please) or just make a square shape in the air with your fingers. A server brings the bill or gestures you to the counter. You pay with Alipay, WeChat Pay, or cash.
+
+Pay first, eat later. Common at noodle and baozi shops. You order and pay at a counter, get a receipt or number, and your food is brought out. Easiest for foreigners.
+
+Tipping is not expected in China. Do not tip. It genuinely confuses people.
+What NOT to do when ordering food in China
+Do not use Google Translate voice mode. Servers find the robot voice confusing and it is slower than typing. Do not order six dishes at once for one person; Chinese meals are shared and you will pay for food you cannot finish. Order one dish per person plus one extra for the table. Do not order all meat or all cold dishes; a typical meal has one cold, one hot meat, one hot vegetable, one soup, and rice or noodles. Do not insist on ice water; restaurants serve warm water or tea by default. Do not flag down a server with a raised finger. Say "fu wu yuan" (service staff) or make eye contact and wave.
+Is how to order food in China without speaking Chinese actually feasible in small towns? In small towns it is harder but still doable. Pleco works anywhere with a phone camera. Pointing works everywhere. The main challenge in small towns is that menus are often handwritten, which OCR struggles with. Fall back to pointing at other diners' tables.
+Do most Chinese restaurants have English menus now in 2026? In Tier 1 cities (Beijing, Shanghai, Shenzhen, Guangzhou), yes, roughly 40-60 percent of mid-range and above restaurants have English menus. In tourist zones in any city, yes. In local neighborhood spots, rarely.
+Is it rude to take photos of menus to translate? No. Servers are used to it in 2026 and often wait patiently while you figure it out.
+Can I use my Chinese phone number or only WeChat? You do not need a Chinese phone number to order food. Alipay Tour Pass and WeChat Pay both work with foreign phone numbers and foreign credit cards in 2026. You pay by scanning QR codes or showing your own QR code.
+What if I am at a very local spot and no pictures exist? Pull up Dianping, show the server a photo of what you want from the review section, and they will understand immediately. If that fails, look at what nearby tables are eating and point at the dish you like.
+How do I say "I cannot eat spicy" if I really cannot? Show Chinese text: "完全不能吃辣，一点都不要 wan quan bu neng chi la, yi dian dou bu yao" (completely cannot eat spicy, not even a little). Save this as a photo.
+Is learning a few Chinese characters worth it before my trip? Yes. Learn these ten: 牛 niu (beef), 猪 zhu (pork), 鸡 ji (chicken), 鱼 yu (fish), 虾 xia (shrimp), 面 mian (noodles), 饭 fan (rice), 汤 tang (soup), 辣 la (spicy), 素 su (vegetarian). With these you can guess the category of any dish on any menu.
+
+Tags
+# china-food # china-travel-tips # translation # restaurants # tourist-guide
+
+View all →
+What should I know about using translation apps for Chinese menus? →
+Is it necessary to speak fluent Chinese to have positive interactions with locals while traveling? →
+What digital tools do I absolutely need before landing in China to avoid getting stuck? →
+What should I expect when ordering food delivery to my hotel or apartment in China? →
+
+View all →
+March 9, 2026 · How-To Guide
+How To Read a Chinese Restaurant Menu (2026 Foreigner Guide)
+
+January 12, 2026 · How-To Guide
+How to Order Coffee in China Without Speaking Chinese
+
+April 6, 2026 · Destination
+Best Local Food in China for Tourists: Regional Dishes, Prices & How to Order
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

@@ -1,0 +1,261 @@
+# source: https://mychina.guide/blog/hong-kong-entry-requirements-2026
+# final: https://mychina.guide/blog/hong-kong-entry-requirements-2026
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:27.664Z
+# bytes(raw): 79142
+# bytes(text): 19563
+# title: Hong Kong Entry Requirements 2026: Visa-Free Rules
+
+Hong Kong Entry Requirements 2026: Visa-Free Rules
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · July 22, 2026 · 14 min read · 2,755 views
+Hong Kong Entry Requirements 2026: Visa-Free Rules for Every Nationality
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 19, 2026
+
+On this page 8 sections 01 Visa-free durations by nationality
+02 What you actually need at immigration
+03 Hong Kong entry is not mainland China entry
+04 Crossing into Shenzhen: the actual mechanics
+05 Arriving by air, land, or ferry
+06 Customs: what you can bring into Hong Kong
+07 Frequently asked questions
+08 Sources
+
+Most visitors do not need a visa for Hong Kong. As of July 2026, passport holders from around 170 countries and territories enter visa-free: US citizens get 90 days, British citizens 180 days, and EU, Canadian, Australian, Japanese, and Singaporean passport holders 90 days. You need a passport valid for at least one month beyond your planned departure date, an onward or return ticket, and enough money to cover your stay. There is no visa application, no fee, and — since October 16, 2024 — no arrival card either. Instead of a passport stamp, immigration hands you a small printed landing slip showing your permitted stay. Two catches: entering Hong Kong does not cover mainland China (crossing to Shenzhen requires a Chinese visa or a visa-free scheme like the 240-hour transit), and duty-free limits are strict — just 19 cigarettes and 1 litre of spirits. Cash of HK$120,000 (about $15,400) or more must be declared.
+I have brought clients through Hong Kong on their way into the mainland for years, and honestly, 8 out of 10 ask me some version of the same question: "Do I need a visa for Hong Kong, and does it also work for China?" The first half has an easy answer. The second half is where people get burned. This guide covers both — the full visa-free table, what actually happens at the immigration counter, customs rules, and exactly what it takes to continue into Shenzhen or the rest of the mainland.
+One scope note before we start: if you hold a US passport and want the deep detail — extensions, overstays, working remotely from Hong Kong, the mainland visa options ranked — I keep all of that in a separate Hong Kong visa guide for US citizens . This page is the overview for every nationality.
+Visa-free durations by nationality
+Hong Kong runs its own immigration system, completely separate from mainland China's. Its visa-free list is one of the most generous in Asia. Here are the current periods of stay for the nationalities I get asked about most, per the Hong Kong Immigration Department as of July 2026:
+Passport
+
+Visa-free stay
+
+Notes
+
+United Kingdom
+
+180 days
+
+British citizen passports
+
+United States
+
+90 days
+
+Canada
+
+90 days
+
+Australia
+
+90 days
+
+New Zealand
+
+90 days
+
+Germany
+
+90 days
+
+France
+
+90 days
+
+Italy
+
+90 days
+
+Spain
+
+90 days
+
+Netherlands
+
+90 days
+
+Ireland
+
+90 days
+
+Japan
+
+90 days
+
+South Korea
+
+90 days
+
+Singapore
+
+90 days
+
+Malaysia
+
+90 days
+
+Brazil
+
+90 days
+
+Mexico
+
+90 days
+
+Israel
+
+90 days
+
+Thailand
+
+30 days
+
+Indonesia
+
+30 days
+
+South Africa
+
+30 days
+
+United Arab Emirates
+
+30 days
+
+Philippines
+
+14 days
+
+Russia
+
+14 days
+
+India
+
+14 days
+
+Free Pre-arrival Registration (PAR) required online before flying
+
+A few things worth knowing about this table:
+The clock starts at entry. Your landing slip shows the exact date you must leave. Immigration officers grant the full period by default; there is no discretionary shortening for tourists in normal cases.
+
+Indian passport holders need PAR. It is not a visa — it is a free online Pre-arrival Registration on the Immigration Department website, valid for multiple visits over six months. Airlines will check it at check-in.
+
+EU member states almost all get 90 days. If your country is not listed above, check the Immigration Department's official table linked in the sources — it lists every territory and its exact period of stay.
+
+Extensions are not a tourist thing. Unlike the mainland, Hong Kong rarely extends tourist stays. If 90 days is not enough, the usual workaround people talk about is a border run, but officers can and do refuse entry to people who look like they are living in Hong Kong on back-to-back visa-free stays.
+
+What you actually need at immigration
+Here's the thing nobody tells you: the paperwork requirements are minimal, but they are enforced at two different points — the airline check-in desk and the immigration counter — and the airline is usually the stricter one.
+Passport validity. The official rule is that your passport must be valid for at least one month after the date you plan to leave Hong Kong. That is unusually lenient — most of Asia demands six months. In practice I still tell clients to travel with six months of validity anyway, because a connecting airline or your next destination (mainland China included) may apply the stricter standard.
+Onward or return ticket. The Immigration Department's stated policy is that visitors must hold onward or return tickets, with one interesting exception: travelers in transit to mainland China or Macao are exempt. In reality, Hong Kong officers rarely ask Western passport holders to show a ticket — but airlines absolutely do at check-in, and they will deny boarding if you cannot show one. A one-way flight into Hong Kong with a vague plan is the most common self-inflicted problem I see.
+Proof of funds and accommodation. The rule says "adequate funds to cover the duration of your stay without working." No fixed number is published. Officers almost never ask tourists, but if you get pulled for secondary questioning — young solo travelers on long trips are the usual profile — a hotel booking and a bank app screenshot end the conversation quickly.
+No more arrival card. Hong Kong scrapped the paper arrival and departure cards for all travelers on October 16, 2024. There is nothing to fill in on the plane and no digital arrival form to submit before flying — unlike Singapore or Thailand. If a website tries to sell you a "Hong Kong arrival card," it is selling you something that does not exist.
+No stamp — keep the landing slip. Hong Kong stopped stamping visitor passports back in 2013. At the counter you get a printed slip of paper showing your conditions and limit of stay. Photograph it immediately. Hotels and mainland border officers sometimes ask for it, and it is the only physical evidence of your permitted stay.
+e-Channel for repeat visitors. Since February 27, 2026, the Immigration Department has relaxed enrollment for its automated e-Channel gates: visitors who have entered Hong Kong twice within the past two years can register free of charge, and fingerprints are no longer collected — you present your e-passport, have a photo taken, and sign a consent form at an enrollment office. If you visit Hong Kong even semi-regularly, this turns immigration into a 20-second gate walk.
+Hong Kong entry is not mainland China entry
+This is the single most important section of this article, and the mistake behind most of the panicked messages I get from travelers standing at a border checkpoint.
+Hong Kong is a Special Administrative Region with its own border controls. Your 90 visa-free days in Hong Kong give you zero right to enter mainland China. The boundary between Hong Kong and Shenzhen is a full international-style border: you exit Hong Kong immigration, walk across, and face mainland Chinese immigration, which runs on entirely different rules.
+To cross into Shenzhen or anywhere else on the mainland, you need one of the following:
+A Chinese visa. The standard route for US citizens, who get the 10-year multiple-entry L visa. Apply before your trip at a Chinese consulate or visa center — you cannot get a regular tourist visa in Hong Kong quickly or cheaply anymore, despite what older blog posts claim.
+
+China's 30-day unilateral visa-free entry. Most EU countries, the UK, Australia, Japan, South Korea, and a long list of others currently enter mainland China visa-free for up to 30 days. US and Canadian citizens are not on this list. Check where your passport stands on the full list of China visa-free countries for 2026 .
+
+The 240-hour visa-free transit. This is the one that surprises people, in a good way. Because Hong Kong is treated as a separate region for transit purposes, arriving in the mainland from Hong Kong and then departing to a different country or region within 240 hours (10 days) qualifies — for 57 eligible nationalities, including Americans. Hong Kong → Shenzhen → fly home from Shenzhen or Guangzhou works. Hong Kong → Shenzhen → back to Hong Kong does not , because you must leave for somewhere other than where you came from. The full rules, eligible ports, and paperwork are in my guide to China's 240-hour visa-free transit rules .
+
+A Canadian client of mine last spring had booked a "quick day trip to Shenzhen" assuming her Hong Kong entry covered it. It did not, and Canada is not on the 30-day visa-free list either. She spent the afternoon in a Starbucks at Lo Wu station instead of the Dafen art village. Do not be her — sort the mainland side out before you fly.
+One more practical difference at the boundary: Hong Kong sits outside the Great Firewall, so Google, WhatsApp, and Instagram all work normally there. The moment you clear mainland immigration in Shenzhen, they stop. Check the current list of apps blocked in China and set yourself up before you cross.
+Crossing into Shenzhen: the actual mechanics
+Assuming your mainland paperwork is sorted, the crossing itself is easy. You have three main ways in:
+High-speed rail from West Kowloon. The cleanest option, and my default recommendation. West Kowloon station uses co-located border controls — you clear Hong Kong exit and mainland entry inside the same station before boarding. Trains reach Shenzhen Futian in about 15 minutes. West Kowloon is also a designated entry port for the 240-hour visa-free transit, which matters because not every land crossing is.
+Land crossings. Lo Wu (Luohu) and Lok Ma Chau/Futian connect directly to the Hong Kong MTR East Rail Line and drop you into the Shenzhen metro on the other side. Shenzhen Bay and Heung Yuen Wai serve buses and cars. These are straightforward with a visa or 30-day visa-free eligibility, but if you are relying on the 240-hour transit policy, confirm your specific crossing is an eligible entry port first — the designated-port list is specific, and the high-speed rail route is the safe bet.
+The Shenzhen 5-day port visa. A limited visa-on-arrival issued at ports including Luohu and Huanggang (visa office hours roughly 9:00–16:30), valid only within Shenzhen city limits for five days. The fee has historically been around ¥168 / about $25 for most nationalities, paid at the port. Fair warning: eligibility shifts without notice, and reports on whether US passport holders can currently use it conflict even among 2026 sources. If your itinerary depends on it, call the Luohu port visa office before you commit — or just use the 240-hour transit route, which is published national policy.
+If your China trip starts with a flight connection rather than Hong Kong, the transit rules work differently — my guide to flying through China on a layover covers that scenario.
+Arriving by air, land, or ferry
+By air. Hong Kong International Airport (HKG) is the main gateway. First-time visitors go to the manual counters; enrolled e-Channel users use the gates. Clearance is fast by international standards — outside of holiday peaks, 15 to 30 minutes from plane to taxi is normal. If you are connecting onward to a Pearl River Delta city by ferry, the SkyPier terminal lets you transfer airside without clearing Hong Kong immigration at all — your bags are checked through and you technically never enter Hong Kong.
+By land from Shenzhen. Same rules as any entry: you clear mainland exit, then Hong Kong entry. Your Hong Kong visa-free period applies fresh at each entry. Note that repeated same-week re-entries are exactly the pattern that invites questioning.
+By ferry. Regular ferries run from Macao and several mainland ports to the Hong Kong-Macau Ferry Terminal in Sheung Wan and the China Ferry Terminal in Tsim Sha Tsui. Arrival procedure is identical to the airport: passport, landing slip, done. The Hong Kong–Zhuhai–Macao Bridge buses work the same way, with border formalities at each end.
+Whichever way you arrive, the immigration requirements in this guide apply identically. There is no separate "land entry visa" or ferry-specific rule for visitors.
+Customs: what you can bring into Hong Kong
+Hong Kong is a free port, so customs is relaxed about most things — with three sharp exceptions that catch tourists.
+Tobacco: 19 cigarettes. Not 200 like most of the world. Nineteen — one open pack. Alternatively 1 cigar or 25 grams of tobacco. Anything over that must be declared and taxed at painful rates, and Hong Kong customs does run spot checks on the green channel. This is the most commonly broken rule I see.
+Alcohol: 1 litre of spirits. The duty-free concession covers 1 litre of liquor above 30% alcohol. Wine and beer are duty-free in unlimited reasonable quantities — Hong Kong abolished duty on them years ago — so your two bottles of Bordeaux are fine, but a second bottle of whisky is not.
+Vapes are banned. The import and sale of e-cigarettes and heated tobacco products is prohibited in Hong Kong. Do not bring your vape through the airport; penalties run to heavy fines and confiscation is standard.
+Cash: declare HK$120,000 or more. If you carry currency or bearer instruments worth HK$120,000 (about $15,400) or more, you must declare it — via the Red Channel at the airport or the written declaration system at land crossings. Failing to declare is a criminal offense even if the money is entirely legitimate.
+There are no vaccination certificates, health declarations, or COVID-era requirements for entering Hong Kong as of July 2026. Regular medications for personal use are fine in carry-on; bring the prescription if it is a controlled substance.
+Do US citizens need a visa for Hong Kong?
+No. US passport holders enter Hong Kong visa-free for up to 90 days as of 2026. You need a passport valid for at least one month beyond your departure date and, per the official rules, an onward or return ticket. For extensions, overstay consequences, and combining Hong Kong with a mainland China trip on a US passport, see the dedicated Hong Kong visa guide for US citizens .
+Does entering Hong Kong count as entering China?
+Not for immigration purposes. Hong Kong runs a completely separate border system, and your visa-free entry to Hong Kong gives you no right to enter mainland China. Crossing to Shenzhen requires a Chinese visa, eligibility under China's 30-day visa-free list, or the 240-hour visa-free transit policy. The reverse is also true — a mainland Chinese visa does not exempt you from Hong Kong's own entry rules, though nearly all Western passports do not need anything for Hong Kong anyway.
+Is there still an arrival card for Hong Kong?
+No. Hong Kong abolished arrival and departure cards for all travelers on October 16, 2024, and there is no digital arrival form to submit before flying either. At immigration you receive a printed landing slip showing your permitted period of stay instead of a passport stamp — photograph it and keep it until you leave.
+Can I do a day trip from Hong Kong to Shenzhen and come back without a Chinese visa?
+Usually not on the 240-hour transit policy, because that scheme requires you to depart the mainland for a different country or region than the one you arrived from — Hong Kong → Shenzhen → Hong Kong does not qualify, though Hong Kong → Shenzhen → Macao does. For a true there-and-back day trip your options are a regular Chinese visa, the 30-day visa-free entry if your nationality has it, or the Shenzhen 5-day port visa where eligible. Check the 240-hour transit requirements before building an itinerary around it.
+How strict is Hong Kong about onward tickets and proof of funds?
+The rules exist on paper, but enforcement at the immigration counter is light for most tourists — officers rarely ask. The real checkpoint is your airline: carriers routinely refuse boarding to Hong Kong-bound passengers without an onward or return ticket, because they are liable for taking you back. Book something refundable if your plans are open-ended, and keep a hotel confirmation reachable offline. I keep clients' entry documents in the MyChinaGuide app for exactly this reason — border halls are the one place you can never count on a signal.
+Sources
+Hong Kong Immigration Department — Visit Visa / Entry Permit Requirements
+
+Hong Kong Immigration Department — Immigration Clearance FAQ
+
+Hong Kong Customs and Excise Department — Duty-free Concessions
+
+GOV.UK — Hong Kong Entry Requirements
+
+HKSAR Government — Relaxed e-Channel Enrolment for Frequent Visitors (26 Feb 2026)
+
+Gov.cn — China Widens Visa-Free Access (240-hour Transit Expansion)
+
+Tags
+# hong-kong # visa # entry-requirements # immigration # border-crossing # travel-planning
+
+View all →
+Can a US citizen fly SFO-Hong Kong, visit mainland China for a few days, then return to Hong Kong under the 240-hour TWOV rule? →
+Is visa-free entry to China active for UK citizens →
+Is Hong Kong still worth visiting given the recent political and cultural changes? →
+What are the costs and eligibility requirements for a US citizen to get a 5-day Shenzhen Visa on Arrival when traveling from Hong Kong? →
+
+View all →
+June 9, 2026 · How-To Guide
+Hong Kong Visa for US Citizens: Do You Need One? (2026)
+
+June 15, 2026 · City Guide
+Hong Kong Travel Guide for First-Timers (2026): Visas, Transport, Districts & Costs
+
+March 25, 2026 · How-To Guide
+An Eight-Hour Hong Kong Layover, Counted Backwards From Your Gate
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

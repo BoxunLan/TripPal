@@ -1,0 +1,372 @@
+# source: https://mychina.guide/blog/china-survival-guide-for-tourists
+# final: https://mychina.guide/blog/china-survival-guide-for-tourists
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.989Z
+# bytes(raw): 74533
+# bytes(text): 15028
+# title: China Survival Guide for Tourists: 2026 Essentials
+China Survival Guide for Tourists: 2026 Essentials
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · April 11, 2026 · 10 min read · 1,177 views
+China Survival Guide for Tourists: Essentials for 2026
+
+Sarah Liu · Cultural Guide, Food Explorer · Updated September 27, 2026
+
+On this page 10 sections 01 What this guide covers
+02 The 5 Apps You Must Install Before the Flight
+03 Money: Paying for Things in 2026
+04 Language: The Minimum Survival Vocabulary
+05 Maps: Why Google Maps Will Not Work
+06 Transport: Real 2026 Costs
+07 Hotels: Which Ones Can Legally Accept You
+08 Food: Ordering Without Speaking Chinese
+09 Safety: Lower Than You Think
+10 Frequently Asked Questions
+
+China in 2026 is welcoming, cheap, astonishingly safe — and confusing in specific ways that can ruin your first 48 hours if you are not prepared. The taxi line at Beijing Capital will not take your Visa card. The restaurant at the corner of your hotel will show you a paper menu in characters only. Your Google Maps will display a blank city. These are not bugs; they are by design, and they all have simple fixes.
+This guide is built for the tourist who wants the minimum viable setup to land, sleep, eat and move for 7 to 14 days. It is not a cultural deep dive. It is not romantic. It is the checklist I wish every friend had before they forwarded me a frantic WeChat message at 2 a.m. Shanghai time.
+What this guide covers
+The 5 apps to install before you board the plane
+
+Payment setup that actually works for foreign cards in 2026
+
+How to navigate without Google Maps
+
+Real 2026 transport and food costs in RMB
+
+Hotel booking rules for foreign passports
+
+Safety numbers, scams to recognize and emergency phrases
+
+FAQ on visas, currency and WiFi
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+The 5 Apps You Must Install Before the Flight
+Download these while you still have Google Play and the Apple App Store without restrictions. All are free.
+WeChat (微信) — the default messaging, payment and mini-program platform; you cannot function socially in China without it
+
+Alipay (支付宝) — the primary payment app, with a dedicated Tour Pass for foreign cards
+
+Amap (高德地图) — Chinese equivalent of Google Maps, has an English-language toggle
+
+Trip.com — hotels, trains, flights, attraction tickets in full English with passport support
+
+Pleco — offline Chinese-English dictionary with camera OCR for menus
+
+Useful extras
+DiDi (滴滴) — the Chinese Uber, built-in English interface in 2026
+
+Meituan (美团) — food delivery and restaurant discounts; Chinese interface but Google Translate screen translation works
+
+Airalo / Holafly — eSIM download if you do not want a physical SIM
+
+Google Translate — download the offline Chinese pack in advance
+
+Xiaohongshu (小红书) — the Chinese Instagram, now the single best source of real-time tourist tips from other foreigners
+
+Money: Paying for Things in 2026
+China is ruthlessly cashless. Cash is still legally accepted and some tourist-facing places take Visa, but 95 percent of day-to-day transactions happen via QR code. Set yourself up for both modes.
+Alipay Tour Pass
+Alipay Tour Pass is the fastest win. Open the Alipay app, tap Tour Pass, link your Visa, Mastercard, Amex, JCB or Discover card, and top up in USD, EUR, GBP, HKD or SGD. You now pay anywhere Alipay is accepted. Minimum top-up roughly $10, maximum $2,000 per transaction. The exchange rate is a competitive interbank rate plus a small fee. There is no 3 percent surcharge on Tour Pass transactions, which is the critical difference from linking a card directly to the main Alipay wallet.
+WeChat Pay for foreigners
+Since 2024, WeChat Pay lets foreigners link Visa, Mastercard, Amex and Discover directly to the wallet with no setup fee. A 3 percent surcharge applies to individual transactions of ¥200 or more; anything under ¥200 is free. Real-name verification requires a passport photo upload and takes 1-3 days for approval. Worth doing the day you land because a handful of merchants (temple donation boxes, small food stalls) only accept WeChat.
+Cash
+Bring ¥1,500-3,000 in cash per person for a one-week trip. Some taxi drivers, rural guesthouses, temple entry fees and elderly market stalls still prefer cash. Get it from ATMs at Bank of China, ICBC or Industrial Bank using your home debit card — the fee is typically $3-5 per withdrawal, and the exchange rate beats airport currency booths by 5-8 percent.
+Credit cards at hotels
+4-star and 5-star hotels accept foreign Visa and Mastercard at check-in for the room charge and deposit. Budget hotels and hostels often do not. Always have cash or Alipay backup.
+Language: The Minimum Survival Vocabulary
+You do not need to speak Chinese to travel in China. You need three things: a good translation app, basic pinyin pronunciation, and patience.
+Pleco and Google Translate
+Pleco's OCR camera is the best tool for reading paper menus and street signs. Point the camera at the character, tap the word, get a translation with pronunciation. Google Translate's live camera mode (offline Chinese pack downloaded) is faster for quick glances but less accurate.
+The 10 phrases to memorize
+English
+
+Pinyin
+
+Character
+
+Hello
+
+Nǐ hǎo
+
+你好
+
+Thank you
+
+Xièxie
+
+谢谢
+
+How much?
+
+Duōshao qián
+
+多少钱
+
+Too expensive
+
+Tài guì le
+
+太贵了
+
+I do not understand
+
+Tīng bù dǒng
+
+听不懂
+
+Where is the toilet?
+
+Cèsuǒ zài nǎr
+
+厕所在哪儿
+
+I am allergic to
+
+Wǒ duì guòmǐn
+
+我对过敏
+
+Not spicy
+
+Bú yào là
+
+不要辣
+
+Take me to this address
+
+Qù zhège dìzhǐ
+
+去这个地址
+
+Help
+
+Jiù mìng
+
+救命
+
+WeChat translation hack
+Long-press any Chinese message in WeChat and choose Translate. It is instant and accurate enough for 95 percent of day-to-day conversations with hotel staff, drivers and shopkeepers.
+Maps: Why Google Maps Will Not Work
+Google Maps shows roughly accurate street layouts inside China but no real business data, no live traffic and no transit directions. The Google servers are blocked, and even with a VPN the data is stale.
+Use Amap (Gaode)
+Amap is the Chinese native answer. In the app settings, switch to English interface. Search for places in English (Forbidden City, Shanghai Museum) or paste Chinese characters. Navigation supports walking, driving, cycling and full metro routing with platform-level detail. In 2026, Amap also shows real-time bus arrivals and subway crowd levels.
+Baidu Maps as backup
+Baidu Maps is Chinese-only but has slightly better coverage in smaller cities. Use Google Translate screen translation over it if needed.
+Offline maps
+In Amap, go to Download Offline Maps and grab the full city packs for Beijing, Shanghai, Xi'an or wherever you will be. This saves mobile data and keeps you navigable in metro tunnels.
+Transport: Real 2026 Costs
+Getting around China is cheap and efficient. The only hard part is the first 10 minutes of figuring out how.
+Airports to city center
+Beijing Capital Airport Express — ¥25, 25 minutes to Dongzhimen, then metro transfer
+
+Beijing Daxing Express — ¥35, 19 minutes to Caoqiao
+
+Shanghai Pudong Metro Line 2 — ¥7-8, 70 minutes to People's Square
+
+Shanghai Maglev — ¥50 one way, 8 minutes to Longyang Road
+
+Guangzhou Baiyun Metro Line 3 — ¥7-10, 40 minutes to downtown
+
+Subway
+Beijing, Shanghai, Guangzhou, Shenzhen, Chengdu and Xi'an all have English metro apps and English signs at every station. Tickets ¥3-9 per ride. Buy a Beijing Yikatong or Shanghai Jiaotong IC card at the station, load ¥100, use it on subway, bus and some taxis.
+DiDi
+DiDi in 2026 has a full English interface inside the regular DiDi app. Link a foreign card or pay via Alipay Tour Pass. A 6-kilometer ride in Shanghai runs ¥22-35. DiDi is 40-60 percent cheaper than airport taxis and avoids the "broken meter" scam.
+High-speed trains
+12306 is the official app. In 2026 it accepts foreign passports natively for most routes, but the English translation is still inconsistent. Trip.com mirrors the same inventory at a ¥20-40 per ticket service fee and gives you a clean English confirmation. Beijing to Shanghai on the G-class bullet train is 4.5 hours at ¥553 (second class), ¥933 (first class), ¥1,748 (business class).
+Taxis
+Metered taxis exist but frequently refuse foreign passengers or claim the meter is broken. Use DiDi instead unless you are in a small town.
+Hotels: Which Ones Can Legally Accept You
+A Chinese hotel must be licensed to host foreign guests. In 2026 this includes most chain hotels, nearly all 3-star and above properties, and a growing share of Airbnb-style listings. Budget hostels in small cities sometimes cannot accept foreigners. Book through Trip.com and filter by "Foreigner-friendly" — it is a real, enforced category.
+Check-in procedure
+Present your passport and your China visa (or visa-exempt entry stamp). The reception photocopies both, takes a deposit via credit card or cash, and registers you with the local police within 24 hours. This registration is legally required. If you stay in a private Airbnb, the host must walk you to the local police station or register you via a WeChat mini-program — ask before booking.
+Food: Ordering Without Speaking Chinese
+Chinese food is one of the joys of the trip. Point-and-pray works; Pleco works better.
+The workflow
+Sit down, accept tea
+
+Ask for the "picture menu" (有图片菜单吗? yǒu túpiàn càidān ma)
+
+Use Pleco OCR to decode the character-only sections
+
+Circle what you want, hand back to waiter
+
+Pay via Alipay Tour Pass or WeChat Pay QR at the end
+
+Real 2026 prices
+Meal
+
+Typical price
+
+Hole-in-the-wall noodles
+
+¥12-25
+
+Street food lunch
+
+¥15-35
+
+Mid-range sit-down restaurant for two
+
+¥120-250
+
+Hotpot for two
+
+¥180-350
+
+Beijing duck at a famous chain
+
+¥280-550
+
+Starbucks latte
+
+¥32-38
+
+Convenience store meal
+
+¥18-30
+
+Dietary restrictions
+Say "Wǒ shì sùshí zhě" (I am vegetarian) or write it out. Vegetarian food is widely available but genuinely vegan is harder because lard and chicken stock are common. Peanut allergies require an extra sentence — carry a written card in Chinese.
+Safety: Lower Than You Think
+China ranks among the safest countries for foreign tourists in 2026. Violent crime against tourists is extremely rare. Walking a downtown street at midnight as a solo woman is statistically safer than in most European capitals. Police presence is visible and responsive.
+Common scams to recognize
+Tea house scam — two friendly students invite you to a "traditional tea ceremony" near Wangfujing or the Bund, then present a ¥2,000 bill. Decline politely
+
+Broken taxi meter — the driver claims it does not work and quotes a flat fare 3x normal. Use DiDi
+
+Fake monk donations — "monks" near temples ask for donations. Real Chinese monks never solicit money on the street
+
+Art gallery scam — students offer to show you "their art school" and pressure you to buy calligraphy
+
+Emergency numbers
+110 — police
+
+120 — ambulance
+
+119 — fire
+
+12308 — China Foreign Affairs hotline for foreigners in distress
+
+Your embassy — save the Beijing or Shanghai consulate number in your phone
+
+Frequently Asked Questions
+Do I need a VPN for China?
+Only if you want Google, Instagram, WhatsApp, Gmail, Facebook and YouTube. Install ExpressVPN or Astrill on your laptop and phone before you board the plane — VPN websites are blocked inside China. For many short trips, leaning on WeChat for communication and using an overseas-routed eSIM is a simpler answer than fighting with a VPN.
+Can I use my US dollars anywhere?
+No. Exchange for RMB on arrival. Airports have booths but with bad rates; use an ATM inside the terminal with your debit card for better rates.
+How much cash should I carry daily?
+¥300-500 per day for incidentals is plenty once Alipay and WeChat Pay are set up. On day one before your payments are working, carry ¥800-1,000 in case cards fail.
+Is tap water safe?
+No. Drink bottled water (¥2-5 for 500 ml at any convenience store) or refill from the hot water dispensers in hotels and train stations after boiling. Every hotel provides a free electric kettle.
+What is the minimum English I will see?
+Airports, high-speed rail stations, 4-star+ hotels and tourist attractions in major cities have full English signage. Mid-sized cities have partial English. Small towns have none. Do not assume a waiter or taxi driver speaks any English; they almost never do, and they are still friendly and helpful.
+The three things that actually decide your first 48 hours: a payment app linked to a foreign card , mobile data that works , and a booking method for trains . All three are set up at home in about an hour, and all three are considerably harder to arrange once you have landed and cannot reach the app stores.
+
+Share this article
+
+Tags
+# china travel # first time china # travel tips # travel essentials # tourist guide
+
+Travelers also asked
+View all →
+How difficult is independent travel in China regarding transport and payments, and are local guides necessary? →
+What digital tools do I absolutely need before landing in China to avoid getting stuck? →
+Is China worth visiting despite negative media portrayals? →
+Is it necessary to speak fluent Chinese to have positive interactions with locals while traveling? →
+
+Related articles
+View all →
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+March 15, 2026 · How-To Guide
+Independent Travel in China: The Real Guide (2026)
+
+February 4, 2026 · Itinerary
+Fifteen Days in China Is Really Nine
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

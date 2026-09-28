@@ -1,0 +1,30 @@
+# source: https://govt.chinadaily.com.cn/s/202602/04/WS69831274498e36855033a64e/im-a-us-citizen-flying-from-the-us-south-korea-transit-shanghai-south-korea-does-this-route-qualify-for-the-240-hour-visa-free-transit-policy-or-does-it-have-to-involve-a-third-country.html
+# final: https://govt.chinadaily.com.cn/s/202602/04/WS69831274498e36855033a64e/im-a-us-citizen-flying-from-the-us-south-korea-transit-shanghai-south-korea-does-this-route-qualify-for-the-240-hour-visa-free-transit-policy-or-does-it-have-to-involve-a-third-country.html
+# status: 200
+# contentType: text/html;charset=UTF-8
+# fetchedAt: 2026-09-28T17:21:47.879Z
+# bytes(raw): 11735
+# bytes(text): 1612
+# title: Questions and Answers
+
+I’m a US citizen flying from the US - South Korea (transit) - Shanghai - South Korea. Does this route qualify for the 240-hour visa-free transit policy, or does it have to involve a third country? | govt.chinadaily.com.cn
+
+Questions and Answers
+
+I’m a US citizen flying from the US - South Korea (transit) - Shanghai - South Korea. Does this route qualify for the 240-hour visa-free transit policy, or does it have to involve a third country?
+
+Q: I’m a US citizen flying from the US - South Korea (transit) - Shanghai - South Korea. Does this route qualify for the 240-hour visa-free transit policy, or does it have to involve a third country?
+
+A: Not quite. Under the 240-hour visa-free transit policy, the destination country on your confirmed onward ticket must be different from your departure country when entering China.
+
+The policy requires a transit flow often referred to as the A-B-C rule. This means you must fly from Country A (South Korea) → China → Country C (a third country). Since you are flying South Korea → Shanghai → South Korea, your itinerary is considered a "round trip" (A-B-A) rather than a transit, making it ineligible.
+
+In your case, even though you will not actually enter South Korea, both of your inbound flight to China and your onward ticket list South Korea as the departure and destination points, respectively. Therefore, you do not meet the eligibility requirements for the 240-hour visa-free transit policy.
+
+(Information updated in February, 2026)
+
+Copyright© 2026 China Daily. All rights reserved.
+
+京ICP备13028878号-6
+
+京公网安备 11010502032503号

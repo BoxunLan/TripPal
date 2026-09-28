@@ -1,0 +1,29 @@
+# TripPal seed list 04 — 2026 inbound-tourism friction coverage + research + more Q&A
+
+# --- recent coverage that enumerates foreign-visitor friction ---
+xinhua-globe-inbound-2026	https://www.news.cn/globe/20260915/48fa78ca5c9942f7885b4ae6fc4ca25d/c.html
+shanghai-digital-upgrades-visitors	https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260206/5e553f89f82644f0855ed65766db06f0.html
+tripvivid-7-complaints	https://www.tripvivid.com/46036.html
+theage-blocked-apps	https://www.theage.com.au/traveller/reviews-and-advice/this-futuristic-nation-can-feel-like-a-step-back-in-time-20260618-p6081j.html
+jntimes-cyber-china-details	https://www.jntimes.cn/zdzx/202608/t20260827_8590698.shtml
+
+# --- research abstracts (public API) ---
+s2-foreign-tourists-payment	https://api.semanticscholar.org/graph/v1/paper/search?query=foreign%20tourists%20China%20payment&fields=title,abstract,year,venue,url&limit=20
+s2-inbound-tourism-barriers	https://api.semanticscholar.org/graph/v1/paper/search?query=inbound%20tourism%20China%20barriers%20foreign%20visitors&fields=title,abstract,year,venue,url&limit=20
+s2-mobile-payment-foreign-visitors	https://api.semanticscholar.org/graph/v1/paper/search?query=mobile%20payment%20adoption%20foreign%20visitors%20China&fields=title,abstract,year,venue,url&limit=20
+
+# --- more Travel.SE / Expatriates.SE slices ---
+se-travel-china-money	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20money%20atm&site=travel&filter=withbody&pagesize=100
+se-travel-china-cash	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20cash&site=travel&filter=withbody&pagesize=100
+se-travel-china-language	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20language%20english&site=travel&filter=withbody&pagesize=100
+se-travel-china-scam	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20scam&site=travel&filter=withbody&pagesize=100
+se-travel-china-attraction	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20attraction%20tickets&site=travel&filter=withbody&pagesize=100
+se-travel-china-food	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20food%20restaurant&site=travel&filter=withbody&pagesize=100
+se-travel-china-vpn	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20vpn&site=travel&filter=withbody&pagesize=100
+se-travel-china-esim	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20esim%20sim&site=travel&filter=withbody&pagesize=100
+se-travel-china-alone	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20solo%20travel&site=travel&filter=withbody&pagesize=100
+se-expat-mobile-payment	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=mobile%20payment&site=expatriates&filter=withbody&pagesize=100
+se-expat-china-cash	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20cash%20atm&site=expatriates&filter=withbody&pagesize=100
+se-expat-china-visa	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20visa&site=expatriates&filter=withbody&pagesize=100
+se-expat-china-apartment	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20apartment%20rent&site=expatriates&filter=withbody&pagesize=100
+se-expat-china-language	https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=china%20language&site=expatriates&filter=withbody&pagesize=100

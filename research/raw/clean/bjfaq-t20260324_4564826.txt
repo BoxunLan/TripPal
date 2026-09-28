@@ -1,0 +1,23 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564826.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564826.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.478Z
+# bytes(raw): 7048
+# bytes(text): 1094
+# title: Hi, I was born in Beijing in 1980 and I have lost my original birth certificate. Can someone please tell me how to get a replacement official copy?
+
+Hi, I was born in Beijing in 1980 and I have lost my original birth certificate. Can someone please tell me how to get a replacement official copy?
+
+Home 12345 hotline 12345 hotline FAQs All
+
+Hi, I was born in Beijing in 1980 and I have lost my original birth certificate. Can someone please tell me how to get a replacement official copy?
+
+2026-03-24
+
+Hello. The birth certificate was introduced after 1996. Since you were born in 1980, a Birth Certificate was not issued at that time. Relevant proof can be provided based on hospital delivery records or other medical documentation from that period.
+If you need to obtain your medical records, according to the Regulations on Medical Record Management in Medical Institutions (医疗机构病历管理规定), "medical institutions shall establish medical record management departments or assign personnel responsible for medical record management". It is suggested to consult the medical institution where you were born directly.
+Thank you for your understanding and support.
+Beijing Municipal Health Commission
+
+Attachment

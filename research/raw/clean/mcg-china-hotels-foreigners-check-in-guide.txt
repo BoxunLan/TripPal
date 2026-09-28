@@ -1,0 +1,295 @@
+# source: https://mychina.guide/blog/china-hotels-foreigners-check-in-guide
+# final: https://mychina.guide/blog/china-hotels-foreigners-check-in-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.543Z
+# bytes(raw): 74730
+# bytes(text): 16888
+# title: China Hotels for Foreigners 2026: Check-In Guide
+
+China Hotels for Foreigners 2026: Check-In Guide
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · February 28, 2026 · 12 min read · 3,332 views
+China Hotels for Foreigners 2026: Avoid Check-In Rejection
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 10 sections 01 What this guide covers
+02 The real reason some hotels reject foreigners
+03 How to filter on Trip.com (and why Trip.com is the right platform)
+04 The major chains that always work
+05 The check-in process, step by step
+06 When to call a hotel directly (the verification script)
+07 What to do if you get rejected at the front desk
+08 Airbnb, homestays, and hostels
+09 Tibet, Xinjiang, and special permit zones
+10 Frequently asked questions
+
+A German client of mine arrived at a mid-range hotel near Drum Tower last October at 22:30 after a 13-hour flight. She had booked it through a non-Chinese booking site, paid in advance, and had a confirmation email on her phone. The front desk clerk took one look at her Austrian passport, shook his head, and said "no foreigner." I got the panicked WeChat message at 22:48. We found her a Hilton two blocks away for ¥1480 a night. Her original hotel refunded her three weeks later.
+The rejection was not random. It was a license issue. And once you understand it, you will never get caught out again.
+What this guide covers
+Why some hotels in China cannot legally accept foreign passports
+
+How to filter foreigner-friendly hotels on Trip.com (the most reliable platform)
+
+Which major chains always accept foreigners (Jin Jiang, Home Inn, Atour, Crowne Plaza, Marriott, Shangri-La)
+
+The 24-hour police registration rule and how hotels handle it for you
+
+The verification script to use when calling properties directly
+
+What to do if you get rejected at the front desk
+
+Airbnb, hostels, and homestay reality
+
+Tibet and rural-area special cases
+
+2026 deposit amounts and payment methods
+
+FAQ on visa extensions, registration slips, and PSB paperwork
+
+The real reason some hotels reject foreigners
+Chinese hotels must register every foreign guest with the local Public Security Bureau (PSB, 公安局) within 24 hours of check-in. This is national law. It is not a suggestion and it is not optional. The hotel front desk handles it automatically by scanning your passport into a PSB-linked computer system the moment you check in.
+The catch: not every hotel's check-in system is connected to the PSB database. If the hotel never applied for a foreign-guest license, their software simply cannot submit your registration. They have two choices when you walk in with a foreign passport: refuse you, or accept you and risk a fine that can reach ¥10,000 plus a business-license warning. Almost every hotel picks the first option.
+So "no foreigner" is almost never personal. It is a legal system problem. The hotel is not allowed to check you in because they literally cannot complete the registration. That is why shiny new boutique hotels in a small city can reject you while a 20-year-old courtyard inn near the Forbidden City happily accepts you — the courtyard inn applied for the foreign-guest license years ago.
+Hotels most likely to reject you
+Budget chains under ¥200 a night in lower-tier cities
+
+Rural guesthouses and family-run homestays
+
+Newly opened boutique hotels that have not yet completed PSB integration
+
+Apartment-style or short-term rental properties with residential (not commercial) registration
+
+Small-town business hotels that mainly serve Chinese travelers
+
+Hotels that always accept foreigners
+Any international chain: Marriott, Hilton, Hyatt, IHG (Crowne Plaza, Holiday Inn), Shangri-La, Four Seasons, Accor
+
+Large domestic chains: Jin Jiang Inn (锦江之星), Home Inn (如家), 7 Days Inn (7天), Hanting (汉庭), Atour (亚朵), Wanda Realm
+
+Established hostel chains in tier-1 cities: Mingtown, YHA Beijing/Shanghai, Hump (Kunming), Phoenix Hostel
+
+Any hotel listed on Trip.com with the "Accepts foreigners" filter applied
+
+How to filter on Trip.com (and why Trip.com is the right platform)
+Trip.com is the global-facing brand of Ctrip, the biggest Chinese online travel agency. It is the only booking platform that reliably tags foreigner-friendly properties at the filter level. Booking.com, Agoda, Expedia, and Hotels.com all list Chinese hotels, but their foreigner-registration metadata is patchy — you can get a confirmed booking on Booking.com for a hotel that will still turn you away on arrival.
+The filter path
+Open Trip.com (the app is faster than the website and has 24/7 English-speaking support)
+
+Search for your destination city
+
+Tap "Filter" on the top right
+
+Scroll to the "Amenities" or "Services" section
+
+Toggle "Accepts foreigners" or "Foreign guests welcome" (the exact label varies by app version)
+
+Apply the filter and only book from the remaining results
+
+The filter is not perfect — a handful of edge cases slip through — but it removes the vast majority of hotels that will reject you. If you see a ¥120 a night "deal" that disappears when you apply the filter, that hotel is not worth the risk. Pay the extra ¥80.
+Cross-check with user reviews
+After you pick a hotel, read the English reviews on Trip.com specifically. Any reviewer flagging "they refused my passport" or "foreigner registration problem" is your warning. If there are no English reviews at all, call the hotel to verify before paying.
+Double-check on Dianping
+For local on-the-ground reputation, search the hotel name on Dianping (the Chinese Yelp, which also lists hotels). The reviews will be in Chinese, but you can paste into Google Translate. If Dianping reviews mention "不接待外宾" (does not accept foreign guests), avoid.
+The major chains that always work
+If you want a zero-stress booking experience and are willing to spend ¥350-700 a night, stick to these domestic mid-range chains. They have thousands of properties across China and all of them accept foreigners.
+Chain
+
+Typical price (2026)
+
+Style
+
+Best for
+
+Jin Jiang Inn (锦江之星)
+
+¥220-400
+
+Budget business
+
+Tier 2-3 cities, always clean
+
+Home Inn (如家)
+
+¥200-380
+
+Budget business
+
+Largest network, reliable
+
+7 Days Inn (7天)
+
+¥180-320
+
+Rock-bottom budget
+
+Cheapest legal option
+
+Hanting (汉庭)
+
+¥240-450
+
+Budget plus
+
+Slightly nicer than Home Inn
+
+Atour (亚朵)
+
+¥500-900
+
+Mid-range design
+
+Best Chinese-run design hotel
+
+Crowne Plaza
+
+¥750-1800
+
+International
+
+Reliable English service
+
+Marriott / JW Marriott
+
+¥900-2500
+
+International luxury
+
+Peak-season safety
+
+Shangri-La
+
+¥1200-3500
+
+International luxury
+
+Mandarin-speaking concierge
+
+Atour in particular has become the default for foreign travelers on a mid-range budget in 2026. The rooms are newer than Jin Jiang, the English signage is actually present, and the PSB registration is instant.
+The check-in process, step by step
+Once you have booked a legal hotel, the actual check-in is straightforward. Here is what happens and what you need.
+What to bring
+Your physical passport (not a photo or photocopy — they must scan the real document)
+
+Your visa or visa-free entry stamp in the passport
+
+A credit card for the deposit (¥500-1000 hold) or equivalent cash
+
+The hotel address in Chinese characters (screenshot from Trip.com) for the taxi driver
+
+The 5-minute check-in flow
+Hand your passport to the front desk clerk
+
+They scan the photo page and the visa/entry-stamp page into the PSB system
+
+They take a live photo of you (many hotels now) for the registration file
+
+They pre-authorize ¥500-1000 on your card or take cash for the deposit
+
+They hand you a room key card and, if you ask, a printed "Registration Form of Temporary Residence" slip
+
+You are legally registered. The hotel has done the 24-hour rule on your behalf.
+
+Keep that registration slip. If you later need to extend your visa at a local Exit-Entry Bureau, they may ask for it.
+English and night shift realities
+Check-in before 20:00 if you can. Night shift staff speak less English, and front desks are often short-staffed after 23:00. At major chains in Beijing, Shanghai, Shenzhen, and Chengdu, front desk English is routine. In tier 3 and 4 cities, you may need Google Translate on your phone or a Trip.com customer service call to bridge the gap. Trip.com's in-app chat in 2026 has live English agents 24/7 and they will call the hotel on your behalf.
+When to call a hotel directly (the verification script)
+If you find a hotel you love on Trip.com but the "Accepts foreigners" tag is ambiguous, or if you are booking outside Trip.com, call the property before you pay. Phone calls in China are still faster than email for hotel bookings. Trip.com's app gives you the property's direct phone number on the listing page.
+Script (English)
+Hello, I am a foreign traveler and I would like to book a room for [dates]. Do you accept foreign passports and are you connected to the PSB registration system?
+
+If they say yes, confirm:
+Can I pay the deposit with a foreign Visa or Mastercard?
+
+If they hesitate on either question, hang up and book somewhere else.
+Script (show this Chinese to a translation app)
+你好，我是外国游客，想在你们酒店住宿。请问你们接待外宾吗？有公安系统登记吗？外币信用卡可以付押金吗？
+
+A licensed hotel will answer quickly and confidently. An unlicensed one will stumble and then say "no foreigner."
+What to do if you get rejected at the front desk
+This is the nightmare scenario, and the answer is: do not panic, and do not argue. Argument does not create a license.
+Ask the front desk to call a partner hotel nearby that accepts foreigners. Most licensed hotels know their neighborhood competitors.
+
+Open Trip.com, apply the "Accepts foreigners" filter, and search for the nearest property with availability tonight.
+
+Call Trip.com customer service through the in-app chat. They will rebook you and usually refund the original reservation, even if it was prepaid non-refundable, under their "booking not honored" clause.
+
+If it is after 22:00 and every nearby option is full, head to the nearest international chain (Crowne Plaza, Marriott, Hilton) — they almost always have last-minute inventory, even if it is more expensive.
+
+File the refund request with Trip.com the next morning with screenshots.
+
+Taxi drivers and DiDi drivers in major cities know which local hotels accept foreigners. If you are stranded at night, telling a DiDi driver "I need a foreign-friendly hotel" (外宾酒店) will often get you to the right place faster than any app.
+Airbnb, homestays, and hostels
+Airbnb reality
+Airbnb operates in China but the legal foundation has been shaky since the 2022-2023 regulatory reset. Most Airbnb listings in China now are apartment-style rentals run by commercial hosts who will register you with the PSB on arrival. A small minority are private-residence rentals where registration is your responsibility. The rules: if the host confirms in writing that they can register you, you are fine. If the host asks you to "just pretend to be a friend staying over," you are not.
+Hostels
+Established hostel chains in tier-1 cities accept foreigners by default. Mingtown Hostels (Shanghai, Nanjing, Hangzhou), YHA Beijing and Shanghai, Hump Hostel (Kunming, Lijiang), Phoenix Hostel (Beijing) are all licensed and foreigner-friendly. Budget independent hostels in smaller cities are hit or miss. Call ahead, always.
+Homestays in villages
+If you are hiking Yunnan, Guizhou, or the outer edges of Sichuan and staying in rural guesthouses, accept that some villages have zero licensed accommodation. In Tiger Leaping Gorge the trail guesthouses are licensed. In smaller villages off the tourist track, you may need to sleep in a tier-4 city hotel and day-trip in. Do not sleep in your rental car to avoid the rule — it is technically a violation and PSB do run spot checks in scenic areas.
+Tibet, Xinjiang, and special permit zones
+Tibet requires all foreign travelers to book through an authorized travel agent with a Tibet Travel Permit. Independent hotel booking is not allowed. You cannot just show up in Lhasa on a Trip.com reservation and check in. Book the entire trip — transport, hotel, guide — through a licensed operator.
+Xinjiang is more permissive than Tibet but has local rules that change frequently. Major hotels in Urumqi, Kashgar, and Turpan accept foreigners, but rural counties may not. Confirm each stop with Trip.com or directly with the property.
+Can I stay in an Airbnb in China as a foreigner?
+Yes, if the host is licensed and can register you with the PSB. Commercial Airbnb operators in tier-1 cities usually can. Private-residence hosts often cannot. If the host is vague about registration, pick a hotel instead.
+What happens if my hotel forgets to register me?
+You are technically in violation of the 24-hour rule and can face a small fine if PSB audits the hotel. Most travelers never notice because most hotels do register on time. Ask for your "Registration Form of Temporary Residence" at check-in as evidence that you are covered.
+Do luxury hotels always accept foreigners?
+International luxury chains (Marriott, Hilton, Hyatt, Shangri-La, Four Seasons) always accept foreigners. Domestic luxury brands (Banyan Tree, Aman) also always accept. The edge case is small 3-4 star boutique hotels that look nice but never applied for the foreign-guest license. Always verify with the Trip.com filter.
+How much cash should I bring for hotel deposits?
+Most major chains in 2026 accept foreign Visa or Mastercard for the ¥500-1000 pre-authorization hold. Budget chains in smaller cities may still require cash. Carry ¥1000 in cash as a backup for the first night if you are landing in a tier 2 or 3 city.
+Do I need the registration slip for a visa extension?
+Yes. If you apply for a visa extension at a local Exit-Entry Bureau, they may ask for your "Registration Form of Temporary Residence" (临时住宿登记表) as evidence of where you have been staying. Every licensed hotel can print one on request at check-in. Take a photo of it and keep the original.
+Two places this bites hardest. In Xinjiang , county towns can have a single licensed property and checkpoints ask to see your most recent registration slip. And on a fifteen-day route through five cities , the cheapest bed on the map is often the one that will turn you away at the desk — message the property first. If you would rather skip the hotel entirely, an overnight sleeper handles the registration question by moving you while you sleep.
+
+Tags
+# china-travel # hotels # accommodation # foreign-travelers # visa-compliance
+
+View all →
+How do I handle police registration if I'm staying in an Airbnb or with friends in China? →
+Can a married tourist share a hotel room with a local Chinese citizen in Shanghai without legal issues? →
+Do I need to register with the police if I stay with family or friends in China instead of a hotel? →
+Where is the best area to stay in Beijing for a first-time visitor? →
+
+View all →
+March 15, 2026 · How-To Guide
+Independent Travel in China: The Real Guide (2026)
+
+April 11, 2026 · How-To Guide
+China Survival Guide for Tourists: Essentials for 2026
+
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

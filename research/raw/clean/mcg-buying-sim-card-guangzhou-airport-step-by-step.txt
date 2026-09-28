@@ -1,0 +1,154 @@
+# source: https://mychina.guide/blog/buying-sim-card-guangzhou-airport-step-by-step
+# final: https://mychina.guide/blog/buying-sim-card-guangzhou-airport-step-by-step
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:23.513Z
+# bytes(raw): 65922
+# bytes(text): 9695
+# title: Guangzhou Airport SIM Card Guide for Foreigners
+
+Guangzhou Airport SIM Card Guide for Foreigners
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · January 14, 2026 · 6 min read · 3,004 views
+Buying a SIM Card at Guangzhou Baiyun Airport: Foreigner Guide
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 7 sections 01 International flights land at Terminal 2 or Terminal 3
+02 What you need to buy one
+03 Which carrier to pick
+04 Prices — expect ranges, confirm at the counter
+05 The step-by-step at the counter
+06 The catch: a China SIM is censored
+07 Frequently asked questions
+
+Landing at Guangzhou Baiyun with a dead phone is a fixable problem — there are SIM card counters right in the arrivals hall, and as a foreigner you can buy one with just your passport. The trick is knowing which terminal to look in, what the counter will ask for, and one thing nobody warns you about: a mainland Chinese SIM still lands you behind the Great Firewall, so a little prep before you fly saves a frustrating first night.
+International flights land at Terminal 2 or Terminal 3
+At Guangzhou Baiyun (airport code CAN), international flights arrive at Terminal 2 or Terminal 3 . Since January 22, 2026, T3 has handled the international flights of 30 international and regional airlines plus China Eastern, Hainan Airlines, Shenzhen Airlines and Spring Airlines, and Terminal 1 stopped operating in May 2026. Check your booking or airline app for your terminal; both have services for foreign visitors in the international arrivals area.
+In T2's international arrivals area, near the exit, there's an international SIM card sales point and a Foreigner Service Center that opened ahead of the 2024 Canton Fair, and T3's international arrivals area has a service center of the same kind. Staffed with multilingual help, the centers handle three things travelers need at once: buying a SIM, linking a foreign bank card, and setting up Alipay or WeChat Pay. Best of all, they run 24 hours — so even a red-eye arrival can get connected. Don't fixate on a specific counter or gate number you read online; those move. Head for international arrivals in whichever terminal you land at, and look for the SIM/foreigner-services desk near the exit, or ask at the information counter.
+
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+
+What you need to buy one
+Your passport. Real-name registration is the law for every SIM in China — no passport, no SIM.
+
+Your face. Activation includes a live facial-recognition check that matches you against your passport photo. It takes a few seconds.
+
+Cash in RMB. Not every kiosk takes foreign cards, so bring some yuan to be safe.
+
+Expect a limit of around three SIMs per passport. That's the figure travelers consistently report; treat it as a practical cap rather than something to test.
+
+Which carrier to pick
+Three national operators sell at the airport: China Mobile (中国移动), China Unicom (中国联通), and China Telecom (中国电信). For most foreign phones, China Unicom is the safe default — it has the broadest compatibility with overseas handsets and solid coverage in cities. China Mobile has the widest reach overall, but historically gave some foreign phones trouble; that matters less on modern 4G/5G but Unicom is still the easier bet.
+Prices — expect ranges, confirm at the counter
+Tourist plans shift by operator, promotion, and month, so treat these as ballpark and check the live price at the desk:
+Plan type
+
+Rough price
+
+Data / validity
+
+Short tourist SIM (Unicom)
+
+¥58–¥100
+
+a few GB, ~7 days
+
+Monthly tourist plan (Unicom)
+
+¥200–¥268
+
+~20 GB, 30 days
+
+Daily plan (China Mobile)
+
+~¥18
+
+1 GB per day
+
+30-day data (China Telecom)
+
+~¥98
+
+~20 GB
+
+Airport counters typically run a bit pricier than carrier shops in the city, so if you're staying a while and can wait, a downtown store may save you money.
+One product worth asking about: China Unicom's CUBe Card , launched in early 2025. It bundles a SIM with digital-yuan payment and transit (metro, bus) on a single card, and it's pitched squarely at foreign visitors, including a short 10-day version built around the 240-hour transit window. The exact price wasn't published, so ask the counter what each tier costs.
+The step-by-step at the counter
+After collecting your bags in international arrivals (T2 or T3), find the SIM sales point or Foreigner Service Center near the exit (ask at information if you don't see it).
+
+Say you want a short-term tourist SIM and roughly how many days you'll be in China; ask to see China Unicom's options.
+
+Hand over your passport — the staff scan it and register your details.
+
+Look into the camera for the facial-recognition check.
+
+Pay, ideally in RMB cash .
+
+The staff insert and activate the SIM in about 5 to 15 minutes. Confirm you have working data before you walk away.
+
+The catch: a China SIM is censored
+This is the part that surprises people. A SIM or data plan from a mainland carrier routes through the Great Firewall, so out of the box you won't be able to open Google, Gmail, WhatsApp, Instagram, Facebook, or Google Maps. If you go with a local SIM, you need a VPN installed before you arrive — you generally can't download a working one once you're already inside China.
+If avoiding the firewall matters more than cheap local minutes, you have two cleaner options:
+An international eSIM bought before you fly. Providers like the ones in our China eSIM guide route your traffic through gateways outside the mainland, so they sidestep the firewall with no separate VPN needed. The catch: you generally can't install or activate a non-Chinese eSIM once you're already in China, so set it up at home.
+
+A Hong Kong SIM, used in roaming. Roaming on a Hong Kong SIM inside the mainland usually delivers uncensored data because your traffic exits via Hong Kong. Speeds can vary, but it's a simple way to skip both the firewall and the VPN.
+
+In short: a local Guangzhou SIM is cheapest for local calls and data but needs a VPN; an international eSIM or Hong Kong SIM costs a bit more but gets you the open internet straight away. Whichever you choose, sort the firewall question before you land, not after. Once you're connected, our Guangzhou airport-to-city guide covers getting downtown.
+Can foreigners buy a SIM at Guangzhou airport? Yes. The international arrivals areas of Terminals 2 and 3 have service centers for foreign visitors that sell SIM cards — bring your passport and you can buy and activate one on the spot.
+Which terminal at Guangzhou Baiyun has the SIM counters? Terminals 2 and 3. International flights arrive at T2 or T3 (Terminal 1 stopped operating in May 2026), and each has a foreigner service center with SIM services in international arrivals.
+Is the counter open late at night? The foreigner service centers in T2 and T3 run 24 hours, so a late or early arrival can still get a SIM. Individual operator kiosks may keep shorter hours, but the service centers cover you.
+Will a Chinese SIM let me use Google and WhatsApp? Not on its own — a mainland SIM is behind the Great Firewall. You'll need a VPN installed before arrival, or use an international eSIM or Hong Kong SIM that bypasses the censorship.
+What do I need to bring? Your passport (mandatory for real-name registration), your face for the verification check, and some RMB cash, since not all counters take foreign cards.
+SIM sorted, data running. If your first afternoon is open, the Xiguan half-day food walk is the one to do while you're still near the centre.
+
+Tags
+# Guangzhou travel # China SIM card # airport arrivals # foreigner guide # travel apps
+
+View all →
+What steps should I take if my elderly parents are stuck at Guangzhou Airport due to a transit visa issue and we lose contact? →
+How to get from Guangzhou Baiyun Airport to Beijing Road with family and luggage? →
+
+View all →
+January 30, 2026 · How-To Guide
+Getting a SIM Card at Shanghai Pudong Airport After 10 PM (2026)
+
+January 19, 2026 · How-To Guide
+How to Enter China With a Dual-SIM Phone: 2026 Traveller's Guide
+
+March 14, 2026 · How-To Guide
+Guangzhou Airport Transfer Guide: Metro, Bus, Taxi, Didi
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

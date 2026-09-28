@@ -1,0 +1,260 @@
+# source: https://mychina.guide/blog/how-to-use-alipay-china-foreigner
+# final: https://mychina.guide/blog/how-to-use-alipay-china-foreigner
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:28.376Z
+# bytes(raw): 81183
+# bytes(text): 20388
+# title: How to Use Alipay in China as a Foreigner (2026)
+
+How to Use Alipay in China as a Foreigner (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · January 11, 2026 · 14 min read · 23,032 views
+How to Use Alipay in China as a Foreigner: 2026 Setup Guide
+
+M MyChinaGuide Editorial Team · China Travel Editorial Team · Updated September 27, 2026
+
+On this page 17 sections 01 Alipay setup: the short version
+02 What you need before you start
+03 Step 1: download the official app and register
+04 Step 2: complete identity verification
+05 Step 3: link an international bank card
+06 Alipay fees in 2026: the live payment screen is final
+07 Alipay spending limits in 2026
+08 What TourCard is — and what changed in 2026
+09 How to pay with Alipay
+10 Staying connected while you pay
+11 Check that the payment actually succeeded
+12 What an overseas linked card may not do
+13 Common setup and payment problems
+14 Build a payment backup before you fly
+15 A five-minute test on arrival
+16 Frequently asked questions
+17 Sources
+
+Foreign visitors can register Alipay with an overseas mobile number, follow the in-app identity prompts, and link an eligible international bank card. Alipay's live US App Store listing shows version 12.12.8 in July 2026, while Google Play shows an update on July 8, 2026. Both official listings still explicitly say that foreign visitors to China can connect a credit card and pay across the country.
+Once the card is approved, you can usually pay a merchant by scanning the merchant's QR code or by showing your own payment code for the cashier to scan. Set it up before departure, but do not make Alipay your only way to pay. Bring a second card and some RMB cash.
+This guide was fact-checked on July 26, 2026. Where a limit or fee can change by card, promotion or account, the amount shown inside Alipay at confirmation is the final source of truth.
+Alipay setup: the short version
+Download the official Alipay app from your phone's app store.
+
+Register with a phone number that can receive verification messages while you travel.
+
+Set the app language you are comfortable using.
+
+Complete the identity checks shown for your account. Keep your passport ready.
+
+Open the bank-card area and add an eligible international card.
+
+Complete any verification requested by your card issuer.
+
+Turn on transaction alerts and your preferred device security.
+
+Add a second payment method and carry a small amount of RMB cash.
+
+The exact labels can change with app versions and account region. Follow the current on-screen flow rather than hunting for a menu name from an old screenshot.
+
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+
+What you need before you start
+Prepare these items while you still have reliable internet:
+your passport;
+
+a mobile number that can receive SMS messages abroad;
+
+an eligible international credit or debit card;
+
+the billing address and contact details held by your bank;
+
+access to your bank's app, SMS or other card-verification method;
+
+a second card from another issuer if possible.
+
+The Chinese government's current working-and-living guide says foreign users can register mobile-payment apps with a foreign or Chinese mobile number and bind cards carrying Visa, Mastercard, UnionPay, American Express, JCB, Diners Club or Discover logos. Alipay's own card-payment agreement says the supported networks are ultimately subject to the prompts shown in the app. A supported logo does not guarantee that every card from that network will pass every verification step.
+Step 1: download the official app and register
+Use the official App Store or Google Play listing. Open Alipay, choose your preferred language if prompted, select the correct country or region code, and register with your phone number.
+Use a number you will keep active during the trip. If your home SIM will be removed or disabled, confirm how you will receive a security message before you leave. An eSIM used for data does not automatically keep your normal phone number reachable.
+Do not share a verification code with a driver, merchant, guide or stranger offering to “help” with setup. Enter security codes only inside the official app or your bank's verification flow.
+Step 2: complete identity verification
+Alipay may ask for identity information before card binding, when you enable a feature, or when a transaction reaches a compliance threshold. Follow the prompts shown to your account. Enter your name in the order and spelling used on your passport.
+For a clean passport scan:
+use the original passport, not a screenshot;
+
+place it flat in bright, even light;
+
+avoid glare over the photo and machine-readable lines;
+
+keep all four edges of the information page visible;
+
+remove covers that hide the page.
+
+If a selfie or face check is requested, remove sunglasses and hats and use neutral lighting. If the app cannot read the document, take a new image rather than repeatedly submitting the same blurred photo.
+Step 3: link an international bank card
+Open Alipay's bank-card section and choose the option to add a card. Enter the card number, expiry date, security code and requested billing information exactly as your issuer has it.
+Your issuer may require an app approval, one-time password or other verification. The government guide explicitly notes that an overseas card must be verified by its issuer. If binding fails, the correct next step may be the issuer or Alipay support, not a different identity workaround.
+Before trying again, check:
+international and online transactions are enabled;
+
+the card is not locked;
+
+your bank has your current phone number;
+
+the billing information matches;
+
+you can receive the issuer's verification request;
+
+the bank is not blocking the attempt as unusual activity.
+
+Avoid adding a long list of cards in rapid succession. Repeated failed attempts can create more fraud signals. Start with a mainstream physical card, then add one backup from another issuer.
+Alipay fees in 2026: the live payment screen is final
+Public visitor-payment guides describe the standard foreign-card rule as no additional platform service fee when a transaction is RMB 200 or less, and a 3% service fee on the transaction when it is above RMB 200. However, Alipay's current card-payment agreement does not promise that threshold forever. It says fees can be adjusted and that the fee announcement or standard displayed on the service page controls.
+Use the RMB 200/3% rule as a planning reference, not as a guarantee. Before confirming every material payment, read the amount, currency, funding card and any displayed service charge. Promotions, account type or card network can change the live result. Your issuer may also apply its own exchange rate or foreign-transaction charge; those costs are separate from anything displayed by Alipay.
+Some merchants will take a larger bill as separate payments of RMB 200 or less if you ask, which keeps each payment under the no-fee line described above. Ask first: not every merchant will, and if you need a refund later, each payment has to be refunded on its own. Don't use split payments to get around a spending limit. If a large purchase is important, ask the merchant which cards it accepts directly and confirm the cost with your issuer.
+Alipay spending limits in 2026
+China's public payment guide raised the general mobile-payment ceiling for overseas visitors to USD 5,000 per transaction and USD 50,000 per year. Those are platform-level public ceilings, not a promise that every account can spend that amount. Alipay's current agreement says the actual limit is subject to the service-page prompt, and your card issuer can impose lower single, daily or monthly limits.
+For an expensive hotel, medical bill or major purchase, confirm all three layers in advance: the merchant's accepted route, the limit shown by Alipay and the issuer's authorization limit. Keep a physical card and RMB payment alternative available.
+What TourCard is — and what changed in 2026
+TourCard has not been shown to have shut down in May 2026. Current Shanghai government material still lists Bank of Shanghai's TourCard for overseas visitors, and the live Bank of Shanghai agreement hosted by Alipay still describes the service.
+TourCard is a separate prepaid-card option, not a replacement name for linking your credit card directly to Alipay. The official agreement says it is opened through an Alipay mini program, can be funded with eligible international cards, is valid for 90 days and is for merchant spending in mainland China. The agreement currently describes a 5% purchase or top-up service fee, while also saying the live service page controls current rates and promotions.
+For most short trips, try direct card binding first because it avoids loading money into a separate prepaid product. Consider TourCard only when direct binding does not fit your needs, then compare the current top-up fee, limits, refund rules and card eligibility shown in the mini program. Do not rely on a blog claim that TourCard stopped accepting users on a specific date.
+How to pay with Alipay
+There are two common QR flows. Look at what the merchant presents before tapping.
+Scan the merchant's QR code
+Open Alipay's scanner, scan the merchant's code, check the merchant name, enter the amount only if the merchant asks you to, and review the funding card before confirming.
+Never guess the amount from a spoken number you did not understand. Ask the merchant to show the total on a calculator, receipt or payment screen. Confirm the decimal point and currency before authorizing.
+Some QR codes are static and require you to type the amount. Others open a merchant checkout with the price already set. If the merchant name in Alipay looks unrelated, stop and ask before paying.
+Show your payment code
+At supermarkets, convenience stores and other staffed checkouts, the cashier may ask you to display your payment code. Open the payment-code screen and let the cashier scan it.
+Treat that code like a payment credential. Do not send screenshots of it or leave it open while handing your unlocked phone to someone. Confirm the final result in Alipay rather than relying only on a sound from the merchant's device.
+Staying connected while you pay
+Alipay needs a live connection at the moment you pay. Merchant Wi-Fi is common in malls and chain restaurants, and rare at street stalls, morning markets and small family places. Small vendors also keep less change than they used to, so cash is not a clean fallback there.
+A local SIM card requires real-name registration with your passport at a carrier shop, which costs an hour or more of your first day. A travel eSIM installs before you fly and connects when the plane lands. Most travel eSIMs for China roam through an overseas network, so your bank's verification app and email keep working while you bind a card.
+Airalo sells China plans from around US$4 for 1GB over 3 days up to about US$26.50 for 10GB over 30 days. Prices move, so check the current plan page. We compare providers on speed and firewall behavior in our eSIM guide .
+Confirm your handset supports eSIM before buying. Most iPhones from the XS onward and recent Pixel and Samsung flagships do. Many phones sold in mainland China do not.
+Check that the payment actually succeeded
+After paying, look for the completed transaction in your Alipay activity and compare the merchant name and amount. A loading spinner, scanner beep or merchant notification alone is not enough.
+If the status is pending, do not immediately pay again. Ask the merchant to check their side, refresh your transaction list, and wait for a clear result. If you accidentally create two completed payments, keep both transaction references and ask the merchant about a refund.
+For refunds, return to the original transaction and keep the original card active. Merchant approval and card-network processing can take different amounts of time. A refund may not appear as instant spendable Alipay balance when the original payment was funded by an overseas card.
+What an overseas linked card may not do
+Linking an international card is designed for eligible purchases from qualifying merchants in mainland China. Alipay's agreement explicitly says the service cannot be used for transfers, wealth management, cash withdrawal or other non-consumption uses. Wallet-balance functions, red packets and some mini-program transactions may require a mainland account, a different funding method, additional verification or may be unavailable.
+If a feature refuses the linked card, do not route money through a stranger or buy a pre-funded account. Use another legitimate payment method or ask the merchant for a standard purchase QR code.
+Common setup and payment problems
+The passport or identity check fails
+Retake the document in even light, confirm the passport is valid, and match the name exactly. If the app gives a specific error code, save a screenshot without exposing the full passport number and use official support.
+The card will not bind
+Confirm the issuer supports the attempted transaction and that online and international use are enabled. Check whether the issuer sent an approval request. If one card repeatedly fails, try a backup from another issuer rather than changing identity details.
+A payment is declined
+Check the selected funding card, available balance or credit, issuer alerts and the merchant's accepted payment route. A card that bound successfully can still be declined for a specific transaction. Try the second legitimate payment method or pay in RMB cash.
+The merchant accepts Alipay, but your linked card is unavailable
+Some merchant categories or transaction types may not accept an overseas card even though the merchant accepts Alipay generally. Ask whether the merchant can take your physical international card, Weixin Pay or cash. Do not assume the cashier can override the restriction.
+You cannot receive the login code
+Reconnect the home SIM, check the country code and confirm roaming or SMS reception with your carrier. Avoid creating a second account unless official support recommends it; duplicate accounts can complicate identity and card checks.
+You need official English-language help
+Alipay's current contact page lists the overseas hotline as +86 571 95188, available 24 hours, with only security services from midnight to 08:00. Its English hotline is +86 571 2688 6000 from outside mainland China, or 0571 2688 6000 inside mainland China, daily from 08:00 to 24:00.
+Build a payment backup before you fly
+A reliable setup has at least three layers:
+Alipay with a verified primary card.
+
+Another legitimate payment route, such as Weixin Pay or a second card.
+
+RMB cash for a failed phone, lost network or unsupported merchant flow.
+
+Cash remains a valid payment method in China, and official guidance continues to require better cash acceptance. Withdraw from an ATM that displays your card network's logo or exchange money through an authorized outlet. Keep smaller notes for taxis, buses or small purchases.
+Also read Can you use credit cards in China? for direct card acceptance and How to use DiDi in China before relying on an in-app ride-hailing flow.
+Use the printable Before China phone setup checklist to confirm payment, maps, mobile data, train access and your first-night address in one pass.
+A five-minute test on arrival
+After reaching China and connecting to reliable mobile data:
+Open Alipay and confirm you are still signed in.
+
+Check that the intended card appears as a funding method.
+
+Make a small, genuine purchase at a staffed merchant.
+
+Verify the completed transaction and issuer notification.
+
+Confirm your backup card, cash and emergency contact are accessible.
+
+This is more useful than trying to force a test payment from abroad. It validates the real account, network, merchant and issuer path you will use during the trip.
+Can foreigners use Alipay without a Chinese bank account?
+Yes. Official Chinese guidance says foreign users can register with a foreign or Chinese mobile number and bind eligible international cards. The issuer must still approve the card, and feature availability can vary.
+Which international cards can be linked to Alipay?
+The Chinese government's 2025 guide lists Visa, Mastercard, UnionPay, American Express, JCB, Diners Club and Discover. A network being listed does not guarantee that every issuing bank or card product will work.
+Does Alipay charge a fee for an overseas card?
+Public visitor guides describe no additional platform fee at RMB 200 or less and a 3% service fee above RMB 200. Treat that as a planning reference: Alipay's current agreement says the live service page controls, and your issuer may add separate exchange or foreign-transaction costs.
+Is TourCard still available in 2026?
+Current Shanghai government material and the Bank of Shanghai agreement still document TourCard. It is a separate 90-day prepaid-card route with its own top-up fees, limits and refund rules. Check the current TourCard mini-program page before loading funds.
+Should I use Alipay or Weixin Pay?
+Set up both if you can do so legitimately and keep cash as a third option. The goal is redundancy: one account, card or merchant route can fail even when the others work.
+Can I use Alipay for person-to-person transfers?
+Do not assume an overseas linked card enables transfers or wallet-balance features. It is primarily for eligible merchant payments, and other functions may require a different account or funding method.
+Sources
+Alipay official App Store listing: version 12.12.8 , checked 2026-07-26.
+
+Alipay official Google Play listing: updated 2026-07-08 , checked 2026-07-26.
+
+Alipay card-payment user agreement: identity, fees, limits and permitted use , checked 2026-07-26.
+
+China government: current Guide to Working and Living in China , checked 2026-07-26.
+
+China government: payment limits for overseas visitors , checked 2026-07-26.
+
+Shanghai government guide: RMB 200 and 3% foreign-card fee reference , checked 2026-07-26.
+
+Bank of Shanghai prepaid-card agreement hosted by Alipay , checked 2026-07-26.
+
+Shanghai government International Services guide: TourCard , checked 2026-07-26.
+
+Alipay official support contacts , checked 2026-07-26.
+
+Tags
+# Alipay # mobile payments # first-time visitors # China apps
+
+View all →
+What can I do if Alipay verification fails before my first trip to China? →
+Do I need Alipay in Shanghai? →
+Can foreigners use Alipay and WeChat Pay in China with international credit cards? →
+Do I need both Alipay and WeChat Pay for China? →
+
+View all →
+February 15, 2026 · How-To Guide
+Paying in Beijing 2026: Digital Wallet Setup Guide
+
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+May 12, 2026 · Travel Tip
+Can You Use Credit Cards in China? A 2026 Reality Check
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

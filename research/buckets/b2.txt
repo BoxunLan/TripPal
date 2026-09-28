@@ -1,0 +1,5 @@
+﻿C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-attraction.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-hotel.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-taxi.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-train.txt
+C:\Users\17641\Desktop\TripPal\research\raw\web\se-travel-china-visa.txt

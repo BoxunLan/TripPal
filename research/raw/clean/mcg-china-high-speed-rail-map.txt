@@ -1,0 +1,353 @@
+# source: https://mychina.guide/blog/china-high-speed-rail-map
+# final: https://mychina.guide/blog/china-high-speed-rail-map
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.500Z
+# bytes(raw): 71093
+# bytes(text): 15539
+# title: China High-Speed Rail Map: All Routes Visualized (2026)
+
+China High-Speed Rail Map: All Routes Visualized (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog Topic · July 14, 2026 · 11 min read · 2,116 views
+China High-Speed Rail Map: All Routes Visualized (2026)
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 8 sections 01 The Whole Network, In One Paragraph
+02 The 8+8 Grid: How to Read the China Bullet Train Map
+03 The 8 Vertical Corridors (North-South)
+04 The 8 Horizontal Corridors (East-West)
+05 The Best Free Interactive China HSR Maps
+06 Regional Submaps: The 5 Zones That Actually Matter
+07 How to Use the Map to Plan a Multi-City Trip
+08 FAQ: The China Train System Map Questions I Get All the Time
+
+China's high-speed rail network is now over 50,000 km long , about two-thirds of all the HSR track on Earth. If you unrolled it end to end, it would wrap around the equator 1.25 times. And yet, most first-time visitors look at a china train system map and freeze. Too many lines. Too many Chinese characters. No idea where to start.
+Here's the shortcut. The entire network is built on a grid called 八纵八横 (bā zòng bā héng): "Eight Vertical, Eight Horizontal." Once you see those 16 corridors, the whole thing stops being a tangle of noodles and starts looking like a subway map for a country of 1.4 billion people. That's what this guide does: shows you the grid, names every corridor, points to the best interactive maps, and gives you a region-by-region cheat sheet you can actually use to plan a trip.
+What you'll get in the next 10 minutes:
+The one framework (8+8) that explains the whole china high speed rail map
+
+All 16 corridors named, with start, end, and key stops
+
+The 3 best free interactive maps (including the one every China-rail nerd bookmarks)
+
+Regional submaps for North, East, South, Central, and West China
+
+How to use the map to plan a multi-city trip without losing your mind
+
+The Whole Network, In One Paragraph
+As of early 2026, China runs 50,000+ km of dedicated high-speed rail , carries 4.31 billion passengers per year , and operates 1,580+ high-speed trainsets at top speeds of 350 km/h (217 mph) . That's bigger than the HSR networks of Japan, France, Germany, Spain, Italy, and South Korea, combined. It started in 2008 with one short line (Beijing–Tianjin). Eighteen years later, it covers 94% of Chinese cities over 1 million people and connects 33 of 34 provincial-level regions . Only Tibet has no high-speed line: its Lhasa-Nyingchi railway, opened in June 2021, is built for 160 km/h, and the Ya'an-Nyingchi section of the Sichuan-Tibet Railway, under construction since November 2020, is scheduled to be finished around 2030.
+This guide maps the high-speed lines only. For slow trains, overnight sleepers and trains to neighboring countries, see the full China railway map, conventional trains included .
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+The 8+8 Grid: How to Read the China Bullet Train Map
+Here's the framework. In 2016, China's National Development and Reform Commission published the revised Mid-to-Long Term Railway Network Plan , laying out eight vertical (north-south) corridors and eight horizontal (east-west) corridors . Sixteen lines total. Target completion around 2030. Current progress: about 80% built , on schedule.
+Why does this matter? Because every major city you'd actually want to visit sits on one of these 16 corridors. Beijing is the northern hub. Shanghai is the eastern hub. Guangzhou is the southern hub. Chengdu and Xi'an are the western hubs. Once you see the grid, you can't unsee it.
+The characters 八纵八横 literally mean "eight longitudes eight latitudes", the same mental model ancient Chinese planners used for laying out capital cities like Xi'an and Beijing. So when you stare at the hsr china map and feel overwhelmed, remember: under the noise, it's just a ruler-and-pencil grid.
+The 8 Vertical Corridors (North-South)
+These are the north-south lines. Most of them connect the big coastal megacities to the interior or the north to the south. The Beijing-Hong Kong corridor and the Coastal corridor are the two longest and arguably the most useful for tourists doing a multi-city trip.
+#
+
+Corridor
+
+Start
+
+End
+
+Length
+
+Key Stops
+
+V1
+
+Coastal HSR
+
+Dalian
+
+Fangchenggang
+
+~5,090 km
+
+Qingdao, Shanghai, Ningbo, Fuzhou, Xiamen, Shenzhen
+
+V2
+
+Beijing-Shanghai HSR
+
+Beijing
+
+Shanghai
+
+1,318 km
+
+Tianjin, Jinan, Nanjing, Suzhou
+
+V3
+
+Beijing-Hong Kong HSR
+
+Beijing
+
+Kowloon (HK)
+
+~2,400 km
+
+Hengshui, Hefei, Fuzhou, Shenzhen
+
+V4
+
+Beijing-Harbin + Beijing-Macau HSR
+
+Harbin
+
+Zhuhai/Macau
+
+~3,200 km
+
+Shenyang, Beijing, Guangzhou
+
+V5
+
+Hohhot-Nanning HSR
+
+Hohhot
+
+Nanning
+
+~2,500 km
+
+Taiyuan, Zhengzhou, Chongqing, Guiyang
+
+V6
+
+Beijing-Kunming HSR
+
+Beijing
+
+Kunming
+
+~2,760 km
+
+Shijiazhuang, Taiyuan, Xi'an, Chengdu
+
+V7
+
+Baotou-Haikou HSR
+
+Baotou
+
+Haikou
+
+~2,900 km
+
+Xi'an, Chongqing, Guiyang, Nanning
+
+V8
+
+Lanzhou-Guangzhou HSR
+
+Lanzhou
+
+Guangzhou
+
+~2,400 km
+
+Chongqing, Guiyang, Guangzhou
+
+V1, the Coastal HSR , is the longest passenger rail corridor in the world: over 5,000 km from Dalian to the Vietnamese border. Nobody rides the whole thing in one go (it'd take 20+ hours), but the segments are the most-booked HSR routes in China. V2, Beijing-Shanghai (京沪高铁) , is the one you've probably heard of. 1,318 km in 4 hours 18 minutes on the G7. I've written a full Beijing-Shanghai train vs flight breakdown if that's your specific route.
+The 8 Horizontal Corridors (East-West)
+These run east to west. They're generally longer because China is wider than it is tall (about 5,200 km east-west versus 5,500 km north-south, but the usable populated strip runs east-west), and they're how you get from the coastal megacities into the interior and the historical heartland.
+#
+
+Corridor
+
+Start
+
+End
+
+Length
+
+Key Stops
+
+H1
+
+Suifenhe-Manzhouli HSR
+
+Suifenhe
+
+Manzhouli
+
+~1,600 km
+
+Harbin, Qiqihar
+
+H2
+
+Beijing-Lanzhou HSR
+
+Beijing
+
+Lanzhou
+
+~1,700 km
+
+Hohhot, Yinchuan
+
+H3
+
+Qingdao-Yinchuan HSR
+
+Qingdao
+
+Yinchuan
+
+~1,800 km
+
+Jinan, Shijiazhuang, Taiyuan
+
+H4
+
+Eurasia Land Bridge HSR
+
+Lianyungang
+
+Ürümqi
+
+~3,422 km
+
+Xuzhou, Zhengzhou, Xi'an, Lanzhou
+
+H5
+
+Shanghai-Chengdu (Yangtze) HSR
+
+Shanghai
+
+Chengdu
+
+~2,200 km
+
+Nanjing, Hefei, Wuhan, Chongqing
+
+H6
+
+Shanghai-Kunming HSR
+
+Shanghai
+
+Kunming
+
+~2,066 km
+
+Hangzhou, Nanchang, Changsha, Guiyang
+
+H7
+
+Xiamen-Chongqing HSR
+
+Xiamen
+
+Chongqing
+
+~1,700 km
+
+Longyan, Ganzhou, Changsha
+
+H8
+
+Guangzhou-Kunming HSR
+
+Guangzhou
+
+Kunming
+
+~1,287 km
+
+Nanning, Baise
+
+The scenic winner is H6, the Shanghai-Kunming HSR (沪昆高铁) : 2,066 km through Hangzhou, Nanchang, Changsha, and Guiyang. The Guizhou section climbs through karst mountains and crosses what feels like a bridge every 30 seconds. I did Changsha to Guiyang last spring and half the passengers had phones pressed to the windows the whole way. ¥465 ($65) in second class.
+H4, the Land Bridge corridor , is the longest east-west shot: 3,422 km from the Pacific at Lianyungang to Ürümqi in the far western desert. The modern Silk Road. Parts aren't fully high-speed yet (the Lanzhou-Ürümqi section runs at 250 km/h), but the whole route books end to end.
+The Best Free Interactive China HSR Maps
+Now for the useful part. Because a table of 16 corridors is fine, but what you actually want is a zoomable, clickable, up-to-date china high speed train map you can poke around on your phone. These three are the ones I'd bookmark in this order.
+1. cnrail.geogv.org is the gold standard. This is the interactive map every China-rail nerd on Reddit ends up recommending. A free open-data project that shows every Chinese railway line (HSR, conventional, under construction, planned) color-coded by maximum speed. Click any line and it tells you the name, speed, opening date, length. Zoom in and you can see individual stations. It's the closest thing to an official map that's actually usable in English. Open cnrail.geogv.org . No signup. Works on mobile browsers. Loads fine without a VPN.
+2. TravelChinaGuide Railway Map is static but clean. A tourist-friendly PNG map showing major HSR corridors with the big cities labeled in English. Not interactive, but good for a quick visual overview. View the TravelChinaGuide railway map . Download the PDF version for offline reference if you're the kind of person who likes paper.
+3. Wikipedia's HSR diagrams . The System Diagram SVG on the High-speed rail in China Wikipedia page is one of the clearest schematic views of the 8+8 grid anywhere. It abstracts the corridors into clean straight lines, the way the Tube map abstracts London. Good for teaching yourself the framework.
+Ones I'd skip : 12306.cn's own map (only in Chinese, painful UX). Google Maps (works inside China but the railway layer is spotty). Paper maps sold at station kiosks, outdated the moment they print.
+Regional Submaps: The 5 Zones That Actually Matter
+Sixteen corridors is still a lot. So here's how I mentally chunk the china high speed map into five regions. Pick the region your trip covers and ignore the rest.
+North China (Beijing hub) . Every northern corridor passes through Beijing. From here you hit Tianjin in 30 minutes, Shanghai in 4.5 hours, Xi'an in 4.5 hours, Harbin in 4.5 hours, Hong Kong in 9 hours. Key stations: Beijing South for Jinghu, Beijing West for Beijing-Hong Kong, Beijing Chaoyang for the new lines.
+East China (Shanghai/Hangzhou hub) . The densest HSR region on the planet. Shanghai Hongqiao alone handles 300+ HSR departures per day. Shanghai → Suzhou in 25 min, Shanghai → Hangzhou in 50 min, Shanghai → Nanjing in 70 min. Day-trip distances. This is where China's HSR feels most like a metro.
+South China (Guangzhou/Shenzhen/Hong Kong hub) . The Pearl River Delta is hammered with HSR. Guangzhou South → Shenzhen North in 30 min, Guangzhou → Hong Kong West Kowloon in 48 min (border control happens inside the station, which is the real magic trick). From Guangzhou you branch west to Kunming (H8) or north to Wuhan and Beijing (V3/V4).
+Central China (Wuhan/Zhengzhou hub) . The one tourists overlook. Zhengzhou East alone sits on four of the 16 corridors, and Wuhan is the other megajunction. If you're doing a cross-country trip, you'll probably change here whether you want to or not. First time I connected at Zhengzhou East, I walked 1.2 km between platforms and thought I was in an airport terminal.
+West China (Chengdu/Xi'an hub) . Xi'an sits on both V6 and H4, connecting to Beijing, Chengdu, Lanzhou, and Zhengzhou. Chengdu reaches Chongqing in 1 hour, Guiyang in 3 hours, and eventually Lhasa on the Sichuan-Tibet Railway, once its Ya'an-Nyingchi section is finished (scheduled around 2030).
+How to Use the Map to Plan a Multi-City Trip
+Real example. A reader named Priya asked me last month how to plan a 14-day China trip hitting Beijing, Xi'an, Chengdu, Chongqing, Guilin, and Guangzhou. Classic first-timer route. Here's the four-step method I sent her.
+1. Open cnrail.geogv.org , zoom to eastern China, and drop mental pins on each city.
+2. Trace the route on the 8+8 grid. Beijing → Xi'an rides corridor V6 (Beijing-Kunming line). Xi'an → Chengdu stays on V6. Chengdu → Chongqing is a short spur. Chongqing → Guilin has no direct HSR, so you jump on V5 (Hohhot-Nanning) via Guiyang. Guilin → Guangzhou is the Guiguang HSR into Guangzhou South.
+3. Check fastest G-trains on 12306.cn or Trip.com. Priya's numbers: Beijing→Xi'an 4h 30m (¥515 / $72), Xi'an→Chengdu 3h (¥263 / $37), Chengdu→Chongqing 1h 10m (¥154 / $21), Chongqing→Guilin 5h 20m via Guiyang (¥428 / $60), Guilin→Guangzhou 3h (¥214 / $30). Total: ¥1,574 ($220). Five HSR legs for the price of one US domestic flight. Our guide to buying HSR tickets covers the 12306 sign-up in detail.
+4. Book 15 days ahead during holiday windows, 3-5 days is fine otherwise. Priya booked 10 days out and had her pick of seats.
+FAQ: The China Train System Map Questions I Get All the Time
+Is there an official China HSR map in English?
+Not really. China Railway's 12306.cn map is Chinese-only and clunky. The closest English alternative is cnrail.geogv.org — open-source, community-built, but it uses official China Railway data. For static printed-style maps, TravelChinaGuide and ChinaHighlights are the most commonly cited.
+How long is the China HSR network now?
+Over 50,000 km as of end-2025 , about two-thirds of all HSR track on the planet. The 8+8 plan targets roughly 70,000 km of modern rail (45,000+ km of HSR) by 2030, and progress sits around 80%.
+Can I see the HSR map on my phone without a VPN?
+Yes. cnrail.geogv.org loads fine inside China without a VPN. TravelChinaGuide and ChinaHighlights also work. Wikipedia is spottier. Download any map images you want offline before you arrive, just in case.
+What's a D-train versus a G-train on the map?
+G-trains are the fast ones: 300-350 km/h, what you want for long distances. D-trains are slower high-speed: 200-250 km/h, often used for overnight sleepers or older lines. Both show up on the china bullet train map but G is always faster and usually only slightly more expensive.
+
+About the author : Michael Chen is a Shanghai native, 3 years of backpacking across China, 200+ high-speed train rides, and a color-coded spreadsheet of every corridor he's ridden on the 8+8 grid. He writes transport and budget guides for MyChinaGuide.
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Tags
+# hsr # map # network # 8-vertical-8-horizontal
+
+View all →
+What is a realistic pace and preparation strategy for a multi-city High-Speed Rail trip in China? →
+
+View all →
+July 7, 2026 · How-To Guide
+China High-Speed Rail Guide: Routes, Speed & How to Ride (2026)
+
+July 28, 2026 · How-To Guide
+China Railway Map (2026): The Whole Network and Every Train Type
+
+February 4, 2026 · Itinerary
+Planning a China Itinerary: One City Per Week, Minus One
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

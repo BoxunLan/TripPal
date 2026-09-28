@@ -1,0 +1,362 @@
+# source: https://mychina.guide/blog/can-you-use-credit-cards-in-china
+# final: https://mychina.guide/blog/can-you-use-credit-cards-in-china
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:23.672Z
+# bytes(raw): 84338
+# bytes(text): 22110
+# title: Can You Use Credit Cards in China? What Works in 2026
+
+Can You Use Credit Cards in China? What Works in 2026
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog Travel Tip · May 12, 2026 · 17 min read · 10,392 views
+Can You Use Credit Cards in China? A 2026 Reality Check
+
+Jenny Wang · Travel Planning Expert, MyChinaGuide · Updated September 27, 2026
+
+On this page 13 sections 01 The Short Answer on Using a Card in China
+02 Where Your Visa or Mastercard Actually Swipes
+03 The Real Workaround: Alipay and WeChat Pay
+04 How to Link Your Card to Alipay (10 Minutes)
+05 ATMs, Cash, and the Backup Plan
+06 Where your card still works: prepaid hotel bookings
+07 Foreign Transaction Fees and the ¥200 Rule
+08 Payment Method Comparison
+09 A Smart Payment Strategy for a 10-Day Trip
+10 What NOT to Do
+11 Your Card in China, Solved
+12 FAQ
+13 Sources
+
+Your Visa or Mastercard works in China in 2026, but probably not the way you're picturing. Hotels, airports, and big chains still swipe your card the normal way. But for most everyday spending, taxis, bubble tea, dumplings, train tickets, you'll pay through Alipay or WeChat Pay, which have accepted foreign cards since 2023.
+Let me walk you through what actually happens when you use a card in China, and how to avoid the two or three traps that still exist.
+What this guide covers:
+Where your physical Visa/Mastercard still swipes (and where it won't)
+
+The Alipay/WeChat Pay setup every tourist needs
+
+ATM tips and how much cash to carry
+
+The sneaky 200 RMB surcharge nobody mentions
+
+A real payment strategy for a 10-day trip
+
+The Short Answer on Using a Card in China
+Here's the thing nobody tells you. China isn't "cashless" the way headlines say, it's QR-code-ified . The country runs on two apps, Alipay and WeChat Pay, which together held about 91% of the digital payment market in 2023, according to CNN . Chinese people haven't swiped a physical credit card in years.
+For a while, this locked out foreign tourists. You needed a Chinese bank account and a local phone number to use the apps. Then in July 2023, both Alipay and WeChat announced they'd accept Visa, Mastercard, Diners Club, and Discover cards issued overseas, with JCB and American Express on WeChat Pay as well. That single policy change rewrote the rules for every foreign visitor.
+So in 2026, if you bring a card in China and don't prep Alipay? You'll struggle. If you take 10 minutes before your flight to link your Visa to Alipay ? You'll pay for almost everything without thinking about it.
+
+Paying in China gets easier with the app
+The China Wiki walks you through Alipay and WeChat Pay step by step, and Panda AI answers the edge cases — 10 chats free.
+
+Where Your Visa or Mastercard Actually Swipes
+Here's where a foreign card in China actually works:
+International hotels (Hilton, Marriott, Hyatt, Shangri-La, InterContinental)
+
+Airport counters and duty-free shops at PEK, PVG, CAN, PKX, CTU
+
+Foreign chains : Apple Store, IKEA, H&M, Starbucks, KFC, McDonald's, Uniqlo
+
+Luxury malls in Beijing, Shanghai, Guangzhou, Shenzhen
+
+Premium restaurants inside business hotels
+
+And these usually don't:
+Small restaurants, noodle shops, hole-in-the-wall spots (the good stuff)
+
+Street food vendors and night markets
+
+Street taxis (though the Didi app lets you add an international credit card)
+
+Convenience stores outside major chains
+
+Local shops, markets, neighborhood cafes
+
+Some ticket machines and transit kiosks, though the Beijing and Shanghai metros now take contactless foreign cards
+
+Ticket counters at smaller museums and attractions. Under 2024 national rules, sights rated 4A or 5A should accept foreign cards, so big-name sights increasingly do.
+
+If a small restaurant declines your card, look for the QR code at the counter . Scan it with Alipay or WeChat Pay, using the same card, and it goes through as a normal wallet payment.
+In big cities, more merchants now accept foreign cards directly. Since 2024, China's central bank has pushed shopping centers, department stores, chain stores, and duty-free shops to accept overseas cards. Small independent places are a different story: at the noodle shop, corner store, or street stall, you'll usually find a QR code rather than a terminal that takes your card.
+The Real Workaround: Alipay and WeChat Pay
+Here's what changed everything. In 2023, Alipay (operated by Ant Group) announced overseas users could link Visa, Mastercard, Diners Club, and Discover. A day earlier, Tencent had announced the same for WeChat Pay, with Visa, Mastercard, American Express, JCB, Diners Club, and Discover.
+What this means in practice: your American Visa can now pay a Chengdu street vendor, a Suzhou taxi driver, and a Hangzhou tea shop, all through the Alipay app. The merchant sees a normal Alipay payment. Your home bank processes it as a standard foreign transaction.
+A few limits to know:
+No peer-to-peer transfers with foreign cards. You can pay a business (restaurant, shop, taxi) but can't send money to a friend's personal account.
+
+¥200 ($30) surcharge threshold. Payments of ¥200 or less are free. Above ¥200, Alipay and WeChat Pay each charge 3% of the whole amount. More on this below.
+
+Identity verification required. You'll need to upload a photo of your passport during setup. Takes about 2 minutes.
+
+Data connection needed. Alipay doesn't work fully offline, you need WiFi or a mobile data plan. Most travelers solve this with an eSIM for China .
+
+Spending limits. Each app sets the limits for your account and shows them in the app; the figures change, so check there. The overall ceiling comes from China's central bank: on March 1, 2024, it announced a higher cap for overseas visitors of US$5,000 per transaction and US$50,000 per year, up from US$1,000 and US$10,000.
+
+How to Link Your Card to Alipay (10 Minutes)
+Do this before you fly. Not in the taxi line at the airport.
+Download Alipay from the App Store or Google Play. The app is available globally.
+
+Sign up with your phone number, your home country number is fine. You'll get an SMS code.
+
+Set a 6-digit payment PIN. Write it down. Don't lose it.
+
+Tap "Me" → "Bank Cards" → "Add Card." Alipay accepts Visa, Mastercard, American Express, JCB, Diners Club, Discover, and UnionPay cards issued abroad.
+
+Enter your card details. You may need to approve the linking from your bank's app, it's a standard authorization, no charge.
+
+Verify your identity. Snap a photo of your passport. Alipay's help center says the review can take up to 24 hours.
+
+Test a payment at home if you can (some international stores accept Alipay now), or just wait until you land.
+
+That's it. Repeat the process for WeChat Pay if you want a backup, I always recommend having both because occasionally one app will glitch and the other won't.
+Pro tip : Set up Alipay and WeChat Pay, link the same Visa to both, and carry a second Mastercard as a backup.
+
+ATMs, Cash, and the Backup Plan
+Even with Alipay dialed in, you'll want some cash. QR scanners glitch. Rural towns in Guizhou or Yunnan have spotty data. And a few weird corners still only take paper money.
+For a 10-day trip, pull ¥1,500-2,500 ($220-370) from an ATM when you land. That's enough for emergencies, not enough to worry about.
+Which ATMs to use:
+Bank of China (中国银行) , takes Visa, Mastercard, JCB, American Express, and UnionPay cards issued abroad, with machines at international airports, star-rated hotels, and major shopping areas
+
+ICBC (中国工商银行) , widely available, and says all of its ATMs accept overseas Visa and Mastercard cards
+
+Other banks , look for your card network's logo on the machine before you insert your card
+
+Which ATMs to avoid:
+Standalone ATMs in convenience stores
+
+Rural town ATMs, hit or miss with foreign cards
+
+Anything with a handwritten sign on it
+
+Fees to expect:
+Your US bank: a flat fee (typically a couple of dollars) plus a percentage of the withdrawal, and a 1-3% foreign transaction fee unless your card waives it. On a credit card, the withdrawal counts as a cash advance.
+
+Chinese bank: Bank of China says the fee for a foreign-card withdrawal is set by your card's issuing bank
+
+Limits: ¥3,000 per withdrawal at Bank of China ATMs; your own bank sets the daily limit, so you may need several withdrawals
+
+Quick heads up: Before you swap cash at an airport exchange counter, compare its rate and commission with what an ATM withdrawal would cost you.
+Where your card still works: prepaid hotel bookings
+Front-desk terminals accept foreign cards inconsistently. Four and five-star properties in large cities usually manage it. Mid-range and domestic chains often cannot, and staff may not know until the terminal declines.
+Paying at the time of booking removes that risk. An international platform charges your card in your own currency when you reserve, so arrival is passport and room key only. It also leaves you an English-language record if something needs sorting out later.
+Trip.com lists the widest range of Chinese properties open to foreign guests, including domestic chains that Western platforms do not carry. Filter for properties that confirm foreign-passport check-in. Not every listing does, and arriving without it can mean a late-night search for another room.
+Save the confirmation offline. If your data fails on arrival you still need to show the reservation.
+Foreign Transaction Fees and the ¥200 Rule
+Two types of fees to track. Don't conflate them.
+1. Your home bank's foreign transaction fee , This is what your Visa or Mastercard issuer charges every time your card is used abroad. Chase notes these typically run 1-3% of the purchase amount . Cards like the Chase Sapphire Preferred, Capital One Venture, and Bank of America Travel Rewards charge 0% foreign transaction fees. If you have a no-FX card, bring it.
+2. The 3% wallet fee over ¥200 , Here's the one nobody warns you about. Since 2023, Alipay and WeChat Pay have charged a 3% fee on the full amount of any single payment above ¥200 ($30) made with a foreign card. A payment of ¥200 or less is free. The wallet charges this fee, not your bank, and shows it on the payment screen before you confirm. If a purchase is refunded, the fee is refunded in proportion.
+The math matters. A ¥180 meal is free, but a ¥250 meal costs you ¥7.50 extra. A ¥1,200 hotel night adds ¥36 in fees.
+Over a 10-day trip, the fee only adds up if you pay a lot of bills above ¥200 through the wallets. Not catastrophic, but not nothing.
+The workaround : if the merchant agrees to take a larger bill as separate payments of ¥200 or less, none of them carries the fee. Ask first: not every merchant will, and if you need a refund later, each payment has to be refunded on its own. Or, if you have a UnionPay card issued outside mainland China, link it: UnionPay announced in November 2024 that these cards pay no fee in Alipay or WeChat Pay during a launch promotion. It hasn't published an end date, so check the fee on the payment screen. A Wise card links to Alipay or WeChat Pay like any other foreign card, and the 3% wallet fee above ¥200 applies to it too.
+WeChat Pay also runs an offer for first-time international-card users. If you link an international card to WeChat for the first time by December 31, 2026, the 3% fee is waived on up to ¥1,000 of spending a day for 90 consecutive days, counted from your first purchase. If your trip is shorter than that and you keep WeChat Pay spending to ¥1,000 a day or less, you may not pay the fee there at all.
+Payment Method Comparison
+Here's the cheat sheet:
+Payment Method
+
+Acceptance
+
+Fees
+
+Best For
+
+Alipay + foreign Visa/MC
+
+Most merchants
+
+Free up to ¥200, 3% above
+
+Daily spending, food, transit
+
+WeChat Pay + foreign card
+
+Most merchants
+
+Free up to ¥200, 3% above
+
+Backup to Alipay
+
+Physical Visa/MC swipe
+
+Hotels, big chains, airports
+
+1-3% FX fee
+
+Hotels, airports, big stores
+
+UnionPay (home-issued)
+
+Card terminals and both wallets
+
+No wallet fee (launch promotion)
+
+Avoiding the 3% wallet fee
+
+Wise digital card
+
+Via Alipay or WeChat Pay
+
+Free up to ¥200, 3% above
+
+Tech-savvy travelers
+
+Cash (RMB)
+
+Businesses can't refuse it
+
+ATM fees only
+
+Emergencies, small stalls
+
+A Smart Payment Strategy for a 10-Day Trip
+Here's a simple plan. Copy it.
+Before you fly:
+Link a Visa (no foreign transaction fee ideally) to Alipay
+
+Link the same card, or a Mastercard backup, to WeChat Pay
+
+Buy an eSIM so you have data the moment you land
+
+Tell your bank you're traveling to China (most don't require it, but it's 30 seconds on the app)
+
+When you land:
+Pull ¥2,000 ($295) from a Bank of China ATM in the airport
+
+Test Alipay on something cheap, a bottle of water at a 7-Eleven
+
+Keep ¥500 ($75) on you, stash the rest in your hotel safe
+
+During your trip:
+Default to Alipay for everything under ¥200
+
+For bigger bills, check if there's a UnionPay option or just pay the 3%
+
+Use your physical card at hotels and international chains (higher security, better dispute protection)
+
+Save receipts for anything over ¥300 ($45) in case of fraud claims
+
+What NOT to Do
+A few common mistakes to avoid:
+Don't wait until you land to set up Alipay. Verification can take hours. You'll be stuck at the airport McDonald's.
+
+Don't use currency exchange counters. At the airport, the rate plus commission can cost you more than an ATM withdrawal.
+
+Don't assume your hotel accepts your card. Most do, but always ask at check-in.
+
+Don't bring traveler's checks. Shops and restaurants won't take them.
+
+Don't carry more than ¥3,000 ($445) in cash. You don't need it.
+
+Don't try to open a Chinese bank account as a tourist. You don't need one for a short trip: a foreign card linked to Alipay or WeChat Pay covers merchant payments.
+
+One more thing. If your physical card gets declined, don't panic. The merchant's terminal may not take foreign cards, or your bank's fraud checks may have flagged a first purchase in a new country.
+Open Alipay and pay by QR code instead. If that's declined too, check your bank's app for a fraud alert.
+A foreign card linked to Alipay or WeChat Pay can only pay merchants. You can't use it to send money to friends or to send red packets (hongbao). So if a host or driver asks you to transfer them money instead of letting you scan a merchant code, your foreign card won't do it — that needs a Chinese bank account.
+Your Card in China, Solved
+Let me recap the important bits:
+Yes , you can use a credit card in China in 2026, but mostly through Alipay and WeChat Pay, not by swiping.
+
+Visa, Mastercard, American Express, JCB, Diners Club, Discover, and UnionPay cards issued abroad all link to Alipay today.
+
+¥200 is the magic number for the 3% fee in Alipay and WeChat Pay: pay ¥200 or less and there's no fee.
+
+Bring ¥1,500-2,500 in cash as backup, pulled from Bank of China or ICBC ATMs.
+
+Set it up before you fly , 10 minutes of prep saves hours of stress on the ground.
+
+The payment thing sounds scary before your first trip. I promise: after 48 hours in China, you'll prefer scanning QR codes to swiping.
+
+FAQ
+Is China really cashless in 2026?
+Not exactly. Cash is still legal tender, and since February 1, 2026, a central bank rule bars businesses that take payment in person from refusing it. Alipay and WeChat Pay dominate daily life. You can absolutely use cash if your card setup fails.
+Can I use Apple Pay or Google Pay in China?
+Apple Pay works only where the card terminal takes contactless payments on your card's network, such as some hotels, airports, and big stores that show your card's logo. Most everyday merchants use QR codes, so plan on Alipay or WeChat Pay. The January 2026 news about Visa and Apple Pay in China was about cards issued by Chinese banks, for spending abroad; it doesn't change how a foreign card works at Chinese checkouts. Google Pay won't help either: Google Wallet isn't offered in mainland China, and Google services are blocked there.
+Do I need a Chinese phone number to use Alipay?
+Not anymore. Since 2023, you can sign up with your home country phone number and verify with your passport. No Chinese SIM required.
+What's the best credit card for China travel?
+The best card in China is any Visa or Mastercard with 0% foreign transaction fees. Popular picks: Chase Sapphire Preferred, Capital One Venture, Bank of America Travel Rewards. Amex acceptance is limited compared to Visa/MC.
+How much cash should I bring to China?
+For a 10-day trip, ¥1,500-2,500 ($220-370) from an ATM on arrival is plenty. You'll use it mostly for small vendors and emergencies.
+Will my US bank block my card in China?
+Most major US issuers no longer ask for travel notices: Chase, Capital One, American Express, and Bank of America all say you don't need to tell them before a trip. Their fraud checks can still flag a first purchase in a new country, so keep your phone number current and turn on card alerts. If your bank still offers a travel notice, setting one does no harm. Carry a backup card on a different network too, because if the card linked to Alipay gets frozen, your wallet stops working as well.
+
+Related: paying for the Beijing subway · setting up a digital wallet in Beijing · sending a package in China
+Sources
+Tenpay: rules on international card payment services — WeChat Pay's fee: free for payments of ¥200 or less, 3% of the full amount above that, shown on the payment page and refunded in proportion. Dated January 15, 2026.
+
+WeChat Help Center: Guide to Add and Use International Cards with Weixin Pay — international cards cover everyday purchases, not red packets or transfers; account limits and fees. Checked September 27, 2026.
+
+Tencent: three initiatives for inbound payments during APEC 2026 — 90-day waiver on up to ¥1,000 a day for first-time international-card users, through December 31, 2026. Dated May 27, 2026.
+
+Alipay Service Center: scope of Alipay fees and review time for identity documents — payments with cards issued outside mainland China are an Alipay fee service charged on top of the payment; ID review within 24 hours. Checked September 27, 2026.
+
+Yicai: WeChat Pay and Alipay upgrade foreign-card binding — Alipay's foreign-card fees follow the same rule as WeChat Pay's; WeChat Pay's 2023 card list. Dated July 20, 2023.
+
+Ant International: American Express and Alipay and Ant Group: international users in 2024 — the seven card networks you can link to Alipay: Visa, Mastercard, JCB, Discover, Diners Club, UnionPay, and, since February 2025, American Express. Dated February 25, 2025 and September 5, 2024.
+
+State Council: China further streamlines mobile payments for foreigners — central bank cap for overseas visitors raised to US$5,000 per transaction and US$50,000 per year, announced March 1, 2024. Dated March 2, 2024.
+
+UnionPay International: Global UnionPay cards now support Weixin Pay and Alipay — no service fee for overseas-issued UnionPay cards as an initial promotion, no end date given. Dated November 5, 2024.
+
+People's Bank of China, Ministry of Commerce and SAFE: notice on payment services in commerce — push for key merchants such as shopping centers and chain stores to accept overseas cards. Dated April 15, 2024.
+
+Bank of China: ATM and payment facilitation measures ; China Finance: ICBC on payment services for foreign visitors — foreign card brands at Bank of China ATMs, ¥3,000 per withdrawal, fees and daily limits set by your bank, machines at airports and hotels; all ICBC ATMs take overseas Visa and Mastercard cards. Dated 2024–2026, checked September 27, 2026.
+
+People's Bank of China: rules on RMB cash receipts, payments and services — businesses may not refuse cash for in-person payments, in force from February 1, 2026. Dated November 27, 2025.
+
+CNN: Alipay and WeChat Pay now accept Visa and Mastercard — July 2023 announcements, Alipay's 2023 card list, and the 91% market share figure. Dated July 21, 2023.
+
+Facts checked on 2026-09-27.
+
+Convert it to yuan Live exchange rates plus the units you will actually meet in China, including the 斤 (jin) every market vendor uses. Open the converter →
+
+Tags
+# payments # alipay # wechat-pay # credit-cards
+
+View all →
+What are the best payment methods for travelers in China, and are credit cards or cash widely accepted? →
+How does the cashless payment system work for travelers in China? →
+Can foreigners use Alipay and WeChat Pay in China with international credit cards? →
+Do I need both Alipay and WeChat Pay for China? →
+
+View all →
+March 15, 2026 · How-To Guide
+Independent Travel in China: The Real Guide (2026)
+
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+April 28, 2026 · Topic
+Is China a Good Place to Visit? Honest Answer for 2026
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

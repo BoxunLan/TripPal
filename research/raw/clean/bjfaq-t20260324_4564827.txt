@@ -1,0 +1,32 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564827.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564827.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.535Z
+# bytes(raw): 8752
+# bytes(text): 2429
+# title: I want to ask about the procedure for a foreigner to register their own company and potentially do their own company visa.
+
+I want to ask about the procedure for a foreigner to register their own company and potentially do their own company visa.
+
+Home 12345 hotline 12345 hotline FAQs All
+
+I want to ask about the procedure for a foreigner to register their own company and potentially do their own company visa.
+
+2026-03-24
+
+Regarding your inquiry about the process for foreign nationals to register a company, the Beijing Municipal Administration for Market Regulation has provided the following reply:
+You may apply to establish a market entity through the Beijing Enterprise Service ''E Chuang Tong'' Platform – Personal Service Module (北京市企业服务e窗通平台 - 个人服务模块). You can refer to the following documents to prepare the materials required for setting up a limited liability company and to learn about relevant information and licensing requirements:
+1. "General Guidelines for Market Entity Registration" 《市场主体登记注册通用指南》
+2. "One-Time Notification List for Company Establishment Registration"《公司设立登记一次性告知单》
+3. "Special Administrative Measures (Negative List) for Foreign Investment (2024 Edition)"《外商投资准入特别管理措施（负面清单）（2024年版）》
+If you have further questions, please call the Beijing Municipal Administration for Market Regulation's Registration Consultation Hotline at +86-10-11616611 (Chinese language services only) and select Option 3 for registration-related inquiries.
+Regarding the visa process for foreign nationals establishing companies, the Entry and Exit Administration of Beijing Municipal Public Security Bureau has provided the following response:
+At present, there is no specific "company visa" category. Foreign nationals who wish to establish a company in China, especially those intending to participate in its operations, shall enter China on a work visa or a talent visa. Such visas cannot be obtained directly within China and must first be issued by a Chinese embassy or consulate abroad.
+If you have additional questions, you may call the China Immigration Service Hotline: +86-10-12367, where foreign language services are available for further consultation.
+We sincerely appreciate your understanding and continued support.
+
+Beijing Municipal Administration for Market Regulation
+Entry-Exit Administration Department of Beijing Municipal Public Security Bureau
+
+Attachment

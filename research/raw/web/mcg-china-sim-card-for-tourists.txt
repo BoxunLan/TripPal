@@ -1,0 +1,330 @@
+# source: https://mychina.guide/blog/china-sim-card-for-tourists
+# final: https://mychina.guide/blog/china-sim-card-for-tourists
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.807Z
+# bytes(raw): 65383
+# bytes(text): 14524
+# title: China SIM Card for Tourists: Buy & Set Up (2026)
+China SIM Card for Tourists: Buy & Set Up (2026)
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · August 25, 2026 · 11 min read · 1,006 views
+China SIM Card for Tourists: Where to Buy & How to Set Up
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 9 sections 01 The Firewall Reality Check (Read This First)
+02 The 3 Chinese Carriers Compared
+03 Where to Buy a China Travel SIM Card
+04 The Passport Requirement (Real-Name Registration)
+05 Tourist Plans and Real Prices (2026)
+06 Setting Up Your Chinese SIM in 10 Minutes
+07 The Hong Kong SIM Workaround (The Real Pro Move)
+08 Physical SIM vs eSIM: Which One Fits
+09 FAQ
+
+Yes, you can walk into any Chinese airport and buy a prepaid SIM card with your passport in about 15 minutes. A China Unicom tourist plan runs ¥150-250 ($21-35) for 10-20GB over 30 days . Here's the part nobody warns you about: that SIM is firewalled. Your Gmail won't load. Instagram won't open. WhatsApp stays stuck on "connecting." I learned this in a PVG arrivals hall holding a shiny new SIM and a phone that had become a brick.
+This is the honest guide to a china prepaid sim card for tourist use. What it costs, where to buy, why the firewall matters more than the price, and the Hong Kong SIM trick that saved my last two trips. If you're torn on physical vs digital, our tested eSIM comparison for China is the pillar guide.
+What this covers:
+The firewall reality (why Chinese SIMs block Google)
+
+China Mobile, Unicom, and Telecom compared
+
+Where to buy: airport, downtown store, or online
+
+The passport rule and 2026 prices
+
+Setup walkthrough + the Hong Kong SIM workaround
+
+The Firewall Reality Check (Read This First)
+Here's the thing nobody tells you at the airport kiosk. A Chinese SIM card puts you on the Chinese internet. Which means you're on the wrong side of the Great Firewall.
+Google, Gmail, Google Maps, YouTube, Facebook, Instagram, WhatsApp, Twitter/X, Reddit, most Western news sites: all blocked. Not throttled. Actually blocked. The kiosk clerk won't mention this because it's not their problem.
+I've watched this play out a dozen times. Traveler lands, buys SIM, tries to message home, gets nothing, blames the carrier. The carrier works fine. It's pointing your phone at the domestic network, exactly what you asked for.
+Three ways around this:
+Install a VPN before you fly. Not after. VPN websites are blocked too, so you can't download one once you land.
+
+Use a roaming eSIM. These route through Hong Kong or Singapore. No firewall. Nomad, Airalo, and Holafly compared here .
+
+Use a Hong Kong SIM in roaming mode (more at the end). It's the trick most guides skip.
+
+MyChinaGuide app · free
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+App Store Google Play
+
+Scan with your phone
+
+The 3 Chinese Carriers Compared
+China has three mobile carriers. All state-owned. All real-name registered.
+Carrier
+
+English Support
+
+Coverage
+
+Tourist Plan (¥/$)
+
+Notes
+
+China Unicom 中国联通
+
+Best at airports
+
+Strong urban
+
+¥150-200 ($21-28) / 20GB / 30d
+
+Most foreign-phone friendly
+
+China Mobile 中国移动
+
+Limited
+
+Best rural + overall
+
+¥88-200 ($12-28) / 10-20GB / 30d
+
+950M+ users, largest network
+
+China Telecom 中国电信
+
+Minimal
+
+Strong urban
+
+¥100-150 ($14-21) / 10GB / 30d
+
+CDMA legacy, check phone compatibility
+
+My pick for a china prepaid sim card for tourist use : China Unicom. Not because the network is best (China Mobile wins that), but because Unicom's airport counters speak English, sell clearly marked tourist packages, and their GSM/WCDMA bands work with almost any international phone. I've had two friends arrive with China Telecom SIMs that wouldn't register at all.
+Want a china mobile tourist sim specifically? Head to the China Mobile counter. Their tourist plan is ¥88 for 10GB and throttles to 1Mbps after quota instead of cutting you off. Pick Mobile if you're heading to Tibet, Xinjiang, or anywhere rural. Per China Mobile's subscriber data , their 5G covers about 1.5 million base stations, more than Unicom and Telecom combined. China Telecom is the "fine, I guess" option. Skip it unless other counters are closed.
+Where to Buy a China Travel SIM Card
+Option 1: Airport Kiosks (Convenient, Overpriced)
+Every major international airport has SIM counters in arrivals:
+Beijing Capital (PEK) T3 : Unicom + Mobile near baggage claim, 24/7
+
+Shanghai Pudong (PVG) T2 : All three carriers, 24/7
+
+Guangzhou Baiyun (CAN) T2 : Unicom + Mobile, 24/7
+
+Beijing Daxing (PKX) : China Mobile on arrivals level
+
+Shenzhen Bao'an (SZX) T3 : Limited evening hours
+
+Pros: fast (10-15 min), English-speaking staff, working SIM before you clear customs mentally. Cons: ¥150-300 ($21-42) for plans that cost ¥50-150 ($7-21) downtown. A 30-50% markup.
+A SIM from a mainland carrier's airport counter works as soon as it is activated, but it goes through the firewall like any local connection. Set up your VPN before you need Google Maps or WhatsApp in the taxi.
+Option 2: Downtown Carrier Stores (Cheapest, Language Barrier)
+Every Chinese city has Mobile, Unicom, and Telecom stores on main shopping streets. Same SIM, 30-50% less. A 10GB/30-day plan that's ¥200 at PEK drops to ¥69-100 ($10-14) at a downtown Unicom store.
+The cost: time and language friction. Staff speak zero English. Bring Google Translate (camera mode is a lifesaver), passport, and hotel address in Chinese. Budget 20-40 minutes for scan, face photo, registration form, signature, activation.
+Downtown stores are cheaper than the airport counters. Decide which plan you want before you go in, because staff may suggest a bigger, more expensive one.
+Option 3: Online Pre-Order (Trip.com, Klook)
+Order before departure, pay in USD, ship home or pick up at the airport. April 2026 pricing:
+Trip.com: 3GB/14 days from $5.39 , 30GB/30 days from $22 , per Trip.com's China SIM listing
+
+Klook: China Unicom 15GB/30 days, ~ $24
+
+Trip.com 5G pickup at PVG: 30GB/30 days + 60 min, $22.17
+
+The compromise move. Near-downtown prices for a china travel sim card, English booking, two-minute airport handoff.
+Option 4: Hotel Concierge (Skip It)
+Higher-end hotels will sell you a SIM at the front desk. Fast, English-friendly, marked up 40-60%. Only use this if airport counters were closed.
+The Passport Requirement (Real-Name Registration)
+Since September 2013, every SIM sold in mainland China has to be tied to a verified government ID. The real-name rule comes from China's Ministry of Industry and Information Technology (MIIT) and applies to every prepaid and postpaid SIM. For foreigners that means passport plus entry visa or visa-free stamp. Since 2024, some stores in Shanghai and Beijing add a fingerprint scan and live face photo. Same data immigration already took.
+What you need: passport (valid 6+ months), entry stamp or visa, local hotel address in Chinese. Budget 10-15 min at airports, 20-40 at downtown stores.
+What you don't need: a Chinese bank account, a local phone number, or any of the stuff people worry about on Reddit. It's a normal, common transaction. One heads-up: no carrier legally sells anonymous SIMs. Anyone offering one on Taobao or from a street vendor is selling stolen identity registration. Don't.
+Tourist Plans and Real Prices (2026)
+Plan Type
+
+Data
+
+Validity
+
+Price (¥/$)
+
+Where
+
+Budget downtown
+
+3GB
+
+30d
+
+¥50 ($7)
+
+Unicom/Mobile city store
+
+Standard tourist
+
+10GB
+
+30d
+
+¥88-100 ($12-14)
+
+Downtown
+
+Airport tourist
+
+10GB
+
+30d
+
+¥200-250 ($28-35)
+
+PEK/PVG/CAN counter
+
+Heavy data
+
+20GB
+
+30d
+
+¥200-300 ($28-42)
+
+Any Unicom store
+
+30GB throttled
+
+30GB
+
+30d
+
+¥300 ($42)
+
+Mobile airport or online
+
+For a two-week trip, 10GB is plenty if you use offline maps and hotel WiFi for Netflix. Heavy video callers should bump to 20GB. International minutes are rarely included. Use WhatsApp, WeChat, or FaceTime over data.
+Setting Up Your Chinese SIM in 10 Minutes
+Works for iPhone and Android. Assuming the clerk has activated the SIM:
+Swap the SIM tray (clerk usually does this). Don't lose your old SIM.
+
+Restart your phone. Forces the network to re-register. Skip this and you'll troubleshoot a dead signal for twenty minutes.
+
+Wait 60-90 seconds for the carrier name to appear.
+
+Test on baidu.com. Should load instantly. That's your SIM working.
+
+Check the APN if data doesn't flow. Settings → Cellular → APN. Enter `3gnet` for Unicom, `cmnet` for Mobile, `ctnet` for Telecom.
+
+Turn on your VPN before touching anything Western. If you try Gmail first and it fails, you'll think the SIM is broken. It isn't.
+
+Test WhatsApp, Google Maps, Gmail. If they load, VPN is working. If not, troubleshoot the VPN, not the SIM.
+
+Total card-swap to working Western apps: 8-12 minutes when it goes right.
+The Hong Kong SIM Workaround (The Real Pro Move)
+The section I wish every travel blog would lead with. A Hong Kong SIM in roaming mode inside mainland China bypasses the Great Firewall entirely. No VPN needed.
+Here's why. Hong Kong operates under a separate internet jurisdiction. When you roam into mainland China on an HK carrier (CMHK, 3HK, SmarTone), your phone connects to Chinese cell towers but your data session exits through Hong Kong's gateway. The Chinese internet never sees your traffic. Google Maps, Gmail, WhatsApp, Instagram, YouTube all work.
+Where to get one :
+Hong Kong airport (HKG) : CMHK and 3HK counters sell mainland-roaming SIMs for HK$100-300 ($13-38)
+
+Shipped to your home : SmarTone and CMHK ship internationally for about $20-40 covering 10-30 days
+
+Taobao : Same products for less, but setup is in Chinese
+
+A Hong Kong SIM with mainland roaming works differently: data goes out through Hong Kong, so Google Maps and WhatsApp open without a VPN.
+The catch: HK SIMs don't give you a +86 phone number, so you can't use them to register Alipay or WeChat Pay. Our guide on why China doesn't support eSIM explains the real-name rules behind that.
+Physical SIM vs eSIM: Which One Fits
+Pick a physical SIM if your phone doesn't support eSIM, you need a +86 number for Alipay/WeChat Pay, or you'll be in China 30+ days.
+Pick an eSIM if you want the firewall handled automatically, you arrive late and don't want a counter line, or you're bouncing between China, Japan, and Korea.
+Pick a Hong Kong roaming SIM if you want firewall-free access AND a physical SIM, and you have time to order one before you leave.
+Honestly? For a first-time 7-14 day trip, skip the airport counter and use a roaming eSIM. If you want a china prepaid sim card for tourist travel, get a China Unicom from a downtown store and budget for a VPN. Our essential Chinese apps guide covers what to install alongside your new SIM.
+FAQ
+Can tourists buy a SIM card in China?
+Yes. Any tourist with a valid passport and entry visa (or visa-free stamp) can buy a prepaid SIM at airport kiosks, carrier stores, or online via Trip.com and Klook. Registration takes 10-15 min at airports, 20-40 min downtown.
+How much does a china prepaid sim cost for tourists?
+Expect ¥100-300 ($14-42) for 10-30 days / 10-30GB. Airports run ¥200-300 ($28-42); downtown stores charge ¥50-150 ($7-21) for the same plans. Online pre-orders start around $5.
+Do Chinese SIM cards bypass the Great Firewall?
+No. Chinese SIM cards route through mainland networks and are fully firewalled. Google, Gmail, Facebook, Instagram, WhatsApp, YouTube, and most Western services are blocked. You need a VPN installed before arrival, a roaming eSIM, or a Hong Kong roaming SIM to access Western apps.
+What's the best carrier for foreign tourists in China?
+China Unicom . Their airport counters have English-speaking staff, they sell clearly labeled tourist packages, and their network bands work with almost any international phone. China Mobile wins for rural coverage; China Telecom is the last choice because of CDMA compatibility issues.
+Can I use my Hong Kong SIM in mainland China?
+Yes, and it's the best-kept secret for China travel. A Hong Kong SIM in roaming mode exits through HK's network gateway, bypassing the Great Firewall entirely. Google Maps, WhatsApp, and Gmail work without a VPN. CMHK, 3HK, and SmarTone sell mainland-roaming plans for about $15-40 over 10-30 days.
+How long does tourist SIM activation take?
+Airport kiosks activate in 10-15 minutes . Downtown stores take 20-40 minutes due to the full registration including passport scan, face photo, and paperwork. Online pre-orders come pre-activated. Swap and restart.
+Do I need a Chinese phone number for Alipay or WeChat Pay?
+Not anymore. Since 2023, both apps accept foreign phone numbers and foreign credit card linking. Set them up before you leave home. This removes the main reason tourists used to rush for a local SIM.
+
+Bottom line : A china prepaid sim card for tourist travel is cheap, easy, and firewalled. Want Google without a VPN fight? Get a Hong Kong roaming SIM or a China eSIM. Need a +86 number? Walk into a downtown China Unicom store with your passport and ¥100. Either way, install your VPN before you fly. That's the decision that makes or breaks your first 24 hours.
+
+Share this article
+
+Tags
+# sim-card # china-mobile # unicom # telecom
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

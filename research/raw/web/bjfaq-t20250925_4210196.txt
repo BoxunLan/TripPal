@@ -1,0 +1,23 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210196.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210196.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.378Z
+# bytes(raw): 7004
+# bytes(text): 1035
+# title: Home 12345 hotline 12345 hotline FAQs All
+I am a Spanish citizen and plan to visit Beijing soon. I would like to know which payment methods are available for taking the subway in Beijing: cash, VISA credit card, or MasterCard? Thank you.
+
+Home 12345 hotline 12345 hotline FAQs All
+
+I am a Spanish citizen and plan to visit Beijing soon. I would like to know which payment methods are available for taking the subway in Beijing: cash, VISA credit card, or MasterCard? Thank you.
+
+2025-09-25
+
+Hello, regarding the issue you raised, Beijing Subway Operation Co., Ltd. replied:
+As of September 13, 2024, all subway stations in Beijing have added the function of accepting foreign bank cards for both ticket vending and gate entry. Foreign passengers may use financial IC cards, magnetic stripe cards, or smartphone NFC cards bearing the logos of international card organizations (such as MasterCard and VISA) to purchase tickets at self-service machines or to directly tap their card to enter the station.
+Thank you for your understanding and support!
+
+Attachment
+
+Related Articles

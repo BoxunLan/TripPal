@@ -1,0 +1,487 @@
+# source: https://mychina.guide/blog/china-esim-nomad-vs-airalo-vs-holafly
+# final: https://mychina.guide/blog/china-esim-nomad-vs-airalo-vs-holafly
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.573Z
+# bytes(raw): 82748
+# bytes(text): 19667
+# title: China eSIM: Nomad vs Airalo vs Holafly (None Give a Number)
+
+China eSIM: Nomad vs Airalo vs Holafly (None Give a Number)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · May 5, 2026 · 15 min read · 12,476 views
+China eSIM: Nomad vs Airalo vs Holafly (None Give a Number)
+
+Michael Chen · Transport & Connectivity Editor, MyChinaGuide · Updated September 27, 2026
+
+On this page 12 sections 01 Quick Verdict
+02 Why "China eSIM with Phone Number" Is a Trap Search
+03 Nomad China eSIM: The Budget Winner
+04 Does Nomad eSIM Actually Work in China? (Network, Speed, Reliability)
+05 Nomad China Plans: Every Tier Priced
+06 Airalo China eSIM: The Middle Option
+07 Holafly China eSIM: Unlimited at a Price
+08 Side-by-Side Comparison
+09 Which One Should You Pick?
+10 How to Install Your China eSIM (3 Steps)
+11 FAQ
+12 Sources
+
+None of these three gives you a Chinese phone number. Not Nomad China, not Airalo, not Holafly. All three are data-only roaming eSIMs. They're great for getting WhatsApp and Google Maps working past the Great Firewall, useless if you want a +86 number for Alipay registration. Nomad is the cheapest at $17 for 10GB (a sale price; regular $22). Holafly has unlimited from $3.90 for 1 day . Airalo sits in the middle at $26.50 for 10GB . Prices checked September 27, 2026. Here's the honest breakdown.
+For the full eSIM landscape, our eSIM comparison for China is the pillar guide. This article goes deeper on the three brands people argue about on Reddit.
+What this covers:
+Why nobody sells a China eSIM with a real +86 phone number
+
+Nomad, Airalo, and Holafly compared on price, data, and support
+
+Which brand fits which type of trip
+
+A 3-step install you need to do before you fly
+
+Quick Verdict
+Here's the 10-second version. Nomad wins on price and cost-per-GB . Holafly wins on unlimited data . Airalo sits in the middle and makes sense if China is one stop on a longer trip. None gives you a Chinese phone number.
+If you want...
+
+Pick this
+
+Cheapest per GB
+
+Nomad
+
+Unlimited data
+
+Holafly
+
+Multi-country portability
+
+Airalo
+
+A Chinese phone number
+
+None (see below)
+
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+
+Why "China eSIM with Phone Number" Is a Trap Search
+People searching "china esim with phone number" usually want one thing: a +86 number so they can register for Alipay or WeChat Pay. I get it.
+Here's what nobody tells you upfront. Chinese law requires every phone number to be registered to the user's verified identity, and a visitor has to show a passport in person to get one. That rules out a +86 number on any eSIM you buy online before the trip. You can't do the face-match at a carrier booth from your hotel in Berlin. All three brands here run on international roaming. They give you data. They do not give you a Chinese number.
+So what do you do if you need +86?
+Option 1 : Buy a physical SIM at the airport on arrival. China Mobile, Unicom, or Telecom kiosks in PVG, PEK, and CAN sell tourist SIMs. Bring your passport.
+
+Option 2 : Register Alipay and WeChat Pay before you fly using your home number. Both apps now accept foreign numbers.
+
+Option 3 : Use a friend's Chinese number for SMS verification if you know someone in-country.
+
+Our guide on why China doesn't support eSIM explains the real-name rules in more detail.
+Nomad China eSIM: The Budget Winner
+Nomad's full price list is in the table further down. The short version:
+At $17 for 10GB (a sale price on September 27, 2026; regular $22), Nomad China is the cheapest of the three. The 20GB plan works out to $1.25 per GB. Nomad's fixed-data plans run on China Unicom and China Telecom, and its unlimited plans on China Unicom. Coverage is solid in every first-tier city and strong on high-speed rail.
+Firewall bypass : Works on mobile data. Traffic leaves through a gateway outside mainland China, and esimdb's explainer notes that all travel eSIMs sold for China use these roaming connections, which the Great Firewall doesn't filter. Google, WhatsApp, Instagram, YouTube and Gmail load without a VPN.
+Customer support : Chat in the Nomad app or on its website. Nomad's help center doesn't publish support hours.
+Where it struggles : Its unlimited plans slow to 1 Mbps or less after 2GB a day, so heavy video callers are better off with the 20GB or 50GB plan.
+Does Nomad eSIM Actually Work in China? (Network, Speed, Reliability)
+Yes — Nomad's China plans connect through China Unicom and China Telecom, the same networks locals use, and because your data routes through servers outside mainland China, Google, WhatsApp, Gmail, and Instagram work with no VPN. That's not a loophole that might close mid-trip; it's how international roaming data is billed and routed.
+The fine print worth knowing: Nomad's unlimited plans give you 2GB per day at full speed, then slow down until the daily counter resets 24 hours later. Nomad's China page gives that slower speed as 1 Mbps in the plan details and 512kbps elsewhere, so plan on 1 Mbps or less: enough for maps and messages, slow for photos and video. The fixed-data plans (1GB–50GB) have no daily cap — you burn the bucket at full speed however you like. Heavy uploaders are better off with a big fixed plan than with "unlimited".
+Nomad China Plans: Every Tier Priced
+Nomad's China prices on September 27, 2026 (promotions shift these by a few dollars, so check before you buy):
+Plan
+
+Price
+
+Per GB
+
+1GB / 7 days
+
+$4
+
+$4.00
+
+3GB / 30 days
+
+$9
+
+$3.00
+
+5GB / 30 days
+
+$13.50
+
+$2.70
+
+10GB / 30 days
+
+$17 (sale; regular $22)
+
+$1.70
+
+20GB / 30 days
+
+$25 (sale; regular $30)
+
+$1.25
+
+50GB / 45 days
+
+$35
+
+$0.70
+
+Unlimited 3 days
+
+$12
+
+—
+
+Unlimited 5 days
+
+$18
+
+—
+
+Unlimited 7 days
+
+$25
+
+—
+
+Unlimited 10 days
+
+$33
+
+—
+
+The 10GB and 20GB tiers are the sweet spot for a one-to-two-week trip; the 1GB starter works only as an arrival-day safety net.
+Airalo China eSIM: The Middle Option
+Airalo's China plan ("Chinacom") is the most recognized brand in travel eSIMs. They built the category. The catch: it costs more than Nomad for the same data. These are selected fixed-data plans as listed on September 27, 2026. Airalo also sells unlimited China plans, which slow to 1 Mbps after 3GB a day.
+Data
+
+Validity
+
+Price
+
+Per GB
+
+1GB
+
+3 days
+
+$4.00
+
+$4.00
+
+3GB
+
+7 days
+
+$10.50
+
+$3.50
+
+5GB
+
+30 days
+
+$15.50
+
+$3.10
+
+10GB
+
+30 days
+
+$26.50
+
+$2.65
+
+20GB
+
+30 days
+
+$40.00
+
+$2.00
+
+50GB
+
+30 days
+
+$49.00
+
+$0.98
+
+At $2.65/GB on the 10GB plan, Airalo costs $9.50 more than Nomad for the same data. You're paying for the brand and for country portability. Airalo's official store lists plans for 200+ locations. If China is one leg of a longer Asia trip, managing everything in one app has real value.
+Firewall bypass : Works on mobile data. Airalo's help center says its China eSIM routes traffic through gateways outside mainland China, so no VPN is needed; hotel Wi-Fi is still filtered.
+Customer support : Airalo advertises 24/7 support in multiple languages, including chat on WhatsApp.
+Holafly China eSIM: Unlimited at a Price
+Holafly is the "I don't want to think about data limits" option. Everything they sell for China is unlimited, priced by days not GB.
+Validity
+
+Price
+
+Effective Daily
+
+1 day
+
+$3.90
+
+$3.90/day
+
+3 days
+
+$11.90
+
+$3.97/day
+
+5 days
+
+$20.50
+
+$4.10/day
+
+7 days
+
+$27.50
+
+$3.93/day
+
+10 days
+
+$36.50
+
+$3.65/day
+
+15 days
+
+$50.50
+
+$3.37/day
+
+30 days
+
+$73.90
+
+$2.46/day
+
+Holafly runs on CMCC (China Mobile). Strongest overall coverage, especially second-tier cities and rural areas. Single network.
+The fine print : Per Holafly's China page , network operators can slow your speed under a fair usage policy for no more than one day at a time; Holafly doesn't publish the threshold. Hotspot sharing is capped at 1GB a day (7GB across a 7-day plan).
+Firewall bypass : Same roaming mechanism as the others. Works. In a February 2026 trial for International Traveller (with an eSIM supplied by Holafly), the writer could reach all the apps and sites she wanted in China and usually saw downloads in the mid-30 Mbps range.
+Customer support : Holafly's China page lists 24/7 chat and email support. International Traveller's tester found the chat AI-led: competent, sometimes slow and repetitive, with a human reachable if you keep asking. Every Holafly eSIM also includes Always On, 1GB of backup data a month once your unlimited plan ends.
+Where it loses : Price. A 7-day unlimited plan at $27.50 costs about the same as Nomad's 20GB plan ($25 on sale), which you'd struggle to finish in a week. If your usage is normal, you're paying for data you won't use.
+Side-by-Side Comparison
+Here's everything in one place. Prices are as listed on September 27, 2026, for the 10GB plan or the 7-day equivalent so you can compare apples to apples. This comparison is based on each provider's published prices and terms; we didn't run our own speed tests.
+Feature
+
+Nomad
+
+Airalo
+
+Holafly
+
+10GB price
+
+$17
+
+$26.50
+
+N/A (unlimited)
+
+7-day starting price
+
+$4 for 1GB
+
+$10.50 for 3GB
+
+$27.50 unlimited
+
+Cost per GB (10GB)
+
+$1.70
+
+$2.65
+
+N/A (unlimited)
+
+Data options
+
+1-50GB or unlimited
+
+1-50GB or unlimited
+
+Unlimited only
+
+Network
+
+China Unicom / China Telecom
+
+China Unicom
+
+China Mobile (CMCC)
+
+Firewall bypass
+
+Yes
+
+Yes
+
+Yes
+
+Chinese phone number
+
+No
+
+No
+
+No
+
+Customer support
+
+Chat (app, website)
+
+24/7 (chat, WhatsApp)
+
+24/7 (chat, email)
+
+Best for
+
+Budget travelers
+
+Multi-country trips
+
+Heavy data users
+
+Verdict
+
+Winner on value
+
+Runner-up
+
+Winner on comfort
+
+The gap between Nomad and Airalo on the 10GB plan is $9.50. Not huge on a single trip, but Nomad costs the same or less at every other size too. Both use China Unicom, so you aren't paying Airalo's premium for a different network.
+Hotspot rules differ. Nomad lists hotspot as supported on all its China plans. Airalo's help center says hotspot works as long as your device and the network support it. Holafly's China plan lets you share 1GB a day (7GB on a 7-day plan). Holafly's unlimited data also carries a fair usage policy: the operator can slow your speed for up to one day at a time.
+Which One Should You Pick?
+Pick by use case, not "best overall."
+Short trip, 3-5 days, light use : Nomad 3GB ($9). You won't use 3GB on hotel WiFi.
+
+Standard 7-10 day trip : Nomad 10GB ($17). Visitors using the 240-hour visa-free policy can stay up to 10 days, and 10GB covers a trip of that length for most light and medium users.
+
+Long trip or heavy data use : Holafly unlimited 15-day ($50.50) or 30-day ($73.90).
+
+Multi-country trip (China is one stop) : Airalo. One app for Japan, Korea, Thailand, and China is worth the premium.
+
+Business traveler : Nomad 20GB ($25) in your eSIM slot. Keep your home SIM in slot 1 for 2FA SMS and international calls.
+
+You need a Chinese number for Alipay : Skip all three. Buy a physical China Mobile tourist SIM at the airport. They register it to your passport on the spot.
+
+How to Install Your China eSIM (3 Steps)
+Same process for all three brands, one critical rule. Install before you fly . Installing needs an internet connection, and inside China that usually means Wi-Fi behind the Great Firewall.
+Buy the plan at home . Open the Nomad, Airalo, or Holafly app on any WiFi network before your flight. Pay with any international card. You'll get a QR code or auto-install prompt within 30 seconds.
+
+Install the eSIM profile . On iPhone: Settings → Cellular → Add eSIM → scan the QR. On Android: Settings → Network → SIMs → Add eSIM. Label it "China data" so you can find it later.
+
+Activate on arrival . Don't turn on the eSIM until you land. Switch cellular data to the new eSIM. Turn off "Data Roaming" on your home SIM to avoid surprise charges. Open Google Maps. If it loads without a VPN, you're good.
+
+Dual-SIM tip : On phones with two eSIM slots, keep your home line active for SMS and calls. Set data to the China eSIM. You get 2FA codes on your regular number while using cheap Chinese data.
+Buy and install before you fly. Nomad says you can't buy a new China plan once you're inside mainland China, though you can still add data to a plan you already have. Airalo's help center doesn't mention a China-specific restriction, and Holafly says you can install before or during your trip, but installing needs a stable internet connection, which inside China usually means filtered hotel Wi-Fi. If your iPhone was bought in mainland China, Apple says it can't install an eSIM from a non-Chinese carrier while it's there. If you forget, your fallbacks are a physical SIM at the airport (passport required) or hotel Wi-Fi.
+FAQ
+Does Nomad China work without a VPN?
+Yes. Nomad routes traffic through servers outside mainland China, so Google, WhatsApp, Instagram, and Gmail load without any VPN setup. Same for Airalo and Holafly. All three bypass the Great Firewall by design.
+Can I get a Chinese phone number with an eSIM?
+Not from a travel eSIM. Chinese law requires every phone number to be registered to a verified identity, and Chinese carriers activate phone eSIMs only in their stores, with an ID check. Nomad, Airalo, Holafly and Trip.com's China eSIMs are all data-only. For a real +86 number, buy a physical tourist SIM at the airport with your passport.
+Which is better: Nomad or Airalo for China?
+Nomad wins on price and cost-per-GB. Airalo wins for multi-country trips. For a China-only trip, Nomad saves about $9.50 per 10GB. For a 4-country Asia trip, Airalo's portability is worth the premium.
+Is Holafly worth it for a 7-day trip?
+Only if you're a heavy user (streaming, video calls, photo upload). At $27.50 for 7 days, you're paying about 1.6 times what a Nomad 10GB plan costs. If your usage is normal, Nomad is smarter. If you'll stream on trains, Holafly is worth the comfort.
+What about Trip esim china plans?
+Trip.com sells its own CMCC-based eSIMs from $0.41/day, according to Trip.com's July 2026 China eSIM guide. Solid cheap option. Trip.com can undercut Nomad on short plans. Trip.com also doesn't give you a Chinese phone number.
+What's the best chinese esim number option for Alipay?
+There isn't one. For a +86 number for Alipay or WeChat registration, buy a physical tourist SIM at the airport (bring your passport), or register Alipay with your home country number before you fly. Alipay now accepts most foreign numbers for foreign users.
+
+One more thing. Whichever eSIM you pick, have an offline backup for when signal drops.
+Can I receive Alipay or WeChat verification codes on a Nomad/Airalo/Holafly eSIM?
+No — they are data-only and have no number, so no SMS. But you usually don't need to: Alipay and WeChat send codes to the foreign number you already registered with, and you can receive those on your home SIM kept active in your phone's second slot.
+Can I top up after I land in China?
+Yes, on Nomad's fixed-data plans. Nomad says you can buy add-on data while you're in China, as long as your base plan hasn't expired. Its unlimited plans don't take add-ons, and new plan purchases are blocked once you're inside mainland China.
+Which network does Nomad use in China?
+China Unicom and China Telecom, depending on the plan — the unlimited plans ride China Unicom. Coverage in cities and along high-speed rail lines is excellent on both; remote mountain areas are where every provider (including locals' phones) struggles equally.
+Does Nomad throttle speeds after the daily limit?
+Only on unlimited plans: 2GB per day at full speed, then 1 Mbps or less until the 24-hour reset. Fixed-data plans (1GB–50GB) never throttle — full speed until the bucket is empty.
+Sources
+Nomad: China eSIM plans — prices (10GB and 20GB on sale), networks per plan, 2GB-a-day unlimited cap and slowed speed, hotspot, add-on availability; checked 2026-09-27.
+
+Nomad: Can I buy an eSIM in China? — no new plans inside mainland China, add-ons still possible, no VPN needed; accessed 2026-09-27.
+
+Nomad Help Center: How do you contact us? — support by in-app and website chat; page dated 2026-08-24.
+
+Airalo: China eSIM plans — fixed-data and unlimited prices, 3GB-a-day cap on unlimited plans, China Unicom network, 24/7 multi-language support; checked 2026-09-27.
+
+Airalo Help Center: VPN in China — traffic routed through gateways outside mainland China, no VPN on eSIM data, hotel Wi-Fi still filtered; accessed 2026-09-27.
+
+Airalo Help Center: When can I install my eSIM? — installation needs a stable internet connection; accessed 2026-09-27.
+
+Airalo Help Center: personal hotspot — hotspot works if your device and the network support it; accessed 2026-09-27.
+
+Holafly: China eSIM plans — prices, China Mobile (CMCC) network, fair usage policy of up to one day, 1GB-a-day hotspot, 24/7 chat and email support, Always On, install before or during your trip; checked 2026-09-27.
+
+International Traveller: I trialled Holafly eSIM in China and this is my verdict — independent hands-on trial by Christine Aldred (eSIM supplied by Holafly): apps worked throughout the trip, mid-30 Mbps downloads, AI-led 24/7 chat; 2026-02-10.
+
+esimdb: Travel eSIM in China, VPN myths and the Great Firewall — travel eSIMs for China use roaming connections the firewall doesn't filter; hotel Wi-Fi and local SIMs are filtered; published 2025-08-26.
+
+Apple Support: Using eSIM with your iPhone in China mainland — Chinese carrier eSIMs need a store visit with ID; mainland iPhones can't install non-Chinese eSIMs while inside the mainland; published 2026-09-09.
+
+Trip.com: China eSIM guide — CMCC eSIM from $0.41 a day, data-only; page dated 2026-07-31.
+
+Facts checked on 2026-09-27.
+
+Tags
+# esim # nomad # airalo # holafly
+
+View all →
+Should I install a China eSIM before arriving, and do I still need a VPN? →
+Do I need a Chinese SIM card and phone number for traveling in China? →
+What essential digital preparations should I make before arriving in China as a first-time visitor? →
+For a short China trip, should I rely on eSIM, roaming, or VPN if I need stable access to Google, Zoom, Slack, or Office365? →
+
+View all →
+April 15, 2026 · How-To Guide
+Best eSIM Card for China Travel 2026: Compared
+
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+April 17, 2026 · Topic
+Why China Doesn't Support eSIM (And What Travelers Should Do)
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

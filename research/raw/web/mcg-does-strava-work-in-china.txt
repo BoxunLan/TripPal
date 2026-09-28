@@ -1,0 +1,193 @@
+# source: https://mychina.guide/blog/does-strava-work-in-china
+# final: https://mychina.guide/blog/does-strava-work-in-china
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:26.510Z
+# bytes(raw): 68918
+# bytes(text): 14030
+# title: Does Strava Work in China? 2026 GPS & Sync Guide
+Does Strava Work in China? 2026 GPS & Sync Guide
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · July 22, 2026 · 10 min read · 345 views
+Does Strava Work in China? GPS Drift, Syncing, and the 2026 Reality
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 14, 2026
+
+On this page 8 sections 01 The short answer: recording works, syncing does not
+02 Why Strava is unreliable in China in 2026
+03 The GCJ-02 problem: why your run looks like it went through buildings
+04 How to sync: the eSIM route and the VPN route
+05 A sync routine that never loses an activity
+06 Ground rules for running in China
+07 Frequently asked questions
+08 Sources
+
+Strava mostly does not work in mainland China in 2026. Strava officially restricted its service in China in 2025, the app is gone from Chinese app stores, and the Great Firewall makes syncing to Strava's servers unreliable on Chinese SIM cards and hotel WiFi. The good news: GPS recording still works perfectly, because your phone or watch listens to satellites and needs no internet. Record every run and ride offline, then sync later. For syncing, use an international roaming eSIM (about ¥70-140 / $10-20 per week), which routes your data outside China with nothing to block, or a VPN with strong obfuscation installed before you land. One more quirk to expect: China's GCJ-02 mapping system offsets Chinese map tiles by 50-500 meters, so your track looks correct inside Strava but appears shifted off the road when viewed on Chinese map apps.
+The short answer: recording works, syncing does not
+Here's the thing nobody tells you before a China trip: Strava is really two separate systems, and only one of them breaks in China.
+The first system is GPS recording. Your phone or watch calculates position by listening to satellites — GPS, plus China's own BeiDou constellation, which most modern phones also receive. None of that requires a data connection. You can put your phone in airplane mode on the Great Wall and record a flawless 20 km trail run.
+The second system is everything that touches the internet: uploading activities, loading your feed, giving kudos, viewing segments, joining challenges. That part depends on reaching Strava's servers, and on a Chinese SIM card or hotel WiFi in 2026, it ranges from unreliable to completely dead.
+A German client of mine, a marathoner in his final training block, spent three weeks in Beijing last spring convinced his training was gone because nothing would upload. It wasn't gone. Every run was sitting safely on his watch, and the whole backlog synced in about four minutes once we sorted out his connection. Keep that picture in mind: in China, Strava becomes an offline recorder with a delayed upload step. Once you accept that, the rest is logistics.
+
+MyChinaGuide app · free
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+App Store Google Play
+
+Scan with your phone
+
+Why Strava is unreliable in China in 2026
+Two separate forces are working against you here, and it helps to know which one you're fighting.
+First, Strava itself pulled back. Strava's own support documentation lists mainland China among countries where its services are partially or fully restricted, alongside Russia, Belarus, North Korea, Iran, Cuba, and — since March 2025 — South Korea. The app has been removed from Chinese app stores, and Strava warns that travelers passing through these countries may hit problems accessing the platform or syncing activities. This is a company decision driven by local laws and data regulations, not just censorship.
+Second, the Great Firewall. China blocks a long list of Western platforms — the full list of blocked apps covers Google, Meta, and most social networks — and fitness platforms with social feeds and foreign servers fall into the same unreliable zone. Even when a connection to Strava's servers technically goes through, it is often so slow or intermittent that uploads time out.
+The practical result is the same either way: do not count on Strava's app connecting to anything while you're on a mainland network. Plan around it instead.
+The GCJ-02 problem: why your run looks like it went through buildings
+This is the part that genuinely confuses people, so let me take it slowly.
+The entire world's GPS infrastructure uses a coordinate standard called WGS-84. China, by law, requires all licensed domestic map providers to use a different one: GCJ-02, an obfuscation algorithm dating to 2002 that shifts every coordinate by a deliberately irregular offset — anywhere from 50 to 500 meters, varying by location. Amap, Baidu Maps, Tencent Maps, and even Apple Maps inside mainland China all render their maps in GCJ-02. Converting Chinese map data back to true coordinates is actually illegal under Chinese surveying law, and Baidu adds its own second offset (BD-09) on top.
+Your phone's GPS chip is not subject to any of this. It records true WGS-84 positions. So here is what happens in practice:
+Inside Strava, your track looks correct. Strava draws activities on international map tiles that use WGS-84, so your recorded line follows the actual streets you ran. Your distance, pace, and elevation are all accurate.
+
+On Chinese map apps, the same track looks wrong. Overlay your true GPS line on Amap or Baidu and it appears to drift off the road — cutting through buildings, running down the middle of a canal — because the map underneath has been shifted and your track hasn't.
+
+Screenshots can betray you. If you check your live position mid-run using a Chinese map app, you'll swear the GPS is broken. It isn't. The map is offset, not your position.
+
+For everyday runs, this is cosmetic. Where it bites is navigation: if you plan a route on a Chinese map app and then follow raw GPS coordinates, you can end up a block away from where you meant to be. My advice is to pick one system and stay inside it — use a map app built for China for finding your way, and let Strava quietly record the truth in the background. Separately, expect ordinary urban GPS noise of 3-10 meters between skyscrapers in Shanghai's Lujiazui or around Beijing's CBD, which is normal city interference, not the firewall and not GCJ-02.
+How to sync: the eSIM route and the VPN route
+You have two realistic ways to get activities off your phone and onto Strava in 2026.
+Option 1: an international roaming eSIM (the easy one)
+A travel eSIM from an international provider routes your mobile data back through its home carrier — typically Hong Kong or Singapore — before it touches the open internet. Because the traffic exits China through the carrier's own roaming pipe, the Great Firewall never filters it, and there is no VPN signature for anyone to detect or block. Strava, Instagram, Google — everything just loads, with zero setup beyond installing the eSIM before you fly.
+Expect to pay roughly ¥70-140 / $10-20 for a week of data. See our tested eSIM picks for China for current options and installation steps. Two warnings: install and activate it before you land, because the eSIM provider's website and app may be blocked once you arrive; and remember the eSIM only protects its own mobile data. The moment your phone hops onto hotel WiFi, you are back behind the firewall.
+Option 2: a VPN (still works, but pickier than before)
+A VPN also gets Strava syncing, and you'll want one anyway for hotel WiFi. The catch is that China's April 2026 crackdown knocked out many VPN services by blocking traffic that carries recognizable VPN signatures, so only providers with strong obfuscation still connect reliably. Our current VPN recommendations for China track which ones survived. Install it, log in, and test it before departure — VPN websites are blocked from inside China, so you cannot fix a missing app after you land.
+A sync routine that never loses an activity
+After walking a couple hundred clients a year through this, here's the routine I give every runner and cyclist:
+Record offline, on purpose. Start your activity with mobile data off or in airplane mode. The recording is fully local, and you avoid the app hanging mid-run while it hunts for servers.
+
+Never force-quit or delete when an upload stalls. A stuck upload is stored on your device. It will go through later. The only way to lose it is to log out of the app or uninstall it.
+
+Sync once a day, back at the hotel. Switch to your eSIM data (or connect the VPN on WiFi), open Strava, and let the queue clear. Keep the app in the foreground until every activity shows as uploaded.
+
+Mind the watch-to-phone chain. Garmin, COROS, Suunto, and Apple Watch all record independently and sync to their companion app over Bluetooth — that part works fine anywhere. It's the next hop, companion app to cloud to Strava, that needs your eSIM or VPN active. Same fix, one extra link in the chain.
+
+Batch-sync at the border if all else fails. Everything uploads the moment you reach Hong Kong, Macau, or your layover airport. Worst case, your feed is quiet for two weeks and then erupts.
+
+Ground rules for running in China
+A few practical notes from years of putting jet-lagged runners on Beijing streets. Early morning is the best window — you'll share parks with tai chi groups and dancing aunties, traffic is light, and summer heat hasn't peaked. City parks are the reliable choice: the Temple of Heaven loop in Beijing, Century Park in Shanghai, or the full lap of Hangzhou's West Lake (about 9.4 km) are all popular with local runners. Check the air quality index before hard efforts; bad days happen, and an easy treadmill day beats a tempo run in smog.
+Don't record activities near military installations or other sensitive sites — fitness heatmaps have caused real incidents, and this is one place discretion matters.
+Finally, on legality: China's VPN rules target sellers and domestic users, and as of mid-2026 there are no reported cases of a foreign tourist being penalized for syncing a run over a VPN. It sits in a gray zone; sync at the hotel rather than flaunting it, and you will be like every other foreign resident and traveler in China.
+Frequently asked questions
+Can Strava record my run in China without any internet?
+Yes, completely. GPS recording is satellite-based and works with mobile data off or in airplane mode. Your activities save locally on your phone or watch and upload automatically the next time the app gets a working connection, whether that's a roaming eSIM, a VPN session, or your arrival in Hong Kong.
+Will my GPS tracks look wrong in China?
+Not on Strava itself. Your phone records true WGS-84 coordinates, and Strava's international map tiles use the same standard, so your line follows the streets you actually ran. The drift only appears if you view your position or track on Chinese map apps like Amap or Baidu, which are legally required to use the offset GCJ-02 system — the map shifts 50-500 meters, not your data.
+Does Strava work in Hong Kong and Macau?
+Yes, normally. The Great Firewall does not apply in Hong Kong or Macau, and neither region is on Strava's restricted list. Many travelers simply let their backlog of mainland activities sync automatically when they cross over.
+Should I just use a Chinese running app instead?
+For a short trip, no — the popular local apps (Keep, Codoon) are Chinese-language, want a local phone number, and would leave your training history split across platforms. Recording offline on Strava and syncing daily via eSIM or VPN keeps everything in one place with about two minutes of daily effort.
+Is it legal to sync Strava over a VPN in China?
+Unauthorized VPN use is technically against Chinese regulations, but enforcement targets vendors and domestic users, not tourists uploading bike rides. As of mid-2026, no foreign traveler is known to have been penalized for it. Use a reputable provider, sync in private, and don't stress about it.
+Sources
+Strava Support: Strava Availability in Certain Countries
+
+the5krunner: Strava Exits South Korea and Other Countries
+
+abstractkitchen: A Short Guide to the Chinese Coordinate System (GCJ-02)
+
+Share this article
+
+Tags
+# strava # running # cycling # vpn # esim # gps # apps-in-china
+
+Travelers also asked
+View all →
+How can travelers track GPS art runs like this horse shape while in China? →
+Should I install a China eSIM before arriving, and do I still need a VPN? →
+
+Related articles
+View all →
+June 29, 2026 · How-To Guide
+Do You Need a VPN for China in 2026? An Honest Answer
+
+June 29, 2026 · How-To Guide
+What Apps Are Blocked in China? The Complete 2026 List
+
+June 29, 2026 · How-To Guide
+Does Google Maps Work in China? (and the Maps That Actually Do)
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

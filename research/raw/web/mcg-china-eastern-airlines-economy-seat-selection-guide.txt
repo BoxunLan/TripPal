@@ -1,0 +1,249 @@
+# source: https://mychina.guide/blog/china-eastern-airlines-economy-seat-selection-guide
+# final: https://mychina.guide/blog/china-eastern-airlines-economy-seat-selection-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:24.338Z
+# bytes(raw): 71568
+# bytes(text): 14915
+# title: China Eastern Seat Selection 2026: Free, Points or Cash
+China Eastern Seat Selection 2026: Free, Points or Cash
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · March 6, 2026 · 11 min read · 2,916 views
+China Eastern Economy Seat Selection: Free at Booking, Front Rows Cost Extra
+
+M MyChinaGuide Editorial Team · Updated September 27, 2026
+
+On this page 8 sections 01 When the map opens
+02 What you cannot buy on a domestic flight
+03 Why every seat looks locked
+04 Selecting the seat, and what breaks
+05 If you miss the window
+06 Baggage, because it changes where you want to sit
+07 FAQ
+08 Sources
+
+On a China Eastern economy ticket you can pick a free seat as soon as the ticket is issued, on China Eastern's website or app, for domestic and some international flights operated by China Eastern or Shanghai Airlines. The catch is that a large part of the map is held back: the front rows, the exit rows and many window and aisle seats cost points or cash. Online check-in, which issues the boarding pass, opens 48 hours before departure on most routes and 24 hours before on US and Canada routes.
+Everything below is about which seats are held back, what they cost, and when they return to the free map.
+When the map opens
+What
+
+Opens
+
+Cost
+
+Standard economy seat
+
+From ticketing on China Eastern's website or app (domestic and some international routes); otherwise at check-in, T−48h (T−24h on US and Canada routes)
+
+Free
+
+Row 1 and emergency exit rows
+
+From ticketing until the flight closes
+
+Domestic: 2,000 Eastern Miles points, no cash price. International: ¥300 short and medium-haul, ¥900 long-haul, ¥200 Hong Kong, Macao and Taiwan
+
+Other front rows, window or aisle
+
+From ticketing until 6 hours before departure
+
+Domestic, rows 2–3: 1,000 points, no cash price. International, rows 2–5 (2–7 on widebodies): ¥150 short and medium-haul, ¥450 long-haul, ¥100 Hong Kong, Macao and Taiwan
+
+Bulkhead with bassinet
+
+Request ahead under Special Passenger Services on the website or app
+
+No fee listed. Infants up to 74 cm and 11 kg; selected routes and aircraft; not guaranteed
+
+Row 1, exit and front-row seats at no charge
+
+From ticketing
+
+Domestic: Eastern Miles Platinum members, children and full-fare Y tickets, for 0 points. International: Platinum members, for themselves only. SkyTeam Elite or Elite Plus status alone is not on the list
+
+Reserve as soon as your ticket is issued, since other passengers can take the free seats from that point. If advance selection is not offered for your flight, set an alarm for the minute check-in opens. The prices above are China Eastern's list prices; it runs seat promotions, so the price on the payment screen is the one that counts.
+There is a second release worth knowing about. Once check-in opens, China Eastern frees part of the held-back stock, and 6 hours before departure it releases the unsold seats to the free map, except row 1 and the exit rows. If the map looks empty, check again at those two points. Some seats stay closed even after release for safety or operational reasons; you can ask for those at the airport counter.
+
+MyChinaGuide app · free
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+What you cannot buy on a domestic flight
+On domestic routes China Eastern sells preferred seats for miles, not cash. If you are a foreign traveller without a MU account holding miles, the front rows and extra-legroom seats are simply not purchasable — no amount of trying different cards will change it. Take one of the free seats instead.
+Exit rows have their own gate. You must be at least 15, physically able to assist, and able to follow crew instructions. Travelling with an infant disqualifies you outright, regardless of age.
+Why every seat looks locked
+In late 2024 China Eastern drew a wave of coverage in the Chinese press after passengers found that at check-in almost the entire map appeared unavailable — the 锁座 problem. Some of that is the preferred-seat block described above; some of it is inventory management.
+Two consequences worth planning around. A seat you selected is not guaranteed: China Eastern's rules say a flight or aircraft change, or a safety or operational reason, can change your seat number, and for held-back seats the airline will try to find an equivalent one and tell you by text message. And a paid seat you lose is not refunded on its own: apply through the channel you bought it from, and expect no refund if staff give you a seat of equal value or an upgrade. Re-check your seat once boarding is announced.
+Held-back seats are still a large share of the map. In a November 2025 survey, the Jiangsu Consumer Council bought tickets and chose seats in ten airlines' official apps; on the China Eastern route it checked, between 40% and 46% of economy seats were locked at the booking stage.
+On 29 January 2026 the China Air Transport Association (CATA), the national industry association for air transport, published a draft standard on reserved seats and took comments until 27 February. As drafted, at least 70% of economy seats on domestic flights and 65% on international and regional flights would have to be free to choose. Domestic flights could hold seats back for points or miles but could not sell them for cash, so cash seat fees would stay limited to international and regional routes. Airlines would also have to show which seats are free, what the others cost and when held seats are released. It is an industry standard rather than a law, and CATA had not announced a final version as of September 2026, so China Eastern's current rules above still apply.
+Selecting the seat, and what breaks
+On ceair.com, open Seat Selection & Check-in and enter your 13-digit ticket number or passport number, plus your name exactly as ticketed; the app and the WeChat and Alipay mini-programs have the same function. On the website's seat map, seats marked with a $ sign are the held-back ones that cost points or cash, and the other open seats are free. Pick, confirm, and once check-in opens, download the boarding pass.
+Payment is a separate problem for foreign visitors. China Eastern's seat-selection guide says its online seat payment does not currently accept foreign bank cards, so a card issued outside China may not work for a Preferred Seat on an international flight. Check which payment methods the page offers before you count on buying one online; China Eastern also sells these seats at its check-in counter at the departure airport on the day you fly.
+Problem
+
+What actually works
+
+App fails with a foreign phone number
+
+Try the same steps on ceair.com in a desktop browser, using your ticket number. If online check-in still fails, check in at the airport counter
+
+Foreign card declined for a seat fee
+
+China Eastern's online seat payment does not take foreign cards. Check the other payment methods on the page, or buy the seat at the check-in counter on the day
+
+"Seat selection not available"
+
+Advance selection covers domestic and only some international routes, and only flights operated by China Eastern or Shanghai Airlines. Wait for check-in
+
+Ticket issued by a partner airline
+
+ceair.com may not find a ticket issued by another airline. Contact the airline that issued it
+
+Group split across rows
+
+Add your companions on the same flight (up to five) when you select seats, so you can pick seats together. If that fails, call China Eastern's 24-hour global hotline, +86-21-20695530 (95530 from a Chinese number), which has an English option
+
+After check-in you can cancel or change your seat online up to three times. After that, further changes go through the airport counter or China Eastern customer service. A paid seat cannot be switched directly: cancel it, which is free, and buy the new one.
+If you miss the window
+The airport counter still assigns seats free of charge, subject to what is left. Arrive two hours early for a domestic flight, three for international — which is also roughly what a Chengdu connection needs if this is a transfer rather than an origin.
+If you are comparing MU against the alternatives on a specific route, British Airways against China Eastern to Shanghai goes through the cabin and the schedule. For the domestic network more broadly, flying domestically in China as a foreigner covers ID checks, the 45-minute domestic cut-off and what happens when a flight is delayed — which on Chinese domestic routes is often.
+Baggage, because it changes where you want to sit
+Cabin: one bag up to 8 kg and 55 × 40 × 20 cm, plus a personal item that fits under the seat in front. Overhead space on the A320 and B737 domestic fleet runs out fast, which is an argument for a lower row number rather than a better view.
+
+Checked: 20 kg in total on domestic flights; on international flights each piece can weigh up to 23 kg, and the number of free pieces (none to two) depends on the route and fare brand.
+
+Paid seat fees do not always come back on their own. If your ticket is refunded or changed, the seat is cancelled; if the fee is not refunded automatically, apply through the channel you bought it from, within 12 months of buying it.
+
+FAQ
+Can I choose my China Eastern economy seat when I book?
+Yes, on China Eastern's website or app, for domestic and some international flights operated by China Eastern or Shanghai Airlines, but only from the seats left free. Front rows, exit rows and many window and aisle seats are held back for points on domestic flights and for cash or points on international ones. Online check-in opens 48 hours before departure, or 24 hours on US and Canada routes. China Eastern's rules give the held-back seats free to Eastern Miles Platinum members, not to SkyTeam Elite or Elite Plus members as such.
+How much is an exit row seat on China Eastern?
+On domestic flights it is not sold for cash: row 1 and exit-row seats cost 2,000 Eastern Miles points. On international flights the list price is ¥300 on short and medium-haul routes, ¥900 long-haul and ¥200 on Hong Kong, Macao and Taiwan routes. You must be at least 15 and physically able to assist, and travelling with an infant disqualifies you.
+Why can't I pay for a better seat on a domestic MU flight?
+Because on domestic routes China Eastern sells preferred seats for miles rather than cash. Without a MU account holding miles there is no way to buy one; take one of the free seats instead.
+My card keeps being declined for the seat fee. What now?
+China Eastern's seat-selection guide says its online seat payment does not accept foreign cards. Check which other payment methods the page offers, or buy the seat at the China Eastern check-in counter on the day of travel.
+Can I change my seat after selecting it?
+Up to three times online after check-in; after that, ask at the airport counter or call China Eastern customer service. A paid seat cannot be switched directly: cancel it, which is free, and buy the new one.
+Sources
+China Eastern: Preferred Seat and Member Exclusive rules — seat areas, points and cash prices, sales windows, who gets the seats free, refunds; price table image dated 25 June 2026, accessed 27 September 2026.
+
+China Eastern: Notes for Online Seat Selection — which flights allow seat selection, the 6-hour release, seat changes, companions and refunds; accessed 27 September 2026.
+
+China Eastern: seat selection and check-in guide (Chinese) — free seat reservation before check-in, automatic check-in, $-marked seats, no foreign-card payment; accessed 27 September 2026.
+
+China Eastern: online check-in FAQ (Chinese) — check-in opens 48 hours before departure, 24 hours on US and Canada routes; accessed 27 September 2026.
+
+China Eastern: notice for passengers in exit-row seats (Chinese) — exit-row age and ability rules; accessed 27 September 2026.
+
+China Eastern: Carry-on Baggage and Free Baggage Allowance and Specifications — the 8 kg, 55 × 40 × 20 cm cabin bag and personal item, the 20 kg domestic allowance and 23 kg pieces on international routes; accessed 27 September 2026.
+
+China Eastern: Infants and Children — bassinet size limits and how to request one; accessed 27 September 2026.
+
+China Eastern: hotline notice (29 May 2025) and security notice (29 July 2025) — 95530 in China, +86-21-20695530 from abroad, and 24-hour service on the global line.
+
+China Air Transport Association: notice on the draft reserved-seat rules (Chinese) — draft published 29 January 2026, comments until 27 February; accessed 27 September 2026.
+
+China News Service: draft rules on seat locking (Chinese) — the 70% and 65% floors, no cash seat fees on domestic flights, disclosure rules; dated 29 January 2026.
+
+Economic Observer via Stockstar: the reserved-seat standard (Chinese) — comments received, the standard still being revised, and its status as an industry standard; dated 16 March 2026.
+
+Yangtse Evening Post: Jiangsu Consumer Council seat-locking survey (Chinese) — 40–46% of economy seats locked at booking on the China Eastern route checked; dated 26 November 2025.
+
+Facts checked on 2026-09-27.
+
+Share this article
+
+Tags
+# china eastern airlines # seat selection # economy class # flight tips # skyteam
+
+Travelers also asked
+View all →
+Can a family choose seats in advance on West Air or China Southern when booked through Trip.com? →
+Is British Airways worth the additional cost compared to China Eastern for flights to Shanghai? →
+
+Related articles
+View all →
+February 17, 2026 · How-To Guide
+BA vs China Eastern to Shanghai 2026: Full Comparison
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

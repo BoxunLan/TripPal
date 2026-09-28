@@ -1,0 +1,23 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564833.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564833.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.600Z
+# bytes(raw): 6184
+# bytes(text): 491
+# title: How can I apply for a paternity test?
+How can I apply for a paternity test?
+
+Home 12345 hotline 12345 hotline FAQs All
+
+How can I apply for a paternity test?
+
+2026-03-24
+
+Hello. You can visit the Beijing Public Legal Services Network to search for qualified forensic institutions qualified for offering forensic evidence identification (forensic biology) services.
+URL: http://bj.12348.gov.cn/lawservice/lawservice?ViewType=org&ContentType=LawOfficeType
+Thank you for your understanding and support.
+
+Attachment
+
+Related Articles

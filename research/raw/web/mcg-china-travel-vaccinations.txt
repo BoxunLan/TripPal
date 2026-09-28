@@ -1,0 +1,298 @@
+# source: https://mychina.guide/blog/china-travel-vaccinations
+# final: https://mychina.guide/blog/china-travel-vaccinations
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:25.235Z
+# bytes(raw): 74148
+# bytes(text): 18810
+# title: China Travel Vaccines 2026: What You Actually Need
+China Travel Vaccines 2026: What You Actually Need
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog Travel Tip · April 18, 2026 · 14 min read · 12,232 views
+China Travel Vaccinations: What You Need
+
+Jenny Wang · Travel Planning Expert, MyChinaGuide · Updated September 27, 2026
+
+On this page 9 sections 01 Are China Vaccinations Required for Entry?
+02 The Shots Most Tourists Should Get
+03 Immunizations for China: Longer Stays and Rural Travel
+04 Is There Malaria in China?
+05 How Much Do China Travel Vaccines Cost?
+06 When to Get Your Jabs for China: A Timing Guide
+07 Chikungunya: The 2025 Guangdong Outbreak
+08 China Vaccine FAQ
+09 Sources
+
+No vaccines are legally required to enter China unless you're arriving from a country with yellow fever risk. For most tourists visiting Beijing, Shanghai, or Xi'an, the CDC's list comes down to routine shots plus hepatitis A and hepatitis B. That's it. Not the terrifying 12-vaccine list you found on a government health site at 2am.
+What this guide covers:
+Which china vaccine recommendations you actually need (and which are overkill)
+
+What drives the cost, and where to get the shots in the US
+
+A practical timing schedule so you're not scrambling last minute
+
+The malaria question -- cleared up with WHO and CDC data
+
+If you're still planning your China trip , health prep can feel like a massive deal. But the reality is way less scary than those government health sites make it look. For more on entry requirements, check out whether Americans can travel to China without a visa .
+Are China Vaccinations Required for Entry?
+The short answer: no.
+China doesn't require proof of any vaccination for entry. One exception -- if you're arriving from a country where yellow fever is a risk (parts of sub-Saharan Africa, some South American countries), you'll need a yellow fever certificate if you're 9 months or older, and that includes layovers of more than 12 hours in those countries. Flying in from the US, UK, Canada, or Australia? Doesn't apply to you.
+And the question everyone still asks: no, you don't need a COVID vaccine to enter China . China stopped requiring pre-entry COVID-19 tests on August 30, 2023, and dropped the customs health declaration form on November 1, 2023. No pre-entry test, no vaccine proof, no health code.
+So here's the thing -- just because china vaccinations aren't required doesn't mean you should skip everything. The CDC recommends several travel injections for China , and a couple are genuinely smart to get.
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+The Shots Most Tourists Should Get
+Standard 1-3 week trip to major cities? Here's the short list, based on the CDC's current page for China. I'm not a doctor, so check with your own healthcare provider; the CDC suggests seeing one at least a month before your trip. This is what I recommend:
+Hepatitis A
+Top priority. Non-negotiable in my book. Hep A spreads through contaminated food and water, and even careful eaters can get exposed. The CDC recommends it for unvaccinated travelers aged 1 and older. Over 90% of people have protective antibody levels a month after the first dose. A second dose at least 6 months later completes the series, and protection has been shown to last at least 20 years.
+Where : a pharmacy, your regular doctor, or a travel clinic. See the options below.
+Hepatitis B
+The CDC now recommends hepatitis B for unvaccinated travelers of all ages going to China, whatever the length of the trip. It spreads through blood and other body fluids, which matters if you end up needing medical or dental care, or get a tattoo or piercing on the trip. Depending on the brand, it's a series of two or three shots. Heplisav-B takes two doses a month apart for adults, and the combined hepatitis A and B vaccine Twinrix has an accelerated schedule (days 0, 7, and 21-30, plus a booster at 12 months) for travelers short on time.
+Routine Vaccine Updates
+Not China-specific, but make sure these are current:
+Tdap (tetanus, diphtheria, pertussis) -- boosted every 10 years
+
+MMR (measles, mumps, rubella)
+
+Flu shot -- especially for winter travel
+
+COVID-19 -- the CDC says eligible travelers should be up to date
+
+That's the list for most tourists. Three items. Not twelve.
+Measles deserves a double-check. CDC's Level 1 Global Measles notice (May 28, 2025) still appears on its China page: all international travelers should be fully vaccinated at least 2 weeks before departure, including an early MMR dose for infants 6 to 11 months.
+Immunizations for China: Longer Stays and Rural Travel
+Heading to rural Yunnan during rice paddy season? Spending three months teaching English in a smaller city? Your vaccine list gets longer. Here's what to think about for extended china travel inoculations.
+Typhoid
+The CDC recommends typhoid only for some travelers to China. Consider it if you'll travel to areas with poor sanitation and unsafe water, including rural areas, spend a month or more in China, or visit friends or relatives. It comes as a single shot (age 2 and up, booster every 2 years) or four oral capsules taken every other day (age 6 and up, booster every 5 years). Finish either one at least 2 weeks before you travel. The vaccine isn't 100% effective, so safe food and water habits still matter.
+Japanese Encephalitis
+For rural areas with rice paddies, especially June through October, the peak season in China according to the CDC. It takes two doses 28 days apart; adults 18 to 65 can get the second dose as soon as 7 days after the first. Finish the series at least a week before you travel.
+Okay but honestly? Japanese Encephalitis vaccine for a 10-day Beijing-Shanghai trip? Probably overkill. The disease spreads through mosquitoes in rural farming areas, and the CDC calls the risk minimal for trips of under a month that stay in major cities. Rural Yunnan in summer? Different story entirely. Talk to your doctor.
+Rabies
+Dogs with rabies are common in China, and the CDC Yellow Book says dog bites are common among tourists there. It treats any dog or other mammal bite anywhere in China, including cities, as a high rabies risk; an American adult died of rabies after a dog bite in Guangdong Province in 2019. The pre-exposure vaccine is now two doses a week apart. Ask your doctor about it if you'll be around animals, travel in rural areas, stay long-term, or might struggle to get quick treatment after a bite.
+Quick heads up: the rabies vaccine doesn't mean you can skip treatment after a bite. You still need two more shots (days 0 and 3), but you no longer need rabies immune globulin. That matters in China: the CDC Yellow Book says international-standard immune globulin is often unavailable, and a bite can force travelers to end the trip and fly to Bangkok, Hong Kong, or home for treatment.
+If a dog or other animal bites or scratches you, wash the wound with soap and water for at least 15 minutes, as the WHO advises, and see a doctor right away. The CDC says rabies vaccines are typically available throughout most of China.
+Tick-Borne Encephalitis (TBE)
+Only relevant if you'll hike or camp in forested areas of northern and western China, such as the mountains of Heilongjiang, Jilin, Inner Mongolia, and Xinjiang. The CDC Yellow Book puts the highest risk from mid-April to July. Most tourists? Skip it.
+Is There Malaria in China?
+This causes a lot of confusion, and I understand why -- some official pages still carry old malaria warnings.
+Here's the fact that matters: the World Health Organization declared China malaria-free in 2021 . After a national elimination campaign, China reported zero indigenous malaria cases for four consecutive years and received official WHO certification.
+What about the CDC? Its malaria table by country lists no malaria areas in China and no recommended preventive medicine, and the CDC Yellow Book calls the risk of malaria transmission in China very low. The CDC's China travel page still carries a general line about malaria in some parts of China, which is where much of the confusion comes from.
+You do NOT need malaria medication for a China trip. Not for Beijing. Not for Shanghai. Not for Chengdu, Xi'an, or Guilin, and not for Yunnan or Hainan in the south. If you're doing a multi-country trip that crosses into Southeast Asian border zones, that's a separate conversation. Standard China travel? No malaria pills needed.
+The more likely problem is an upset stomach. The CDC Yellow Book rates the risk of travelers' diarrhea in China as low in luxury hotels but moderate elsewhere, so pace yourself with street food in the first few days.
+How Much Do China Travel Vaccines Cost?
+Prices differ between pharmacies, clinics, and states, and they change, so ask for the price per dose when you book. What drives your total is how many vaccines and doses you need:
+Vaccine
+
+Doses
+
+Notes
+
+Hepatitis A
+
+2, at least 6 months apart
+
+Protection shown to last at least 20 years
+
+Hepatitis B
+
+2 or 3, depending on brand
+
+Recommended for all unvaccinated travelers
+
+Typhoid (shot or oral)
+
+1 shot, or 4 capsules
+
+Booster every 2 years (shot) or 5 years (oral)
+
+Japanese Encephalitis
+
+2, 28 days apart
+
+Booster after a year if you're still at risk
+
+Rabies (pre-exposure)
+
+2, 7 days apart
+
+After a bite you still need 2 shots, but no immune globulin
+
+Check your insurance before you book. Coverage varies by insurer and plan, and some travel vaccines may not be covered at all.
+Where to get them:
+Pharmacy : CVS and Walgreens both list hepatitis A and B, typhoid, Japanese Encephalitis, and rabies among their travel vaccines. What each store offers varies by state, so book ahead
+
+Your regular doctor : Can order most travel vaccines. Sometimes partly covered by insurance
+
+Travel health clinic : The most thorough consultation. Ask about the consultation fee when you book; CDC's Find a Clinic page can help you locate one
+
+When to Get Your Jabs for China: A Timing Guide
+Some vaccines need multiple doses spread over weeks. Others need time to kick in. Here's your scheduling cheat sheet based on CDC travel health recommendations :
+8+ weeks before departure:
+Start Hepatitis B series if needed (dose 1)
+
+Get Hepatitis A (dose 1)
+
+Japanese Encephalitis dose 1 (if getting it)
+
+Book your travel health appointment
+
+4-6 weeks before:
+Japanese Encephalitis dose 2 (28 days after dose 1)
+
+Typhoid shot or oral capsules (if you need them)
+
+Hepatitis B dose 2 (a month after dose 1)
+
+2 weeks before:
+Deadline for typhoid and for being fully vaccinated against measles
+
+Rabies dose 2 (7 days after dose 1, if getting it)
+
+Japanese Encephalitis series finished at least 1 week before you fly
+
+Leaving next week with zero vaccines?
+My advice for last-minute travelers: see a doctor or pharmacist anyway. The CDC Yellow Book says it's never too late for a pre-travel consultation. Get the first Hep A dose even a few days before you fly; if you're over 40, immunocompromised, or have a chronic condition and leave within 2 weeks, the CDC advises immune globulin at the same appointment. Confirm your MMR and Tdap are current. Typhoid needs at least 2 weeks to take effect, so a late dose won't fully protect you at the start of your trip.
+Chikungunya: The 2025 Guangdong Outbreak
+China had its largest documented chikungunya outbreak in 2025, centered on Foshan in Guangdong Province (near Guangzhou and Hong Kong). The WHO counted 16,452 locally transmitted cases in Guangdong by September 27, 2025, mostly in Foshan (10,032) and Jiangmen (5,209), spread by Aedes mosquitoes. The US CDC posted a Level 2 travel notice for China on August 1, 2025, and has since removed it; its China page now says chikungunya vaccination is generally not recommended. Vaccine note: the IXCHIQ vaccine's US license was suspended in August 2025, and its maker withdrew the US application in January 2026, so don't expect it. The remaining US option is VIMKUNYA (for ages 12 and up), recommended mainly for travelers heading to an active outbreak. For most short-trip tourists, mosquito-bite prevention (DEET or picaridin repellent, long sleeves, air-conditioned or screened rooms) matters more than the vaccine. If you're late in pregnancy or have an underlying medical condition, the CDC says you might consider avoiding areas with an ongoing outbreak.
+China Vaccine FAQ
+What vaccinations do I need for China?
+For most tourists visiting major cities: hepatitis A and hepatitis B, plus making sure your routine vaccines (including MMR, Tdap, and COVID-19) are current. Rural travel, longer stays, or visits to friends and relatives may add typhoid, Japanese Encephalitis, or Rabies vaccines. No vaccines are legally required for entry unless you arrive from a country with yellow fever risk.
+What about vaccinations for China and Hong Kong?
+CDC's Hong Kong list is shorter than the mainland's: routine vaccines, hepatitis A, and hepatitis B for unvaccinated travelers under 60, with typhoid only for some travelers. Japanese Encephalitis isn't on it, and the CDC says rabid dogs are not commonly found in Hong Kong. If you're visiting both mainland China and Hong Kong, the mainland vaccine list covers you for Hong Kong too.
+Do kids need different vaccines for China?
+Mostly the same list, with age limits. The CDC advises an early MMR dose for infants 6 to 11 months traveling abroad, plus a hepatitis A dose that doesn't count toward the routine series. The typhoid shot starts at age 2 and the oral vaccine at 6. Check with your pediatrician -- they'll know what's already covered.
+What if I'm traveling to China next week with no vaccines?
+Go anyway, but see a doctor or pharmacist first: the CDC Yellow Book says it's never too late for a pre-travel consultation. Get a Hep A dose before you leave and confirm your MMR is current. Practice basic food hygiene: drink bottled water (the CDC says tap water isn't drinkable in China, even in major cities), eat at busy restaurants (high turnover means fresh food), and don't demolish six different street food stalls on day one.
+How much do travel vaccines for China cost?
+It depends on the pharmacy or clinic and on how many doses you need, so ask for the price per dose when you book. Japanese Encephalitis and Rabies take two doses each, but only some travelers need them. Coverage varies by insurer and plan, so call your insurer first.
+Do I need malaria pills for China?
+No. China was certified malaria-free by the WHO in 2021, and the CDC's malaria table lists no malaria areas in China, so no antimalarials are needed anywhere in mainland China.
+
+One more thing. Healthcare in China's major cities is better than most people expect -- some hospitals have international wings with English-speaking doctors . But hospitals usually want payment or a deposit before treatment, even in emergencies, and many don't accept foreign insurance, so get travel insurance that includes medical evacuation before you go. The US State Department's China page has more on healthcare and safety for American travelers.
+Jenny Wang is a Beijing native and UCLA graduate who has spent 6 years helping international travelers prepare for China. She's personally advised over 500 first-time visitors and has strong opinions about which vaccines are actually worth your money.
+Sources
+CDC Travelers' Health: China — vaccines for all, most and some travelers, the yellow fever entry rule, rabies vaccine availability, the measles notice and tap water; page updated 2026-08-25.
+
+CDC Travelers' Health: Hong Kong SAR — the shorter Hong Kong list; page updated 2026-08-25.
+
+CDC Yellow Book 2026: China — rabies risk, the 2019 death and immune globulin shortages, very low malaria risk, the tick-borne encephalitis season, travelers' diarrhea and hospital deposits; updated 2025-04-23.
+
+CDC: Malaria Information and Prophylaxis, by Country — no malaria areas and no preventive medicine listed for China; accessed 2026-09-27.
+
+WHO: China certified malaria-free — the 2021 certification after four years without local cases; published 2021-06-30.
+
+CDC Yellow Book: Japanese Encephalitis — the June-October peak season in China, the two-dose schedule and minimal risk on short city trips; updated 2026-02-20.
+
+CDC Yellow Book: Last-Minute Travelers — never too late for a consultation, Twinrix and Heplisav-B schedules, two-dose rabies pre-exposure vaccination; updated 2025-04-23.
+
+CDC: Preventing Typhoid Fever — ages, timing and boosters for the shot and the oral vaccine; updated 2026-07-13.
+
+WHO: Rabies fact sheet — washing a bite or scratch for at least 15 minutes; dated 2026-09-17.
+
+WHO Disease Outbreak News: Chikungunya, global situation — 16,452 cases in Guangdong by 2025-09-27; published 2025-10-03.
+
+CDC: Chikungunya Vaccine — VIMKUNYA for ages 12 and up and who it is recommended for; updated 2026-01-23.
+
+The State Council of China: health declaration requirement dropped — no health declaration form from 2023-11-01; published 2023-10-31.
+
+Facts checked on 2026-09-27.
+
+Share this article
+
+Tags
+# health # vaccines # cdc # preparation
+
+Travelers also asked
+View all →
+Is China worth visiting despite negative media portrayals? →
+Should I buy travel insurance for a long trip to China? →
+Do UK and Canada citizens need a visa for China travel? →
+
+Related articles
+View all →
+February 4, 2026 · How-To Guide
+Taking a Teenager to China: The Rules That Change Under 18
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

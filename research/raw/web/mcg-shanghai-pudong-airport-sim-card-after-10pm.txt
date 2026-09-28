@@ -1,0 +1,356 @@
+# source: https://mychina.guide/blog/shanghai-pudong-airport-sim-card-after-10pm
+# final: https://mychina.guide/blog/shanghai-pudong-airport-sim-card-after-10pm
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:29.848Z
+# bytes(raw): 73351
+# bytes(text): 14834
+# title: SIM Card at Shanghai Pudong Airport After 10 PM | 2026
+SIM Card at Shanghai Pudong Airport After 10 PM | 2026
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · January 30, 2026 · 10 min read · 2,410 views
+Getting a SIM Card at Shanghai Pudong Airport After 10 PM (2026)
+
+Jenny Wang · Local Expert, Beijing Native · Updated September 27, 2026
+
+On this page 11 sections 01 What this guide covers
+02 The Real PVG Telecom Kiosk Hours in 2026
+03 Option 1: 24-Hour Convenience Store Tourist SIMs
+04 Option 2: eSIM Activation Over PVG Free WiFi
+05 Option 3: Maglev to Downtown Shanghai, Next Morning
+06 A Realistic Late-Night Decision Tree
+07 What About Roaming With Your Home Carrier?
+08 Registration and Legal Requirements
+09 What to Expect Over the First 24 Hours
+10 The Taxi and DiDi Reality at PVG
+11 Frequently Asked Questions
+
+Your flight from Frankfurt lands at Shanghai Pudong International Airport at 22:40. By the time you clear biometric immigration, grab your bag from the carousel and walk out the customs exit, it is 23:30 and the China Unicom kiosk has a metal shutter pulled down to the floor. The cleaning staff tells you, in Mandarin, to come back at 08:00. You have a hotel transfer waiting and no way to share your location.
+This is one of the most common first-day problems for travelers to China, and it has better answers in 2026 than it did two years ago. The PVG telecom kiosks still mostly close around 21:30 to 22:00, but three new workarounds have emerged: 24-hour convenience store SIMs, eSIM download over airport WiFi, and the Maglev-to-downtown sprint for next-morning setup.
+What this guide covers
+Actual closing times for PVG China Mobile, China Unicom and China Telecom kiosks in 2026
+
+The 24-hour FamilyMart and 7-Eleven locations selling tourist SIMs at PVG
+
+How to download and activate an Airalo or Holafly eSIM before immigration
+
+Downtown Nanjing Road flagship stores that open at 08:30-09:00
+
+The 2-hour PVG free WiFi trick for late arrivals
+
+FAQ on registration, data caps and roaming
+
+MyChinaGuide app · free
+Landing without data?
+City guides and the China Wiki are ready on your phone — Panda AI picks up when you're online.
+App Store Google Play
+
+Scan with your phone
+
+The Real PVG Telecom Kiosk Hours in 2026
+Pudong International has two terminals. International arrivals mostly come through Terminal 2 (T2), with a growing share through the new Satellite Terminal S2 that connects to T2 by an automated people mover. Forget whatever blog post you read from 2019 about 24-hour SIM counters. Those never reopened after 2020.
+Terminal 2 Arrivals, Level 1
+Kiosk
+
+Location
+
+2026 hours
+
+Cash accepted
+
+Passport required
+
+China Unicom 中国联通
+
+Near Exit 5, before taxi queue
+
+07:00 - 21:30
+
+Yes
+
+Yes
+
+China Telecom 中国电信
+
+Near Exit 7, opposite Starbucks
+
+07:30 - 22:00
+
+Yes
+
+Yes
+
+China Mobile 中国移动
+
+Near Exit 1 (currency exchange)
+
+08:00 - 21:00
+
+Yes
+
+Yes
+
+China Mobile (T1)
+
+T1 Arrivals Level 1 center
+
+08:00 - 21:00
+
+Yes
+
+Yes
+
+These hours are the posted sign hours. In practice, staff often close 15 to 30 minutes early on low-traffic nights. If your flight lands after 21:00 and you are in a back row, assume the kiosk will be shut by the time you walk out.
+Terminal 1
+T1 has one China Mobile desk, and it closes earliest — often 20:30 in winter. Very few international flights arrive at T1.
+What the closed kiosks still have
+A sticker with a WeChat QR code and a Chinese-only phone number. Neither helps you at 23:30 with no connectivity.
+Option 1: 24-Hour Convenience Store Tourist SIMs
+This is the most reliable late-night fallback in 2026. FamilyMart (全家) and 7-Eleven both stock prepaid tourist SIMs on the counter behind the cashier, priced ¥120-180 for 7 to 15 days with 10-30 GB of data.
+FamilyMart at PVG
+T2 Arrivals Level 1 , near Exit 3, opposite the taxi queue — open 24 hours
+
+T2 Departures Level 3 , inside security (not useful on arrival) — 24 hours
+
+S2 Satellite Terminal — 24 hours at the central plaza
+
+Ask for "旅游 SIM 卡" (lǚyóu SIM kǎ, tourist SIM card). Hand over your passport. The cashier scans the SIM QR, you pay ¥130-180 with cash, Alipay Tour Pass, Apple Pay or a foreign Visa/Mastercard (some stores still reject foreign cards — carry ¥200 cash as backup). Activation is manual: pop the SIM into your phone, insert the included pin to trigger a text, and follow the English SMS instructions.
+7-Eleven at PVG
+T2 Arrivals has one 7-Eleven near Exit 6, open 24 hours. Stock varies; sometimes only China Unicom SIMs, sometimes dual Unicom/Mobile. Slightly cheaper than FamilyMart, roughly ¥120-150 for the same plan.
+What to expect from the tourist SIM
+Voice and SMS work immediately
+
+Data typically activates within 10-30 minutes
+
+Coverage uses the host carrier's network (China Unicom is best for tourists in Shanghai, China Mobile best elsewhere)
+
+No VPN included — if you need Google, Instagram, Gmail or WhatsApp, bring your own VPN or rely on an eSIM that routes via overseas servers
+
+Option 2: eSIM Activation Over PVG Free WiFi
+If your phone supports eSIM (iPhone XS and newer, Pixel 4 and newer, most 2021+ Samsung Galaxy models), you can skip the kiosk entirely. Do this before you leave the airport, and ideally before you clear immigration.
+The 2-hour PVG free WiFi trick
+PVG offers free airport WiFi for 2 hours per device. To activate, you normally need to scan your passport at one of the self-service WiFi kiosks near the immigration queue. In 2026, the kiosks are plentiful and the process takes under 90 seconds.
+Walk to a "Free WiFi" self-service kiosk (yellow and blue signage)
+
+Place your passport on the scanner, photo page down
+
+Read the printed slip — it contains a WiFi username and 2-hour password
+
+Connect to "AIRPORT-FREE-WIFI-PVG" SSID
+
+You now have 120 minutes of connectivity on one device
+
+Your hotel, your Airbnb host, Google, and your favorite eSIM provider are all reachable.
+Recommended eSIM providers for China
+Provider
+
+Plan size
+
+2026 price (USD)
+
+VPN-free access to Google?
+
+Notes
+
+Airalo Changcheng Mobile
+
+10 GB / 30 days
+
+$26
+
+Yes, routed overseas
+
+Best balance, activates instantly
+
+Holafly China 15 days unlimited
+
+Unlimited
+
+$47
+
+Yes
+
+Expensive but no data worry
+
+Nomad China
+
+10 GB / 30 days
+
+$25
+
+Yes
+
+Similar to Airalo
+
+Ubigi 5G China
+
+10 GB / 30 days
+
+$28
+
+Partial
+
+Better network speeds
+
+Download the provider app, complete checkout with Apple Pay or a foreign card, tap Install eSIM, and within 60 seconds you have a working Chinese line. The traffic is routed through a Hong Kong or Singapore gateway so Google, Gmail, WhatsApp, Instagram and YouTube all work without a separate VPN.
+Keep your home line for SMS
+Set the eSIM as your data line and keep your home SIM active for incoming SMS (banking, OTPs). Disable home-country data roaming to avoid surprises.
+Option 3: Maglev to Downtown Shanghai, Next Morning
+If it is already past midnight and the convenience store shelves are empty, the cleanest path is to accept one night without mobile data and head to downtown Shanghai.
+Maglev (磁浮列车)
+Operates PVG Station to Longyang Road (龙阳路) 06:45 - 21:40. At 23:30 it is closed — use Metro Line 2 instead.
+Metro Line 2
+Line 2 runs from Pudong International Airport to East Nanjing Road (南京东路) until roughly 22:00. After that, take a DiDi (book via Trip.com or ask airport staff to hail one from the official taxi queue). Budget ¥170-220 to People's Square.
+Downtown flagship stores
+China Mobile Nanjing Road flagship (南京东路) — opens 08:30, extensive English support, sells full 30-day plans with 50 GB data for ¥199-299
+
+China Unicom People's Square — opens 09:00, smallest queue in the morning
+
+China Telecom Huaihai Road — opens 09:00, best fiber-speed plans if you also want home internet for a long stay
+
+Bring your passport and expect the whole process to take 20-35 minutes, most of it form filling.
+A Realistic Late-Night Decision Tree
+Flight lands 19:00 - 21:00 — walk to any kiosk in T2 Arrivals, you will make it before they close
+
+Flight lands 21:00 - 22:00 — go directly to the China Unicom kiosk near Exit 5, skip baggage photos. You have 20 minutes
+
+Flight lands 22:00 - midnight — head straight to FamilyMart near Exit 3 for a tourist SIM, or the 7-Eleven near Exit 6
+
+Flight lands after midnight — use PVG free WiFi to download an Airalo eSIM, then transfer to your hotel. Buy a long-term SIM downtown tomorrow
+
+Your phone does not support eSIM — skip to FamilyMart first, then fallback to next-day downtown China Mobile
+
+What About Roaming With Your Home Carrier?
+Your T-Mobile, Vodafone, Orange or Telstra plan technically works in Shanghai, but there are two big problems. Speed is throttled to 128 kbps or 256 kbps on most "free international" tiers, which is barely enough for WeChat text, and the routing goes through your home country — which means Google and Instagram work without a VPN. For a one-hour airport taxi ride to your hotel, this is fine as a bridge. For a multi-day trip, buy a local SIM or eSIM.
+Registration and Legal Requirements
+Every SIM sold in China is real-name registered. The kiosk or convenience store scans your passport, takes a brief photo of your face, and links the number to your identity. This is legally mandatory and takes 90 seconds. You cannot buy a SIM with a friend's passport or without ID. eSIMs bought abroad skip this step because the regulation applies to Chinese carriers, not to overseas reseller SIMs roaming into China.
+What to Expect Over the First 24 Hours
+Your first day in Shanghai is a dance between getting a working SIM, getting to your hotel, and getting enough sleep to function. A realistic timeline for a traveler landing at 23:00:
+23:30 — clear customs, walk through the exit doors into Arrivals Level 1
+
+23:35 — head straight to the nearest FamilyMart or 7-Eleven, buy a tourist SIM, pay with cash
+
+23:45 — activate the SIM by inserting and following the English SMS prompt
+
+00:00 — book a DiDi or walk to the official taxi queue near Exit 7
+
+00:45 — arrive at your hotel, check in, collapse
+
+If the convenience stores are sold out, fall back to the eSIM flow over airport WiFi. If eSIMs are not supported on your phone, grab a free 2-hour WiFi session, message your hotel through WeChat or WhatsApp that you are en route, and head downtown. A single night without connectivity is not a disaster — you will sort the SIM first thing in the morning at Nanjing Road or at the hotel's business center.
+The Taxi and DiDi Reality at PVG
+Even with a working SIM in hand, the taxi queue at PVG can take 30-60 minutes at peak arrival hours. The queue is supervised, meters are enforced, and the fare to downtown Puxi runs ¥180-240 plus a ¥25 tunnel toll. Negotiated flat-fare offers from drivers standing in the arrivals hall are usually scams — always join the official queue outside Exit 1, 5 or 7.
+DiDi is the better default once your eSIM or tourist SIM is working. The DiDi Chinese app has a full English mode in 2026. Open the app, set destination, pick Express (快车) or Premier (专车). Fares are typically ¥170-210 to central Shanghai, and pickup happens at a marked DiDi lane at Arrivals Exit 6. Payment goes through the card you linked, or through Alipay Tour Pass.
+This is one slice of a larger trip. Start with our Shanghai travel guide for neighborhoods, costs, and timing.
+Frequently Asked Questions
+Can I buy a Chinese SIM card before I fly?
+Yes, from Amazon, Trip.com and Klook. Orders include pre-activated China Unicom tourist SIMs that arrive in 3-5 days. Good if you want zero stress on arrival. Expect to pay $20-35 for a 7-15 day plan.
+Does Airalo work everywhere in China?
+Airalo's Changcheng Mobile plan works across all major Chinese cities. Rural western regions (parts of Xinjiang, Tibet, remote Sichuan) can be patchy. Upload speeds are lower than a physical local SIM.
+Is PVG WiFi really free without a Chinese phone number?
+Yes, the passport-scan kiosks are specifically for international travelers and do not require a Chinese mobile number. It is one of the more traveler-friendly features at PVG.
+Which carrier has the best coverage in Shanghai?
+China Unicom gives the best speeds on the metro and in downtown Pudong. China Mobile has the widest suburban and intercity coverage. For a Shanghai-only trip, Unicom wins.
+Can I get a monthly contract as a tourist?
+No. Tourist SIMs are prepaid only, 7 to 30 days. For longer stays, apply at a flagship store with your passport and a Chinese friend as guarantor, or use a business visa to access contract plans.
+Related: buying a SIM card at Guangzhou airport · getting from Guangzhou airport into the city
+
+Share this article
+
+Tags
+# shanghai travel # pvg airport # sim card # esim # china connectivity
+
+Travelers also asked
+View all →
+What is the fastest transportation option from Shanghai PVG Airport to the cruise terminal when facing a tight boarding deadline? →
+For a first trip to Shanghai, what should I set up for eSIM, payments, metro, and train tickets? →
+Do I need a Chinese SIM card and phone number for traveling in China? →
+What essential digital preparations should I make before arriving in China as a first-time visitor? →
+
+Related articles
+View all →
+January 19, 2026 · How-To Guide
+How to Enter China With a Dual-SIM Phone: 2026 Traveller's Guide
+
+January 14, 2026 · How-To Guide
+Buying a SIM Card at Guangzhou Baiyun Airport: Foreigner Guide
+
+April 17, 2026 · Topic
+Why China Doesn't Support eSIM (And What Travelers Should Do)
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

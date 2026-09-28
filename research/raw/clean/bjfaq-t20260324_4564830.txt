@@ -1,0 +1,23 @@
+# source: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564830.html
+# final: https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564830.html
+# status: 200
+# contentType: text/html; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:23.545Z
+# bytes(raw): 6539
+# bytes(text): 651
+# title: I am interested to study at China University of Geosciences and want to apply. Thus, I want your help to do so.
+
+I am interested to study at China University of Geosciences and want to apply. Thus, I want your help to do so.
+
+Home 12345 hotline 12345 hotline FAQs All
+
+I am interested to study at China University of Geosciences and want to apply. Thus, I want your help to do so.
+
+2026-03-24
+
+Hello. For inquiries related to studying abroad, please contact the university's international student admissions office via email at ico@cugb.edu.cn.
+The admission brochure can be accessed here: https://bm.cugb.edu.cn/gjhzyjl-en/study-in-cugb/admission/.
+Thank you for your understanding and support!
+Beijing Municipal Education Commission
+
+Attachment

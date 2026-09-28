@@ -1,0 +1,255 @@
+# source: https://mychina.guide/blog/book-china-train-tickets-12306-foreigner
+# final: https://mychina.guide/blog/book-china-train-tickets-12306-foreigner
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:23.421Z
+# bytes(raw): 71593
+# bytes(text): 13169
+# title: 12306 English Guide for Foreigners: Booking and Refunds
+12306 English Guide for Foreigners: Booking and Refunds
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · January 11, 2026 · 9 min read · 19,889 views
+12306 English for Foreigners: Passport Verification, Booking, Changes and Refunds
+
+Michael Chen · Travel Writer, China Specialist · Updated September 14, 2026
+
+On this page 12 sections 01 The short version
+02 Is There a 12306 English Version? (App vs Website)
+03 Before you book: choose the right station
+04 Entering a foreign passport correctly
+05 How to book on 12306 English
+06 Do foreigners need to collect a paper ticket?
+07 Changing a China train ticket
+08 Refund fees and the clock that matters
+09 When a third-party booking service may still help
+10 Travel-day checklist
+11 Frequently asked questions
+12 Sources
+
+Foreign travelers can buy China train tickets directly from the official 12306 English website using a valid foreign passport. You do not need a Chinese ID card, and the e-ticket is linked to the passport used for booking. The difficult part is not eligibility; it is entering your identity details consistently and understanding what can and cannot be changed after payment.
+This guide covers the official English website at 12306.cn/en . The Chinese 12306 app has more domestic features, but it is not necessary for a straightforward intercity booking.
+The short version
+Create an account on the official English 12306 site.
+
+Add each traveler using the name and passport number printed on the travel document.
+
+Search by the station name, not just the city name.
+
+Select the exact date, train and seat class.
+
+Pay online and keep the order number available offline.
+
+Bring the same original passport to the station.
+
+The passenger name, passport number and document type must match the original passport. A typo can become a boarding problem because your passport is the travel credential for the e-ticket.
+
+MyChinaGuide app · free
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+Is There a 12306 English Version? (App vs Website)
+Yes — both exist, and they're official. The 12306 app has a built-in English mode: it asks for your language on first launch, and you can switch any time in the app's settings under "Language/语言". The official English website is at www.12306.cn/en. Both let you register with a passport, verify your identity online, and pay with an international Visa or Mastercard.
+The English interface covers booking, changes, and refunds, though a few system notices still appear only in Chinese. The step-by-step below walks through the whole booking flow in the English app, including the passport checks that trip most travelers up.
+Before you book: choose the right station
+Large Chinese cities often have several railway stations. Beijing Railway Station, Beijing West and Beijing South are different places; Shanghai, Shanghai Hongqiao and Shanghai South are also separate. A fast train that looks convenient on the timetable may leave from a station an hour away from your hotel.
+Check both ends of the journey on a current map before paying. If you are comparing routes, our China high-speed rail map and high-speed rail guide explain the major corridors, but the station printed on the ticket is the one that matters on travel day.
+On the English site, normal passenger booking service is generally available from 5:00 am to 1:00 am the next day. On Tuesdays, the published service window is 5:00 am to 11:30 pm. Information queries and online refunds remain available around the clock. These are Beijing-time service windows, not a promise that seats for every route will be on sale.
+Entering a foreign passport correctly
+Use the passport that you will physically carry on the train. Enter the passport number without inventing spaces or punctuation, and follow the site's field order for surname and given names. If your passport has several given names, do not shorten them to a nickname.
+The most common avoidable problems are:
+booking under an old passport and traveling with a replacement;
+
+using a different romanization from the machine-readable passport page;
+
+choosing the wrong document type;
+
+adding two versions of the same passenger and selecting the wrong one at checkout.
+
+If the site will not accept or verify the passenger record, do not keep creating accounts. Take the passport to a staffed railway ticket window or ask official 12306 support which part of the record needs correction. Build this into your schedule rather than attempting it immediately before departure.
+How to book on 12306 English
+Search the departure and arrival stations, then filter by departure time and seat class. High-speed services usually use train numbers beginning with G, D or C, while conventional services may use other prefixes. The train number alone does not tell you which station it serves.
+Before payment, verify five fields:
+travel date;
+
+departure station;
+
+arrival station;
+
+passenger and passport number;
+
+seat class.
+
+Seat availability changes quickly on busy routes. If first class is available but second class is sold out, read our first class vs second class comparison before paying more. It explains the reliable differences without pretending every train model is identical.
+After payment, save the order details and train number as a screenshot. This is useful if mobile data is weak in a large station. It is not a substitute for the passport.
+Do foreigners need to collect a paper ticket?
+Normally, no. China Railway uses e-tickets, and a foreign passenger boards with the original identity document used for the purchase. At stations where an automatic gate does not read your passport, use the staffed manual lane. This is normal and does not mean the ticket is invalid.
+Allow extra time for security and the manual identity check. The boarding gate usually closes before the train departs, and a railway station can be much larger than an airport-style concourse suggests.
+Do not rely on a photocopy, a phone photo of the passport or a different document. The official rule requires the same valid ID used for booking.
+Changing a China train ticket
+The 12306 English site supports ticket changes, refunds and destination changes for eligible orders. A ticket can generally be changed once. Availability on the replacement train still matters: a rule allowing a change does not create an empty seat.
+Change fees depend on the new departure and the timing of the request. Under the current published framework, certain changes remain free, while moving a ticket to some later trains can trigger a fee of 5%, 15% or 40%. Because the calculation depends on both timing and the new train, check the fee shown by 12306 before confirming.
+If the plan has changed substantially, compare the displayed change fee with the cost of refunding and making a new booking. Do not assume that a “change” is always cheaper.
+Refund fees and the clock that matters
+For a standard passenger-initiated refund, the official published fee tiers are based on the scheduled departure time:
+Time before departure
+
+Published refund fee
+
+More than 8 days
+
+No fee
+
+More than 48 hours and up to 8 days
+
+5%
+
+24 to 48 hours
+
+10%
+
+Less than 24 hours
+
+20%
+
+The minimum charged refund fee is ¥2. The amount and eligibility displayed in your order are the final values to review before confirming.
+China Railway also introduced a narrowly defined accidental-purchase protection in 2026: an eligible online order may receive one fee-free refund per day if it is cancelled within 30 minutes of payment and the departure is still at least four hours away. Treat that as an emergency correction window, not a general free-cancellation policy.
+If a train is cancelled or disrupted by the railway, follow the remedy shown in the official order rather than applying the passenger-initiated table blindly.
+When a third-party booking service may still help
+Official 12306 is usually the lowest-friction choice when you know the train and can complete the identity record. A reputable third-party service can be useful when you want an English interface with human support or a booking request before sales open. The tradeoff may include a service fee and different after-sales handling.
+Whichever channel you use, the underlying seat comes from China Railway. A third party cannot guarantee a sold-out seat, bypass identity rules or keep the boarding gate open. For the wider network and station process, see our China high-speed rail guide .
+Trip.com is the option most foreign travelers end up using. The interface is in English, it takes international cards without a Chinese mobile number, and you can book before you arrive. It adds a service fee per ticket and handles refunds through its own support rather than 12306, so keep that order reference separate from your railway account. Compare the fee against the 12306 fare before confirming; on a short regional route it can be a noticeable share of the price.
+Travel-day checklist
+Carry the original passport used in the order.
+
+Recheck the exact station and entrance on a current map.
+
+Arrive early enough for security and a staffed passport lane.
+
+Keep the train number, coach and seat available offline.
+
+Follow the platform and gate displayed on the station board; these can change.
+
+Pack within the railway luggage limits and security rules.
+
+Our China train luggage guide covers the published weight and size limits, plus what happens at the station security check.
+Keep screenshots for communication and offline reference, but treat the original passport—not the screenshot—as the boarding credential.
+Frequently asked questions
+Can I book 12306 with a foreign passport?
+Yes. The official English site accepts valid foreign passports. Use the same passport details and original document for boarding.
+Do I need a Chinese phone number?
+The key requirement is a valid account and accepted passenger identity record. Form and verification options can change, so use the current fields shown by the official English site instead of copying an old tutorial screen by screen.
+Can I choose an exact seat?
+Available preferences depend on the train and booking interface. A preference is not always a guarantee. The confirmed coach and seat appear in the completed order.
+Can I change the passenger name after buying?
+Do not expect a normal train change to transfer a ticket to another person. Passenger identity is part of the e-ticket. If the identity is wrong, contact official support or use the valid cancellation and rebooking options shown in the order.
+Is a screenshot enough to board?
+No. A screenshot is useful for finding the train and seat, but the original passport used to buy the ticket is the boarding credential.
+Sources
+China Railway 12306 English FAQ , checked 2026-07-16.
+
+China Railway security-inspection regulation , effective 2024-02-01.
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Share this article
+
+Tags
+# China trains # 12306 # rail travel # first-time visitors
+
+Travelers also asked
+View all →
+Should I book China train tickets through 12306 or Trip.com? →
+Where can I purchase sleeper train tickets in China, and is it worth choosing trains over flights for short stops? →
+What is a realistic pace and preparation strategy for a multi-city High-Speed Rail trip in China? →
+
+Related articles
+View all →
+January 18, 2026 · How-To Guide
+How to Book China Train Tickets Without WeChat (2026 Guide)
+
+July 28, 2026 · How-To Guide
+China Railway Map (2026): The Whole Network and Every Train Type
+
+April 7, 2026 · How-To Guide
+Beijing to Shanghai by Train: Complete Guide for Foreigners
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

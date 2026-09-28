@@ -1,0 +1,197 @@
+# source: https://mychina.guide/blog/beijing-to-lhasa-travel-guide-requirements
+# final: https://mychina.guide/blog/beijing-to-lhasa-travel-guide-requirements
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:22.319Z
+# bytes(raw): 62927
+# bytes(text): 9312
+# title: Beijing to Lhasa Z21: Permits, Timing, Oxygen 2026
+
+Beijing to Lhasa Z21: Permits, Timing, Oxygen 2026
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · February 28, 2026 · 6 min read · 646 views
+Beijing to Lhasa on the Z21: Start Sixty Days Out
+
+M MyChinaGuide Editorial Team · Updated September 14, 2026
+
+On this page 7 sections 01 The chain, and how long each link takes
+02 What a "tour" actually means
+03 Forty hours on the Z21
+04 The two oxygen systems, and why it matters more than the pills
+05 Altitude: what the train buys you
+06 When to go
+07 FAQ
+
+Start 60 days out. Not 30, not two weeks — the permit chain has a fixed order and each link has its own lead time, and you cannot begin the second until the first is physically in your passport.
+That is the part people get wrong about Tibet, far more often than the altitude.
+The chain, and how long each link takes
+Step
+
+Who does it
+
+Lead time
+
+Cost
+
+1. China L visa
+
+You, at an embassy or visa centre at home
+
+4–10 business days
+
+US$140–185
+
+2. Tibet Travel Permit
+
+A licensed Tibet agency, using a scan of your visa page
+
+10–15 business days
+
+¥200–400, usually inside the tour price
+
+3. Z21 ticket
+
+You or the agency on 12306
+
+Released 15 days before departure, 08:00 Beijing time
+
+¥360–1,144
+
+The permit cannot be applied for by you, and it cannot be applied for before the visa exists. Nor can you walk into a Lhasa office and ask — a licensed agency submits on your behalf. Thirty days is the absolute minimum for the whole sequence; 45 to 60 is the realistic buffer.
+Carry the original permit, not a copy. It is checked at Beijing West before you board, and again at Xining when the train takes on Tibet-bound passengers.
+One thing that catches people planning a wider China trip: the 240-hour visa-free transit explicitly excludes Tibet. There is no visa-free route in.
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+What a "tour" actually means
+Foreign visitors cannot enter the Tibet Autonomous Region without a permit, a licensed guide and a pre-approved itinerary. This is national policy, not an agency upsell. In practice:
+You cannot book a Lhasa hotel and turn up alone, and you cannot rent a car.
+
+A guide accompanies you to every site outside the hotel, every day, and your itinerary has to match what the permit approved.
+
+You can walk around Lhasa on your own in the evening once the guide drops you back, eat where you like, and browse Barkhor Street freely.
+
+The guide requirement reads as restrictive and mostly is not. Monastery layouts and Buddhist iconography are genuinely hard to read unassisted, and the itineraries range from four-day Lhasa basics to fifteen-day Everest Base Camp routes.
+Choosing an agency: ask for the Tibet Tourism Bureau licence number and check it exists — a legitimate agency hands it over without hesitation. Read reviews from the last twelve months only, since policy changes fast. Insist on a daily breakdown with hotel names, entry fees and vehicle type. And pay by bank wire or Alipay, never Western Union. A four-day Lhasa group tour runs ¥2,800–4,500 per person excluding the train.
+Forty hours on the Z21
+One departure a day from Beijing West, around 20:00, arriving Lhasa around midday on the third day. Roughly 40 hours, through Shijiazhuang, Taiyuan, Xi'an, Lanzhou, Xining, Golmud and Nagqu, over the Tanggula Pass at 5,072 m. It is the longest passenger run in China.
+Class
+
+Fare
+
+Reality
+
+Hard seat
+
+≈¥360
+
+An upright bench for forty hours. Do not.
+
+Hard sleeper
+
+≈¥720
+
+Open six-berth bay. Fine if you can sleep through snoring.
+
+Soft sleeper
+
+≈¥1,144
+
+Enclosed four-berth compartment. What most foreign travellers book.
+
+Tickets release 15 days ahead at 08:00 Beijing time. In June to August soft sleepers go in minutes, so have 12306 registered with your passport well before the release, not on the morning.
+Onboard: a hot water dispenser in every carriage, a dining car around carriage 7 serving set meals at ¥30–60, squat toilets with one Western toilet per carriage. Charging is scarce — one outlet under the fold-down table in a soft sleeper compartment — so bring a 20,000 mAh power bank. Sleeping well on a Chinese overnight train covers the rest.
+The two oxygen systems, and why it matters more than the pills
+The Z21 runs two separate oxygen arrangements on the plateau section, and knowing the difference is more useful than any altitude tablet.
+The first is diffusion: oxygen is added to the whole carriage's air supply, raising the effective oxygen level for everyone without you doing anything. The second is the individual port beside each bunk, which activates on the Qinghai-Tibet section and is there for when you personally need more. Use the port when you have a headache; do not assume the carriage system is failing because you feel rough.
+Before boarding, every passenger completes a Passenger Health Registration Card. China Railway and the medical authorities formally advise against the route for several categories of passenger — read it rather than ticking through it.
+Altitude: what the train buys you
+Lhasa is at 3,650 m. Flying in from Beijing, at 44 m, puts you there in four hours, which is the fastest possible way to get altitude sickness. The Z21 climbs over forty hours instead, and that gradient is the single best reason to take it.
+What to expect anyway: a headache in the first 6 to 24 hours in Lhasa, two bad nights of sleep, mild nausea after meals, breathlessness on stairs.
+Rest the first 48 hours. No hikes, and not the Potala climb on day one.
+
+Three to four litres of water a day.
+
+No alcohol and nothing heavy for the first three days.
+
+Diamox, prescribed at home, started the day before you leave Beijing.
+
+The train stops at Xining for about half an hour, at 2,275 m. If altitude is already troubling you there, pay attention — that is the last easy place to get off.
+When to go
+Window
+
+Conditions
+
+April–May
+
+Clear, fewer people, cold nights
+
+June–August
+
+Warmest, busiest, most expensive
+
+September–October
+
+The best weather of the year
+
+November–March
+
+Not closed, but itineraries shrink and remote routes stop running
+
+Tibet is periodically closed to foreign visitors without notice, and March is historically restricted around the anniversary of the 1959 uprising. Confirm with your agency before booking flights.
+FAQ
+How far ahead do I need to start?
+Sixty days is the realistic buffer, thirty the absolute minimum. The visa takes 4 to 10 business days, the Tibet permit another 10 to 15 and cannot start until the visa is in your passport, and the train ticket only releases 15 days out.
+Can I travel in Tibet without a tour?
+No. A permit, a licensed guide and a pre-approved itinerary are required for foreign visitors, and only an agency can obtain the permit. You can move around Lhasa unaccompanied in the evenings.
+What does a Z21 soft sleeper cost?
+About ¥1,144 at the station. International booking sites charge ¥1,250–1,380 after fees, and your Tibet agency can usually buy it for a small service charge.
+Is the train better than flying for altitude?
+Yes, and it is the main argument for taking it. Forty hours of gradual climb from 44 m to 3,650 m is far gentler on the body than a four-hour flight.
+Can I use visa-free transit to visit Tibet?
+No. The 240-hour visa-free transit explicitly excludes the Tibet Autonomous Region. You need a full tourist visa plus the Tibet Travel Permit.
+
+Tags
+# Tibet # Lhasa # Beijing # Train Travel # Permits
+
+View all →
+What are the booking requirements and visa processes for traveling to Lhasa, Tibet? →
+Where can I purchase sleeper train tickets in China, and is it worth choosing trains over flights for short stops? →
+
+View all →
+January 11, 2026 · Itinerary
+China Itinerary 2 Weeks: Day-by-Day Route That Actually Works
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

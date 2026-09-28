@@ -1,0 +1,503 @@
+# source: https://mychina.guide/blog/china-visa-for-us-citizens-step-by-step
+# final: https://mychina.guide/blog/china-visa-for-us-citizens-step-by-step
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:25.398Z
+# bytes(raw): 81797
+# bytes(text): 21149
+# title: China Visa for US Citizens: Step-by-Step (2026)
+China Visa for US Citizens: Step-by-Step (2026)
+
+Skip to content
+
+MyChinaGuide City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Get the app
+
+Sign in
+
+Ask Panda AI
+
+Ask Panda AI
+
+Get the app
+
+Sign in
+
+City Guides Food Guide Wiki Tools Traveler Q&A Blog Pricing
+
+Back to blog How-To Guide · June 2, 2026 · 15 min read · 6,983 views · Featured
+China Visa for US Citizens: Step-by-Step Guide (2026)
+
+Jenny Wang · Travel Planning Expert, MyChinaGuide · Updated September 27, 2026
+
+On this page 11 sections 01 Do US Citizens Need a Visa for China in 2026?
+02 The 2 China Visa Options for Americans
+03 China Visa Requirements: The Complete Document Checklist
+04 Step 1: Fill Out the COVA Online Application
+05 Step 2: Book the In-Person Submission (CVASC or Consulate)
+06 Step 3: China Visa Application Fees and Payment
+07 Step 4: Processing Time and Tracking
+08 Common Rejection Reasons (And How to Avoid Each)
+09 The 10-Year Multi-Entry Visa: How Americans Get It
+10 What to Check on Your Visa Sticker the Day You Get It Back
+11 FAQ: China Visa Application for US Citizens
+
+Yes, US citizens need a China visa in 2026. Unlike travelers from 40+ other countries, Americans are not on China's unilateral visa-free list. Most first-timers get the 10-year multiple-entry L visa for $140 (¥1,015). The process runs through a new online system called COVA plus one in-person visit. Start to finish: 1-3 weeks if you don't mess up the photo. The one exception: if you're connecting through China to a third country, you may qualify for 240-hour visa-free transit.
+What this guide covers:
+Why US citizens still need a China visa in 2026 (and the one exception)
+
+Your 2 real options: the 10-year L visa or 240-hour transit
+
+Every document required (post-2024 simplified list)
+
+The new COVA online form, screen by screen
+
+Picking a CVASC or consulate and submitting
+
+Fees, processing time, rejection reasons
+
+What to check on your visa sticker before you leave the counter
+
+Do US Citizens Need a Visa for China in 2026?
+Short answer: yes, for almost every kind of trip.
+This trips up a lot of Americans right now, because China has been aggressively expanding visa-free entry. Since 2024, citizens of 40+ countries (most of Europe, Australia, New Zealand, Japan, South Korea, several Southeast Asian and Latin American countries) can enter China visa-free for up to 30 days. Canada was added on February 17, 2026. US passport holders are not on that list. The US embassy in China says it plainly: travel to China from the United States requires a visa.
+I know. Every travel influencer is shouting about "visa-free China" right now. They're almost always talking about European or Australian passports. If you hold a US passport, assume you need a visa unless one specific exception applies.
+The one real exception for US citizens: 240-hour visa-free transit.
+If you're flying from the US to a third country or region and want to stop in mainland China for up to 10 days along the way, you qualify for 240-hour visa-free transit at 65 ports. Hong Kong, Macau, Japan, South Korea, Thailand, anywhere that isn't the US all count as a third country. This is a legitimate way to visit China without a visa, but it has strict rules: onward ticket required, designated ports only, cross-province travel limited to certain areas. See our 240-hour transit guide for the full rules.
+You need a full Chinese visa if:
+You're flying round-trip from the US (no third-country onward ticket)
+
+Your stay is longer than 10 days
+
+You're going to work, study, or do journalism
+
+You want a 10-year multiple-entry visa for long-term flexibility
+
+You're a dual-national US/PRC
+
+You have a criminal record or prior overstay
+
+Pro tip : Pack a printout of whichever policy applies to you. If airline check-in staff question whether you need a visa, show them the printout.
+
+MyChinaGuide app · free
+Plan the rest of your trip in the app
+180+ city guides across 24 cities, English menus and Panda AI — 10 chats free.
+App Store Google Play
+
+Scan with your phone
+
+The 2 China Visa Options for Americans
+Before you start filling out forms, pick the right path. There are only 2 that matter for US citizens.
+Option 1: The 10-Year L Tourist Visa ($140)
+This is what "china visa for us citizens" usually means. One application, ten years of unlimited visits. Stay up to 60 days each time.
+Cost : $140 (¥1,015) at consulate, or ~$217 (¥1,575) through CVASC
+
+Validity : 10 years from issue date
+
+Stay per visit : Usually 60 days (sometimes 30 or 90)
+
+Entries : Unlimited during 10-year validity
+
+Good for : Round-trip US–China travel, repeat visits, trips longer than 10 days
+
+Most first-time US applicants for a china tourist visa get the 10-year by default. You don't check a "give me 10 years" box. The consulate decides based on your profile. More on improving your odds below.
+Option 2: 240-Hour Visa-Free Transit (Free)
+If you're flying from the US to a third country and want to stop in mainland China for up to 10 days, you qualify for visa-free transit at 65 ports. Key rule: you need an onward ticket to a third country or region (Hong Kong, Macau, Japan, etc.), not a round-trip back to the US. The rest of this guide focuses on Option 1: the actual china visa application, which is where most of the confusion lives.
+China Visa Requirements: The Complete Document Checklist
+China simplified the L visa document list on January 1, 2024. The old requirements (flight bookings, hotel reservations, invitation letters) are gone for tourist applications. Here's the real 2026 list.
+Required document
+
+Details
+
+Common mistake
+
+Valid US passport
+
+6+ months validity, 2 blank visa pages
+
+Expires within 6 months
+
+COVA confirmation page
+
+Printed from cova.mfa.gov.cn
+
+Not hand-signed
+
+Passport-style photo
+
+48mm x 33mm, white background, within 6 months
+
+US passport size (wrong)
+
+Visa Application Statement
+
+Generated by COVA, wet-ink signature
+
+Typed signature rejected
+
+Proof of US residence
+
+Driver's license OR utility bill (3 mo) OR bank statement
+
+Expired ID
+
+Old Chinese visa (if any)
+
+Photocopy of previous visa page
+
+Forgetting
+
+$140 payment
+
+Visa, Mastercard, money order, cashier's check
+
+Cash/checks rejected
+
+A few notes on these documents:
+The photo size is the #1 trip-up. US passport photos are 2x2 inches (51x51mm). China wants 48x33mm: rectangular, not square. About 20% of applications get bounced for this. Walgreens and CVS offer a "Chinese visa photo" option specifically. Ask for it by name. Costs $15-20.
+"Proof of residence" determines which consulate. You apply at the consulate covering your state, not a random one. If you live in Oakland and walk into LA, they'll turn you away because you're in San Francisco's jurisdiction. Check the official jurisdiction map .
+The Visa Application Statement needs a wet-ink signature. COVA generates it as a PDF. Print it. Sign it with a pen. Digital signatures get rejected.
+Deeper dives: the photo requirements guide covers lighting and cropping, and national ID number on the form explains the field that confuses everyone.
+Step 1: Fill Out the COVA Online Application
+The COVA system (China Online Visa Application) launched September 30, 2025 at cova.mfa.gov.cn . It replaced the old paper forms. You must use it. No paper-only option anymore.
+Budget 60-90 minutes the first time.
+1. Register an account. Email + password. They send a verification code.
+2. Start a new application. Pick "Ordinary Visa" → "L (Tourism)" → Multiple Entry, 10 years. Worst case they downgrade you. They'll never upgrade a single-entry request.
+3. Personal info. Full name exactly as on passport, punctuation included. DOB, nationality, gender, marital status.
+4. Passport details. Number, issue date, expiry, issuing city. Double-check every digit.
+5. Travel details. Purpose = tourism. Cities planned. Arrival date. Length of stay. You don't need actual flight bookings. "Beijing, Shanghai, 14 days starting June 2026" is fine.
+6. Employer and contact. Current employer name, phone, address. Self-employed? Write "Self-employed" and your business name. Retired? Write "Retired" and leave employer fields as N/A.
+7. Contacts. One US-based emergency contact (not traveling with you). One contact in China: your hotel address works. No reservation required.
+8. Prior travel history. Last 5 years of international trips. Be honest. They cross-check against passport stamps.
+9. Upload documents. Passport bio page, photo (48x33mm JPG), proof of residence. Each under 1MB.
+10. Submit. You'll get a confirmation code. Save it.
+11. Wait for preliminary review. Status moves from "Submitted" to "Under Review" to "Passport to be Submitted." Takes 3-5 business days . Email notification when done.
+12. Print the confirmation page. Log back in, download the Visa Application Statement PDF, print on plain paper, sign by hand. This is your ticket to in-person submission.
+Heads up: COVA times out after 30 minutes of inactivity and loses unsaved progress. Save drafts every few sections.
+Step 2: Book the In-Person Submission (CVASC or Consulate)
+Once COVA status says "Passport to be Submitted," you have 30 days to bring your physical passport to a Chinese Visa Application Service Center (CVASC) or directly to a Chinese consulate.
+CVASC vs direct consulate: which to pick?
+Factor
+
+Direct consulate
+
+CVASC
+
+Total cost
+
+$140
+
+~$252 (+$50-65 service fee)
+
+Appointment
+
+Usually walk-in
+
+Must book online
+
+Cities
+
+5 (DC, NYC, LA, SF, Chicago)
+
+8+ (adds Houston, Seattle, others)
+
+Office hours
+
+Mornings only, 9:30-14:30
+
+Full business days
+
+Mail-back option
+
+No — pick up in person
+
+Yes (+$8-15)
+
+Best for
+
+Locals near a consulate
+
+Out-of-state applicants
+
+Near one of the 5 consulates? Go direct and save around $110. Otherwise, CVASC works.
+Current US consular jurisdictions:
+DC Embassy : DC, MD, VA, WV, NC, SC, KY, TN, DE, AL, AR, FL, GA, LA, MS, OK, TX, PR
+
+NYC Consulate : NY, NJ, CT, PA, ME, MA, NH, RI, VT, OH
+
+Chicago Consulate : IL, IN, IA, KS, MI, MN, MO, WI, CO
+
+LA Consulate : Southern CA, AZ, NM, UT, HI
+
+SF Consulate : Northern CA, NV, OR, WA, AK, ID, MT, WY
+
+At the appointment, bring: your physical passport, printed COVA confirmation (signed), Visa Application Statement (hand-signed), original passport photo, proof of residence, and any old Chinese visa photocopy. You pay when you pick up, not at submission.
+Our processing time deep dive breaks down exactly how long each step takes.
+Step 3: China Visa Application Fees and Payment
+$140 flat. That's the consular fee for US citizens: same price for single entry, double entry, or the 10-year multiple entry. No upgrade fee.
+The $140 is actually a reduced rate. Standard is $185. China has been extending the $140 rate since 2023, and it's currently valid through December 31, 2026 .
+Total cost by application method:
+Method
+
+Consular fee
+
+Service fee
+
+Mail-back
+
+Total
+
+Direct at consulate
+
+$140 (¥1,015)
+
+—
+
+—
+
+$140 (¥1,015)
+
+CVASC standard
+
+$140
+
+$65
+
+$12
+
+~$217 (¥1,575)
+
+CVASC express
+
+$140 + $25
+
+$65
+
+$12
+
+~$242 (¥1,755)
+
+Visa agency
+
+$140
+
+$100-250
+
+Often included
+
+$300-400+ (¥2,180-2,900+)
+
+Accepted payment : Visa, Mastercard, money order, or cashier's check at the consulate. CVASC also takes Discover and Amex. No cash. No personal checks.
+If your application is refused, you don't get the $140 back. Which is why the next section matters.
+Step 4: Processing Time and Tracking
+Standard processing: 4 business days after in-person submission. Express: 2-3 business days for $25 extra.
+But that's not the full picture. Realistic timeline from the day you start:
+Stage
+
+Typical duration
+
+Notes
+
+Complete COVA online form
+
+1-2 hours
+
+Budget 90 minutes for first-timers
+
+COVA preliminary review
+
+3-5 business days
+
+Email notification when done
+
+Book CVASC appointment
+
+Same day or next
+
+Walk-in at some consulates
+
+Travel to consulate/CVASC
+
+1 day
+
+Must submit in person
+
+Consular processing (standard)
+
+4 business days
+
+From submission date
+
+Consular processing (express)
+
+2-3 business days
+
++$25 fee
+
+Pick up passport
+
+Same day after notification
+
+Or mail-back +$12
+
+Total realistic
+
+1-3 weeks
+
+Apply 4-6 weeks before you fly
+
+My advice: apply the day you book your flight. Not the week before departure. The consulate processes in the order received.
+Under the gun? Some CVASC locations offer "Level 1 Express" at 24-48 hours for roughly $364 total. Standard cases only. Not available at the DC embassy directly.
+Common Rejection Reasons (And How to Avoid Each)
+Approval rate for complete US applications runs around 96% . But that 4% rejection stings: you lose $140 and have to reapply. Ranked by frequency:
+1. Inconsistent or incomplete forms (35%). Name punctuation must match your passport exactly. "JOHN R SMITH" on the passport means "JOHN R SMITH" on the form, not "John Robert Smith." Every field filled. "N/A" is better than blank.
+2. Wrong photo dimensions (20%). Must be exactly 48mm x 33mm, white background, taken within 6 months. Walgreens, CVS, and FedEx offer "China visa photo" as a specific service. Ask by name.
+3. Mentioning sensitive regions without permits (15%). Tibet, Xinjiang, and some border areas need special permits beyond a tourist visa. Don't list Lhasa as a destination unless you've arranged a permit through a licensed Tibet agency.
+4. Criminal record or prior deportation (12%). Be honest. China cross-checks with Interpol. A minor old offense usually doesn't block you. An undisclosed one will.
+5. Prior visa violations (10%). If you've overstayed before (even by a day), expect scrutiny. The fine is ¥500/day ($70/day) up to ¥10,000 ($1,400). Pay it before reapplying.
+6. Sensitive profession (8%). Journalists, active military, and government officials face extra review. Don't lie about employment. An active CNN correspondent needs a J visa, not L.
+7. Missing handwritten signatures. Every page needing a signature needs a pen signature. Digital rejected.
+If you get rejected, the consulate usually tells you why. Fix the issue, file a fresh COVA, resubmit. You pay another $140. The first fee is gone.
+The 10-Year Multi-Entry Visa: How Americans Get It
+The question I get constantly: "How do I make sure I get the 10-year one?"
+You don't explicitly request it. You check "multiple entries, 10 years" on COVA. The consulate decides based on your profile. Most US citizens with clean applications get the full 10-year multi-entry by default, even first-timers. The US-China reciprocity agreement defaults first-time tourist applicants from both countries to the 10-year version.
+Improves your odds: clean passport (no prior violations), stable employment (2+ years), previous international travel history, US driver's license, clear tourism purpose.
+May downgrade you: first international trip ever, recent criminal record, unexplained unemployment, vague destination answers, passport expiring in under 18 months (visa will match passport validity).
+Important : When your passport expires, the 10-year visa is NOT automatically transferred. Carry both passports together to use remaining validity. Or reapply in the new passport, which most people do.
+What to Check on Your Visa Sticker the Day You Get It Back
+When you pick up your passport, don't shove it in your pocket and walk out. Open it, find the visa page, and check these details before leaving the consulate . Errors get fixed free at pickup. After you leave, you pay for a new application.
+Check in this order:
+Your name (exactly as on passport, punctuation included)
+
+Passport number (digit for digit)
+
+Visa type (should say "L" for tourist)
+
+Number of entries ("M" for multiple)
+
+Validity period (10 years from issue date, capped by passport expiry)
+
+Duration of each stay (usually 60 days)
+
+Issue date and place
+
+Visa sticker number (record separately)
+
+Find an error? Walk back to the counter immediately. They'll fix it, usually same day.
+One more step before you leave: photograph the visa page with your phone right there at the consulate . If anything goes wrong with your passport on the trip, you have a record.
+FAQ: China Visa Application for US Citizens
+Do I need a visa for China from US in 2026?
+Yes. US citizens are not on China's unilateral visa-free list. You need a full Chinese visa (almost always the 10-year L tourist visa, $140) for any round-trip visit from the US. The one exception is 240-hour visa-free transit: if you're stopping in mainland China for up to 10 days while flying to a third country or region, you can skip the visa. Everything else runs through a china visa application on COVA.
+How much does a China visa cost for US citizens?
+$140 (¥1,015) flat at the consulate for any visa type: single, double, or 10-year multi-entry. Through CVASC, total runs around $217-252 with service fees. Express processing adds $25. The $140 rate is a reduced fee valid through December 31, 2026.
+How long does a chinese visa application take?
+Realistic total: 1-3 weeks from starting COVA to picking up your visa. Breakdown: 3-5 days for online preliminary review, 4 business days standard consular processing (2-3 for express), plus appointment and travel time. Apply at least 4 weeks before you fly.
+Can I apply for a China visa by mail?
+Not directly at a consulate. You must submit in person. Some CVASC locations accept mail-in through authorized services, adding $15-25 and longer turnaround.
+Do I need fingerprints for an L tourist visa?
+No. China waived fingerprinting for L, M, Q2, X2, and G visas through December 31, 2026 . Long-term visas (Z, X1, Q1) still require them.
+Can I work on a China tourist visa?
+No. L visas are strictly for tourism and family visits. Working on a tourist visa is a deportable offense. If you need to work in China, you need a Z work visa (sponsored by a Chinese employer). Totally different process.
+Which travelers get 30-day visa-free entry to China?
+Citizens of 40+ countries currently on China's unilateral visa-free list (most of Europe, Australia, New Zealand, Japan, South Korea, several Southeast Asian and Latin American countries) can enter for up to 30 days without a visa. Canada was added on February 17, 2026. US passport holders are not on this list. Americans must use either the 10-year L visa or the 240-hour transit option instead.
+Does a 10-year China visa mean I can live in China for 10 years?
+No. The 10 years is your window to enter. Each individual stay is limited to around 60 days. Overstay costs ¥500/day ($70/day). For longer stays, you need a different visa class.
+What if my passport expires before the 10 years are up?
+Your China visa stays valid in the expired passport. Carry both passports together at the border: old one with the visa, new one for your current identity. Many people just reapply in the new passport for convenience.
+
+Related guides:
+Can Americans travel to China visa-free in 2026? — the 240-hour transit deep dive
+
+China visa cost: the $140 10-year visa guide — full fee breakdown
+
+How long does it take to get a Chinese visa? — processing timeline
+
+National ID number for China visa: what to fill in — the field that confuses everyone
+
+China visa photo requirements — 48x33mm spec with examples
+
+Sources: US Embassy visa procedures , US State Department China travel page , COVA online system .
+
+Share this article
+
+Tags
+# visa # us-citizens # cova # cvasc # 10-year-visa
+
+Travelers also asked
+View all →
+Which reputable visa agencies are recommended for processing China visas through the San Francisco Consulate? →
+What happens if I choose the wrong Chinese consulate for my visa application? →
+For an Indian applicant using Mumbai VFS, what documents and timeline should I expect for a China tourist visa? →
+Is visa-free entry to China active for UK citizens →
+
+Related articles
+View all →
+April 14, 2026 · How-To Guide
+China Visa Cost: The $140 10-Year Visa Guide (2026)
+
+February 16, 2026 · Travel Tip
+Can Americans Enter China Without a Visa? What Happens When You Land
+
+April 16, 2026 · How-To Guide
+How Long Does It Take to Get a Chinese Visa? (2026)
+
+Take MyChinaGuide with you Offline city guides, food picks and Panda AI, all in one app.
+
+App Store
+
+Google Play
+Free on iPhone and Android
+
+MyChinaGuide · Free English menus & guides
+
+App Store
+
+Google Play
+
+MyChinaGuide
+
+City guides, menu translation, and an AI built for China trips — made for first-timers, in one app.
+
+[email protected]
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+Travel Tools
+Traveler Q&A
+
+Info
+About Us
+China Visa Checker
+Before China Checklist
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+App Store Google Play Scan to get it
+on your phone
+
+© 2026 MyChinaGuide. All Rights Reserved.
+
+Privacy Policy Terms of Service Refund Policy Delete Account
+Privacy choices
+
+Get MyChinaGuide
+Free to start: Beijing, Shanghai, and 10 AI credits. No card needed.
+Download on the App Store Get it on Google Play
+Or scan with your phone camera
+
+185 city guides 1,025 restaurants 24 cities
+
+We use analytics and session-recording tools to understand how the site is used.
+Essential, anonymous usage counts stay on either way.
+Privacy policy
+button]:flex-1 sm:[&>button]:flex-none">
+Necessary only
+
+Accept all

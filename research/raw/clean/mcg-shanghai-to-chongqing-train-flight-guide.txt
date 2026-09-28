@@ -1,0 +1,321 @@
+# source: https://mychina.guide/blog/shanghai-to-chongqing-train-flight-guide
+# final: https://mychina.guide/blog/shanghai-to-chongqing-train-flight-guide
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:30.063Z
+# bytes(raw): 76014
+# bytes(text): 16774
+# title: Shanghai to Chongqing: Train vs Flight vs Cruise (2026)
+
+Shanghai to Chongqing: Train vs Flight vs Cruise (2026)
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · January 13, 2026 · 11 min read · 2,255 views
+Shanghai to Chongqing: Train, Flight & Yangtze Cruise Guide (2026)
+
+Michael Chen · Travel Writer, China Specialist · Updated September 27, 2026
+
+On this page 9 sections 01 What This Guide Covers
+02 The Quick Comparison
+03 Option 1: High-Speed Rail Direct (G-Trains)
+04 Option 2: Flight
+05 Option 3: Yangtze River Cruise (The Slow Way)
+06 Option 4: Overnight Bus (Don't)
+07 Combined Itineraries: Stop in Wuhan or Yichang
+08 Which Option Should You Pick?
+09 FAQ
+
+Shanghai and Chongqing sit at opposite ends of the Yangtze River, one at the mouth where the river meets the East China Sea, the other a mountainous megacity 1,450km upstream. Moving between them is one of the signature Chinese long-distance routes, and in 2026 you have three real options that differ by 9 hours, ¥1,000, and several orders of magnitude in experience. This guide compares all three with real current prices so you can pick without second-guessing.
+The short version: fly if you have less than 5 days of vacation left, take the direct HSR if you want to see the country pass by without losing a full travel day, and take the Yangtze cruise if you have a week and want the trip itself to be the destination. None of these options is wrong, they just answer different questions.
+What This Guide Covers
+High-speed rail direct trains (G-series) with 2026 prices and station details
+
+Flight options, airlines, airports, and realistic booking windows
+
+Yangtze cruise logistics starting from Yichang
+
+Overnight bus option and why it's a bad idea
+
+Total door-to-door time for each option including check-in
+
+Which option fits different trip styles
+
+Combined itineraries that stop in Wuhan or Yichang
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+The Quick Comparison
+Option
+
+Time
+
+Cost (CNY)
+
+Experience
+
+Best For
+
+Flight
+
+2.5h flight + 2h buffer = 4.5h door-to-door
+
+¥400-1,200
+
+Efficient, boring
+
+Tight schedules, business
+
+G-train direct
+
+11h-11.5h
+
+¥840-1,330
+
+Scenic, comfortable
+
+Mid-budget, scenic lovers
+
+G-train via Wuhan
+
+9-10h including transfer
+
+¥750-1,100
+
+Good, with Wuhan food stop
+
+Food tourists
+
+Yangtze cruise
+
+4-5 days (fly SHA to YIH first)
+
+¥1,800-8,000+
+
+Unique, slow
+
+Travelers with a week+
+
+Overnight bus
+
+26-30h
+
+¥300-450
+
+Painful
+
+No one
+
+The direct high-speed train is a relatively recent addition. Before 2022, nothing faster than a D-train existed on this route, and most travelers either flew or transferred in Wuhan. The G2845 and G2849 now run daily direct service and make the train competitive for anyone who values scenery over speed.
+Option 1: High-Speed Rail Direct (G-Trains)
+The G2845 / G2849 Direct Service
+Two daily G-series trains run direct from Shanghai Hongqiao (上海虹桥) to Chongqing North (重庆北) without transfer:
+G2845 : departs Shanghai Hongqiao ~07:17, arrives Chongqing North ~18:23 (~11h 06min)
+
+G2849 : departs Shanghai Hongqiao ~11:00, arrives Chongqing North ~22:15 (~11h 15min)
+
+Schedules shift slightly each season. Confirm on the 12306 app or Trip.com 7-14 days before travel.
+Pricing (2026)
+Class
+
+Price (CNY)
+
+Notes
+
+Second class (二等座)
+
+¥840
+
+Comfortable, 5-across seating
+
+First class (一等座)
+
+¥1,330
+
+Wider seats, quieter, 4-across
+
+Business class (商务座)
+
+¥2,660
+
+Lie-flat, meals included, 3-across
+
+Second class is the pragmatic choice. The seat is large enough to sit for 11 hours comfortably, with a pull-out tray, 220V outlet, and USB charging. Each carriage has a water dispenser and a toilet. First class adds legroom and a slightly quieter carriage, worth the upgrade only if you plan to work the whole ride.
+Station Logistics
+Shanghai Hongqiao (上海虹桥站) is a massive HSR hub in western Shanghai, connected to Hongqiao International Airport and Metro Line 2, 10, and 17. Arrive 60 minutes before departure for domestic HSR, 90 minutes during Spring Festival or Golden Week. Security and ID check are fast with a foreign passport, lines are separate from ID card lines.
+Chongqing North (重庆北站) is connected to Chongqing Metro Lines 3, 4, 10, and has two sides (North and South squares). The station is confusing even for locals, allow 15 extra minutes to find your platform. From Chongqing North, central Chongqing (Jiefangbei / Liberation Monument area) is 30-45 minutes by taxi. By metro it takes one change: Line 3 from the South Square to Lianglukou (两路口), then Line 1 to Jiaochangkou (较场口) in the Jiefangbei area. Our Chengdu to Chongqing train guide lists the metro lines at each Chongqing station.
+Onboard Experience
+The route runs Shanghai → Nanjing → Hefei → Wuhan → Yichang → Chongqing. The Yangtze River appears and disappears through central China, and the last few hours into Chongqing cross mountainous terrain with long tunnels broken by dramatic valleys. You can see the Three Gorges Dam region in the distance from the north window between Yichang and Chongqing.
+Bring food or buy it at the station. Onboard dining cars exist on G-trains but food is mediocre and expensive (¥45-80 per meal). Pack your own bento from a Shanghai Family Mart (¥25-40) before boarding. Water is free at the dispensers at each carriage end.
+Booking the Ticket
+Book on 12306 (official) or Trip.com (foreign-friendly English interface). 12306 sells tickets at face value, Trip.com adds a ¥15-30 service fee. Both accept international cards. Tickets go on sale exactly 15 days before departure at 06:00 Beijing time, and first/second class can sell out for weekday departures during peak season within 2-3 days.
+You need your passport number to book. The passport details on the ticket must match the document you present at the station, so double-check before paying.
+Option 2: Flight
+Airlines and Frequency
+Shanghai to Chongqing is a high-frequency route. You have 20+ daily flights across three airlines:
+China Eastern (MU) : 10+ daily, most from Shanghai Hongqiao (SHA) to Chongqing Jiangbei (CKG)
+
+China Southern (CZ) : 5-6 daily, mixed SHA and PVG to CKG
+
+Juneyao (HO) : 3-4 daily, mostly PVG to CKG
+
+Xiamen Airlines (MF) : 1-2 daily, PVG to CKG
+
+Flight time is consistently 2 hours 45 minutes to 3 hours. Most flights depart SHA (Hongqiao) which is closer to central Shanghai than PVG (Pudong).
+Pricing (2026)
+Base economy fares run ¥400-700 in low season (February, September mid-month) and ¥700-1,200 in peak season (Golden Week, Spring Festival, July-August). Book 3-6 weeks out for best prices. Last-minute fares can spike to ¥1,500-2,200.
+Business class runs ¥1,800-3,200 one-way. Unless you have status or a corporate expense, economy is the right choice on this short route.
+Airport Logistics
+Shanghai Hongqiao Airport (SHA) is 15km from downtown, 30-40 minutes by taxi (¥80-120) or direct by Metro Line 2/10 from most central hotels. Budget 2 hours before departure. Terminal 2 handles most domestic flights.
+Shanghai Pudong Airport (PVG) is 45km from downtown, 50-80 minutes by taxi (¥180-250), or 8 minutes by Maglev from Longyang Road (¥50 + Metro transfer). Budget 2.5 hours before departure from PVG due to the longer transit.
+Chongqing Jiangbei Airport (CKG) is 20km from central Chongqing, 30-40 minutes by taxi (¥50-80), or 45-60 minutes by Metro Line 10 or airport shuttle (¥6-15). Terminal 3 is new and handles most major carrier flights.
+Total Door-to-Door Time
+From a central Shanghai hotel to a central Chongqing hotel including all transit and buffer time:
+SHA route : 45min to airport + 2h buffer + 2.75h flight + 40min from airport = ~6.2 hours
+
+PVG route : 70min to airport + 2.5h buffer + 2.75h flight + 40min from airport = ~7 hours
+
+The direct G-train at 11h is only about 4 hours slower than the PVG flight, and 5 hours slower than the SHA flight. For a single-day trip, flights win clearly. For a trip where you want to work or read, the train is comparable once you account for airport time.
+Option 3: Yangtze River Cruise (The Slow Way)
+The Yangtze cruise is not a direct Shanghai-to-Chongqing transit option. The standard cruises run between Yichang and Chongqing (in either direction), and you need to get to the starting port separately. From Shanghai, that means flying to Yichang Sanxia Airport (YIH) first.
+How the Cruise Trip Works
+Fly Shanghai to Yichang (YIH): 2 hours, ¥400-900. Flights on China Eastern, Hainan Airlines, and Shenzhen Airlines. Several daily.
+
+Board the cruise in Yichang : most cruises depart from Yichang and sail upstream to Chongqing over 4-5 days
+
+Disembark in Chongqing : the cruise drops you at the Chaotianmen port in central Chongqing
+
+Cruise Types and Pricing (2026)
+Cruise Level
+
+Duration
+
+Price per Person (CNY)
+
+Brands
+
+Standard domestic
+
+4 days upstream
+
+¥1,800-2,800
+
+Chang Jiang, Yangtze Gold
+
+International mid-tier
+
+5 days upstream
+
+¥4,000-6,500
+
+Century Cruises, Yangtze Explorer
+
+Luxury international
+
+5-6 days upstream
+
+¥8,000-18,000+
+
+Victoria Cruises, Sanctuary Yangzi Explorer
+
+Standard cruises are almost entirely Chinese guests, with limited English. Mid-tier cruises like Century include English-speaking guides, Western breakfast options, and multilingual ship announcements. Luxury cruises cater almost entirely to international passengers and include all excursions, meals, and wine.
+What You Actually See
+The three gorges themselves (Qutang, Wu, and Xiling) are the centerpiece. Key stops include:
+Three Gorges Dam at Yichang, massive scale, technically impressive
+
+Shennong Stream , a smaller tributary with local sampan rides through green water
+
+Shibaozhai Pagoda , a 12-story wooden temple built into a cliff
+
+Fengdu Ghost City , a Taoist-themed temple complex
+
+Optional excursions to White Emperor City, Three Little Gorges, or local villages
+
+The ship moves mostly during the day. Evenings include karaoke, tea ceremony demos, cultural shows, and deck observation time. Upstream cruises are longer (4-5 days) than downstream (3 days) because the boat is fighting the current.
+Is the Cruise Worth It?
+If you have a week to spare and you want the trip to be the destination, yes. It's the only way to see the Three Gorges at water level, and the mid-tier international cruises are a genuinely enjoyable slow-travel experience. If you're on a tight 14-day China itinerary, skip it, and save the cruise for a dedicated Yangtze trip.
+Option 4: Overnight Bus (Don't)
+Shanghai to Chongqing by bus exists, takes 26-30 hours, costs ¥300-450, and involves sleeper bunks less than 180cm long. Buses often leave from secondary Shanghai bus stations (Shanghai South or Shanghai Long-Distance), go through Nanjing, Hefei, Wuhan, and the Sichuan basin. There are frequent rest stops, unpredictable delays, and no reliable food service. Modern Chinese travelers almost universally avoid this route.
+The only scenario where the bus makes sense: you're severely budget-constrained, you've missed the train, and the flight is sold out. Even then, book a train via Wuhan with a transfer instead. Nearly always cheaper in total cost of discomfort.
+Combined Itineraries: Stop in Wuhan or Yichang
+If you have 2-3 extra days, consider breaking the trip into a multi-city route:
+Shanghai → Wuhan (2 days) → Chongqing
+Shanghai to Wuhan by HSR is 4-5 hours at ¥430. Spend two nights in Wuhan eating hot dry noodles (热干面) and exploring the Yangtze bridges, then continue to Chongqing by HSR (6.5h, ¥380). Total ticket cost ~¥810, slightly less than direct G-train, with a real Wuhan food detour.
+Shanghai → Yichang → Cruise → Chongqing
+Fly Shanghai to Yichang (¥500), do the 2-day Yichang / Three Gorges Dam visit on land, then join a shorter 3-day downstream cruise, or the full 4-day upstream cruise to Chongqing. This turns the route into a signature Yangtze experience without adding more than 6-7 days total.
+Which Option Should You Pick?
+Under 5 days remaining in your China trip : fly. Door-to-door under 7 hours.
+
+5-10 days remaining, you love trains : direct G-train. You lose a day but gain the scenic route.
+
+10+ days remaining, you want a unique experience : fly to Yichang and take the Yangtze cruise.
+
+Moving between work meetings with flexible schedule : fly SHA to CKG early morning, your day is intact.
+
+Traveling with elderly parents or small kids : direct G-train. Less walking than airports, bathrooms always available, no security theater.
+
+Planning your full Shanghai trip? Our Shanghai travel guide covers neighborhoods, food, and a day-by-day itinerary.
+FAQ
+How long is the Shanghai to Chongqing high-speed train?
+The direct G2845 and G2849 trains run about 11 hours to 11 hours 15 minutes, covering approximately 1,450km. A route with a transfer in Wuhan can be faster (9-10h total) but requires changing trains and stations. Check real-time schedules on 12306 or Trip.com 7-14 days before your departure.
+What does a Shanghai to Chongqing flight cost in 2026?
+Economy fares run ¥400-700 in low season, ¥700-1,200 in peak season, and ¥1,500-2,200 for last-minute bookings. The route has 20+ daily flights across China Eastern, China Southern, Juneyao, and Xiamen Airlines. Book 3-6 weeks out for the best prices on Trip.com or directly with the airline.
+Is the Yangtze cruise a practical way to get from Shanghai to Chongqing?
+Only if you have 6-7 days and view the journey as the trip itself. You'll need to fly from Shanghai to Yichang (¥400-900, 2h) first, then board the cruise for 4-5 days upstream to Chongqing. Cruise prices range from ¥1,800 for standard domestic to ¥18,000+ for luxury international.
+Can I use foreign credit cards to book Shanghai to Chongqing travel?
+Yes. Both 12306 (trains) and Trip.com accept international Visa and Mastercard. Chinese airline websites accept foreign cards but often fail on foreign bank 3-D Secure verification. Trip.com is the most reliable English-language booking platform for foreign travelers in 2026.
+Is Shanghai Hongqiao or Pudong better for the flight to Chongqing?
+Hongqiao (SHA) is the better choice if available. It's closer to central Shanghai (30-40 min vs. 50-80 min), most China Eastern flights depart from there, and terminal 2 is compact and efficient. Pudong (PVG) is used mostly for international flights plus a few Chongqing services on Juneyao and Xiamen Airlines.
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Tags
+# shanghai # chongqing # china-transport # yangtze-cruise # high-speed-rail
+
+View all →
+If Zhangjiajie to Shanghai flights are awkward, should I route through Changsha? →
+Can I still get Chengdu or Chongqing to Shanghai train tickets around Golden Week? →
+What is the recommended strategy for booking domestic flights and optimizing a long-term China itinerary? →
+What is the best transportation route from Wangxian Valley to Suzhou? →
+
+View all →
+April 1, 2026 · How-To Guide
+Shanghai to Wuzhen to Hangzhou Transport Guide 2026
+
+February 4, 2026 · Itinerary
+Planning a China Itinerary: One City Per Week, Minus One
+
+February 25, 2026 · How-To Guide
+Wangxian Valley to Suzhou: Train Guide and Route Tips
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all

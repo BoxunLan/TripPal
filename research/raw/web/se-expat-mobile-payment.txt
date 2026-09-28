@@ -1,0 +1,9 @@
+# source: https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=mobile%20payment&site=expatriates&filter=withbody&pagesize=100
+# final: https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=mobile%20payment&site=expatriates&filter=withbody&pagesize=100
+# status: 200
+# contentType: application/json; charset=utf-8
+# fetchedAt: 2026-09-28T17:22:42.772Z
+# bytes(raw): 1382
+# bytes(text): 1382
+# title: https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=votes&q=mobile%20payment&site=expatriates&filter=withbody&pagesize=100
+{"items":[{"tags":["usa","student-visa","russia"],"owner":{"account_id":5287653,"reputation":113,"user_id":10194,"user_type":"registered","profile_image":"https://www.gravatar.com/avatar/cbb81063f5b67ee63b903a9c8b277964?s=256&d=identicon&r=PG","display_name":"theblindprophet","link":"https://expatriates.stackexchange.com/users/10194/theblindprophet"},"is_answered":true,"view_count":168,"accepted_answer_id":9034,"answer_count":1,"score":1,"last_activity_date":1471965321,"creation_date":1471890844,"question_id":9033,"content_license":"CC BY-SA 3.0","link":"https://expatriates.stackexchange.com/questions/9033/receive-payment-outside-university-when-on-f1-visa","title":"Receive payment outside university when on F1 visa?","body":"<p>I have a friend from Russia who is working on his PhD. He has a US student visa (F-1).</p>\n\n<p>We have received a job to create a mobile application for our local government in which we would both receive a fairly large payment. He has informed me that his visa restricts him to only working for the university at a maximum of 20 hours per week.</p>\n\n<p><strong>Is there anyway he could receive payment? Small loop hole?</strong></p>\n\n<p><em>My plan was to create my own business and allow them to 1099 me. If he could be paid through this method that would be ideal.</em></p>\n"}],"has_more":false,"quota_max":300,"quota_remaining":279}

@@ -1,0 +1,236 @@
+# source: https://mychina.guide/blog/beijing-to-shanghai-train-guide-foreigners
+# final: https://mychina.guide/blog/beijing-to-shanghai-train-guide-foreigners
+# status: 200
+# contentType: text/html
+# fetchedAt: 2026-09-28T17:23:22.539Z
+# bytes(raw): 77278
+# bytes(text): 20755
+# title: Beijing to Shanghai by Train: Complete Guide for Foreigners
+
+Beijing to Shanghai by Train: Complete Guide for Foreigners
+
+Get the app
+
+Sign in
+
+Get the app
+
+Sign in
+
+Back to blog How-To Guide · April 7, 2026 · 15 min read · 1,469 views
+Beijing to Shanghai by Train: Complete Guide for Foreigners
+
+M MyChinaGuide Editorial Team · Travel Resource · Updated September 27, 2026
+
+On this page 8 sections 01 Which Stations to Use
+02 Train Types and Schedule
+03 Ticket Prices and Booking
+04 Onboard Experience
+05 Practical Tips for This Route
+06 Getting to Your Hotel After Arrival
+07 How far is it, exactly
+08 Train or flight
+
+The Beijing-Shanghai high-speed railway is China's flagship rail route, the equivalent of flying New York to Chicago, except you do it at 350 km/h with a smooth cup of tea on your fold-down tray. Known as the Jinghu line (京沪高铁), this 1,318-kilometer corridor connects China's political capital with its commercial powerhouse in roughly four and a half hours. Over 100 million passengers ride it every year, making it the single busiest high-speed rail line on the planet.
+For tourists, this route is a revelation. Flying between Beijing and Shanghai takes about two hours in the air, but factor in the taxi to the airport, the two-hour early arrival, security, boarding, taxiing, landing, baggage claim, and another taxi into the city. Your "two-hour flight" quietly becomes a five-to-six-hour ordeal. The train, by contrast, runs from Beijing South Station in the city center to Shanghai Hongqiao Station on the city's west side, both directly connected to metro systems. You walk in, scan your passport, sit down, and four hours later you're on the Shanghai subway heading to your hotel. No baggage restrictions, no turbulence, no removing your shoes. For any traveler spending time in both cities, the train isn't just competitive with flying. It's better.
+Which Stations to Use
+Beijing has multiple rail stations, but for the Shanghai high-speed service you'll almost certainly depart from Beijing South Station (北京南站). This is a massive modern terminal built specifically for high-speed trains. It sits on Metro Line 4 and Line 14, making it easy to reach from most parts of the city. From Tiananmen or Wangfujing, Line 4 gets you there in about 20 minutes. A taxi from the hutong neighborhoods near the Drum Tower runs about 30-50 yuan and takes 25-35 minutes depending on traffic. Do not confuse Beijing South with Beijing Station (北京站) or Beijing West Station (北京西站), as those serve different routes entirely. Double-check your ticket.
+On the Shanghai end, most G-trains arrive at Shanghai Hongqiao Station (上海虹桥站), a gleaming transport hub in the city's west that connects to Hongqiao International Airport Terminal 2 via an indoor walkway. Hongqiao Station sits on Metro Line 2 (which runs straight through the city center to Nanjing Road, the Bund area, and Pudong), Line 10 (useful for the Former French Concession), and Line 17 (heading west to Zhujiajiao water town). For most tourists, Hongqiao is the better arrival point. A small number of slower trains terminate at Shanghai Station (上海站) near the Suzhou Creek area, which is less convenient but closer to some northern hotels.
+Every Chinese train station has airport-style security at the entrance. You put your bags through an X-ray machine and walk through a metal detector. At Beijing South, you also need to show your passport at a dedicated ID-check point before the security machines. During peak travel periods, the queue for this entrance check alone can take 15-20 minutes. A separate (often shorter) line for passport holders exists at some stations. Look for signs reading "外国护照" or ask a staff member.
+
+Trains without the guesswork
+Look up routes and times in the train tool, then ask Panda AI which station exit to take. 10 chats free.
+
+Train Types and Schedule
+Almost all Beijing-Shanghai services are G-trains , China's fastest category. Most use the **Fuxing (复兴号) CR400** series trains , sleek white-and-gold or white-and-red bullet trains with a maximum operating speed of 350 km/h. You feel a gentle push into your seat as the train accelerates out of the station, and within minutes the speed indicator above the door will read 348 or 350.
+The fastest services on the line are the G1 and G2 "Super Express" trains , which complete the journey in just 4 hours and 12 minutes with only one or two intermediate stops (usually Nanjing South). Standard G-trains make more stops, including Jinan West, Xuzhou East, Nanjing South, and Changzhou North, bringing the total to between 4 hours 30 minutes and 5 hours 30 minutes depending on the stopping pattern.
+A handful of D-trains also run this corridor. These are older, slower high-speed trains capped at 250 km/h, and the journey takes 6-7 hours. They're cheaper by about 20-30%, but unless you're on a very tight budget, the time difference isn't worth the savings.
+Departures from Beijing South start around 6:00 AM , with the last train leaving at roughly 7:30 PM . Trains run every 5-15 minutes during peak morning hours (7:00-10:00 AM), thin out slightly at midday, then pick up again in the afternoon. On any given day, there are 50+ departures to choose from. We recommend the 8:00-10:00 AM departures for tourists. You'll arrive in Shanghai by early afternoon with the whole evening ahead of you.
+Ticket Prices and Booking
+As of 2025-2026, expect to pay approximately:
+Second Class (二等座): ~553 yuan ($76 USD), the standard choice for most travelers
+
+First Class (一等座): ~933 yuan ($128 USD), noticeably more comfortable
+
+Business Class (商务座): ~1,748 yuan ($240 USD), lie-flat luxury available on Fuxing trains
+
+These prices are fixed by China Railway and don't fluctuate like airline fares. A Second Class ticket always costs the same whether you book 15 days out or 2 hours before departure.
+How to book: The official channel is the 12306 app (铁路12306), China Railway's booking platform. Since the 2024 update, it accepts foreign passport numbers for registration and booking. The interface has an English-language option, though it's imperfect. You need a Chinese phone number for verification, so if you've bought a local SIM card, you're set. Payment works with Alipay, WeChat Pay, or select international cards. For a step-by-step walkthrough, see our guide on how to book on 12306 as a foreigner .
+If the 12306 app proves frustrating, Trip.com (the international arm of Ctrip) is the most reliable English-language alternative. Their markup is typically 20-40 yuan per ticket, which is a fair price for convenience, English customer support, and the ability to pay with a regular credit card. If you don't have WeChat Pay or Alipay set up yet, check our guide on booking train tickets without WeChat .
+You can also buy tickets at station counters , but expect long lines and limited English. Bring your passport, since the ticket is linked to your document number.
+Booking opens 15 days before the travel date at 8:00 AM Beijing time. During normal periods, you can book a day or two before and still find seats. But during Chinese New Year (late January-February), National Day Golden Week (October 1-7), and summer holiday (July-August), trains sell out within minutes of opening. If you're traveling during these periods, set an alarm for 8:00 AM exactly 15 days before your travel date and book immediately. Having your Trip.com account pre-loaded with payment details helps.
+A practical tip: if your preferred time sells out, check trains departing 30 minutes earlier or later. Also look for services with more intermediate stops. They're less popular but get you there just the same.
+Onboard Experience
+Second Class
+Second Class on a Fuxing train is comparable to premium economy on a good airline, but with far more legroom. Seating is 5-abreast in a 3+2 configuration (seats A/B/C on one side of the aisle, D/F on the other; there's no seat E). The pitch is generous enough that a tall person can cross their legs. Each seat has a fold-down tray table, a recline function, and power outlets between every pair of seats (both Chinese three-prong and USB ports). Seats are upholstered in blue fabric, clean, and reasonably comfortable for a half-day journey.
+First Class
+First Class bumps you to a 4-abreast, 2+2 layout . Seats are wider, the recline is deeper, and the legroom is enough to fully stretch out. Each seat gets its own armrest (no sharing with neighbors), a larger tray table, and a reading light. If you're tall, a light sleeper, or just want breathing room, the 70% price premium is worth it. First Class cars are also noticeably quieter, simply because there are fewer passengers.
+Business Class
+Business Class on a Fuxing CR400 is the crown jewel. Seats are lie-flat pods in a 2+1 configuration, similar to international business class on an airline. Each seat reclines to a fully flat bed, has a personal entertainment screen, slippers, a blanket, and a complimentary snack box with nuts, dried fruit, crackers, and a drink. The cabin has its own attendant. At 1,748 yuan, it costs more than a discount flight, but the experience is memorable and the seats are remarkably comfortable for a nap.
+Food and Drink
+One of the great cultural experiences of Chinese rail travel is the instant noodle ritual . Every train car has a hot water dispenser (开水器) at one end, providing free boiling water. Passengers bring their own cup noodles, and around lunchtime the entire car fills with the savory, spicy aroma of people slurping noodles at their seats. We strongly recommend picking up a cup of Kangshifu (康师傅) beef noodles at any station convenience store for about 6 yuan. It's a rite of passage.
+Beyond noodles, a dining car (餐车) roughly in the middle of the train offers boxed meals for 35-60 yuan. The food is functional — think rice with braised chicken, or a pork and vegetable combo — but uninspired. A better strategy is to stock up at the station: Beijing South has a 7-Eleven, several bakeries, and fruit stalls past security. Grab roast duck wraps, tea eggs, soy milk, or fruit before boarding.
+A trolley cart also passes through every car periodically selling snacks, drinks, and instant noodles at slightly inflated prices.
+Connectivity and Comfort
+Some Fuxing trains offer free Wi-Fi . Look for the network name "复兴号WiFi" and register with your phone number. Be warned: it's slow and drops connection frequently, especially in tunnels. If you need reliable internet, your phone's 4G/5G on a Chinese SIM card is a better bet, though signal does cut out in tunnels and rural stretches.
+Phone charging is well-handled. Every seat area has Chinese-standard power plugs (220V, Type A/I) and USB-A ports. Bring a universal adapter if you only have US/EU plugs, or simply use the USB ports for your phone.
+For luggage, there are overhead racks above every row (similar to an airplane, but larger) and dedicated luggage areas at the ends of each car for oversized suitcases. Arrive early enough to snag overhead space near your seat. The racks fill up quickly, and you don't want your bag three rows behind you.
+On some Fuxing trains, Car 3 is designated as a quiet car (静音车厢). Phone calls, loud music, and noisy conversation are prohibited. You can request a quiet car seat when booking on 12306, which is a real lifesaver if you want to sleep or read.
+Scenery
+Don't expect mountain drama or coastal cliffs. The Jinghu line runs through the North China Plain and the Yangtze River Delta , which means predominantly flat farmland, small cities, and industrial zones. The most scenic moment comes when the train crosses the Yangtze River on the Dashengguan Bridge near Nanjing, about 3 hours into the journey from Beijing. You get a brief but striking view of the wide, brown river below. In winter, the fields are stubbled and bare; in summer, they're bright green with wheat and rice. It's not the most photogenic train route in China (that honor goes to the Chengdu-Kunming or the Guangzhou-Guiyang line), but watching the landscape shift from north to south at 350 km/h has its own quiet fascination.
+Practical Tips for This Route
+Arrive 30 minutes early. This isn't a suggestion; it's a necessity. Between the entrance ID check, security screening, finding the correct waiting hall, and walking to your platform, 30 minutes is the minimum. During holidays, make it 45 minutes.
+Keep your passport on you at all times. You'll show it at the station entrance, at the automated ticket gate (your passport is your ticket — hold the photo page against the scanner), and possibly during an onboard check by the conductor. A photocopy is not accepted.
+Download the 12306 app even if you booked through Trip.com. It shows your e-ticket, real-time train status, your car and seat number, and which platform to go to. The app's QR code can also get you through the automated gates if the passport scanner is finicky.
+Buy your return ticket on the same day you arrive if your plans are firm. The booking window means that tickets for the return leg might not be available yet when you book your outward journey, but once you arrive in Shanghai, the 15-day window for your return date will have opened.
+Consider a Nanjing stopover. Nanjing South Station (南京南站) is a major stop on this line, roughly 1 hour and 30 minutes from Shanghai and 3 hours from Beijing. Nanjing deserves at least a day: the Sun Yat-sen Mausoleum, the Confucius Temple area, the Ming Dynasty city wall, and the Yangtze River bridge are all worth seeing. Tickets between Nanjing and Shanghai are cheap (around 140 yuan, Second Class) and plentiful. From Shanghai, Hangzhou and Suzhou also make excellent day trips — see our guides for Shanghai to Hangzhou and Shanghai to Suzhou .
+Station convenience stores beat the onboard trolley. A bottle of water that costs 3 yuan at the station 7-Eleven costs 8 yuan from the trolley. A cup of noodles goes from 6 yuan to 15. Stock up before you board.
+Gate closures are strict. Boarding gates close 3-5 minutes before departure. If you're still in the waiting hall when the announcement says final boarding, run. There is no flexibility; the train will leave without you.
+Getting to Your Hotel After Arrival
+From Shanghai Hongqiao Station
+You have three solid options:
+Metro Line 2 is the cheapest and most predictable. It runs from Hongqiao east through the city center, hitting Jing'an Temple (30 min), People's Square (35 min), Nanjing Road East (38 min), and continuing to Lujiazui in Pudong (45 min). A single ride costs 4-7 yuan depending on distance. During evening rush (5:00-7:00 PM), it's crowded but functional. For the Bund area, ride to Nanjing Road East station and walk 10 minutes south.
+Taxi from the designated taxi rank outside the arrivals level costs roughly 100-150 yuan to the Bund or People's Square area, taking 40-60 minutes in normal traffic. During rush hour, this can swell to 90 minutes and 180 yuan. Always use the metered queue. Never accept offers from drivers inside the station who approach you.
+Didi (China's Uber) works well from Hongqiao. Request a ride while still inside the station and follow the app's directions to the rideshare pickup zone. Prices are similar to taxis but the car is often cleaner and you can track the route. You'll need the Didi app set up with Alipay or WeChat Pay.
+From Beijing South Station
+If you've just arrived in Beijing on the reverse journey, Metro Line 4 from Beijing South takes you to Xidan (15 min, major shopping area), Xuanwumen (12 min, near the Qianmen pedestrian street), and the Summer Palace area (35 min to Beigongmen station). For Tiananmen Square, take Line 4 to Xuanwumen and transfer to Line 2.
+A taxi from Beijing South to the Dongcheng hutong area (near Nanluoguxiang or the Lama Temple) costs 30-50 yuan and takes about 20-30 minutes outside of rush hour. To the Sanlitun embassy district, expect 40-60 yuan.
+Best advice for either city: have your hotel address saved in Chinese characters on your phone. Show it to the taxi driver or type it into Didi. English addresses often don't register, but a Chinese address eliminates all confusion.
+The Beijing-Shanghai high-speed train is more than transportation. It's one of the defining experiences of modern China — the engineering, the speed, the hot noodles, the flat green countryside blurring past your window at 350 km/h. Nothing else quite like it anywhere in the world. Book your ticket, grab your cup noodles, and enjoy the ride.
+For the bigger picture, see our complete Shanghai travel guide with itineraries, metro tips, and where to eat.
+How far is it, exactly
+The honest answer: it depends which "far" you mean . Here are all four numbers, because travelers Google this one and get four different answers.
+Straight-line (great-circle) distance : 1,068 km / 664 mi
+
+High-speed rail route length : 1,318 km / 819 mi
+
+Driving distance (G2 Jinghu Expressway) : ~1,214 km / 754 mi
+
+Actual flight path : ~1,100 km / 684 mi
+
+So when somebody says "the distance between Shanghai and Beijing is 1,318 km," they're technically talking about the rail line, not the distance between the city centers. The great-circle number (1,068 km) is what you'd measure with a ruler on a globe. Both are right. Both matter for different reasons.
+Train or flight
+
+G-Train (fastest)
+
+Flight (economy)
+
+Distance
+
+1,318 km / 819 mi
+
+~1,100 km / 684 mi
+
+Time (mode only)
+
+4 hr 18 min
+
+2 hr 10 min
+
+Door-to-door time
+
+~5 hr 30 min
+
+~5 hr
+
+Typical price
+
+¥553 / $77 (2nd class)
+
+¥800 / $112
+
+Cheapest
+
+¥553 / $77
+
+¥450 / $63 (advance)
+
+Comfort
+
+Huge seats, walk around, meal car
+
+Standard economy, cramped
+
+Reliability
+
+99%+ on time
+
+~70% on time (delays common)
+
+Luggage limits
+
+20 kg per adult; each item up to 130 cm (length + width + height)
+
+20 kg checked, strict
+
+Security hassle
+
+ID + bag scan, 5 min
+
+Full airport security, 45+ min
+
+WiFi / signal
+
+Good 4G/5G most of route ( best China eSIM )
+
+None during flight
+
+Best for
+
+Most trips, scenery, comfort
+
+Tight connections, ultra-cheap fares
+
+CO2 per passenger
+
+~30% of the flight
+
+High
+
+Price-wise it's usually a wash or close. A ¥553 ($77) second-class train ticket beats the average ¥800 ($112) flight. Time-wise the train edges the flight for most people because door-to-door math favors Hongqiao's train-airport fusion. And comfort isn't close.
+
+Check live train times Search China Railway for real departure times, seat availability and prices — the same data 12306 shows, in English. Open the train search →
+
+Tags
+# train # beijing # shanghai # transport
+
+View all →
+Where can I purchase sleeper train tickets in China, and is it worth choosing trains over flights for short stops? →
+What is a realistic pace and preparation strategy for a multi-city High-Speed Rail trip in China? →
+For a first trip to Shanghai, what should I set up for eSIM, payments, metro, and train tickets? →
+Does Beijing Subway extend operating hours during Spring Festival travel peak? →
+
+View all →
+January 12, 2026 · How-To Guide
+Fuxing High-Speed Train First-Time Tips (2026 Guide)
+
+July 7, 2026 · How-To Guide
+China High-Speed Rail Guide: Routes, Speed & How to Ride (2026)
+
+January 11, 2026 · How-To Guide
+China Travel Tips for First-Timers: 2026 Survival Guide
+
+App Store
+
+Google Play
+
+App Store
+
+Google Play
+
+Features
+Panda AI
+City Guides
+Food Guide
+China Wiki
+
+Info
+About Us
+Pricing
+FAQ
+Blog
+My Account
+
+Get the App
+
+Accept all
