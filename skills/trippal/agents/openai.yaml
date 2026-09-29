@@ -1,0 +1,5 @@
+interface:
+  display_name: "TripPal"
+  short_description: "Analyze a China trip profile and build a readiness plan"
+  brand_color: "#FF5A54"
+  default_prompt: "Use $trippal to analyze the travel profile collected by the TripPal webpage."
