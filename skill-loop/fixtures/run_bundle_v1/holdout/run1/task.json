@@ -1,0 +1,43 @@
+{
+  "schema_version": "v1",
+  "task_id": "fx-cn-pay-fact-003",
+  "scenario_id": "fx-TP-S03",
+  "split": "holdout",
+  "task_type": "fact_lookup",
+  "demand_evidence": {
+    "source": "other",
+    "query_cluster": [
+      "Can a traveller use Alipay/Tenpay mobile payments in China?"
+    ],
+    "geo": "GLOBAL",
+    "time_window": "2025-09-29/2026-09-29"
+  },
+  "prompt": "A user searched for \"Can a traveller use Alipay/Tenpay mobile payments in China?\". First restate the user's question verbatim, then give the conclusion and cite the source provided in the lookup result.",
+  "initial_state": {
+    "tool_data": "fixtures/tool_data_trippal_v1/pages.json"
+  },
+  "allowed_tools": [
+    "lookup_local"
+  ],
+  "expected_end_state": {
+    "type": "string",
+    "note": "终态须先复述用户原查询串，并引用检索到的权威来源；见 verifier"
+  },
+  "verifier": {
+    "kind": "deterministic",
+    "assertions": [
+      {
+        "op": "contains",
+        "value": "Can a traveller use Alipay/Tenpay mobile payments in China?"
+      },
+      {
+        "op": "contains",
+        "value": "govt.chinadaily.com.cn"
+      }
+    ]
+  },
+  "prohibited_leakage": [
+    "skill",
+    "answer_derivation"
+  ]
+}

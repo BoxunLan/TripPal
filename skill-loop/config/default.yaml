@@ -1,0 +1,25 @@
+# 本项目默认配置：外国人来华（inbound 外国游客 / geo=GLOBAL / en）。
+# 这是项目主题，任何新建的数据、场景、卡片都对齐这份口径。
+geo: GLOBAL
+language: en
+time_window: 2025-09-29/2026-09-29
+scenario_target: 8
+scenario_floor: 3
+tasks_per_scenario: 2
+runs_per_task: 3
+max_proposals: 5
+temperature: 0
+timeout_seconds: 60
+max_tokens: 2000
+cost_budget_ratio: 1.5
+# 回归门用哪种成本口径：total（规格口径，input+output 比值）| output（只看输出）| delta（每次运行的绝对增量）
+cost_budget_basis: total
+# 仅当 cost_budget_basis=delta 时生效：每次运行允许的绝对 token 增量。
+# 400 ≈ 一份 ≤40 行 SKILL.md 的常量注入量（实测 377 token/次），即「技能自身的固定开销」额度。
+cost_delta_allowance: 400
+# 任务卡声明的检索夹具体（相对仓库根）。
+tool_data: fixtures/tool_data_trippal_v1/pages.json
+# 题面语言：en（英语入境游客）。
+prompt_language: en
+# 场景边界只许落在中国语境里（A 线硬校验，违例即报错退出，见 build.py / trippal.is_china_question）。
+require_china_context: true

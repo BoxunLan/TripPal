@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trippal.local/skill-loop/contracts/v1/trace-event.schema.json",
+  "title": "trace-event v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "step",
+    "timestamp",
+    "action",
+    "observation",
+    "decision",
+    "skipped_or_abandoned",
+    "cost"
+  ],
+  "properties": {
+    "schema_version": { "const": "v1" },
+    "step": { "type": "integer", "minimum": 1 },
+    "timestamp": { "type": "string", "minLength": 10 },
+    "action": { "type": "string" },
+    "observation": { "type": "string" },
+    "decision": { "type": "string" },
+    "skipped_or_abandoned": { "type": "string" },
+    "cost": {
+      "type": "object",
+      "required": ["input_tokens", "output_tokens", "tool_calls"],
+      "properties": {
+        "input_tokens": { "type": "integer", "minimum": 0 },
+        "output_tokens": { "type": "integer", "minimum": 0 },
+        "tool_calls": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "artifact": { "type": "string" }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": "trippal-routing-v1",
+  "note": "人工映射，但不是人工数据：keywords 取自 TripPal §6 场景名/用户目标与 §4 痛点标题的用词；pages 的 slug 一律取自 research/raw/clean/ 的真实文件名；trend_terms 取自 research/trends-summary.md 的词条（只有该节有真实全年均值时才会计入记录）。exclude 只做同场景内的消歧（如 `reserve` 同时命中订机票与订门票），不是黑名单。",
+  "china_terms": [
+    "china",
+    "chinese",
+    "beijing",
+    "shanghai",
+    "guangzhou",
+    "shenzhen",
+    "chengdu",
+    "xian",
+    "hangzhou",
+    "suzhou",
+    "wuhan",
+    "yunnan",
+    "tibet",
+    "lhasa",
+    "hong kong",
+    "macau",
+    "great wall",
+    "forbidden city",
+    "alipay",
+    "wechat",
+    "renminbi",
+    "12306",
+    "didi",
+    "amap",
+    "mainland"
+  ],
+  "china_context": [
+    "beijing",
+    "shanghai",
+    "guangzhou",
+    "shenzhen",
+    "chengdu",
+    "xian",
+    "hangzhou",
+    "suzhou",
+    "wuhan",
+    "yunnan",
+    "tibet",
+    "lhasa",
+    "hong kong",
+    "macau",
+    "mainland",
+    "great wall",
+    "forbidden city",
+    "alipay",
+    "wechat",
+    "12306",
+    "didi",
+    "amap",
+    "renminbi",
+    "pudong",
+    "pek",
+    "canton"
+  ],
+  "china_context_phrases": [
+    "in china",
+    "to china",
+    "of china",
+    "from china",
+    "within china",
+    "across china",
+    "china travel",
+    "china trip",
+    "trip to china",
+    "travel to china",
+    "visiting china",
+    "visit china",
+    "enter china",
+    "entering china",
+    "chinese visa",
+    "china visa",
+    "china railway",
+    "chinese customs",
+    "chinese embassy",
+    "chinese consulate"
+  ],
+  "scenarios": {
+    "S01": {
+      "keywords": ["visa", "transit", "entry", "enter china", "immigration", "240", "twov", "passport", "arrival card"],
+      "pages": ["consulate-240h-faq-cn.txt", "chinadaily-240h-transit-route-faq.txt"],
+      "trend_terms": ["china visa"]
+    },
+    "S02": {
+      "keywords": ["before arrival", "in advance", "ahead of time", "prepare", "preparation", "packing", "pack ", "first trip", "first time", "survival", "checklist", "what to bring"],
+      "pages": ["mcg-china-survival-guide-for-tourists.txt", "mcg-china-travel-tips-first-timers.txt"],
+      "trend_terms": ["china travel"]
+    },
+    "S03": {
+      "keywords": ["alipay", "wechat pay", "payment", "mobile pay", "credit card", "debit card", "cash", "atm", "bank", "exchange", "declined", "money"],
+      "pages": ["govt-chinadaily-alipay-binding.txt", "mcg-how-to-use-alipay-china-foreigner.txt", "mcg-wechat-pay-foreigner-guide.txt"],
+      "trend_terms": ["alipay", "wechat pay"]
+    },
+    "S04": {
+      "keywords": ["forbidden city", "great wall", "museum", "attraction", "reservation", "reserve", "entrance", "sold out", "admission", "advance ticket"],
+      "exclude": ["air ticket", "flight", "airline", "plane ticket", "train ticket", "hotel"],
+      "pages": ["chinadaily-forbidden-city-tickets.txt", "mcg-book-china-attraction-tickets-without-chinese-id.txt"],
+      "trend_terms": []
+    },
+    "S05": {
+      "keywords": ["train", "railway", "12306", "high-speed", "bullet train", "sleeper", "overnight train", "hsr", "station"],
+      "pages": ["mcg-book-china-train-tickets-12306-foreigner.txt", "mcg-china-high-speed-rail-guide.txt"],
+      "trend_terms": []
+    },
+    "S06": {
+      "keywords": ["taxi", "didi", "metro", "subway", "bus", "scooter", "bike", "driver", "maglev", "airport transfer"],
+      "pages": ["mcg-how-to-use-didi-china-without-chinese-number.txt", "mcg-beijing-subway-card-vs-mobile-payment.txt"],
+      "trend_terms": []
+    },
+    "S07": {
+      "keywords": ["hotel", "hostel", "check-in", "check in", "registration", "accommodation", "airbnb", "guesthouse", "lodging", "stay in"],
+      "pages": ["mcg-china-hotels-foreigners-check-in-guide.txt", "tempo-hotels-turn-away-foreigners.txt"],
+      "trend_terms": []
+    },
+    "S08": {
+      "keywords": ["vpn", "esim", "sim", "internet", "wifi", "wi-fi", "blocked", "firewall", "data plan", "roaming", "whatsapp", "google", "facebook", "gmail"],
+      "pages": ["mcg-how-to-get-internet-in-china.txt", "mcg-best-esim-china.txt"],
+      "trend_terms": ["china esim", "vpn china", "great firewall"]
+    },
+    "S09": {
+      "keywords": ["map", "amap", "baidu", "gps", "navigat", "address", "location"],
+      "pages": ["mcg-best-map-app-in-china.txt"],
+      "trend_terms": []
+    },
+    "S10": {
+      "keywords": ["food", "restaurant", "menu", "order", "eat", "vegetarian", "allerg", "hotpot", "dish", "coffee", "meal"],
+      "pages": ["mcg-how-to-order-food-in-china-without-chinese.txt", "mcg-how-to-read-chinese-restaurant-menu.txt"],
+      "trend_terms": []
+    },
+    "S11": {
+      "keywords": ["sick", "hospital", "doctor", "medical", "lost", "police", "stolen", "emergency", "overstay", "fine", "theft"],
+      "pages": ["mcg-what-to-do-if-you-get-sick-in-china-hospital-guide.txt"],
+      "trend_terms": []
+    },
+    "S12": {
+      "keywords": ["language", "english", "translat", "speak", "communicate", "chinese language"],
+      "pages": ["mcg-best-translation-app-for-china.txt", "mcg-how-to-order-coffee-in-china-without-chinese.txt"],
+      "trend_terms": []
+    }
+  }
+}

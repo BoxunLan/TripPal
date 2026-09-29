@@ -1,0 +1,47 @@
+{
+  "schema_version": "trippal-import-report-v1",
+  "questions_total": 566,
+  "questions_china_relevant": 258,
+  "trend_terms_with_values": [
+    "alipay",
+    "china esim",
+    "china travel",
+    "china visa",
+    "great firewall",
+    "vpn china",
+    "wechat pay"
+  ],
+  "scenarios_in_source": 12,
+  "scenarios_kept": 8,
+  "dropped_by_scenario_target": [
+    {
+      "tp_id": "S09",
+      "name": "导航与地址沟通"
+    },
+    {
+      "tp_id": "S10",
+      "name": "点餐与饮食限制"
+    },
+    {
+      "tp_id": "S11",
+      "name": "应急处理"
+    },
+    {
+      "tp_id": "S12",
+      "name": "全流程语言支持"
+    }
+  ],
+  "skipped": [],
+  "records": 66,
+  "records_by_source": {
+    "se_questions": 59,
+    "google_trends": 7
+  },
+  "notes": [
+    "query_or_topic 全部取自 se-questions.tsv 的真实标题或 trends-summary.md 的词条，无人工编写。",
+    "metric_value 取真实 views（source=other）或 Trends 全年均值（source=google_trends），未归一、未相加。",
+    "SE 语料以英语技术型用户为主（TripPal README §3 已声明该偏倚），故 geo 记 GLOBAL 而非 US。",
+    "Trends 记录的 geo=US 是照抄 trends-summary.md 首行自报的采集口径（geo=US, today 12-m），未改动。",
+    "被 scenario_target 截掉的场景不是「无证据」，是规格的规模上限 5–8 决定的。"
+  ]
+}

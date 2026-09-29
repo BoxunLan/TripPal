@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-optimizer"
+version = "0.1.0"
+description = "C 线：优化与治理（轨迹 -> 提案 -> 候选 skill -> 回归门）"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4.22", "pyyaml>=6.0"]
+
+[tool.setuptools]
+packages = ["skill_optimizer"]

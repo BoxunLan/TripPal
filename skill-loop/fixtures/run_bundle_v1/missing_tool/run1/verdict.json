@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "task_id": "fx-cn-visa-cond-002",
+  "run_n": 1,
+  "live": false,
+  "status": "timeout",
+  "overall_pass": false,
+  "attribution": "missing_tool_or_data",
+  "contaminated": false,
+  "scores": {
+    "outcome": 0.0,
+    "process": 0.3,
+    "evidence": 0.0,
+    "efficiency": 0.2
+  }
+}

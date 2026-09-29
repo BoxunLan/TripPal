@@ -1,0 +1,295 @@
+{
+  "schema_version": "trippal-scenarios-v1",
+  "source": {
+    "corpus": "research",
+    "pain_points_sha256": "0f5537a925b765216ee6f886eb9ce965ca931a593bbe6c9ec58708cc489d8e22",
+    "se_questions_sha256": "201eb946f95e7af2ad97030f9916b9f0fc075b8f296762f404e598936814206e",
+    "trends_summary_sha256": "6443994cbe7d6a019e9f7c4fa59349de4e9cd2f69bcde76d32138478e06c68d4",
+    "routing_sha256": "67e268eb595e7d63dcd9e0c91d4df5f1869fa66c27bf5cd8ed3b4be15c7a3a5e"
+  },
+  "vertical": "inbound_foreign_tourists_to_china",
+  "extracted_at": "2026-09-29T14:03:24+08:00",
+  "trial_order": [
+    "S02",
+    "S03",
+    "S04",
+    "S01",
+    "S07",
+    "S06"
+  ],
+  "scenarios": [
+    {
+      "tp_id": "S01",
+      "name": "免签/签证资格判定与行程合规",
+      "trigger_timing": "订票前",
+      "user_goal": "确认\"我这条路线要不要签证、能待几天、能从哪进\"",
+      "key_inputs": "国籍、出发地、联程航段、停留城市与天数",
+      "success_criteria": "给出合规判定 + 需要准备的材料清单 + 不合格时的替代方案",
+      "pain_point_ids": [
+        "P-A4",
+        "P-I3"
+      ],
+      "query_cluster": [
+        "After entering Mainland China with the transit-without-visa (TWOV) program, does one have to register with the local police station?",
+        "transit visa for indian passport holder in Xiamen or Shenzhen (People's Republic of China) on the way to Seattle from Tokyo (Japan)",
+        "Can I take the high-speed bullet train Beijing–Hong Kong under Chinese 144 h visa-free transit rules?",
+        "Does a Nepali need a transit visa for a technical stop in Hong Kong?",
+        "Do I need a Hong Kong transit visa to travel to China from India",
+        "Canadian wants to exit and re-enter Beijing without a visa, during 72 hour TWOA (Transit Without Visa)",
+        "china visa"
+      ],
+      "record_ids": [
+        "tp-s01-q1",
+        "tp-s01-q2",
+        "tp-s01-q3",
+        "tp-s01-q4",
+        "tp-s01-q5",
+        "tp-s01-q6",
+        "tp-s01-t1"
+      ],
+      "representative": "After entering Mainland China with the transit-without-visa (TWOV) program, does one have to register with the local police station?",
+      "page": {
+        "slug": "chinadaily-240h-transit-route-faq.txt",
+        "title": "Questions and Answers",
+        "url": "https://govt.chinadaily.com.cn/s/202602/04/WS69831274498e36855033a64e/im-a-us-citizen-flying-from-the-us-south-korea-transit-shanghai-south-korea-does-this-route-qualify-for-the-240-hour-visa-free-transit-policy-or-does-it-have-to-involve-a-third-country.html"
+      }
+    },
+    {
+      "tp_id": "S02",
+      "name": "行前 72 小时\"落地可生存\"准备",
+      "trigger_timing": "出发前 3 天",
+      "user_goal": "落地即可用网、可用钱、可导航",
+      "key_inputs": "手机型号、运营商、银行卡、行程城市",
+      "success_criteria": "一份可勾选的装机/开通清单（含\"落地后无法补救\"项）",
+      "pain_point_ids": [
+        "P-A1~A3",
+        "P-C1"
+      ],
+      "query_cluster": [
+        "Should I book my train connections in advance in China?",
+        "How to apply for a Chinese visa without knowing one's itinerary in advance?",
+        "china travel"
+      ],
+      "record_ids": [
+        "tp-s02-q1",
+        "tp-s02-q2",
+        "tp-s02-t1"
+      ],
+      "representative": "Should I book my train connections in advance in China?",
+      "page": {
+        "slug": "mcg-china-survival-guide-for-tourists.txt",
+        "title": "China Survival Guide for Tourists: 2026 Essentials",
+        "url": "https://mychina.guide/blog/china-survival-guide-for-tourists"
+      }
+    },
+    {
+      "tp_id": "S03",
+      "name": "移动支付开通与失败兜底",
+      "trigger_timing": "出发前至落地",
+      "user_goal": "把钱变成可用的扫码支付；失败时知道下一步",
+      "key_inputs": "卡种、护照、是否有本地号",
+      "success_criteria": "开通路径 + 风控/失败的分级兜底（第二张卡 / 现金 / 线下窗口）",
+      "pain_point_ids": [
+        "P-B1~B6"
+      ],
+      "query_cluster": [
+        "Can a traveller use Alipay/Tenpay mobile payments in China?",
+        "Is there a particular bank in China that has the best fees and withdrawal limits using an Australian ANZ Bank ATM card?",
+        "Are UnionPay cards universally accepted in China or would you still need Alipay or cash sometimes?",
+        "Recourse against bank ATM fraud in China",
+        "Is there a way to confirm your Alipay works before arriving in China?",
+        "Is it really possible to open bank account in China without a permanent address - does it mean the card is provided on the spot?",
+        "alipay",
+        "wechat pay"
+      ],
+      "record_ids": [
+        "tp-s03-q1",
+        "tp-s03-q2",
+        "tp-s03-q3",
+        "tp-s03-q4",
+        "tp-s03-q5",
+        "tp-s03-q6",
+        "tp-s03-t1",
+        "tp-s03-t2"
+      ],
+      "representative": "Can a traveller use Alipay/Tenpay mobile payments in China?",
+      "page": {
+        "slug": "govt-chinadaily-alipay-binding.txt",
+        "title": "Using foreign bank cards for mobile payments in China | govt.chinadaily.com.cn",
+        "url": "https://govt.chinadaily.com.cn/s/202502/25/WS67bd6c5a498eec7e1f730389/using-foreign-bank-cards-for-mobile-payments-in-china.html"
+      }
+    },
+    {
+      "tp_id": "S04",
+      "name": "景区/博物馆预约与抢票",
+      "trigger_timing": "放票前",
+      "user_goal": "约到热门景点",
+      "key_inputs": "护照信息、微信状态、放票时点、证件要求",
+      "success_criteria": "拿到预约 + 实体护照/闸机注意事项 + 未抢到的替代",
+      "pain_point_ids": [
+        "P-E1~E6"
+      ],
+      "query_cluster": [
+        "The Great Wall of China: Where should I start a visit?",
+        "How dangerous is the Jiankou section of The Great Wall of China?",
+        "What part of Great Wall of China is easier to visit, starting from Peking?",
+        "Where in Chengdu can we see Sanxingdui artifacts, besides the museum in Guanghan?"
+      ],
+      "record_ids": [
+        "tp-s04-q1",
+        "tp-s04-q2",
+        "tp-s04-q3",
+        "tp-s04-q4"
+      ],
+      "representative": "The Great Wall of China: Where should I start a visit?",
+      "page": {
+        "slug": "mcg-book-china-attraction-tickets-without-chinese-id.txt",
+        "title": "Book China Attractions Without Chinese ID: 2026 Guide",
+        "url": "https://mychina.guide/blog/book-china-attraction-tickets-without-chinese-id"
+      }
+    },
+    {
+      "tp_id": "S05",
+      "name": "城际交通（火车/高铁/跨境）",
+      "trigger_timing": "出行前 1–15 天",
+      "user_goal": "买到票并顺利进站换乘",
+      "key_inputs": "出发到达站、证件、姓名拼写、口岸",
+      "success_criteria": "正确车站 + 取票/进站方式 + 时间缓冲",
+      "pain_point_ids": [
+        "P-E3",
+        "P-E4",
+        "P-F3"
+      ],
+      "query_cluster": [
+        "Is the Wi-Fi in high-speed trains in China reliable and fast enough for audio or video conferences?",
+        "Do high-speed trains in China have an area that can be used to make audio/video calls?",
+        "Is there any downside in purchasing high-speed train tickets in China via the official website, instead of third-party agencies?",
+        "Can I take the high-speed bullet train Beijing–Hong Kong under Chinese 144 h visa-free transit rules?",
+        "Do the Beijing-Tianjin high speed trains often get fully booked?",
+        "Does it take one hour to board a bullet train in China, and if so, why?"
+      ],
+      "record_ids": [
+        "tp-s05-q1",
+        "tp-s05-q2",
+        "tp-s05-q3",
+        "tp-s05-q4",
+        "tp-s05-q5",
+        "tp-s05-q6"
+      ],
+      "representative": "Is the Wi-Fi in high-speed trains in China reliable and fast enough for audio or video conferences?",
+      "page": {
+        "slug": "mcg-china-high-speed-rail-guide.txt",
+        "title": "China High-Speed Rail: Routes, Speed & How to Ride (2026)",
+        "url": "https://mychina.guide/blog/china-high-speed-rail-guide"
+      }
+    },
+    {
+      "tp_id": "S06",
+      "name": "市内交通与打车",
+      "trigger_timing": "现场",
+      "user_goal": "从 A 到 B 且不被宰",
+      "key_inputs": "中文地址、附近地标、支付方式",
+      "success_criteria": "叫车方案 + 中文地址卡 + 黑车识别与拒付话术",
+      "pain_point_ids": [
+        "P-D3",
+        "P-F1",
+        "P-F2"
+      ],
+      "query_cluster": [
+        "How likely is it to get a phone call on Didi (\"Uber in China\")?",
+        "Can you easily buy bus tickets in China during Chinese New Year?",
+        "Where can a French citizen with Russian visa legally cross by bike/foot/car from China into Russia at a border point as close as possible to Dongning?",
+        "Where is the DiDi pickup at Kunming Changshui Airport?",
+        "Renewal of Nevada drivers license while living in China",
+        "Route/Travel planning tool like Rome2Rio with options for Bus/Train/Flight for China trip"
+      ],
+      "record_ids": [
+        "tp-s06-q1",
+        "tp-s06-q2",
+        "tp-s06-q3",
+        "tp-s06-q4",
+        "tp-s06-q5",
+        "tp-s06-q6"
+      ],
+      "representative": "How likely is it to get a phone call on Didi (\"Uber in China\")?",
+      "page": {
+        "slug": "mcg-how-to-use-didi-china-without-chinese-number.txt",
+        "title": "How to Use DiDi in China Without a Chinese Number",
+        "url": "https://mychina.guide/blog/how-to-use-didi-china-without-chinese-number"
+      }
+    },
+    {
+      "tp_id": "S07",
+      "name": "住宿筛选与入住登记",
+      "trigger_timing": "订房前 / 入住时",
+      "user_goal": "订到能接待外国人的住处并完成登记",
+      "key_inputs": "城市、预算、住宿类型（酒店/民宿/朋友家）",
+      "success_criteria": "涉外友好筛选 + 登记义务提示 + 被拒时的处理路径",
+      "pain_point_ids": [
+        "P-G1~G3"
+      ],
+      "query_cluster": [
+        "How can I find a hotel that can fill out a registration form for temporary visitors in China?",
+        "In which places in China can travellers not stay at just any random local hotel?",
+        "Should an American traveling to China book flights and accommodation before getting a visa?",
+        "Is it normal to haggle for the price of cheap hotel rooms in China?",
+        "Do I need a hotel booking to get my 72 hour free visa in China?",
+        "Do I have to register at the police station if the hotel doesn't do it for me after entering China with a Shenzhen Special Economic Zone Tourism Visa?"
+      ],
+      "record_ids": [
+        "tp-s07-q1",
+        "tp-s07-q2",
+        "tp-s07-q3",
+        "tp-s07-q4",
+        "tp-s07-q5",
+        "tp-s07-q6"
+      ],
+      "representative": "How can I find a hotel that can fill out a registration form for temporary visitors in China?",
+      "page": {
+        "slug": "mcg-china-hotels-foreigners-check-in-guide.txt",
+        "title": "China Hotels for Foreigners 2026: Check-In Guide",
+        "url": "https://mychina.guide/blog/china-hotels-foreigners-check-in-guide"
+      }
+    },
+    {
+      "tp_id": "S08",
+      "name": "上网与信息获取",
+      "trigger_timing": "出发前 / 落地",
+      "user_goal": "有可用网络 + 可用的信息源",
+      "key_inputs": "手机、停留时长、是否需要本地号码",
+      "success_criteria": "连接方案（eSIM/漫游/本地卡）+ 哪些服务不可用 + 离线替代",
+      "pain_point_ids": [
+        "P-A2",
+        "P-C1~C4"
+      ],
+      "query_cluster": [
+        "Is it still possible to get a SIM card in China as a foreigner?",
+        "Can tourists or other travellers in China get in trouble for using a VPN or other method to get around the \"Great Firewall\"?",
+        "Sim Card with data plan in China?",
+        "Getting hold of tourist SIM card in Shenzhen, China",
+        "How to choose an eSIM for China + Hong Kong?",
+        "3G internet / data package in China",
+        "china esim",
+        "vpn china",
+        "great firewall"
+      ],
+      "record_ids": [
+        "tp-s08-q1",
+        "tp-s08-q2",
+        "tp-s08-q3",
+        "tp-s08-q4",
+        "tp-s08-q5",
+        "tp-s08-q6",
+        "tp-s08-t1",
+        "tp-s08-t2",
+        "tp-s08-t3"
+      ],
+      "representative": "Is it still possible to get a SIM card in China as a foreigner?",
+      "page": {
+        "slug": "mcg-how-to-get-internet-in-china.txt",
+        "title": "How to Get Internet in China: eSIM, SIM & Wi-Fi (2026)",
+        "url": "https://mychina.guide/blog/how-to-get-internet-in-china"
+      }
+    }
+  ]
+}
