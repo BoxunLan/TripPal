@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "experiment_id": "fixture-b1",
+  "condition": "B-no-skill",
+  "model": "fake-model-v1",
+  "temperature": 0,
+  "timeout_seconds": 60,
+  "max_tokens": 2000,
+  "tool_snapshot": {
+    "name": "lookup_local",
+    "sha256": "504cb76bfd7b0ff952f51b8b9b0ad5091303613f32538eb2bdc9656ccc8a3e09"
+  },
+  "skill_snapshot": {
+    "loaded": false
+  },
+  "task_pack_sha256": "495d6d0c54c399e74deb1786eddee2e07042e4647ffa0359a9c86d5a1757c673"
+}

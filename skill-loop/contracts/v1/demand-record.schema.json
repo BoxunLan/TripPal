@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trippal.local/skill-loop/contracts/v1/demand-record.schema.json",
+  "title": "demand-record v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_id",
+    "source",
+    "query_or_topic",
+    "geo",
+    "language",
+    "time_window",
+    "metric_type",
+    "metric_value",
+    "access_scope",
+    "retrieved_at"
+  ],
+  "properties": {
+    "schema_version": { "const": "v1" },
+    "record_id": { "type": "string", "minLength": 1 },
+    "source": {
+      "enum": [
+        "google_trends",
+        "google_ads_keyword_planning",
+        "search_console",
+        "other"
+      ]
+    },
+    "query_or_topic": { "type": "string", "minLength": 1 },
+    "geo": { "type": "string", "minLength": 2 },
+    "language": { "type": "string", "minLength": 2 },
+    "time_window": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}/[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "metric_type": {
+      "enum": [
+        "relative_interest",
+        "rising_rate",
+        "avg_monthly_searches",
+        "impressions"
+      ]
+    },
+    "metric_value": { "type": "number" },
+    "access_scope": { "enum": ["public_aggregate", "authorized_first_party"] },
+    "retrieved_at": { "type": "string", "minLength": 10 }
+  }
+}

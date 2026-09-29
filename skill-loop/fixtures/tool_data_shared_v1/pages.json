@@ -1,0 +1,12 @@
+{
+  "How do I get from Beijing Capital Airport to the city center?": {
+    "text": "How do I get from Beijing Capital Airport to the city center? | travelchina.example The Airport Express line runs from Terminal 3 to Dongzhimen in about 25 minutes; taxis take 40-60 minutes depending on traffic.",
+    "source_url": "https://travelchina.example/beijing/airport-transfer",
+    "effective_date": "2025-06-01"
+  },
+  "Which apps do I need for a trip to China?": {
+    "text": "Which apps do I need for a trip to China? | travelchina.example Most visitors install a map app, a ride-hailing app, a mobile payment app and a translation app before arrival.",
+    "source_url": "https://travelchina.example/planning/essential-apps",
+    "effective_date": "2025-05-15"
+  }
+}

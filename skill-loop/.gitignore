@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# 测试与类型检查缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 运行产物（一次性快照，不入库）
+output/
+evals/runs/
+evals/runs_*/
+modules/*/out/
+modules/*/out_*/
+_verify_*/
+
+# 本地环境变量（含 Key，绝不入库）
+.env
+.env.*
+!.env.example

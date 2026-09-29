@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trippal.local/skill-loop/contracts/v1/verdict.schema.json",
+  "title": "verdict v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "run_n",
+    "live",
+    "status",
+    "overall_pass",
+    "attribution",
+    "contaminated",
+    "scores"
+  ],
+  "properties": {
+    "schema_version": { "const": "v1" },
+    "task_id": { "type": "string", "minLength": 1 },
+    "run_n": { "type": "integer", "minimum": 1 },
+    "live": { "type": "boolean" },
+    "status": { "enum": ["pass", "fail", "timeout", "error"] },
+    "overall_pass": { "type": "boolean" },
+    "attribution": {
+      "enum": [
+        "none",
+        "knowledge_gap",
+        "missing_tool_or_data",
+        "execution_defect",
+        "task_defect"
+      ]
+    },
+    "contaminated": { "type": "boolean" },
+    "scores": {
+      "type": "object",
+      "required": ["outcome", "process", "evidence", "efficiency"],
+      "properties": {
+        "outcome": { "type": "number", "minimum": 0, "maximum": 1 },
+        "process": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "efficiency": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "assertion_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["op", "value", "passed"],
+        "properties": {
+          "op": { "type": "string" },
+          "value": {},
+          "passed": { "type": "boolean" },
+          "detail": { "type": "string" }
+        }
+      }
+    }
+  }
+}

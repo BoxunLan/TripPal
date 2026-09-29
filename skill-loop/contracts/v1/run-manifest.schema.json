@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trippal.local/skill-loop/contracts/v1/run-manifest.schema.json",
+  "title": "run-manifest v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "experiment_id",
+    "condition",
+    "model",
+    "temperature",
+    "timeout_seconds",
+    "max_tokens",
+    "tool_snapshot",
+    "skill_snapshot",
+    "task_pack_sha256"
+  ],
+  "properties": {
+    "schema_version": { "const": "v1" },
+    "experiment_id": { "type": "string", "minLength": 1 },
+    "condition": { "enum": ["B-no-skill", "C-seed-skill"] },
+    "model": { "type": "string", "minLength": 1 },
+    "temperature": { "type": "number" },
+    "timeout_seconds": { "type": "number" },
+    "max_tokens": { "type": "integer" },
+    "tool_snapshot": {
+      "type": "object",
+      "required": ["name", "sha256"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    },
+    "skill_snapshot": { "type": "object" },
+    "task_pack_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

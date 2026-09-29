@@ -1,0 +1,44 @@
+{
+  "schema_version": "v1",
+  "task_id": "fx-cn-visa-cond-002",
+  "scenario_id": "fx-TP-S01",
+  "split": "train",
+  "task_type": "conditional_decision",
+  "demand_evidence": {
+    "source": "other",
+    "query_cluster": [
+      "After entering Mainland China with the transit-without-visa (TWOV) program, does one have to register with the local police station?"
+    ],
+    "geo": "GLOBAL",
+    "time_window": "2025-09-29/2026-09-29"
+  },
+  "prompt": "Output a JSON object based on the initial state. This task only checks the field structure and does not require any concrete policy conclusion; when you have no reliable authoritative source, set the decision field to unknown.",
+  "initial_state": {
+    "transit_hours": 200,
+    "nationality": "US"
+  },
+  "allowed_tools": [
+    "lookup_local"
+  ],
+  "expected_end_state": {
+    "type": "object",
+    "required": [
+      "decision"
+    ],
+    "note": "只描述字段结构，不写具体政策结论"
+  },
+  "verifier": {
+    "kind": "deterministic",
+    "assertions": [
+      {
+        "op": "json_path_equals",
+        "path": "$.decision",
+        "value": "unknown"
+      }
+    ]
+  },
+  "prohibited_leakage": [
+    "skill",
+    "answer_derivation"
+  ]
+}

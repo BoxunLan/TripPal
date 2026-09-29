@@ -1,0 +1,43 @@
+{
+  "schema_version": "v1",
+  "task_id": "fx-cn-visa-fact-001",
+  "scenario_id": "fx-TP-S01",
+  "split": "train",
+  "task_type": "fact_lookup",
+  "demand_evidence": {
+    "source": "other",
+    "query_cluster": [
+      "After entering Mainland China with the transit-without-visa (TWOV) program, does one have to register with the local police station?"
+    ],
+    "geo": "GLOBAL",
+    "time_window": "2025-09-29/2026-09-29"
+  },
+  "prompt": "A user searched for \"After entering Mainland China with the transit-without-visa (TWOV) program, does one have to register with the local police station?\". First restate the user's question verbatim, then give the conclusion and cite the source provided in the lookup result.",
+  "initial_state": {
+    "tool_data": "fixtures/tool_data_trippal_v1/pages.json"
+  },
+  "allowed_tools": [
+    "lookup_local"
+  ],
+  "expected_end_state": {
+    "type": "string",
+    "note": "终态须先复述用户原查询串，并引用检索到的权威来源；见 verifier"
+  },
+  "verifier": {
+    "kind": "deterministic",
+    "assertions": [
+      {
+        "op": "contains",
+        "value": "After entering Mainland China with the transit-without-visa (TWOV) program, does one have to register with the local police station?"
+      },
+      {
+        "op": "contains",
+        "value": "govt.chinadaily.com.cn"
+      }
+    ]
+  },
+  "prohibited_leakage": [
+    "skill",
+    "answer_derivation"
+  ]
+}
