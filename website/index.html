@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A practical pre-trip readiness check for independent travel in China." />
+    <meta name="theme-color" content="#071827" />
+    <title>TripPal · China readiness check</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23071827'/%3E%3Cpath d='M7 18h18M16 7v18M10 12l6-5 6 5' fill='none' stroke='%23ff5a54' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='18' r='3.5' fill='%23a9daf4'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#check" aria-label="TripPal readiness check"><span class="brand-mark" aria-hidden="true">TP</span><span>TripPal</span></a>
+      <div class="topbar-meta">
+        <span>China readiness check</span>
+        <span id="save-status" class="status-pill">Draft saved on this device</span>
+        <div class="lang-switch" role="group" aria-label="Language / 语言">
+          <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        </div>
+      </div>
+    </header>
+    <main id="check" class="workspace">
+      <aside class="rail" aria-label="Assessment progress">
+        <p class="eyebrow">Your departure file</p>
+        <ol class="step-list">
+          <li class="active" data-step="0"><button type="button"><span>01</span><b>Trip basics</b><small>Route and timing</small></button></li>
+          <li data-step="1"><button type="button"><span>02</span><b>Connection</b><small>Phone and access</small></button></li>
+          <li data-step="2"><button type="button"><span>03</span><b>Money</b><small>Wallets and backup</small></button></li>
+          <li data-step="3"><button type="button"><span>04</span><b>Bookings</b><small>Stay and tickets</small></button></li>
+        </ol>
+        <div class="visual-strip"><img src="assets/trip-readiness-desk.png" alt="Passport, phone, travel documents and adapter prepared on a desk" /></div>
+        <div class="rail-note"><strong>Fix first</strong><p>TripPal puts difficult-to-recover gaps before ordinary travel tips.</p></div>
+      </aside>
+      <section class="question-panel">
+        <form id="trip-form" novalidate>
+          <section class="form-step active" data-step="0" aria-labelledby="step-0-title">
+            <div class="question-head"><div><p class="eyebrow">Step 1 of 4</p><h1 id="step-0-title">Let’s map your route.</h1></div><span class="time-estimate">About 4 min</span></div>
+            <p class="lede">Your route shapes entry checks, booking deadlines and what must happen before departure.</p>
+            <div class="field-grid">
+              <label><span>Passport nationality</span><select name="nationality" required><option value="">Choose one</option><option value="United States">United States</option><option value="Canada">Canada</option><option value="United Kingdom">United Kingdom</option><option value="Australia">Australia</option><option value="Singapore">Singapore</option><option value="Japan">Japan</option><option value="Other">Other</option></select></label>
+              <label><span>Arriving in</span><select name="arrival" required><option value="">Choose a city</option><option value="Beijing">Beijing</option><option value="Shanghai">Shanghai</option><option value="Guangzhou">Guangzhou</option><option value="Chengdu">Chengdu</option><option value="Shenzhen">Shenzhen</option><option value="Other city">Other city</option></select></label>
+              <label><span>Coming from</span><input name="origin" placeholder="e.g. Los Angeles" required /></label>
+              <label><span>Leaving for</span><input name="onward" placeholder="e.g. Tokyo" required /></label>
+              <label><span>Arrival date</span><input name="arrivalDate" type="date" required /></label>
+              <label><span>Length of stay</span><select name="stay"><option value="3">1–3 days</option><option value="7">4–7 days</option><option value="14">8–14 days</option><option value="30">15–30 days</option><option value="31">More than 30 days</option></select></label>
+            </div>
+            <div class="notice"><span aria-hidden="true">!</span><p><strong>TripPal does not issue visa decisions.</strong> Your plan will identify what needs official verification for your exact passport and route.</p></div>
+          </section>
+          <section class="form-step" data-step="1" aria-labelledby="step-1-title">
+            <div class="question-head"><div><p class="eyebrow">Step 2 of 4</p><h1 id="step-1-title">Will your phone work?</h1></div><span class="time-estimate">Connection</span></div>
+            <p class="lede">Data access and a Chinese phone number solve different problems. Tell us what you have arranged.</p>
+            <fieldset><legend>Primary connection plan</legend><div class="choice-grid">
+              <label class="choice"><input type="radio" name="connection" value="roaming" /><span><b>Carrier roaming</b><small>Keep your usual number</small></span></label>
+              <label class="choice"><input type="radio" name="connection" value="esim" /><span><b>Travel eSIM</b><small>Usually data only</small></span></label>
+              <label class="choice"><input type="radio" name="connection" value="local" /><span><b>Local SIM</b><small>Chinese number and data</small></span></label>
+              <label class="choice"><input type="radio" name="connection" value="none" /><span><b>Nothing yet</b><small>I still need a plan</small></span></label>
+            </div></fieldset>
+            <div class="toggle-stack">
+              <label class="toggle"><input type="checkbox" name="chinaNumber" /><span><b>I will have a +86 number</b><small>Useful for SMS verification and some local services</small></span></label>
+              <label class="toggle"><input type="checkbox" name="appsReady" /><span><b>Essential apps are installed and tested</b><small>Payment, local maps, translation and connection tools</small></span></label>
+              <label class="toggle"><input type="checkbox" name="offlineReady" /><span><b>I saved offline directions and bookings</b><small>Addresses, tickets and key screenshots work without data</small></span></label>
+            </div>
+          </section>
+          <section class="form-step" data-step="2" aria-labelledby="step-2-title">
+            <div class="question-head"><div><p class="eyebrow">Step 3 of 4</p><h1 id="step-2-title">Build a payment fallback.</h1></div><span class="time-estimate">Money</span></div>
+            <p class="lede">A wallet that appears configured can still fail. Independent backups matter more than a single perfect setup.</p>
+            <div class="field-grid">
+              <label><span>Mobile payment status</span><select name="wallet"><option value="none">Not set up</option><option value="started">Started, not verified</option><option value="one">One wallet tested</option><option value="two">Alipay and WeChat Pay tested</option></select></label>
+              <label><span>Usable physical bank cards</span><select name="cards"><option value="0">None</option><option value="1">One card</option><option value="2">Two or more cards</option></select></label>
+              <label><span>Main card network</span><select name="network"><option value="">Choose one</option><option value="Visa">Visa</option><option value="Mastercard">Mastercard</option><option value="American Express">American Express</option><option value="UnionPay">UnionPay</option><option value="Other">Other</option></select></label>
+              <label><span>Cash backup</span><select name="cash"><option value="no">No cash plan</option><option value="atm">I can withdraw RMB</option><option value="cash">I will carry some RMB</option></select></label>
+            </div>
+            <div class="principle"><span>3</span><p><strong>Three independent layers</strong><br />Mobile wallet · second card · RMB fallback</p></div>
+          </section>
+          <section class="form-step" data-step="3" aria-labelledby="step-3-title">
+            <div class="question-head"><div><p class="eyebrow">Step 4 of 4</p><h1 id="step-3-title">Stress-test your bookings.</h1></div><span class="time-estimate">Final step</span></div>
+            <p class="lede">The last check covers passport registration, timed attractions and arrival-day communication.</p>
+            <div class="field-grid">
+              <label><span>Accommodation type</span><select name="hotelType"><option value="chain">International or large hotel</option><option value="small">Small local hotel</option><option value="guesthouse">Guesthouse or homestay</option><option value="friends">Staying with friends</option><option value="none">Not booked yet</option></select></label>
+              <label><span>Passport check-in confirmed?</span><select name="hotelConfirmed"><option value="no">No written confirmation</option><option value="yes">Yes, confirmed in writing</option><option value="na">Not applicable</option></select></label>
+              <label><span>Popular timed attractions?</span><select name="attraction"><option value="no">No</option><option value="ready">Yes, booked or release date known</option><option value="unknown">Yes, not checked yet</option></select></label>
+              <label><span>Intercity train planned?</span><select name="train"><option value="no">No</option><option value="yes">Yes</option></select></label>
+              <label class="wide"><span>Accommodation name or Chinese address</span><input name="address" placeholder="Used to create your arrival card" /></label>
+            </div>
+            <label class="toggle final-confirm"><input type="checkbox" name="passportOriginal" /><span><b>I will carry my original passport on travel days</b><small>Copies and photos may not replace the original for identity checks</small></span></label>
+          </section>
+          <p id="form-error" class="form-error" role="alert"></p>
+          <div class="form-actions"><button id="back-button" class="button button-quiet" type="button" hidden>Back</button><button id="next-button" class="button button-primary" type="button">Continue to connection</button></div>
+        </form>
+      </section>
+      <aside class="signal-panel" aria-label="Live readiness preview">
+        <div class="signal-card"><p class="eyebrow">Browser preview</p><div class="score-row"><span id="live-score" class="score">—</span><span>Profile<br />coverage</span></div><div class="score-track"><span id="score-fill"></span></div><p id="score-copy" class="muted">This only checks form coverage. TripPal Skill makes the final assessment.</p></div>
+        <div id="preview-risks"></div>
+        <div class="signal-card compact route-card" aria-hidden="true"><span id="route-from">FROM</span><i></i><span id="route-city">CHINA</span><i></i><span id="route-next">NEXT</span></div>
+        <button id="reset-button" class="text-button" type="button">Reset this check</button>
+      </aside>
+    </main>
+    <section id="skill-handoff" class="skill-handoff" hidden aria-live="polite">
+      <div class="handoff-card">
+        <p class="eyebrow">TripPal Skill handoff</p>
+        <div class="handoff-status"><span aria-hidden="true"></span><b>Travel profile ready</b></div>
+        <h1>Your answers are ready for Skill analysis.</h1>
+        <p class="lede">The webpage has packaged your choices into a structured travel profile. TripPal Skill can now read it, verify time-sensitive rules and return the finished plan here.</p>
+        <ol class="handoff-steps">
+          <li><span>01</span><div><b>Profile submitted</b><small id="handoff-id">Submission prepared on this device</small></div></li>
+          <li><span>02</span><div><b>Ask TripPal to analyze this page</b><small>In the assistant, say “Use TripPal to analyze my submitted profile.”</small></div></li>
+          <li><span>03</span><div><b>Result returns here</b><small>The Skill writes risks, actions and official checks back to this page.</small></div></li>
+        </ol>
+        <div class="handoff-actions">
+          <button id="handoff-edit-button" class="button button-quiet" type="button">Edit answers</button>
+          <button id="copy-profile-button" class="button button-primary" type="button">Copy profile for TripPal</button>
+        </div>
+        <p id="handoff-note" class="handoff-note">Waiting for TripPal Skill. Keep this page open.</p>
+      </div>
+    </section>
+    <section id="results" class="results" hidden aria-live="polite">
+      <header class="result-hero"><div><p class="eyebrow">TripPal Skill assessment</p><h1><span id="result-score">0</span><small>/100</small></h1><p id="result-summary"></p><span id="skill-result-meta" class="skill-result-meta"></span></div><div class="hero-route"><span id="result-route">Your route</span><b id="result-date">Departure file</b></div></header>
+      <nav class="result-nav" aria-label="Readiness plan sections"><a href="#risks">Risks</a><a href="#actions">Action plan</a><a href="#official-checks">Official checks</a><a href="#offline">Offline cards</a><button id="print-button" type="button">Print / Save PDF</button></nav>
+      <div class="result-body">
+        <section id="risks"><div class="section-heading"><p class="eyebrow">01 · What could break</p><h2>Your risk register</h2></div><div id="risk-list" class="risk-list"></div></section>
+        <section id="actions"><div class="section-heading"><p class="eyebrow">02 · What to do</p><h2>Action plan</h2></div><div id="action-groups" class="action-groups"></div></section>
+        <section id="official-checks"><div class="section-heading"><p class="eyebrow">03 · Time-sensitive</p><h2>Official checks</h2></div><div id="official-check-list" class="official-check-list"></div><div id="assumption-list" class="assumption-list"></div></section>
+        <section id="offline"><div class="section-heading"><p class="eyebrow">04 · Keep on your phone</p><h2>Offline cards</h2></div><div class="offline-grid">
+          <article class="offline-card"><span>SHOW A DRIVER</span><h3 data-no-translate>Please take me to this address.</h3><p class="zh">请带我去这个地址。</p><div id="offline-address" class="card-fill">Add your hotel address in the check.</div></article>
+          <article class="offline-card"><span>PAYMENT HELP</span><h3 data-no-translate>My mobile payment failed. Can I pay another way?</h3><p class="zh">我的手机支付失败了，可以用其他方式付款吗？</p></article>
+          <article class="offline-card"><span>HOTEL CHECK-IN</span><h3 data-no-translate>I am checking in with a foreign passport.</h3><p class="zh">我使用外国护照办理入住。</p></article>
+        </div></section>
+        <footer class="result-footer"><p>This assessment was generated by TripPal Skill from your submitted profile. Time-sensitive conclusions should include an official source and check date.</p><div><button id="edit-button" class="button button-quiet" type="button">Edit answers</button><button id="result-reset-button" class="button button-primary" type="button">Start a new check</button></div></footer>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
