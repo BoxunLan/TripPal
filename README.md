@@ -13,7 +13,7 @@ TripPal combines a travel-readiness intake website with a Codex Skill that turns
 | 轨道 | 谁 | 怎么跑 | 拿到什么 |
 |---|---|---|---|
 | **小模型轨** | 本端（BoxunLan） | 本地 LM Studio + MiniCPM5 2.6B（16K 上下文），跑评测任务集 | 每张任务的 `verdict` + `trace` + 逐条断言结果 |
-| **大模型轨** | 协作者（zying333） | 调 API 用大模型跑**同一批**任务集 | 同上，用于对照 |
+| **大模型轨** | 协作者 | 调 API 用大模型跑**同一批**任务集 | 同上，用于对照 |
 
 两条轨**跑同一份任务集**（329 张，见下），跑完**分别分析轨迹**，再合起来确认 SKILL 的产品架构。
 
