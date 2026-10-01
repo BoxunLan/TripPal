@@ -27,13 +27,23 @@ $env:LLM_MODEL    = "<模型名>"
 
 # 全量 329 张（4 路并行；大模型可把 Jobs 调大）
 & .\integration\pipeline\run_v2_parallel.ps1 -Pack modules/demand-task-factory/out-v2/task_pack.jsonl `
-    -Out "$env:TEMP\v2-big -ExperimentId v2-big" -Jobs 4 -Runs 1
+    -Out "$env:TEMP\v2-big" -ExperimentId v2-big -Jobs 4 -Runs 1 -MaxTokens 4096 -TimeoutSeconds 180
 
 # 或走完整闭环（A 造题 → B 跑 → C 提案/回归门 → 收口）
 & .\.venv\Scripts\python.exe integration\pipeline\run_live.py --runs 1
 ```
 
-> 也可以把端点写进 `skill-loop/.env`（`TRAVEL_LLM_BASE_URL` / `TRAVEL_LLM_API_KEY` / `TRAVEL_GENERATOR_MODEL` / `TRAVEL_EXECUTOR_MODEL`），该文件不入库。
+> **预算建议**：`-MaxTokens 4096 -TimeoutSeconds 180` 是本项目实测可用的配置
+> （推理模型的 reasoning 会吃掉预算；预算不够会被如实记为 `execution_defect`，不会静默通过）。
+> `-Jobs` 数量 = 端点并发槽位；超过槽位不会更快。
+>
+> 也可以把端点写进 `skill-loop/.env`（键名：`TRAVEL_LLM_BASE_URL` / `TRAVEL_LLM_API_KEY` /
+> `TRAVEL_GENERATOR_MODEL`，或 `TRAVEL_CLASSIFIER_MODEL`），该文件已被 `.gitignore` 忽略、不会进库。
+>
+> 结果写在 `-Out` 目录下：`runs/<experiment>/<condition>/<task_id>/<run_n>/{verdict,trace}.json`
+> 与 `artifacts/answer.json`（内含**逐条断言**结果），再加 `summary.json` / `report.md`。
+> **调用失败**（端点不可达、超时、预算截断）会落 `artifacts/error.txt` 并记成 `execution_defect` ——
+> 这类失败**不算** `knowledge_gap`，不会被 SKILL 学习线当成"知识缺口"。
 
 ### 现在就能用的任务集（v2）
 

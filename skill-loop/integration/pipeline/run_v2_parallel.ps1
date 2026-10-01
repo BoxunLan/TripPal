@@ -44,6 +44,11 @@ $runRoot = Join-Path $Out "runs"
 $jobList = @()
 for ($i = 0; $i -lt $Jobs; $i++) {
   $slice = Join-Path $Out "pack$i.jsonl"
+  # Empty slices are skipped: when the pack has fewer cards than Jobs, split_pack.mjs
+  # leaves empty packN.jsonl files, the runner then dies with FileNotFoundError, and the
+  # job still reports State=Completed -- i.e. the whole batch fails silently.
+  if (-not (Test-Path $slice)) { continue }
+  if ((Get-Item $slice).Length -eq 0) { continue }
   $jobList += Start-Job -ScriptBlock {
     param($wd, $py, $slice, $runRoot, $Runs, $MaxTokens, $TimeoutSeconds, $ExperimentId, $Condition, $Skill)
     Set-Location $wd
@@ -58,6 +63,8 @@ for ($i = 0; $i -lt $Jobs; $i++) {
     if ($Skill -ne "") { $extra = @("--skill", $Skill) }
     & $py -m execution_evaluation run --task-pack $slice --condition $Condition --runs $Runs `
         --experiment-id $ExperimentId --out $runRoot @extra 2>&1 | Select-Object -Last 2
+    # Surface failures: otherwise a crashed runner looks like a successful job.
+    if ($LASTEXITCODE -ne 0) { throw "runner exited $LASTEXITCODE for $slice" }
   } -ArgumentList $wd, $py, $slice, $runRoot, $Runs, $MaxTokens, $TimeoutSeconds, $ExperimentId, $Condition, $Skill
 }
 
