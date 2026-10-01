@@ -12,6 +12,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -22,6 +23,7 @@ from . import trippal as trippal_mod
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_ROUTING = REPO_ROOT / "fixtures" / "trippal_v1" / "scenario_routing.json"
+DEFAULT_V2_PAGES = REPO_ROOT / "fixtures" / "tool_data_trippal_v2" / "pages.json"
 
 
 def _default_trippal_root() -> Path:
@@ -85,6 +87,11 @@ def main(argv=None) -> int:
     p_val.add_argument("--schema", required=True)
     p_val.add_argument("--data", required=True)
 
+    p_v2 = sub.add_parser("build-dataset-v2", help="产出 dataset v2（规则/产物/工具决策/拒答四族 + 质量门）")
+    p_v2.add_argument("--out", required=True, help="task_pack.jsonl / dataset_report.json 的输出目录")
+    p_v2.add_argument("--pages", default=str(DEFAULT_V2_PAGES), help="产出的 v2 检索页面夹具")
+    p_v2.add_argument("--no-write-pages", action="store_true", help="只读现有页面夹具，不重写")
+
     args = ap.parse_args(argv)
 
     if args.cmd == "build":
@@ -107,6 +114,17 @@ def main(argv=None) -> int:
         )
     if args.cmd == "validate":
         return contracts.main(["--schema", args.schema, "--data", args.data])
+    if args.cmd == "build-dataset-v2":
+        from . import dataset_v2  # 延迟导入：v1 路径不受影响
+
+        report = dataset_v2.build_dataset_v2(
+            Path(args.out), Path(args.pages), write_pages=not args.no_write_pages
+        )
+        print(json.dumps(report["counts"], ensure_ascii=False, indent=2))
+        for line in report["failures"]:
+            print(f"[gate] {line}")
+        print(f"[build-dataset-v2] gates_ok={report['ok']}")
+        return 0 if report["ok"] else 3
     return 2
 
 

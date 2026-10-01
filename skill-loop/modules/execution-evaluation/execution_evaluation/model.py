@@ -61,6 +61,11 @@ class HttpModel:
                 {"role": "user", "content": prompt},
             ],
         }
+        # 固定 seed：temperature=0 在 llama.cpp 下也不完全确定（KV 复用/批处理会引入漂移），
+        # 而基准评测需要"同输入同判定"。可用 LLM_SEED 覆盖或置空关闭。
+        seed = os.environ.get("LLM_SEED", "0")
+        if seed != "":
+            body["seed"] = int(seed)
         req = urllib.request.Request(
             f"{self.base_url}/chat/completions",
             data=json.dumps(body).encode("utf-8"),
@@ -83,13 +88,22 @@ class HttpModel:
 
         try:
             payload = json.loads(raw)
-            text = payload["choices"][0]["message"]["content"]
+            choice = payload["choices"][0]
+            message = choice["message"]
+            text = message["content"]
             usage = payload.get("usage", {})
+            finish_reason = choice.get("finish_reason") or ""
+            reasoning = message.get("reasoning_content") or ""
         except (KeyError, IndexError, ValueError, TypeError) as exc:
             raise ModelParseError(f"响应解析失败: {raw[:200]}") from exc
         return text, {
             "input_tokens": int(usage.get("prompt_tokens", 0)),
             "output_tokens": int(usage.get("completion_tokens", 0)),
+            # 推理模型的三件套：截断原因、思考 token 数、思考字符数。
+            # 旧版只取 message.content，于是「预算耗尽」和「模型答错」在轨迹里长得一样。
+            "finish_reason": finish_reason,
+            "reasoning_tokens": int((usage.get("completion_tokens_details") or {}).get("reasoning_tokens", 0)),
+            "reasoning_chars": len(reasoning),
         }
 
 
@@ -97,11 +111,15 @@ def build_model(cfg: dict):
     api_key = os.environ.get("LLM_API_KEY", "").strip()
     if not api_key:
         return FakeModel()
+    # 推理模型会把预算烧在 reasoning 上，所以允许用 LLM_MAX_TOKENS / LLM_TIMEOUT_SECONDS
+    # 临时抬高预算与超时，而不改配置文件（本地 2.6B 模型实测会撞 60s 上限）。
+    max_tokens = int(os.environ.get("LLM_MAX_TOKENS") or cfg["max_tokens"])
+    timeout = float(os.environ.get("LLM_TIMEOUT_SECONDS") or cfg["timeout_seconds"])
     return HttpModel(
         base_url=os.environ.get("LLM_BASE_URL", "").strip() or "https://api.openai.com/v1",
         api_key=api_key,
         model=os.environ.get("LLM_MODEL", "").strip() or "gpt-4o-mini",
         temperature=cfg["temperature"],
-        max_tokens=int(cfg["max_tokens"]),
-        timeout=float(cfg["timeout_seconds"]),
+        max_tokens=max_tokens,
+        timeout=timeout,
     )

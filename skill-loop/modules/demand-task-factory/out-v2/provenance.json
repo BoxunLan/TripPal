@@ -1,0 +1,8 @@
+{
+  "generator": "dataset_v2",
+  "rule_count": 19,
+  "pages": 38,
+  "pack_sha256": "7b8753d1f656214c09c7e12703aae145dc82ace83e411d9a15f08ed454f42e03",
+  "pages_sha256": "3495be95cfb3d099291637be08c31055d0ed55601d4cbc88161197a54719145f",
+  "source_corpus": "research\\raw\\web"
+}

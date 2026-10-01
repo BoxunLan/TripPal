@@ -75,11 +75,18 @@ def extract_json(text: str):
     return None
 
 
+def now_ts() -> str:
+    """每步真实时间戳。旧版是常量 `2026-09-29T10:00:00+08:00`，轨迹里看不出耗时与先后。"""
+    from datetime import datetime, timezone
+
+    return datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
+
+
 def _row(step, ts, action, observation, decision, skipped, cost, artifact=""):
     return {
         "schema_version": "v1",
         "step": step,
-        "timestamp": ts,
+        "timestamp": now_ts(),
         "action": action,
         "observation": observation,
         "decision": decision,
@@ -89,12 +96,21 @@ def _row(step, ts, action, observation, decision, skipped, cost, artifact=""):
     }
 
 
-def cost(input_tokens=0, output_tokens=0, tool_calls=0):
-    return {
+def cost(input_tokens=0, output_tokens=0, tool_calls=0, synthetic=False):
+    """一步的 token 成本。
+
+    `synthetic=True` 表示这一步**没有真的调用模型**，数字是常量占位
+    （read_task / lookup_local 两步就是这样）。报告里必须与真实 token 分开统计，
+    否则 avg_tokens / efficiency / 成本回归门都建立在混合值上。
+    """
+    out = {
         "input_tokens": int(input_tokens),
         "output_tokens": int(output_tokens),
         "tool_calls": int(tool_calls),
     }
+    if synthetic:
+        out["synthetic"] = True
+    return out
 
 
 def retrieval_block(query: str, tool_result: dict | None) -> str:
@@ -142,7 +158,7 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
 
     rows = []
     ts = "2026-09-29T10:00:00+08:00"
-    rows.append(_row(1, ts, "read_task", f"task={task['task_id']}", "开始执行", "", cost(120, 8)))
+    rows.append(_row(1, ts, "read_task", f"task={task['task_id']}", "开始执行", "", cost(120, 8, synthetic=True)))
 
     query = (task.get("demand_evidence") or {}).get("query_cluster") or [""]
     tool_result = None
@@ -163,7 +179,7 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
                 obs,
                 "按工具返回值决定下一步" if tool_result["text"] else "没有命中，改走模型自身知识",
                 "" if tool_result["text"] else "跳过了「先确认权威来源」这一步",
-                cost(60, 10, 1),
+                cost(60, 10, 1, synthetic=True),
                 "artifacts/lookup.json",
             )
         )
@@ -205,11 +221,24 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
 
     if status is None:
         parsed = extract_json(text)
-        if verifier.needs_json(task) and parsed is None:
+        finish = str((usage or {}).get("finish_reason") or "")
+        if finish == "length" and (not text.strip() or parsed is None):
+            # 推理模型（reasoning tokens 占大头）常在预算耗尽前吐不出 JSON。
+            # 这是"预算不够"，不是"模型不会"，更不是知识缺口 —— 必须单独定位。
             status, attribution = "error", "execution_defect"
-            last_error = "响应里抽不出 JSON，不重试解析"
+            last_error = (
+                f"输出被 max_tokens 截断（finish_reason=length, out={usage.get('output_tokens')}, "
+                f"reasoning={usage.get('reasoning_tokens')}）：failure_kind=budget_exhausted，提高预算后重跑"
+            )
             rows.append(
-                _row(3, ts, "answer", text[:200], "响应解析失败，按 execution_defect 落盘", "", cost(usage["input_tokens"], usage["output_tokens"]))
+                _row(3, ts, "answer", text[:200] or "<空响应>", last_error, "提高 max_tokens 后重跑",
+                     cost(usage["input_tokens"], usage["output_tokens"]))
+            )
+        elif verifier.needs_json(task) and parsed is None:
+            status, attribution = "error", "execution_defect"
+            last_error = "响应里抽不出 JSON，不重试解析：failure_kind=format_contract"
+            rows.append(
+                _row(3, ts, "answer", text[:200], "响应解析失败，按 execution_defect 落盘（failure_kind=format_contract）", "", cost(usage["input_tokens"], usage["output_tokens"]))
             )
         else:
             results = verifier.evaluate(task["verifier"]["assertions"], text, parsed)
@@ -225,9 +254,18 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
             # 工具命中了数据却仍然失败 → 知识缺（唯一该写 skill 的一支）；
             # 数据本身就没有 → missing_tool_or_data（写 skill 无用）。
             data_available = bool((tool_result or {}).get("text"))
-            attribution = "none" if passed else (
-                "knowledge_gap" if data_available else "missing_tool_or_data"
+            cjk = sum(1 for ch in text if "\u4e00" <= ch <= "\u9fff")
+            language_mismatch = bool(text) and cjk / max(1, len(text)) > 0.15 and any(
+                r["op"] in ("regex", "contains") and not r["passed"] for r in results
             )
+            if passed:
+                attribution = "none"
+            elif language_mismatch:
+                # 输出语言不符（英文题面答中文）是契约问题，不是知识缺口。
+                attribution = "execution_defect"
+                fail_reason = ("输出语言不符（failure_kind=language_mismatch）：" + fail_reason)[:160]
+            else:
+                attribution = "knowledge_gap" if data_available else "missing_tool_or_data"
             rows.append(
                 _row(
                     3,
@@ -342,11 +380,19 @@ def run(task_pack, condition, runs, experiment_id, out_root, skill=None, config_
         "condition": condition,
         "model": model.name,
         "temperature": cfg["temperature"],
-        "timeout_seconds": cfg["timeout_seconds"],
-        "max_tokens": cfg["max_tokens"],
+        # 记**真实生效**的预算：build_model 支持 LLM_MAX_TOKENS / LLM_TIMEOUT_SECONDS 覆盖，
+        # 只写 cfg 默认值会让 manifest 撒谎（实测用 4096/180 跑，manifest 却写 2000/60）。
+        # 用 getattr 容忍测试里的 FakeModel（它只实现 name/complete，没有预算属性）。
+        "timeout_seconds": getattr(model, "timeout", None) or cfg["timeout_seconds"],
+        "max_tokens": getattr(model, "max_tokens", None) or cfg["max_tokens"],
+        "config_timeout_seconds": cfg["timeout_seconds"],
+        "config_max_tokens": cfg["max_tokens"],
         "tool_snapshot": tool_snapshot_for(tasks),
         "skill_snapshot": skill_snapshot,
+        # 注意：这是**本次运行实际消费的那个文件**的摘要；4 路并行时是切片文件（pack0.jsonl…），
+        # 不是完整数据集包的摘要。数据集包的摘要在 out-v2/provenance.json 的 pack_sha256。
         "task_pack_sha256": sha256_file(task_pack),
+        "task_pack_path": str(task_pack).replace("\\", "/"),
     }
 
     base = Path(out_root) / experiment_id / condition

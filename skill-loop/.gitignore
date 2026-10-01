@@ -25,3 +25,7 @@ _verify_*/
 .env
 .env.*
 !.env.example
+
+
+# run_once step 3 scratch copies (regenerable, never commit)
+integration/tmp/

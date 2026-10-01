@@ -1,0 +1,121 @@
+{
+  "gates": {
+    "G1_schema_v2": {
+      "cards": 329,
+      "invalid": 0,
+      "examples": []
+    },
+    "G2_unique": {
+      "dup_task_id": 0,
+      "dup_prompt_verifier": 0
+    },
+    "G3_balance": {
+      "per_family": {
+        "A": {
+          "cards": 36,
+          "distinct_prompts": 19,
+          "ratio": 0.528,
+          "max_cards_per_prompt": 2
+        },
+        "B": {
+          "cards": 130,
+          "distinct_prompts": 130,
+          "ratio": 1.0,
+          "max_cards_per_prompt": 1
+        },
+        "C": {
+          "cards": 80,
+          "distinct_prompts": 80,
+          "ratio": 1.0,
+          "max_cards_per_prompt": 1
+        },
+        "D": {
+          "cards": 39,
+          "distinct_prompts": 39,
+          "ratio": 1.0,
+          "max_cards_per_prompt": 1
+        },
+        "E": {
+          "cards": 20,
+          "distinct_prompts": 20,
+          "ratio": 1.0,
+          "max_cards_per_prompt": 1
+        },
+        "F": {
+          "cards": 24,
+          "distinct_prompts": 24,
+          "ratio": 1.0,
+          "max_cards_per_prompt": 1
+        }
+      },
+      "family_B_decisions": {
+        "use_visa": 20,
+        "eligible": 51,
+        "not_eligible": 59
+      }
+    },
+    "G4_substantive": {
+      "weak_cards": 0,
+      "examples": []
+    },
+    "G5_evidence": {
+      "missing_page_refs": 0,
+      "short_pages": 0,
+      "pages": 38,
+      "pages_with_effective_date": 35
+    },
+    "G6_leakage": {
+      "leaked": 0,
+      "examples": []
+    },
+    "G7_group_split": {
+      "groups": 66,
+      "leaky_groups": 0,
+      "examples": []
+    },
+    "G8_grounded": {
+      "ungrounded": 0,
+      "examples": []
+    },
+    "G9_solvable": {
+      "unsolvable": 0,
+      "examples": []
+    }
+  },
+  "counts": {
+    "total": 329,
+    "by_type": {
+      "fact_lookup": 75,
+      "conditional_decision": 174,
+      "artifact_card": 80
+    },
+    "by_family": {
+      "A": 36,
+      "B": 130,
+      "C": 80,
+      "D": 39,
+      "E": 20,
+      "F": 24
+    },
+    "by_split": {
+      "train": 244,
+      "holdout": 85
+    },
+    "by_scenario": {
+      "TP-S01": 140,
+      "TP-S02": 8,
+      "TP-S03": 8,
+      "TP-S04": 28,
+      "TP-S05": 20,
+      "TP-S06": 8,
+      "TP-S07": 10,
+      "TP-S08": 10,
+      "TP-S09": 8,
+      "TP-S10": 8,
+      "TP-S11": 10,
+      "TP-S12": 71
+    }
+  },
+  "failures": [],
+  "ok": true
+}

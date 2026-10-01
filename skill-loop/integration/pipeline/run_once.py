@@ -63,6 +63,11 @@ def select_variant(name: str) -> str:
     VARIANT = name if name in VARIANT_SPECS else DEFAULT_VARIANT
     spec = VARIANT_SPECS[VARIANT]
     A_OUT = spec["a_out"]
+    # TSD_A_OUT：把 A 线产物目录整体指到别处（例如 dataset v2 的 out-v2，或一个子集包），
+    # 用同一套编排跑不同的数据集，而不用改 VARIANT_SPECS。
+    override = os.environ.get("TSD_A_OUT", "").strip()
+    if override:
+        A_OUT = Path(override).resolve()
     TASK_PACK = A_OUT / "task_pack.jsonl"
     SCENARIO_CATALOG = A_OUT / "scenario_catalog.jsonl"
     PROVENANCE = A_OUT / "provenance.json"
@@ -166,15 +171,26 @@ def step1_validate_task_pack() -> int:
         log("    ✗ 缺 task_pack.jsonl，已写 blocker，退出码 2")
         return 2
 
-    # 用 B 线的校验器跑 task schema（三线各有副本，这里借 B 的入口）
+    # 用 B 线的校验器跑 task schema（三线各有副本，这里借 B 的入口）。
+    # 契约按任务包**自报的 schema_version** 选：v1 冻结、v2 已启用（dataset v2，见 docs/dataset-v2.md）。
+    # 否则 v2 包会被 v1 schema 判成非法，第 1 步直接 exit 2，数据集根本跑不进编排。
+    pack_version = "v1"
+    try:
+        first_line = next(l for l in TASK_PACK.read_text(encoding="utf-8").splitlines() if l.strip())
+        pack_version = str(json.loads(first_line).get("schema_version", "v1"))
+    except Exception:
+        pass
+    schema_arg = REPO / "contracts" / pack_version / "task.schema.json"
+    if not schema_arg.is_file():
+        schema_arg = Path("task")
     proc = run_module(
-        ["execution_evaluation", "validate", "--schema", "task", "--data", str(TASK_PACK)]
+        ["execution_evaluation", "validate", "--schema", str(schema_arg), "--data", str(TASK_PACK)]
     )
     if proc.returncode != 0:
         log(f"    ✗ task_pack 不合法：{proc.stderr.strip()[:300]}")
         return 2
     rows = load_jsonl(TASK_PACK)
-    log(f"    ✓ {len(rows)} 张任务卡通过 task schemav1；B 可以启动")
+    log(f"    ✓ {len(rows)} 张任务卡通过 task schema {pack_version}；B 可以启动")
     return 0
 
 
@@ -328,6 +344,25 @@ def step6_regress(has_candidate: bool) -> int:
         return 2
     report = json.loads((C_OUT / "evaluation_report.json").read_text(encoding="utf-8"))
     log(f"    ✓ conclusion={report['conclusion']}（退出码仍是 0，CI 要读这个字段）")
+
+    # 第二道检查（可选，TSD_PATTERN_GATE=1 时启用）：**按模式**回归门。
+    # 为什么需要：全局 holdout pass@3 可能上升，而某一整类能力已经崩掉
+    # （实测：候选 SKILL 让 holdout 0.25→0.375，同时 V2B-already_holds_visa 13/19→0/19）。
+    # 默认不启用、不改变 conclusion 与退出码，只写报告并打印标记。
+    if os.environ.get("TSD_PATTERN_GATE", "").strip() == "1" and has_candidate:
+        tool = REPO / "integration" / "pipeline" / "pattern_regress.py"
+        out_md = C_OUT / "pattern_regression.md"
+        proc = subprocess.run(
+            [sys.executable, str(tool), "--baseline", str(LIVE_BASELINE),
+             "--candidate", str(LIVE_CANDIDATE), "--out", str(out_md)],
+            cwd=str(REPO), capture_output=True, text=True, encoding="utf-8",
+        )
+        if proc.returncode == 0:
+            log(f"    · 按模式回归门：无按模式回归（{out_md.name}）")
+        elif proc.returncode == 1:
+            log(f"    ⚠ 按模式回归门：发现按模式回归，详见 {out_md.name}")
+        else:
+            log(f"    · 按模式回归门：工具异常 rc={proc.returncode} {(proc.stderr or '').strip()[:200]}")
     return 0
 
 
@@ -338,20 +373,30 @@ def closeout() -> bool:
     ok = True
 
     prov = json.loads(PROVENANCE.read_text(encoding="utf-8"))
-    hash_ok = prov["input_sha256"] == sha256_file(DEMAND_INPUT)
-    records = load_jsonl(DEMAND_INPUT)
-    leaked = [k for r in records for k in r if k in BROWSER_FIELD_DENYLIST]
-    log(f"  1. provenance 输入哈希对得上快照：{hash_ok}；需求记录无浏览器历史字段：{not leaked}")
-    ok &= hash_ok and not leaked
+    records = load_jsonl(DEMAND_INPUT) if DEMAND_INPUT.exists() else []
+    if "input_sha256" in prov:
+        hash_ok = prov["input_sha256"] == sha256_file(DEMAND_INPUT)
+        leaked = [k for r in records for k in r if k in BROWSER_FIELD_DENYLIST]
+        log(f"  1. provenance 输入哈希对得上快照：{hash_ok}；需求记录无浏览器历史字段：{not leaked}")
+        ok &= hash_ok and not leaked
+    else:
+        # dataset v2 的任务卡直接由语料生成（不 join v1 的需求记录），provenance 不含 input_sha256。
+        # 不伪造这个字段，改为核对它真正声明的 pack 哈希；缺字段也不许崩。
+        pack_ok = bool(prov.get("pack_sha256")) and prov["pack_sha256"] == sha256_file(TASK_PACK)
+        log(f"  1. provenance 未声明 input_sha256（v2 直生语料）→ 跳过输入对拍；pack_sha256 与产物一致：{pack_ok}")
+        ok &= pack_ok
 
-    known = {r["record_id"] for r in records}
-    bad = [
-        s["scenario_id"]
-        for s in load_jsonl(SCENARIO_CATALOG)
-        if not set(s["evidence_record_ids"]) <= known
-    ]
-    log(f"  2. 每条 scenario 的 evidence_record_ids 都能在需求记录里找到：{not bad}")
-    ok &= not bad
+    if SCENARIO_CATALOG.exists() and records:
+        known = {r["record_id"] for r in records}
+        bad = [
+            s["scenario_id"]
+            for s in load_jsonl(SCENARIO_CATALOG)
+            if not set(s["evidence_record_ids"]) <= known
+        ]
+        log(f"  2. 每条 scenario 的 evidence_record_ids 都能在需求记录里找到：{not bad}")
+        ok &= not bad
+    else:
+        log("  2. 未产出 scenario_catalog.jsonl / 需求记录（v2 的凭据挂在卡内 demand_evidence 上）→ 跳过")
 
     manifests = [
         json.loads(p.read_text(encoding="utf-8"))
