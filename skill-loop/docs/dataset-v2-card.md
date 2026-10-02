@@ -6,7 +6,7 @@
 
 ## 1. 这是什么
 
-面向**入境中国的外国游客**的评测任务集：329 张任务卡，覆盖 12 个真实出行场景（签证入境、景区票务、
+面向**入境中国的外国游客**的评测任务集：332 张任务卡，覆盖 12 个真实出行场景（签证入境、景区票务、
 城际交通、市内出行、住宿登记、支付、联网、餐饮、安全应急、超期与处罚等）。
 
 用途有两个，且都必须成立：
@@ -18,16 +18,17 @@
 
 | 族 | 张数 | 任务类型 | 考什么 | 判据的实质部分 |
 |---|---|---|---|---|
-| **A 有据事实答** | 36 | `fact_lookup` | 在官方长答复里定位并**逐字引用**事实 + 写出页面日期 | 页面正文的精确子串（关键短语）+ 日期 + 来源 URL |
+| **A 有据事实答** | 39 | `fact_lookup` | 在官方长答复里定位并**逐字引用**事实 + 写出页面日期 | 页面正文的精确子串（关键短语）+ 日期 + 来源 URL |
 | **B 规则应用** | 130 | `conditional_decision` | 读规则页后判 `eligible / not_eligible / use_visa` | 决策值 + 必须写出**管辖条款**（正则）+ 来源 |
 | **C 产物卡** | 80 | `artifact_card` | 产出可用清单（10 个模板 × 8 个画像） | 每条**必需项**的正则（缺一项就不算过） |
 | **D 拒答** | 39 | `fact_lookup` | 来源没回答时**如实说不知道** | `answered=false` + 说明证据不足 + `not_contains` 禁套用别的规则 |
 | **E 工具决策** | 20 | `fact_lookup` | 判断"要不要去查来源、查什么" | `use_tool` 布尔 + 查询词正则 |
 | **F 到达后动作** | 24 | `conditional_decision` | 读票务/铁路规则后判"下一步做什么" | `action` 值 + 必须点名管辖条款 + 来源 |
 
-- 类型分布：`fact_lookup` 75 / `conditional_decision` 174 / `artifact_card` 80
-- 切分：**train 244 / holdout 85**（分组切分：同一规则/同一页/同一模板不会跨切分）
-- 证据页：32 页（29 页带生效日期），全部来自真实语料（`research/raw/clean/`）
+- 类型分布：`fact_lookup` 78 / `conditional_decision` 174 / `artifact_card` 80
+- 切分：**train 244 / holdout 88**（分组切分：同一规则/同一页/同一模板不会跨切分）
+- 证据页：40 页（37 页带生效日期），全部来自仓库中的真实语料
+- 当前产物：`pack_sha256 = 718cc2a6…`
 
 ## 3. 判据与质量门（生成期强制，不过门就不出包）
 
@@ -43,8 +44,8 @@
 | **G8 逐字有据** | 实质断言在它所引用的页面里**找不到**（曾抓出 17 条：片段被压平而页面没压平） |
 | **G9 题目可解** | 判据自相矛盾、任何模型都不可能过（曾抓出 84 张：断言含引号→JSON 转义后永远匹配不上；`not_contains` 禁了被引 URL 里的关键词） |
 
-G8/G9 是这套数据集"值得信"的核心：**有据**由 G8 保证，**可解**由 G9 保证。测试里都固化了
-（`modules/demand-task-factory/tests/test_dataset_v2.py`，共 192 个测试）。
+G8/G9 是这套数据集"值得信"的核心：**有据**由 G8 保证，**可解**由 G9 保证。对应的回归检查固化在
+`modules/demand-task-factory/tests/test_dataset_v2.py`。
 
 ## 4. 可复现
 
@@ -57,7 +58,13 @@ $env:PYTHONPATH=''; $env:PYTHONIOENCODING='utf-8'
 
 # 跑评测（4 路并行）
 & .\integration\pipeline\run_v2_parallel.ps1 -Pack modules/demand-task-factory/out-v2/task_pack.jsonl `
-    -Out "$env:TEMP\v2-run" -Jobs 4 -Runs 1 -MaxTokens 4096 -TimeoutSeconds 180 -ExperimentId v2
+    -Out "$env:TEMP\v2-run" -Jobs 4 -Runs 1 -MaxTokens 12288 -TimeoutSeconds 180 -ExperimentId v2
+
+# 只重跑指定旧运行中没有任何一次通过的任务
+& .\integration\pipeline\run_v2_parallel.ps1 -Pack modules/demand-task-factory/out-v2/task_pack.jsonl `
+    -FailedFrom "$env:TEMP\v2-old\runs\<experiment>\<condition>" `
+    -Out "$env:TEMP\v2-failed-only" -Jobs 4 -Runs 1 -MaxTokens 12288 -TimeoutSeconds 180 `
+    -ExperimentId v2-failed-only
 
 # 走完整闭环（A→B→C→回归门→收口）
 $env:TSD_A_OUT = (Resolve-Path modules\demand-task-factory\out-v2).Path
@@ -76,7 +83,8 @@ $env:TSD_A_OUT = (Resolve-Path modules\demand-task-factory\out-v2).Path
 
 | 工具 | 用途 |
 |---|---|
-| `run_v2_parallel.ps1` | 多路并行跑任务包（`-Jobs` / `-Runs` / `-Skill` / `-Condition`） |
+| `run_v2_parallel.ps1` | 多路并行跑任务包；`-FailedFrom` 可只选旧运行中未通过的任务 |
+| `select_failed_tasks.py` | 从旧 verdict 树生成失败任务子集及可审计 manifest |
 | `split_pack.mjs` | 轮转切分任务包（保证每片都含各族） |
 | `pattern_regress.py` | **按模式**回归门：抓"全局不退步、某类能力崩掉"（退出码 1 可直接进 CI） |
 | `check-determinism.mjs` | 同卡多次重复的判定一致性检查 |
@@ -85,9 +93,9 @@ $env:TSD_A_OUT = (Resolve-Path modules\demand-task-factory\out-v2).Path
 
 ## 5. 已知局限（用之前必须知道）
 
-1. **只有一个小模型**（MiniCPM5 2.6B / Q4_K_M，16K 上下文）。已证明"题目可解 + 小模型做不到"，
-   但**没有一个更强的模型来证明分数会随能力上升** —— 这是目前最大的证据缺口。
-2. **场景分布偏斜是有意的**：TP-S01（签证入境）占 140/329 —— 入境资格是唯一有大量成文条款可判的场景。
+1. **现有基线需重跑**：大模型轨已跑通，但 4096-token 运行有 106 张卡在正文前耗尽推理预算；
+   同时本版修正了海南口岸、跨语言拒答配页和票务兜底标签。旧包的分数只能作历史对照。
+2. **场景分布偏斜是有意的**：TP-S01（签证入境）占 140/332 —— 入境资格是唯一有大量成文条款可判的场景。
    其余场景由 A（事实）、C（产物）、F（动作）覆盖（如 TP-S04 28 张、TP-S05 20 张）。
    强行拉平会造出"无条款可依"的决策题，反而伤害评测效度。
 3. **A 族很难**：小模型逐字引用命中 22%、写出日期 31%。这是真实能力缺口（对旅行安全类 SKILL 有意义），
@@ -103,7 +111,9 @@ $env:TSD_A_OUT = (Resolve-Path modules\demand-task-factory\out-v2).Path
 6. **对比方的 SKILL 线**：C 线的提案内容目前是固定模板（5 条提案文字完全相同），
    吃不下数据集提供的多样化失败 —— 这是学习者侧的限制，不是数据集的。
 
-## 6. 基线（小模型 MiniCPM5 2.6B，`B-no-skill`，全量 329 张，4 路并行）
+## 6. 历史基线（修正前任务包 `7b8753d1…`）
+
+下表来自修正前的 329 张包，不能直接当作 `915fa3df…` 新包的基线。新包需用相同模型和参数重跑。
 
 | 指标 | 值 |
 |---|---|

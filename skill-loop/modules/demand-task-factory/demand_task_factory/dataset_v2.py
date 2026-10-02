@@ -49,10 +49,12 @@ RULES: dict[str, Rule] = {r.id: r for r in [
     Rule("R-THIRD", "chinadaily-240h-transit-route-faq",
          "Under the 240-hour visa-free transit policy, must the onward ticket go to a third country different from where I came from?",
          r"(?i)third country|a-b-c|round trip|a-b-a", "过境必须去第三国（A-B-C）"),
-    Rule("R-HK", "mcg-can-americans-travel-china-visa-free",
+    Rule("R-HK", "mcg-china-visa-free-transit-requirements",
          "Do Hong Kong and Macau count as a third country or region for China's 240-hour visa-free transit?",
          r"(?i)hong kong|macau|third (country|region)", "港澳计为第三地区"),
-    Rule("R-CLOCK", "mcg-can-americans-enter-china-without-visa",
+    # 用覆盖全部合格国籍的通用页。旧页标题和开头只谈美国护照，
+    # 却被用来判定加拿大/德国旅客，单页证据无法支撑整个结论。
+    Rule("R-CLOCK", "mcg-china-visa-free-transit-requirements",
          "When does the 240-hour visa-free transit clock start, and how long is it in practice?",
          r"(?i)240|10 days|midnight|00:00|clock", "240 小时起算与上限"),
     Rule("R-TICKET", "mcg-china-visa-free-transit-requirements",
@@ -104,6 +106,17 @@ RULES: dict[str, Rule] = {r.id: r for r in [
          "How do I get internet access in China as a foreign visitor?",
          r"(?i)e-?sim|sim|roaming|vpn|wi-?fi", "上网方案与可用性"),
 ]}
+
+ENTRY_RULES = {
+    "R-THIRD", "R-HK", "R-CLOCK", "R-TICKET", "R-AREA", "R-TIBET", "R-HARBIN",
+    "R-HAINAN", "R-UNILATERAL", "R-VISA", "R-REG", "R-OVERSTAY", "R-TRANSIT-IS-NOT-TOURIST",
+}
+RULE_DOMAIN = {rule_id: ("entry" if rule_id in ENTRY_RULES else "trip_ops") for rule_id in RULES}
+
+INSUFFICIENT_RX = (
+    r"(?i)insufficient|does not (answer|address|cover|mention|explain)|"
+    r"not (enough|addressed|covered)|cannot|unable|no (reliable )?information|contains no information"
+)
 
 TRANSIT_OK = {"United States", "United Kingdom", "Canada", "Japan", "Singapore", "Germany"}
 UNILATERAL_30 = {"United Kingdom", "Canada", "Japan", "Singapore", "Germany"}   # 美国不在名单内
@@ -214,7 +227,10 @@ def decide(p: dict) -> tuple[str, str]:
         return "not_eligible", "R-THIRD"
     if p.get("ticket") != "confirmed seat":
         return "not_eligible", "R-TICKET"
-    if p.get("stay_hours", 0) > 240:
+    # The cited rule starts the 240-hour clock at 00:00 on the day after entry.
+    # An elapsed stay slightly above 240 hours can therefore still fit; more than
+    # 264 elapsed hours cannot fit even with the most favorable arrival time.
+    if p.get("stay_hours", 0) > 264:
         return "not_eligible", "R-CLOCK"
     if p.get("onward") in ("Hong Kong", "Macau"):
         return "eligible", "R-HK"
@@ -229,6 +245,12 @@ B_INSTRUCTION = (
     'sentences>", "source": "<the source URL you relied on>"}\n'
     "Use \"eligible\" only when a visa-free route applies, \"use_visa\" when they should instead travel on a visa "
     "they already hold, and \"not_eligible\" when no visa-free route applies.\n"
+    "The route field defines the itinerary: A-B-C means the arrival origin A and onward destination C are different "
+    "countries or regions; A-B-A means return to the arrival origin. Passport nationality does not identify the "
+    "arrival origin. Hong Kong and Macau count as separate third regions when the source says so.\n"
+    "The stay_hours field is elapsed time from immigration to departure. Apply any next-midnight clock rule in "
+    "the source before comparing that elapsed duration with the permitted window.\n"
+    "Before returning, verify that decision, reason, and source are all present, including when decision is use_visa.\n"
     "Traveller:\n"
 )
 
@@ -248,7 +270,7 @@ B_PATTERNS: list[tuple[str, dict, int, str, list[str] | None]] = [
                                      ticket="confirmed seat", area="Harbin province", has_visa=False, hainan_only=False), 7, "not_eligible", None),
     ("transit_placeholder_ticket", dict(purpose="transit", route="A-B-C", onward="Bangkok", stay_hours=200,
                                         ticket="placeholder booking", area="Chengdu", has_visa=False, hainan_only=False), 9, "not_eligible", None),
-    ("transit_over_240h", dict(purpose="transit", route="A-B-C", onward="Japan", stay_hours=250,
+    ("transit_over_240h", dict(purpose="transit", route="A-B-C", onward="Japan", stay_hours=265,
                                ticket="confirmed seat", area="Shanghai", has_visa=False, hainan_only=False), 9, "not_eligible", None),
     ("transit_over_240h_extreme", dict(purpose="transit", route="A-B-C", onward="Tokyo", stay_hours=300,
                                        ticket="confirmed seat", area="Beijing", has_visa=False, hainan_only=False), 6, "not_eligible", None),
@@ -265,15 +287,24 @@ B_PATTERNS: list[tuple[str, dict, int, str, list[str] | None]] = [
 ]
 
 _B_CITIES = ["Beijing", "Shanghai", "Chengdu", "Guangzhou", "Xi'an", "Hangzhou", "Kunming", "Xiamen"]
-_B_MONTHS = ["March", "June", "September", "December", "October", "April"]
+_B_MONTHS = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+]
 _B_PORTS = ["PEK", "PVG", "CAN", "CTU", "XIY"]
 
 
 def _b_variant_params(base: dict, passport: str, i: int) -> dict:
     p = dict(base)
     p["passport"] = passport
-    p["arrival_port"] = _B_PORTS[i % len(_B_PORTS)]
-    p["arrival_city"] = _B_CITIES[i % len(_B_CITIES)]
+    if p.get("hainan_only"):
+        # 海南 30 天免签要求从省内开放口岸入境且活动范围留在海南。
+        # 旧变体会生成 area=Hainan 但 arrival=Beijing/PEK 的自相矛盾卡。
+        hainan_ports = [("Haikou", "HAK"), ("Sanya", "SYX")]
+        p["arrival_city"], p["arrival_port"] = hainan_ports[i % len(hainan_ports)]
+    else:
+        p["arrival_port"] = _B_PORTS[i % len(_B_PORTS)]
+        p["arrival_city"] = _B_CITIES[i % len(_B_CITIES)]
     p["travel_month"] = _B_MONTHS[i % len(_B_MONTHS)]
     p.setdefault("stay_days", max(1, round(p.get("stay_hours", 0) / 24)))
     return p
@@ -324,13 +355,14 @@ F_RAIL_ACTIONS = ["board_normally", "use_staffed_lane", "fix_name_before_travel"
 
 
 def decide_ticket(p: dict) -> str:
-    """景区票务（规则来自 R-TICKETS：放票窗口 1–7 天、微信渠道要中国手机号、第三方平台未获授权、人工窗口兜底）。"""
+    """景区票务（规则来自 R-TICKETS：放票窗口、官方网站与护照预订、可信渠道）。"""
     if not p["official_channel"]:
         return "use_official_channel"
     if p["days_before_visit"] > 7:
         return "wait_for_release_window"
     if not p["has_chinese_number"]:
-        return "use_staffed_counter"
+        # 证据页提供的是故宫英文官网，没有声明可现场人工售票。
+        return "use_official_channel"
     return "book_now"
 
 
@@ -354,7 +386,7 @@ F_PATTERNS: list[tuple[str, dict, int, str, str, str]] = [
     ("ticket_too_early", dict(official_channel=True, days_before_visit=20, has_chinese_number=True),
      3, "wait_for_release_window", "TP-S04", "离出行还有 20 天，放票窗口未开"),
     ("ticket_no_cn_number", dict(official_channel=True, days_before_visit=2, has_chinese_number=False),
-     3, "use_staffed_counter", "TP-S04", "官方小程序要中国手机号，旅客没有"),
+     3, "use_official_channel", "TP-S04", "官方小程序要中国手机号，改用官方英文网站"),
     ("rail_name_mismatch", dict(name_matches_passport=False, gate_accepts_passport=True, buffer_minutes=90),
      3, "fix_name_before_travel", "TP-S05", "订票姓名与护照不一致"),
     ("rail_gate_rejects", dict(name_matches_passport=True, gate_accepts_passport=False, buffer_minutes=60),
@@ -367,7 +399,7 @@ F_PATTERNS: list[tuple[str, dict, int, str, str, str]] = [
 
 _F_INSTRUCTION = (
     "You are a China travel readiness assistant. Decide the single next action for the traveller, "
-    "using the official source page(s) given as tool_data.\n"
+    "using the source page(s) given as tool_data.\n"
     "Answer with JSON only: {\"action\": <one of the allowed actions>, \"why\": \"<cite the governing "
     "clause in the source>\", \"source\": \"<url you relied on>\"}\n"
 )
@@ -376,9 +408,9 @@ _F_DECIDE = {"ticket": decide_ticket, "rail": decide_rail}
 _F_RULE = {"ticket": "R-TICKETS", "rail": "R-TRAIN"}
 # 变体必须给出**真实差异**：只改一个隐藏字段会让 prompt 重复（G2/G3 会正确地拦下来）。
 _F_TICKET_CTX = [
-    {"attraction": "the Forbidden City", "visit_date": "2026-04-05", "channel": "the official WeChat mini-program"},
-    {"attraction": "the Summer Palace", "visit_date": "2026-05-12", "channel": "the official website"},
-    {"attraction": "the Temple of Heaven", "visit_date": "2026-09-23", "channel": "a third-party resale platform"},
+    {"attraction": "the Forbidden City", "visit_date": "2026-04-05"},
+    {"attraction": "the Forbidden City", "visit_date": "2026-05-12"},
+    {"attraction": "the Forbidden City", "visit_date": "2026-09-23"},
 ]
 _F_RAIL_CTX = [
     {"from_station": "Beijing South", "to_station": "Shanghai Hongqiao", "train_no": "G11", "depart_time": "08:05"},
@@ -440,8 +472,9 @@ def _b_scenario(rule_id: str) -> str:
 # ----------------------------------------------------------------- C 产物卡
 C_TEMPLATES: list[dict] = [
     dict(name="predeparture", scenario="TP-S02",
-         task="a pre-departure readiness checklist covering connectivity, offline access, payment, identity documents "
-              "and a written Chinese address card",
+         task="a pre-departure readiness checklist covering connectivity; offline maps and copies; VPN or essential "
+              "apps installed before departure; Alipay or WeChat Pay; a backup bank card and RMB cash; the physical "
+              "passport; and a written Chinese address card",
          required=[
              (r"(?i)e-?sim|roaming|local sim", "联网方案（eSIM/漫游/本地卡）"),
              (r"(?i)offline[^.\n]{0,30}(map|direction|copy)|download[^.\n]{0,30}map", "离线地图/离线副本"),
@@ -453,8 +486,8 @@ C_TEMPLATES: list[dict] = [
              (r"(?i)chinese (address|name)|address in chinese", "中文地址/名称卡"),
          ]),
     dict(name="payment", scenario="TP-S03",
-         task="a payment readiness plan covering wallet setup, decline fallbacks, fees/limits, offline failure and "
-              "refund handling",
+         task="a payment readiness plan covering wallet setup; decline fallbacks using a backup bank card and RMB "
+              "cash; fees and limits; offline or low-battery failure; and refund handling",
          required=[
              (r"(?i)alipay|wechat pay", "钱包"),
              (r"(?i)(second|backup|spare)[^.\n]{0,20}card", "备用卡"),
@@ -465,7 +498,7 @@ C_TEMPLATES: list[dict] = [
          ]),
     dict(name="stay", scenario="TP-S07",
          task="an accommodation and registration plan covering foreigner-friendly booking, written confirmation, "
-              "registration duty and the Chinese address",
+              "registration within 24 hours or at the police station, and the Chinese address",
          required=[
              (r"(?i)foreign(er)?[^.\n]{0,20}(friendly|guest)|accept foreign", "涉外可接待确认"),
              (r"(?i)(written|email|confirmed)[^.\n]{0,30}(confirm|reply)", "书面确认"),
@@ -474,7 +507,8 @@ C_TEMPLATES: list[dict] = [
              (r"(?i)chinese address|address in chinese", "中文地址"),
          ]),
     dict(name="navigation", scenario="TP-S09",
-         task="a navigation plan covering a working local map app, offline fallback, Chinese address and a driver card",
+         task="a navigation plan covering a working local map app, offline fallback, Chinese name and address, a "
+              "nearby landmark, and a driver card or screenshot",
          required=[
              (r"(?i)amap|baidu|local map", "本地地图"),
              (r"(?i)offline", "离线可用"),
@@ -491,7 +525,8 @@ C_TEMPLATES: list[dict] = [
              (r"(?i)500 ?g|per jin|\bjin\b|weight|price", "计价单位/价格"),
          ]),
     dict(name="emergency", scenario="TP-S11",
-         task="an emergency plan covering medical prepayment, insurance, a police report path and overstay handling",
+         task="an emergency plan covering medical prepayment, insurance, a police report path, embassy or consulate "
+              "contact, and overstay handling",
          required=[
              (r"(?i)(pay|payment)[^.\n]{0,25}(before|upfront|deposit)|prepay", "先付费/押金"),
              (r"(?i)insurance", "保险"),
@@ -501,23 +536,25 @@ C_TEMPLATES: list[dict] = [
          ]),
     dict(name="ticketing", scenario="TP-S04",
          task="a timed-attraction booking plan covering the release window, real-name booking with a passport, "
-              "the physical passport at the gate and a fallback when tickets sell out",
+              "the physical passport at the gate, official alternatives when tickets sell out, and third-party risk",
          required=[
              (r"(?i)release|go(es)? on sale|advance|days? (ahead|before)", "放票时点"),
              (r"(?i)passport|real-?name", "护照实名"),
              (r"(?i)sold out|sell(s)? out|unavailable", "售罄情形"),
-             (r"(?i)staffed (lane|counter)|manual (lane|channel)|counter", "人工通道兜底"),
+             (r"(?i)physical passport|original passport|passport[^.\n]{0,30}(gate|entry)", "实体护照入场"),
              (r"(?i)scalper|tout|third-?party|reseller", "黄牛/第三方风险"),
          ]),
     dict(name="train", scenario="TP-S05",
          task="an intercity rail plan covering the booking channel, exact-name matching, boarding with the physical "
-              "passport and station ambiguity",
+              "passport, station ambiguity and an early-arrival buffer",
          required=[
              (r"(?i)12306|trip\.com|booking (site|channel|app)", "购票渠道"),
-             (r"(?i)exact(ly)? (the )?(name|spelling)|as (printed )?on (the )?passport|name match", "姓名逐字一致"),
+             (r"(?i)exact(ly)? (the )?(name|spelling)|as (printed )?on (the )?passport|name match|"
+              r"passport[^.\n]{0,35}(name|details)|name[^.\n]{0,35}passport", "姓名逐字一致"),
              (r"(?i)physical passport|original passport|e-?gate", "实体护照/闸机"),
              (r"(?i)station|terminal|which station", "车站辨析"),
-             (r"(?i)arrive (early|ahead)|buffer|minutes before", "提前到场缓冲"),
+             (r"(?i)arriv(?:e|ing)[^.\n]{0,30}(early|ahead)|buffer|minutes (early|before)|allow extra time",
+              "提前到场缓冲"),
          ]),
     dict(name="citytransport", scenario="TP-S06",
          task="a city transport plan covering ride-hailing setup, a Chinese address card, metro payment and "
@@ -553,11 +590,11 @@ _C_PROFILES = [
 ]
 
 _C_PAGE_RULE = {
-    "predeparture": "R-CLOCK",
+    "predeparture": "R-NET",
     "payment": "R-PAY",
     "stay": "R-HOTEL",
-    "navigation": "R-AREA",
-    "food": "R-UNILATERAL",
+    "navigation": "R-TAXI",
+    "food": "R-PAY",
     "emergency": "R-OVERSTAY",
     "ticketing": "R-TICKETS",
     "train": "R-TRAIN",
@@ -587,8 +624,9 @@ def build_family_c(pages: dict) -> list[dict]:
             prompt = (
                 f"Produce {tmpl['task']}.\n"
                 f"Traveller: {nat} passport, {profile}.\n"
-                "Write it as a practical checklist a non-Chinese speaker can act on. Every item must be specific "
-                "and actionable, in English."
+                "Write a 300-500 word practical checklist in English. Cover every listed requirement once with a "
+                "specific action. Skip introductions, readiness scores, repeated advice, and unrelated visa or entry "
+                "analysis."
             )
             assertions = [{"op": "regex", "value": rx, "note": label} for rx, label in tmpl["required"]]
             assertions.append({"op": "regex", "value": r"(?s).{400,}", "note": "清单需有实质篇幅"})
@@ -643,7 +681,10 @@ def build_family_e(pages: dict) -> list[dict]:
             "You have exactly one tool: lookup_local(query), which searches the bundled China travel source pages.\n"
             "Output ONLY one JSON object (no code fences) with exactly these keys:\n"
             '{"use_tool": true | false, "query": "<the search query you would run, or an empty string>"}\n'
-            "Use true only when the bundled source pages are needed."
+            "Use true for a specific China travel rule or operational fact that the bundled pages may cover, including "
+            "immigration penalties, overstay handling, map availability or accuracy, connectivity, payments, booking, "
+            "accommodation and transport. Use false only for live information, personal recommendations, generic "
+            "knowledge, or subjects unrelated to the bundled China travel sources."
         )
         assertions = [{"op": "json_path_equals", "path": "$.use_tool", "value": use_tool}]
         if use_tool:
@@ -670,9 +711,22 @@ def build_family_e(pages: dict) -> list[dict]:
 # ----------------------------------------------------------------- A 有据事实答
 A_JSON_SHAPE = (
     "Output ONLY one JSON object (no code fences, no commentary) with exactly these keys:\n"
-    '{"answered": true | false, "answer": "<the conclusion, quoting the key supporting sentence>", '
+    '{"answered": true | false, "answer": "<the conclusion and key supporting sentence>", '
     '"source": "<the source URL>"}\n'
+    "Write the answer in the same language as the question. Quote support when the source uses that language; "
+    "otherwise translate the support. "
+    "An official navigation path, URL, contact, or explicit catch-all applicant category counts as an answer. "
     "If the provided source does not actually answer the question, set answered to false and explain why."
+)
+
+A_DATED_JSON_SHAPE = (
+    "Output ONLY one JSON object (no code fences, no commentary) with exactly these keys:\n"
+    '{"answered": true | false, "answer": "<the conclusion and all distinct supporting instructions quoted '
+    'verbatim>", "source": "<the source URL>", "date": "<the date shown on the page>"}\n'
+    "An official navigation path, URL, contact, or explicit catch-all applicant category counts as an answer. "
+    "When the page answers the question, set answered to true and preserve every material option, time limit, "
+    "contact detail, address, or exception needed to act on it. If the page does not answer the question, set "
+    "answered to false and explain why."
 )
 
 _A_SCENARIO_HINTS = [
@@ -730,8 +784,7 @@ def build_family_a(pages: dict, faq_cards: int = 2, se_cards: int = 0) -> list[d
                 prompt=(
                     "Answer the traveller's question using ONLY the provided source page.\n"
                     f'Question: "{faq["question"]}"\n'
-                    + ("Also state the date shown on the page in the \"date\" field.\n" if faq["date"] else "")
-                    + A_JSON_SHAPE
+                    + (A_DATED_JSON_SHAPE if faq["date"] else A_JSON_SHAPE)
                 ),
                 initial_state={"tool_data": PAGES_REL, "asked_question": faq["question"]},
                 expected={"answered": True, "key": key, "fact_full": fact, "url": faq["url"], "date": faq["date"]},
@@ -769,8 +822,7 @@ def build_family_d2(pages: dict, limit: int = 20) -> list[dict]:
                 {"op": "json_path_equals", "path": "$.answered", "value": False,
                  "note": "所给来源答不了该问题，必须如实标注"},
                 {"op": "regex",
-                 "value": r"(?i)insufficient|does not (answer|address|cover)|not (enough|addressed|covered)|"
-                          r"cannot|unable|no (reliable )?information",
+                 "value": INSUFFICIENT_RX,
                  "note": "必须显式说明证据不足"},
                 {"op": "regex", "value": r"https?://", "note": "必须点名所给来源"},
             ]},
@@ -796,17 +848,25 @@ def build_family_d(pages: dict, limit: int = 20) -> list[dict]:
     for q_rule, p_rule in itertools.product(rules, repeat=2):
         if q_rule.id == p_rule.id:
             continue
+        # 稀有词重叠对跨语言页不可靠：中文领保页与英文问题可得 0 分，
+        # 但页面其实直接回答了过境免签问题。拒答卡只在不同业务域之间配页。
+        if RULE_DOMAIN[q_rule.id] == RULE_DOMAIN[p_rule.id]:
+            continue
         ov = _rare_overlap(q_rule.question, pages[p_rule.question]["text"])
-        if ov <= 0.2:
-            candidates.append((ov, q_rule, p_rule))
+        candidates.append((ov, q_rule, p_rule))
     candidates.sort(key=lambda c: (c[0], c[1].id, c[2].id))
     picked: list[dict] = []
-    used: set[tuple[str, str]] = set()      # (问题, 来源页 slug)：同一来源页只配一次，避免重复卡
+    used: set[tuple[str, str]] = set()
+    source_counts: Counter[str] = Counter()
+    question_counts: Counter[str] = Counter()
     for ov, q_rule, p_rule in candidates:
         key = (q_rule.id, p_rule.slug)
-        if key in used or len(picked) >= limit:
+        if (key in used or source_counts[p_rule.slug] >= 2 or question_counts[q_rule.id] >= 2
+                or len(picked) >= limit):
             continue
         used.add(key)
+        source_counts[p_rule.slug] += 1
+        question_counts[q_rule.id] += 1
         picked.append(_card(
             task_id=f"V2D-abstain-{len(picked) + 1:02d}",
             scenario_id="TP-S12",
@@ -817,6 +877,7 @@ def build_family_d(pages: dict, limit: int = 20) -> list[dict]:
                 f'Question: "{q_rule.question}"\n'
                 f"Provided source page: {p_rule.slug} — {pages[p_rule.question]['source_url']}\n"
                 "If the provided source does not actually answer the question, say so explicitly instead of guessing. "
+                "Write the answer in English, translating the source when needed. "
                 "Output one JSON object (no code fences) with exactly these keys:\n"
                 '{"answered": true | false, "answer": "<what the source supports, or why it is insufficient>", '
                 '"source": "<the source URL>"}'
@@ -827,8 +888,7 @@ def build_family_d(pages: dict, limit: int = 20) -> list[dict]:
                 {"op": "json_path_equals", "path": "$.answered", "value": False,
                  "note": "所给来源答不了该问题，必须如实标注"},
                 {"op": "regex",
-                 "value": r"(?i)insufficient|does not (answer|address|cover)|not (enough|addressed|covered)|"
-                          r"cannot|unable|no (reliable )?information",
+                 "value": INSUFFICIENT_RX,
                  "note": "必须显式说明证据不足"},
                 {"op": "regex", "value": r"https?://", "note": "必须点名所给来源"},
                 {"op": "not_contains",
@@ -947,7 +1007,7 @@ C_ITEM_PHRASES: dict[str, str] = {
     "放票时点": "Note the release window days in advance",
     "护照实名": "Book with your passport for real-name entry",
     "售罄情形": "Plan for tickets being sold out",
-    "人工通道兜底": "Use the staffed counter as a fallback",
+    "实体护照入场": "Carry the original physical passport for entry at the gate",
     "黄牛/第三方风险": "Avoid scalpers and unauthorized third parties",
     "购票渠道": "Book on 12306 or a trusted booking app",
     "姓名逐字一致": "Use exactly the name printed on your passport",
