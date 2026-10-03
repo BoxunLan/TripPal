@@ -96,6 +96,18 @@ What is most useful in the feedback, in order:
 4. **Which source-policy call was wrong** (tier choice, dating, conflict resolution).
 5. **Where the quality gate is too loud or too quiet.**
 
+**Architecture-level suggestions are welcome, and the structure is not frozen.** The router/manifest/
+fragments/references/scripts split is the current best draft, not a decision: the axis choice, the number
+of layers, the routing mechanism, or a different delivery shape are all open. If you change it, keep the
+load relationships declared in `manifest.yaml` and update `tests/test_skill_architecture.py` with it.
+
+**Second feedback path (product thinking), not from the 332 cards:** benchmark mature travel products —
+how they organise information (which axis), how they present sources and update dates, how they express
+uncertainty and their red lines, what the user actually receives, how many questions they ask, and what
+they do when the source is insufficient — then map each borrowed pattern onto a concrete file here
+(`references/source-policy.md`, `static/core/*`, `static/fragments/domain/*`, `manifest.yaml`).
+Borrow structure and expression, never conclusions: policy facts still come only from T1/T2 sources.
+
 Report per-domain and per-pattern rather than as a single score: a global pass rate can improve
 while one domain collapses (`skill-loop/integration/pipeline/pattern_regress.py` does that
 comparison).

@@ -4,13 +4,57 @@ TripPal combines a travel-readiness intake website with a Codex Skill that turns
 
 ## 当前进展与分工（2026-10-04 更新，协作者请看这一节）
 
-### 第一要务：MVP 已落地 → 下一步是**丰富 skill 本体**
+### 第一要务：MVP 已落地 → 一边丰富 skill 本体，一边对标成熟产品
 
-MVP 已经跑通：skill 从"8KB 单体文档"改造成 **路由器 + 声明式清单 + 12 域分片 + 质量闸** 的产品结构
-（见下方 [Skill architecture](#skill-architecture-seed-v0-2026-10-04)），并且已经用小模型跑完 332 张拿到第一份本机反馈。
+MVP 已经跑通：skill 从"8KB 单体文档"改造成 **路由器 + 声明式清单 + 12 域分片 + 质量闸** 的产品结构。
+接下来两条路并行：
 
-**下一步（团队当前重点）**：就着这个框架**丰富优化 skill 本体**，而不是再动架构 ——
-补 12 个域分片的内容、接入外部权威源、把质量闸接进流程、补金标准验收样例。
+- **丰富 skill 本体**：补 12 个域分片的内容、接入外部权威源、把质量闸接进流程、补金标准验收样例；
+- **对标成熟旅游产品**：见下一节。
+
+**架构现在就可以改**：上面那套结构只是当前最好的一版草案，**不是定论**。如果协作者有更合适的组织方式
+（轴的选法、分层方式、路由机制，甚至换一种交付形态），现在提、现在动——早改比晚改便宜。
+这一节和 `skills/trippal/` 下的任何文件都不设"冻结"，只有**跑批时**才临时冻结以便对照。
+
+### 第二条路径：对标成熟旅游产品（产品思维）
+
+**为什么必须做**：332 张任务集只能覆盖**我们自己出题时想到的东西** —— 这是自证式反馈，题目对了不代表
+产品对了。成熟旅游产品早就用海量真实用户验证过"信息怎么组织、来源怎么标注、失败怎么表达"。
+所以这条路径与跑批并行：**去看它们怎么做，把可借鉴的搬进我们的 skill 架构**。
+
+**调研对象（按我们的 12 个域对应；下表是候选清单，结论必须实地核过再写，不许凭印象）**
+
+| 想学什么 | 对标类别 | 候选（待逐个核） |
+|---|---|---|
+| 入境/签证信息的组织与免责表达 | 官方行前信息门户 + 签证/入境要求查询工具 | 各国官方旅行建议门户、签证要求查询类工具 |
+| 涉外住宿筛选（能不能接待外国人） | OTA | Booking / Agoda / Trip.com 国际版 |
+| 票务与景点预约的放票时点与兜底 | 活动票务平台 | Klook / GetYourGuide / 景区官方预约渠道 |
+| 跨境与城际交通的换乘信息 | 交通聚合 | 12Go / Omio / Rail Europe / 12306 官方 |
+| 支付与联网的行前准备 | 金融科技 + eSIM | Wise / Revolut 的旅行指南、Airalo / Holafly |
+| 行程管理与提醒节奏 | 行程工具 | Google Travel / TripIt 类 |
+| **来源可信度与更新时间怎么标** | 上面全部 | 看它们**怎么标**来源、生效日期、不确定性与免责 |
+
+**每个对象都按这 5 条记，避免变成"逛网站"**
+
+1. **信息架构**：按什么轴组织（目的地／出行阶段／风险等级／主题）？这个轴跟我们 `manifest.yaml` 的
+   `domain` 轴比，哪个更贴合用户提问方式？
+2. **信任机制**：来源怎么标、更新日期怎么显示、"查不到/不可判断"怎么表达、红线（不代做决定）怎么划。
+3. **交互与产出形态**：清单／时间轴／对话／提醒，以及"用户最终拿到的东西长什么样"。
+4. **个性化输入**：问几个问题、什么顺序问、缺信息时怎么降级。
+5. **失败兜底**：来源不足、规则冲突、服务不可用时，它给用户什么。
+
+**方法**：沿用已有的采集链路（`tools/fetch-urls.mjs` + 本地证据落盘 + `research/` 的分类法），
+产出 `research/` 下的一份**对标报告**。报告最后必须落到一张**映射表**，否则不算完成：
+
+| 借来的做法 | 落到 skill 的哪里 |
+|---|---|
+| 例：来源分级 + 显式更新时间 | `references/source-policy.md` 的 T1–T4 与生效日期纪律 |
+| 例：按出行阶段给动作 | `static/core/workflow.md` 的 6 个时间桶 + `static/fragments/domain/*` |
+| 例：产物的固定字段（谁/何时/去哪/带什么） | `static/core/output-and-quality.md` + `scripts/verify_assessment.py` 的检查项 |
+| 例：轴的选择与分片粒度 | `manifest.yaml` 的 `axes` |
+
+**纪律**：对标是**借鉴表达与结构**，不是照抄结论。事实依据仍然只认 T1/T2 权威源；
+"某产品这么做"永远不能当成政策依据。
 
 ### 三轨反馈与当前进度
 
@@ -143,12 +187,22 @@ The 12 domain fragments are **generated drafts** (SEED banners) from `research/p
 dataset v2 cards (`python skill-loop/integration/pipeline/build_skill_seed.py`). Full status, layout and
 the feedback we need are in [`skills/trippal/README.md`](skills/trippal/README.md).
 
-**下一步 = 丰富 skill 本体**（不是再动架构）：按 MiniCPM5-2B 轨的分析（
-[`docs/minicpm-track-analysis.md`](docs/minicpm-track-analysis.md)）优先做三件事 ——
-① 把 12 个域分片的"要核对的检查项"补成实测有效的内容（当前 10 个域还是兜底句）、
-② 按分析里"`regex` 失败 79 次 vs `contains` 只 4 次"的结论，重点补**覆盖/格式类**要求（含 C 族清单篇幅）、
-③ 把 `references/source-policy.md` 里 `declared` 的外部权威源逐步接成 `wired`，
-并补 10–20 个金标准验收样例（产品的验收不该只靠 332 张卡）。
+**下一步（两条路并行，架构本身不设禁区）**
+
+按 MiniCPM5-2B 轨的分析（[`docs/minicpm-track-analysis.md`](docs/minicpm-track-analysis.md)）优先做三件事：
+
+1. 把 12 个域分片的"要核对的检查项"补成实测有效的内容（当前 10 个域还是兜底句）；
+2. 按分析里"`regex` 失败 79 次 vs `contains` 只 4 次"的结论，重点补**覆盖/格式类**要求（含 C 族清单篇幅）；
+3. 把 `references/source-policy.md` 里 `declared` 的外部权威源逐步接成 `wired`，并补 10–20 个金标准验收样例
+   （产品的验收不该只靠 332 张卡）。
+
+同时按上一节的**产品对标**路径做调研（成熟旅游产品的信息架构、信任机制、交互形态、失败兜底），
+把结论映射回本文件列出的这些落点。
+
+**架构欢迎改动**：上面这套"路由器 + 分片 + 按需参考 + 质量闸"只是当前最好的一版草案。
+轴怎么选、分几层、路由用什么机制、要不要换交付形态，都可以改；有更合适的思路就现在提、
+现在动，不必先说服现有结构。改动只要守住两条：**manifest 里声明清楚加载关系**、
+**`tests/test_skill_architecture.py` 的结构约束跟着更新**。
 
 **What the three tracks should report** (exact commands are in the skill README): which domain fragments
 are wrong or thin, which required items a domain misses, where the router misclassifies a profile,
