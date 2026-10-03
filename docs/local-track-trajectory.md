@@ -67,12 +67,71 @@
 | 注入量随域变化 | 全量 21 文件 / 按域 10 文件（试点时含 JSON 为 23 / 12） |
 | 内容失败而非流程失败 | 5 张失败全部是 `knowledge_gap`（断言未命中），0 张执行错误 |
 
-（主跑开始后，这里按族/按模式补充。）
+### 主跑最终结果（`C-seed-skill` 按域注入，332/332 完成，退出码 0）
 
-## 5. 待办
+| 指标 | 值 |
+|---|---|
+| 完成 | **332 / 332**（`-Jobs 4`，无中断） |
+| 整卡通过 | **255 / 332 = 76.8%** |
+| **断言通过率** | **1096 / 1213 = 90.4%**（`mean_assertion_pass = 0.9118`） |
+| train / holdout | 0.799 / **0.682** |
+| avg_tokens / 次 | **10220**（input 8596 + output 1624） |
+| 归因 | `knowledge_gap` 55 / 通过 255 / `execution_defect` 22 |
+| failure_kind | `budget_exhausted` 22（其余为 `knowledge_gap`） |
 
-- [ ] 主跑（332 张，`C-seed-skill` 按域注入）跑完并汇总
-- [ ] 对照跑（332 张，`B-no-skill`）跑完并汇总
-- [ ] 按族 / 按模式给出对比（用 `integration/pipeline/pattern_regress.py`，不要只看总分）
-- [ ] 收集三端轨迹：本端（本文件）、大模型侧（协作者的文档）、以及大模型侧对 skill 的改动建议
-- [ ] 写 `handover-local-track.md` 并提交推送
+**按族**
+
+| 族 | 张数 | 整卡通过 | 断言通过率 | knowledge_gap | 预算截断 |
+|---|---|---|---|---|---|
+| A 有据事实答 | 39 | 34 (87%) | 95.5% | 5 | 0 |
+| B 规则应用 | 130 | 92 (71%) | 92.0% | 24 | **14** |
+| C 产物卡 | 80 | 63 (79%) | 85.8% | 11 | 6 |
+| D 拒答 | 39 | 31 (79%) | 94.2% | 8 | 0 |
+| E 工具决策 | 20 | 18 (90%) | 94.7% | 1 | 1 |
+| F 到达后动作 | 24 | 17 (71%) | 91.3% | 6 | 1 |
+| **合计** | **332** | **255 (76.8%)** | **90.35%** | 55 | 22 |
+
+原始汇总已存档：[`local-track-results/summary.json`](local-track-results/summary.json)、
+[`local-track-results/report.md`](local-track-results/report.md)。
+
+### 观察（只描述本轨看到的事实，不做因果结论）
+
+1. **22 张执行错误全部是 `budget_exhausted`**，集中在 B 族 14 张（`already_holds_visa` 模式为主）
+   与 C 族 6 张：推理模型把 4096 token 全用在 `reasoning` 上、没产出正文。
+   它们被正确记成 `execution_defect`，**不是** `knowledge_gap`，因此不会污染 SKILL 学习线。
+   要消除它们只需提高输出预算后复跑这批卡（本次未做，属本目标范围之外）。
+2. **断言通过率（90.4%）明显高于整卡通过率（76.8%）**：多数失败是"差一条断言"，
+   而不是整张卡跑偏 —— 这也是为什么建议下游看 `mean_assertion_pass`，而不只看 pass 率。
+3. **holdout(0.682) 低于 train(0.799)**：分组切分下未见泄漏迹象，与数据集设计一致。
+4. **本轨不能用来自证"skill 有效"**：本次没有跑同包同配置的 `B-no-skill` 对照臂，
+   而数据集本身在 R11–R13 被修过（A 族 36→39、JSON 契约补 `date` 等）。
+   因此"A 族 87%"只能说明"在当前包 + 当前 skill 下小模型的表现"，
+   **不能**拆成"skill 的贡献"与"题目变简单的贡献"。要做这个拆分需要补一条对照臂。
+5. 本轨结论只在**这一配置**下成立：MiniCPM5 2.6B / 64K 上下文 / 4 并发 / 按域注入 / 4096 输出预算。
+
+## 5. 本轨到此停止（按指令收口）
+
+本轨只负责"本端小模型把 332 张跑完并留下轨迹"。以下工作**按指令不做**，留给后续或另外两端：
+
+- 同包同配置的 `B-no-skill` 对照臂（要做效果拆分就必须补）
+- 22 张预算截断卡的高预算复跑
+- 按模式对比与 skill 改动建议（等另外两端的大模型侧轨迹文档出来后再综合分析）
+- 独立交接文档：本文件即为交接记录（冻结点、配置、结果、原始汇总路径都在这里）
+
+**复现命令**（`%TEMP%` 被清理后可用它重跑）：
+
+```powershell
+# 1) 本地模型需重载为 64K / 4 并发（16K + 4 并发会因每槽仅 4K 而整批 HTTP 400）
+& "$env:USERPROFILE\.lmstudio\bin\lms.exe" unload --all
+& "$env:USERPROFILE\.lmstudio\bin\lms.exe" load minicpm5-2b --context-length 65536 --parallel 4 -y
+
+# 2) 主跑（332 张，按域注入）
+cd skill-loop
+& .\integration\pipeline\run_v2_parallel.ps1 -Pack modules/demand-task-factory/out-v2/task_pack.jsonl `
+    -Out "$env:TEMP\v2-local-skill" -Jobs 4 -Runs 1 -MaxTokens 4096 -TimeoutSeconds 300 `
+    -ExperimentId localskill -Condition C-seed-skill -Skill "..\skills\trippal" `
+    -SkillRoute "..\skills\trippal\static\routing.json"
+```
+
+**读结果的入口**：`summary.json`（总指标）、`report.md`（含 examples）、
+`runs/localskill/C-seed-skill/<task_id>/1/{verdict,trace}.json`、`artifacts/answer.json`（逐条断言）。

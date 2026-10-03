@@ -1,0 +1,48 @@
+{
+  "schema_version": "v1",
+  "experiment_id": "localskill",
+  "condition": "C-seed-skill",
+  "task_count": 332,
+  "pass_at_3": 0.768072,
+  "train_pass_at_3": 0.79918,
+  "holdout_pass_at_3": 0.681818,
+  "avg_tokens": 10220.428,
+  "avg_input_tokens": 8596.048,
+  "avg_output_tokens": 1624.38,
+  "mean_assertion_pass": 0.911828,
+  "assertions_passed_total": 1096,
+  "assertions_total": 1213,
+  "attribution_counts": {
+    "knowledge_gap": 55,
+    "none": 255,
+    "execution_defect": 22
+  },
+  "failure_kind_counts": {
+    "knowledge_gap": 55,
+    "none": 255,
+    "budget_exhausted": 22
+  },
+  "examples": [
+    {
+      "task_id": "V2A-faq-01",
+      "run_n": 1,
+      "status": "fail",
+      "attribution": "knowledge_gap",
+      "verdict_path": "C:/Users/17641/AppData/Local/Temp/v2-local-skill/runs/localskill/C-seed-skill/V2A-faq-01/1/verdict.json"
+    },
+    {
+      "task_id": "V2A-faq-02",
+      "run_n": 1,
+      "status": "fail",
+      "attribution": "knowledge_gap",
+      "verdict_path": "C:/Users/17641/AppData/Local/Temp/v2-local-skill/runs/localskill/C-seed-skill/V2A-faq-02/1/verdict.json"
+    },
+    {
+      "task_id": "V2A-faq-03",
+      "run_n": 1,
+      "status": "fail",
+      "attribution": "knowledge_gap",
+      "verdict_path": "C:/Users/17641/AppData/Local/Temp/v2-local-skill/runs/localskill/C-seed-skill/V2A-faq-03/1/verdict.json"
+    }
+  ]
+}
