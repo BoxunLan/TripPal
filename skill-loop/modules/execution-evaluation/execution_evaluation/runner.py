@@ -23,19 +23,58 @@ def sha256_file(path) -> str:
 
 SKILL_ENTRY_FILENAME = "SKILL.md"
 # 目录形态注入哪些文件。除了 SKILL.md 与 references/**，还要包含**路由层**：
-# manifest.yaml（路由表）与 static/**（常驻 core、按域分片、语料映射）。
+# manifest.yaml（路由表）与 static/**/*.md（常驻 core、按域分片）。
 # 漏掉 static/** 的后果与当初漏掉 references/** 一模一样：路由器在，被路由的内容不在，
 # 于是"skill 有没有用"这件事测不出来 —— 而且是静默的。
+#
+# 但 **static/*.json 不注入**：corpus-map.json（20.7 KB）与 routing.json 是给工具与路由用的
+# 机读资产，不是给模型读的散文；域分片里已经列了本域的页面。实测把这两个 JSON 一起塞进去，
+# 注入文本从 ~21 KB 涨到 ~43 KB，本地 16K 上下文直接 HTTP 400（failure_kind=http_400），
+# 12/12 张卡全废 —— 而这是"注入范围"造成的，不是模型能力。
+# `--skill-route` 走的是磁盘上的 routing.json，不依赖注入文本，所以排除它们不影响路由。
 SKILL_REFERENCE_GLOBS = (
     "manifest.yaml",
     "references/**/*.md",
     "references/**/*.txt",
     "static/**/*.md",
-    "static/**/*.json",
 )
 
 
-def load_skill(skill) -> tuple[str | None, dict]:
+def load_route(route_path) -> dict:
+    """读路由表：声明用任务里的哪个字段、每个取值命中哪些分片。
+
+    路由表属于 **skill**（不是 harness）：harness 只负责按它的声明组装上下文，
+    这样换一个 skill 不用改评测代码。缺文件/缺字段直接报错，不静默退化成全量注入。
+    """
+    path = Path(route_path)
+    if not path.is_file():
+        raise FileNotFoundError(f"路由表不存在：{path}")
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict) or not str(data.get("task_field", "")).strip():
+        raise ValueError("路由表必须包含 task_field")
+    if not isinstance(data.get("values"), dict):
+        raise ValueError("路由表必须包含 values（任务字段取值 -> 分片相对路径列表）")
+    return data
+
+
+def route_fragments(root: Path, route: dict, task: dict) -> list[Path]:
+    """按路由表挑出这次任务要注入的分片；路由表指向不存在的文件时直接失败。"""
+    raw = task.get(route["task_field"])
+    keys = raw if isinstance(raw, list) else ([] if raw is None else [raw])
+    out: list[Path] = []
+    seen: set[str] = set()
+    for key in keys:
+        for rel in route["values"].get(str(key), []) or []:
+            path = root / rel
+            if not path.is_file():
+                raise FileNotFoundError(f"路由表指向的分片不存在：{rel}（任务字段 {route['task_field']}={key}）")
+            if rel not in seen:
+                seen.add(rel)
+                out.append(path)
+    return sorted(out, key=lambda p: p.relative_to(root).as_posix())
+
+
+def load_skill(skill, route: dict | None = None, task: dict | None = None) -> tuple[str | None, dict]:
     """读 SKILL 的内容与快照，支持**单文件**与**目录**两种形态。
 
     原先这里是 `Path(skill).read_text()`：**单文件读取，不展开目录、不跟随引用**。
@@ -56,12 +95,23 @@ def load_skill(skill) -> tuple[str | None, dict]:
         return None, {"loaded": False}
     root = Path(skill)
     if root.is_dir():
+        # 路由模式（给了路由表）：static/fragments/** 不再全量注入，只注入本次任务命中的分片。
+        # 这才是文件型 agent 的真实行为——它按路由器指示读盘，不会把 12 个分片全读进来。
+        routed = route_fragments(root, route, task or {}) if route else None
         files: list[Path] = []
         entry = root / SKILL_ENTRY_FILENAME
         if entry.is_file():
             files.append(entry)
         for pattern in SKILL_REFERENCE_GLOBS:
-            files.extend(sorted(p for p in root.glob(pattern) if p.is_file()))
+            for path in sorted(root.glob(pattern)):
+                if not path.is_file():
+                    continue
+                rel = path.relative_to(root).as_posix()
+                if routed is not None and rel.startswith("static/fragments/"):
+                    continue          # 交给路由表决定
+                files.append(path)
+        if routed is not None:
+            files.extend(routed)
         ordered: list[Path] = []
         seen: set[str] = set()
         for f in files:
@@ -75,7 +125,7 @@ def load_skill(skill) -> tuple[str | None, dict]:
             f"<!-- {p.relative_to(root).as_posix()} -->\n{p.read_text(encoding='utf-8')}"
             for p in ordered
         )
-        return text, {
+        snapshot = {
             "loaded": True,
             "path": str(root).replace("\\", "/"),
             "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
@@ -84,6 +134,15 @@ def load_skill(skill) -> tuple[str | None, dict]:
                 for p in ordered
             ],
         }
+        if routed is not None:
+            # 路由命中必须落进快照：否则「注入的到底是哪几个分片」在产物里看不出来，
+            # 两条臂比分数时无法解释差异是内容造成的还是注入范围造成的。
+            snapshot["routing"] = {
+                "task_field": route["task_field"],
+                "task_value": (task or {}).get(route["task_field"]),
+                "fragments": [p.relative_to(root).as_posix() for p in routed],
+            }
+        return text, snapshot
     if root.is_file():
         return root.read_text(encoding="utf-8"), {
             "loaded": True,
@@ -485,6 +544,7 @@ def run(
     skill=None,
     config_path=None,
     task_pack_sha256_full: str | None = None,
+    skill_route: str | None = None,
 ) -> int:
     if condition not in CONDITIONS:
         return 2
@@ -497,36 +557,50 @@ def run(
     cfg = load_config(config_path or DEFAULT_CONFIG)
     tasks = contracts.load_jsonl(task_pack)
     model = build_model(cfg)
-    skill_text, skill_snapshot = load_skill(skill)
 
-    manifest_base = {
-        "schema_version": "v1",
-        "experiment_id": experiment_id,
-        "condition": condition,
-        "model": model.name,
-        "temperature": cfg["temperature"],
-        # 记**真实生效**的预算：build_model 支持 LLM_MAX_TOKENS / LLM_TIMEOUT_SECONDS 覆盖，
-        # 只写 cfg 默认值会让 manifest 撒谎（实测用 4096/180 跑，manifest 却写 2000/60）。
-        # 用 getattr 容忍测试里的 FakeModel（它只实现 name/complete，没有预算属性）。
-        "timeout_seconds": getattr(model, "timeout", None) or cfg["timeout_seconds"],
-        "max_tokens": getattr(model, "max_tokens", None) or cfg["max_tokens"],
-        "config_timeout_seconds": cfg["timeout_seconds"],
-        "config_max_tokens": cfg["max_tokens"],
-        "tool_snapshot": tool_snapshot_for(tasks),
-        "skill_snapshot": skill_snapshot,
-        # 注意：这是**本次运行实际消费的那个文件**的摘要；4 路并行时是切片文件（pack0.jsonl…），
-        # 不是完整数据集包的摘要。数据集包的摘要在 out-v2/provenance.json 的 pack_sha256。
-        "task_pack_sha256": sha256_file(task_pack),
-        # 「整包」哈希由调用方传入（只有驱动脚本知道完整数据集包在哪）。加这一项是因为
-        # **分片哈希不能跨臂比**：两条臂 `--jobs` 不同时切片文件名与内容必然不同，
-        # `task_pack_sha256` 也就必然不同 —— 拿它判断「是否同一任务集」，
-        # 会把任务集完全相同的两臂误判成互相污染。`mark_contamination` 因此只看这一项。
-        "task_pack_sha256_full": (task_pack_sha256_full or "").strip(),
-        "task_pack_path": str(task_pack).replace("\\", "/"),
-    }
+    # 路由模式：按每个任务命中的域分片组装上下文，所以必须**逐任务**装载 skill。
+    # 非路由模式保持原样（装载一次、所有任务共用），既有产物与测试不受影响。
+    route = load_route(skill_route) if skill_route else None
+    routed = bool(route) and bool(skill) and Path(skill).is_dir()
+    skill_text: str | None = None
+    skill_snapshot: dict = {"loaded": False}
+    if not routed:
+        skill_text, skill_snapshot = load_skill(skill)
+
+    def manifest_for(snapshot: dict) -> dict:
+        return {
+            "schema_version": "v1",
+            "experiment_id": experiment_id,
+            "condition": condition,
+            "model": model.name,
+            "temperature": cfg["temperature"],
+            # 记**真实生效**的预算：build_model 支持 LLM_MAX_TOKENS / LLM_TIMEOUT_SECONDS 覆盖，
+            # 只写 cfg 默认值会让 manifest 撒谎（实测用 4096/180 跑，manifest 却写 2000/60）。
+            # 用 getattr 容忍测试里的 FakeModel（它只实现 name/complete，没有预算属性）。
+            "timeout_seconds": getattr(model, "timeout", None) or cfg["timeout_seconds"],
+            "max_tokens": getattr(model, "max_tokens", None) or cfg["max_tokens"],
+            "config_timeout_seconds": cfg["timeout_seconds"],
+            "config_max_tokens": cfg["max_tokens"],
+            "tool_snapshot": tool_snapshot_for(tasks),
+            "skill_snapshot": snapshot,
+            # 注意：这是**本次运行实际消费的那个文件**的摘要；4 路并行时是切片文件（pack0.jsonl…），
+            # 不是完整数据集包的摘要。数据集包的摘要在 out-v2/provenance.json 的 pack_sha256。
+            "task_pack_sha256": sha256_file(task_pack),
+            # 「整包」哈希由调用方传入（只有驱动脚本知道完整数据集包在哪）。加这一项是因为
+            # **分片哈希不能跨臂比**：两条臂 `--jobs` 不同时切片文件名与内容必然不同，
+            # `task_pack_sha256` 也就必然不同 —— 拿它判断「是否同一任务集」，
+            # 会把任务集完全相同的两臂误判成互相污染。`mark_contamination` 因此只看这一项。
+            "task_pack_sha256_full": (task_pack_sha256_full or "").strip(),
+            "task_pack_path": str(task_pack).replace("\\", "/"),
+        }
 
     base = Path(out_root) / experiment_id / condition
     for task in tasks:
+        if routed:
+            task_skill_text, task_snapshot = load_skill(skill, route, task)
+        else:
+            task_skill_text, task_snapshot = skill_text, skill_snapshot
+        task_manifest = manifest_for(task_snapshot)
         for run_n in range(1, int(runs) + 1):
             execute_one(
                 task,
@@ -534,8 +608,8 @@ def run(
                 base / task["task_id"] / str(run_n),
                 model,
                 cfg,
-                skill_text,
-                manifest_base,
+                task_skill_text,
+                task_manifest,
             )
     mark_contamination(Path(out_root) / experiment_id)
     return 0

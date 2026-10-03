@@ -27,6 +27,7 @@ param(
   [string]$ExperimentId = "v2full",
   [string]$Condition = "B-no-skill",
   [string]$Skill = "",
+  [string]$SkillRoute = "",
   [string]$PythonExe = "",
   [string]$FailedFrom = ""
 )
@@ -50,10 +51,16 @@ if (-not (Test-Path $py)) { throw "Python executable not found at $py" }
 # Accept either the direct LLM_* process environment or the TRAVEL_* names in .env.
 # Keep the API settings available to each Start-Job worker. Fall back to LM Studio
 # only when no live API key has been configured.
+#
+# Read .env as UTF-8 explicitly. PowerShell 5.1's Get-Content decodes UTF-8 as ANSI, and with
+# non-ASCII comment lines the mojibake can swallow a newline -- merging a comment with the next
+# KEY=VALUE line, which the parser then rejects, dropping that key SILENTLY. Measured consequence:
+# TRAVEL_LLM_BASE_URL disappeared, requests went to the default provider endpoint with the local
+# key, and all 12 cards failed with HTTP 401 while the run still reported success.
 $dotenv = @{}
 $dotenvPath = Join-Path $wd ".env"
 if (Test-Path $dotenvPath) {
-  foreach ($line in Get-Content $dotenvPath) {
+  foreach ($line in [System.IO.File]::ReadAllLines($dotenvPath, [System.Text.Encoding]::UTF8)) {
     if ($line -match '^\s*([^#=\s]+)\s*=\s*(.*)\s*$') {
       $dotenv[$Matches[1]] = $Matches[2].Trim().Trim('"').Trim("'")
     }
@@ -64,6 +71,11 @@ if ([string]::IsNullOrWhiteSpace($env:LLM_BASE_URL)) { $env:LLM_BASE_URL = $dote
 if ([string]::IsNullOrWhiteSpace($env:LLM_MODEL)) {
   $env:LLM_MODEL = $dotenv["TRAVEL_GENERATOR_MODEL"]
   if ([string]::IsNullOrWhiteSpace($env:LLM_MODEL)) { $env:LLM_MODEL = $dotenv["TRAVEL_CLASSIFIER_MODEL"] }
+}
+# A key without a base URL silently targets a different provider than the caller intended.
+# Refuse to start instead of burning the whole run on 401s.
+if (-not [string]::IsNullOrWhiteSpace($env:LLM_API_KEY) -and [string]::IsNullOrWhiteSpace($env:LLM_BASE_URL)) {
+  throw "LLM_API_KEY is set but LLM_BASE_URL is empty. Refusing to run: requests would go to the default provider endpoint. Fix .env or set LLM_BASE_URL explicitly."
 }
 # Match run_live.py: bypass host proxy settings for direct model endpoint requests.
 foreach ($proxyName in @("HTTP_PROXY", "HTTPS_PROXY", "ALL_PROXY", "NO_PROXY", "http_proxy", "https_proxy", "all_proxy", "no_proxy")) {
@@ -115,7 +127,7 @@ for ($i = 0; $i -lt $Jobs; $i++) {
   if (-not (Test-Path $slice)) { continue }
   if ((Get-Item $slice).Length -eq 0) { continue }
   $jobList += Start-Job -ScriptBlock {
-    param($wd, $py, $slice, $runRoot, $Runs, $MaxTokens, $TimeoutSeconds, $ExperimentId, $Condition, $Skill)
+    param($wd, $py, $slice, $runRoot, $Runs, $MaxTokens, $TimeoutSeconds, $ExperimentId, $Condition, $Skill, $SkillRoute)
     Set-Location $wd
     foreach ($proxyName in @("HTTP_PROXY", "HTTPS_PROXY", "ALL_PROXY", "NO_PROXY", "http_proxy", "https_proxy", "all_proxy", "no_proxy")) {
       Remove-Item "Env:$proxyName" -ErrorAction SilentlyContinue
@@ -131,11 +143,14 @@ for ($i = 0; $i -lt $Jobs; $i++) {
     $env:PYTHONIOENCODING = "utf-8"
     $extra = @()
     if ($Skill -ne "") { $extra = @("--skill", $Skill) }
+    # --skill-route makes injection follow the skill's own routing table: only the matched
+    # domain fragments enter context, which is what a file-reading agent actually does.
+    if ($SkillRoute -ne "") { $extra += @("--skill-route", $SkillRoute) }
     & $py -m execution_evaluation run --task-pack $slice --condition $Condition --runs $Runs `
         --experiment-id $ExperimentId --out $runRoot @extra 2>&1 | Select-Object -Last 2
     # Surface failures: otherwise a crashed runner looks like a successful job.
     if ($LASTEXITCODE -ne 0) { throw "runner exited $LASTEXITCODE for $slice" }
-  } -ArgumentList $wd, $py, $slice, $runRoot, $Runs, $MaxTokens, $TimeoutSeconds, $ExperimentId, $Condition, $Skill
+  } -ArgumentList $wd, $py, $slice, $runRoot, $Runs, $MaxTokens, $TimeoutSeconds, $ExperimentId, $Condition, $Skill, $SkillRoute
 }
 
 $jobList | Wait-Job | Out-Null

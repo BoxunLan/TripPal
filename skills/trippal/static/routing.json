@@ -1,0 +1,42 @@
+{
+ "schema_version": "seed-1",
+ "generated_by": "skill-loop/integration/pipeline/build_skill_seed.py",
+ "task_field": "scenario_id",
+ "note": "values 的键是任务卡里的 scenario_id。TP-S12 在数据集里是 A/D/E 卡的兜底标签，不是产品轴上的 language 域，所以它不映射任何分片——那批卡考的是来源处理与工具选择，规则在 static/core/tool-policy.md 与 references/source-policy.md（常驻注入）。",
+ "values": {
+  "TP-S01": [
+   "static/fragments/domain/entry.md"
+  ],
+  "TP-S02": [
+   "static/fragments/domain/predeparture.md"
+  ],
+  "TP-S03": [
+   "static/fragments/domain/payment.md"
+  ],
+  "TP-S04": [
+   "static/fragments/domain/ticketing.md"
+  ],
+  "TP-S05": [
+   "static/fragments/domain/train.md"
+  ],
+  "TP-S06": [
+   "static/fragments/domain/citytransport.md"
+  ],
+  "TP-S07": [
+   "static/fragments/domain/stay.md"
+  ],
+  "TP-S08": [
+   "static/fragments/domain/connectivity.md"
+  ],
+  "TP-S09": [
+   "static/fragments/domain/navigation.md"
+  ],
+  "TP-S10": [
+   "static/fragments/domain/food.md"
+  ],
+  "TP-S11": [
+   "static/fragments/domain/emergency.md"
+  ],
+  "TP-S12": []
+ }
+}

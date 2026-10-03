@@ -91,11 +91,19 @@ class HttpModel:
         try:
             raw = urllib.request.urlopen(req, timeout=self.timeout).read().decode("utf-8", "replace")
         except urllib.error.HTTPError as exc:
+            # 把服务端返回的正文一并带上：只有 "HTTP 400" 时无法区分「上下文超长」「请求体不合法」
+            # 「模型没加载」等情况，实测就是这样把 12/12 张卡的 400 查了半天。
+            detail = ""
+            try:
+                detail = exc.read().decode("utf-8", "replace").strip()[:300]
+            except Exception:  # noqa: BLE001 - 读不到正文不该掩盖原始错误
+                detail = ""
+            message = f"HTTP {exc.code}" + (f": {detail}" if detail else "")
             if 500 <= exc.code < 600:
-                raise ModelServerError(f"HTTP {exc.code}", http_status=exc.code) from exc
+                raise ModelServerError(message, http_status=exc.code) from exc
             # 4xx 里有两类完全不同的东西：402/429 是**计费与限流**（请求没被受理），
             # 而请求体不合法才是真的调用错误。状态码原样带出去，由上层分桶。
-            raise ModelParseError(f"HTTP {exc.code}", http_status=exc.code) from exc
+            raise ModelParseError(message, http_status=exc.code) from exc
         except TimeoutError as exc:
             raise ModelTimeout("请求超时") from exc
         except urllib.error.URLError as exc:

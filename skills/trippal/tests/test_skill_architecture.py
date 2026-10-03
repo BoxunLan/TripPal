@@ -167,6 +167,21 @@ def test_quality_tool_catches_unsourced_claims_and_red_lines(tmp_path: Path) -> 
     assert "sensitive.passport" in out, f"未抓敏感数据：{out}"
 
 
+def test_routing_table_matches_axis_and_files(manifest: dict) -> None:
+    """路由表（供 harness 按域注入）必须与轴一致，且指向真实存在的分片。"""
+    path = SKILL / "static" / "routing.json"
+    assert path.is_file(), "缺少 routing.json：没有它就只能全量注入，路由行为测不到"
+    route = json.loads(path.read_text(encoding="utf-8"))
+    assert route["task_field"] == "scenario_id", "任务字段必须与数据集卡片字段一致"
+    assert set(route["values"]) == {f"TP-S{i:02d}" for i in range(1, 13)}, "12 个数据集场景都要有映射"
+    axis_files = set((manifest["axes"]["domain"]["values"]).values())
+    routed = {p for paths in route["values"].values() for p in paths}
+    assert routed <= axis_files, f"路由表指向了不在轴上的分片：{sorted(routed - axis_files)}"
+    for rel in routed:
+        assert (SKILL / rel).is_file(), f"路由表指向的分片不存在：{rel}"
+    assert sum(1 for v in route["values"].values() if v) >= 10, "可路由的域太少，路由形同虚设"
+
+
 def test_generated_layer_has_no_drift() -> None:
     """源材料改了但没人重跑生成器时，这条会失败——防止产品内容与调研脱节。"""
     if not GENERATOR.exists():

@@ -276,18 +276,42 @@ def main(argv: list[str]) -> int:
         }
     cmap_path = OUT / "corpus-map.json"
     cmap_text = json.dumps(corpus, ensure_ascii=False, indent=1) + "\n"
+
+    # 路由表：声明"任务字段取值 -> 该注入哪些域分片"。harness 靠它做按域注入（--skill-route），
+    # 这样评测测到的就是文件型 agent 的真实加载行为，而不是把 12 个分片全塞进上下文。
+    router = {
+        "schema_version": "seed-1",
+        "generated_by": "skill-loop/integration/pipeline/build_skill_seed.py",
+        "task_field": "scenario_id",
+        "note": (
+            "values 的键是任务卡里的 scenario_id。TP-S12 在数据集里是 A/D/E 卡的兜底标签，"
+            "不是产品轴上的 language 域，所以它不映射任何分片——那批卡考的是来源处理与工具选择，"
+            "规则在 static/core/tool-policy.md 与 references/source-policy.md（常驻注入）。"
+        ),
+        "values": {
+            sid: ([] if sid in CATCH_ALL else [f"static/fragments/domain/{slug}.md"])
+            for sid, slug in SLUG.items()
+        },
+    }
+    router_path = OUT / "routing.json"
+    router_text = json.dumps(router, ensure_ascii=False, indent=1) + "\n"
     if args.check:
         old = cmap_path.read_text(encoding="utf-8") if cmap_path.exists() else ""
         if old != cmap_text:
             changed.append(str(cmap_path.relative_to(REPO)))
-        print(f"[check] {len(written)} 个分片 + corpus-map.json，需更新的文件：{len(changed)}")
+        old_r = router_path.read_text(encoding="utf-8") if router_path.exists() else ""
+        if old_r != router_text:
+            changed.append(str(router_path.relative_to(REPO)))
+        print(f"[check] {len(written)} 个分片 + corpus-map.json + routing.json，需更新的文件：{len(changed)}")
         for c in changed:
             print(f"  - {c}")
         return 1 if changed else 0
     cmap_path.write_text(cmap_text, encoding="utf-8")
+    router_path.write_text(router_text, encoding="utf-8")
 
     print(f"[seed] 写入 {len(written)} 个域分片 -> {OUT / 'fragments' / 'domain'}")
     print(f"[seed] 写入 corpus-map.json（{sum(len(v['bundled_pages']) for v in corpus['domains'].values())} 条页面映射）")
+    print(f"[seed] 写入 routing.json（{sum(1 for v in router['values'].values() if v)} 个域可路由）")
     return 0
 
 
