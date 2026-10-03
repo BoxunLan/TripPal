@@ -1,0 +1,3 @@
+# Python bytecode caches (pytest runs under skills/trippal/tests)
+__pycache__/
+*.pyc
