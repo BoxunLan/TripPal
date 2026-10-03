@@ -99,3 +99,30 @@ Then open <http://localhost:8000>. The `website` directory can also be used as t
 ## Skill
 
 The Skill is in [`skills/trippal`](skills/trippal). See its [web profile contract](skills/trippal/references/web-profile-contract.md) for the data schema shared with the website.
+
+### Skill architecture (seed v0, 2026-10-04)
+
+The skill is now a **router + static fragments** product, modeled on the `nature-*` skill layout:
+
+- [`SKILL.md`](skills/trippal/SKILL.md) is a router only (5-step protocol, "never work from memory");
+- [`manifest.yaml`](skills/trippal/manifest.yaml) declares what loads when (version, `always_load`, the
+  `domain` axis with 12 readiness domains, on-demand references, quality tool);
+- [`static/core/`](skills/trippal/static/core) is always loaded (principles, tool policy, workflow,
+  output/quality); [`static/fragments/domain/`](skills/trippal/static/fragments/domain) holds one
+  fragment per domain; [`static/corpus-map.json`](skills/trippal/static/corpus-map.json) maps domains
+  to bundled authoritative pages with effective dates;
+- [`references/source-policy.md`](skills/trippal/references/source-policy.md) is the credibility ladder
+  (T1 statutory → T4 community), dating discipline, conflict rules and per-domain search recipe;
+- [`scripts/verify_assessment.py`](skills/trippal/scripts/verify_assessment.py) is the declared quality
+  gate: webpage payload contract + "no policy claim without a source and a date";
+- [`tests/test_skill_architecture.py`](skills/trippal/tests/test_skill_architecture.py) guards the shape
+  (router budget, manifest paths, no orphan fragments, no drift from the generator).
+
+The 12 domain fragments are **generated drafts** (SEED banners) from `research/pain_points.md` + the
+dataset v2 cards (`python skill-loop/integration/pipeline/build_skill_seed.py`). Full status, layout and
+the feedback we need are in [`skills/trippal/README.md`](skills/trippal/README.md).
+
+**What the two tracks should report** (exact commands are in the skill README): which domain fragments
+are wrong or thin, which required items a domain misses, where the router misclassifies a profile,
+which source-policy call was wrong, and where the quality gate is too loud or too quiet — per domain
+and per pattern, not as a single score.

@@ -1,0 +1,445 @@
+{
+ "schema_version": "seed-1",
+ "generated_by": "skill-loop/integration/pipeline/build_skill_seed.py",
+ "note": "domain -> bundled authoritative pages. Keys match manifest.yaml axes.domain.values. TP-S12 is a dataset catch-all label, so the language domain intentionally maps no pages.",
+ "domains": {
+  "entry": {
+   "dataset_scenario": "TP-S01",
+   "title": "免签/签证资格判定与行程合规",
+   "bundled_pages": [
+    {
+     "page_key": "I am currently on a Z visa and working in China, but I want to apply to a PhD program. I am asked in the application to submit a medical examination form and a non-criminal background check. I have been living in China for 12 years without leaving the country for more than a few weeks at a time. Am I still required to submit these two for getting an X1/X2 visa?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202506/t20250620_4118049.html",
+     "effective_date": "2025-06-20",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Can I leave China the day my visa expires?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155064.html",
+     "effective_date": "2025-07-22",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "I am a Spanish citizen and plan to visit Beijing soon. I would like to know which payment methods are available for taking the subway in Beijing: cash, VISA credit card, or MasterCard? Thank you.",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210196.html",
+     "effective_date": "2025-09-25",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "If a foreigner renews his passport, can he still use the self-service clearance channel at Beijing's airports to enter China with the new passport and a valid \"Five-Star Card\"?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564831.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "My child needs notarization and authentication of their Birth Medical Certificate. The child is a foreign citizen, was born in Beijing, and obtained their first passport at the embassy in China. Where can I seek assistance for notarization?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564834.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "If I already hold a 10-year China visa, do I need the 240-hour transit instead?",
+     "url": "https://mychina.guide/blog/can-americans-enter-china-without-visa",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-VISA"
+    },
+    {
+     "page_key": "Can US passport holders visit Hainan without a visa, and what are the conditions?",
+     "url": "https://mychina.guide/blog/hainan-visa-free-sanya-haikou-guide",
+     "effective_date": "September 19, 2026",
+     "rule_id": "R-HAINAN"
+    },
+    {
+     "page_key": "Which countries are on China's unilateral 30-day visa-free list, and is the United States included?",
+     "url": "https://mychina.guide/blog/china-visa-free-entry-countries-2026",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-UNILATERAL"
+    },
+    {
+     "page_key": "Which port and permitted area apply to Harbin under the 240-hour visa-free transit?",
+     "url": "https://mychina.guide/blog/harbin-ice-festival-three-venues-guide",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-HARBIN"
+    },
+    {
+     "page_key": "When does the 240-hour visa-free transit clock start, and how long is it in practice?",
+     "url": "https://mychina.guide/blog/china-visa-free-transit-requirements",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-CLOCK"
+    },
+    {
+     "page_key": "What onward ticket evidence is required for the 240-hour visa-free transit?",
+     "url": "https://mychina.guide/blog/china-visa-free-transit-requirements",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-TICKET"
+    },
+    {
+     "page_key": "Under the 240-hour visa-free transit policy, must the onward ticket go to a third country different from where I came from?",
+     "url": "https://govt.chinadaily.com.cn/s/202602/04/WS69831274498e36855033a64e/im-a-us-citizen-flying-from-the-us-south-korea-transit-shanghai-south-korea-does-this-route-qualify-for-the-240-hour-visa-free-transit-policy-or-does-it-have-to-involve-a-third-country.html",
+     "effective_date": null,
+     "rule_id": "R-THIRD"
+    },
+    {
+     "page_key": "Does China's 240-hour visa-free transit allow travel to Tibet?",
+     "url": "https://mychina.guide/blog/beijing-to-lhasa-travel-guide-requirements",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-TIBET"
+    },
+    {
+     "page_key": "Do Hong Kong and Macau count as a third country or region for China's 240-hour visa-free transit?",
+     "url": "https://mychina.guide/blog/china-visa-free-transit-requirements",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-HK"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "predeparture": {
+   "dataset_scenario": "TP-S02",
+   "title": "行前 72 小时\"落地可生存\"准备",
+   "bundled_pages": [
+    {
+     "page_key": "How do I get internet access in China as a foreign visitor?",
+     "url": "https://mychina.guide/blog/how-to-get-internet-in-china",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-NET"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "payment": {
+   "dataset_scenario": "TP-S03",
+   "title": "移动支付开通与失败兜底",
+   "bundled_pages": [
+    {
+     "page_key": "Can a foreign visitor use Alipay or WeChat Pay with an overseas bank card in China?",
+     "url": "https://govt.chinadaily.com.cn/s/202502/25/WS67bd6c5a498eec7e1f730389/using-foreign-bank-cards-for-mobile-payments-in-china.html",
+     "effective_date": null,
+     "rule_id": "R-PAY"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "ticketing": {
+   "dataset_scenario": "TP-S04",
+   "title": "景区/博物馆预约与抢票",
+   "bundled_pages": [
+    {
+     "page_key": "Hello, I am planning on visiting Beijing soon. I learned that some tickets are only available via WeChat. Unfortunately, WeChat does not work on my phone. I found third party providers like Klook, Viator, GetYourGuide which provide tickets for the Heaven Temple and the Summer Palace. Are these tickets valid and accepted, or do I have to buy them on place? Thank you in advance for your answer!",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155052.html",
+     "effective_date": "2025-07-22",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Hello! I would like to purchase tickets for Jingshan Park, but the system shows that my phone number is incorrect. What should foreign visitors do in this case? I would like to book two tickets for the visit.",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155057.html",
+     "effective_date": "2025-07-22",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Hello, do foreigners also have Beijing Park Sightseeing Passes? If yes, where can foreigners buy that?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155067.html",
+     "effective_date": "2025-07-22",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "I was wondering what the combined ticket include for the Temple of Heaven. Also, can students get the discount tickets?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564821.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "How and when can I buy timed-entry tickets for popular Chinese attractions as a foreign visitor?",
+     "url": "https://mychina.guide/blog/how-to-buy-forbidden-city-tickets",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-TICKETS"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "train": {
+   "dataset_scenario": "TP-S05",
+   "title": "城际交通（火车/高铁/跨境）",
+   "bundled_pages": [
+    {
+     "page_key": "What do I need to know about booking and boarding high-speed trains in China as a foreigner?",
+     "url": "https://mychina.guide/blog/china-high-speed-rail-guide",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-TRAIN"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "citytransport": {
+   "dataset_scenario": "TP-S06",
+   "title": "市内交通与打车",
+   "bundled_pages": [
+    {
+     "page_key": "How do I use ride-hailing in China without a Chinese phone number?",
+     "url": "https://mychina.guide/blog/how-to-use-didi-china-without-chinese-number",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-TAXI"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "stay": {
+   "dataset_scenario": "TP-S07",
+   "title": "住宿筛选与入住登记",
+   "bundled_pages": [
+    {
+     "page_key": "What are the necessary steps for a late accommodation registration? I am a foreigner and did not know about this until recently.",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202507/t20250722_4155054.html",
+     "effective_date": "2025-07-22",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Can every hotel in China check in a guest who holds a foreign passport?",
+     "url": "https://mychina.guide/blog/china-hotels-foreigners-check-in-guide",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-HOTEL"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "connectivity": {
+   "dataset_scenario": "TP-S08",
+   "title": "上网与信息获取",
+   "bundled_pages": [
+    {
+     "page_key": "How to contact 12306 custom service via a US cell phone in China?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564837.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "How do I get internet access in China as a foreign visitor?",
+     "url": "https://mychina.guide/blog/how-to-get-internet-in-china",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-NET"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "navigation": {
+   "dataset_scenario": "TP-S09",
+   "title": "导航与地址沟通",
+   "bundled_pages": [
+    {
+     "page_key": "How do I use ride-hailing in China without a Chinese phone number?",
+     "url": "https://mychina.guide/blog/how-to-use-didi-china-without-chinese-number",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-TAXI"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "food": {
+   "dataset_scenario": "TP-S10",
+   "title": "点餐与饮食限制",
+   "bundled_pages": [
+    {
+     "page_key": "Can a foreign visitor use Alipay or WeChat Pay with an overseas bank card in China?",
+     "url": "https://govt.chinadaily.com.cn/s/202502/25/WS67bd6c5a498eec7e1f730389/using-foreign-bank-cards-for-mobile-payments-in-china.html",
+     "effective_date": null,
+     "rule_id": "R-PAY"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "emergency": {
+   "dataset_scenario": "TP-S11",
+   "title": "应急处理",
+   "bundled_pages": [
+    {
+     "page_key": "To Beijing Tiantan Hospital: Can I get international medical department information here?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564823.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "How can I obtain the application contact information for the Biomedical and Biotechnology programs at Peking University?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564824.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Hello. Could you let me know if you offer employment health checks? If you do, how much is this check?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564835.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "What is the penalty for overstaying a visa-free entry in China?",
+     "url": "https://mychina.guide/blog/can-americans-travel-china-visa-free",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-OVERSTAY"
+    }
+   ],
+   "coverage": "bundled"
+  },
+  "language": {
+   "dataset_scenario": "TP-S12",
+   "title": "全流程语言支持",
+   "bundled_pages": [
+    {
+     "page_key": "Dear Sir or Madam, I haven't found any information on retirement, retirement pension or retirement calculation in your APP. Can you tell me where I can find it?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210195.html",
+     "effective_date": "2025-09-25",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "2025 Job Fair for International Talent Do you dream of stepping onto the global stage? Do you aspire to work with world-class companies? Your chance is here! 2025 Job Fair for International Talent is about to begin! Don't miss out – take your career worldwide!",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210197.html",
+     "effective_date": "2025-09-25",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Hello. Can you help me find a guide to show me around Beijing and accompany me to the rural villages? Male or female is good with me. Please let me know at earliest convenience. Thanks.",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210198.html",
+     "effective_date": "2025-09-25",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Dear all I'm an Italian citizen and I'm 64 years old. What do I need to do to visit the Summer Palace on October 6? Thank you.",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202509/t20250925_4210199.html",
+     "effective_date": "2025-09-25",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Hello. I noticed the free layover tour service offered in PEK airport. I have a 23 hrs layover in PEK airport. I would like to take this tour. Is it still available?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564825.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Hi, I was born in Beijing in 1980 and I have lost my original birth certificate. Can someone please tell me how to get a replacement official copy?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564826.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "What are the minimum requirements for a foreigner to obtain a Category A or B Work Permit in Beijing?",
+     "url": "https://english.beijing.gov.cn/12345hotline/faqs/all/202603/t20260324_4564836.html",
+     "effective_date": "2026-03-24",
+     "rule_id": "FAQ-12345"
+    },
+    {
+     "page_key": "Which port and permitted area apply to Harbin under the 240-hour visa-free transit?",
+     "url": "https://mychina.guide/blog/harbin-ice-festival-three-venues-guide",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-HARBIN"
+    },
+    {
+     "page_key": "What registration must a foreign visitor complete after arriving in China?",
+     "url": "https://montreal.china-consulate.gov.cn/chn/zjfw/lszj/fhqz/cjwd2/202505/t20250530_11637915.htm",
+     "effective_date": null,
+     "rule_id": "R-REG"
+    },
+    {
+     "page_key": "Under the 240-hour visa-free transit policy, must the onward ticket go to a third country different from where I came from?",
+     "url": "https://govt.chinadaily.com.cn/s/202602/04/WS69831274498e36855033a64e/im-a-us-citizen-flying-from-the-us-south-korea-transit-shanghai-south-korea-does-this-route-qualify-for-the-240-hour-visa-free-transit-policy-or-does-it-have-to-involve-a-third-country.html",
+     "effective_date": null,
+     "rule_id": "R-THIRD"
+    },
+    {
+     "page_key": "How do I use ride-hailing in China without a Chinese phone number?",
+     "url": "https://mychina.guide/blog/how-to-use-didi-china-without-chinese-number",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-TAXI"
+    },
+    {
+     "page_key": "Which areas of China can I visit under the 240-hour visa-free transit?",
+     "url": "https://mychina.guide/blog/china-visa-free-transit-requirements",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-AREA"
+    },
+    {
+     "page_key": "How do I get internet access in China as a foreign visitor?",
+     "url": "https://mychina.guide/blog/how-to-get-internet-in-china",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-NET"
+    },
+    {
+     "page_key": "Can a foreign visitor use Alipay or WeChat Pay with an overseas bank card in China?",
+     "url": "https://govt.chinadaily.com.cn/s/202502/25/WS67bd6c5a498eec7e1f730389/using-foreign-bank-cards-for-mobile-payments-in-china.html",
+     "effective_date": null,
+     "rule_id": "R-PAY"
+    },
+    {
+     "page_key": "What is the penalty for overstaying a visa-free entry in China?",
+     "url": "https://mychina.guide/blog/can-americans-travel-china-visa-free",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-OVERSTAY"
+    },
+    {
+     "page_key": "What do I need to know about booking and boarding high-speed trains in China as a foreigner?",
+     "url": "https://mychina.guide/blog/china-high-speed-rail-guide",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-TRAIN"
+    },
+    {
+     "page_key": "Can every hotel in China check in a guest who holds a foreign passport?",
+     "url": "https://mychina.guide/blog/china-hotels-foreigners-check-in-guide",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-HOTEL"
+    },
+    {
+     "page_key": "How and when can I buy timed-entry tickets for popular Chinese attractions as a foreign visitor?",
+     "url": "https://mychina.guide/blog/how-to-buy-forbidden-city-tickets",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-TICKETS"
+    },
+    {
+     "page_key": "Do Hong Kong and Macau count as a third country or region for China's 240-hour visa-free transit?",
+     "url": "https://mychina.guide/blog/china-visa-free-transit-requirements",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-HK"
+    },
+    {
+     "page_key": "Does China's 240-hour visa-free transit allow travel to Tibet?",
+     "url": "https://mychina.guide/blog/beijing-to-lhasa-travel-guide-requirements",
+     "effective_date": "September 14, 2026",
+     "rule_id": "R-TIBET"
+    },
+    {
+     "page_key": "When does the 240-hour visa-free transit clock start, and how long is it in practice?",
+     "url": "https://mychina.guide/blog/china-visa-free-transit-requirements",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-CLOCK"
+    },
+    {
+     "page_key": "Which countries are on China's unilateral 30-day visa-free list, and is the United States included?",
+     "url": "https://mychina.guide/blog/china-visa-free-entry-countries-2026",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-UNILATERAL"
+    },
+    {
+     "page_key": "If I already hold a 10-year China visa, do I need the 240-hour transit instead?",
+     "url": "https://mychina.guide/blog/can-americans-enter-china-without-visa",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-VISA"
+    },
+    {
+     "page_key": "What onward ticket evidence is required for the 240-hour visa-free transit?",
+     "url": "https://mychina.guide/blog/china-visa-free-transit-requirements",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-TICKET"
+    },
+    {
+     "page_key": "Can US passport holders visit Hainan without a visa, and what are the conditions?",
+     "url": "https://mychina.guide/blog/hainan-visa-free-sanya-haikou-guide",
+     "effective_date": "September 19, 2026",
+     "rule_id": "R-HAINAN"
+    },
+    {
+     "page_key": "Is the 240-hour visa-free transit a tourist visa, and who qualifies?",
+     "url": "https://mychina.guide/blog/china-visa-free-transit-requirements",
+     "effective_date": "September 27, 2026",
+     "rule_id": "R-TRANSIT-IS-NOT-TOURIST"
+    }
+   ],
+   "coverage": "none"
+  }
+ }
+}

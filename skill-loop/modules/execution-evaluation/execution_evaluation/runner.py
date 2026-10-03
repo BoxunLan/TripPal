@@ -22,7 +22,17 @@ def sha256_file(path) -> str:
 
 
 SKILL_ENTRY_FILENAME = "SKILL.md"
-SKILL_REFERENCE_GLOBS = ("references/**/*.md", "references/**/*.txt")
+# 目录形态注入哪些文件。除了 SKILL.md 与 references/**，还要包含**路由层**：
+# manifest.yaml（路由表）与 static/**（常驻 core、按域分片、语料映射）。
+# 漏掉 static/** 的后果与当初漏掉 references/** 一模一样：路由器在，被路由的内容不在，
+# 于是"skill 有没有用"这件事测不出来 —— 而且是静默的。
+SKILL_REFERENCE_GLOBS = (
+    "manifest.yaml",
+    "references/**/*.md",
+    "references/**/*.txt",
+    "static/**/*.md",
+    "static/**/*.json",
+)
 
 
 def load_skill(skill) -> tuple[str | None, dict]:

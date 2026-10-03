@@ -1,0 +1,75 @@
+name: trippal
+version: 1.0.0-seed
+description: >
+  Declarative manifest for the static/dynamic split of the TripPal skill. SKILL.md reads this
+  to decide which fragments to load for a given China-readiness request. The main axis is the
+  readiness domain: it selects which authoritative pages to consult, which checks to run, and
+  which required items the answer must carry. Deep retrieval policy lives in on-demand
+  references so each invocation stays cheap.
+
+always_load:
+  - static/core/principles.md
+  - static/core/tool-policy.md
+  - static/core/workflow.md
+  - static/core/output-and-quality.md
+
+axes:
+  domain:
+    detect: |
+      Classify the request onto one or more readiness domains. A submitted profile usually
+      spans several; load every domain that its fields touch, but skip domains the request
+      says nothing about. Use the traveller's own framing first, then the profile fields.
+        entry         — visa-free / visa / transit-without-visa / port / area / stay length,
+                        Hong Kong & Macau as third regions, Tibet, Hainan-only, overstay risk
+        predeparture  — last-72-hour "can survive on arrival" setup: VPN/network tools,
+                        app installs, real-name registration before landing
+        payment       — Alipay / WeChat Pay setup, foreign card acceptance, risk-control
+                        freezes, cash fallback, refunds
+        ticketing     — attraction/museum reservation, release windows, passport entry,
+                        sold-out fallback, unauthorised resellers
+        train         — intercity rail and cross-border rail: station, name match, e-ticket
+                        vs physical passport, transfer buffer, 12306
+        citytransport — metro, taxi, ride-hailing, address/landmark communication, refusing
+                        unlicensed taxis
+        stay          — foreigner-friendly accommodation, check-in refusal, accommodation
+                        registration at the police station
+        connectivity  — eSIM / roaming / local SIM, what is blocked, SMS verification,
+                        public Wi-Fi, offline fallbacks
+        navigation    — local map apps, corrected positioning, Chinese address card
+        food          — QR ordering, Chinese menu card, allergies/vegetarian/halal, price units
+        emergency     — illness, refusal, lost documents, overstay handling, consulate contact
+        language      — keeping choice when language is the barrier: showable bilingual cards
+                        and translation fallbacks
+    values:
+      entry:         static/fragments/domain/entry.md
+      predeparture:  static/fragments/domain/predeparture.md
+      payment:       static/fragments/domain/payment.md
+      ticketing:     static/fragments/domain/ticketing.md
+      train:         static/fragments/domain/train.md
+      citytransport: static/fragments/domain/citytransport.md
+      stay:          static/fragments/domain/stay.md
+      connectivity:  static/fragments/domain/connectivity.md
+      navigation:    static/fragments/domain/navigation.md
+      food:          static/fragments/domain/food.md
+      emergency:     static/fragments/domain/emergency.md
+      language:      static/fragments/domain/language.md
+    default: predeparture
+    multi: true
+
+references:
+  on_demand:
+    - condition: deciding which source counts as authoritative, how to search for a domain, how to date a rule, or what to do when sources conflict or are insufficient
+      path: references/source-policy.md
+    - condition: recognising the field failure modes that make a trip unrecoverable after arrival
+      path: references/readiness-baseline.md
+    - condition: exchanging data with the TripPal webpage (get_trip_profile / configure_trip_profile / render_skill_assessment)
+      path: references/web-profile-contract.md
+    - condition: needing the machine-readable domain -> bundled-page map (which pages cover which domain, with effective dates)
+      path: static/corpus-map.json
+
+quality_tools:
+  assessment_check_script: scripts/verify_assessment.py
+  use_when: before returning an assessment to the user or handing it back through render_skill_assessment
+  purpose: >
+    Validate the assessment payload contract and flag policy claims that carry no source URL or
+    no effective date, which is the failure mode field research and evaluation both surfaced.
