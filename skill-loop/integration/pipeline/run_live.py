@@ -45,6 +45,8 @@ def main() -> int:
     api_key = env.get("TRAVEL_LLM_API_KEY", "").strip()
     base_url = env.get("TRAVEL_LLM_BASE_URL", "").strip()
     model = (env.get("TRAVEL_GENERATOR_MODEL") or env.get("TRAVEL_CLASSIFIER_MODEL") or "").strip()
+    max_tokens = env.get("TRAVEL_LLM_MAX_TOKENS", "").strip()
+    timeout_seconds = env.get("TRAVEL_LLM_TIMEOUT_SECONDS", "").strip()
 
     if not api_key:
         print(f"[run_live] {ENV_FILE} 里没有 TRAVEL_LLM_API_KEY，无法跑 live 集成", flush=True)
@@ -55,6 +57,10 @@ def main() -> int:
         os.environ["LLM_BASE_URL"] = base_url
     if model:
         os.environ["LLM_MODEL"] = model
+    if max_tokens:
+        os.environ["LLM_MAX_TOKENS"] = max_tokens
+    if timeout_seconds:
+        os.environ["LLM_TIMEOUT_SECONDS"] = timeout_seconds
 
     for k in ("HTTP_PROXY", "HTTPS_PROXY", "ALL_PROXY", "NO_PROXY",
               "http_proxy", "https_proxy", "all_proxy", "no_proxy"):

@@ -25,7 +25,7 @@ _AUTHORITY = re.compile(
 )
 _SUBSTANTIVE = re.compile(
     r"(\d|percent|%|¥|CNY|RMB|USD|must|required|not authorized|only|within|no more than|"
-    r"days?|hours?|minutes?|VISA|MasterCard|cash)",
+    r"days?|hours?|minutes?|VISA|MasterCard|cash|https?://|contact|e-?mail|website)",
     re.I,
 )
 _DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -120,7 +120,7 @@ _TRIM_TAIL = {
 }
 
 
-def _key_phrase(sentence: str, max_words: int = 6, min_words: int = 2) -> str | None:
+def _key_phrase(sentence: str, max_words: int = 3, min_words: int = 2) -> str | None:
     """从句子切出一段**短而带实质**的逐字短语（围绕数字/规则词，≤6 词）。
 
     为什么要它：只断言 10 词以上的整段逐字再现，会把"读了但改写"和"根本没读"混为一谈
@@ -154,7 +154,7 @@ def _key_phrase(sentence: str, max_words: int = 6, min_words: int = 2) -> str | 
     while len(toks) > min_words and toks[-1].lower() in _TRIM_TAIL:
         toks.pop()
     phrase = " ".join(toks).strip(" ,;:-\u2014")
-    if len(toks) < min_words or len(phrase) < 16:
+    if len(toks) < min_words or len(phrase) < 13:
         return None
     if '"' in phrase or "\\" in phrase:
         return None
@@ -182,23 +182,41 @@ def load_bjfaq() -> list[dict]:
             continue
         date = next((l for l in body if _DATE.match(l)), "")
         idx = body.index(date) if date in body else 0
-        answer_lines = [
-            l for l in body[idx + 1:]
-            if not _NAV.match(l) and not _AUTHORITY.search(l[:70]) and l != question and len(l) > 12
-        ]
+        # Stop at the first navigation/footer heading.  The old comprehension only
+        # skipped the heading itself and then kept "Related Articles" snippets,
+        # which produced unrelated facts such as a transit-guide title in a tour-
+        # guide answer.
+        answer_lines = []
+        for line in body[idx + 1:]:
+            if _NAV.match(line):
+                break
+            if _AUTHORITY.search(line[:70]) or line == question or len(line) <= 12:
+                continue
+            answer_lines.append(line)
         answer = " ".join(answer_lines).strip()
         if len(answer) < 120:
             continue
         facts: list[str] = []
         keys: list[str] = []
-        for sentence in re.split(r"(?<=[.!?])\s+", answer):
+        # Preserve source line boundaries while selecting facts.  Joining a bare
+        # URL line with the next "Thank you" line used to create an artificial
+        # exact-match key that no sensible answer would reproduce.
+        sentences = [
+            sentence
+            for line in answer_lines
+            for sentence in re.split(r"(?<=[.!?])\s+", line)
+        ]
+        for sentence in sentences:
             if not (40 <= len(sentence) <= 400) or not _SUBSTANTIVE.search(sentence):
                 continue
             cand = _fragment(sentence, question, min_overlap=0.0, min_words=4)
             if not cand or cand in facts:
                 continue
             facts.append(cand)
-            keys.append(_key_phrase(cand) or _key_phrase(sentence) or cand)
+            # The verifier key must belong to the displayed fact itself.  Falling
+            # back to another part of the source sentence made some cards require
+            # text that was unrelated to their expected fact.
+            keys.append(_key_phrase(cand) or cand)
         order = sorted(range(len(facts)), key=lambda i: -rare_overlap(question, facts[i]))[:3]
         facts = [facts[i] for i in order]
         keys = [keys[i] for i in order]
