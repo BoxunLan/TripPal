@@ -157,9 +157,15 @@ def pointer(r: dict) -> dict:
 def condition_summary(condition: str, runs: list[dict], experiment_id: str) -> dict:
     keep = eligible(runs)
     counts: dict[str, int] = {}
+    kind_counts: dict[str, int] = {}
     for r in keep:
         key = r["verdict"].get("attribution", "")
         counts[key] = counts.get(key, 0) + 1
+        # `failure_kind` 是 `attribution` 的细分（`execution_defect` → `http_402` /
+        # `budget_exhausted` / `format_contract` …）。旧产物没有这个键，回退到 `attribution`，
+        # 所以历史目录与新目录可以放在同一张表里比。
+        kind = r["verdict"].get("failure_kind") or key
+        kind_counts[kind] = kind_counts.get(kind, 0) + 1
     pass_at_3 = rate(keep, lambda r: True)
     return {
         "schema_version": "v1",
@@ -176,6 +182,7 @@ def condition_summary(condition: str, runs: list[dict], experiment_id: str) -> d
         "assertions_passed_total": assertion_totals(keep)[0],
         "assertions_total": assertion_totals(keep)[1],
         "attribution_counts": counts,
+        "failure_kind_counts": kind_counts,
         "examples": pick_examples(keep, pass_at_3),
     }
 
@@ -201,6 +208,10 @@ def markdown(experiment_id: str, all_runs: list[dict], summaries: list[dict]) ->
         ("avg_input_tokens", lambda s: fmt(s["avg_input_tokens"])),
         ("avg_output_tokens", lambda s: fmt(s["avg_output_tokens"])),
         ("attribution_counts（仅计入分母的运行）", lambda s: json.dumps(s["attribution_counts"], ensure_ascii=False)),
+        (
+            "failure_kind_counts（attribution 的细分：http_402 / budget_exhausted / format_contract …）",
+            lambda s: json.dumps(s.get("failure_kind_counts") or {}, ensure_ascii=False),
+        ),
     ]
     for name, getter in rows:
         lines.append("| " + name + " | " + " | ".join(str(getter(s)) for s in summaries) + " |")
@@ -211,6 +222,15 @@ def markdown(experiment_id: str, all_runs: list[dict], summaries: list[dict]) ->
         key = r["verdict"].get("attribution", "")
         total_counts[key] = total_counts.get(key, 0) + 1
     lines.append(f"全部运行的归因分布（含 live=false / contaminated）：{json.dumps(total_counts, ensure_ascii=False)}")
+    total_kinds: dict[str, int] = {}
+    for r in all_runs:
+        v = r["verdict"]
+        key = v.get("failure_kind") or v.get("attribution", "")
+        total_kinds[key] = total_kinds.get(key, 0) + 1
+    lines.append(
+        f"全部运行的 failure_kind 分布（attribution 的细分，旧产物回退到 attribution）："
+        f"{json.dumps(total_kinds, ensure_ascii=False)}"
+    )
     excluded = len(all_runs) - sum(len(eligible([r for r in all_runs if r['condition'] == s['condition']])) for s in summaries)
     if excluded:
         lines.append(

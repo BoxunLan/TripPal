@@ -20,6 +20,8 @@ evals/runs_*/
 modules/*/out/
 modules/*/out_*/
 _verify_*/
+# 验证「--skill 传目录」用的合成件（= skills/trippal/SKILL.md + references/ 拼成），可复现，不入库
+fixtures/product_skill_full/
 
 # 本地环境变量（含 Key，绝不入库）
 .env
