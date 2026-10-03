@@ -104,6 +104,137 @@ def test_seed_skill_condition_sets_snapshot(tmp_path):
     assert len(manifest["skill_snapshot"]["sha256"]) == 64
 
 
+def test_skill_directory_injects_references(tmp_path, monkeypatch):
+    """`--skill` 传目录时，`references/**` 必须**真的**进上下文，并记进 manifest。
+
+    旧版是 `Path(skill).read_text()`：多文件 SKILL 包里只有 `SKILL.md` 被注入，
+    `references/**` **静默丢失且不报错**。实测同一个产品件因此从 Δ=+0.6 pt 掉到 +0.0 pt
+    —— 差的不是模型能力，是注入范围，而旧版没有任何地方能把这件事看出来。
+    """
+    pkg = tmp_path / "skill_pkg"
+    (pkg / "references").mkdir(parents=True)
+    (pkg / "SKILL.md").write_text("# 主文件\n主规则\n", encoding="utf-8")
+    (pkg / "references" / "extra.md").write_text("补充规则\n", encoding="utf-8")
+
+    seen: dict = {}
+
+    class EchoModel:
+        name = "echo"
+        live = True
+
+        def complete(self, prompt, skill_text=None):
+            seen["skill"] = skill_text
+            return json.dumps({"decision": "unknown", "sources": []}), {
+                "input_tokens": 1,
+                "output_tokens": 1,
+            }
+
+    monkeypatch.setattr(runner, "build_model", lambda cfg: EchoModel())
+    out = tmp_path / "out"
+    assert runner.run(TASK_PACK, "C-seed-skill", 1, "fixture-dirskill", out, skill=pkg) == 0
+    d = sorted((out / "fixture-dirskill" / "C-seed-skill").glob("*/*"))[0]
+    manifest = json.loads((d / "manifest.json").read_text(encoding="utf-8"))
+    snap = manifest["skill_snapshot"]
+
+    assert snap["loaded"] is True
+    assert [f["path"] for f in snap["files"]] == ["SKILL.md", "references/extra.md"]
+    assert all(len(f["sha256"]) == 64 for f in snap["files"])
+    assert "主规则" in seen["skill"] and "补充规则" in seen["skill"]
+    assert contracts.iter_errors("run-manifest", manifest) == []
+
+
+def test_http_error_surfaces_as_failure_kind(tmp_path, monkeypatch):
+    """`HTTP 402/429` 必须与「响应抽不出 JSON」分开。
+
+    旧版两者都只记 `attribution=execution_defect`，实测会把「端点欠费／限流」读成
+    「模型能力差」——`attribution` 的取值是 schema 里的 5 值 enum，不能改，
+    所以细分放在新字段 `failure_kind` / `http_status` 上。
+    """
+    from execution_evaluation.model import ModelParseError
+
+    class PaywallModel:
+        name = "paywall"
+        live = True
+
+        def complete(self, prompt, skill_text=None):
+            raise ModelParseError("HTTP 402", http_status=402)
+
+    monkeypatch.setattr(runner, "build_model", lambda cfg: PaywallModel())
+    assert runner.run(TASK_PACK, "B-no-skill", 1, "fixture-402", tmp_path) == 0
+    d = sorted((tmp_path / "fixture-402" / "B-no-skill").glob("*/*"))[0]
+    verdict = json.loads((d / "verdict.json").read_text(encoding="utf-8"))
+
+    assert verdict["attribution"] == "execution_defect"  # 枚举值不变
+    assert verdict["failure_kind"] == "http_402"
+    assert verdict["http_status"] == 402
+    assert contracts.iter_errors("verdict", verdict) == []
+
+
+def test_manifest_records_full_pack_hash(tmp_path):
+    """manifest 要同时记「本次消费的切片哈希」与「整包哈希」。
+
+    `task_pack_sha256` 是**分片**摘要：两条臂 `--jobs` 不同时它必然不同，
+    拿它跨臂判断「是否同一任务集」会把任务集相同的两臂判成互相污染。
+    """
+    full = "a" * 64
+    assert runner.run(
+        TASK_PACK, "B-no-skill", 1, "fixture-fullhash", tmp_path, task_pack_sha256_full=full
+    ) == 0
+    d = sorted((tmp_path / "fixture-fullhash" / "B-no-skill").glob("*/*"))[0]
+    manifest = json.loads((d / "manifest.json").read_text(encoding="utf-8"))
+
+    assert manifest["task_pack_sha256_full"] == full
+    assert manifest["task_pack_sha256"] != full  # 切片哈希是另一回事
+    assert contracts.iter_errors("run-manifest", manifest) == []
+
+
+def test_contamination_ignores_slice_hash(tmp_path):
+    """两条臂任务集相同、只差切片文件时**不应**判污染（旧版拿分片哈希比，必然误判）。"""
+    exp = tmp_path / "exp"
+    for cond, slice_hash in (("B-no-skill", "1" * 64), ("C-seed-skill", "2" * 64)):
+        d = exp / cond / "T1" / "1"
+        d.mkdir(parents=True)
+        (d / "manifest.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": "v1",
+                    "experiment_id": "exp",
+                    "condition": cond,
+                    "model": "m",
+                    "temperature": 0,
+                    "timeout_seconds": 60,
+                    "max_tokens": 100,
+                    "tool_snapshot": {"name": "x", "sha256": "0" * 64},
+                    "skill_snapshot": {"loaded": False},
+                    "task_pack_sha256": slice_hash,
+                    "task_pack_sha256_full": "f" * 64,
+                },
+                ensure_ascii=False,
+            ),
+            encoding="utf-8",
+        )
+        (d / "verdict.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": "v1",
+                    "task_id": "T1",
+                    "run_n": 1,
+                    "live": True,
+                    "status": "pass",
+                    "overall_pass": True,
+                    "attribution": "none",
+                    "contaminated": False,
+                    "scores": {"outcome": 1.0, "process": 0.8, "evidence": 0.0, "efficiency": 1.0},
+                }
+            ),
+            encoding="utf-8",
+        )
+
+    assert runner.mark_contamination(exp) == []
+    v = json.loads((exp / "B-no-skill" / "T1" / "1" / "verdict.json").read_text(encoding="utf-8"))
+    assert v["contaminated"] is False
+
+
 def test_cli_exit_codes(tmp_path):
     assert cli("run", "--task-pack", str(TASK_PACK), "--condition", "C-seed-skill",
                "--runs", "1", "--experiment-id", "x", "--out", str(tmp_path)).returncode == 2

@@ -16,9 +16,30 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
+
+
+def _has_llm_key(path: Path) -> bool:
+    try:
+        return "TRAVEL_LLM_API_KEY" in path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return False
+
+
 def find_env_file() -> Path:
-    """`.env` 优先取 skill-loop 自己的，其次父目录（兼容独立 checkout）。"""
-    for c in (REPO / ".env", REPO.parent / ".env"):
+    """`.env` 优先取 skill-loop 自己的，其次**逐级向上**找。
+
+    原先只向上找一级（`skill-loop/.env` -> `skill-loop/../.env`），
+    而常见摆法是把 `.env` 放在**工作区根**——比 `skill-loop/` 高两级——
+    于是直接跑必然 `exit 2`，且报错只说"没有 TRAVEL_LLM_API_KEY"，
+    看起来像"没配 Key"，实际是"没找到装着 Key 的那个文件"。
+    这里逐级向上，并在中途遇到**不含 Key** 的同名文件时继续往上找，
+    避免某个无关的 `.env` 把真正的配置挡住。
+    """
+    candidates = [c / ".env" for c in (REPO, *REPO.parents)]
+    for c in candidates:
+        if c.is_file() and _has_llm_key(c):
+            return c
+    for c in candidates:  # 兜底：都不含 Key 就返回第一个存在的，由 main 报错说明
         if c.is_file():
             return c
     return REPO / ".env"

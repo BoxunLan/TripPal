@@ -13,15 +13,28 @@ import urllib.error
 import urllib.request
 
 
-class ModelTimeout(Exception):
+class ModelCallError(Exception):
+    """模型调用失败的基类，携带 **HTTP 状态码**。
+
+    记 `http_status` 是为了把「账户欠费 / 被限流」与「模型答不出来」分开：
+    两者原先都落进 `execution_defect`，于是一次 `HTTP 402`（余额不足、根本没发生推理）
+    会被读成「这个模型很差」。状态码透传后，verdict 可以按码分桶统计。
+    """
+
+    def __init__(self, message: str = "", http_status: int | None = None):
+        super().__init__(message)
+        self.http_status = http_status
+
+
+class ModelTimeout(ModelCallError):
     pass
 
 
-class ModelServerError(Exception):
+class ModelServerError(ModelCallError):
     pass
 
 
-class ModelParseError(Exception):
+class ModelParseError(ModelCallError):
     pass
 
 
@@ -79,8 +92,10 @@ class HttpModel:
             raw = urllib.request.urlopen(req, timeout=self.timeout).read().decode("utf-8", "replace")
         except urllib.error.HTTPError as exc:
             if 500 <= exc.code < 600:
-                raise ModelServerError(f"HTTP {exc.code}") from exc
-            raise ModelParseError(f"HTTP {exc.code}") from exc
+                raise ModelServerError(f"HTTP {exc.code}", http_status=exc.code) from exc
+            # 4xx 里有两类完全不同的东西：402/429 是**计费与限流**（请求没被受理），
+            # 而请求体不合法才是真的调用错误。状态码原样带出去，由上层分桶。
+            raise ModelParseError(f"HTTP {exc.code}", http_status=exc.code) from exc
         except TimeoutError as exc:
             raise ModelTimeout("请求超时") from exc
         except urllib.error.URLError as exc:

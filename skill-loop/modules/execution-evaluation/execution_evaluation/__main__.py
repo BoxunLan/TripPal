@@ -24,8 +24,17 @@ def main(argv=None) -> int:
     p_run.add_argument("--runs", type=int, required=True)
     p_run.add_argument("--experiment-id", required=True)
     p_run.add_argument("--out", required=True)
-    p_run.add_argument("--skill", default=None)
+    p_run.add_argument(
+        "--skill",
+        default=None,
+        help="SKILL 文件或目录；传目录时 SKILL.md 与 references/** 会按序一并注入",
+    )
     p_run.add_argument("--config", default=None)
+    p_run.add_argument(
+        "--task-pack-sha256-full",
+        default=None,
+        help="完整数据集包的 sha256，用于跨臂判断是否同一任务集（--task-pack 是切片时必传）",
+    )
 
     p_sum = sub.add_parser("summarize")
     p_sum.add_argument("--experiment-id", required=True)
@@ -47,6 +56,7 @@ def main(argv=None) -> int:
             args.out,
             skill=args.skill,
             config_path=args.config,
+            task_pack_sha256_full=args.task_pack_sha256_full,
         )
     if args.cmd == "summarize":
         return summarize_mod.summarize(args.experiment_id, args.out, args.run_root)
