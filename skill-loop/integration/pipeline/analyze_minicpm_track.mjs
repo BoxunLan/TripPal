@@ -1,12 +1,12 @@
 // 汇总本端小模型跑批的结果，产出一份轻量分析（不复制原始轨迹）。
 //
 // 用法（skill-loop 目录下）：
-//   node integration/pipeline/analyze_local_track.mjs <runRoot> <packPath> <outPath>
+//   node integration/pipeline/analyze_minicpm_track.mjs <runRoot> <packPath> <outPath>
 // 例：
-//   node integration/pipeline/analyze_local_track.mjs \
+//   node integration/pipeline/analyze_minicpm_track.mjs \
 //     "$env:TEMP/v2-local-skill/runs/localskill/C-seed-skill" \
 //     modules/demand-task-factory/out-v2/task_pack.jsonl \
-//     ../docs/local-track-analysis.md
+//     ../docs/minicpm-track-analysis.md
 //
 // 为什么单独写：原始 trace/verdict 体积大、不适合入库，但"哪些模式全灭、失败卡在哪些断言上、
 // 决策混淆成什么样"这些**聚合结论**才是三端合看时真正需要的。
@@ -16,7 +16,7 @@ import path from "node:path";
 
 const [runRoot, packPath, outPath] = process.argv.slice(2);
 if (!runRoot || !packPath || !outPath) {
-  console.error("用法: node analyze_local_track.mjs <runRoot> <packPath> <outPath>");
+  console.error("用法: node analyze_minicpm_track.mjs <runRoot> <packPath> <outPath>");
   process.exit(2);
 }
 
@@ -90,10 +90,10 @@ const holdout = rows.filter((r) => (pack.get(r.taskId) || {}).split === "holdout
 const train = rows.filter((r) => (pack.get(r.taskId) || {}).split === "train");
 
 const L = [];
-L.push("# 本端小模型轨 —— 结果分析（轻量汇总）");
+L.push("# MiniCPM5-2B 轨（`minicpm5-2b`）—— 结果分析（轻量汇总）");
 L.push("");
-L.push("> 本文件由 `skill-loop/integration/pipeline/analyze_local_track.mjs` 自动汇总生成，**不含原始轨迹**。");
-L.push("> 运行身份与冻结基线见 [`local-track-trajectory.md`](local-track-trajectory.md)；原始 `verdict/trace` 未入库。");
+L.push("> 本文件由 `skill-loop/integration/pipeline/analyze_minicpm_track.mjs` 自动汇总生成，**不含原始轨迹**。");
+L.push("> 运行身份与冻结基线见 [`minicpm-track-trajectory.md`](minicpm-track-trajectory.md)；原始 `verdict/trace` 未入库。");
 L.push("");
 L.push("## 1. 总览");
 L.push("");
@@ -247,7 +247,7 @@ L.push("");
 L.push("- **没有对照臂**：本端只跑了 `C-seed-skill`（按域注入），没跑同包同配置的 `B-no-skill`。");
 L.push("  因此上面的数字**不能**拆成「skill 的贡献」与「题目变简单的贡献」。");
 L.push("- **只在这一配置下成立**：MiniCPM5 2.6B / 64K 上下文 / 4 并发 / 按域注入 / 4096 输出预算。");
-L.push("- **原始轨迹未入库**（体积原因）。需要逐卡证据时按 `local-track-trajectory.md` 的复现命令重跑，");
+L.push("- **原始轨迹未入库**（体积原因）。需要逐卡证据时按 `minicpm-track-trajectory.md` 的复现命令重跑，");
 L.push("  或用该文件里记录的产物路径读取当次运行的 `verdict.json` / `trace.jsonl` / `artifacts/answer.json`。");
 L.push("");
 

@@ -1,8 +1,9 @@
-# 本端小模型轨 —— 轨迹文档
+# MiniCPM5-2B 轨（`minicpm5-2b`）—— 轨迹文档
 
 > 目标：在**不改动 skill** 的前提下，用本机小模型把 TripPal 的 332 张任务集跑完，
 > 逐条记录过程与结果；等另外两端（大模型侧）的轨迹文档出来后再综合分析 skill 怎么改。
-> 本文件是过程记录；收尾时的交接说明见 [`handover-local-track.md`](handover-local-track.md)。
+> 本文件即该轨的交接记录：冻结基线、运行配置、结果与原始汇总路径都在这里；轻量分析见
+> [`minicpm-track-analysis.md`](minicpm-track-analysis.md)。
 
 ## 0. 冻结基线（本次全程不得改动 skill）
 
@@ -16,7 +17,7 @@
 
 **约束**：本轨只读 skill。若最终提交里 `skills/trippal/**` 有改动，则本轨的结论不成立。
 
-## 1. 运行配置（本端）
+## 1. 运行配置（MiniCPM5-2B / LM Studio 本机）
 
 | 项 | 值 | 备注 |
 |---|---|---|
@@ -27,7 +28,7 @@
 | 采样与预算 | `-Runs 1 -MaxTokens 4096 -TimeoutSeconds 300` | 与历史基线同口径 |
 | 运行脚本 | `integration/pipeline/run_v2_parallel.ps1` | 4 路并行 |
 
-## 2. 跑批清单（本端）
+## 2. 跑批清单（MiniCPM5-2B）
 
 | # | 臂 | 条件 | 张数 | 产物目录 | 状态 |
 |---|---|---|---|---|---|
@@ -91,8 +92,8 @@
 | F 到达后动作 | 24 | 17 (71%) | 91.3% | 6 | 1 |
 | **合计** | **332** | **255 (76.8%)** | **90.35%** | 55 | 22 |
 
-原始汇总已存档：[`local-track-results/summary.json`](local-track-results/summary.json)、
-[`local-track-results/report.md`](local-track-results/report.md)。
+原始汇总已存档：[`minicpm-track-results/summary.json`](minicpm-track-results/summary.json)、
+[`minicpm-track-results/report.md`](minicpm-track-results/report.md)。
 
 ### 观察（只描述本轨看到的事实，不做因果结论）
 
@@ -128,10 +129,13 @@
 # 2) 主跑（332 张，按域注入）
 cd skill-loop
 & .\integration\pipeline\run_v2_parallel.ps1 -Pack modules/demand-task-factory/out-v2/task_pack.jsonl `
-    -Out "$env:TEMP\v2-local-skill" -Jobs 4 -Runs 1 -MaxTokens 4096 -TimeoutSeconds 300 `
+    -Out "$env:TEMP\v2-minicpm-skill" -Jobs 4 -Runs 1 -MaxTokens 4096 -TimeoutSeconds 300 `
     -ExperimentId localskill -Condition C-seed-skill -Skill "..\skills\trippal" `
     -SkillRoute "..\skills\trippal\static\routing.json"
 ```
+
+> 说明：2026-10-04 那次运行的实际产物目录名是 `%TEMP%\v2-local-skill`（早期命名，含 "local"）；
+> 上面的复现命令用新名 `v2-minicpm-skill`，两者内容一致。
 
 **读结果的入口**：`summary.json`（总指标）、`report.md`（含 examples）、
 `runs/localskill/C-seed-skill/<task_id>/1/{verdict,trace}.json`、`artifacts/answer.json`（逐条断言）。

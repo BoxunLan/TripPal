@@ -1,7 +1,7 @@
-# 本端小模型轨 —— 结果分析（轻量汇总）
+# MiniCPM5-2B 轨（`minicpm5-2b`）—— 结果分析（轻量汇总）
 
-> 本文件由 `skill-loop/integration/pipeline/analyze_local_track.mjs` 自动汇总生成，**不含原始轨迹**。
-> 运行身份与冻结基线见 [`local-track-trajectory.md`](local-track-trajectory.md)；原始 `verdict/trace` 未入库。
+> 本文件由 `skill-loop/integration/pipeline/analyze_minicpm_track.mjs` 自动汇总生成，**不含原始轨迹**。
+> 运行身份与冻结基线见 [`minicpm-track-trajectory.md`](minicpm-track-trajectory.md)；原始 `verdict/trace` 未入库。
 
 ## 1. 总览
 
@@ -166,6 +166,6 @@ V2B-already_holds_visa-10, V2B-already_holds_visa-16, V2B-already_holds_visa-19,
 - **没有对照臂**：本端只跑了 `C-seed-skill`（按域注入），没跑同包同配置的 `B-no-skill`。
   因此上面的数字**不能**拆成「skill 的贡献」与「题目变简单的贡献」。
 - **只在这一配置下成立**：MiniCPM5 2.6B / 64K 上下文 / 4 并发 / 按域注入 / 4096 输出预算。
-- **原始轨迹未入库**（体积原因）。需要逐卡证据时按 `local-track-trajectory.md` 的复现命令重跑，
+- **原始轨迹未入库**（体积原因）。需要逐卡证据时按 `minicpm-track-trajectory.md` 的复现命令重跑，
   或用该文件里记录的产物路径读取当次运行的 `verdict.json` / `trace.jsonl` / `artifacts/answer.json`。
 
