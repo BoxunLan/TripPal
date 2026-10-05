@@ -1,3 +1,34 @@
 # Python bytecode caches (pytest runs under skills/trippal/tests)
 __pycache__/
 *.pyc
+
+# ---- 本地工作目录忽略项 ----
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.DS_Store
+
+# 前端依赖（如有构建步骤）
+node_modules/
+
+# 上游 trippal 工作区（非本产品代码）
+.tripal-work/
+
+# agent 工作记忆与技能（个人私有，不进产品仓库）
+.workbuddy/
+
+# 运行缓存与产物（绝不进仓库）
+.bigmodel-run/
+".bigmodel-run/
+TripPal-main/
+TripPal-main.zip
+.ctrip-review/
+.clonelog.txt
+.ctrip-review_pytest_fix.txt
+_commit_msg.txt
+
+# 误建带引号的脏目录（创建 bug 产物，名称以 " 开头）
+"*

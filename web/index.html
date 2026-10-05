@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>旅行 Agent · 试运行界面</title>
+<style>
+:root{
+  --bg:#0d1117; --card:#161b22; --card2:#1c222b; --line:#26303c;
+  --fg:#e6edf3; --mut:#8b949e; --dim:#6e7681;
+  --acc:#58a6ff; --ok:#3fb950; --warn:#d29922; --bad:#f85149; --tool:#a371f7;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:14px/1.65 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 18px 90px}
+.mono{font-family:ui-monospace,Consolas,"Cascadia Mono",monospace}
+a{color:var(--acc)}
+
+/* ---------- 页头 ---------- */
+header h1{font-size:20px;margin:0 0 6px;display:flex;align-items:center;gap:9px}
+header h1 .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:none}
+.sub{color:var(--mut);font-size:12.5px;margin:2px 0}
+.sub .mono{color:var(--fg)}
+
+/* ---------- 表单 ---------- */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;margin:18px 0}
+textarea{width:100%;min-height:74px;resize:vertical;background:#0f141a;color:var(--fg);
+  border:1px solid var(--line);border-radius:9px;padding:11px 13px;font:inherit;line-height:1.6;
+  outline:none}
+textarea:focus{border-color:#2a4c74;box-shadow:0 0 0 3px rgba(88,166,255,.09)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:11px}
+label.f{display:flex;align-items:center;gap:6px;color:var(--mut);font-size:12.5px}
+select,input[type=text]{background:#0f141a;color:var(--fg);border:1px solid var(--line);
+  border-radius:7px;padding:6px 9px;font:inherit;font-size:12.5px;outline:none}
+select:focus,input[type=text]:focus{border-color:#2a4c74}
+input[type=text]{width:132px}
+button{background:var(--acc);color:#08121f;border:0;border-radius:8px;padding:9px 20px;
+  font:inherit;font-weight:600;cursor:pointer}
+button:hover{filter:brightness(1.08)}
+button:disabled{opacity:.5;cursor:default;filter:none}
+button.ghost{background:transparent;color:var(--mut);border:1px solid var(--line);font-weight:400;
+  padding:7px 13px;font-size:12.5px}
+button.ghost:hover{color:var(--fg);border-color:#3a4653}
+.ex{margin-top:12px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.ex .lab{color:var(--dim);font-size:12px;margin-right:2px}
+.chip-ex{background:var(--card2);border:1px solid var(--line);color:var(--mut);border-radius:999px;
+  padding:4px 11px;font-size:12px;cursor:pointer}
+.chip-ex:hover{color:var(--fg);border-color:#3a4653}
+.chip-ex.ex-clarify{opacity:.72;border-style:dashed}
+.chip-ex.ex-clarify::after{content:"追问演示";font-size:10px;margin-left:6px;opacity:.75}
+.chip-ex.ex-realtime{opacity:.72;border-style:dashed;border-color:#1f3d63}
+.chip-ex.ex-realtime::after{content:"实时事实";font-size:10px;margin-left:6px;opacity:.75;color:var(--acc)}
+.chip-ex.ex-answer{opacity:.72;border-style:dashed;border-color:#4a3a1c}
+.chip-ex.ex-answer::after{content:"常识问询";font-size:10px;margin-left:6px;opacity:.75;color:var(--warn)}
+.chip-ex.ex-guide{opacity:.72;border-style:dashed;border-color:#2b5a4a}
+.chip-ex.ex-guide::after{content:"寒暄引导";font-size:10px;margin-left:6px;opacity:.75;color:var(--ok)}
+/* 行程信息卡（2026-10-05 加）：
+   口语怎么说都说得清的事，换个量词就抽不到了（「一个成年人」「1位成人」曾是漏的）。
+   这张卡存在的理由就是给用户一条**不依赖抽取**的路：填了就随每句话一起发给服务端，
+   由 slots_from_form 直接落成槽位。它不是装饰 —— 是抽不到时的兜底通道。 */
+.formcard{padding:13px 15px}
+.frow{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:9px}
+.ftitle{font-size:12.5px;color:var(--fg);font-weight:600}
+.fnote{color:var(--dim);font-size:11.5px;line-height:1.6}
+.fgrid{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:9px}
+.ff{display:flex;align-items:center;gap:6px;color:var(--mut);font-size:12.5px}
+.ff input[type=text]{width:112px}
+.ff input[type=number]{width:62px;background:#0f141a;color:var(--fg);border:1px solid var(--line);
+  border-radius:7px;padding:5px 7px;font:inherit;font-size:12.5px;outline:none}
+.ff input:focus{border-color:#2a4c74}
+.formcard[hidden]{display:none}
+/* 追问卡里的快捷补充：就在「问你几个人」的同一屏给它填 ——
+   让用户跑到页面顶部去找表单，等于没给。 */
+.qf{margin-top:13px;padding:11px 13px;border:1px dashed #34404d;border-radius:10px;
+  background:#11161d}
+.qf .qfh{color:var(--mut);font-size:12px;margin-bottom:8px}
+.qf .fgrid{margin-bottom:7px}
+.qf .fgrid:last-of-type{margin-bottom:9px}
+.hint{color:var(--dim);font-size:12px;margin-top:11px;line-height:1.7}
+/* 会话记忆面板：把服务端记着的东西摆出来。
+   存在的理由：用户报「没有对话记忆」，而那一栏原先在服务端连影子都没有 ——
+   到底记没记住，先要看得见。（缓存前缀 .mem- 而非 .mem，避免与通用样式撞。） */
+.memory{margin-top:12px;padding:10px 13px;border-radius:10px;background:var(--card2);
+  border:1px solid var(--line);font-size:12.5px;line-height:1.75}
+.memory[hidden]{display:none}
+.memory .mem-h{color:var(--mut);font-size:12px}
+.memory .mem-h b{color:var(--fg)}
+.memory ol{margin:6px 0 0;padding-left:20px;color:var(--dim)}
+.memory ol li{margin:2px 0}
+.memory .mem-tag{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:999px;
+  font-size:10.5px;border:1px solid var(--line);color:var(--mut)}
+.memory .mem-sub{color:var(--acc);border-bottom:1px dotted #2a4c74}
+
+/* ---------- 结果卡 ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:20px 0;
+  overflow:hidden;animation:in .22s ease-out}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.chead{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;
+  gap:9px;flex-wrap:wrap}
+.chead h2{font-size:17px;margin:0;flex:1 1 auto;line-height:1.4}
+.chead .th{color:var(--dim);font-weight:400}
+.qbar{padding:8px 18px;background:#11161d;border-bottom:1px solid var(--line);color:var(--mut);
+  font-size:12.5px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.qbar b{color:var(--fg);font-weight:600}
+.pill{font-size:11.5px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);
+  background:var(--card2);color:var(--mut);white-space:nowrap}
+.pill.acc{color:var(--acc);border-color:#1f3d63;background:#132132}
+.pill.ok{color:var(--ok);border-color:#1d4029;background:#0f2417}
+.pill.warn{color:var(--warn);border-color:#4a3a12;background:#241d0c}
+.pill.bad{color:var(--bad);border-color:#54211f;background:#2a1312}
+.pill.tool{color:var(--tool);border-color:#3b2b58;background:#1e1630}
+.stats{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.stats div{flex:1 1 104px;padding:9px 16px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-size:16px;font-weight:600}
+.stats span{color:var(--dim);font-size:11.5px}
+
+.body{padding:18px}
+.body h3{font-size:13px;color:var(--mut);font-weight:600;margin:20px 0 9px;
+  text-transform:none;letter-spacing:.02em}
+.body h3:first-child{margin-top:0}
+ul.plain{margin:0;padding-left:19px;color:var(--fg)}
+ul.plain li{margin:5px 0;line-height:1.65}
+
+/* 逐日 */
+.day{border-left:2px solid var(--line);padding:0 0 4px 15px;margin:0 0 18px;position:relative}
+.day:last-child{margin-bottom:0}
+.day .dhead{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:8px}
+.day .dno{font-weight:700;font-size:14px}
+.day .dtheme{color:var(--mut);font-size:12.5px}
+.act{display:grid;grid-template-columns:64px 1fr;gap:11px;padding:7px 0;
+  border-top:1px dashed #1e262f}
+.act:first-of-type{border-top:0}
+.act .t{color:var(--dim);font-size:12px}
+.act .n{font-weight:600}
+.act .d{color:var(--mut);font-size:12.5px;margin-top:2px;line-height:1.6}
+.act .c{color:var(--acc);font-size:12px;margin-top:3px}
+
+/* 预算 */
+.bline{display:flex;align-items:center;gap:10px;font-size:12.5px;margin:6px 0}
+.bline .nm{flex:0 0 46%;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bline .bar{flex:1 1 auto;height:7px;background:#0f141a;border-radius:4px;overflow:hidden;
+  border:1px solid var(--line)}
+.bline .bar i{display:block;height:100%;background:var(--acc)}
+.bline .am{flex:0 0 68px;text-align:right;color:var(--fg)}
+.bsum{margin-top:10px;font-size:12.5px;color:var(--mut)}
+.bsum b{color:var(--fg)}
+
+/* 引用 */
+.cites{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-family:ui-monospace,Consolas,monospace;font-size:11.5px;background:var(--card2);
+  border:1px solid var(--line);border-radius:6px;padding:2px 7px;color:var(--mut);cursor:default}
+.chip.tool{color:var(--tool);border-color:#3b2b58;background:#1e1630}
+/* 有原文链接时 chip 渲染成 <a>。上面那条 cursor:default 会让它看着不可点，
+   可点态必须显式改回来 —— 否则「来源」两个字写了等于没写。 */
+a.chip{cursor:pointer;text-decoration:none}
+a.chip:hover{color:var(--fg);border-color:#3a4653}
+.legend{color:var(--dim);font-size:11.5px;margin-top:8px}
+
+/* 校验 */
+table.v{width:100%;border-collapse:collapse;font-size:12.5px}
+table.v th,table.v td{border:1px solid var(--line);padding:6px 9px;text-align:left;
+  vertical-align:top}
+table.v th{background:var(--card2);color:var(--mut);font-weight:500;white-space:nowrap}
+
+/* 其他状态 */
+.clar .body p{margin:6px 0}
+.question{font-size:15px;line-height:1.7}
+.reason{color:var(--bad)}
+/* 实时事实卡：说明句用正常前景色（红色留给失败），辅助句用暗色 */
+.note{color:var(--fg);line-height:1.75;margin:6px 0}
+.aid{color:var(--dim);font-size:12.5px;line-height:1.7;margin:6px 0}
+.aid a{color:var(--acc);text-decoration:none;border-bottom:1px dotted #2a4c74}
+.aid a:hover{border-bottom-style:solid}
+.sug{display:inline-block;color:var(--acc);text-decoration:none;border:1px solid var(--line);
+  border-radius:8px;padding:3px 10px;font-size:13px;cursor:pointer;margin:2px 0}
+.sug:hover{border-color:var(--acc);background:#132132}
+/* 常识作答卡：答案块要视觉上比「相关条目」重 —— 用户来这儿就是为了这一块。 */
+.answerbox{margin:4px 0 13px;padding:13px 15px;border-radius:10px;
+  background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--acc)}
+.answerbox .ans{font-size:14.5px;line-height:1.8;color:var(--fg);white-space:pre-wrap}
+.answerbox .ans.nogive{color:var(--warn)}
+.ansmeta{display:flex;align-items:center;gap:9px;margin-top:10px;flex-wrap:wrap}
+.ansmeta .aid{margin:0}
+.err{background:#2a1312;border:1px solid #54211f;color:#ffb4b0;border-radius:9px;
+  padding:11px 14px;font-size:12.5px}
+.loading{display:flex;align-items:center;gap:11px;color:var(--mut);font-size:13px}
+/* 文案必须整体包在一个 span 里：flex 容器下的文本节点会各自成为 flex item，
+   否则「已等 <b>0</b>s」被拆成三行。 */
+.loading>span{display:inline-flex;align-items:center;gap:5px}
+.spin{width:15px;height:15px;border:2px solid var(--line);border-top-color:var(--acc);
+  border-radius:50%;animation:sp .7s linear infinite;flex:none}
+/* 七节点进度条：由服务端 /plan/stream 推事件驱动，不依赖客户端定时器
+   （标签页不可见时 setInterval 会被节流到分钟级，纯本地计时会假死）。 */
+.steps{list-style:none;margin:13px 0 2px;padding:0;display:grid;gap:7px}
+.step{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--dim)}
+.step .dot{width:7px;height:7px;border-radius:50%;background:var(--line);flex:none}
+.step .nm{color:var(--dim);flex:0 0 132px}
+.step .dt{color:var(--dim);font-size:12px;min-width:0}
+.step.run .dot{background:var(--acc);box-shadow:0 0 0 3px rgba(88,166,255,.15)}
+.step.run .nm{color:var(--fg)}
+.step.done .dot{background:var(--ok)}
+.step.done .nm{color:var(--fg)}
+.step.done .dt{color:var(--mut)}
+/* 旁路未经过的步骤：实时事实问询走 clarify → realtime → output，
+   classify / route / retrieve / generate / validate 五步不会被点亮。
+   不标出来的话，进度条会停在中间那一步，看着像「卡住」。 */
+.step.skip{opacity:.42}
+.step.skip .nm::after{content:" · 未经过";font-size:11px;color:var(--dim)}
+/* 诊断行：卡住时让页面自己说出原因，省得来回猜 */
+.diag{color:var(--dim);font-size:12px;margin-top:9px;line-height:1.7}
+.diag.warn{color:var(--warn)}
+@keyframes sp{to{transform:rotate(360deg)}}
+.foot{color:var(--dim);font-size:12px;text-align:center;margin-top:34px;line-height:1.8}
+@media(max-width:640px){
+  .bline .nm{flex:0 0 100%}
+  .bline{flex-wrap:wrap}
+  .act{grid-template-columns:52px 1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1><span class="dot"></span>旅行 Agent · 试运行界面</h1>
+  <p class="sub">行程链路 <span class="mono">clarify → classify → route → retrieve → generate → validate → output</span>，校验最多回环 1 轮<br>
+    另有一条旁路 <span class="mono">clarify → realtime → output</span>：问「今天几点升旗 / 现在开不开门 / 明天天气」这类**会变的事实**，不出行程、不追问天数预算人数</p>
+  <p class="sub" id="health">正在读取服务状态…</p>
+  <!-- 版本戳写在静态 HTML 里（不是 JS 渲染）：只要你看到 v7，就说明没拿到旧缓存。
+        看不到 v7 → Ctrl+F5 硬刷新；仍不行 → 是预览面板在缓存，
+        直接在资源管理器里双击 web/index.html 用系统浏览器打开（CORS 已放开）。 -->
+  <p class="sub">界面版本 <span class="mono">v9 · 行程信息卡（结构化填写，不靠口语识别）</span>
+    · 判据：等待时应显示「已发出请求」并逐节点前进，否则见下方诊断行</p>
+</header>
+
+<div class="panel formcard" id="formcard">
+  <div class="frow">
+    <span class="ftitle">行程信息卡</span>
+    <span class="fnote">填了就随每句话一起发出去 —— 不靠口语识别，填了就直接算数</span>
+    <button class="ghost" id="formtoggle" style="margin-left:auto">收起</button>
+  </div>
+  <div id="formbody">
+    <div class="fgrid">
+      <label class="ff">目的地 <input type="text" id="f-dest" placeholder="厦门"></label>
+      <label class="ff">玩几天 <input type="number" id="f-days" min="1" max="60" placeholder="5"></label>
+      <label class="ff">预算（元）<input type="number" id="f-budget" min="0" placeholder="8000"></label>
+    </div>
+    <div class="fgrid">
+      <label class="ff">成人 <input type="number" id="f-adults" min="0" max="30" placeholder="1"></label>
+      <label class="ff">儿童 <input type="number" id="f-children" min="0" max="30" placeholder="0"></label>
+      <label class="ff">儿童年龄 <input type="number" id="f-childage" min="0" max="17" placeholder="6"></label>
+      <label class="ff">长者 <input type="number" id="f-elders" min="0" max="30" placeholder="0"></label>
+      <button class="ghost" id="formclear">清空已填</button>
+    </div>
+    <div class="fnote">
+      同行人四项<b>全留空 = 没填</b>（不会被当成「已知 2 人」）；填任意一项就按「成人+儿童+长者」合计。
+      同一句里<b>自己又说了</b>的，以你说的为准 —— 表单只是保底。
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <textarea id="msg" placeholder="说一句你的出行需求，例如：带 6 岁孩子去厦门 5 天，预算 8000"></textarea>
+  <div class="row">
+    <button id="send">发送</button>
+    <label class="f">输出语言
+      <select id="lang">
+        <option value="">跟随输入</option>
+        <option value="zh" selected>中文</option>
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+      </select>
+    </label>
+    <label class="f">会话
+      <input type="text" id="sid" class="mono">
+    </label>
+    <button class="ghost" id="newsess">新会话</button>
+    <button class="ghost" id="clear">清空结果</button>
+  </div>
+  <div id="memory" class="memory" hidden></div>
+  <div class="ex"><span class="lab">示例：</span></div>
+  <p class="hint">
+    上面那张<b>行程信息卡</b>填上就随每句话一起发出去 —— 「一个成年人」「1位成人」这类说法
+    换个量词就可能识别不到，卡里填的<b>不经过识别、直接算数</b>。<br>
+    「跟随输入」= 按你输入的语言回（假名→日文、谚文→韩文、汉字→中文、其余→英文）。
+    <b>检索查询恒为中文</b>（知识库是中文语料），改的只是输出语言。<br>
+    引用出处保持中文原样不翻译（翻译会断链）；校验 findings 也是中文 —— 那是给开发看的。<br>
+    <b>实时事实</b>（升旗时间 / 开放情况 / 天气 / 停运）走旁路：只查实时层，查到就给来源，
+    查不到就只给权威入口、不给结论 —— 不编时刻。<br>
+    <b>常识问询</b>（「西湖有多大」这类不随时间变的，以及「厦门有什么好吃的」这类目的地咨询）
+    也走旁路：不追问行程槽位；知识库没有相关材料时用通用常识作答，
+    并明确标注「未经本知识库核实」+ 给一条复核入口 —— 没把握就直说不给数字。点编号 chip 可打开原文。
+  </p>
+</div>
+
+<div id="results"></div>
+
+<p class="foot">真实模型单条约 20–60 秒（含一次可能的回环）。<br>
+  行程为参考建议，不可溯源的事实会被降级为「待核实」，不编造。</p>
+</div>
+
+<script>
+// 每条带预期结果：能出稿的排在前面，演示追问的放最后并标明。
+// 种子库覆盖 厦门 / 清迈 / 北京 + 来华政策（出境日本已整块移除），其它目的地引用会明显变少。
+const EXAMPLES = [
+  {t: "天安门什么时候升旗", expect: "realtime", note: "实时事实 · 走旁路，不追问行程槽位"},
+  {t: "240 小时过境免签适用哪些国家", expect: "realtime", note: "来华政策 · 只给官方入口，不编数字"},
+  {t: "带 6 岁孩子去厦门 5 天，预算 8000", expect: "plan", note: "亲子 · 出稿"},
+  {t: "带孩子穷游厦门 3 天，预算 2000", expect: "plan", note: "亲子+穷游 · 出稿"},
+  {t: "两人穷游清迈 4 天，每天 300", expect: "plan", note: "穷游 · 出稿（人均每天口径）"},
+  {t: "想去青岛玩 4 天，预算 5000，两个人", expect: "plan", note: "通用 · 出稿，但青岛不在种子库、引用很少"},
+  {t: "鼓浪屿明天天气怎么样", expect: "realtime", note: "实时事实 · 库里没有 → 只给权威入口"},
+  {t: "你好", expect: "guide", note: "寒暄引导 · 不再回四连问，只把人引到旅游话题"},
+  {t: "上海有没有免费的博物馆或博览园", expect: "answer", note: "有无类事实问答 · 应回答「有 / 有哪些」+ 官网入口"},
+  {t: "西湖有多大", expect: "answer", note: "常识问询 · 静态事实，同样不追问行程槽位"},
+  {t: "想去泰国玩", expect: "clarify", note: "故意缺槽 · 只回追问，不检索不出稿"},
+];
+
+const $ = (id) => document.getElementById(id);
+const results = $("results");
+let busy = false;
+// 请求超时。真实模型单条 15–40s，给到 90s 足够；超过就放弃等待，别让用户干转圈。
+const REQ_TIMEOUT_MS = 90000;
+// 轮询间隔。比 SSE/NDJSON 笨，但每段都是独立小请求，任何中间层都缓冲不了它。
+const POLL_MS = 400;
+
+// 接口地址。这一层存在的理由很实在：页面可能被**拷到别的静态站点**上打开
+// （编辑器预览面板就是这么干的 —— 它会把 index.html 放到自己的 127.0.0.1:49xxx 端口下），
+// 那时同源的 /plan 压根不存在，页面必须自己把真服务找出来，否则就是「点了没反应」。
+// 候选顺序：?api= 显式指定 > 同源 > 本机 8000（file:// 双击打开时也只有后者可用）。
+let BASE = new URLSearchParams(location.search).get("api")
+  || (location.protocol === "file:" ? "http://127.0.0.1:8000" : "");
+const API = (p) => BASE.replace(/\/$/, "") + p;
+
+async function resolveBase() {
+  const candidates = [BASE, "", "http://127.0.0.1:8000"];
+  for (const cand of candidates) {
+    if (cand === BASE && candidates.indexOf(cand) !== 0) continue;  // 去重，别重复探测
+    try {
+      const r = await fetch(cand.replace(/\/$/, "") + "/health", {cache: "no-store"});
+      if (r.ok) { await r.json(); BASE = cand; return cand; }
+    } catch (e) { /* 换下一个候选 */ }
+  }
+  return BASE;
+}
+
+const sleep = (ms, signal) => new Promise((res, rej) => {
+  const t = setTimeout(res, ms);
+  // 超时/取消时要能立刻醒来，否则还得干等这一轮
+  if (signal) signal.addEventListener("abort", () => { clearTimeout(t); rej(
+    Object.assign(new Error("aborted"), {name: "AbortError"})); }, {once: true});
+});
+
+// 节点进度清单。顺序与 app/main.py 的 NODE_LABELS 一致（服务端为准，
+// 页面这份只是渲染骨架：流式会把服务端给的 label 直接写进去）。
+// realtime 是旁路：命中实时事实问询时只走 clarify → realtime → output，
+// 中间五步由 markStage 标「未经过」，否则进度条会停在中间看着像卡住。
+const STAGES = [
+  ["clarify", "体检必填槽位"],
+  ["realtime", "判定为实时事实问询"],
+  ["knowledge", "判定为常识问询"],
+  ["guide", "判定为寒暄/引导"],
+  ["classify", "判断场景分类"],
+  ["route", "选择路线与叠加层"],
+  ["retrieve", "分层检索知识"],
+  ["generate", "生成行程草稿"],
+  ["validate", "校验预算 / 事实 / 护栏"],
+  ["output", "装配最终答复"],
+];
+
+function rid() {
+  return Math.random().toString(36).slice(2, 8);
+}
+function esc(v) {
+  if (v === null || v === undefined) return "";
+  return String(v).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function money(v, cur) {
+  if (v === null || v === undefined || v === "") return "—";
+  const n = Number(v);
+  if (!isFinite(n)) return esc(v);
+  return (cur || "¥") + n.toLocaleString("zh-CN", {maximumFractionDigits: 2});
+}
+function statusPill(s) {
+  const cls = {pass:"ok", warn:"warn", repair:"bad", block:"bad"}[s] || "";
+  const txt = {pass:"通过", warn:"警告", repair:"需回炉", block:"阻断"}[s] || s;
+  return `<span class="pill ${cls}">${esc(txt)}</span>`;
+}
+function chip(c) {
+  const t = c.origin === "tool" ? " tool" : "";
+  const title = [c.source, c.effective_date ? "生效日 " + c.effective_date : ""].filter(Boolean).join(" · ");
+  // 有原文链接就必须可点：只给一个编号，用户没法自己核对 ——
+  // 「来源」两个字的前提是能打开。
+  // 真 bug：实时事实卡的来源当时是写死的 span（drop 了 source_url），
+  // 整张卡唯一能点的只有「权威入口」，而那条指向站点首页 —— 用户点了跳首页。
+  if (c.url) {
+    return `<a class="chip${t}" href="${esc(c.url)}" target="_blank" rel="noreferrer" title="${esc(title)}">${esc(c.citation_key)}</a>`;
+  }
+  return `<span class="chip${t}" title="${esc(title)}">${esc(c.citation_key)}</span>`;
+}
+
+/* ---------------- 渲染 ---------------- */
+function renderStats(it, v, cites) {
+  const b = it.budget || {};
+  const okCls = v.passed ? "ok" : "bad";
+  return `<div class="stats">
+    <div><b>${(it.days || []).length}</b><span>天</span></div>
+    <div><b>${cites.length}</b><span>引用</span></div>
+    <div><b>${money(b.total)}</b><span>分项合计</span></div>
+    <div><b>${money(b.user_budget)}</b><span>你的预算</span></div>
+    <div><b>${v.round}</b><span>回环轮次</span></div>
+    <div><b style="color:var(--${okCls})">${v.passed ? "通过" : "未通过"}</b><span>校验</span></div>
+    <div><b style="color:var(--${v.degraded ? "warn" : "ok"})">${v.degraded ? "是" : "否"}</b><span>降级</span></div>
+  </div>`;
+}
+
+function renderDays(it) {
+  const days = it.days || [];
+  if (!days.length) return "";
+  return `<h3>逐日行程</h3>` + days.map(d => `
+    <div class="day">
+      <div class="dhead">
+        <span class="dno">第 ${esc(d.day)} 天</span>
+        ${d.date ? `<span class="pill">${esc(d.date)}</span>` : ""}
+        <span class="dtheme">${esc(d.theme || "")}</span>
+        ${d.area ? `<span class="pill">${esc(d.area)}</span>` : ""}
+      </div>
+      ${(d.activities || []).map(a => `
+        <div class="act">
+          <div class="t mono">${esc(a.time)}</div>
+          <div>
+            <div class="n">${esc(a.name)} ${a.citation_key ? chip({citation_key:a.citation_key, origin:"knowledge_base"}) : ""}</div>
+            ${a.detail ? `<div class="d">${esc(a.detail)}</div>` : ""}
+            ${a.cost !== null && a.cost !== undefined ? `<div class="c">单人约 ${money(a.cost)}</div>` : ""}
+          </div>
+        </div>`).join("")}
+    </div>`).join("");
+}
+
+function renderBudget(b) {
+  if (!b) return "";
+  const lines = b.lines || [];
+  const max = Math.max(...lines.map(l => Number(l.amount) || 0), 1);
+  const lim = b.user_budget ? b.user_budget * (1 + (b.buffer_ratio ?? 0.1)) : null;
+  return `<h3>预算</h3>` + lines.map(l => `
+    <div class="bline">
+      <span class="nm" title="${esc(l.name)}">${esc(l.name)}</span>
+      <span class="bar"><i style="width:${Math.max(2, (Number(l.amount) || 0) / max * 100)}%"></i></span>
+      <span class="am">${money(l.amount)}</span>
+    </div>`).join("") +
+    `<div class="bsum">
+      分项合计 <b>${money(b.total)}</b>
+      ${b.user_budget ? ` · 你的预算 <b>${money(b.user_budget)}</b>
+        · 含 ${Math.round((b.buffer_ratio ?? 0.1) * 100)}% 缓冲上限 <b>${money(lim)}</b>
+        · <b style="color:var(--${b.within_budget ? "ok" : "bad"})">${b.within_budget ? "在预算内" : "超预算"}</b>` : ""}
+    </div>`;
+}
+
+function renderValidation(v) {
+  const checks = v.checks || [];
+  const rows = checks.map(c => `<tr>
+      <td class="mono">${esc(c.name)}</td>
+      <td>${statusPill(c.status)}</td>
+      <td><span class="pill">上限 ${esc({none:"无",warn:"警告",repair:"回炉",block:"阻断"}[c.severity] || c.severity)}</span></td>
+      <td>${(c.findings || []).map(esc).join("<br>") || "—"}</td>
+    </tr>`).join("");
+  const un = (v.unresolved || []).length
+    ? `<h3>未解决（已降级，不阻断）</h3><ul class="plain">${v.unresolved.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
+  const ra = (v.repair_actions || []).length
+    ? `<h3>回炉动作</h3><ul class="plain">${v.repair_actions.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
+  return `<h3>校验报告</h3>
+    <table class="v"><tr><th>检查</th><th>本次结果</th><th>配置上限</th><th>说明</th></tr>${rows}</table>
+    ${un}${ra}`;
+}
+
+function renderPlan(body, ms) {
+  const it = body.itinerary || {};
+  const r = body.route || {};
+  const v = body.validation || {};
+  const cites = body.citations || [];
+  const cl = body.checklist || [];
+  const sug = body.suggestions || [];
+  return `<article class="card">
+    <div class="qbar">
+      <span>耗时 <b>${(ms / 1000).toFixed(1)}s</b></span>
+      <span>场景 <b>${esc((r.scenes || []).join(" + "))}</b></span>
+      <span>路由 <b class="mono">${esc(r.route_id)}</b></span>
+      <span>输出语言 <b class="mono">${esc(r.output_language)}</b></span>
+      <span>资料库层 <span class="mono">${esc((r.knowledge_scopes || []).join(", "))}</span></span>
+    </div>
+    <div class="chead">
+      <h2>${esc(it.title)} ${it.destination ? `<span class="th">| ${esc(it.destination)}</span>` : ""}</h2>
+      ${it.party ? `<span class="pill">${esc(it.party)}</span>` : ""}
+      ${it.date_range ? `<span class="pill">${esc(it.date_range)}</span>` : ""}
+    </div>
+    ${renderStats(it, v, cites)}
+    <div class="body">
+      ${renderDays(it)}
+      ${renderBudget(it.budget)}
+      ${cl.length ? `<h3>行前清单</h3><ul class="plain">${cl.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+      ${sug.length ? `<h3>建议</h3><ul class="plain">${sug.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+      ${(it.notes || []).length ? `<h3>备注</h3><ul class="plain">${it.notes.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+      ${cites.length ? `<h3>引用（${cites.length} 条）</h3><div class="cites">${cites.map(chip).join("")}</div>
+        <div class="legend">紫色 = 工具凭据（工具返回的逐条事实），其余 = 资料库片段；hover 看来源标题。</div>` : ""}
+      ${(it.disclaimers || []).length ? `<h3>免责声明</h3><ul class="plain">${it.disclaimers.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+      ${renderValidation(v)}
+    </div>
+  </article>`;
+}
+
+function renderClarify(body, ms, message) {
+  return `<article class="card clar">
+    <div class="qbar"><span>耗时 <b>${(ms / 1000).toFixed(1)}s</b></span>
+      <span>缺槽追问 —— <b>不检索、不调工具</b></span></div>
+    <div class="body">
+      <p class="question">${esc(body.question)}</p>
+      <p class="mono" style="color:var(--mut);font-size:12px">missing_slots = ${esc(JSON.stringify(body.missing_slots))}</p>
+      ${quickFillHtml(body.missing_slots)}
+    </div>
+  </article>`;
+}
+
+function renderDegraded(body, ms) {
+  const v = body.validation || {};
+  return `<article class="card clar">
+    <div class="qbar"><span>耗时 <b>${(ms / 1000).toFixed(1)}s</b></span>
+      <span class="pill bad">degraded</span></div>
+    <div class="body">
+      <p class="reason"><b>链路降级：</b>${esc(body.reason)}</p>
+      ${(v.unresolved || []).length ? `<h3>未解决</h3><ul class="plain">${v.unresolved.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+    </div>
+  </article>`;
+}
+
+/* 实时事实卡。它**不是**行程：
+   没有逐日、没有预算、没有清单，也永远不会出现「一行几个人」这类追问。
+   页面刻意把「权威入口」和「本次未核实」摆在同一屏 —— 查不到时用户必须一眼看到去哪查，
+   而不是看到一句像答案的话。 */
+function renderRealtime(body, ms) {
+  const found = body.found || [];
+  const ch = body.channels || [];
+  const un = body.unverified || [];
+  const PILL = {schedule: "acc", opening_hours: "warn", weather: "acc", transport: "warn"};
+  return `<article class="card">
+    <div class="qbar">
+      <span>耗时 <b>${(ms / 1000).toFixed(1)}s</b></span>
+      <span class="pill ${PILL[body.info_type] || ""}">实时事实 · ${esc(body.label)}</span>
+      <span>主体 <b>${esc(body.subject)}</b></span>
+      <span>地点 <b>${body.place ? esc(body.place) : "未解析出"}</b></span>
+      <span>过期丢弃 <b>${body.expired_dropped || 0}</b></span>
+      <span class="mono">走旁路，未经过 classify / route / retrieve / generate / validate</span>
+    </div>
+    <div class="chead">
+      <h2>${esc(body.subject)} · ${esc(body.label)}</h2>
+      <span class="pill">不追问天数 / 预算 / 人数</span>
+    </div>
+    <div class="body">
+      <p class="note">${esc(body.note)}</p>
+      ${found.length ? `
+        <h3>知识库已核实（未过有效期，${found.length} 条）</h3>
+        <ul class="plain">${found.map((f) => `<li>${esc(f.text)}
+          <div class="cites" style="margin-top:5px">${chip({
+            citation_key: f.chunk_id, source: f.source, effective_date: f.effective_date,
+            url: f.source_url,
+          })}</div></li>`).join("")}</ul>`
+      : `<h3>知识库结果</h3><ul class="plain"><li>实时层没有相关且未过期的记录。</li></ul>`}
+      <h3>权威入口（实时核实请从这里查，${ch.length} 处）</h3>
+      <p class="aid">这些是「去哪儿查」的入口点，不是上面那条事实的原文 —— 原文链接是每条上方的编号 chip。</p>
+      ${ch.length
+        ? `<ul class="plain">${ch.map((c) => `<li>
+            <a href="${esc(c.url)}" target="_blank" rel="noreferrer">${esc(c.name)}</a>
+            ${c.what ? `<div class="aid">${esc(c.what)}</div>` : ""}</li>`).join("")}</ul>`
+        : `<p class="aid">该类型暂无已核实的权威入口 —— 这一条是空缺，不是「不用查」。</p>`}
+      ${un.length ? `<h3>本次未核实</h3><ul class="plain">${
+        un.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+      <h3>其他</h3>
+      <p class="aid">${esc(body.plan_hint || "")}</p>
+      <p class="aid">${esc(body.disclaimer || "")}</p>
+      <p class="aid mono">检索式 ${esc(body.question_zh || "")}（检索恒为中文，与知识库语料一致）</p>
+    </div>
+  </article>`;
+}
+
+/* 常识问询卡（「西湖有多大」）。与实时卡的区别：这里没有时效闸门
+   （面积、海拔不会过期），但**同样不给答案** —— 知识库没有就直说没有，
+   命中的条目也标成「不是这个问题的答案」。 */
+function renderAnswer(body, ms) {
+  const hits = body.hits || [];
+  const verify = body.verify || [];
+  const confName = {high: "高", medium: "中", low: "低"}[body.confidence] || body.confidence || "—";
+  return `<article class="card">
+    <div class="qbar">
+      <span>耗时 <b>${(ms / 1000).toFixed(1)}s</b></span>
+      <span class="pill warn">常识问询 · 不随时间变</span>
+      <span>主体 <b>${esc(body.subject)}</b></span>
+      <span>问的 <b>${esc(body.topic || body.subject)}</b></span>
+      <span>把握 <b>${esc(confName)}</b></span>
+      <span class="mono">走旁路，未经过 classify / route / retrieve / generate / validate</span>
+    </div>
+    <div class="chead">
+      <h2>${esc(body.answer_title || body.subject || "常识问询")}</h2>
+      <span class="pill">不追问天数 / 预算 / 人数</span>
+    </div>
+    <div class="body">
+      ${body.answer
+        ? `<div class="answerbox">
+             <div class="ans">${esc(body.answer)}</div>
+             <div class="ansmeta">
+               <span class="pill warn">通用常识作答 · 未经本知识库核实</span>
+               <span class="aid">把握程度 <b>${esc(confName)}</b>${body.confidence === "high"
+                 ? "" : " —— 具体数字请用下方入口复核"}</span>
+             </div>
+           </div>`
+        : `<div class="answerbox">
+             <div class="ans nogive">本轮没有给出具体数字</div>
+             <div class="ansmeta"><span class="pill warn">没把握就不编数字</span></div>
+           </div>`}
+      <p class="note">${esc(body.note)}</p>
+      ${verify.length ? `
+        <h3>${esc(body.verify_title || "复核入口")}</h3>
+        <ul class="plain">${verify.map((c) => `<li>
+          <a href="${esc(c.url)}" target="_blank" rel="noreferrer">${esc(c.name)}</a>
+          ${c.what ? `<div class="aid">${esc(c.what)}</div>` : ""}</li>`).join("")}</ul>` : ""}
+      ${hits.length ? `
+        <h3>知识库里与「${esc(body.topic || body.subject)}」相关的条目（不是这个问题的答案）</h3>
+        <ul class="plain">${hits.map((h) => `<li>${esc(h.text)}
+          <div class="cites" style="margin-top:5px">${chip({
+            citation_key: h.chunk_id, source: h.source, url: h.source_url,
+          })}</div></li>`).join("")}</ul>` : ""}
+      <h3>其他</h3>
+      <p class="aid">${esc(body.plan_hint || "")}</p>
+      <p class="aid">${esc(body.disclaimer || "")}</p>
+      <p class="aid mono">检索词 ${esc(body.question_zh || "")}（检索恒为中文，与知识库语料一致）</p>
+    </div>
+  </article>`;
+}
+
+/* 寒暄 / 引导卡（「你好」「谢谢」「你是谁」）。它**不是**行程、也**不是**事实断言：
+   不检索、不调工具、不追问槽位。页面把「建议提问」做成可点按钮 —— 点一下直接发，
+   比让用户自己重新组织一句话省事（对齐 Dialogflow 的 help intent 做法）。 */
+function renderGuide(body, ms) {
+  const starters = body.starters || [];
+  const KIND = {greeting: "问候", thanks: "致谢", farewell: "道别", meta: "关于我"};
+  return `<article class="card">
+    <div class="qbar">
+      <span>耗时 <b>${(ms / 1000).toFixed(1)}s</b></span>
+      <span class="pill ok">寒暄引导 · ${esc(KIND[body.kind] || body.kind || "闲聊")}</span>
+      <span class="mono">走旁路，未经过 classify / route / retrieve / generate / validate</span>
+    </div>
+    <div class="body">
+      <div class="answerbox"><div class="ans">${esc(body.reply || "")}</div></div>
+      <p class="note">${esc(body.note)}</p>
+      ${starters.length ? `
+        <h3>试着这样问</h3>
+        <ul class="plain">${starters.map((s) =>
+          `<li><span class="sug" data-q="${esc(s)}">${esc(s)}</span></li>`).join("")}</ul>` : ""}
+      <p class="aid">${esc(body.disclaimer || "")}</p>
+    </div>
+  </article>`;
+}
+
+/* ---------------- 交互 ---------------- */
+function addResult(html) {
+  const d = document.createElement("div");
+  d.innerHTML = html;
+  // appendChild 会把节点**从 d 里移走**，所以必须先用变量接住：
+  // 写成 `results.appendChild(d.firstElementChild)` 再读 `d.firstElementChild` 就是 null，
+  // 当场抛 TypeError —— 而这个函数是 send() 的第一步，异常一抛请求根本没发出去。
+  // （用户看到的「一直转圈、已等 0s、七步一个不亮」就是这个：请求从未离开浏览器。）
+  const el = d.firstElementChild;
+  results.appendChild(el);
+  el.scrollIntoView({behavior: "smooth", block: "start"});
+  return el;
+}
+
+function bumpElapsed(holder, sec) {
+  const el = holder.querySelector(".elapsed");
+  if (el) el.textContent = sec.toFixed(0);
+}
+
+function diag(holder, text, warn) {
+  const el = holder.querySelector(".diag");
+  if (!el) return;
+  el.textContent = text;
+  el.classList.toggle("warn", !!warn);
+}
+
+// 服务端每跑完一个节点推来的事件 → 进度条前进一格。
+function markStage(holder, ev) {
+  const all = [...holder.querySelectorAll(".step")];
+  const idx = all.findIndex((el) => el.dataset.stage === ev.stage);
+  if (idx > 0) {
+    // 跳过的步骤明确标出来。实时事实问询只走 clarify → realtime → output，
+    // 中间五步永远等不到事件 —— 不标记的话，进度条会停在那一步看着像卡住。
+    all.slice(0, idx).forEach((el) => {
+      if (!el.classList.contains("done")) el.classList.add("skip");
+    });
+  }
+  const li = all[idx];
+  if (li) {
+    const again = li.classList.contains("done") ? "重跑 · " : "";
+    if (ev.label) li.querySelector(".nm").textContent = ev.label;
+    li.querySelector(".dt").textContent =
+      `${again}${ev.detail || ""} · ${(ev.ms / 1000).toFixed(1)}s`;
+    li.classList.remove("skip");
+    li.classList.add("done");
+  }
+  all.forEach((el) => el.classList.remove("run"));
+  const next = all.find((el) => !el.classList.contains("done") && !el.classList.contains("skip"));
+  if (next) next.classList.add("run");
+  bumpElapsed(holder, ev.ms / 1000);
+}
+
+async function fetchPlanOnce(payload, ctrl) {
+  const resp = await fetch(API("/plan"), {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(payload),
+    signal: ctrl.signal,
+  });
+  const body = await resp.json().catch(() => null);
+  if (!resp.ok) {
+    const detail = body && body.detail ? JSON.stringify(body.detail) : `HTTP ${resp.status}`;
+    throw Object.assign(new Error(detail), {status: resp.status});
+  }
+  return {body};
+}
+
+// 跑链路：起步一步（拿 task_id）+ 短轮询拿进度。
+//
+// 为什么不用 NDJSON 流（即使服务端仍然提供 /plan/stream）：
+//   流会被「不知道响应该逐段转发」的中间层缓冲到结束才吐 —— 编辑器预览面板、
+//   公司代理都干得出来。那时事件全在最后一刻到达，用户看到的还是「一直转圈」。
+//   短轮询每段都是独立小请求，最笨但最稳。
+// 老服务没有 /plan/start（404）时退回一次性接口，功能不降级，只是没有进度条。
+async function fetchPlan(payload, holder, ctrl) {
+  const headers = {"Content-Type": "application/json"};
+  // 这一句是整条链的第一份证据：出现说明 JS 在跑且请求已出网。
+  diag(holder, `已发出请求（${esc(BASE === "" ? "同源" : BASE)}），等待服务端起步…`);
+  const resp = await fetch(API("/plan/start"), {
+    method: "POST", headers, body: JSON.stringify(payload), signal: ctrl.signal,
+  });
+  if (resp.status === 404) {
+    diag(holder, "当前服务没有 /plan/start（老进程），已退回一次性接口 —— 没有进度条",
+      true);
+    return await fetchPlanOnce(payload, ctrl);
+  }
+  if (!resp.ok) {
+    const detail = await resp.text().catch(() => "");
+    throw Object.assign(new Error(`HTTP ${resp.status} ${detail.slice(0, 200)}`),
+      {status: resp.status});
+  }
+  const {task_id} = await resp.json();
+  diag(holder, `已开后台任务 <span class="mono">${esc(task_id.slice(0, 8))}</span>，开始轮询`);
+
+  let seen = 0;
+  for (;;) {
+    await sleep(POLL_MS, ctrl.signal);
+    const pr = await fetch(API(`/plan/progress/${task_id}`), {signal: ctrl.signal});
+    if (!pr.ok) {
+      throw Object.assign(new Error(`进度查询失败 HTTP ${pr.status}`), {status: pr.status});
+    }
+    const st = await pr.json();
+    for (const ev of st.stages.slice(seen)) markStage(holder, ev);
+    seen = st.stages.length;
+    // 计时用服务端返回的耗时，不用 performance.now()：
+    // 标签页不可见时本地定时器会被节流到分钟级，那是「一直显示 0s」的根因。
+    bumpElapsed(holder, st.ms / 1000);
+    diag(holder, `轮询中 · 已完成 <b>${seen}</b> 步 · 服务端累计 ${(st.ms / 1000).toFixed(1)}s`);
+    if (st.done) {
+      if (st.error) throw new Error(st.error);
+      if (!st.response) throw new Error("任务已完成但没有返回结果体");
+      return {body: st.response, ms: st.ms};
+    }
+  }
+}
+
+/* ---------------- 行程信息卡 ---------------- */
+// 表单 → 服务端 slot_overrides 的字段表。`key` 是服务端认的键（见 slots_from_form）。
+const FORM_FIELDS = [
+  ["f-dest", "destination", "text"],
+  ["f-days", "days", "number"],
+  ["f-budget", "budget", "number"],
+  ["f-adults", "adults", "number"],
+  ["f-children", "children", "number"],
+  ["f-childage", "child_age", "number"],
+  ["f-elders", "elders", "number"],
+];
+
+function collectForm() {
+  const out = {};
+  for (const [id, key, kind] of FORM_FIELDS) {
+    const el = $(id);
+    if (!el) continue;
+    const v = String(el.value || "").trim();
+    if (!v) continue;                       // 留空 = 没填，不发
+    if (kind === "number") {
+      const n = Number(v);
+      if (!isFinite(n) || n < 0) continue;  // 非法输入当没填，不让服务端去猜
+      out[key] = n;
+    } else {
+      out[key] = v;
+    }
+  }
+  return out;
+}
+
+// 服务端认出来的东西回填表单（GET /session 里的 slots）。
+// 只填**当前为空**的格子：用户在表单里手改过的值不能被一次响应悄悄覆盖回去，
+// 那会让「我明明改了，它又给我改回来」。
+function syncFormFromSlots(slots) {
+  if (!slots) return;
+  const put = (id, val) => {
+    const el = $(id);
+    if (el && !String(el.value || "").trim() && val !== undefined && val !== null && val !== "")
+      el.value = val;
+  };
+  put("f-dest", slots.destination_surface || slots.destination);
+  put("f-days", slots.days);
+  put("f-budget", slots.budget);
+  if (slots.party_size && !String($("f-adults").value || "").trim()
+      && !String($("f-children").value || "").trim()
+      && !String($("f-elders").value || "").trim()) {
+    // 会话里只有合计人数时，按已知构成还原：儿童/长者各取 1，其余算成人。
+    // 这是**推导值**，所以只在三格全空时写 —— 用户手填过的优先。
+    const kids = slots.has_children ? 1 : 0;
+    const elders = slots.has_elder ? 1 : 0;
+    const adults = Math.max(0, Number(slots.party_size) - kids - elders);
+    $("f-children").value = kids ? String(kids) : "";
+    $("f-elders").value = elders ? String(elders) : "";
+    $("f-adults").value = String(adults);
+  }
+  if (slots.child_age) put("f-childage", slots.child_age);
+}
+
+/* 追问卡里的快捷补充：把缺的那几项就地摆出来。
+   用 data-form-field 指向上面的表单同一格子 —— 单一数据源，不存在两份值打架。 */
+const MISSING_FIELDS = {
+  destination: [["f-dest", "目的地", "text", "厦门"]],
+  destination_country: [["f-dest", "目的地", "text", "中国"]],
+  date_range: [["f-days", "玩几天", "number", "5"]],
+  budget: [["f-budget", "预算（元）", "number", "8000"]],
+  party: [["f-adults", "成人", "number", "1"],
+          ["f-children", "儿童", "number", "0"],
+          ["f-elders", "长者（60+）", "number", "0"]],
+};
+
+function quickFillHtml(missing) {
+  const rows = [];
+  for (const key of missing || []) {
+    for (const [id, label, kind, ph] of (MISSING_FIELDS[key] || [])) {
+      rows.push(`<label class="ff">${esc(label)}
+        <input type="${kind}" data-form-field="${id}" placeholder="${esc(ph)}"
+               ${kind === "number" ? 'min="0"' : ""}></label>`);
+    }
+  }
+  if (!rows.length) return "";
+  return `<div class="qf">
+      <div class="qfh">快捷补充：填完直接按下面这个按钮重发本句 —— 这几项就不再靠识别，
+        按你填的算。</div>
+      <div class="fgrid">${rows.join("")}</div>
+      <button id="qf-send">按填写的信息重发本句</button>
+    </div>`;
+}
+
+// 快捷补充里的输入 → 写回上面的表单格子（只写有值的）
+function applyQuickFields(scope) {
+  scope.querySelectorAll("[data-form-field]").forEach((el) => {
+    const target = $(el.dataset.formField);
+    const v = String(el.value || "").trim();
+    if (target && v) target.value = v;
+  });
+}
+
+async function send() {
+  const msg = $("msg").value.trim();
+  if (!msg) { $("msg").focus(); return; }
+  if (busy) return;
+  busy = true;
+  $("send").disabled = true;
+  // 等地址解析完成：页面可能是被拷到别的静态端口打开的，那时得先找到真服务。
+  await baseReady;
+
+  const lang = $("lang").value;
+  const payload = {session_id: $("sid").value.trim() || rid(), message: msg};
+  if (lang) payload.output_language = lang;
+  // 行程信息卡：填了就一起发。服务端把它折成标准槽位（app/slots.py::slots_from_form），
+  // 优先级是 本句 > 表单 > 会话历史 —— 所以带着它永远不会盖掉你这句话里自己说清的东西。
+  const fo = collectForm();
+  if (Object.keys(fo).length) payload.slot_overrides = fo;
+
+  const qbar = `<article class="card"><div class="qbar">
+      请求 「${esc(msg)}」 · 会话 <b class="mono">${esc(payload.session_id)}</b>
+      · 输出语言 <b class="mono">${esc(lang || "跟随输入")}</b></div>
+    <div class="body">
+      <div class="loading"><span class="spin"></span>
+        <span>正在跑链路 · 已等 <b class="elapsed">0</b>s</span></div>
+      <div class="diag">尚未发出请求</div>
+      <ol class="steps">${STAGES.map(([k, label]) =>
+        `<li class="step" data-stage="${k}"><i class="dot"></i>` +
+        `<span class="nm">${label}</span><span class="dt"></span></li>`).join("")}</ol>
+    </div></article>`;
+  addResult(qbar);
+  const holder = results.lastElementChild;   // addResult 已把它插进 DOM
+
+  // 超时兜底：请求挂住时至少要有「已放弃等待」这句，而不是无限转圈。
+  const t0 = performance.now();
+  const ctrl = new AbortController();
+  const kill = setTimeout(() => ctrl.abort(), REQ_TIMEOUT_MS);
+  // 本地计时是兜底而非主力：标签页不可见时 setInterval 会被节流到分钟级，
+  // 只靠它会一直显示 0s。真正的「在动」由服务端每一步的结果驱动。
+  const tick = setInterval(() => bumpElapsed(holder, (performance.now() - t0) / 1000), 250);
+  const firstStep = holder.querySelector(".step");
+  if (firstStep) firstStep.classList.add("run");
+  // 6 秒还没点亮第一步，基本就是「页面这一侧」的问题 —— 服务端 clarify 通常 <1s。
+  const watch = setTimeout(() => {
+    if (!holder.querySelector(".step.done")) {
+      diag(holder,
+        "超过 6s 还没有点亮任何一步。服务端单步通常是亚秒到几秒，所以原因多半在页面这一侧："
+        + "① 拿到了旧 HTML → Ctrl+F5 硬刷新（页头应显示「版本 v9 · 行程信息卡」）；"
+        + "② 预览面板那一层有缓存或限制 → 直接在资源管理器里双击 "
+        + "<span class=\"mono\">web/index.html</span> 用系统浏览器打开（接口已放开 CORS，file:// 也能跑）。",
+        true);
+    }
+  }, 6000);
+
+  try {
+    const out = await fetchPlan(payload, holder, ctrl);
+    const ms = Math.round(performance.now() - t0);
+    const body = out.body;
+    const html =
+      body.type === "clarify" ? renderClarify(body, ms, msg) :
+      body.type === "realtime" ? renderRealtime(body, ms) :
+      body.type === "answer" ? renderAnswer(body, ms) :
+      body.type === "guide" ? renderGuide(body, ms) :
+      body.type === "degraded" ? renderDegraded(body, ms) :
+      renderPlan(body, ms);
+    const tmp = document.createElement("div");
+    tmp.innerHTML = html;
+    holder.replaceWith(tmp.firstElementChild);
+  } catch (e) {
+    const aborted = e && e.name === "AbortError";
+    const denied = e && e.status ? `请求被拒（HTTP ${e.status}）` : "";
+    holder.outerHTML = `<article class="card"><div class="body"><div class="err">`
+      + (aborted
+        ? `<b>超过 ${REQ_TIMEOUT_MS / 1000} 秒未返回，已放弃等待</b><br>
+           上面的进度条停在哪一步，卡的就是那一步（通常是 generate 在等模型）。<br>
+           一条链路最多调 3 次模型（分类 + 生成 + 回环重生成），单次上限 60 秒，
+           所以最坏情况要 3 分钟 —— 页面等不了那么久，先放弃了。<br>
+           可以直接重发一次（第二次通常快很多，命中同样的检索结果）；
+           也可以在系统浏览器直接打开 <span class="mono">http://127.0.0.1:8000/</span>
+           排除预览面板的因素。`
+        : denied
+          ? `<b>${denied}</b><br>${esc(e.message)}`
+          : `<b>链路返回错误</b><br>${esc(e.message)}<br>
+             确认 <span class="mono">uvicorn app.main:app --port 8000</span> 还在跑。`)
+      + `</div></div></article>`;
+  } finally {
+    clearTimeout(watch);
+    clearTimeout(kill);
+    clearInterval(tick);
+    busy = false;
+    $("send").disabled = false;
+    // 每轮结束刷一次记忆面板：服务端记了什么，页面上就要看得见。
+    refreshMemory();
+  }
+}
+
+/* 会话记忆面板：读服务端 GET /session/{sid}，把「这次会话记住了什么」摆出来。
+   追问句（「那要预约吗」「开放时间呢」）之所以能答到点上，靠的就是它列出的
+   上一轮主体与实词 —— 所以这一栏不只是展示，它是记忆功能的可见证据。 */
+const TYPE_NAME = {
+  clarify: "追问槽位", realtime: "实时事实", answer: "常识问询",
+  guide: "寒暄引导", plan: "行程草稿", degraded: "降级",
+};
+
+async function refreshMemory() {
+  const box = $("memory");
+  const sid = $("sid").value.trim();
+  if (!box || !sid) return;
+  try {
+    await baseReady;
+    const r = await fetch(API(`/session/${encodeURIComponent(sid)}`));
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const s = await r.json();
+    syncFormFromSlots(s.slots);   // 服务端认出来的东西回填信息卡空白格
+    const recent = s.recent || [];
+    if (!recent.length) { box.hidden = true; return; }
+    const subj = s.last_fact_subject
+      ? ` · 上一轮主体 <span class="mem-sub">${esc(s.last_fact_subject)}</span>` : "";
+    box.hidden = false;
+    box.innerHTML =
+      `<div class="mem-h">会话记忆：本会话已记住 <b>${recent.length}</b> 轮${subj}` +
+      ` · 追问句会承接上面最近那个主体</div>` +
+      `<ol>${recent.map((t) => `<li>${esc(t.message)}` +
+        `<span class="mem-tag">${esc(TYPE_NAME[t.type] || t.type)}</span>` +
+        (t.subject ? `<span class="mem-tag">主体 ${esc(t.subject)}</span>` : "") +
+        `</li>`).join("")}</ol>`;
+  } catch (e) {
+    box.hidden = true;   // 记忆面板是锦上添花，取不到就收起来，不影响主流程
+  }
+}
+
+$("send").addEventListener("click", send);
+// 引导卡里的「建议提问」：点击即发（事件委托 —— 卡片是后插入的，直接绑会漏）
+results.addEventListener("click", (e) => {
+  // 追问卡里的「按填写的信息重发本句」：把快捷补充写回表单，原话不变再发一次。
+  // message 仍是上一句 —— 服务端那边本句抽不到也没关系，表单会把缺的补上。
+  const qf = e.target.closest("#qf-send");
+  if (qf) {
+    if (busy) return;
+    const card = qf.closest(".card");
+    applyQuickFields(card || document);
+    send();
+    return;
+  }
+  const s = e.target.closest(".sug");
+  if (!s || busy) return;
+  $("msg").value = s.dataset.q || "";
+  send();
+});
+$("msg").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); }
+});
+$("newsess").addEventListener("click", () => {
+  $("sid").value = rid();
+  $("memory").hidden = true;   // 新会话还没有记忆，先把上一段的面板收起来
+  // 信息卡是跟着会话走的：换了会话就该是空的，否则会把上一段的目的地/人数带过去
+  for (const [id] of FORM_FIELDS) { const el = $(id); if (el) el.value = ""; }
+  $("msg").focus();
+});
+$("clear").addEventListener("click", () => { results.innerHTML = ""; });
+$("formclear").addEventListener("click", () => {
+  for (const [id] of FORM_FIELDS) { const el = $(id); if (el) el.value = ""; }
+});
+$("formtoggle").addEventListener("click", () => {
+  const body = $("formbody");
+  const open = body.hidden;
+  body.hidden = !open;
+  $("formtoggle").textContent = open ? "收起" : "展开填写";
+});
+$("sid").value = rid();
+
+const exBox = document.querySelector(".ex");
+EXAMPLES.forEach(e => {
+  const b = document.createElement("span");
+  b.className = "chip-ex"
+    + (e.expect === "clarify" ? " ex-clarify" : "")
+    + (e.expect === "realtime" ? " ex-realtime" : "")
+    + (e.expect === "answer" ? " ex-answer" : "")
+    + (e.expect === "guide" ? " ex-guide" : "");
+  b.textContent = e.t;
+  b.title = e.note + "（点击即直接发送）";
+  // 点示例要直接跑链路 —— 只填进输入框不发送，会被当成「点了没反应 / 链路不通」
+  b.onclick = () => { $("msg").value = e.t; send(); };
+  exBox.appendChild(b);
+});
+
+// 页面一加载就把服务地址定下来（可能要试探多个候选），后续的发送请求都 await 它。
+const baseReady = resolveBase().then(base => {
+  fetch(API("/health")).then(r => r.json()).then(h => {
+    $("health").innerHTML = `模型 <span class="mono">${esc(h.llm_provider)}</span>`
+      + ` · 分类 <span class="mono">ecnu-plus</span> · 生成 <span class="mono">ecnu-max</span>`
+      + ` · embedding <span class="mono">${esc(h.embedding)}</span>(${esc(h.embedding_dim)} 维)`
+      + ` · 向量库 <span class="mono">${esc(h.vector_backend)}</span> · 种子 ${esc(h.chunks)} 条`
+      + `<br>版本 <span class="mono">${esc(h.routes_version)} / ${esc(h.retriever_version)} / ${esc(h.classifier_version)}</span>`
+      + `<br>接口地址 <span class="mono">${esc(base === "" ? "同源（当前站点）" : base)}</span>`;
+  }).catch(() => {
+    $("health").textContent = "服务状态读取失败（检查 uvicorn 是否在跑）";
+  });
+  return base;
+});
+</script>
+</body>
+</html>

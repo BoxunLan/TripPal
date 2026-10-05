@@ -21,137 +21,6 @@ def sha256_file(path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else hashlib.sha256(b"").hexdigest()
 
 
-SKILL_ENTRY_FILENAME = "SKILL.md"
-# 目录形态注入哪些文件。除了 SKILL.md 与 references/**，还要包含**路由层**：
-# manifest.yaml（路由表）与 static/**/*.md（常驻 core、按域分片）。
-# 漏掉 static/** 的后果与当初漏掉 references/** 一模一样：路由器在，被路由的内容不在，
-# 于是"skill 有没有用"这件事测不出来 —— 而且是静默的。
-#
-# 但 **static/*.json 不注入**：corpus-map.json（20.7 KB）与 routing.json 是给工具与路由用的
-# 机读资产，不是给模型读的散文；域分片里已经列了本域的页面。实测把这两个 JSON 一起塞进去，
-# 注入文本从 ~21 KB 涨到 ~43 KB，本地 16K 上下文直接 HTTP 400（failure_kind=http_400），
-# 12/12 张卡全废 —— 而这是"注入范围"造成的，不是模型能力。
-# `--skill-route` 走的是磁盘上的 routing.json，不依赖注入文本，所以排除它们不影响路由。
-SKILL_REFERENCE_GLOBS = (
-    "manifest.yaml",
-    "references/**/*.md",
-    "references/**/*.txt",
-    "static/**/*.md",
-)
-
-
-def load_route(route_path) -> dict:
-    """读路由表：声明用任务里的哪个字段、每个取值命中哪些分片。
-
-    路由表属于 **skill**（不是 harness）：harness 只负责按它的声明组装上下文，
-    这样换一个 skill 不用改评测代码。缺文件/缺字段直接报错，不静默退化成全量注入。
-    """
-    path = Path(route_path)
-    if not path.is_file():
-        raise FileNotFoundError(f"路由表不存在：{path}")
-    data = json.loads(path.read_text(encoding="utf-8"))
-    if not isinstance(data, dict) or not str(data.get("task_field", "")).strip():
-        raise ValueError("路由表必须包含 task_field")
-    if not isinstance(data.get("values"), dict):
-        raise ValueError("路由表必须包含 values（任务字段取值 -> 分片相对路径列表）")
-    return data
-
-
-def route_fragments(root: Path, route: dict, task: dict) -> list[Path]:
-    """按路由表挑出这次任务要注入的分片；路由表指向不存在的文件时直接失败。"""
-    raw = task.get(route["task_field"])
-    keys = raw if isinstance(raw, list) else ([] if raw is None else [raw])
-    out: list[Path] = []
-    seen: set[str] = set()
-    for key in keys:
-        for rel in route["values"].get(str(key), []) or []:
-            path = root / rel
-            if not path.is_file():
-                raise FileNotFoundError(f"路由表指向的分片不存在：{rel}（任务字段 {route['task_field']}={key}）")
-            if rel not in seen:
-                seen.add(rel)
-                out.append(path)
-    return sorted(out, key=lambda p: p.relative_to(root).as_posix())
-
-
-def load_skill(skill, route: dict | None = None, task: dict | None = None) -> tuple[str | None, dict]:
-    """读 SKILL 的内容与快照，支持**单文件**与**目录**两种形态。
-
-    原先这里是 `Path(skill).read_text()`：**单文件读取，不展开目录、不跟随引用**。
-    而真实的产品件本身就是多文件包（`SKILL.md` + `references/*.md`），
-    于是 `references/**` **静默注入不到、也不报错**。
-    实测同一个产品件：只注入 `SKILL.md` 时 Δ=+0.0 pt；把 `references/` 一并拼进去后 Δ=+0.6 pt。
-    两者差的不是模型能力，是**注入范围** —— 而旧版没有任何地方能把这件事看出来。
-
-    目录形态的拼接顺序固定为 `SKILL.md` 在前、`references/**` 按路径排序在后，
-    每段前加一行 `<!-- 相对路径 -->`，让轨迹里看得出这段文字来自哪个文件。
-    快照记**实际注入的文件清单 + 各自 sha256**，否则
-    「同一实验的 skill_snapshot 一致」并不能证明注入内容完整。
-
-    单文件形态的快照与旧版**逐字段相同**（`path` 指向该文件、`sha256` 是该文件哈希），
-    以保持既有产物、既有测试与下游统计的兼容；目录形态才额外带 `files`。
-    """
-    if not skill:
-        return None, {"loaded": False}
-    root = Path(skill)
-    if root.is_dir():
-        # 路由模式（给了路由表）：static/fragments/** 不再全量注入，只注入本次任务命中的分片。
-        # 这才是文件型 agent 的真实行为——它按路由器指示读盘，不会把 12 个分片全读进来。
-        routed = route_fragments(root, route, task or {}) if route else None
-        files: list[Path] = []
-        entry = root / SKILL_ENTRY_FILENAME
-        if entry.is_file():
-            files.append(entry)
-        for pattern in SKILL_REFERENCE_GLOBS:
-            for path in sorted(root.glob(pattern)):
-                if not path.is_file():
-                    continue
-                rel = path.relative_to(root).as_posix()
-                if routed is not None and rel.startswith("static/fragments/"):
-                    continue          # 交给路由表决定
-                files.append(path)
-        if routed is not None:
-            files.extend(routed)
-        ordered: list[Path] = []
-        seen: set[str] = set()
-        for f in files:
-            key = str(f.resolve())
-            if key not in seen:
-                seen.add(key)
-                ordered.append(f)
-        if not ordered:
-            raise FileNotFoundError(f"skill 目录里没有可注入的文件：{root}")
-        text = "\n\n".join(
-            f"<!-- {p.relative_to(root).as_posix()} -->\n{p.read_text(encoding='utf-8')}"
-            for p in ordered
-        )
-        snapshot = {
-            "loaded": True,
-            "path": str(root).replace("\\", "/"),
-            "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
-            "files": [
-                {"path": p.relative_to(root).as_posix(), "sha256": sha256_file(p)}
-                for p in ordered
-            ],
-        }
-        if routed is not None:
-            # 路由命中必须落进快照：否则「注入的到底是哪几个分片」在产物里看不出来，
-            # 两条臂比分数时无法解释差异是内容造成的还是注入范围造成的。
-            snapshot["routing"] = {
-                "task_field": route["task_field"],
-                "task_value": (task or {}).get(route["task_field"]),
-                "fragments": [p.relative_to(root).as_posix() for p in routed],
-            }
-        return text, snapshot
-    if root.is_file():
-        return root.read_text(encoding="utf-8"), {
-            "loaded": True,
-            "path": str(root).replace("\\", "/"),
-            "sha256": sha256_file(root),
-        }
-    raise FileNotFoundError(f"skill 路径不存在：{root}")
-
-
 def resolve_tool_data(task) -> tuple[Path, str]:
     """任务卡 `initial_state.tool_data` 声明的检索夹具 → (绝对路径, 仓库内相对路径)。
 
@@ -206,18 +75,11 @@ def extract_json(text: str):
     return None
 
 
-def now_ts() -> str:
-    """每步真实时间戳。旧版是常量 `2026-09-29T10:00:00+08:00`，轨迹里看不出耗时与先后。"""
-    from datetime import datetime, timezone
-
-    return datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
-
-
 def _row(step, ts, action, observation, decision, skipped, cost, artifact=""):
     return {
         "schema_version": "v1",
         "step": step,
-        "timestamp": now_ts(),
+        "timestamp": ts,
         "action": action,
         "observation": observation,
         "decision": decision,
@@ -227,21 +89,12 @@ def _row(step, ts, action, observation, decision, skipped, cost, artifact=""):
     }
 
 
-def cost(input_tokens=0, output_tokens=0, tool_calls=0, synthetic=False):
-    """一步的 token 成本。
-
-    `synthetic=True` 表示这一步**没有真的调用模型**，数字是常量占位
-    （read_task / lookup_local 两步就是这样）。报告里必须与真实 token 分开统计，
-    否则 avg_tokens / efficiency / 成本回归门都建立在混合值上。
-    """
-    out = {
+def cost(input_tokens=0, output_tokens=0, tool_calls=0):
+    return {
         "input_tokens": int(input_tokens),
         "output_tokens": int(output_tokens),
         "tool_calls": int(tool_calls),
     }
-    if synthetic:
-        out["synthetic"] = True
-    return out
 
 
 def retrieval_block(query: str, tool_result: dict | None) -> str:
@@ -289,7 +142,7 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
 
     rows = []
     ts = "2026-09-29T10:00:00+08:00"
-    rows.append(_row(1, ts, "read_task", f"task={task['task_id']}", "开始执行", "", cost(120, 8, synthetic=True)))
+    rows.append(_row(1, ts, "read_task", f"task={task['task_id']}", "开始执行", "", cost(120, 8)))
 
     query = (task.get("demand_evidence") or {}).get("query_cluster") or [""]
     tool_result = None
@@ -310,7 +163,7 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
                 obs,
                 "按工具返回值决定下一步" if tool_result["text"] else "没有命中，改走模型自身知识",
                 "" if tool_result["text"] else "跳过了「先确认权威来源」这一步",
-                cost(60, 10, 1, synthetic=True),
+                cost(60, 10, 1),
                 "artifacts/lookup.json",
             )
         )
@@ -326,31 +179,17 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
 
     text, usage, status, attribution = "", cost(), None, None
     last_error = None
-    # `failure_kind` / `http_status` 把「为什么没过」结构化，供报告按类分桶。
-    # 光看 `attribution` 是不够的：`execution_defect` 一桶里混着
-    # 「HTTP 402 没钱」「HTTP 429 限流」「抽不出 JSON」「输出语种不符」四种东西，
-    # 实测只按 `attribution` 统计会把「端点欠费」读成「模型能力差」。
-    failure_kind: str | None = None
-    http_status: int | None = None
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
             text, usage = model.complete(prompt, skill_text)
             status, attribution, last_error = None, None, None
-            failure_kind, http_status = None, None
             break
         except ModelTimeout as exc:
             status, attribution, last_error = "timeout", "missing_tool_or_data", str(exc)
-            http_status, failure_kind = getattr(exc, "http_status", None), "timeout"
         except ModelServerError as exc:
             status, attribution, last_error = "error", "execution_defect", str(exc)
-            http_status = getattr(exc, "http_status", None)
-            failure_kind = f"http_{http_status}" if http_status else "server_error"
         except ModelParseError as exc:
             status, attribution, last_error = "error", "execution_defect", str(exc)
-            # 4xx 走的就是这一支：402（余额不足）/429（限流）时**根本没发生推理**，
-            # 必须与「响应抽不出 JSON」分开，否则会把「没钱」读成「模型差」。
-            http_status = getattr(exc, "http_status", None)
-            failure_kind = f"http_{http_status}" if http_status else "parse_error"
         if attempt < MAX_ATTEMPTS:
             rows.append(
                 _row(
@@ -366,26 +205,11 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
 
     if status is None:
         parsed = extract_json(text)
-        finish = str((usage or {}).get("finish_reason") or "")
-        if finish == "length" and (not text.strip() or parsed is None):
-            # 推理模型（reasoning tokens 占大头）常在预算耗尽前吐不出 JSON。
-            # 这是"预算不够"，不是"模型不会"，更不是知识缺口 —— 必须单独定位。
+        if verifier.needs_json(task) and parsed is None:
             status, attribution = "error", "execution_defect"
-            failure_kind = "budget_exhausted"
-            last_error = (
-                f"输出被 max_tokens 截断（finish_reason=length, out={usage.get('output_tokens')}, "
-                f"reasoning={usage.get('reasoning_tokens')}）：failure_kind=budget_exhausted，提高预算后重跑"
-            )
+            last_error = "响应里抽不出 JSON，不重试解析"
             rows.append(
-                _row(3, ts, "answer", text[:200] or "<空响应>", last_error, "提高 max_tokens 后重跑",
-                     cost(usage["input_tokens"], usage["output_tokens"]))
-            )
-        elif verifier.needs_json(task) and parsed is None:
-            status, attribution = "error", "execution_defect"
-            failure_kind = "format_contract"
-            last_error = "响应里抽不出 JSON，不重试解析：failure_kind=format_contract"
-            rows.append(
-                _row(3, ts, "answer", text[:200], "响应解析失败，按 execution_defect 落盘（failure_kind=format_contract）", "", cost(usage["input_tokens"], usage["output_tokens"]))
+                _row(3, ts, "answer", text[:200], "响应解析失败，按 execution_defect 落盘", "", cost(usage["input_tokens"], usage["output_tokens"]))
             )
         else:
             results = verifier.evaluate(task["verifier"]["assertions"], text, parsed)
@@ -401,19 +225,9 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
             # 工具命中了数据却仍然失败 → 知识缺（唯一该写 skill 的一支）；
             # 数据本身就没有 → missing_tool_or_data（写 skill 无用）。
             data_available = bool((tool_result or {}).get("text"))
-            cjk = sum(1 for ch in text if "\u4e00" <= ch <= "\u9fff")
-            language_mismatch = bool(text) and cjk / max(1, len(text)) > 0.15 and any(
-                r["op"] in ("regex", "contains") and not r["passed"] for r in results
+            attribution = "none" if passed else (
+                "knowledge_gap" if data_available else "missing_tool_or_data"
             )
-            if passed:
-                attribution = "none"
-            elif language_mismatch:
-                # 输出语言不符（英文题面答中文）是契约问题，不是知识缺口。
-                attribution = "execution_defect"
-                failure_kind = "language_mismatch"
-                fail_reason = ("输出语言不符（failure_kind=language_mismatch）：" + fail_reason)[:160]
-            else:
-                attribution = "knowledge_gap" if data_available else "missing_tool_or_data"
             rows.append(
                 _row(
                     3,
@@ -461,14 +275,6 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
         "status": status,
         "overall_pass": status == "pass",
         "attribution": "none" if status == "pass" else (attribution or "execution_defect"),
-        # `failure_kind` 是 `attribution` 的**细分**：`execution_defect` 会被拆成
-        # `http_402` / `http_429` / `budget_exhausted` / `format_contract` /
-        # `language_mismatch` / `server_error` / `parse_error`，其余情况与 `attribution` 同值。
-        # 报告按它分桶，才能把「端点欠费」与「模型答不出契约」分开。
-        # 注意 `verdict.schema.json` 里 `attribution` 是 5 值 enum ——
-        # 所以细分**只能**靠这个新字段，不能去改 `attribution` 的取值。
-        "failure_kind": "none" if status == "pass" else (failure_kind or attribution or "execution_defect"),
-        "http_status": http_status,
         "contaminated": False,
         "scores": scores,
     }
@@ -479,13 +285,7 @@ def execute_one(task, run_n, run_dir, model, cfg, skill_text, manifest_base):
 
 
 def mark_contamination(experiment_dir: Path) -> list[str]:
-    """同 experiment_id 下两个 condition 的 manifest 关键字段不一致 → 双方 contaminated。
-
-    「任务集是不是同一份」只比**整包**哈希 `task_pack_sha256_full`，**不比** `task_pack_sha256`：
-    后者是本次实际消费的**切片**文件（`packN.jsonl`）的摘要，两条臂 `--jobs` 不同时必然不同，
-    拿它跨臂比会把任务集完全相同的两臂判成互相污染。调用方没提供整包哈希时**跳过这一项**
-    并打印提示 —— 静默放松检查比误判更危险。
-    """
+    """同 experiment_id 下两个 condition 的 manifest 关键字段不一致 → 双方 contaminated。"""
     manifest_by_condition: dict[str, dict] = {}
     dirs_by_condition: dict[str, list[Path]] = {}
     for cond_dir in sorted(p for p in experiment_dir.iterdir() if p.is_dir()):
@@ -497,32 +297,14 @@ def mark_contamination(experiment_dir: Path) -> list[str]:
         manifest_by_condition[cond_dir.name] = json.loads(runs[0].read_text(encoding="utf-8"))
         dirs_by_condition[cond_dir.name] = [p.parent for p in sorted(cond_dir.glob("*/*/verdict.json"))]
 
-    fields = ("model", "temperature", "timeout_seconds", "tool_snapshot")
+    fields = ("model", "temperature", "timeout_seconds", "tool_snapshot", "task_pack_sha256")
     dirty: list[str] = []
     names = sorted(manifest_by_condition)
-    missing_full_hash: set[str] = set()
     for i in range(len(names)):
         for j in range(i + 1, len(names)):
             a, b = manifest_by_condition[names[i]], manifest_by_condition[names[j]]
-            mismatched = [f for f in fields if a.get(f) != b.get(f)]
-            # 「任务集是不是同一份」只认**整包**哈希：分片哈希在两条臂 `--jobs` 不同时
-            # 必然不同，拿它跨臂比会把同一数据集判成互相污染。
-            fa = (a.get("task_pack_sha256_full") or "").strip()
-            fb = (b.get("task_pack_sha256_full") or "").strip()
-            if fa and fb:
-                if fa != fb:
-                    mismatched.append("task_pack_sha256_full")
-            else:
-                missing_full_hash.update([names[i], names[j]])
-            if mismatched:
+            if any(a.get(f) != b.get(f) for f in fields):
                 dirty.extend([names[i], names[j]])
-
-    if missing_full_hash:
-        print(
-            "[mark_contamination] 这些 condition 的 manifest 没有整包哈希 task_pack_sha256_full，"
-            f"已**跳过**任务集一致性检查：{', '.join(sorted(missing_full_hash))}",
-            flush=True,
-        )
 
     for name in sorted(set(dirty)):
         for run_dir in dirs_by_condition.get(name, []):
@@ -535,17 +317,7 @@ def mark_contamination(experiment_dir: Path) -> list[str]:
     return sorted(set(dirty))
 
 
-def run(
-    task_pack,
-    condition,
-    runs,
-    experiment_id,
-    out_root,
-    skill=None,
-    config_path=None,
-    task_pack_sha256_full: str | None = None,
-    skill_route: str | None = None,
-) -> int:
+def run(task_pack, condition, runs, experiment_id, out_root, skill=None, config_path=None) -> int:
     if condition not in CONDITIONS:
         return 2
     if condition == "C-seed-skill" and not skill:
@@ -557,50 +329,28 @@ def run(
     cfg = load_config(config_path or DEFAULT_CONFIG)
     tasks = contracts.load_jsonl(task_pack)
     model = build_model(cfg)
+    skill_text = Path(skill).read_text(encoding="utf-8") if skill else None
 
-    # 路由模式：按每个任务命中的域分片组装上下文，所以必须**逐任务**装载 skill。
-    # 非路由模式保持原样（装载一次、所有任务共用），既有产物与测试不受影响。
-    route = load_route(skill_route) if skill_route else None
-    routed = bool(route) and bool(skill) and Path(skill).is_dir()
-    skill_text: str | None = None
-    skill_snapshot: dict = {"loaded": False}
-    if not routed:
-        skill_text, skill_snapshot = load_skill(skill)
-
-    def manifest_for(snapshot: dict) -> dict:
-        return {
-            "schema_version": "v1",
-            "experiment_id": experiment_id,
-            "condition": condition,
-            "model": model.name,
-            "temperature": cfg["temperature"],
-            # 记**真实生效**的预算：build_model 支持 LLM_MAX_TOKENS / LLM_TIMEOUT_SECONDS 覆盖，
-            # 只写 cfg 默认值会让 manifest 撒谎（实测用 4096/180 跑，manifest 却写 2000/60）。
-            # 用 getattr 容忍测试里的 FakeModel（它只实现 name/complete，没有预算属性）。
-            "timeout_seconds": getattr(model, "timeout", None) or cfg["timeout_seconds"],
-            "max_tokens": getattr(model, "max_tokens", None) or cfg["max_tokens"],
-            "config_timeout_seconds": cfg["timeout_seconds"],
-            "config_max_tokens": cfg["max_tokens"],
-            "tool_snapshot": tool_snapshot_for(tasks),
-            "skill_snapshot": snapshot,
-            # 注意：这是**本次运行实际消费的那个文件**的摘要；4 路并行时是切片文件（pack0.jsonl…），
-            # 不是完整数据集包的摘要。数据集包的摘要在 out-v2/provenance.json 的 pack_sha256。
-            "task_pack_sha256": sha256_file(task_pack),
-            # 「整包」哈希由调用方传入（只有驱动脚本知道完整数据集包在哪）。加这一项是因为
-            # **分片哈希不能跨臂比**：两条臂 `--jobs` 不同时切片文件名与内容必然不同，
-            # `task_pack_sha256` 也就必然不同 —— 拿它判断「是否同一任务集」，
-            # 会把任务集完全相同的两臂误判成互相污染。`mark_contamination` 因此只看这一项。
-            "task_pack_sha256_full": (task_pack_sha256_full or "").strip(),
-            "task_pack_path": str(task_pack).replace("\\", "/"),
-        }
+    skill_snapshot = (
+        {"loaded": True, "path": str(skill).replace("\\", "/"), "sha256": sha256_file(skill)}
+        if skill
+        else {"loaded": False}
+    )
+    manifest_base = {
+        "schema_version": "v1",
+        "experiment_id": experiment_id,
+        "condition": condition,
+        "model": model.name,
+        "temperature": cfg["temperature"],
+        "timeout_seconds": cfg["timeout_seconds"],
+        "max_tokens": cfg["max_tokens"],
+        "tool_snapshot": tool_snapshot_for(tasks),
+        "skill_snapshot": skill_snapshot,
+        "task_pack_sha256": sha256_file(task_pack),
+    }
 
     base = Path(out_root) / experiment_id / condition
     for task in tasks:
-        if routed:
-            task_skill_text, task_snapshot = load_skill(skill, route, task)
-        else:
-            task_skill_text, task_snapshot = skill_text, skill_snapshot
-        task_manifest = manifest_for(task_snapshot)
         for run_n in range(1, int(runs) + 1):
             execute_one(
                 task,
@@ -608,8 +358,8 @@ def run(
                 base / task["task_id"] / str(run_n),
                 model,
                 cfg,
-                task_skill_text,
-                task_manifest,
+                skill_text,
+                manifest_base,
             )
     mark_contamination(Path(out_root) / experiment_id)
     return 0

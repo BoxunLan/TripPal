@@ -1,0 +1,23 @@
+services:
+  db:
+    # pgvector 官方镜像，已内置 vector 扩展
+    image: pgvector/pgvector:pg16
+    container_name: travel-pgvector
+    environment:
+      POSTGRES_USER: travel
+      POSTGRES_PASSWORD: travel
+      POSTGRES_DB: travel
+    ports:
+      # 宿主 5433，避开本机可能已占用的 5432
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U travel -d travel"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:

@@ -1,7 +1,7 @@
 {
   "schema_version": "trippal-scenarios-v1",
   "source": {
-    "corpus": "research",
+    "corpus": "TripPal-main/research",
     "pain_points_sha256": "0f5537a925b765216ee6f886eb9ce965ca931a593bbe6c9ec58708cc489d8e22",
     "se_questions_sha256": "201eb946f95e7af2ad97030f9916b9f0fc075b8f296762f404e598936814206e",
     "trends_summary_sha256": "6443994cbe7d6a019e9f7c4fa59349de4e9cd2f69bcde76d32138478e06c68d4",

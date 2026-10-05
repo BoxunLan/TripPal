@@ -1,0 +1,25 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+PyYAML==6.0.2
+httpx==0.28.1
+pytest==8.3.4
+
+# --- 向量库：PostgreSQL + pgvector ---
+psycopg[binary]==3.2.3
+pgvector==0.3.6
+
+# --- 编排：LangGraph ---
+# langsmith / langchain-core 必须显式钉版本：不钉的话 pip 会在 langsmith 的版本回溯上
+# 跑几分钟然后 ResolutionImpossible（本机实测）。下面这组是验证过能装上的一组。
+langsmith==0.3.45
+langchain-core==0.3.86
+langgraph==0.2.60
+langgraph-checkpoint>=2.0.4,<3.0.0
+langgraph-sdk>=0.1.42,<0.2.0
+
+# langsmith 的运行时依赖（langgraph 用 --no-deps 装时不会自动带上）
+orjson>=3.9.14,<4.0.0
+requests>=2,<3
+requests-toolbelt>=1.0.0,<2.0.0
+zstandard>=0.23.0,<0.24.0

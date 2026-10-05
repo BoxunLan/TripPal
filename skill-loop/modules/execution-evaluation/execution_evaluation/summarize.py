@@ -46,17 +46,6 @@ def load_runs(experiment_dir: Path) -> list[dict]:
                     c = ev.get("cost", {})
                     in_tokens += int(c.get("input_tokens", 0))
                     out_tokens += int(c.get("output_tokens", 0))
-        # 逐条断言结果（runner 已写进 artifacts/answer.json）：用于连续指标，
-        # 不再只看"过没过"这个会翻转的布尔值。
-        a_passed, a_total = 0, 0
-        answer_path = run_dir / "artifacts" / "answer.json"
-        if answer_path.exists():
-            try:
-                asserts = json.loads(answer_path.read_text(encoding="utf-8")).get("assertions") or []
-                a_total = len(asserts)
-                a_passed = sum(1 for a in asserts if a.get("passed"))
-            except (ValueError, AttributeError):
-                a_passed, a_total = 0, 0
         runs.append(
             {
                 "condition": manifest.get("condition", run_dir.parents[1].name),
@@ -67,8 +56,6 @@ def load_runs(experiment_dir: Path) -> list[dict]:
                 "tokens": in_tokens + out_tokens,
                 "in_tokens": in_tokens,
                 "out_tokens": out_tokens,
-                "assertions_passed": a_passed,
-                "assertions_total": a_total,
                 "verdict_path": rel(vp),
             }
         )
@@ -96,29 +83,6 @@ def _avg(runs: list[dict], key: str) -> float | None:
     if not runs:
         return None
     return round(sum(r[key] for r in runs) / len(runs), 3)
-
-
-def mean_assertion_pass(runs: list[dict]) -> float | None:
-    """连续指标：平均"断言通过率"（本卡通过的断言数 / 断言总数）。
-
-    为什么需要它：实测同一张卡在同配置下重复三次，**布尔判定会翻转**
-    （例如 `fail(6/7) → fail(6/7) → pass(7/7)`），而部分分逐次复现。
-    `pass@3` 还会因方差虚高（实测 25% → 41.7%）。所以"离做对还差多远"是比
-    "过没过"更稳、更适合衡量 SKILL 注入效果的量。
-    """
-    picked = [r for r in runs if r.get("assertions_total")]
-    if not picked:
-        return None
-    return round(
-        sum(r["assertions_passed"] / r["assertions_total"] for r in picked) / len(picked), 6
-    )
-
-
-def assertion_totals(runs: list[dict]) -> tuple[int, int]:
-    return (
-        sum(r.get("assertions_passed", 0) for r in runs),
-        sum(r.get("assertions_total", 0) for r in runs),
-    )
 
 
 def avg_input_tokens(runs: list[dict]) -> float | None:
@@ -157,15 +121,9 @@ def pointer(r: dict) -> dict:
 def condition_summary(condition: str, runs: list[dict], experiment_id: str) -> dict:
     keep = eligible(runs)
     counts: dict[str, int] = {}
-    kind_counts: dict[str, int] = {}
     for r in keep:
         key = r["verdict"].get("attribution", "")
         counts[key] = counts.get(key, 0) + 1
-        # `failure_kind` 是 `attribution` 的细分（`execution_defect` → `http_402` /
-        # `budget_exhausted` / `format_contract` …）。旧产物没有这个键，回退到 `attribution`，
-        # 所以历史目录与新目录可以放在同一张表里比。
-        kind = r["verdict"].get("failure_kind") or key
-        kind_counts[kind] = kind_counts.get(kind, 0) + 1
     pass_at_3 = rate(keep, lambda r: True)
     return {
         "schema_version": "v1",
@@ -178,11 +136,7 @@ def condition_summary(condition: str, runs: list[dict], experiment_id: str) -> d
         "avg_tokens": avg_tokens(keep),
         "avg_input_tokens": avg_input_tokens(keep),
         "avg_output_tokens": avg_output_tokens(keep),
-        "mean_assertion_pass": mean_assertion_pass(keep),
-        "assertions_passed_total": assertion_totals(keep)[0],
-        "assertions_total": assertion_totals(keep)[1],
         "attribution_counts": counts,
-        "failure_kind_counts": kind_counts,
         "examples": pick_examples(keep, pass_at_3),
     }
 
@@ -200,18 +154,12 @@ def markdown(experiment_id: str, all_runs: list[dict], summaries: list[dict]) ->
     rows = [
         ("task_count", lambda s: s["task_count"]),
         ("pass_at_3", lambda s: fmt(s["pass_at_3"])),
-        ("mean_assertion_pass（连续指标，比 pass@3 稳）", lambda s: fmt(s.get("mean_assertion_pass"))),
-        ("assertions_passed/总断言数", lambda s: f"{s.get('assertions_passed_total')}/{s.get('assertions_total')}"),
         ("train_pass_at_3", lambda s: fmt(s["train_pass_at_3"])),
         ("holdout_pass_at_3", lambda s: fmt(s["holdout_pass_at_3"])),
         ("avg_tokens（平均 input_tokens+output_tokens）", lambda s: fmt(s["avg_tokens"])),
         ("avg_input_tokens", lambda s: fmt(s["avg_input_tokens"])),
         ("avg_output_tokens", lambda s: fmt(s["avg_output_tokens"])),
         ("attribution_counts（仅计入分母的运行）", lambda s: json.dumps(s["attribution_counts"], ensure_ascii=False)),
-        (
-            "failure_kind_counts（attribution 的细分：http_402 / budget_exhausted / format_contract …）",
-            lambda s: json.dumps(s.get("failure_kind_counts") or {}, ensure_ascii=False),
-        ),
     ]
     for name, getter in rows:
         lines.append("| " + name + " | " + " | ".join(str(getter(s)) for s in summaries) + " |")
@@ -222,15 +170,6 @@ def markdown(experiment_id: str, all_runs: list[dict], summaries: list[dict]) ->
         key = r["verdict"].get("attribution", "")
         total_counts[key] = total_counts.get(key, 0) + 1
     lines.append(f"全部运行的归因分布（含 live=false / contaminated）：{json.dumps(total_counts, ensure_ascii=False)}")
-    total_kinds: dict[str, int] = {}
-    for r in all_runs:
-        v = r["verdict"]
-        key = v.get("failure_kind") or v.get("attribution", "")
-        total_kinds[key] = total_kinds.get(key, 0) + 1
-    lines.append(
-        f"全部运行的 failure_kind 分布（attribution 的细分，旧产物回退到 attribution）："
-        f"{json.dumps(total_kinds, ensure_ascii=False)}"
-    )
     excluded = len(all_runs) - sum(len(eligible([r for r in all_runs if r['condition'] == s['condition']])) for s in summaries)
     if excluded:
         lines.append(

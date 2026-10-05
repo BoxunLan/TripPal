@@ -24,25 +24,8 @@ def main(argv=None) -> int:
     p_run.add_argument("--runs", type=int, required=True)
     p_run.add_argument("--experiment-id", required=True)
     p_run.add_argument("--out", required=True)
-    p_run.add_argument(
-        "--skill",
-        default=None,
-        help="SKILL 文件或目录；传目录时 SKILL.md、manifest.yaml、static/** 与 references/** 会按序一并注入",
-    )
-    p_run.add_argument(
-        "--skill-route",
-        default=None,
-        help=(
-            "路由表 JSON（路由架构的 SKILL 用）。给了就按任务字段只注入命中的域分片，"
-            "而不是把 static/fragments/** 全部塞进上下文 —— 这才是文件型 agent 的真实行为"
-        ),
-    )
+    p_run.add_argument("--skill", default=None)
     p_run.add_argument("--config", default=None)
-    p_run.add_argument(
-        "--task-pack-sha256-full",
-        default=None,
-        help="完整数据集包的 sha256，用于跨臂判断是否同一任务集（--task-pack 是切片时必传）",
-    )
 
     p_sum = sub.add_parser("summarize")
     p_sum.add_argument("--experiment-id", required=True)
@@ -64,8 +47,6 @@ def main(argv=None) -> int:
             args.out,
             skill=args.skill,
             config_path=args.config,
-            task_pack_sha256_full=args.task_pack_sha256_full,
-            skill_route=args.skill_route,
         )
     if args.cmd == "summarize":
         return summarize_mod.summarize(args.experiment_id, args.out, args.run_root)

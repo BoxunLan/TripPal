@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://trippal.local/skill-loop/contracts/v2/task.schema.json",
+  "$id": "https://tour-skill-system.local/contracts/v2/task.schema.json",
   "title": "task v2",
-  "description": "在 v1 之上新增 artifact_card 任务类型与卡点维度，并新增 not_contains / any_of 两个断言算子。已启用（dataset v2，见 docs/dataset-v2.md）。",
+  "description": "在 v1 之上新增 artifact_card 任务类型，以及该类型需要声明的卡点维度。本期不启用，见 contracts/v2/README.md。",
   "type": "object",
   "required": [
     "schema_version",
@@ -60,10 +60,9 @@
             "type": "object",
             "required": ["op", "value"],
             "properties": {
-              "op": { "enum": ["contains", "regex", "json_path_equals", "not_contains", "any_of"] },
+              "op": { "enum": ["contains", "regex", "json_path_equals"] },
               "value": {},
-              "path": { "type": "string" },
-              "note": { "type": "string" }
+              "path": { "type": "string" }
             }
           }
         }
