@@ -312,6 +312,7 @@ class AnswerResponse(BaseModel):
     note: str = ""                      # 为什么没给行程（用户可见文案，跟语言）
     plan_hint: str = ""
     disclaimer: str = ""
+    next_questions: list[str] = Field(default_factory=list)  # 关联问题推荐
 
 
 class GuideDraft(BaseModel):
@@ -358,6 +359,8 @@ class PlanResponse(BaseModel):
     checklist: list[str] = Field(default_factory=list)
     citations: list[Citation] = Field(default_factory=list)
     validation: ValidationReport
+    # 关联问题推荐：答完给几条「接着可以问」的可点建议（见 app/followups.py）。
+    next_questions: list[str] = Field(default_factory=list)
 
 
 class RealtimeFact(BaseModel):
@@ -402,6 +405,7 @@ class RealtimeResponse(BaseModel):
     note: str = ""
     plan_hint: str = ""
     disclaimer: str = ""
+    next_questions: list[str] = Field(default_factory=list)  # 关联问题推荐
 
 
 class DegradedResponse(BaseModel):

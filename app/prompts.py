@@ -86,6 +86,8 @@ def build_generate_prompt(
     validation_findings: list[str] | None = None,
     locked_segments: list[str] | None = None,
     output_language: str = DEFAULT_LANGUAGE,
+    previous_itinerary: dict[str, Any] | None = None,
+    revision_note: str = "",
 ) -> str:
     base_ref = settings.prompt_paths.get("base", "prompts/base.md")
     safety_ref = settings.prompt_paths.get("safety_overlay", "prompts/safety.md")
@@ -121,6 +123,34 @@ def build_generate_prompt(
     directive = output_language_directive(output_language)
     if directive:
         sections.append(directive)
+
+    # 行程内迭代（市场对标）：这一轮是**改上一版行程**，不是从零重排。把上一版稿
+    # 连同本次修改诉求一起给模型 —— 没有「上一版」就没有「改」，只能重排（会被用户
+    # 当成"又从头来一遍"，M1 实测标题里就写着"第 3 天重点"却换掉了整份稿）。
+    if revision_note:
+        prev = ""
+        if previous_itinerary:
+            prev = (
+                "\n\n上一版行程（JSON，请**只改本次诉求涉及的部分**，其余原样保留）：\n"
+                + json.dumps(previous_itinerary, ensure_ascii=False, indent=1)
+            )
+        sections.append(
+            "# 行程修改（重要）\n\n"
+            f"用户要修改的正是这一版行程，诉求是：**{revision_note}**。\n"
+            "规则：\n"
+            "- **在原稿基础上改**，只动诉求指向的部分（某一天 / 住宿 / 预算 / 节奏），"
+            "其余段落与顺序原样保留，不要另起一份全新行程。\n"
+            "- 若诉求指向「第 N 天」且是**重排 / 放松 / 加时长**，只重排那一天；天数、目的地、"
+            "其余天不变。\n"
+            "- 若诉求是**增删天数**（「去掉第 4 天」「缩短到三天」「再加一天」），`days` 数组长度"
+            "必须相应变化（去掉一天 = 少一个 day 对象、`day` 序号重排连续），`date_range` 同步改；"
+            "**不要**只删内容却保留同样多的 day。\n"
+            "- 若诉求是「下雨 / 天气备选」，为对应那天补一条**备选方案**（室内或不受天气影响），"
+            "不要回答实时天气。\n"
+            "- 若诉求是「预算怎么分配」，据此把 `budget.lines` 拆细（住宿 / 餐饮 / 交通 / 门票 / 其他）。\n"
+            "- 若诉求是「把 A 城换成 B 城」（多城行程），把 A 换掉、保留其余城市与天数。"
+            + prev
+        )
 
     if validation_findings:
         locked = ""

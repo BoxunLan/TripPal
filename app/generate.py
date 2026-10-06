@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import date
 from typing import Any
 
@@ -89,6 +90,25 @@ def _fake_context(
     }
 
 
+def _coerce_flattened(raw: Any) -> GeneratorOutput | None:
+    """把「Itinerary 字段摊在顶层」的模型输出包回 `{itinerary: …, suggestions: …}`。
+
+    只在能明确看出它是一份行程（含 days / title / destination 之一）时才认；
+    其余情况返回 None，让调用方照旧抛 GenerationError（不掩盖真正的 schema 错误）。
+    """
+    if not isinstance(raw, dict) or "itinerary" in raw:
+        return None
+    inner = {k: v for k, v in raw.items() if k != "suggestions"}
+    if not ({"days", "title", "destination"} & set(inner)):
+        return None
+    try:
+        return GeneratorOutput.model_validate(
+            {"itinerary": inner, "suggestions": raw.get("suggestions") or []}
+        )
+    except ValidationError:
+        return None
+
+
 def generate_plan(
     *,
     settings: Settings,
@@ -101,6 +121,8 @@ def generate_plan(
     round_no: int = 0,
     validation_findings: list[str] | None = None,
     locked_segments: list[str] | None = None,
+    previous_itinerary: dict[str, Any] | None = None,
+    revision_note: str = "",
 ) -> GeneratorOutput:
     findings = list(validation_findings or [])
     prompt = build_generate_prompt(
@@ -115,6 +137,8 @@ def generate_plan(
         validation_findings=findings,
         locked_segments=locked_segments,
         output_language=route.output_language,
+        previous_itinerary=previous_itinerary,
+        revision_note=revision_note,
     )
 
     raw = llm.complete_json(
@@ -137,10 +161,62 @@ def generate_plan(
     try:
         output = GeneratorOutput.model_validate(raw)
     except ValidationError as exc:
-        raise GenerationError(f"生成结果不符合 JSON Schema：{exc.errors()[:5]}") from exc
+        # 容错：模型偶尔把 Itinerary 的字段**摊在顶层**（没有包进 `itinerary`）。
+        # 提示词里 `{{output_schema}}` 给的是 Itinerary 的 schema，而这里校验的是包一层
+        # 的 `GeneratorOutput` —— 两份 schema 不是同一个形状，模型照着提示词写就会对不上。
+        # 旧行为直接抛 GenerationError，而那个错误当时又没落到状态通道上，于是整条链路以
+        # KeyError('draft') 收场（真 bug 2026-10-06 P11 英文实测：整句请求返回 degraded）。
+        coerced = _coerce_flattened(raw)
+        if coerced is None:
+            raise GenerationError(f"生成结果不符合 JSON Schema：{exc.errors()[:5]}") from exc
+        output = coerced
 
     _postprocess(output.itinerary, settings=settings, route=route, classification=classification)
+    _reconcile_revision_days(output.itinerary, revision_note=revision_note,
+                             previous_itinerary=previous_itinerary)
     return output
+
+
+# 迭代里「删掉某一天」时，模型经常**只改那天的内容 / 只改标题**，却把 `days` 数组
+# 原样留着 —— 用户说「去掉第 4 天」而行程仍是 5 天（真 bug 2026-10-06 长会话 C1，
+# 中文偶尔能跟、英文基本不跟）。天数变化是**确定性可算**的，不该指望模型每次都听。
+_REMOVE_DAY_RE = re.compile(
+    r"(?:去掉|删掉|删除|拿掉|取消|不要|remove|drop|delete)\s*(?:第\s*|day\s*)?"
+    r"(\d+|[一二三四五六七八九十两])\s*(?:天|日)?",
+    re.IGNORECASE,
+)
+_DAY_WORD = {"一": 1, "两": 2, "二": 2, "三": 3, "四": 4, "五": 5,
+             "六": 6, "七": 7, "八": 8, "九": 9, "十": 10}
+
+
+def _reconcile_revision_days(
+    itinerary: Itinerary, *, revision_note: str, previous_itinerary: dict[str, Any] | None
+) -> None:
+    """迭代时把「删掉第 N 天」**落实**到 `days` 数组（长度没变才动手）。
+
+    只在**明确要删**、且模型**没缩数组**时兜底 —— 其余情况一概不碰，免得与模型打架。
+    """
+    if not revision_note or not previous_itinerary:
+        return
+    m = _REMOVE_DAY_RE.search(revision_note)
+    if not m:
+        return
+    token = m.group(1)
+    n = int(token) if token.isdigit() else _DAY_WORD.get(token)
+    if not n:
+        return
+    prev_days = (previous_itinerary or {}).get("days") or []
+    days = list(itinerary.days or [])
+    if not days or len(days) != len(prev_days):
+        return  # 模型已经缩过了（或结构不同）→ 不动
+    keep = [d for i, d in enumerate(days) if getattr(d, "day", i + 1) != n]
+    if len(keep) == len(days):
+        keep = [d for i, d in enumerate(days) if i != n - 1]
+    if not keep or len(keep) == len(days):
+        return
+    for i, d in enumerate(keep, start=1):
+        d.day = i
+    itinerary.days = keep
 
 
 def _postprocess(

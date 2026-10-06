@@ -64,6 +64,14 @@ class Session:
     last_fact_subject: str = ""
     last_fact_place: str = ""
     last_fact_terms: list[str] = field(default_factory=list)
+    # 上一版**已出稿的行程**（`Itinerary.model_dump`）。行程内迭代要用它 ——
+    # 用户说「第 3 天太紧凑了」时，没有「上一版」就无从「改」，只能从零重排。
+    # 只留一份（最新一版），够迭代用，也避免会话里堆历史稿。
+    last_itinerary: dict[str, Any] | None = None
+    # 上一版**完整的出稿响应**（`PlanResponse.model_dump`）。「把行程再给我看看」要原样
+    # 重放那一版的卡片（含 route / 清单 / 引用）—— 只存 itinerary 重放不出卡片，而重新生成
+    # 一份既浪费一次调用、内容也会变（用户要的是"刚才那份"）。见 `is_itinerary_recall`。
+    last_plan: dict[str, Any] | None = None
 
 
 class SessionStore:
@@ -85,6 +93,33 @@ class SessionStore:
         session = self.get(session_id)
         session.slots = merge_slots(session.slots, new_slots)
         return session
+
+    def set_slots(self, session_id: str, slots: dict[str, Any]) -> Session:
+        """**覆盖**（不是合并）会话槽位。
+
+        撤销行程（「算了，先问下签证」）必须把旧行程的槽位真正**删掉**；`update_slots`
+        是合并语义，传一个空 dict 删不掉任何键 —— 真 bug（2026-10-06 实测）：清空之后
+        旧目的地 / 旧天数仍在会话里，于是又被带进了新诉求。
+        """
+        session = self.get(session_id)
+        session.slots = dict(slots or {})
+        return session
+
+    def remember_itinerary(self, session_id: str, itinerary: dict[str, Any] | None) -> None:
+        """记下这一版的行程稿，供下一句「改第 N 天」在原稿上迭代（见 `last_itinerary`）。
+
+        传空 / 非 dict 时**不动**已有值 —— 行程一旦出过，后续的事实问询不该把它抹掉。
+        """
+        if isinstance(itinerary, dict) and itinerary:
+            self.get(session_id).last_itinerary = itinerary
+
+    def remember_plan(self, session_id: str, plan: dict[str, Any] | None) -> None:
+        """记下这一版出稿的**完整响应**，供「行程再给我看看」原样重放（见 `last_plan`）。
+
+        与 `remember_itinerary` 一样：传空 / 非 dict 时不动已有值。
+        """
+        if isinstance(plan, dict) and plan:
+            self.get(session_id).last_plan = plan
 
     def remember_fact(
         self,

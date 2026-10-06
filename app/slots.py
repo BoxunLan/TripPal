@@ -18,9 +18,17 @@ from .i18n import contains, t
 
 SLOT_ORDER = ["destination", "destination_country", "date_range", "budget", "party"]
 
-CN_NUM = {"一": 1, "两": 2, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10}
+CN_NUM = {"一": 1, "两": 2, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10,
+          # 「仨」是中文口语里最常见的三人说法（「我们仨」），单字不是复合词，
+          # 漏了它 party 槽位落空、clarify 会追问一个用户刚说过的数。
+          "仨": 3,
+          # 「俩」同理，是最常见的两人说法（「我们俩」「俩大人」）。它比「仨」更要命：
+          # 「俩大人一个小孩」里漏掉「俩」之后，组合语法只认到「一个小孩」→ 人数记成 1
+          # （用户说 3 人、系统记 1 人，且因为已有值就不再追问，错值静默落地）。
+          "俩": 2}
 # 必须容忍复合数词（十五 / 二十 / 二十三）：只写单字类会让「十五个人」只吃到「十」。
-CN_NUM_RE = r"[一两二三四五六七八九十]+"
+# 「仨 / 俩」一并进来：「仨人」「我们俩」是「三个人」「两个人」的口语写法。
+CN_NUM_RE = r"[一两二三四五六七八九十仨俩]+"
 EN_NUM = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8}
 # 英文里的「人数/同行人」措辞，和中文的「人/大人/成人」等价
 EN_PARTY_RE = re.compile(r"people|persons?|adults?|pax|travell?ers?", re.IGNORECASE)
@@ -45,6 +53,9 @@ SOLO_PHRASES = {
 # 「只有我一个人」之所以不放进来，是因为「一个人」那条已经覆盖了它。
 _SOLO_PRONOUN_RE = re.compile(
     r"(?:只有|就|光|剩下|仅)\s*我(?!\s*[们俩两和跟带]|\s*[一二两三四五1-9])"
+    # 裸「我自己」也很常见（「想自己去」「我自己去」），前面不一定带「就/只有」。
+    # 排除「我们自己 / 我俩」—— 那些不是独行。
+    r"|我\s*自己(?!\s*[们俩])"
 )
 FAMILY_PHRASES = {"一家人", "一家", "family", "家族", "가족"}
 # 日韩的「孩子/长者」：`_extract_party` 的兜底分支会把未识别措辞当亲子，
@@ -75,9 +86,13 @@ def _cn_num(token: str) -> int | None:
     if not token:
         return None
     if "十" not in token:
-        # 单字（三 / 两）或连写（二三，按逐字相加处理）
+        # 单字（三 / 两）或连写（二三、三五）
         if all(ch in CN_NUM for ch in token):
-            return sum(CN_NUM[ch] for ch in token) or None
+            # 连写是**约数区间**，不是加法：「两三天」「三五天」「四五天」在中文口语里表示
+            # 2–3、3–5、4–5 天。旧实现用 sum() 把「三五天」读成 8 天、「两三天」读成 5 天
+            # —— 都是极常见的说法，而且错值会静默进天数/人数，比"抽不到"更危险。
+            # 取**上限**：规划上宁可多备一天，也别把用户说的范围截短。
+            return max(CN_NUM[ch] for ch in token) or None
         return CN_NUM.get(token)
     left, _, right = token.partition("十")
     if left and left not in CN_NUM:
@@ -227,7 +242,63 @@ def _extract_date_range(message: str, patterns: list[str]) -> tuple[int | None, 
         else:
             days, date_text = n, f"{n} 天"
         break
+    # 口语里的时长不总带可解析的数词：「半个月」「十来天」里「半」「来」都不是数字，
+    # 正则类永远抽不到 → 掉回 clarify 追问一个用户已经回答过的天数。放在规则循环之后，
+    # 只在没有任何显式天数时才认（显式的「3 天」优先级更高）。
+    if days is None:
+        m_half = re.search(r"半\s*个?\s*月", message)
+        m_fuzzy = re.search(r"([一两二三四五六七八九十]+|\d+)\s*(?:来|多)\s*(?:天|日)", message)
+        if m_half:
+            days, date_text = 15, "半个月（约 15 天）"
+        elif m_fuzzy:
+            n = _num(m_fuzzy.group(1))
+            if n:
+                days, date_text = n, f"{n} 天（约）"
     return days, date_text, start_date
+
+
+# 「N 天够吗」这类**关于够不够**的问句，里面的时长是**被讨论的对象**，不是这趟行程的长度。
+# 真 bug（2026-10-06 长会话 B7）：「长城一天够吗」（会话已定 5 天）把 days 从 5 改成 **1**，
+# 之后 C1/C2/C3 全在「1 天稿」上操作 —— 一句问句污染了整条会话的下半场。
+# 判据要**紧邻**（「三天，钱够吗」不能中），否则「我去北京玩三天，钱够吗」的 3 天会被误删。
+_DUR_TOKEN = r"(?:\d+|[一两二三四五六七八九十两])"
+_ADEQUACY_Q_RE = re.compile(
+    _DUR_TOKEN + r"\s*(?:天|日)\s*(?:够|不够|够不够|够用|够么|玩得完|逛得完|看得完)"
+    r"|(?:够|不够|够不够|足够)\s*(?:玩|逛|去|看|安排|待)?\s*" + _DUR_TOKEN + r"\s*(?:天|日)"
+)
+
+
+# 增量天数（「加一天」「多玩两天」「少住一晚」）—— 这是在**已有行程上**做加减，不是把天数
+# 改成 N。旧行为会把「加两天」里的「两天」抽成绝对天数 days=2，把刚出的 5 天行程改成 2 天
+# —— 与「第二天 → 2 天」同类：错值静默进槽位，比抽不到更危险。
+_DAY_DELTA_INC_RE = re.compile(
+    r"(?:再|又)?(?:加|增加|延长|多(?:玩|待|待上|住|留|逛)?)\s*"
+    r"(\d+|[一两二三四五六七八九十两])\s*(?:天|日|晚)"
+)
+_DAY_DELTA_DEC_RE = re.compile(
+    r"(?:少(?:玩|待|住|留)?|减|缩短|去掉|减去)\s*"
+    r"(\d+|[一两二三四五六七八九十两])\s*(?:天|日|晚)"
+)
+
+
+def _extract_day_delta(message: str) -> tuple[int, str]:
+    """返回 (增量天数, 摘掉增量说法后的句子)。
+
+    增量说法必须从「绝对天数」的作用域里拿掉，否则「加两天」的「两天」会被
+    `_extract_date_range` 抽成 days=2，覆盖掉会话里已有的天数。
+    """
+    text = message or ""
+    m = _DAY_DELTA_DEC_RE.search(text)
+    sign = -1
+    if not m:
+        m = _DAY_DELTA_INC_RE.search(text)
+        sign = 1
+    if not m:
+        return 0, text
+    n = _num(m.group(1))
+    if not n:
+        return 0, text
+    return sign * n, text[: m.start()] + " " + text[m.end():]
 
 
 # 预算的量级后缀：中文 万/萬/千/百/佰，韩文 만（200만 = 200 万）。日文用汉字「万」，同中文。
@@ -267,6 +338,13 @@ def _cn_amount(raw: str) -> float | None:
     s = re.sub(r"[\s,，]|元|块|¥|￥|\$", "", raw or "")
     if not s:
         return None
+    # 阿拉伯小数的量级写法（「1.5万」「2.5千」）：下面的逐字符状态机只认整数，遇到「.」
+    # 会当场 return None（实测「预算1.5万」整条预算抽不到）。这类口语写法很常见，捷径短接。
+    m_dec = re.fullmatch(r"(\d+(?:\.\d+)?)([万千百仟萬億亿])", s)
+    if m_dec:
+        unit = {"万": 1e4, "萬": 1e4, "千": 1e3, "仟": 1e3,
+                "百": 1e2, "億": 1e8, "亿": 1e8}[m_dec.group(2)]
+        return float(m_dec.group(1)) * unit
     # 裸量级字符不成金额（「百」「千」）；「十」例外（「十五」的十本身就是 1 个十）。
     if len(s) == 1 and s in ("百", "仟", "千"):
         return None
@@ -363,7 +441,10 @@ def _extract_budget(message: str, patterns: list[str]) -> tuple[float | None, fl
     total: float | None = None
     daily: float | None = None
     for pat in patterns:
-        m = re.search(pat, message)
+        # IGNORECASE 是必须的：英文单位与关键词的大小写不统一 —— 「10000 RMB」原来因为
+        # 正则只写了小写 `rmb` 而抽不到（真 bug 2026-10-06 长会话 A4：用户报了预算，
+        # 系统一路「还差预算」）。中文 / 日 / 韩不受影响。
+        m = re.search(pat, message, re.IGNORECASE)
         if not m:
             continue
         # 中文数词与复合量级都要能进算术：「预算两万」「预算三百万」「预算一万五」
@@ -379,6 +460,95 @@ def _extract_budget(message: str, patterns: list[str]) -> tuple[float | None, fl
     return total, daily
 
 
+# 裸金额：「我想十一去西安，三天，三千块，我自己」—— 口语里的预算常常**不带「预算」二字**，
+# 而 routes.yaml 的 budget 规则每条都要求前置词（预算 / 每天 / 人均 / … 或「N 元以内」），
+# 于是整条预算漏掉、clarify 反过来追问用户刚说过的那个数字。
+# 收窄靠三道闸：① 必须有人民币量词（块/元/人民币/块钱）；
+#              ② 紧邻不得出现非预算场景词（门票 / 票价 / 人均 / 每天…），否则「门票 55 元」会被当总预算；
+#              ③ 金额下限 100 —— 太小的数字不可能是整趟预算。
+# 三道闸以外的金额照旧交给显式规则（「预算 X」等），这里只在显式规则没抽到时兜底。
+_BARE_AMOUNT_RE = re.compile(
+    r"(?<![\d一两二三四五六七八九十百千萬万])"
+    r"(\d+(?:\.\d+)?|[一两二三四五六七八九十百千萬万]+)"
+    # 要么带人民币量词（三千块 / 5000 元），要么带约数标记（一千多 / 五千来块）。
+    # **不能**允许裸数词：否则任何数字都会变成预算。
+    r"\s*(?:(?:多|来)\s*(?:块钱|块|元)?|(?:块钱|块|元整|元|人民币))"
+    # 后面紧跟计数单位说明那是人数/里程/时长，不是钱（「十多天」「三百多公里」「一千多人」）。
+    r"(?!\s*(?:人|名|个|位|公里|千米|天|小时|分钟|秒|岁))"
+)
+_AMOUNT_SCENE_DENY_RE = re.compile(
+    r"门票|票价|单价|售价|押金|手续费|人均|每天|每日|一日|1日|一晚|房费|小费|退款"
+)
+BARE_AMOUNT_MIN = 100.0
+
+
+def _extract_bare_amount(message: str) -> float | None:
+    """兜底抽「不带前置词的金额」；命中非预算场景词或金额过小则放弃。"""
+    text = message or ""
+    for m in _BARE_AMOUNT_RE.finditer(text):
+        lo, hi = max(0, m.start() - 6), min(len(text), m.end() + 6)
+        if _AMOUNT_SCENE_DENY_RE.search(text[lo:hi]):
+            continue
+        token = m.group(1)
+        val = _cn_amount(token)
+        if val is None:
+            n = _num(token)
+            val = float(n) if n is not None else None
+        if val and val >= BARE_AMOUNT_MIN:
+            return val
+    return None
+
+
+# 兜底之再兜底：**整句就是一个数**（「6000 吧」「1万」「6千」）。
+# 场景是"追问-应答"——系统刚问「这次大概想控制在多少」，用户直接回一个数。
+# 这种回答既没有量词也没有「预算」二字，上面两条规则都落空 → 槽位保留旧值，
+# 表现成"你问了、我答了、你没听见"。限定**整句只有数字+语气词**，
+# 所以不会误伤「5天」「两个人」这类带单位的槽位答复。
+_PURE_AMOUNT_RE = re.compile(
+    r"^[\s，,。.!！?？~～]*(?:大概|大约|差不多|就|控制在|预算(?:是|大概)?)?\s*"
+    r"(?P<num>\d+(?:\.\d+)?|[一两二三四五六七八九十百千萬万佰亿零〇]+)"
+    r"\s*(?P<unit>[萬万仟千佰百kK])?"
+    r"[\s，,。.!！?？~～]*(?:吧|了|呢|的|就行|就好|就可以|左右|上下|以内|以下|出头)?"
+    r"[，,。.!！?？~～\s]*$"
+)
+
+
+def _extract_pure_amount(message: str) -> float | None:
+    """整句只是一个数 → 当预算。下限与裸金额一致，挡住「3」「5」这种无信息量输入。"""
+    m = _PURE_AMOUNT_RE.match((message or "").strip())
+    if not m:
+        return None
+    token = m.group("num") + (m.group("unit") or "")
+    val = _amount(token, token, "")
+    if val is None:
+        n = _num(m.group("num"))
+        val = float(n) * _budget_scale(token, "") if n is not None else None
+    return val if val and val >= BARE_AMOUNT_MIN else None
+
+
+# 「预算加到一万五」「提到两万」「改成八千」—— **设定目标**的预算，不是增量。
+# 口语里说「加到」时给的是**目标值**（改完是一万五），所以直接抽那个数当预算。
+# 缺口实测（2026-10-06 长会话 C4）：这句既不带「预算 X」的语序、也没有人民币量词，
+# 显式规则与裸金额兜底两层都落空 → 槽位仍停在一万，而模型标题却写了 15000，自相矛盾。
+_CHANGE_TARGET_BUDGET_RE = re.compile(
+    r"(?:加到|提到|增加到|涨到|调到|提到|改成|改为|调成|拉到)\s*"
+    r"(" + r"\d+(?:\.\d+)?|[一两二三四五六七八九十百千萬万佰亿零〇]+)\s*([萬万仟千佰百kK]?)"
+)
+
+
+def _extract_change_target_amount(message: str) -> float | None:
+    """「加到一万五」这类**目标值**预算；不是这类说法就返回 None。"""
+    m = _CHANGE_TARGET_BUDGET_RE.search(message or "")
+    if not m:
+        return None
+    token = m.group(1) + (m.group(2) or "")
+    val = _amount(token, token, "")
+    if val is None:
+        n = _num(m.group(1))
+        val = float(n) if n is not None else None
+    return val if val and val >= BARE_AMOUNT_MIN else None
+
+
 # ---------------------------------------------------------------- 同行人：组合式语法
 # 旧做法是 routes.yaml 里把每种说法当**整串短语**枚举（「(\d+)\s*(?:个|名)?\s*人」、
 # 「(\d+)\s*个大人」、「(\d+)\s*名成人」），要求「数词 + 量词 + 身份词」严丝合缝地相邻。
@@ -389,7 +559,7 @@ def _extract_budget(message: str, patterns: list[str]) -> tuple[float | None, fl
 # 这三个维度是**正交**的：数词 × 量词 × 身份词。它们的组合数随措辞自由增长，
 # 靠加短语永远枚举不完 —— 只能改成语法覆盖。这是同一类漏点换个说法再漏一次的形态。
 _PARTY_NUM = (
-    r"(?:\d+|[一两二三四五六七八九十]+"
+    r"(?:\d+|[一两二三四五六七八九十仨俩]+"
     r"|one|two|three|four|five|six|seven|eight|nine|ten)"
 )
 # 量词缺失是常态（「三人」「五个人」都合法），所以整段可选
@@ -416,7 +586,16 @@ _AGE_RE = re.compile(
     r"|(\d{1,2})\s*歳|(\d{1,2})\s*(?:살|세)",
     re.IGNORECASE,
 )
-_ELDER_KEYWORD_RE = re.compile(r"老人|长者|父母|爸妈|爷爷|奶奶|外公|外婆")
+_ELDER_KEYWORD_RE = re.compile(r"老人|长者|父母|爸妈|爷爷|奶奶|外公|外婆|二老|两老")
+# 中文的「儿童」关键词：与长者词对称。
+# 旧代码只查长者词（`_ELDER_KEYWORD_RE`），中文裸「孩子/小孩/娃」一旦不带数词就**完全不打标记**——
+# 「带我爸妈和孩子」于是只有 has_elder、没有 has_children，行程不加载儿童节奏叠加层。
+_CHILD_KEYWORD_RE = re.compile(r"小孩子|小朋友|小孩|孩子|儿童|婴幼儿|幼儿|婴儿|宝宝|娃娃|娃")
+# 「爸妈 / 父母」= 两位长者（成对）且隐含「我」这个基点：用于组合语法的基点补偿。
+_PARENTS_RE = re.compile(r"爸妈|父母|双亲|二老|两老")
+# 「带 / 领 / 拖家带口」的施动者默认是说话人自己 —— 「带两个小孩」= 我 + 两个小孩。
+# 只在数词没数到成人、且句中没有别的基点线索时，用它补回那个成人。
+_BRING_RE = re.compile(r"带(?:着|著|上|了)?|领(?:着|著)?|携带")
 # 否定必须认：系统问「有没有老人和小孩」，用户答「没有老人也没有小孩，就我一个成年人」，
 # 旧代码只看这几个字有没有出现 → 判定「有长者同行」。这比抽不到更糟：抽不到只是再问一句，
 # 判反会让行程加载长者节奏叠加层，而且因为 has_elder 已知，追问里也不再问同行人构成。
@@ -429,6 +608,161 @@ _NEG_CUE_RE = re.compile(
     re.IGNORECASE,
 )
 _CLAUSE_SPLIT_RE = re.compile(r"[，,。.!！?？;；、\n]")
+
+# 配偶 / 伴侣同行：「我和我老婆」「带我女朋友」是最常见的双人写法。
+# 旧代码里它们既不进人数语法（没有「人」也没有数词）、也不进情侣短语表，
+# 于是掉进下面的「未识别 → 2 大 1 小」兜底分支 —— 「带女朋友旅行」被判成"带娃"，
+# 加载儿童节奏叠加层、按 3 人算预算。**判反比抽不到更糟**，所以要在兜底之前拦住。
+_SPOUSE_RE = re.compile(
+    r"老婆|老公|太太|媳妇儿?|妻子|丈夫|女朋友|男朋友|对象|爱人|伴侣|未婚妻|未婚夫|老伴|内人"
+)
+# 「我们仨 / 咱们仨」：中文最口语的"三人"说法，句子里既没有数词也没有「人」字，
+# 组合语法与短语表都够不着 → 会掉进「未识别 → 2 大 1 小」兜底（人数错、还多个儿童）。
+_TRIO_RE = re.compile(r"仨")
+
+# 「我和朋友 / 我跟同学 / 和同事一起」——最口语的双人写法，句子里既没有数词也没有「人」字，
+# 组合语法够不着、会掉进「未识别 → 2 大 1 小」兜底（凭空白送一个儿童）。
+# 只认「我 + 结伴词 + 单数身份词」这一形状；后面紧跟「一家 / 数量词」时让位 ——
+# 「我和朋友一家三口」是 3 人，不能被这条读成 2 人。
+_FRIEND_PAIR_RE = re.compile(
+    r"我\s*(?:和|跟|同|与)\s*(?:一个|1\s*个|个)?\s*"
+    r"(?:朋友|同学|同事|闺蜜|兄弟|姐妹|发小|室友|哥们儿?)"
+    r"(?!\s*(?:一家|[一两二三四五六七八九十\d]\s*[口个位人名]))"
+)
+
+# ---------------------------------------------------------------- 节奏 / 偏好（市场对标）
+# 成熟产品（Layla / Mindtrip / TripGenie）都把「节奏」与「兴趣」当作行程个性化的两个主输入：
+# 「我不想太赶」「我喜欢美食和历史」这类说法**不给任何数值槽位**，却是行程形态的决定因素
+# （每天排几个点 / 要不要午休 / 优先什么主题）。抽取层原先完全认不出它们 →
+# 被当「没给信息」→ 掉回缺槽追问，用户明明说了却被重问一遍。
+# 真 bug（2026-10-06 市场对标探针 M3/M8 实测）。
+_PACE_RELAXED_RE = re.compile(
+    r"不(?:想)?太?赶|别太赶|不要太赶|轻松|放松|悠闲|休闲|慢(?:一点|一些|一些|悠悠|游)|"
+    r"别太累|不要太累|不累|松弛|不折腾|慢慢来|宽(?:松|裕)|"
+    r"relax(?:ed|ing)?|slow[\s-]?paced|not\s+too\s+(?:packed|rushed|hectic)|easy[\s-]?going|"
+    r"のんびり|ゆっくり|여유|느긋",
+    re.IGNORECASE,
+)
+_PACE_PACKED_RE = re.compile(
+    r"紧凑|充实|尽量多|尽可能多|多(?:玩|逛|看)(?:一?点|一些)?|抓紧|满满|"
+    r"不浪费时间|多打卡|high[\s-]?paced|packed|see\s+as\s+much|busy\s+schedule|"
+    r"ぎっしり|たくさん|빡빡|알차",
+    re.IGNORECASE,
+)
+
+# 兴趣标签词典：命中即并入 `interests`（同一句可命中多个：「美食和历史」）。
+# 刻意**不用泛字**：「山 / 海」这类单字会和地名撞（上海、唐山、中山），一律写成双字词。
+_INTEREST_LEXICON: list[tuple[str, re.Pattern[str]]] = [
+    ("food", re.compile(r"美食|吃货|小吃|餐厅|料理|本地菜|特色菜|米其林|food|cuisine|グルメ|맛집", re.IGNORECASE)),
+    ("history", re.compile(r"历史|古迹|博物馆|文物|文化遗产|古建筑|history|museum|historic|遺跡|歴史|박물관|역사", re.IGNORECASE)),
+    ("nature", re.compile(r"自然|风景|风光|海边|海滩|看海|海岛|湖泊|森林|公园|户外|徒步|爬山|山景|nature|scenery|hiking|landscape|ハイキング|자연", re.IGNORECASE)),
+    ("shopping", re.compile(r"购物|逛街|买买买|商场|免税店|shopping|mall|ショッピング|쇼핑", re.IGNORECASE)),
+    ("nightlife", re.compile(r"夜生活|夜景|夜市|酒吧|night\s?life|night\s?view|夜景|야경|나이트", re.IGNORECASE)),
+    ("culture", re.compile(r"文化|民俗|非遗|演出|表演|艺术|话剧|culture|art\s|performance|공연", re.IGNORECASE)),
+    ("family", re.compile(r"亲子|适合孩子|适合小孩|孩子喜欢|family[\s-]?friendly|kid[\s-]?friendly", re.IGNORECASE)),
+    ("photo", re.compile(r"拍照|摄影|打卡|出片|photography|写真|사진", re.IGNORECASE)),
+]
+
+# 硬约束 / 忌口（Layla 明确把 dealbreaker 当主输入）：饮食与行动能力直接决定每天去哪、
+# 吃什么，不写进槽位就被整套忽略（真 bug 2026-10-06 P15/P16：素食者 / 腿脚不便的约束
+# 完全没进提示词，行程照常排步行与常规餐饮）。
+_CONSTRAINT_LEXICON: list[tuple[str, re.Pattern[str]]] = [
+    ("vegetarian", re.compile(r"素食|吃素|不吃肉|纯素|斋食|vegetarian|vegan|ベジタリアン|채식", re.IGNORECASE)),
+    ("halal", re.compile(r"清真|halal|ハラール|할랄", re.IGNORECASE)),
+    ("no_spicy", re.compile(r"不吃辣|忌辣|怕辣|不要辣|少辣|not\s+spicy|mild\s+food|辛いの?が?苦手|맵지\s*않", re.IGNORECASE)),
+    ("food_allergy", re.compile(r"过敏|忌口|allerg|アレルギー|알레르기", re.IGNORECASE)),
+    ("limited_mobility", re.compile(
+        r"腿脚|行动不便|不便行动|少走(?:点|些|路)|不想走太多|走不动|不能久走|走不了|"
+        r"无障碍|轮椅|体力不好|老人腿|walking\s+(?:is\s+)?difficult|limited\s+mobility|wheelchair|"
+        r"足が(?:悪|不自由)|歩くのが?大変|거동|휠체어", re.IGNORECASE)),
+]
+
+# 多目的地：「北京玩三天再去上海玩两天」——旧逻辑只取第一个城市（北京 3 天），第二段整段丢失。
+# 市场对标：Layla / Mindtrip 都把多城路由当作核心能力（含交通衔接与天数分配）。
+_MULTI_CITY_JOIN_RE = re.compile(r"再去|然后再?去|然后去|再到|接着去|之后去|随后去|再去|->|→|⇒")
+# 「把 A 换成 B」：多城行程的换站（「把上海换成杭州」）。不更新 multi_city 会留下旧城市。
+_CITY_SWAP_RE = re.compile(r"把\s*(.{1,8}?)\s*(?:换|改)(?:成|为)\s*(.{1,8})")
+
+
+def _extract_pace(message: str) -> str:
+    """节奏诉求：`relaxed` / `packed` / 空串。
+
+    `relaxed` 优先：「别太赶，但想多看点」这种矛盾句里，压降节奏是更安全的默认
+    （排太满的伤害远大于排太空）。
+    """
+    text = message or ""
+    if _PACE_RELAXED_RE.search(text):
+        return "relaxed"
+    if _PACE_PACKED_RE.search(text):
+        return "packed"
+    return ""
+
+
+def _extract_interests(message: str) -> list[str]:
+    """兴趣标签列表，按词典顺序去重。命中不到就是空列表（下游据此保持通用行程）。"""
+    text = message or ""
+    out: list[str] = []
+    for label, rx in _INTEREST_LEXICON:
+        if label not in out and rx.search(text):
+            out.append(label)
+    return out
+
+
+def _extract_constraints(message: str) -> list[str]:
+    """饮食忌口 / 行动能力的硬约束。**认得否定**：被否定的分句整句跳过
+    （「没有忌口」「腿脚没问题」不该被当成约束）。"""
+    out: list[str] = []
+    for clause in _CLAUSE_SPLIT_RE.split(message or ""):
+        if not clause.strip() or _NEG_CUE_RE.search(clause):
+            continue
+        for label, rx in _CONSTRAINT_LEXICON:
+            if label not in out and rx.search(clause):
+                out.append(label)
+    return out
+
+
+def _extract_multi_city(message: str, names: list[str]) -> list[str]:
+    """多目的地城市序列（按在句中出现的位置排序）；单城或没有衔接词 → 空列表。
+
+    词典命中的顺序是**名字长度序**，不是位置序，所以必须按 `find` 的下标重排。
+    """
+    text = message or ""
+    if not _MULTI_CITY_JOIN_RE.search(text):
+        return []
+    positioned = sorted((text.find(n), n) for n in dict.fromkeys(names) if text.find(n) >= 0)
+    ordered = [n for _, n in positioned]
+    return ordered if len(ordered) >= 2 else []
+
+
+# 每个城市名**之后**最近的「N 天」——用于多城天数分配（北京 3 天 → 上海 2 天 = 全 5 天）。
+_DAY_INLINE_RE = re.compile(r"(\d+|[一两二三四五六七八九十两]+)\s*(?:天|日)")
+
+
+def _multi_city_days(message: str, cities: list[str]) -> list[int]:
+    """按城市出现顺序取各自名后最近的天数；任何一站取不到就返回空（宁可不猜）。"""
+    text = message or ""
+    spans: list[tuple[int, int]] = []
+    cursor = 0
+    for name in cities:
+        idx = text.find(name, cursor)
+        if idx < 0:
+            return []
+        nxt = len(text)
+        cursor = idx + len(name)
+        spans.append((cursor, nxt))
+    out: list[int] = []
+    for i, (start, _) in enumerate(spans):
+        end = text.find(cities[i + 1], start) if i + 1 < len(cities) else len(text)
+        if end < 0:
+            end = len(text)
+        m = _DAY_INLINE_RE.search(text, start, end)
+        if not m:
+            return []
+        n = _num(m.group(1))
+        if not n or n <= 0 or n > 60:
+            return []
+        out.append(n)
+    return out
 
 
 def _composed_party_counts(message: str) -> tuple[dict[str, int], str]:
@@ -478,7 +812,9 @@ def _companion_flags(message: str, out: dict[str, Any]) -> None:
             or JA_KO_ELDER_RE.search(clause)
         ):
             out["has_elder"] = True
-        elif JA_KO_CHILD_RE.search(clause):
+        # 长者与儿童**两个独立判断**：一句里同时出现「我爸妈和孩子」时两者的标记都要打。
+        # 原来是 `elif`，长者词命中就把儿童那条吞掉了。
+        if _CHILD_KEYWORD_RE.search(clause) or JA_KO_CHILD_RE.search(clause):
             out["has_children"] = True
 
 
@@ -489,7 +825,7 @@ def _extract_party(message: str, patterns: list[str]) -> dict[str, Any]:
     # 这类写法一个「人」字都没有，落不进人数分支 → 会被当「未识别」→ 默认 2 大 1 小，
     # 「3 大 1 小」于是被读成 3 人（少算一个成人），预算人均折算随之偏高。
     m_ac = re.search(
-        rf"(?<![\\d一两二三四五六七八九十])(\d+|{CN_NUM_RE})\s*(?:个|位)?\s*大\s*(?:人)?"
+        rf"(?<![\\d一两二三四五六七八九十俩])(\d+|{CN_NUM_RE})\s*(?:个|位)?\s*大\s*(?:人)?"
         rf"[，,、\s和与及]*(\d+|{CN_NUM_RE})\s*(?:个|位)?\s*小",
         message,
     )
@@ -506,6 +842,22 @@ def _extract_party(message: str, patterns: list[str]) -> dict[str, Any]:
     if frag and not out.get("party_size"):
         total = counts["adult"] + counts["child"] + counts["elder"]
         if total:
+            # 基点补偿：组合语法数的是**带数词的类**（「两个孩子」），句中的「我 / 我老婆 /
+            # 我父母」这类**基点**一个字都没数进去。「我老婆和两个孩子」真实是 4 人，
+            # 旧逻辑只数到「两个孩子」→ 2 人（少算一半，而且因为已经有值就不再追问）。
+            # 只在成人计数为 0 时补 —— 否则「我和我老婆两个人」的「两个人」=2 会被补成 4。
+            if counts["adult"] == 0:
+                if _SPOUSE_RE.search(message or ""):
+                    total += 2          # 我 + 配偶
+                elif _PARENTS_RE.search(message or ""):
+                    total += 3          # 我 + 父母（两位）
+                elif re.search(r"(?<![他她它])我(?!们)", message or ""):
+                    total += 1          # 只有我
+                elif counts["child"] and _BRING_RE.search(message or ""):
+                    # 「带两个小孩去北京」：数词只数了小孩，**带**字的施动者（我）没数。
+                    # 真 bug（2026-10-06 市场对标探针 M8）：抽成 2 人（应 3），
+                    # 出稿标题还被模型脑补成「2 大 2 小」。
+                    total += 1
             out["party_size"] = total
             if counts["child"]:
                 out["has_children"] = True
@@ -518,6 +870,27 @@ def _extract_party(message: str, patterns: list[str]) -> dict[str, Any]:
     if not out.get("party_size") and _SOLO_PRONOUN_RE.search(message or ""):
         out["party_size"] = 1
         raw = _SOLO_PRONOUN_RE.search(message).group(0)
+
+    # ②c 配偶 / 伴侣同行 → 两人。位置必须在 ③ 之前：③ 最后那条
+    #     「未识别 → 默认 2 大 1 小」会把「带我女朋友」吃成"带娃"。
+    if not out.get("party_size"):
+        m_sp = _SPOUSE_RE.search(message or "")
+        if m_sp:
+            # 「老婆孩子」是「我老婆和孩子」的口语缩略 —— 隐含还带一个孩子。
+            out["party_size"] = 3 if _CHILD_KEYWORD_RE.search(message or "") else 2
+            raw = m_sp.group(0)
+
+    # ②c2 「我和朋友/同学/同事」→ 两人（同样要在 ③ 兜底之前拦住）。
+    if not out.get("party_size"):
+        m_fr = _FRIEND_PAIR_RE.search(message or "")
+        if m_fr:
+            out["party_size"] = 2
+            raw = m_fr.group(0).strip()
+
+    # ②d 「仨」= 三人。同样要在 ③ 的兜底之前拦住。
+    if not out.get("party_size") and _TRIO_RE.search(message or ""):
+        out["party_size"] = 3
+        raw = "仨"
 
     # ③ 旧短语表（情侣 / 一人 / 一家 / 独自 …）。只在上面没拿到人数时才跑 ——
     #    它最后有条「未识别 → 默认 2 大 1 小」的兜底分支，一旦跑起来会把已知人数覆盖掉。
@@ -580,13 +953,60 @@ def extract_slots(message: str, settings: Settings) -> dict[str, Any]:
     if dest_surface:
         slots["destination_surface"] = dest_surface
 
-    days, date_range, start_date = _extract_date_range(message, pats.get("date_range", []))
+    # 多目的地（「北京玩三天再去上海玩两天」）：`destination` 仍是首站（排程、检索以它为主），
+    # 其余站点进 `multi_city` —— 不记的话第二段整段蒸发（真 bug 2026-10-06 M6）。
+    multi = _extract_multi_city(message, names)
+    if multi:
+        slots["multi_city"] = multi
+        slots["destination_secondary"] = multi[1]
+
+    # 节奏 / 偏好：不给数值、却是行程形态的决定因素（每天几点、要不要午休、主题排序）。
+    # 放进槽位即随 `{{slots_json}}` 进生成提示词，无需另设通道。
+    pace = _extract_pace(message)
+    if pace:
+        slots["pace"] = pace
+    interests = _extract_interests(message)
+    if interests:
+        slots["interests"] = interests
+    # 硬约束（素食 / 清真 / 忌口 / 行动不便）：直接改变每天的餐饮与点位选择。
+    constraints = _extract_constraints(message)
+    if constraints:
+        slots["constraints"] = constraints
+    # 「把 A 换成 B」：多城换站的标记，由 `merge_slots` 落到 `multi_city` 上。
+    # **两边都必须能解析成目的地**才认 —— 否则「把预算换成便宜点的」也会被当成换站。
+    m_swap = _CITY_SWAP_RE.search(message or "")
+    if m_swap:
+        old_hits = gazetteer_hits(m_swap.group(1).strip(), settings)
+        new_hits = gazetteer_hits(m_swap.group(2).strip(), settings)
+        if old_hits and new_hits:
+            slots["destination_swap"] = [old_hits[0][0], new_hits[0][0]]
+
+    # 先摘掉「加一天 / 多玩两天 / 少住一晚」这类**增量**说法，再抽绝对天数：
+    # 否则「加两天」里的「两天」会被当成「改成 2 天」，把会话里已有的 5 天行程改成 2 天。
+    day_delta, days_scope = _extract_day_delta(message)
+    days, date_range, start_date = _extract_date_range(days_scope, pats.get("date_range", []))
+    # 「长城一天够吗」—— 问的是"够不够"，不是"就玩一天"。若不挡，这句会把已有行程的
+    # days 改成 1，并让后续所有迭代都在 1 天稿上操作（真 bug 2026-10-06 长会话 B7 连锁污染）。
+    if days is not None and _ADEQUACY_Q_RE.search(message or ""):
+        days, date_range = None, None
     if days is not None:
         slots["days"] = days
     if date_range:
         slots["date_range"] = date_range
     if start_date:
         slots["start_date"] = start_date
+    if day_delta:
+        slots["days_delta"] = day_delta
+    # 多城天数分配：「北京玩 3 天再去上海玩 2 天」= 全 5 天。不这么算，`days` 会只剩
+    # 首站的 3 天，行程按 3 天排却要覆盖两座城（真 bug 2026-10-06 M6：上海整段丢失）。
+    if multi:
+        legs = _multi_city_days(message, multi)
+        if legs:
+            slots["multi_city_days"] = legs
+            total_days = sum(legs)
+            if total_days:
+                slots["days"] = total_days
+                slots["date_range"] = f"{total_days} 天"
 
     party_meta = _extract_party(message, pats.get("party", []))
     slots.update(party_meta)
@@ -602,6 +1022,15 @@ def extract_slots(message: str, settings: Settings) -> dict[str, Any]:
             slots["party"] = f"{party_size} 位成人"
 
     total, daily = _extract_budget(message, pats.get("budget", []))
+    if total is None:
+        # 「加到一万五」这类**目标值**说法（先于裸金额：它语义更明确）。
+        total = _extract_change_target_amount(message)
+    if total is None:
+        # 显式规则（预算 X / 每天 X / 人均 X / N 元以内）都没抽到时的兜底：裸金额。
+        total = _extract_bare_amount(message)
+    if total is None:
+        # 再兜一层：整句就是一个数（回答「想控制在多少」时最常见的形态）。
+        total = _extract_pure_amount(message)
     if daily is not None:
         slots["daily_budget"] = daily
         slots["budget_basis"] = "daily_per_person"
@@ -706,10 +1135,37 @@ def slots_from_form(raw: dict[str, Any], settings: Settings) -> dict[str, Any]:
 
 def merge_slots(session_slots: dict[str, Any], new_slots: dict[str, Any]) -> dict[str, Any]:
     merged = dict(session_slots or {})
+    delta = (new_slots or {}).get("days_delta")
     for k, v in (new_slots or {}).items():
+        # days_delta 是**相对量**，不是槽位本身，单独处理（见下）。
+        if k == "days_delta":
+            continue
         if v in (None, "", []):
             continue
         merged[k] = v
+    # 「加一天 / 少住一晚」：在既有天数上做加减，而不是覆盖。
+    # 只有**已有基数**时才应用 —— 新会话里单说「加两天」没有基数，保持缺槽让 clarify 问一句，
+    # 比替用户猜一个起点更好。
+    if delta and merged.get("days"):
+        merged["days"] = max(1, min(60, int(merged["days"]) + int(delta)))
+        merged["date_range"] = f"{merged['days']} 天"
+    # 「把 A 城换成 B 城」（多城换站，真 bug 2026-10-06 P20）：B 是**替换后的站点**，
+    # 不是新的首站 —— 既要把 multi_city 里的 A 换成 B，也不能让它把 destination 顶掉
+    # （否则「北京+上海 → 把上海换成杭州」会变成首站杭州、还留着旧上海）。
+    swap = (new_slots or {}).get("destination_swap")
+    if isinstance(swap, (list, tuple)) and len(swap) == 2 and merged.get("multi_city"):
+        old, new = str(swap[0]).strip(), str(swap[1]).strip()
+        cities = [new if c == old else c for c in merged["multi_city"]]
+        if cities != merged["multi_city"]:
+            merged["multi_city"] = cities
+            if len(cities) > 1:
+                merged["destination_secondary"] = cities[1]
+            merged["destination_aliases"] = list(dict.fromkeys(cities))
+            if (session_slots or {}).get("destination"):
+                merged["destination"] = session_slots["destination"]
+                merged["destination_surface"] = (
+                    session_slots.get("destination_surface") or session_slots["destination"]
+                )
     return merged
 
 
@@ -768,4 +1224,340 @@ def build_clarify_question(
     if slots.get("days"):
         known.append(t("clarify.known_days", language, n=slots["days"]))
     head = t("clarify.known_head", language, known=t("clarify.known_join", language).join(known)) if known else ""
-    return head + t("clarify.ask_head", language) + " ".join(parts)
+    # 只缺一项时换说法：连续追问里最难听的就是把「还需要确认：」这种清单腔
+    # 用在"就差一个问题"的场合 —— 那是把对话当表单填。
+    ask_key = "clarify.ask_head_one" if len(ordered) == 1 else "clarify.ask_head"
+    return head + t(ask_key, language) + " ".join(parts)
+
+
+# ---------------------------------------------------------------- 放手表达与空转应答
+# 交互流畅度（2026-10-06 用户要求）：识别更口语、更随机的输入，少用固定模版。
+#
+# 「随便 / 都行 / 你看着办 / 听你的 / 你推荐」= 用户把决定权交给系统。这时候**再抛一遍
+# 四连问**是交互上最刺眼的错：用户已经明确说"你定"，系统却把同样四个问题原样问回去
+# （实测：七种放手表达全部掉回同一个模版追问，一问不问地重来）。
+# 正确处理是用**常规默认**把骨架缺口补上、并把默认值**明说**出来，让用户先看到一版
+# 具体的东西，再决定改哪一项 —— 从"填 4 个空"变成"改 1 个值"。
+DELEGATE_RE = re.compile(
+    r"随便|都行|都可以|都成|怎样都行|怎么都行|你(?:来)?(?:看着办|定|决定|安排|推荐|拿主意)|"
+    r"听你的|听你安排|你说了算|你说得算|无所谓|随意|没意见|看你(?:的|安排)?|都听你的|"
+    r"帮我(?:定|决定|安排|推荐)|替我(?:定|决定|安排)|按你(?:说的|推荐的)?(?:来|办|安排)|"
+    r"看着(?:来|办|安排)|都随你|随你(?:定|安排)?|你(?:来)?安排|"
+    r"简单(?:点|一点|就好|就行|点的)|越简单越好|省事(?:点|就行|一点)|"
+    # 「预算不多 / 别太贵 / 不贵就行」：预算这一项没给数、但给了态度 —— 同样按放手处理，
+    # 免得掉回四连问去追问一个他已经回答过的问题。
+    r"别太贵|不贵就行|不要太贵|"
+    r"预算(?:不多|有限|无所谓|看着来|不限|不是问题|都可以|随意)|不限预算|不差钱|不用管预算|"
+    r"价格(?:无所谓|随便)|"
+    # 「那按这个来排 / 就这样 / 就这么办」：用户是对**已经说过的信息**点头、让系统继续，
+    # 语义与放手等价（剩下的你定）。不认它 → 会把已经交代过的目的地/天数再问一遍
+    # （真 bug 2026-10-06 M3：「那按这个来排」掉回缺槽追问）。
+    r"(?:那|就)?(?:按|照|依)(?:这个|这样|这样子|上面|刚才(?:说|讲)的|此)(?:来|办|排|安排|做|即可|就行)?|"
+    r"就(?:这么|这样)(?:办|来|定|排|安排|做)(?:吧|了)?|"
+    r"up\s*to\s*you|you\s*decide|you\s*choose|your\s*call|whatever|any(?:thing)?\s*(?:is)?\s*fine",
+    re.IGNORECASE,
+)
+# 纯应答（「好的 / 嗯 / 可以 / 对」）：**不含任何槽位信息**，也不是放手（没说让系统定）。
+# 它只是确认。此时同样不该把四连问再刷一遍 —— 收窄成**一个问题**，把节奏拉回一问一答。
+# 用 `fullmatch` 是因为它必须**整句**都是应答词：「可以的，三个人」里有信息，不算空转。
+ACK_ONLY_RE = re.compile(
+    r"(?:好的?|好嘞|好呀|好哒|行|可以|没问题|明白|知道了|懂了|嗯+|哦+|对|是的?|是啊|没错|收到|"
+    r"ok|okay|sure|yes|yep|fine)"
+    r"(?:\s*[呀啊吧了呢哈~～]*)?[!！。.~～]*",
+    re.IGNORECASE,
+)
+# 模糊的预算调整诉求（「太贵了，能便宜点吗」「再贵点也行」）：用户要改预算，但**没给数**。
+# 单独出来，是因为它的正确应对与前两类都不同：不是放手（他有具体偏好），
+# 也不该直接重出稿（那会让模型自己编一个他从没说过的数）—— 该追问一句目标预算。
+BUDGET_SOFT_RE = re.compile(
+    r"便宜(?:一?点|一些|些|点)|贵(?:了|一?点|一些|些)|省(?:一?点|一些|些)|"
+    r"降(?:低|一?点|一些)|压(?:缩|低)(?:预算|价)|提高预算|预算(?:高|低|多|少)(?:一?点|一些|些)?|"
+    r"cheaper|less\s+expensive|too\s+expensive|too\s+pricey|more\s+expensive|"
+    r"もう少し安く|高すぎ|予算を下げ|더\s*저렴|너무\s*비싸",
+    re.IGNORECASE,
+)
+
+# 放手时的常规骨架：5 天 / 5000 元 / 2 位成人 —— 最保守也最不容易踩坑的一组。
+# 刻意**只在放手表达时**使用，绝不拿它去兜用户没说过的普通句子（那等于替人编预算）。
+DELEGATION_DEFAULTS = {"days": 5, "budget": 5000.0, "party_size": 2}
+
+
+def is_delegating(message: str) -> bool:
+    """用户是不是在说「你来定」。"""
+    return bool(DELEGATE_RE.search(message or ""))
+
+
+def is_ack_only(message: str) -> bool:
+    """整句是不是纯应答词（不含任何实质信息）。"""
+    return bool(ACK_ONLY_RE.fullmatch((message or "").strip()))
+
+
+def is_budget_adjust(message: str) -> bool:
+    """用户是在要求**调整**预算（而不是给出预算、也不是放手让你定）。"""
+    return bool(BUDGET_SOFT_RE.search(message or ""))
+
+
+# ---------------------------------------------------------------- 行程内迭代（市场对标）
+# 成熟产品（Layla / Mindtrip / TripGenie）的核心闭环是：出稿之后用户**改**它 ——
+# 「第 3 天太紧凑了」「把第 2 天换成博物馆」「住宿换便宜点」「第 2 天下雨有备选吗」。
+# 这些句子不给任何数值槽位，旧逻辑一律当「你没说信息」→ 把缺槽追问原样重刷一遍
+# （真 bug：2026-10-06 市场对标探针 M2/M4/M5/M10 全中）。识别出来交给生成阶段按
+# 「上一版行程 + 本次修改诉求」重排，才是迭代，而不是从零重来。
+_DAY_REF_RE = re.compile(
+    r"第\s*(?:\d+|[一二三四五六七八九十两]+)\s*(?:天|日|站|晚|个?白天)"
+    r"|\bday\s*\d+|\b\d+(?:st|nd|rd|th)\s+day"
+    # 日 / 韩的「第 N 天」：市场对标测试里日文用户说「3日目はきつい」——
+    # 只认中文锚点会把外语迭代当成「没给信息」，又掉回缺槽追问。
+    r"|(?:\d+|[一二三四五六七八九十]+)\s*日目"
+    r"|(?:\d+|[一二三四五六七八九十]+)\s*일차",
+    re.IGNORECASE,
+)
+_REVISE_VERB_RE = re.compile(
+    r"换(?:成|掉|一个|一下|个)?|改(?:成|掉|一下|为|一改)|调整|重排|重新排|重来|"
+    r"删(?:掉|去)|去掉|取消(?:这个|该项)?|加(?:上|入|一个|点)|减(?:少|掉|一点|一些)?|"
+    r"多(?:待|留|玩|安排|给)|少(?:待|留|玩|安排)|延长|缩短|往后?挪|往?前挪|"
+    r"change|swap|replace|adjust|add|remove|switch(?:ing)?(?:\s+to)?|more\s+time|less\s+time",
+    re.IGNORECASE,
+)
+_ITIN_ASPECT_RE = re.compile(
+    r"行程|安排|路线|行程表|计划|景点|玩法|住宿|酒店|民宿|美食|餐厅|吃饭|餐饮|"
+    r"交通|出行|购物|活动|门票|节奏|天数|时间|预算|花费|"
+    # 英文的行程要素词也必须进表 —— 否则「Change the hotel to something cheaper」的
+    # 判据②（修改动词 + 要素词）拿不到要素词，会掉进「预算调整」被追问一句目标预算
+    # （真 bug 2026-10-06 长会话 C2；连我们自己的关联问题模板「Switch to cheaper hotels」
+    # 也中招）。
+    r"hotels?|accommodation|hostel|lodging|restaurants?|itinerary|schedule|transport",
+    re.IGNORECASE,
+)
+# 「第 2 天下雨有备选吗」：带行程锚点的天气问 —— 要的是**给那天安排备选**，
+# 不是查实时天气（旧行为误判成 weather realtime，主体还被切成「第 2 天」，见 M4）。
+_RAIN_BACKUP_RE = re.compile(r"下雨|雨天|weather|rain|台风|下雪", re.IGNORECASE)
+# 「预算怎么分配到住宿和吃饭」：问的是**这一趟**的预算构成，不是通用常识。
+_BUDGET_SPLIT_RE = re.compile(r"分配|怎么分|如何分|拆分|构成|明细|花在哪|用在哪|breakdown")
+
+
+def is_plan_revision(message: str) -> bool:
+    """这一句是不是在**修改当前行程**（而不是给新槽位、也不是问事实）。
+
+    三条判据（任一成立即为真）：
+    ① **出现「第 N 天」这类行程锚点** —— 锚点本身就说明它在指向一份行程；
+    ② **修改动词 + 行程要素词**（「住宿换成便宜点」「景点多安排一个」）；
+    ③ **预算 / 天气 + 分配 / 备选** 这类「关于这一趟」的追问。
+
+    调用方（`graph.clarify_node`）只在会话里**确实已有行程骨架**（有目的地与天数）
+    时才据此改道 —— 没有行程可改时退回常规缺槽追问。
+    """
+    text = message or ""
+    if _DAY_REF_RE.search(text):
+        return True
+    if _REVISE_VERB_RE.search(text) and _ITIN_ASPECT_RE.search(text):
+        return True
+    if _RAIN_BACKUP_RE.search(text) and _ITIN_ASPECT_RE.search(text):
+        return True
+    if "预算" in text and _BUDGET_SPLIT_RE.search(text):
+        return True
+    return False
+
+
+# ---------------------------------------------------------------- 行程细节问句（问，不是改）
+# 与 `is_plan_revision` 的区别：那一类要**改**行程（有修改动词），这一类只是**问**
+# 当前行程里的内容 ——「那第三天上午安排什么」「第一天几点开始比较合适」
+# 「What is planned for day 3 morning」。
+# 真 bug（2026-10-06 长会话 B1/B5）：`_DAY_REF_RE` 命中「第三天」就把整句判成**改稿**，
+# 于是这类"问"被当成"重排整份行程"，既不答问题、又白跑一次生成。
+# 判据：**出现了指向某天的锚点 + 整个句子是疑问句**，且**没有修改动词**。
+_ITIN_Q_ASK_RE = re.compile(
+    r"[?？]|吗|呢|什么|啥|几点|多久|多长时间|怎么|怎样|多少|哪|谁|"
+    r"\b(?:what|when|how|where|which|who|why)\b",
+    re.IGNORECASE,
+)
+_ITIN_Q_DAY_NUM_RE = re.compile(
+    r"第\s*(\d+|[一二三四五六七八九十两]+)\s*(?:天|日)"
+    r"|\bday\s*(\d+)\b",
+    re.IGNORECASE,
+)
+
+
+def is_itinerary_question(message: str) -> bool:
+    """这一句是不是在**问当前行程里的某个细节**（不是给槽位、不是改稿、不是问常识）。"""
+    text = message or ""
+    if not _ITIN_Q_DAY_NUM_RE.search(text):
+        return False
+    if not _ITIN_Q_ASK_RE.search(text):
+        return False
+    # 带修改动词的优先当**迭代**（「把第 2 天换成博物馆」「第 4 天去掉」）。
+    if _REVISE_VERB_RE.search(text):
+        return False
+    # 「第 2 天下雨有备选吗」也是**迭代**（给那天补室内备选），不是问那个字面上的问题 ——
+    # 它虽然以「吗」结尾，要的是改稿动作。判据与 `is_plan_revision` 的雨天条款保持一致。
+    if _RAIN_BACKUP_RE.search(text):
+        return False
+    return True
+
+
+_ITIN_ANSWER_LEAD = {
+    "zh": "第 {n} 天（{theme}）的安排：",
+    "en": "Day {n} ({theme}) plan:",
+    "ja": "{n} 日目（{theme}）の予定：",
+    "ko": "{n}일차({theme}) 일정:",
+}
+_ITIN_ANSWER_TIME_LEAD = {
+    "zh": "第 {n} 天从 {first} 开始、最后一项到 {last}。",
+    "en": "Day {n} starts around {first} and the last item runs to {last}.",
+    "ja": "{n} 日目は {first} 開始、最後の予定は {last} までです。",
+    "ko": "{n}일차는 {first}에 시작해 마지막 일정이 {last}까지입니다.",
+}
+_ITIN_ANSWER_EMPTY = {
+    "zh": "第 {n} 天暂无具体安排。",
+    "en": "Day {n} has no specific activities yet.",
+    "ja": "{n} 日目はまだ具体的な予定がありません。",
+    "ko": "{n}일차에는 아직 구체적인 일정이 없습니다.",
+}
+
+
+def answer_from_itinerary(message: str, itinerary: dict[str, Any] | None, language: str = "zh") -> str | None:
+    """从**已出稿的行程**里取第 N 天，直接答给用户（确定性、不调模型）。
+
+    只在 `is_itinerary_question` 为真、且该稿真有那一天时返回字符串，否则返回 None
+    （调用方据此退回正常链路，不制造"空答案"）。
+    """
+    if not itinerary:
+        return None
+    days = itinerary.get("days") or []
+    m = _ITIN_Q_DAY_NUM_RE.search(message or "")
+    if not m or not days:
+        return None
+    raw = m.group(1) or m.group(2) or ""
+    n = int(raw) if raw.isdigit() else _num(raw)
+    if not n or n < 1 or n > len(days):
+        return None
+    # 优先按 `day` 字段找（行程数组理论上 `day` 从 1 连续递增），找不到再退回下标 ——
+    # 别假设数组一定严格 1:1 对齐，模型偶尔会漏一个 day 对象。
+    def _day_no(item: Any) -> int | None:
+        try:
+            return int(item.get("day"))
+        except (AttributeError, TypeError, ValueError):
+            return None
+
+    picked = next(
+        (d for d in days if isinstance(d, dict) and _day_no(d) == n),
+        days[n - 1],
+    )
+    day = picked if isinstance(picked, dict) else {}
+    lang = language if language in _ITIN_ANSWER_LEAD else "zh"
+    theme = str(day.get("theme") or day.get("area") or "").strip()
+    acts = [a for a in (day.get("activities") or []) if isinstance(a, dict)]
+    if not acts:
+        return _ITIN_ANSWER_EMPTY[lang].format(n=n)
+    times = [str(a.get("time") or "").strip() for a in acts if a.get("time")]
+    head = ""
+    if re.search(r"几点|什么时间|时间安排|what time|what's the schedule", message or ""):
+        if times:
+            head = _ITIN_ANSWER_TIME_LEAD[lang].format(n=n, first=times[0], last=times[-1]) + "\n"
+    lines = [_ITIN_ANSWER_LEAD[lang].format(n=n, theme=theme).strip()]
+    for a in acts[:8]:
+        t = str(a.get("time") or "").strip()
+        name = str(a.get("name") or "").strip()
+        lines.append(f"- {t} {name}".strip() if t else f"- {name}")
+    return head + "\n".join(lines)
+
+
+# 撤销 / 放弃**当前行程**的表达（句首）。与社交闸门的 `cancel`（整句只有放弃词、走寒暄
+# 引导）互补：这一条针对「算了，先问下签证」「不去了，改成去成都」这类
+# **放弃旧行程 + 提出新诉求**的句子 —— 它们不该进寒暄，但也不该把旧行程带过来。
+# 真 bug（2026-10-06 变卦探针实测）：会话已记「西安四天」，用户说「算了，先问下签证」，
+# 旧行为把 4 天当残留槽位注入签证场景，出了一份「西安 4 日行程（含签证清单）」——
+# 用户明明撤了那个行程，却收到一份按它排的稿。
+_ABANDON_WORD = (
+    r"(?:算了|不去了|不去玩了|不玩了|不搞了|别去了|取消(?:行程|计划|这次)?|作罢|改主意|重新来|重新开始|换个|换一个)"
+)
+_TRIP_RESET_RE = re.compile(r"^(?:那|这|就)?\s*" + _ABANDON_WORD)
+
+# **整句就是放弃**（「算了不去了」「不去了」「取消」）：这类由寒暄闸门的 cancel 接走、
+# 回一句引导语，**不清行程槽位** —— 用户常在这之后「还是去吧」，槽位留着才恢复得回来。
+# 真 bug（2026-10-06 实测）：「我想去成都玩」→「算了不去了」→「还是去吧」，目的地丢了。
+_FULL_ABANDON_RE = re.compile(
+    rf"^(?:那|这|就)?\s*(?:{_ABANDON_WORD}[\s，,、。]*)+(?:吧|了|啊|呢)?[。！？.!?，,\s]*$"
+)
+
+# 「撤销行程」时要一起清掉的槽位：目的地 / 天数 / 预算 / 同行人 全是**旧行程**的属性。
+# 其余键保留（含 `_` 前缀的调试字段）。
+_TRIP_SLOT_KEYS = frozenset({
+    "destination", "destination_surface", "destination_aliases", "destination_country",
+    "days", "date_range", "start_date",
+    "budget", "budget_basis",
+    "party", "party_size", "party_raw", "has_children", "has_elder",
+})
+
+
+def is_trip_reset(message: str) -> bool:
+    """用户是不是在**放弃旧行程、另提诉求**（「算了，先问下签证」「改去成都」）。
+
+    两个边界（都在 `graph.clarify_node` 里配合使用）：
+    - 只在**句首**认（后半句还可以有新诉求）；
+    - **整句只是放弃**（「算了不去了」）不算 —— 那种走寒暄闸门的 cancel，且**不清槽位**
+      （用户常接着说「还是去吧」，留着才恢复得回来，见 `_FULL_ABANDON_RE`）；
+    - 与 `is_delegating` 有交集时让放手优先 —— 「算了，就按你说的办」是放手，不是撤销。
+    """
+    text = (message or "").strip()
+    if not _TRIP_RESET_RE.match(text):
+        return False
+    return not _FULL_ABANDON_RE.match(text)
+
+
+def clear_trip_slots(slots: dict[str, Any]) -> dict[str, Any]:
+    """清掉**行程**相关的槽位，保留其余（撤销旧行程时用，见 `is_trip_reset`）。"""
+    return {k: v for k, v in (slots or {}).items() if k not in _TRIP_SLOT_KEYS}
+
+
+# 「把之前那份行程再给我看看」—— 用户要**重看**已有行程，既不是改、也不是重排。
+# 真 bug（2026-10-06 长会话 E1 实测）：「北京的行程再给我看看」被当成缺槽请求，回了一句
+# 四连问（目的地已记下，却还问天数 / 预算 / 人数）—— 用户想看刚出过的那份稿，被反问。
+# 关键：句子里必须**同时**有「行程类名词」和「看 / 发我」的动作。光有「看看」不算
+# （「帮我看看签证」不是），光有「行程」也不算（「把第 3 天的行程换成博物馆」是改稿）。
+_ITIN_NOUN = r"(?:行程表|行程|方案|计划|攻略|安排)"
+_LOOK_VERB = r"(?:看看|看一下|看一眼|看一遍|瞧一眼|瞅一眼|看下)"
+_ITIN_RECALL_RE = re.compile(
+    r"(?:"
+    rf"(?:再|又|重新|再次)?\s*(?:给|发|拿)?\s*我?\s*{_LOOK_VERB}\s*[^。！？，,]{{0,10}}?{_ITIN_NOUN}|"
+    rf"{_ITIN_NOUN}[^。！？，,]{{0,12}}?(?:再|又|重新|再次)?\s*(?:给|发|拿)?\s*我?\s*{_LOOK_VERB}|"
+    rf"{_ITIN_NOUN}[^。！？，,]{{0,12}}?(?:发|给)\s*我(?:一下|一份|看看|看下)?|"
+    r"(?:show|give|send|re-?show)\s+(?:me\s+)?(?:the|my|that|our)?\s*(?:itinerary|schedule)|"
+    r"(?:show|give|send)\s+(?:me\s+)?(?:the|my|that|our)\s+(?:plan|trip)|"
+    r"(?:what|where)(?:'s| is| was)\s+(?:the|my|our)\s+(?:itinerary|plan|schedule)|"
+    r"remind\s+me\s+(?:of\s+)?(?:the|my|our)\s+(?:itinerary|plan)|"
+    r"(?:my|the)\s+itinerary\s+again"
+    r")",
+    re.IGNORECASE,
+)
+
+
+def is_itinerary_recall(message: str) -> bool:
+    """这一句是不是「把之前的行程再给我看看」（见 `_ITIN_RECALL_RE` 的说明）。"""
+    return bool(_ITIN_RECALL_RE.search(message or ""))
+
+
+def first_missing(missing: list[str]) -> list[str]:
+    """按 SLOT_ORDER 取**第一个**缺槽 —— 纯应答时只问这一个，别一次砸四个。"""
+    ordered = [s for s in SLOT_ORDER if s in (missing or [])]
+    return ordered[:1]
+
+
+def apply_delegation_defaults(slots: dict[str, Any]) -> dict[str, Any]:
+    """放手表达时，把排程骨架里**还没定的**几项补成常规默认。
+
+    只补 days / party / budget 三项：它们是排行程的必要骨架，也是用户最不想被逐一追问的
+    三项。目的地不补 —— 那是唯一"不能替你猜"的槽位（猜错整份行程都跑偏），所以放手时
+    若目的地未知，仍会只问这一个问题。
+    """
+    out = dict(slots or {})
+    if not out.get("days"):
+        out["days"] = DELEGATION_DEFAULTS["days"]
+        out["date_range"] = f"{DELEGATION_DEFAULTS['days']} 天"
+    if not out.get("party"):
+        out["party_size"] = DELEGATION_DEFAULTS["party_size"]
+        out["party"] = f"{DELEGATION_DEFAULTS['party_size']} 位成人"
+    if out.get("budget") is None:
+        out["budget"] = DELEGATION_DEFAULTS["budget"]
+        out["budget_basis"] = "total"
+    return out

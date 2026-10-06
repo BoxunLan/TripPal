@@ -126,7 +126,9 @@ def test_web_ui_is_served_at_root(client):
     assert resp.status_code == 200
     assert resp.headers["content-type"].startswith("text/html")
     html = resp.text
-    assert "<title>旅行 Agent" in html
+    # 品牌名在 2026-10-06 界面重做成对话式时换成了 TripPal，
+    # 这里的意图是「`/` 返回的是本站页面」，不是死记旧标题。
+    assert "<title>TripPal" in html
     # 同源调用：改成绝对 URL（http://127.0.0.1:8000/plan）会在换端口时静默失效
     # 页面绝不能硬编码 "/xxx"：以 file:// 双击打开时需要回落到 http://127.0.0.1:8000
     assert 'fetch("/plan"' not in html
@@ -142,9 +144,13 @@ def test_web_ui_is_served_at_root(client):
     # `d.firstElementChild` —— 节点已被移走所以是 null，抛 TypeError，
     # send() 在第一步就中断，**请求从未发出**（症状：转圈、已等 0s、七步不亮）。
     # 必须先把节点接进变量再用它。
-    assert "const el = d.firstElementChild" in html
-    assert "el.scrollIntoView" in html
-    assert "d.firstElementChild.scrollIntoView" not in html
+    # 防回归：addResult 曾写成 `appendChild(d.firstElementChild)` 之后又读
+    # `d.firstElementChild` —— 节点已被移走所以是 null，抛 TypeError。
+    # 对话式界面（2026-10-06）改成先求值再交给 appendChild：
+    # `holder.appendChild(card.firstElementChild)`，全文只应出现一次取节点。
+    assert "holder.appendChild(card.firstElementChild)" in html
+    assert html.count("firstElementChild") == 1
+    assert "scrollBottom" in html
 
 
 # ---------------------------------------------------------------- 流式进度

@@ -112,6 +112,24 @@ _FUNCTION_SKELETON = {
     "好不好", "开不开放", "收不收费",
 }
 
+# 命中片段是**纯疑问 / 动作短语**（不是内容主题名）时的排除表。
+# 用途见 `detect_knowledge_intent` 的退化分支：「进寺庙要注意什么」前半截只切出一个动词
+# 「进」，主体退化；而命中的「寺庙」是**内容名词**，可以直接当主体 —— 但「要预约」「在哪里」
+# 这类命中片段本身没有内容，退化时只能退回槽位体检，不能拿它当主体。
+_PURE_QUESTION = re.compile(
+    r"^(?:在哪(?:里|儿|个城市)?|是哪一年|哪一年|哪年|建于|始建于|建成(?:于)?|成立(?:于|时间)?|"
+    r"什么时候建的|是谁|属于哪|是什么|为什么|怎么样|有什么(?:区别|不同)?|有哪些|多少|"
+    r"要预约|需要预约|怎么预约|开放时间|几点开门|几点关门|要门票|门票|免费|收费|"
+    r"值不值得|值不值|贵不贵|好不好|开不开放|收不收费|"
+    r"是不是|是否|有没有|有吗|有无|有什么|能不能|可不可以|要不要|需不需要)+$"
+)
+
+# 「这一句是不是中文」—— 英文 / 韩文的主题几乎总是**命中片段本身**（etiquette / customs /
+# taboos / 팁），而"命中片段之前那一截"是疑问 + 助动词，断在词中间还会切出 "some Ch" 这种
+# 残片（真 bug 2026-10-06 文化探针：「What are some Chinese dining etiquette rules…」的
+# 卡片标题成了「some Ch」）。日文有汉字，不走这条。
+_HAN = re.compile(r"[\u4e00-\u9fff]")
+
 # **占位名词**：它们不自带任何信息，只是指着上一轮那个东西说「它的位置 / 地址」。
 # 真 bug（2026-10-04 用户实测）：「它还有个滴水湖校区对吗」→「具体位置在哪儿」，
 # 后半句的主体被切成了「具体位置」这个占位词 —— 库里永远对不上，答案是**空串**。
@@ -155,9 +173,18 @@ def _is_anaphoric_fragment(subject: str) -> bool:
 def _is_degenerate_subject(subject: str) -> bool:
     """主体是不是「接不上话的碎片」：空、单字、代词、纯功能词骨架、占位名词、指代碎片。"""
     s = (subject or "").strip()
-    if len(s) < 2:
+    # 「单字 = 退化」只对**中文 / ASCII**成立：中文单字多是虚词（「那」「用」），
+    # 而韩文用空格分词，一个单字**就是一个完整词** —— 真 bug（2026-10-06 文化探针实测）：
+    # 韩文「중국에서 팁 문화는 어떻게 되나요?」的主体「팁」（小费）被 `len < 2` 判成退化，
+    # 于是整句去承接上一轮的**日文**主体，卡片标题成了「中国の食事」。
+    if len(s) < 2 and (s.isascii() or _HAN.match(s)):
         return True
     if s in _DEGENERATE_SUBJECT or s in _FUNCTION_SKELETON or s in _PLACEHOLDER_NOUN:
+        return True
+    # 事件 / 动作引导残片（「买到」「不小心」）—— 见 `_EVENT_LEAD`：这种主体在库里必然
+    # 搜不到，命中片段才是这一问真正的主题。剥掉引导后剩不下东西才算退化，
+    # 免得把「遇到**麻烦**」这类真主体也误判掉。
+    if _EVENT_LEAD.match(s) and len(_EVENT_LEAD.sub("", s).strip()) <= 1:
         return True
     return _is_anaphoric_fragment(s)
 
@@ -171,6 +198,19 @@ def _is_degenerate_subject(subject: str) -> bool:
 # 不以「不」收尾的真实主体（「不锈钢厂」）不受影响。
 _VV_RESIDUE = re.compile(r"[一-龥]?不[一-龥]?$")
 
+# 事件 / 动作引导残片：触发词落在句中时，前半截常常只剩「买到 / 不小心 / 遇到」这类
+# **动作引导**，它不是主体 —— 真 bug（2026-10-06 生活场景校验，两条端到端 hits=0）：
+#   「买到**假货**怎么维权」→ 主体「买到」；「不小心**发烧**了该打什么电话」→ 主体「不小心」。
+# 主体在库里永远搜不到字面 → `search_knowledge` 的「库里对这个主体一无所知」闸门直接返回空，
+# 用户看到「本库没有相关材料」，而库里其实有假货维权与急救电话两条。
+# 判成退化后走既有分支：改用**命中片段**（「假货」「发烧」）当主体。
+_EVENT_LEAD = re.compile(
+    r"^(?:买到|买了|遇到|碰到|摊上|撞上|发现|出了|出现|不小心|一不小心|突然|忽然|万一|如果|要是|听说|据说|感觉|觉得)"
+)
+# 尾部的「有什么 / 有哪些 / 是什么」骨架：「吃饭的时候**有什么**禁忌吗」→「吃饭的时候」。
+# 只剥完整的三字形态，且剥完至少还剩两个字（`买什么` 这种主体剥了就没了）。
+_HAVE_RESIDUE = re.compile(r"(?:有什么|有哪些|有没有|是什么|做什么|吃什么|玩什么|买什么)$")
+
 
 def _strip_question_tail(subject: str) -> str:
     """剥掉主语末尾的疑问/动作成分；剥成空串就退回原值（主语只可能变小、不会丢）。"""
@@ -178,6 +218,11 @@ def _strip_question_tail(subject: str) -> str:
     for _ in range(2):
         new = _VV_RESIDUE.sub("", out).strip()
         if not new or new == out:
+            break
+        out = new
+    for _ in range(2):
+        new = _HAVE_RESIDUE.sub("", out).strip()
+        if len(new) < 2 or new == out:
             break
         out = new
     stripped = _QUESTION_TAIL.sub("", out).strip()
@@ -188,13 +233,131 @@ def _strip_question_tail(subject: str) -> str:
 # （「能不能用**信用卡**支付」→「能不能用」）。剥掉骨架后若只剩光杆（「用」），
 # 退化判定会接手，改用命中片段（「信用卡」）当主体。
 _LEADING_FRAME = re.compile(
-    r"^(?:是不是|是否|有没有|有吗|有哪些|有什么|能否|能不能|可不可以|要不要|需不需要|"
-    r"值不值得|值不值|贵不贵|好不好|开不开放|收不收费)+"
+    r"^(?:(?:what|how|why|where|when|which|who|whose)\s+about\b[^A-Za-z]*|"
+    r"(?:what|how|why|where|when|which|who|whose)\s+"
+    r"(?:(?:are|is|am|was|were|do|does|did|can|could|should|would|will)\s+)?|"
+    r"(?:are|is|am|was|were|do|does|did|can|could|should|would|will)\s+|"
+    r"是不是|是否|有没有|有吗|有哪些|有什么|能否|能不能|可不可以|要不要|需不需要|"
+    r"值不值得|值不值|贵不贵|好不好|开不开放|收不收费|"
+    # **找店 / 找东西的疑问引导**（「哪里能吃到本地人常去的**馆子**」）：命中词在句尾，
+    # 前半截于是整段是「哪里能吃到本地人常去的」—— 主体被切成一句疑问句，卡片标题
+    # 跟着变成「哪里能吃到本地人常」（真 bug 2026-10-06 菜品探针实测，也是「馆子」这类
+    # 词当初不敢收的原因）。剥掉开头的「哪里/哪儿 + 能/可以 + 动词 (+到)」，前半截就
+    # 只剩真正的定语（「本地人常去的」），与命中词拼成「本地人常去的馆子」。
+    r"哪里(?:能|可以|会)?(?:吃|找|买|坐|去|玩|看|用|点|喝|租|打)?(?:到|上|起)?|"
+    r"哪儿(?:能|可以|会)?(?:吃|找|买|坐|去|玩|看|用|点|喝|租|打)?(?:到|上|起)?|"
+    r"哪有(?:能|可以)?|哪能(?:吃|找|买|坐|去|玩|看|用|点|喝)?)+",
+    re.IGNORECASE,
 )
 
 
 def _strip_leading_frame(subject: str) -> str:
     return _LEADING_FRAME.sub("", (subject or "").strip())
+
+
+# 句首的**纯疑问骨架**：命中片段本身就是个问句开场词（「为什么」「What is」「Why do」），
+# 它没有内容 —— 这一句的主体在它**后面**。
+# 真 bug（2026-10-06 文化探针实测）：命中处于句首时一律拿命中片段当主体 →
+# 「为什么中国人不喜欢数字4」的卡片标题成了「为什么」，「What is the tipping culture in
+# China?」成了「What is」；更糟的是这一轮的 `last_fact_subject` 被记成「为什么」，下一句
+# 承接追问（「那去餐厅要给小费吗」）的标题也跟着成了「为什么」。
+_INTERROGATIVE_FRAME = {
+    "为什么", "为何", "为啥", "是什么", "干什么", "干嘛",
+    "what is", "where is", "why is", "why are", "why do", "why does", "why did",
+    "how much", "how many", "how long", "how far", "how old", "how big", "how tall",
+    "tell me about", "history of", "area of",
+    "なぜ", "どうして",
+    "왜",
+}
+
+
+# **前导铺垫**：中文问句常在主题前垫一段背景 / 身份 / 疑问副词 —— 它们只有句法作用，
+# 既不是这一问的主题，也进不了检索，更不该出现在卡片标题上。
+# 真 bug（2026-10-06 日常功能探针实测，四句一个病）：
+#   「我第一次来中国，吃饭有什么礼仪要注意吗」→ 主体切出「我第一次来中国，吃饭」；
+#   「那去餐厅要给小费吗」                    →「那去餐厅要给」；
+#   「我是外国人，在中国用手机支付怎么弄」      →「我是外国人，在中国用手机」；
+#   「怎么用支付宝扫码坐地铁」                 →「怎么用」（前半截只剩疑问副词）。
+# 四句的主题其实都在后面（吃饭 / 小费 / 手机 / 支付宝）。
+# 刻意**不在 `detect_knowledge_intent` 里用它改主体**：主体还担着相关性闸门，动它风险大；
+# 这里只服务展示层（`knowledge.display_topic`），与「剥离英文疑问碎片」同一定位。
+_TOPIC_PREAMBLE = re.compile(
+    r"^(?:"
+    # ① 话语标记：承接上文的开头词（「那…」「还有…」「顺便…」）
+    # ⚠️ 「那 / 这」后面**紧跟量词**时它不是话语标记、而是指示代词的一部分
+    #    （「**这道**菜里有没有猪肉」「**那家**店还开着吗」）—— 剥掉它标题就成了
+    #    「道菜里猪肉」「家店」（真 bug 2026-10-06 菜品探针实测）。
+    #    一步之差：「那去餐厅要给小费吗」的「那」后面是**动词**，照旧要剥。
+    r"(?:(?:那|这)(?![个道家碗份辆条张件套杯盘锅只群双片样类些块口句位本座趟间扇束壶瓶笼碟])"
+    r"|那么|这个|然后|所以|还有|以及|另外|其实|就是|就是说|对了|话说|顺便|不过|况且|呃|嗯)"
+    # ①′ 指示代词 + 量词（「这道菜」「那家店」）：整段剥掉会让主体丢半截，
+    #    上面那条已经用负向前瞻放过了它们，这里不再重复处理。
+    # ② 第一人称 / 身份 / 「第一次来」这类自我介绍
+    r"|(?:我们|咱们|咱|本人|自己|我)(?:也)?(?:是|叫)?(?:一?个?|一?名?)?"
+    r"|(?:外国人|外国游客|外国朋友|外国旅客|游客|旅客|老外|背包客)"
+    r"|(?:第一次|初次|首次)(?:来|到|去|在)?(?:中国|这儿|这里|当地|国内)?"
+    r"|作为(?:一?名?|一?个?)?(?:外国人|游客|旅客)?"
+    # ②′ 礼貌语 / 咨询语（「想问问」「请问」「咨询一下」）—— 同样是铺垫，主题在后面
+    r"|(?:想|要|打算|准备|希望)?(?:请问|麻烦|问问|问一下|问下|咨询一下|咨询|了解一下|想了解|想问|了解下)"
+    # ③ 疑问副词框架（「怎么用」「如何办」）—— 主题在它后面
+    r"|(?:怎么|如何|怎样|咋样|咋)(?:样)?(?:才)?(?:能|可以|可|应该|该)?"
+    r"(?:用|弄|搞|操作|办理|办|做|去|坐|乘|乘坐|买|付|支付|扫|叫|打|租|获取|申请)?"
+    # ④ 方位铺垫（「在中国…」「在北京…」）。⚠️ 地点表必须**必选**：写成可选会连光杆「在」
+    #    一起吃掉（「在线支付」被剥成「线支付」）。
+    r"|在(?:中国|这儿|这里|当地|国内|这个国家|北京|上海|广州|深圳|成都|西安)"
+    r")[，,。、；;：:\s]*"
+)
+
+# 主体开头的**光杆动词**（「用手机」→「手机」，「去餐厅」→「餐厅」）。
+# 只在剩余长度 ≥ 2 时剥，免得把「来华」剥成「华」。
+_TOPIC_LEAD_VERB = re.compile(r"^(?:去|来|用|坐|买|吃|住|玩|逛)")
+
+# 「动词 + 事件/时间后缀」：见 `trim_topic_preamble` 里的保护 —— 这种整体不该剥光杆动词。
+_VERB_EVENT_HEAD = re.compile(
+    r"^(?:去|来|用|坐|买|吃|住|玩|逛)[^，,。；;！!？?]{1,8}"
+    r"(?:的时候|时|之前|之后|以前|以后|前后|期间|时侯)$"
+)
+
+# 主体/焦点末尾的语气与骨架残留（「那去餐厅要给」→「餐厅」，「支付怎么弄」→「支付」）。
+_TOPIC_TAIL = re.compile(
+    # ⚠️ 这里**刻意不剥**「里 / 中 / 内 / 上」这类方位后缀 —— 试过，代价是先把地名吃掉：
+    #    「上海」→「海」、「中国」→「国」，标题塌成「海色菜」「国菜单」（2026-10-06 菜品探针）。
+    #    中文里方位字既是后缀、又是地名尾字的情形太多，剥尾部单字得不偿失。
+    r"(?:要|给|是|的|了|吗|呢|吧|啊|和|跟|向|怎么|如何|怎样|怎么办|怎么弄|弄|搞|操作|办|办理|做|用)+$"
+)
+_TOPIC_SEP = " ,，。、；;：:!！?？\t\n"
+
+
+def trim_topic_preamble(text: str) -> str:
+    """剥掉展示标签里的**前导铺垫 + 末尾骨架**；剥空了返回空串（调用方自会退回候选）。
+
+    只用于展示（卡片标题 / 复核入口）。逐段剥、每轮必须有进展，最多 6 轮。
+    """
+    out = (text or "").strip(_TOPIC_SEP)
+    for _ in range(6):
+        m = _TOPIC_PREAMBLE.match(out)
+        if not m or m.end() == 0:
+            break
+        nxt = out[m.end() :].lstrip(_TOPIC_SEP)
+        if nxt == out:
+            break
+        out = nxt
+    # 光杆动词只在还剩 ≥3 字时剥（剥完至少留 2 字），最多剥 3 次（「去要用手机」→「手机」）
+    # ⚠️ 「动词 + 时间/事件后缀」整体不剥：「吃饭的时候」「去看展之前」里动词是整个事件的
+    #    一部分，剥掉只剩「饭的时候」「看展之前」—— 真 bug（2026-10-06 生活场景校验）：
+    #    「吃饭的时候有什么禁忌吗」的标签成了「饭的时候禁忌」。
+    if not _VERB_EVENT_HEAD.match(out):
+        for _ in range(3):
+            m = _TOPIC_LEAD_VERB.match(out)
+            if not m or len(out) < 3:
+                break
+            out = out[m.end() :]
+    for _ in range(4):
+        trimmed = _TOPIC_TAIL.sub("", out).strip(_TOPIC_SEP)
+        if not trimmed or trimmed == out:
+            break
+        out = trimmed
+    return out.strip(_TOPIC_SEP)
 
 
 def _strip_metric_tail(subject: str) -> str:
@@ -318,9 +481,13 @@ def detect_realtime_intent(
     place = destination
     subject = _subject(message, match.start(), surface)
     relevance = str(trigger.get("relevance") or "subject")
-    if relevance == "matched" and match.start() == 0:
-        # 政策类且命中就在句首：「单方面免签来华可以停留多久」切不出前半截，
-        # 退化成地名或一整句话都不对 —— 主体就是命中那条政策名本身。
+    if relevance == "matched":
+        # 政策类的主体就是**命中那条政策名本身**（「过境免签」「单方面免签」），
+        # 与它落在句中哪个位置无关。旧代码只在命中处于**句首**时才这么取：
+        #   「单方面免签来华可以停留多久」→ 命中在句首 → 主体=政策名 ✓
+        #   「那单方面免签的国家有哪些」→ 命中不在句首 → 走通用切分，切出前半截「那」
+        #   （实测卡片主体/标题成了「那」），虽然检索式里仍带命中片段、产出对得上，
+        #   但展示层很难看。政策类不承接、主体恒为政策名，去掉位置条件即可。
         subject = match.group(0)
 
     # 承接：短句、无地名、会话里有上一轮主体 → 主体与所在地都接过来。
@@ -452,6 +619,62 @@ def locative_referent(message: str, settings: Settings, session) -> str:
     return last_place or last_subject
 
 
+_KANA_SCRIPT = re.compile(r"[\u3040-\u30ff]")
+_HANGUL_SCRIPT = re.compile(r"[\u1100-\u11ff\uac00-\ud7af]")
+_LATIN_SCRIPT = re.compile(r"[A-Za-z]")
+_SCRIPT_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
+    ("han", _HAN),
+    ("kana", _KANA_SCRIPT),
+    ("hangul", _HANGUL_SCRIPT),
+    ("latin", _LATIN_SCRIPT),
+)
+
+
+def _scripts(text: str) -> set[str]:
+    """这句话里出现了哪些**书写系统**（han / kana / hangul / latin）。
+
+    用来挡住**跨语言承接**：上一轮存的主体是原文，换一种语言再追问时，把上一轮那段
+    外文原样当主体带过来，既会让标签串味（日文问句挂上韩文标题），也会把生成模型
+    带跑 —— 真 bug（2026-10-06 交通探针 T5-F3）：韩文轮存下的主体「지하철」，被下一句
+    **日文**追问原样承接，整段答案写成了韩文（提示词里「用日语作答」被无视）。
+    """
+    found: set[str] = set()
+    t = text or ""
+    for name, rx in _SCRIPT_PATTERNS:
+        if rx.search(t):
+            found.add(name)
+    return found
+
+
+# 主体的收尾清洁：把「怎么问」的填充成分从主体里摘掉 —— 它们不是问的内容。
+# 真 bug（2026-10-06 交通探针实测）：
+#   ·「故宫一般什么时候人最多」→ 主体「故宫一般」→ 卡片标题「故宫一般人最多」；
+#   · 日文「観光地は週末混みますか」→ 主体「観光地は週末」（は 是**主题助词**，
+#     週末是这一问的**场合**、不是主体）；韩文 은/는 同理。
+_ZH_FILLER_TAIL = re.compile(
+    r"(?:一般说来|一般来说|通常来说|一般|通常|大概|大致|大约|差不多|平时)$"
+)
+
+
+def _strip_topic_filler(subject: str) -> str:
+    """摘掉主体里的疑问填充成分（见 `_ZH_FILLER_TAIL` 的 bug 记录）。摘空则退回原值。"""
+    s = (subject or "").strip()
+    if not s:
+        return s
+    if _KANA_SCRIPT.search(s) and "は" in s:
+        # 日文：主题助词「は」之前才是主体（観光地は週末 → 観光地）
+        head = s.split("は")[0].strip()
+        if len(head) >= 2:
+            s = head
+    elif _HANGUL_SCRIPT.search(s):
+        # 韩文：主题助词 은/는 同理（관광지는 주말 → 관광지）
+        m = re.search(r"[은는]", s)
+        if m and m.start() >= 2:
+            s = s[: m.start()].strip()
+    trimmed = _ZH_FILLER_TAIL.sub("", s).strip()
+    return trimmed or s
+
+
 def carry_over_subject(
     message: str, settings: Settings, session, slots: dict[str, Any] | None = None
 ) -> tuple[str | None, str | None]:
@@ -472,6 +695,11 @@ def carry_over_subject(
     if not text or not last_subject:
         return None, None
     if len(text) > FOLLOWUP_MAX_CHARS:
+        return None, None
+    # 跨语言不承接：上一轮主体与这一句**没有共同书写系统**（韩文主体 vs 日文追问）时，
+    # 原样带过来会把标签与作答语言一起带偏（见 `_scripts` 的 bug 记录）。
+    # 中文主体（汉字）与日文追问（汉字+假名）有交集，照旧承接 —— 汉字在日文里也读得通。
+    if not (_scripts(last_subject) & _scripts(text)):
         return None, None
     slots = slots or {}
     if any(slots.get(k) for k in PLAN_SLOT_KEYS):
@@ -590,10 +818,21 @@ def detect_knowledge_intent(
         # 这里改用命中的咨询词本身当主体（「离境退税」），它能真的对上库内条目。
         subject = hit.group(0)
         had_leading_frame = False
-        # 句首命中 = 前半截是空的 = **这一句没给自己一个主体**（「是不是还有一个校区」）。
-        # 注意这和「命中片段本身就是主题名」（离境退税）不冲突：那种情况没有承接对象，
-        # 下面 `followup` 不成立，主体照旧用命中片段。
-        own_subject = ""
+        # 句首命中时前半截是空的。但「命中片段本身是不是一个**有内容的主题名**」要分开：
+        #   · 纯功能骨架（「是不是」「有没有」）→ 这一句**没给自己主体**，可以承接上一轮
+        #     （「是不是还有一个校区」必须接回上一轮的学校）；
+        #   · 真主题名（「离境退税」「景点推荐」）→ 它**就是**这一句自带的主体，
+        #     不许被上一轮覆盖。
+        # 真 bug（2026-10-06 变卦探针实测）：F10 会话里「支付怎么弄」答完之后接一句
+        # 「景点推荐呢」—— 命中「景点推荐」在句首，却因 own_subject 为空被承接成上一轮的
+        # 「支付怎么弄」，卡片标题与答案双双跑偏（问景点，答了支付）。
+        own_subject = "" if hit.group(0) in _FUNCTION_SKELETON else hit.group(0)
+        # 命中的是纯疑问骨架（「为什么」「Why do」）→ 这一句的主体在**它后面**那一截。
+        if hit.group(0).strip().lower() in _INTERROGATIVE_FRAME:
+            tail = _TAIL_NOISE.sub("", _clean_fragment(text[hit.end():])).strip()
+            if tail:
+                subject = tail
+                own_subject = tail
     else:
         subject = _strip_question_tail(_strip_metric_tail(_subject(text, hit.start(), surface)))
         # 前半截常把疑问骨架和光杆动词一起切进来（「能不能用**信用卡**支付」→「能不能用」）。
@@ -604,6 +843,11 @@ def detect_knowledge_intent(
         had_leading_frame = subject != before_frame
         # 命中片段**之前**切出来的那一截，就是这一句自己带的主体。
         own_subject = subject
+        # **非中文问句**（英 / 韩）：主题几乎总在**命中片段本身**上，而"命中片段之前那一截"
+        # 是疑问 + 助动词（"What are some Chinese dining"），断在词中间还会切出 "some Ch"。
+        if not _HAN.search(text) and hit.group(0) not in _FUNCTION_SKELETON:
+            subject = hit.group(0)
+            own_subject = subject
 
     # 这一句**自带**主体吗？自带就不许被上一轮覆盖。
     # 真 bug（2026-10-04 用户报，两副面孔）：
@@ -613,6 +857,20 @@ def detect_knowledge_intent(
     #   ②「是不是还有一个校区」—— 骨架在句首，自己没给主体，必须接上一轮的学校。
     # 判据就是这一条：**前半截切得出一个像样的主体**才算自带。
     has_own_subject = bool(own_subject) and not _is_degenerate_subject(own_subject)
+    # ⚠️ 前半截是**事件引导残片**（「买到 / 不小心」）时也要算自带主体 ——
+    # 真 bug（2026-10-06 生活探针实测，会话第 4 轮）：刚聊完丝绸店，用户问
+    # 「买到**假货**怎么维权」，前半截「买到」退化 → `has_own_subject` 假 →
+    # 主体被上一轮的「丝绸」盖掉，卡片标题写着「丝绸」，答案却在讲假货维权。
+    # 命中片段（「假货」）就是这一问的主题，配得上自带的资格。
+    # 判据刻意**只对事件引导生效**：「那要预约吗」这类命中骨架的句子必须照旧去承接。
+    if (
+        not has_own_subject
+        and _EVENT_LEAD.match(own_subject or "")
+        and len(_EVENT_LEAD.sub("", own_subject or "").strip()) <= 1
+        and hit.group(0) not in _FUNCTION_SKELETON
+        and not _PURE_QUESTION.match(hit.group(0))
+    ):
+        has_own_subject = True
     if followup and not has_own_subject:
         subject = hint
     elif _is_degenerate_subject(subject):
@@ -626,8 +884,14 @@ def detect_knowledge_intent(
         #    退回槽位体检是差一点，但至少它问的是「你想问哪里」而不是假装答了一个代词。
         if had_leading_frame and not _is_degenerate_subject(hit.group(0)):
             subject = hit.group(0)
+        elif hit.group(0) not in _FUNCTION_SKELETON and not _PURE_QUESTION.match(hit.group(0)):
+            # ③ 命中片段是**内容主题名**（「寺庙」「小费」「礼仪」）→ 它就是这一问的主体。
+            # 真 bug（2026-10-06 文化探针实测）：「进寺庙要注意什么」前半截只切出一个动词
+            # 「进」→ 主体退化 → 整句退回槽位体检，被回四连问。而命中的「寺庙」完全够当主体。
+            subject = hit.group(0)
         else:
             return None
+    subject = _strip_topic_filler(subject)
     return KnowledgeIntent(subject=subject, matched=hit.group(0), question_zh=subject)
 
 

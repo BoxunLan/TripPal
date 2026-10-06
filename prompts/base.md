@@ -25,6 +25,19 @@
 5. `budget` 若用户给了预算，必须给出分项 `lines`；`total` 等于各项之和。
 6. 章节组织按主场景的侧重展开，融合场景只作为叠加细节，不要另起一套结构。
 7. 语言用简体中文，语气克制，不写营销话术。
+8. **节奏与偏好必须落到行程上**（市场对标：Layla / Mindtrip / TripGenie 都把这两项当
+   个性化的主输入）。槽位里 `pace=relaxed` 时，每天主要活动压到 2–3 个、留出休息与
+   机动时间，不要排满；`pace=packed` 时可加密但保持可行。`interests`（food / history /
+   nature / shopping / nightlife / culture / family / photo）要**优先**出现在每日活动里，
+   并可在 `suggestions` 里点明"按你的偏好加重了哪些"。
+9. 槽位里若出现 `multi_city`（多城市序列），行程要**按顺序**覆盖每一站，并给出城际交通衔接；
+   `destination` 是首站，不代表只有这一站。
+10. 槽位里若出现 `constraints`（硬约束 / 忌口），必须**当成硬性条件**落实，不能只在备注里提一句：
+   `vegetarian` / `halal` / `no_spicy` / `food_allergy` 要改变每天的餐饮推荐并加提醒；
+   `limited_mobility` 要减少步行强度、优先无障碍交通与电梯场馆、避免长距离徒步 —— 这一点
+   要在**当日 `activities` 的 `detail` 或 `notes` 里写出具体安排**（如「优先网约车 / 景区代步车 /
+   无障碍通道 / 电梯入馆 / 单日步行控制在 X 公里内」），且**不要把两个相距很远的点位压在同一天**
+   （宁可拆到两天或砍掉一个），不能只在结尾备注里笼统提一句。
 
 ## 输出 Schema
 

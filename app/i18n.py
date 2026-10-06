@@ -161,6 +161,56 @@ _UI: dict[str, dict[str, str]] = {
         JA: "もう少し確認させてください：",
         KO: "추가로 확인할 사항: ",
     },
+    # 只缺**一项**时用这条。连续追问里最难听的是把「还需要确认：」这种清单腔
+    # 用在"就差最后一个问题"的场合 —— 那是把对话当表单填。
+    "clarify.ask_head_one": {
+        ZH: "就差一项了：",
+        EN: "Just one thing: ",
+        JA: "あと1つだけ：",
+        KO: "딱 하나만요: ",
+    },
+    # 用户要调预算但没给数（「太贵了，能便宜点吗」）时的追问。
+    # 与前几种追问分开，是因为这里已经有一版行程了 —— 语气要对得上"在改"而不是"在补"。
+    "clarify.budget_adjust": {
+        ZH: "好，那这次大概想控制在多少（人民币）？",
+        EN: "Sure — roughly what would you like to keep it under (in CNY)?",
+        JA: "かしこまりました。ご予算はどのくらいを目安にしますか（人民元）？",
+        KO: "알겠습니다. 예산을 어느 정도로 맞출까요(위안)?",
+    },
+    # 「随便 / 都行 / 你看着办」时用常规默认补上骨架缺口，并把默认值**明说**出来。
+    # 这句进的是行程响应的 suggestions 首条，用户看得到、也随时能改。
+    "clarify.delegate_note": {
+        ZH: "先按常规来：{days} 天、约 {budget} 元、{party} 人的配置已就位，想改哪一项直接说。",
+        EN: "Started with our usual setup: {days} days, about CNY {budget}, {party} travellers. "
+            "Tell me what to change.",
+        JA: "まず標準構成で進めます：{days} 日間・約 {budget} 元・{party} 名。変更があればお知らせください。",
+        KO: "우선 기본 구성으로 진행했어요: {days}일 · 약 {budget}위안 · {party}명. 바꿀 점은 말씀해 주세요.",
+    },
+    # 行程内迭代：「第 3 天太紧凑了」这类**修改诉求**被接受后，先说一句"我按你说的改了"，
+    # 用户才知道这版与上一版的关系（否则会以为系统又从头排了一遍）。
+    "clarify.revision_note": {
+        ZH: "已按你的要求调整：{v}。其余部分保持不变，还想改哪里直接说。",
+        EN: "Updated as you asked: {v}. Everything else stays the same — tell me what to change next.",
+        JA: "ご要望どおり調整しました：{v}。ほかはそのままです。続けて変更があればお知らせください。",
+        KO: "요청하신 대로 조정했어요: {v}. 나머지는 그대로입니다. 더 바꿀 점은 말씀해 주세요.",
+    },
+    # 「把行程再给我看看」：**原样重放**上一版出稿的卡片（不重新生成）。{v} = 那一版的标题。
+    "clarify.recall_note": {
+        ZH: "这是最近这一版行程（{v}）。要改哪一天直接说。",
+        EN: "Here is your latest itinerary ({v}). Tell me which day to change.",
+        JA: "こちらが最新の旅程です（{v}）。変更したい日を教えてください。",
+        KO: "최근 일정입니다({v}). 바꿀 날짜를 말씀해 주세요.",
+    },
+    # 用户要重看行程、但会话里根本没出过稿 → 如实说 + 给出下一步（**不要**回四连问）。
+    "clarify.no_plan_yet": {
+        ZH: "我这边还没有为你生成过行程，所以暂时没得看。把目的地告诉我、再说个大概天数，我这就排一版。",
+        EN: "I haven't generated an itinerary for you yet, so there's nothing to show. "
+            "Tell me the destination and roughly how many days, and I'll put one together.",
+        JA: "まだ旅程を作成していないため、お見せできるものがありません。"
+            "行き先と日数の目安を教えていただければ、すぐに作成します。",
+        KO: "아직 만들어 드린 일정이 없어서 보여드릴 게 없어요. "
+            "목적지와 대략 며칠인지 알려주시면 바로 만들어 드릴게요.",
+    },
     "clarify.known_destination": {
         ZH: "目的地 {v}",
         EN: "destination {v}",
@@ -408,6 +458,13 @@ _UI: dict[str, dict[str, str]] = {
         JA: "承知しました。いつでもどうぞ。良い旅を！",
         KO: "알겠습니다. 언제든 다시 찾아주세요. 즐거운 여행 되세요!",
     },
+    "gd.reply.cancel": {
+        ZH: "好的，这次先不安排了。想重新计划的时候说一声，我接着来。",
+        EN: "Sure — I'll hold off on this one. Just say the word when you want to pick it "
+            "up again.",
+        JA: "わかりました。今回は見送りますね。また計画したくなったら声をかけてください。",
+        KO: "알겠습니다. 이번 건은 잠시 접어둘게요. 다시 계획하고 싶으시면 말씀해 주세요.",
+    },
     "gd.reply.meta": {
         ZH: "我是旅行助手，主要帮三件事：规划行程、查签证与入境政策、回答目的地问题"
             "（门票、开放时间、怎么玩）。想从哪开始？",
@@ -458,6 +515,204 @@ _UI: dict[str, dict[str, str]] = {
             "上海3日間の旅程を作って（予算5000元）|外国人は中国でスマホ決済をどう使う？",
         KO: "상하이 무료 박물관은 어디인가요?|240시간 경유 비자 면제 대상국은?|"
             "상하이 3일 일정을 짜주세요(예산 5000위안)|외국인은 중국에서 모바일 결제를 어떻게 하나요?",
+    },
+    # 关联问题推荐（市场对标，携程 TripGenie 说这条把人均对话轮次拉了上去）：
+    # 每轮答复后给 2–3 条「接着可以问」——用 | 分隔，`app/followups.py` 拆开、前端做成可点按钮。
+    # 行程那条刻意**演示迭代句式**：「把某一天放宽」「住宿换便宜点」——教会用户怎么改稿。
+    # **按会话槽位个性化**（2026-10-06 收遗留③）：`{day}` 取这一版稿子的天数（原先是写死的 3），
+    # `{place}` 取会话目的地 —— 同一批模板在「杭州 3 天」「西安 5 天」会话里不再一字不差。
+    "nq.plan": {
+        ZH: "把第 {day} 天安排得轻松一点|住宿换成便宜一点的|再多安排一天",
+        EN: "Make day {day} more relaxed|Switch to cheaper hotels|Add one more day",
+        JA: "{day} 日目をもう少しゆったりに|宿をもう少し安く|もう 1 日追加",
+        KO: "{day}일차를 좀 더 여유롭게|숙소를 더 저렴하게|하루 더 추가",
+    },
+    "nq.answer": {
+        ZH: "按这个帮我排进行程|附近还有哪些值得去",
+        EN: "Build this into my itinerary|What else nearby is worth visiting",
+        JA: "これを旅程に組み込んで|近くに他におすすめは？",
+        KO: "이걸 일정에 넣어 주세요|근처에 더 볼 만한 곳은?",
+    },
+    # 会话里已有目的地时用这套 —— 同一条建议在「杭州」和「西安」会话里不再一字不差。
+    "nq.answer_place": {
+        ZH: "按这个帮我排进行程|{place}附近还有哪些值得去",
+        EN: "Build this into my itinerary|What else near {place} is worth visiting",
+        JA: "これを旅程に組み込んで|{place}の近くで他におすすめは？",
+        KO: "이걸 일정에 넣어 주세요|{place} 근처에 더 볼 만한 곳은?",
+    },
+    "nq.realtime": {
+        ZH: "按这个帮我排进行程|还有别的类似信息吗",
+        EN: "Build this into my itinerary|Any other similar info",
+        JA: "これを旅程に組み込んで|ほかに似た情報は？",
+        KO: "이걸 일정에 넣어 주세요|비슷한 정보가 더 있나요?",
+    },
+    "nq.realtime_place": {
+        ZH: "按这个帮我排进行程|{place}还有别的类似信息吗",
+        EN: "Build this into my itinerary|Any other similar info for {place}",
+        JA: "これを旅程に組み込んで|{place}の似た情報は？",
+        KO: "이걸 일정에 넣어 주세요|{place}에 비슷한 정보가 더 있나요?",
+    },
+    # **按话题整套替换**（2026-10-06 菜品探针实测）：饮食话题连问四轮，建议栏四轮一字
+    # 不差 —— 用户问的是「素食 / 清真 / 过敏 / 川菜辣不辣」，建议栏一直在说「附近还有
+    # 哪些值得去」。话题取自**这一轮的主体**（`state.knowledge_intent.subject`），
+    # 命中就整套换成同话题的三条；没命中（认不出话题）就用上面的通用模板。
+    # ⚠️ `{place}` 只在会话里真有目的地时才填得到；英文模板因此把地点放在句末，
+    # 空着时由 `app/followups.py::_tidy` 收掉悬空介词（「try in」→「try」）。
+    "nq.topic_food": {
+        ZH: "{place}有哪些值得试的当地菜|不吃辣的话要怎么点菜|素食和清真忌口好不好解决",
+        EN: "What local dishes should I try in {place}|How do I order if I can't eat spicy food|Is it easy to manage vegetarian or halal diets",
+        JA: "{place}で食べるべき郷土料理は？|辛いものが苦手なときの注文方法は？|ベジタリアンやハラール対応は簡単？",
+        KO: "{place}에서 꼭 먹어봐야 할 향토 음식은?|매운 걸 못 먹으면 어떻게 주문하나요?|채식이나 할랄 식단은 해결하기 쉬운가요?",
+    },
+    "nq.topic_transport": {
+        ZH: "{place}地铁怎么坐最省事|高峰期要避开哪些时段|打车和地铁哪个更快",
+        EN: "How do I use the metro in {place}|Which hours should I avoid at rush hour|Is a taxi or the metro faster",
+        JA: "{place}での地下鉄の乗り方は？|ラッシュを避けるべき時間帯は？|タクシーと地下鉄どちらが速い？",
+        KO: "{place}에서 지하철 타는 법은?|러시아워를 피할 시간대는?|택시와 지하철 중 무엇이 빠른가요?",
+    },
+    "nq.topic_pay": {
+        ZH: "{place}能用境外银行卡吗|还要不要带现金|移动支付要怎么开通",
+        EN: "Can I use my foreign card in {place}|Should I still carry cash|How do I set up mobile payment",
+        JA: "{place}で海外のカードは使える？|現金も持っていくべき？|スマホ決済の始め方は？",
+        KO: "{place}에서 해외 카드를 쓸 수 있나요?|현금도 준비해야 하나요?|모바일 결제는 어떻게 시작하나요?",
+    },
+    "nq.topic_visa": {
+        ZH: "过境免签适用哪些国家|签证要提前多久办|入境要准备哪些材料",
+        EN: "Which countries qualify for transit visa-free|How early should I apply for a visa|What documents do I need on arrival",
+        JA: "トランジットビザ免除の対象国は？|ビザはどれくらい前に取るべき？|入国時に必要な書類は？",
+        KO: "경유 무비자는 어느 나라가 해당되나요?|비자는 얼마나 일찍 신청해야 하나요?|입국 시 필요한 서류는?",
+    },
+    "nq.topic_net": {
+        ZH: "手机卡怎么买最方便|eSIM 能用吗|没网了怎么办",
+        EN: "How do I buy a local SIM card|Can I use an eSIM|What if I lose connection",
+        JA: "現地のSIMカードの買い方は？|eSIMは使える？|ネットがつながらないときは？",
+        KO: "현지 유심은 어떻게 사나요?|eSIM도 쓸 수 있나요?|인터넷이 안 되면 어떡하나요?",
+    },
+    "nq.topic_stay": {
+        ZH: "酒店入住要什么证件|住哪个区域更方便|行李能提前寄存吗",
+        EN: "What documents do hotels need at check-in|Which area is most convenient to stay|Can I store my luggage early",
+        JA: "ホテルのチェックインに必要なものは？|どのエリアに泊まるのが便利？|荷物を早めに預けられる？",
+        KO: "호텔 체크인에 필요한 서류는?|어느 지역에 묵는 게 편한가요?|짐을 미리 맡길 수 있나요?",
+    },
+    "nq.topic_sight": {
+        ZH: "{place}还有哪些值得去的景点|门票要提前预约吗|什么时间去人最少",
+        EN: "What else is worth visiting in {place}|Do I need to book tickets in advance|What time is least crowded",
+        JA: "{place}で他に行くべき観光地は？|チケットは事前予約が必要？|一番空いている時間は？",
+        KO: "{place}에서 더 가볼 만한 곳은?|티켓은 미리 예약해야 하나요?|가장 한산한 시간은?",
+    },
+    # 购物 / 退税：与 `pay` 分开的原因见 `app/followups.py::_TOPIC_KEYS`（退税归这里）。
+    "nq.topic_shop": {
+        ZH: "{place}买东西能退税吗|哪里可以砍价|买到假货怎么维权",
+        EN: "Can I get a tax refund in {place}|Where is bargaining expected|What if I think I bought a fake",
+        JA: "{place}で買い物したら税金還付は受けられる？|値切りはどこでできる？|偽物を買ったらどうする？",
+        KO: "{place}에서 쇼핑하면 환급받을 수 있나요?|흥정은 어디서 가능한가요?|가짜를 샀으면 어떡하나요?",
+    },
+    "nq.topic_apps": {
+        ZH: "Google 地图在中国能用吗|导航要用哪个应用|微信和支付宝要提前装吗",
+        EN: "Does Google Maps work in China|Which app should I use for navigation|Should I install WeChat and Alipay before I arrive",
+        JA: "Google マップは中国で使える？|ナビはどのアプリを使う？|WeChatとアリペイは事前に入れるべき？",
+        KO: "구글 지도는 중국에서 되나요?|내비는 어떤 앱을 쓰나요?|위챗과 알리페이를 미리 깔아야 하나요?",
+    },
+    "nq.topic_weather": {
+        ZH: "几月来中国最舒服|要带什么衣服|空气质量差的时候怎么办",
+        EN: "Which month is most comfortable in China|What clothes should I pack|What should I do when the air quality is bad",
+        JA: "中国は何月が一番快適？|どんな服を持っていく？|空気が悪いときはどうする？",
+        KO: "중국은 몇 월이 가장 좋나요?|어떤 옷을 준비해야 하나요?|공기가 나쁠 때는 어떻게 하나요?",
+    },
+    "nq.topic_safety": {
+        ZH: "中国夜晚上街安全吗|护照丢了怎么办|有哪些常见的旅游骗局",
+        EN: "Is it safe to go out at night in China|What should I do if I lose my passport|What are the common tourist scams",
+        JA: "中国の夜は安全？|パスポートをなくしたら？|よくある観光客向けの詐欺は？",
+        KO: "중국 밤거리는 안전한가요?|여권을 잃어버리면 어떡하나요?|흔한 관광객 사기는?",
+    },
+    "nq.topic_holiday": {
+        ZH: "国庆和春节要避开吗|热门景点要提前多久预约|博物馆周一是闭馆吗",
+        EN: "Should I avoid National Day and Chinese New Year|How early should I book popular sights|Are museums closed on Mondays",
+        JA: "国慶節と春節は避けるべき？|人気スポットはいつ予約する？|博物館は月曜休館？",
+        KO: "국경절과 춘절은 피해야 하나요?|인기 명소는 얼마나 일찍 예약하나요?|박물관은 월요일에 닫나요?",
+    },
+    "nq.topic_language": {
+        ZH: "英文在中国够用吗|菜单看不懂怎么办|有哪些能马上用的中文短句",
+        EN: "Is English enough in China|What if I can't read the menu|What Chinese phrases can I use right away",
+        JA: "中国では英語で通じる？|メニューが読めないときは？|すぐ使える中国語のフレーズは？",
+        KO: "중국에서 영어로 통하나요?|메뉴를 못 읽으면 어떡하나요?|바로 쓸 수 있는 중국어 표현은?",
+    },
+    "nq.topic_health": {
+        ZH: "在中国看病要准备什么|药店能买到哪些药|要不要买旅行医疗保险",
+        EN: "What do I need to see a doctor in China|What can I buy at a pharmacy|Should I get travel medical insurance",
+        JA: "中国で病院にかかるときの準備は？|薬局で買える薬は？|海外旅行保険は必要？",
+        KO: "중국에서 병원에 갈 때 준비할 것은?|약국에서 살 수 있는 약은?|여행자 의료보험이 필요한가요?",
+    },
+    "nq.topic_manner": {
+        ZH: "中国要给小费吗|吃饭有哪些禁忌|公共场所要注意什么",
+        EN: "Do I need to tip in China|What are the dining taboos|What should I mind in public",
+        JA: "中国ではチップは必要？|食事のときのタブーは？|公共の場での注意点は？",
+        KO: "중국에서 팁을 줘야 하나요?|식사할 때 금기는?|공공장소에서 주의할 점은?",
+    },
+    # 关联问题推荐的**上下文个性化**（2026-10-06 收遗留③·续）：按会话槽位换掉**一条**。
+    # 取舍：只动一条 —— 建议栏是「引导下一步」，不是把用户自己的输入复述一遍；换的位置也讲究：
+    #   行程稿 → 换掉第 1 条（那条本来就讲「怎么改这一版稿」）；
+    #   常识答复 → 换掉最后一条（那条是「附近还有什么」的泛推荐，最容易被更贴的一条替代）。
+    # **只用会话里真的出现过的槽位**（孩子/长者/兴趣），没提到就一条都不动。
+    "nq.ctx_plan_kids": {
+        ZH: "把第 {day} 天安排得适合孩子",
+        EN: "Make day {day} kid-friendly",
+        JA: "{day} 日目を子ども向けに",
+        KO: "{day}일차를 아이와 함께하기 좋게",
+    },
+    "nq.ctx_plan_elder": {
+        ZH: "把第 {day} 天安排得轻松些、少走路",
+        EN: "Make day {day} easier with less walking",
+        JA: "{day} 日目は移動を少なく、ゆったりに",
+        KO: "{day}일차는 걷는 거리를 줄여 여유롭게",
+    },
+    "nq.ctx_food": {
+        ZH: "{place}有哪些必吃的本地菜",
+        EN: "Must-try local dishes in {place}",
+        JA: "{place}で必ず食べたい料理は？",
+        KO: "{place}에서 꼭 먹어야 할 음식은?",
+    },
+    "nq.ctx_history": {
+        ZH: "{place}有哪些必去的博物馆和古迹",
+        EN: "Must-see museums and historic sites in {place}",
+        JA: "{place}で必ず行きたい博物館・古跡は？",
+        KO: "{place}에서 꼭 가야 할 박물관과 유적은?",
+    },
+    "nq.ctx_nature": {
+        ZH: "{place}周边有哪些自然风光",
+        EN: "Natural scenery around {place}",
+        JA: "{place}周辺の自然景観は？",
+        KO: "{place} 주변의 자연 경관은?",
+    },
+    "nq.ctx_shopping": {
+        ZH: "{place}去哪里购物比较划算",
+        EN: "Where to shop in {place}",
+        JA: "{place}でお買い物ならどこ？",
+        KO: "{place}에서 쇼핑하기 좋은 곳은?",
+    },
+    "nq.ctx_nightlife": {
+        ZH: "{place}有哪些值得看的夜景或夜市",
+        EN: "Night views or night markets in {place}",
+        JA: "{place}の夜景・ナイトマーケットは？",
+        KO: "{place}의 야경이나 야시장은?",
+    },
+    "nq.ctx_culture": {
+        ZH: "{place}有哪些值得看的演出或民俗",
+        EN: "Shows or folk culture to see in {place}",
+        JA: "{place}で見られる公演や民俗は？",
+        KO: "{place}에서 볼 만한 공연이나 민속은?",
+    },
+    "nq.ctx_photo": {
+        ZH: "{place}有哪些适合拍照的地方",
+        EN: "Best photo spots in {place}",
+        JA: "{place}の写真映えスポットは？",
+        KO: "{place}에서 사진 찍기 좋은 곳은?",
+    },
+    "nq.ctx_family_place": {
+        ZH: "{place}有哪些适合带孩子去的地方",
+        EN: "Family-friendly places in {place}",
+        JA: "{place}で子どもと行ける場所は？",
+        KO: "{place}에서 아이와 갈 만한 곳은?",
     },
     "gd.note": {
         ZH: "这类输入按寒暄或引导处理：不检索、不调工具、也不追问天数预算人数。"
