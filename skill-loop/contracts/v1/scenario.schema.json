@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://trippal.local/skill-loop/contracts/v1/scenario.schema.json",
+  "$id": "https://tour-skill-system.local/contracts/v1/scenario.schema.json",
   "title": "scenario v1",
   "type": "object",
   "required": [

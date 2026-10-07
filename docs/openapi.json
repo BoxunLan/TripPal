@@ -1,0 +1,1144 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "旅行 Agent — 两周垂直切片",
+    "description": "clarify → (realtime 旁路 | knowledge 旁路 | classify → route → retrieve → generate → validate) → output",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/plan": {
+      "post": {
+        "summary": "Plan",
+        "operationId": "plan_plan_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ClarifyResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/PlanResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/RealtimeResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/AnswerResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/GuideResponse"
+                    },
+                    {
+                      "$ref": "#/components/schemas/DegradedResponse"
+                    }
+                  ],
+                  "title": "Response Plan Plan Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Activity": {
+        "properties": {
+          "time": {
+            "type": "string",
+            "title": "Time",
+            "description": "HH:MM，可用 '上午'/'下午' 等粗粒度写法"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "detail": {
+            "type": "string",
+            "title": "Detail",
+            "default": ""
+          },
+          "cost": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cost",
+            "description": "单人费用，CNY；无法确定填 null"
+          },
+          "citation_key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Citation Key",
+            "description": "支撑该条事实的 chunk citation_key；没有引用必须填 null"
+          }
+        },
+        "type": "object",
+        "required": [
+          "time",
+          "name"
+        ],
+        "title": "Activity"
+      },
+      "AnswerResponse": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "answer",
+            "title": "Type",
+            "default": "answer"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic",
+            "default": ""
+          },
+          "message_echo": {
+            "type": "string",
+            "title": "Message Echo",
+            "default": ""
+          },
+          "question_zh": {
+            "type": "string",
+            "title": "Question Zh",
+            "default": ""
+          },
+          "answer": {
+            "type": "string",
+            "title": "Answer",
+            "default": ""
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ],
+            "title": "Confidence",
+            "default": "low"
+          },
+          "unknown_reason": {
+            "type": "string",
+            "title": "Unknown Reason",
+            "default": ""
+          },
+          "answer_title": {
+            "type": "string",
+            "title": "Answer Title",
+            "default": ""
+          },
+          "verify_title": {
+            "type": "string",
+            "title": "Verify Title",
+            "default": ""
+          },
+          "hits": {
+            "items": {
+              "$ref": "#/components/schemas/KnowledgeHit"
+            },
+            "type": "array",
+            "title": "Hits"
+          },
+          "verify": {
+            "items": {
+              "$ref": "#/components/schemas/RealtimeChannel"
+            },
+            "type": "array",
+            "title": "Verify"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "default": ""
+          },
+          "plan_hint": {
+            "type": "string",
+            "title": "Plan Hint",
+            "default": ""
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer",
+            "default": ""
+          },
+          "next_questions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Next Questions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "subject"
+        ],
+        "title": "AnswerResponse",
+        "description": "静态事实问询的响应（「西湖有多大」）。**不是**行程：没有行程、没有预算、没有槽位追问。\n\n存在的理由：「西湖有多大」不含任何时间 / 开放 / 天气 / 交通词，实时闸门不接管，\n于是掉回行程链路的槽位体检，被回以「目的地？天数？预算？人数？」—— 四问全错方向。\n\n与 `RealtimeResponse` 分开是有意的：这里的答案**不会过期**（西湖的面积不随日期变），\n所以没有时效闸门、没有 `fresh_until`。但**作答口径**与实时链路相反：\n\n- 实时链路不生成任何句子（时刻会变，模型必然错，只摆来源）；\n- 这一层**允许用通用常识作答**，因为面积 / 海拔 / 历史年份这类知识稳定、\n  且没有任何本地资料库能覆盖这个长尾。代价是必须如实标注「未经本知识库核实」，\n  并给出**复核入口**（`verify`）—— 让用户能自己核一遍，比替他保证更诚实。\n- 时效性信息（时刻 / 票价 / 开放状态 / 天气）在这一层**拒答**，只指回实时核实：\n  那是防幻觉的双保险，闸门漏掉的句子也不会被编出一个值。"
+      },
+      "BudgetLine": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "amount": {
+            "type": "number",
+            "title": "Amount"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "amount"
+        ],
+        "title": "BudgetLine"
+      },
+      "BudgetSummary": {
+        "properties": {
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "CNY"
+          },
+          "lines": {
+            "items": {
+              "$ref": "#/components/schemas/BudgetLine"
+            },
+            "type": "array",
+            "title": "Lines"
+          },
+          "total": {
+            "type": "number",
+            "title": "Total",
+            "default": 0.0
+          },
+          "user_budget": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "User Budget"
+          },
+          "buffer_ratio": {
+            "type": "number",
+            "title": "Buffer Ratio",
+            "default": 0.1
+          },
+          "within_budget": {
+            "type": "boolean",
+            "title": "Within Budget",
+            "default": true
+          }
+        },
+        "type": "object",
+        "title": "BudgetSummary"
+      },
+      "Citation": {
+        "properties": {
+          "citation_key": {
+            "type": "string",
+            "title": "Citation Key"
+          },
+          "chunk_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Id"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "default": ""
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "effective_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Effective Date"
+          },
+          "fresh_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fresh Until"
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "knowledge_base",
+              "tool"
+            ],
+            "title": "Origin",
+            "default": "knowledge_base"
+          }
+        },
+        "type": "object",
+        "required": [
+          "citation_key"
+        ],
+        "title": "Citation"
+      },
+      "ClarifyResponse": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "clarify",
+            "title": "Type",
+            "default": "clarify"
+          },
+          "question": {
+            "type": "string",
+            "title": "Question"
+          },
+          "missing_slots": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Missing Slots"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question"
+        ],
+        "title": "ClarifyResponse"
+      },
+      "DayPlan": {
+        "properties": {
+          "day": {
+            "type": "integer",
+            "title": "Day"
+          },
+          "date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date"
+          },
+          "theme": {
+            "type": "string",
+            "title": "Theme",
+            "default": ""
+          },
+          "area": {
+            "type": "string",
+            "title": "Area",
+            "description": "当日主要活动区域，用于一致性检查",
+            "default": ""
+          },
+          "activities": {
+            "items": {
+              "$ref": "#/components/schemas/Activity"
+            },
+            "type": "array",
+            "title": "Activities"
+          }
+        },
+        "type": "object",
+        "required": [
+          "day"
+        ],
+        "title": "DayPlan"
+      },
+      "DegradedResponse": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "degraded",
+            "title": "Type",
+            "default": "degraded"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "partial": {
+            "type": "object",
+            "title": "Partial"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/ValidationReport"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reason",
+          "validation"
+        ],
+        "title": "DegradedResponse"
+      },
+      "GuideResponse": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "guide",
+            "title": "Type",
+            "default": "guide"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind",
+            "default": "greeting"
+          },
+          "message_echo": {
+            "type": "string",
+            "title": "Message Echo",
+            "default": ""
+          },
+          "reply": {
+            "type": "string",
+            "title": "Reply",
+            "default": ""
+          },
+          "starters": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Starters"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "default": ""
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "GuideResponse",
+        "description": "寒暄 / 闲话 / 元问题的响应（「你好」「谢谢」「你是谁」）。\n\n**不是**行程、也**不是**事实断言：不检索、不调工具、不追问槽位。\n存在的理由：「你好」曾被行程链路的槽位体检拦下，回了一句「想去的城市？玩几天？\n预算多少？一行几个人？」—— 四问全错。问候要的是一句引导，不是一张需求表单。\n\n与另两条旁路分开是有意的：这里既没有时效闸门（无可过期的事实），\n也不需要「未经核实」标注（本来就无可核实的事实）。"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Itinerary": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "destination": {
+            "type": "string",
+            "title": "Destination",
+            "default": ""
+          },
+          "party": {
+            "type": "string",
+            "title": "Party",
+            "default": ""
+          },
+          "date_range": {
+            "type": "string",
+            "title": "Date Range",
+            "default": ""
+          },
+          "scenes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Scenes"
+          },
+          "days": {
+            "items": {
+              "$ref": "#/components/schemas/DayPlan"
+            },
+            "type": "array",
+            "title": "Days"
+          },
+          "budget": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BudgetSummary"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "notes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Notes"
+          },
+          "disclaimers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Disclaimers"
+          }
+        },
+        "type": "object",
+        "required": [
+          "title"
+        ],
+        "title": "Itinerary"
+      },
+      "KnowledgeHit": {
+        "properties": {
+          "chunk_id": {
+            "type": "string",
+            "title": "Chunk Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "default": ""
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "destination": {
+            "type": "string",
+            "title": "Destination",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "chunk_id",
+          "text"
+        ],
+        "title": "KnowledgeHit",
+        "description": "一条**与问题主体相关**的知识库条目（scene / general 层）。\n\n带 `source_url` 是为了让用户能点回原文 —— 只给一个 `chunk_id` 等于给了个编号，\n用户没法自己核对。"
+      },
+      "PlanRequest": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "slot_overrides": {
+            "type": "object",
+            "title": "Slot Overrides"
+          },
+          "output_language": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Output Language"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session_id",
+          "message"
+        ],
+        "title": "PlanRequest"
+      },
+      "PlanResponse": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "plan",
+            "title": "Type",
+            "default": "plan"
+          },
+          "route": {
+            "$ref": "#/components/schemas/RouteConfig"
+          },
+          "itinerary": {
+            "$ref": "#/components/schemas/Itinerary"
+          },
+          "suggestions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Suggestions"
+          },
+          "checklist": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Checklist"
+          },
+          "citations": {
+            "items": {
+              "$ref": "#/components/schemas/Citation"
+            },
+            "type": "array",
+            "title": "Citations"
+          },
+          "validation": {
+            "$ref": "#/components/schemas/ValidationReport"
+          },
+          "next_questions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Next Questions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "route",
+          "itinerary",
+          "validation"
+        ],
+        "title": "PlanResponse"
+      },
+      "PromptRefs": {
+        "properties": {
+          "base": {
+            "type": "string",
+            "title": "Base"
+          },
+          "overlays": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Overlays"
+          }
+        },
+        "type": "object",
+        "required": [
+          "base"
+        ],
+        "title": "PromptRefs"
+      },
+      "RealtimeChannel": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "what": {
+            "type": "string",
+            "title": "What",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "url"
+        ],
+        "title": "RealtimeChannel",
+        "description": "一处**权威入口 / 复核入口**：在哪儿查、查什么字段。\n\n两处在用：实时事实的官方入口（`RealtimeResponse.channels`）与常识作答的复核入口\n（`AnswerResponse.verify`）。定义放在这里是因为后者要先引用它。\n\n`name` / `url` 是**引用**，不随用户语言翻译（与 citations 同一口径）；\n名字里的机构全称就是它可信的理由 —— 所以 `name` 必须如实描述点开落在哪儿，\n不许承诺 `url` 打不开的东西（真 bug：名字写《…观看指南》、url 写站点根）。"
+      },
+      "RealtimeFact": {
+        "properties": {
+          "chunk_id": {
+            "type": "string",
+            "title": "Chunk Id"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source",
+            "default": ""
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "effective_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Effective Date"
+          },
+          "fresh_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fresh Until"
+          }
+        },
+        "type": "object",
+        "required": [
+          "chunk_id",
+          "text"
+        ],
+        "title": "RealtimeFact",
+        "description": "一条**没过有效期**的实时事实。\n\n与 `Citation` 分开：引用只需要能对回原文（key + 来源 + 链接），而事实问询的答复\n必须把正文摆给用户看 —— 「查到了一条 06:06 的记录」这种回答等于没回答。"
+      },
+      "RealtimeResponse": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "realtime",
+            "title": "Type",
+            "default": "realtime"
+          },
+          "info_type": {
+            "type": "string",
+            "title": "Info Type"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "place": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Place"
+          },
+          "message_echo": {
+            "type": "string",
+            "title": "Message Echo",
+            "default": ""
+          },
+          "question_zh": {
+            "type": "string",
+            "title": "Question Zh",
+            "default": ""
+          },
+          "found": {
+            "items": {
+              "$ref": "#/components/schemas/RealtimeFact"
+            },
+            "type": "array",
+            "title": "Found"
+          },
+          "expired_dropped": {
+            "type": "integer",
+            "title": "Expired Dropped",
+            "default": 0
+          },
+          "channels": {
+            "items": {
+              "$ref": "#/components/schemas/RealtimeChannel"
+            },
+            "type": "array",
+            "title": "Channels"
+          },
+          "unverified": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Unverified"
+          },
+          "note": {
+            "type": "string",
+            "title": "Note",
+            "default": ""
+          },
+          "plan_hint": {
+            "type": "string",
+            "title": "Plan Hint",
+            "default": ""
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer",
+            "default": ""
+          },
+          "next_questions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Next Questions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "info_type",
+          "label",
+          "subject"
+        ],
+        "title": "RealtimeResponse",
+        "description": "实时事实问询的响应。**不是**行程：没有 itinerary、没有预算、没有槽位追问。\n\n存在的理由：「天安门什么时候升旗」曾被行程链路的槽位体检拦下，回了一句\n「想去的城市或国家是哪里？玩几天？预算多少？一行几个人？」—— 四问全错。\n问事实只需要三件事：问的是什么、知识库里有没有没过期的答案、该去哪查。"
+      },
+      "RouteConfig": {
+        "properties": {
+          "route_id": {
+            "type": "string",
+            "title": "Route Id"
+          },
+          "scenes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Scenes"
+          },
+          "fusion_policy": {
+            "type": "string",
+            "enum": [
+              "weighted_union",
+              "priority_override"
+            ],
+            "title": "Fusion Policy"
+          },
+          "prompt_refs": {
+            "$ref": "#/components/schemas/PromptRefs"
+          },
+          "knowledge_scopes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Knowledge Scopes"
+          },
+          "tool_allowlist": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Tool Allowlist"
+          },
+          "output_schema_id": {
+            "type": "string",
+            "title": "Output Schema Id"
+          },
+          "guardrail_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Guardrail Ids"
+          },
+          "planner_mode": {
+            "type": "string",
+            "const": "plan_execute",
+            "title": "Planner Mode",
+            "default": "plan_execute"
+          },
+          "max_repair_rounds": {
+            "type": "integer",
+            "title": "Max Repair Rounds",
+            "default": 1
+          },
+          "version_pin": {
+            "type": "string",
+            "title": "Version Pin"
+          },
+          "output_language": {
+            "type": "string",
+            "title": "Output Language",
+            "default": "zh"
+          }
+        },
+        "type": "object",
+        "required": [
+          "route_id",
+          "scenes",
+          "fusion_policy",
+          "prompt_refs",
+          "knowledge_scopes",
+          "tool_allowlist",
+          "output_schema_id",
+          "guardrail_ids",
+          "version_pin"
+        ],
+        "title": "RouteConfig"
+      },
+      "ValidationCheck": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "warn",
+              "repair",
+              "block"
+            ],
+            "title": "Status"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "none",
+              "warn",
+              "repair",
+              "block"
+            ],
+            "title": "Severity"
+          },
+          "findings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Findings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "status",
+          "severity"
+        ],
+        "title": "ValidationCheck"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "ValidationReport": {
+        "properties": {
+          "passed": {
+            "type": "boolean",
+            "title": "Passed"
+          },
+          "round": {
+            "type": "integer",
+            "title": "Round",
+            "default": 0
+          },
+          "checks": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationCheck"
+            },
+            "type": "array",
+            "title": "Checks"
+          },
+          "repair_actions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Repair Actions"
+          },
+          "unresolved": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Unresolved"
+          },
+          "citations_verified": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Citations Verified"
+          },
+          "degraded": {
+            "type": "boolean",
+            "title": "Degraded",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "passed"
+        ],
+        "title": "ValidationReport"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8000",
+      "description": "本地开发（只监听 127.0.0.1）"
+    }
+  ]
+}

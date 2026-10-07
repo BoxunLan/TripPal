@@ -13,7 +13,7 @@
 ## 为什么需要它们
 
 TripPal 的 12 个场景是按「外国人来华的决策时点」手工切的，每个都自带
-**触发时点 / 用户目标 / 成功判据 / 卡点编号**（见 `research/pain_points.md` §6）。
+**触发时点 / 用户目标 / 成功判据 / 卡点编号**（见 `TripPal-main/research/pain_points.md` §6）。
 v1 的 `scenario` 只装得下 `pool / query_cluster / evidence_record_ids`，
 这些策展字段没有正式位置。同样，好些场景（移动支付开通、景区抢票、语言支持）
 的重心不是「查一个事实」也不是「判一个条件」，而是**产出一份可照着做的清单/步骤**，

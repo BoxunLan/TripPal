@@ -491,7 +491,7 @@ def import_trippal(
     scenarios_doc = {
         "schema_version": SCENARIOS_SCHEMA,
         "source": {
-            "corpus": "research",
+            "corpus": "TripPal-main/research",
             "pain_points_sha256": sha256_file(pain),
             "se_questions_sha256": sha256_file(seq),
             "trends_summary_sha256": sha256_file(trends_md),
