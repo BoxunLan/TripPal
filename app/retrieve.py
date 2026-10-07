@@ -103,8 +103,15 @@ def retrieve_context(
     fresh: list[tuple[float, Chunk]] = []
     for item in rows:
         chunk = item.chunk
-        # 超过 fresh_until 的 realtime 文档直接丢弃，不参与排序
-        if chunk.layer == "realtime" and chunk.fresh_until and chunk.fresh_until < today:
+        # 超过 fresh_until 的条目**一律丢弃**，不参与排序，也不进上下文。
+        #
+        # 原来只拦 layer=="realtime"，理由是「常识条目不随日期变」。但那是错的：
+        # general / scene 层里同样有**会过期**的内容 —— 门票价、开放时间、预约规则、
+        # 车次与价格带。这些条目过期后照样被召回，等于拿去年（或更早）的价签答今天的
+        # 问题，而用户看不出它已经过期。宁可这一条不进上下文（generate 会退化成
+        # 「待核实」），也不要给一个看起来确定、实际陈旧的值。
+        # 丢弃条数记进 dropped_stale，便于在响应/日志里看见闸门真的在工作。
+        if chunk.fresh_until and chunk.fresh_until < today:
             dropped_stale += 1
             continue
         fresh.append((item.score, chunk))

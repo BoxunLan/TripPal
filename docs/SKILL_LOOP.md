@@ -139,7 +139,8 @@ evals/runs/<task_id>/<run_n>/
 | 4 | 以上都不是 | 题面有歧义 / 期望终态定义不清 / 判分本身不稳 | **任务有病** | **退回出题 agent 重出题**；这条轨迹作废，不计入统计 | ✗ |
 
 **本项目当前的先验**（跑完 S1 会用真实数据替换掉）：
-`seed/` 只覆盖 **清迈 / 厦门 / 北京** 等少数场景 + **外国人来华政策**（128 条），
+`seed/` 共 **170 条**，目的地集中在 **中国（厦门 / 成都 / 大理 / 青岛 / 云南 / 四川）/ 泰国清迈 / 北京 / 上海**，
+另有美国 / 新西兰 / 澳大利亚 / 申根区等路线与签证场景，以及**外国人来华政策**；
 其余目的地只有 general 层垫底（出境日本内容已于 2026-10-05 整块移除）。
 所以「鼓浪屿今天开放吗」「西湖有多大」这类问题，**大概率落在第 1 行（数据缺）**，
 而不是第 2 行。**先归因再写 skill**，否则第一版 skill 会满是治不了病的规则。
@@ -158,8 +159,8 @@ evals/runs/<task_id>/<run_n>/
 | ④ 判分 | **`app/validate.py`** —— 三项校验 + `severity`（配置上限）与 `status`（本次结果）分离 | 把 `ValidationCheck` 变成**断言**。这是本项目最省力的一环：判分器基本不用新写 |
 | ④ 归因 | 无 | §5 的判定表 + 脚本 |
 | ⑤ 写 skill | `.workbuddy/skills/travel-scene-planner/` + `prompts/*.md` 叠加层 | 剪枝机制、模块数上限（≤3） |
-| ⑥ 复跑 | `tests/` **176 条**（`pytest` 全绿）—— 现成的回归门载体 | 任务级 held-out 划分 |
-| — | `app/realtime.py` / `app/knowledge.py` 两条旁路 —— **本项目已有的「用确定性约束幻觉」实践**，正是 skill 里最该沉淀的那类知识 | — |
+| ⑥ 复跑 | `tests/` **532 条**（`pytest` 全绿）—— 现成的回归门载体 | 任务级 held-out 划分 |
+| — | `app/realtime.py` / `app/knowledge.py` / `app/guide.py` 三条旁路 —— **本项目已有的「用确定性约束幻觉」实践**，正是 skill 里最该沉淀的那类知识 | — |
 
 **注意**：本项目的「skill」事实上就是 `prompts/base.md` + 场景叠加层（`family/budget/roadtrip/visa/safety`）
 + `.workbuddy/skills/travel-scene-planner/`。所以这个环在本项目里落地，

@@ -210,6 +210,116 @@ def resolve_destinations(
     return (country, country, names, surface)
 
 
+# ---------------------------------------------------------------- 用户来源国（国籍）
+# 产品主题是「外国人来华」——「你从哪来」决定了解释的**参照系**，不是要去的地方。
+# 与 `destination_country`（办哪国签证）正交：前者描述**用户**，后者描述**行程**；
+# 「我是德国人，第一次来中国怎么点菜」里，德国是来源国、中国才是目的地。
+#
+# 有了它，模型才做得了**中外类比/对比**（「你在德国习惯的……在中国是……」）；
+# 没有它，只能给一套放之四海的通用说明 —— 对外国游客等于没说。
+#
+# 抽取策略：**只认「我是/来自/from」这类明确的身份措辞**，裸国名不认。
+# 「北京离上海多远」里的地名、以及目的地国名，绝不能被读成来源国。
+_NATIONALITY_FORMS: dict[str, tuple[str, ...]] = {
+    "美国": ("美国", "美利坚", "美籍", "america", "american", "americans", "usa", "us", "united"),
+    "英国": ("英国", "英籍", "britain", "british", "uk", "england", "english"),
+    "加拿大": ("加拿大", "canada", "canadian"),
+    "澳大利亚": ("澳大利亚", "澳洲", "australia", "australian", "aussie"),
+    "新西兰": ("新西兰", "newzealand", "zealander", "kiwi"),
+    "德国": ("德国", "德籍", "germany", "german", "germans"),
+    "法国": ("法国", "法籍", "france", "french"),
+    "意大利": ("意大利", "italy", "italian"),
+    "西班牙": ("西班牙", "spain", "spanish"),
+    "葡萄牙": ("葡萄牙", "portugal", "portuguese"),
+    "荷兰": ("荷兰", "netherlands", "holland", "dutch"),
+    "比利时": ("比利时", "belgium", "belgian"),
+    "瑞士": ("瑞士", "switzerland", "swiss"),
+    "奥地利": ("奥地利", "austria", "austrian"),
+    "瑞典": ("瑞典", "sweden", "swedish"),
+    "挪威": ("挪威", "norway", "norwegian"),
+    "丹麦": ("丹麦", "denmark", "danish"),
+    "芬兰": ("芬兰", "finland", "finnish"),
+    "爱尔兰": ("爱尔兰", "ireland", "irish"),
+    "波兰": ("波兰", "poland", "polish"),
+    "希腊": ("希腊", "greece", "greek"),
+    "俄罗斯": ("俄罗斯", "俄国", "russia", "russian"),
+    "日本": ("日本", "日籍", "japan", "japanese"),
+    "韩国": ("韩国", "韩籍", "korea", "korean", "koreans"),
+    "新加坡": ("新加坡", "singapore", "singaporean"),
+    "马来西亚": ("马来西亚", "malaysia", "malaysian"),
+    "泰国": ("泰国", "thailand", "thai"),
+    "越南": ("越南", "vietnam", "vietnamese"),
+    "印度尼西亚": ("印度尼西亚", "印尼", "indonesia", "indonesian"),
+    "菲律宾": ("菲律宾", "philippines", "filipino"),
+    "印度": ("印度", "india", "indian"),
+    "巴西": ("巴西", "brazil", "brazilian"),
+    "墨西哥": ("墨西哥", "mexico", "mexican"),
+    "阿根廷": ("阿根廷", "argentina", "argentinian"),
+    "南非": ("南非", "southafrica", "south africa"),
+    "埃及": ("埃及", "egypt", "egyptian"),
+    "土耳其": ("土耳其", "turkey", "turkish"),
+    "以色列": ("以色列", "israel", "israeli"),
+    "阿联酋": ("阿联酋", "uae", "emirati"),
+    "沙特阿拉伯": ("沙特阿拉伯", "沙特", "saudi"),
+}
+
+# 身份措辞。中文侧用**惰性**量词：连写的「我是美国人想去北京」也要切出「美国」，
+# 贪婪会把「美国人想去北京」整段吃进去，一个都对不上。
+_NATIONALITY_CUE_RE = re.compile(
+    r"(?:我是|我来自|来自|我从|身为)\s*([\u4e00-\u9fa5]{2,8}?)"
+    r"|(?:i(?:'m| am)|we(?:'re| are))\s+(?:from\s+)?(?:the\s+)?([A-Za-z]{2,20})"
+    r"|\bfrom\s+(?:the\s+)?([A-Za-z]{2,20})"
+    r"|\bas an?\s+([A-Za-z]{2,20})",
+    re.IGNORECASE,
+)
+_NATIONALITY_STRIP = ("from", "a", "an", "the", "am", "is")
+
+
+def _match_nationality(token: str) -> str | None:
+    t = token.strip().lower()
+    for pre in _NATIONALITY_STRIP:
+        if t.startswith(pre + " "):
+            t = t[len(pre) + 1 :]
+    if not t:
+        return None
+    for zh, forms in _NATIONALITY_FORMS.items():
+        for f in forms:
+            ff = f.lower()
+            if t == ff or t in {ff + "人", ff + "国人", ff + "籍"}:
+                return zh
+    return None
+
+
+def _extract_nationality(message: str) -> str | None:
+    """用户来源国。抽不到就返回 None（**不猜** —— 猜错会让类比全部跑偏）。"""
+    if not message:
+        return None
+    for m in _NATIONALITY_CUE_RE.finditer(message):
+        token = (m.group(1) or m.group(2) or m.group(3) or m.group(4) or "").strip()
+        if not token:
+            continue
+        hit = _match_nationality(token)
+        if hit:
+            return hit
+    return None
+
+
+def _match_nationality_loose(text: str) -> str | None:
+    """表单/直填通道用：用户**明确写了**国家，允许子串匹配（「United States」→ 美国）。
+
+    与 `_extract_nationality` 的严格口径分开是有意的：从自由句子里猜要保守
+    （错一个国名，整篇类比都跑偏），而表单是用户亲手填的、意图明确。
+    """
+    t = (text or "").strip().lower()
+    if not t:
+        return None
+    for zh, forms in _NATIONALITY_FORMS.items():
+        for f in forms:
+            if f.lower() in t:
+                return zh
+    return None
+
+
 # ---------------------------------------------------------------- 各槽位抽取
 def _extract_date_range(message: str, patterns: list[str]) -> tuple[int | None, str | None, str | None]:
     """返回 (天数, date_range 文本, 出发日期)。"""
@@ -953,6 +1063,12 @@ def extract_slots(message: str, settings: Settings) -> dict[str, Any]:
     if dest_surface:
         slots["destination_surface"] = dest_surface
 
+    # 用户来源国（与目的地国正交）。抽到就落槽位，随 {{slots_json}} 进生成提示词，
+    # 供模型做中外类比；抽不到就不写，免得把「没识别」伪装成「已知」。
+    nationality = _extract_nationality(message)
+    if nationality:
+        slots["nationality"] = nationality
+
     # 多目的地（「北京玩三天再去上海玩两天」）：`destination` 仍是首站（排程、检索以它为主），
     # 其余站点进 `multi_city` —— 不记的话第二段整段蒸发（真 bug 2026-10-06 M6）。
     multi = _extract_multi_city(message, names)
@@ -1100,6 +1216,14 @@ def slots_from_form(raw: dict[str, Any], settings: Settings) -> dict[str, Any]:
         if names:
             out["destination_aliases"] = names
         out["destination_surface"] = surface or dest
+
+    # 用户来源国（与 destination 正交：一个描述用户、一个描述行程）。
+    # 表单里用户是**明确写的国家**，所以用宽松匹配（"United States" → 美国）；
+    # 表里没有的写法也照收，交给生成提示词去做类比 —— 丢掉的代价是「类比全没了」。
+    nat = str(raw.get("nationality") or raw.get("home_country") or "").strip()
+    if nat:
+        out["nationality"] = _match_nationality_loose(nat) or nat
+        out["nationality_surface"] = nat
 
     days = _as_count(raw.get("days"))
     if days:

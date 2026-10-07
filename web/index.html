@@ -280,8 +280,12 @@ ul.plain li{margin:5px 0;line-height:1.75}
 .chip{font-family:ui-monospace,Consolas,monospace;font-size:11.5px;background:var(--bg-sunk);
   border:1px solid var(--line);border-radius:6px;padding:1px 7px;color:var(--mut);cursor:default}
 .chip.tool{color:var(--tool);border-color:#d8ccfb;background:var(--tool-soft)}
-a.chip{cursor:pointer;text-decoration:none}
-a.chip:hover{color:var(--acc);border-color:var(--acc-line)}
+/* 可点与不可点必须一眼分得开：有官方入口的用强调色 + 外链箭头，
+   没有入口的（编辑整理条目）虚线下边框并压暗 —— 「点不了」是事实，别让它看起来像坏了。 */
+a.chip{cursor:pointer;text-decoration:none;color:var(--acc);border-color:var(--acc-line);background:var(--acc-soft)}
+a.chip:hover{color:var(--acc-ink,var(--acc));border-color:var(--acc);text-decoration:underline}
+a.chip::after{content:"\2197";font-size:10px;opacity:.65;margin-left:3px}
+.chip.nolink{color:var(--dim);border-style:dashed}
 .legend{color:var(--dim);font-size:11.5px;margin-top:7px}
 
 table.v{width:100%;border-collapse:collapse;font-size:12.5px}
@@ -394,6 +398,7 @@ table.v th{background:var(--bg-sunk);color:var(--mut);font-weight:500;white-spac
           <label class="ff">目的地 <input type="text" id="f-dest" placeholder="厦门"></label>
           <label class="ff">玩几天 <input type="number" id="f-days" min="1" max="60" placeholder="5"></label>
           <label class="ff">预算（元）<input type="number" id="f-budget" min="0" placeholder="8000"></label>
+          <label class="ff">来自（国家）<input type="text" id="f-nationality" placeholder="德国"></label>
         </div>
         <div class="fgrid">
           <label class="ff">成人 <input type="number" id="f-adults" min="0" max="30" placeholder="1"></label>
@@ -404,6 +409,7 @@ table.v th{background:var(--bg-sunk);color:var(--mut);font-weight:500;white-spac
         <div class="fnote">
           同行人四项<b>全留空 = 没填</b>（不会被当成「已知 2 人」）；填任意一项就按「成人+儿童+长者」合计。
           同一句里<b>自己又说了</b>的，以你说的为准 —— 表单只是保底。
+          <b>来自（国家）</b>填了就按你的国家做中外类比解释，不填就给通用说明（不会被追问）。
         </div>
       </div>
 
@@ -528,15 +534,33 @@ function statusPill(s) {
   const txt = {pass:"通过", warn:"警告", repair:"需回炉", block:"阻断"}[s] || s;
   return `<span class="pill ${cls}">${esc(txt)}</span>`;
 }
+/* 引用区统一的说明文案 —— 用户看到「有的能点、有的点不动」时必须有个解释。 */
+const LINK_LEGEND = "带 ↗ 的可点开**官方核实入口**（官方站点，不是知识库原文）；虚线的为知识库**编辑整理**条目，没有单一官方入口可点。hover 看来源与有效期。";
+
+/* 引用 chip。三种输入形态都要吃得下：`source_url`（Citation/KnowledgeHit 的字段名）、
+   `url`（实时卡/常识卡手写映射时用的键）、以及只有 `citation_key` 的活动内引用。
+   真 bug（本轮修）：行程卡的 citations 带的是 `source_url`，而这里只读 `c.url` ——
+   于是**行程里所有引用 chip 都点不动**（实时卡与常识卡恰好手写了 `url`，才显得正常）。
+
+   两种状态必须看得出区别：
+   ① 有官方入口 → 强调色 + 外链箭头，文字用「来源」而不是编号（编号对用户没有意义）；
+   ② 编辑整理、没有单一官方入口 → 压暗虚线，title 里明说「无官方入口可点」。
+   把不可点的那一类讲明白，比让用户点一下没反应要好。 */
 function chip(c) {
   const t = c.origin === "tool" ? " tool" : "";
-  const title = [c.source, c.effective_date ? "生效日 " + c.effective_date : ""].filter(Boolean).join(" · ");
-  // 有原文链接就必须可点：只给一个编号，用户没法自己核对 ——
-  // 「来源」两个字的前提是能打开。
-  if (c.url) {
-    return `<a class="chip${t}" href="${esc(c.url)}" target="_blank" rel="noreferrer" title="${esc(title)}">${esc(c.citation_key)}</a>`;
+  const url = c.url || c.source_url;
+  const label = c.source || c.citation_key || "";
+  const parts = [];
+  if (c.source) parts.push(c.source);
+  if (c.citation_key) parts.push("凭据 " + c.citation_key);
+  if (c.effective_date) parts.push("生效日 " + c.effective_date);
+  if (c.fresh_until) parts.push("有效期至 " + c.fresh_until);
+  if (url) {
+    parts.push("点击打开官方核实入口");
+    return `<a class="chip${t}" href="${esc(url)}" target="_blank" rel="noreferrer" title="${esc(parts.join(" · "))}">${esc(label)}</a>`;
   }
-  return `<span class="chip${t}" title="${esc(title)}">${esc(c.citation_key)}</span>`;
+  parts.push("本条为知识库编辑整理，无官方入口可点");
+  return `<span class="chip${t} nolink" title="${esc(parts.join(" · "))}">${esc(label)}</span>`;
 }
 
 /* ---------------- 渲染 ---------------- */
@@ -554,9 +578,10 @@ function renderStats(it, v, cites) {
   </div>`;
 }
 
-function renderDays(it) {
+function renderDays(it, citeIndex) {
   const days = it.days || [];
   if (!days.length) return "";
+  const idx = citeIndex || {};
   return `<h3>逐日行程</h3>` + days.map(d => `
     <div class="day">
       <div class="dhead">
@@ -569,7 +594,9 @@ function renderDays(it) {
         <div class="act">
           <div class="t mono">${esc(a.time)}</div>
           <div>
-            <div class="n">${esc(a.name)} ${a.citation_key ? chip({citation_key:a.citation_key, origin:"knowledge_base"}) : ""}</div>
+            <div class="n">${esc(a.name)} ${a.citation_key
+              ? chip(Object.assign({origin: "knowledge_base"}, idx[a.citation_key] || {}, {citation_key: a.citation_key}))
+              : ""}</div>
             ${a.detail ? `<div class="d">${esc(a.detail)}</div>` : ""}
             ${a.cost !== null && a.cost !== undefined ? `<div class="c">单人约 ${money(a.cost)}</div>` : ""}
           </div>
@@ -630,6 +657,10 @@ function renderPlan(body, ms) {
   const cites = body.citations || [];
   const cl = body.checklist || [];
   const sug = body.suggestions || [];
+  // 活动里的 citation_key 只有编号，要拿它换出「来源 + 官方入口」就得先有一张索引。
+  // 没有这张索引，逐日活动上的引用一律是不可点的编号。
+  const citeIndex = {};
+  cites.forEach(c => { if (c.citation_key) citeIndex[c.citation_key] = c; });
   return `<article class="card">
     <div class="chead">
       <h2>${esc(it.title)}${it.destination ? ` <span class="th">· ${esc(it.destination)}</span>` : ""}</h2>
@@ -638,13 +669,13 @@ function renderPlan(body, ms) {
     </div>
     ${renderStats(it, v, cites)}
     <div class="body">
-      ${renderDays(it)}
+      ${renderDays(it, citeIndex)}
       ${renderBudget(it.budget)}
       ${cl.length ? `<h3>行前清单</h3><ul class="plain">${cl.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
       ${sug.length ? `<h3>建议</h3><ul class="plain">${sug.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
       ${(it.notes || []).length ? `<h3>备注</h3><ul class="plain">${it.notes.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
       ${cites.length ? `<h3>引用（${cites.length} 条）</h3><div class="cites">${cites.map(chip).join("")}</div>
-        <div class="legend">紫色 = 工具凭据（工具返回的逐条事实），其余 = 资料库片段；hover 看来源标题。</div>` : ""}
+        <div class="legend">${LINK_LEGEND}</div>` : ""}
       ${(it.disclaimers || []).length ? `<h3>免责声明</h3><ul class="plain">${it.disclaimers.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
       ${renderNextQs(body)}
       ${renderValidation(v)}
@@ -769,7 +800,8 @@ function renderAnswer(body, ms) {
         <ul class="plain">${hits.map((h) => `<li>${esc(h.text)}
           <div class="cites" style="margin-top:5px">${chip({
             citation_key: h.chunk_id, source: h.source, url: h.source_url,
-          })}</div></li>`).join("")}</ul>` : ""}
+          })}</div></li>`).join("")}</ul>
+        <div class="legend">${LINK_LEGEND}</div>` : ""}
       <h3>其他</h3>
       <p class="aid">${esc(body.plan_hint || "")}</p>
       <p class="aid">${esc(body.disclaimer || "")}</p>
@@ -987,6 +1019,7 @@ const FORM_FIELDS = [
   ["f-dest", "destination", "text"],
   ["f-days", "days", "number"],
   ["f-budget", "budget", "number"],
+  ["f-nationality", "nationality", "text"],
   ["f-adults", "adults", "number"],
   ["f-children", "children", "number"],
   ["f-childage", "child_age", "number"],
@@ -1023,6 +1056,7 @@ function syncFormFromSlots(slots) {
   put("f-dest", slots.destination_surface || slots.destination);
   put("f-days", slots.days);
   put("f-budget", slots.budget);
+  put("f-nationality", slots.nationality_surface || slots.nationality);
   if (slots.party_size && !String($("f-adults").value || "").trim()
       && !String($("f-children").value || "").trim()
       && !String($("f-elders").value || "").trim()) {

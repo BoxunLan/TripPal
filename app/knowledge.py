@@ -1160,6 +1160,103 @@ def search_knowledge(
 
 
 # ------------------------------------------------------------------ 模型作答
+#
+# ------------------------------------------------- 话题类型：文化 / 饮食（决定类比力度）
+#
+# 为什么这个判定要放在代码里，而不是交给模型自判：类比是**可选补充**，模型在把握不足时
+# 会倾向于省掉它（少写一句最省事）—— 而「中国的小费怎么给」「川菜是不是都很辣」恰恰是
+# 最该类比的问句。给一个显式信号（写进提示词的第 5 条规则 `{{analogy_rule}}`），它才不会闭嘴。
+#
+# 判据是**词面**的，与这一层其余部分一致：不调模型、同一句话两次跑必得同一结论。
+# 刻意判宽：命中的代价只是「多问一句要不要类比」，判漏的代价才是「该类比的话题一个字没提」。
+_CULTURE_FOOD_ZH = (
+    # 饮食
+    "吃", "菜", "美食", "餐厅", "饭店", "馆子", "小吃", "点菜", "菜单", "筷子", "餐具",
+    "口味", "忌口", "素食", "清真", "小费", "早餐", "午餐", "晚餐", "夜宵",
+    "喝茶", "茶叶", "白酒", "敬酒", "酒桌", "火锅", "烧烤",
+    # 文化 / 礼仪 / 习俗
+    "文化", "礼仪", "礼节", "习俗", "风俗", "习惯", "传统",
+    "节日", "春节", "中秋", "端午", "红包", "送礼", "礼物", "忌讳", "禁忌",
+    "寺庙", "宗教", "信仰", "排队", "让座",
+)
+_CULTURE_FOOD_EN = (
+    "food", "foods", "dish", "dishes", "cuisine", "restaurant", "restaurants",
+    "eat", "eating", "meal", "meals", "menu", "chopsticks", "spicy", "flavor", "flavour",
+    "vegetarian", "vegan", "halal", "pork", "beef", "seafood",
+    "tip", "tips", "tipping", "gratuity",
+    "culture", "cultural", "etiquette", "custom", "customs", "tradition", "traditional",
+    "festival", "festivals", "religion", "religious", "temple", "temples", "gift", "gifts",
+    "taboo", "queue", "queuing", "queueing", "manners", "habit", "habits",
+)
+# 日文 / 韩文：这一层是多语言的（答案跟输出语言），日韩问句同样要能触发类比。
+_CULTURE_FOOD_CJK = (
+    "食べ", "料理", "文化", "習慣", "マナー", "チップ", "箸", "礼儀", "祭り",
+    "음식", "문화", "예절", "팁", "젓가락", "명절",
+)
+
+
+def culture_food_topic(message: str, subject: str = "") -> bool:
+    """这一问是不是「文化 / 饮食 / 生活习俗」类 —— 是的话类比要更主动（见 answer.md 规则 5）。
+
+    中文按子串（「川菜」「点菜」都含「菜」），拉丁词按**整词**（避免 `eat` 命中 `great`，
+    与 `_term_count` 同一套判据），日韩按子串。
+    """
+    text = f"{message or ''} {subject or ''}"
+    if not text.strip():
+        return False
+    if any(w in text for w in _CULTURE_FOOD_ZH) or any(w in text for w in _CULTURE_FOOD_CJK):
+        return True
+    low = text.lower()
+    return any(_latin_term_re(w).search(low) for w in _CULTURE_FOOD_EN)
+
+
+def _render_nationality_block(nationality: str) -> str:
+    """提示词里的「游客来源国」一行。
+
+    空串的含义是「**不知道**」，不是「没有这个国家」—— 所以文案要明确禁止类比，
+    否则模型会自己补一个来源国（真 bug 教训：猜错来源国，整篇类比全跑偏）。
+    值可能来自表单的自由输入，先压成一个短词再写进提示词。
+    """
+    name = re.sub(r"\s+", " ", str(nationality or "")).strip()[:24]
+    if not name:
+        return "（未知 —— 这一问**不要**做中外类比，也不要写「如果你是 X 国人…」这类假想句式。）"
+    return f"{name} —— 用户是来自{name}的游客，可按它做中外类比（见硬性规则 5）。"
+
+
+def _render_analogy_rule(nationality: str, message: str, subject: str) -> str:
+    """提示词里第 5 条规则（中外类比）的**整条正文**。
+
+    ⚠️ 来源国未知时**整条换成禁令**，而不是「保留一段类比教程、末尾加一句禁止」——
+    提示词里只要存在那段教程，模型就会去用。实测（2026-10-07 真模型）：来源国未知时，
+    它照样写「与你在**欧美国家**通常按 15%–20% 另付小费的习惯不同」，把猜出来的国家
+    当成了事实。规则的存在本身就是许可，所以未知时不能让它存在。
+    """
+    name = re.sub(r"\s+", " ", str(nationality or "")).strip()[:24]
+    if not name:
+        return (
+            "5. **本问不做中外类比**：来源国未知（用户没说过来自哪个国家）。"
+            "所以不要写「与你在 X 相比」「在你们国家」这类对比句 —— 那等于按猜出来的国家"
+            "作答，比不说更糟。只客观说明中国这边的情况即可。"
+        )
+    if culture_food_topic(message, subject):
+        strength = "这一问属于**文化 / 饮食 / 生活习俗类**，所以**必须**给出 1–2 处中外对比。"
+    else:
+        strength = "这一问属一般话题：有自然可比的点就给 1 处，没有不必硬凑。"
+    return (
+        f"5. **来源国已知（{name}），主动做中外类比**。外国旅客看不懂中国的「做法」，"
+        f"但看得懂「和自己国家比差在哪」。{strength}\n"
+        "   - 写法：「与你在 X 通常的 A 相比，中国多是 B」—— 点出**相同 / 不同**这一层关系即可。\n"
+        "     常有的可比点：小费给不给、几点吃晚饭、排队要不要预约、能不能刷本地卡、\n"
+        "     自来水直不直饮、室内能不能抽烟、进寺观要不要脱鞋、送礼收不收。\n"
+        "   - **类比的素材可以来自你的常识，不必来自知识库**。类比讲的是「同 / 不同」这层关系，\n"
+        "     不是精确事实 —— 所以知识库里没有对应条目时**照样做类比**。这与规则 6 不冲突：\n"
+        "     规则 6 管的是「拿同主题材料冒充答案」，不是禁止你自己做类比。\n"
+        "   - 但**绝不编造对方国家的具体数字、法规、价格或政策**。涉及对方国家的细节只写到\n"
+        "     「框架」这一层；把握不足就写「和你国内的习惯可能不同，按这里的来」。\n"
+        "   - **由类比带出的数字仍然是数字**，仍受规则 3 约束：把握不住就不要写。"
+    )
+
+
 def _render_hits_block(hits: list[Chunk]) -> str:
     if not hits:
         return "（知识库里没有与主体相关的条目。）"
@@ -1178,6 +1275,7 @@ def build_answer_prompt(
     message: str = "",
     context: str = "",
     language: str = DEFAULT,
+    nationality: str = "",
 ) -> str:
     """装配提示词。**先填 schema 与语言段，再填用户内容** ——
 
@@ -1186,6 +1284,9 @@ def build_answer_prompt(
 
     `context` 是**指代解析结果**（「这一句里的『那里』指上一轮说的『上海临港』」）——
     它和 `message` 一样是用户侧内容，所以也排在最后替换。
+
+    `nationality` 是**游客来源国**（会话槽位里的 `nationality`，与 `destination_country`
+    正交）。它决定提示词有没有资格做中外类比 —— 空串 = 不知道 = 明确禁止类比。
     """
     tmpl = load_prompt(settings.prompt_paths.get("answer", "prompts/answer.md"))
     schema = json.dumps(AnswerDraft.model_json_schema(), ensure_ascii=False, indent=2)
@@ -1196,6 +1297,9 @@ def build_answer_prompt(
         .replace("{{subject}}", intent.subject or "")
         .replace("{{context}}", context or NO_CONTEXT)
         .replace("{{message}}", message or "")
+        # 这两个的值里可能带用户输入（来源国是表单自由文本），所以与用户内容一起放在最后。
+        .replace("{{nationality_block}}", _render_nationality_block(nationality))
+        .replace("{{analogy_rule}}", _render_analogy_rule(nationality, message, intent.subject or ""))
     )
 
 
@@ -1208,6 +1312,7 @@ def answer_question(
     message: str = "",
     context: str = "",
     language: str = DEFAULT,
+    nationality: str = "",
 ) -> AnswerDraft:
     """用通用常识作答。**失败不抛异常**，返回空 draft。
 
@@ -1227,6 +1332,7 @@ def answer_question(
                 message=message,
                 context=context,
                 language=language,
+                nationality=nationality,
             ),
             schema=AnswerDraft.model_json_schema(),
             context={
@@ -1235,6 +1341,7 @@ def answer_question(
                 "question": message,
                 "referent": context,
                 "language": language,
+                "nationality": nationality,
                 "hits": [c.text for c in hits],
             },
         )

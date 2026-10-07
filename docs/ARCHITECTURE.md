@@ -13,37 +13,40 @@
 | **接入层** | FastAPI：`POST /plan`、`GET /health`、`GET /`（托管 `web/index.html`）、`GET /session/{id}`（会话快照）、`POST /plan/start` + `GET /plan/progress/{id}`、`POST /plan/stream`（NDJSON） | 页面走「起步 + 短轮询」拿进度；接口地址由 `resolveBase()` 自动探测，**不假设同源**（预览面板会把页面拷到随机端口） |
 | **编排层** | LangGraph 状态图，七个主干节点 + `realtime` / `knowledge` / `guide` 三条旁路 | 主干顺序不可改，有测试钉住（见 §3）；三条旁路都在 `clarify` 后短路 |
 | **能力层** | LLM（分类 `ecnu-plus` / 生成 `ecnu-max`，常识作答复用生成角色）、Embedding（1024 维）、向量库（memory / pgvector 双实现）、工具 ×3、校验 ×3 | 所有外部依赖经 `deps.py` 注入，测试整层换成假实现。**实时旁路不用模型也不用向量**；常识旁路不用向量、用一次模型（见下） |
-| **配置与数据层** | `routes.yaml`（11 节）、`seed/*.jsonl`（**128 条**，2026-10-05 起不再含出境日本内容）、`prompts/*.md`（8 份）、进程内会话（槽位 + 轮次轨迹 + 审计 JSONL） | 改 `routes.yaml` 要重启；改 `web/index.html` 不用 |
+| **配置与数据层** | `routes.yaml`（11 节）、`seed/*.jsonl`（**170 条**，2026-10-05 起不再含出境日本内容）、`prompts/*.md`（8 份）、进程内会话（槽位 + 轮次轨迹 + 审计 JSONL） | 改 `routes.yaml` 要重启；改 `web/index.html` 不用 |
 
 ---
 
 ## 2. 模块清单（`app/`）
 
+> 行数为 **2026-10-07** 快照（口径 = 编辑器行数）。改动代码后这一列会漂，以文件实际为准。
+
 | 文件 | 行 | 职责 |
 |---|---|---|
-| `main.py` | 386 | FastAPI 入口，装配依赖、注册路由；含八步进度通道（start + progress 轮询 / stream）与 `GET /session/{id}`（会话快照） |
-| `graph.py` | 665 | 七节点主干 + `realtime` / `knowledge` / `guide` 三条旁路，条件边；追问承接（`carry_over`）、方位指代（`locative_referent`）、**对话上下文装配 `carry_context`**（上一轮原话 + 答复）与审计落盘 |
-| `intent.py` | 701 | **意图闸门**：判断这条请求要的是行程、实时事实、静态常识还是寒暄（确定性，不调模型）；含追问承接守卫 `carry_over_subject`、方位指代解引用、**本句是否自带主体**的判据（`_is_degenerate_subject`：残片 / 骨架 / 占位名词 / 指代碎片）与主体切分的残片处理 |
+| `main.py` | 390 | FastAPI 入口，装配依赖、注册路由；含八步进度通道（start + progress 轮询 / stream）与 `GET /session/{id}`（会话快照） |
+| `graph.py` | 992 | 七节点主干 + `realtime` / `knowledge` / `guide` 三条旁路，条件边；追问承接（`carry_over`）、方位指代（`locative_referent`）、**对话上下文装配 `carry_context`**（上一轮原话 + 答复）、**常识旁路补写会话槽位**（来源国等）与审计落盘 |
+| `intent.py` | 974 | **意图闸门**：判断这条请求要的是行程、实时事实、静态常识还是寒暄（确定性，不调模型）；含追问承接守卫 `carry_over_subject`、方位指代解引用、**本句是否自带主体**的判据（`_is_degenerate_subject`：残片 / 骨架 / 占位名词 / 指代碎片）与主体切分的残片处理 |
 | `realtime.py` | 185 | 实时事实：扫实时层 + 相关性与时效两道闸门 + 答复装配（**不调模型**） |
-| `knowledge.py` | 729 | 常识问询：扫 scene/general + 地点作用域 + **按问句词面打分排序（IDF，实词先折「V不V」、摘是非问确认尾）** + **模型通用常识作答**（含指代与上一轮上下文 `{{context}}`）+ 复核入口；标题合成 `display_topic`；「沾主体」判定 `_related_keys` |
+| `knowledge.py` | 1464 | 常识问询：扫 scene/general + 地点作用域 + **按问句词面打分排序（IDF，实词先折「V不V」、摘是非问确认尾）** + **模型通用常识作答**（含指代与上一轮上下文 `{{context}}`）+ 复核入口；标题合成 `display_topic`；「沾主体」判定 `_related_keys`；**来源国类比**（`nationality`）与话题判定 `culture_food_topic` |
 | `guide.py` | 126 | 寒暄/元问题旁路：`compose_guide` 调一次模型；「刚才我说了什么」由历史确定性作答（recall） |
-| `slots.py` | 571 | **确定性**槽位抽取（目的地/天数/预算/同行人），不调模型 |
+| `followups.py` | 367 | 每轮后的「接着可以问」建议（`next_questions`），确定性生成 |
+| `slots.py` | 1687 | **确定性**槽位抽取（目的地/天数/预算/同行人/**用户来源国**），含表单直填通道 `slots_from_form`；不调模型 |
 | `classifier.py` | 122 | 场景分类节点（小模型） |
 | `router.py` | 97 | 置信度门控 + 多标签融合 → `RouteConfig` |
-| `retrieve.py` | 163 | 元数据预过滤 → 向量召回 → 按层配额截断 |
-| `generate.py` | 336 | Plan-and-Execute 产物组装 |
+| `retrieve.py` | 170 | 元数据预过滤 → **全层时效闸门**（`fresh_until` 过期即丢，计 `dropped_stale`）→ 向量召回 → 按层配额截断 |
+| `generate.py` | 412 | Plan-and-Execute 产物组装 |
 | `validate.py` | 409 | 并行三项校验 + 严重分级 |
-| `prompts.py` | 170 | 基座提示词 + 按优先级拼接叠加层 |
-| `schemas.py` | 448 | 全部 Pydantic 模型 |
+| `prompts.py` | 204 | 基座提示词 + 按优先级拼接叠加层 |
+| `schemas.py` | 461 | 全部 Pydantic 模型 |
 | `config.py` | 190 | 环境变量 + `routes.yaml` 唯一读取入口 |
 | `store.py` | 302 | 向量库：内存实现 / pgvector 实现 |
 | `embed.py` | 122 | Embedding：本地 hash / 真实 API，含分批 |
 | `llm.py` | 124 | LLM 访问层 |
 | `tools.py` | 216 | 工具白名单：`opening_hours` / `budget_sum` / `visa_policy` |
 | `pricing.py` | 68 | 费用折算口径，`fakes.py` 与 `validate.py` 共用 |
-| `i18n.py` | 599 | 语言判定 + 用户可见文案（含提示词的两个语言段生成器） |
+| `i18n.py` | 854 | 语言判定 + 用户可见文案（含提示词的两个语言段生成器） |
 | `fakes.py` | 348 | 离线假 LLM（`provider=fake`），测试用；含常识作答桩 |
-| `session.py` | 179 | 会话：槽位 + **轮次轨迹（`recent`）+ 最近事实主体/地点/实词**，`GET /session` 读它；审计落 `.workbuddy/audit/turns-*.jsonl`（进程内，重启即丢） |
+| `session.py` | 214 | 会话：槽位 + **轮次轨迹（`recent`）+ 最近事实主体/地点/实词**，`GET /session` 读它；审计落 `.workbuddy/audit/turns-*.jsonl`（进程内，重启即丢） |
 | `deps.py` | 55 | 依赖容器（含审计目录与 `SessionStore` 装配） |
 
 ---
@@ -57,7 +60,7 @@
 旁路  clarify → guide     → output      寒暄 / 元问题（你好、谢谢、刚才我说了什么）
 ```
 
-**两条旁路存在的理由**（改之前先读）：用户输入「天安门什么时候升旗」，主干把它当行程请求做槽位体检，
+**旁路存在的理由**（改之前先读）：用户输入「天安门什么时候升旗」，主干把它当行程请求做槽位体检，
 判为缺 `destination / date_range / budget / party`，于是回了「想去的城市或国家是哪里？计划玩几天？
 预算是多少？一行几个人？」—— 四个问题全问错了方向。事实问询不需要那四个槽位，
 只需要「问的是什么 + 知识库有没有答案 + 去哪查」。
@@ -309,7 +312,7 @@ general 必须带 `scene:*`：绝大多数目的地知识落在 scene 层（种�
 | `guardrails` | 4 条 guardrail 正文（中文是唯一真源，译文在 `i18n._GUARD`） |
 | `scenes` | 5 个场景的关键词（含日/韩/英） |
 | `intents` | **两道事实闸门**：`realtime_fact`（触发正则、允许的 `kind`、权威入口带覆盖地区）与 `knowledge_question`（触发正则、规划动词让路表、咨询兜底阈值、查询层、复核入口模板） |
-| `destinations` | 66 个目的地 + 多语言别名（含地标别名：天安门→北京、鼓浪屿→厦门、西湖→杭州） |
+| `destinations` | 68 个目的地 + 多语言别名（含地标别名：天安门→北京、鼓浪屿→厦门、西湖→杭州） |
 | `slot_extraction` | 日期/预算/同行人的四语言正则 |
 | `prompts` | 提示词路径 |
 

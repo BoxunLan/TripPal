@@ -18,6 +18,7 @@ from app.schemas import (
     Activity,
     BudgetLine,
     BudgetSummary,
+    Chunk,
     DayPlan,
     Itinerary,
     RetrievedChunk,
@@ -236,6 +237,52 @@ def test_stale_realtime_chunks_are_dropped(deps):
     for chunk in bundle.context.chunks:
         if chunk.layer == "realtime" and chunk.fresh_until:
             assert chunk.fresh_until >= FROZEN_TODAY
+
+
+def test_stale_chunk_of_any_layer_never_reaches_the_context(settings):
+    """时效闸门必须对**所有层**生效，不只是 realtime。
+
+    realtime 层最先被拦是因为政策会变；但 general / scene 层里同样有会过期的东西 ——
+    门票价、开放时间、预约规则。它们过期后被召回，等于拿旧价签答今天的问题，
+    而用户看不出它已经过期。这里用两条合成条目把闸门钉死：过期的走、没过期的留。
+    """
+    from datetime import date
+
+    from app.embed import HashingEmbedder
+    from app.store import InMemoryVectorStore
+
+    embedder = HashingEmbedder(settings.embedding.dim)
+    stale = Chunk(
+        chunk_id="gen-stale-x", layer="general", scene="general",
+        text="厦门科技馆门票 40 元，周一闭馆", source="过期价签",
+        fresh_until=date(2020, 1, 1),
+    )
+    fresh = Chunk(
+        chunk_id="gen-fresh-x", layer="general", scene="general",
+        text="厦门科技馆门票 40 元，周一闭馆", source="现行价签",
+        fresh_until=date(2030, 1, 1),
+    )
+    store = InMemoryVectorStore([stale, fresh], embedder)
+
+    classification = SceneClassificationResult(
+        request_id="r",
+        labels=[SceneLabel(scene_id="family", confidence=0.9)],
+        primary_scene="family",
+        slots={},
+        missing_slots=[],
+        rewritten_query="厦门科技馆 门票 开放时间",
+        classifier_version="t",
+    )
+    route = build_route(settings=settings, classification=classification)
+    bundle = retrieve_context(
+        settings=settings, store=store, embedder=embedder, route=route,
+        query="厦门科技馆 门票 开放时间", slots={}, today=FROZEN_TODAY,
+    )
+
+    ids = {c.chunk_id for c in bundle.context.chunks}
+    assert "gen-stale-x" not in ids, "过期的 general 条目不得进上下文"
+    assert "gen-fresh-x" in ids, "没过期的必须留下 —— 别把闸门做成一刀切的空白"
+    assert bundle.context.dropped_stale >= 1, "丢弃条数要记下来，否则闸门是静默的"
 
 
 def test_visa_route_raises_realtime_quota(deps):

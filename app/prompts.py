@@ -189,12 +189,16 @@ def build_classify_prompt(*, settings: Settings, message: str, session_slots: di
         "{\n"
         '  "labels": [{"scene_id": "...", "confidence": 0.0-1.0}],\n'
         '  "primary_scene": "置信度最高的 scene_id",\n'
-        '  "slots": {"destination": "...", "date_range": "...", "budget": 0, "party": "...", "destination_country": "..."},\n'
+        '  "slots": {"destination": "...", "date_range": "...", "budget": 0, "party": "...", "destination_country": "...", "nationality": "..."},\n'
         '  "missing_slots": ["关键槽位里仍然缺失的项"],\n'
         '  "clarify_question": "需要追问时的一句话，否则 null",\n'
         '  "rewritten_query": "把用户诉求改写成一句检索友好的中文查询"\n'
         "}\n"
         f"关键槽位定义：普通场景为 {settings.required_slots(settings.fallback_scene)}；"
         f"visa 场景为 {settings.required_slots('visa')}，且不强制 budget 与 date_range。\n"
+        "**destination_country 与 nationality 是两件事，不要混**："
+        "destination_country = 要去/要办签证的那个国家（通常是中国）；"
+        "nationality = **游客本人来自哪个国家**（「我是德国人」「I'm from France」）。"
+        "用户没明说来源国时，nationality 一律留空，**不要猜**。\n"
         "confidence 要给真实区分度，不要一律 0.9。"
     )

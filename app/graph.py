@@ -184,6 +184,24 @@ class PlanState(TypedDict, total=False):
     error: str
 
 
+def _visitor_nationality(state: PlanState, session_slots: dict[str, Any], settings) -> str:
+    """这一问的**游客来源国**：本句 > 会话历史（与槽位优先级一致）。
+
+    常识旁路不经过 `clarify_node`，`state["slots"]` 可能压根没被填过 —— 所以这里自己
+    抽一次本句（确定性正则，毫秒级）。抽不到返回空串，而空串在提示词里的含义是
+    **「不知道」→ 禁止类比**：宁可这一问没有类比，也不要按猜出来的国家比。
+    """
+    current = str((state.get("slots") or {}).get("nationality") or "").strip()
+    if current:
+        return current
+    extracted: dict[str, Any] = {}
+    try:
+        extracted = extract_slots(state.get("message") or "", settings) or {}
+    except Exception:
+        extracted = {}
+    return str(extracted.get("nationality") or session_slots.get("nationality") or "").strip()
+
+
 def build_graph(deps: Deps):
     settings = deps.settings
 
@@ -538,6 +556,13 @@ def build_graph(deps: Deps):
         # 用户明明刚说了上海。
         session_slots = getattr(session, "slots", None) or {}
         session_dest = str(session_slots.get("destination") or "").strip()
+        # 游客来源国：决定这一问要不要做中外类比（文化 / 饮食类问句尤其需要）。
+        nationality = _visitor_nationality(state, session_slots, settings)
+        # **记住它**：用户不会每一句都重报国籍。常识旁路不经过槽位合并（`clarify_node`），
+        # 所以「我是德国人，怎么点菜」说完就得在这里落库 —— 否则下一句「那要给小费吗」
+        # 又要用户重新自我介绍一遍，类比也跟着断掉。
+        if nationality and str(session_slots.get("nationality") or "").strip() != nationality:
+            deps.sessions.update_slots(state["session_id"], {"nationality": nationality})
         # 主体**自带地点**时以它为准（「上海有什么好玩的」→ 上海），不借用会话地点，
         # 免得会话在上海、问「西湖有多大」时被套上错误的作用域。
         scope_dest = "" if subject_place(settings, intent.subject) else session_dest
@@ -586,6 +611,7 @@ def build_graph(deps: Deps):
             message=state["message"],
             context=context,
             language=output_language(state),
+            nationality=nationality,
         )
         return {"knowledge_hits": hits, "knowledge_draft": draft, "knowledge_scope": scope_dest}
 
