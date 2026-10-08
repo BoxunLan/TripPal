@@ -243,6 +243,16 @@ def _render(key: str, language: str, **kw) -> str:
     return "" if raw == key else raw
 
 
+def _render_items(raw: str, place: str) -> list[str]:
+    """把一条 `|` 分隔的 i18n 文案切成若干条建议（去掉空项、收掉悬空介词）。"""
+    return [_tidy(s, place) for s in (x.strip() for x in (raw or "").split(_SEP)) if s]
+
+
+def _norm(s: str) -> str:
+    """比较建议 / 用户原话是否「同一条」用：折叠空白 + 忽略大小写。"""
+    return re.sub(r"\s+", " ", (s or "").strip()).lower()
+
+
 def _context(slots: dict | None) -> tuple[str, int]:
     """从会话槽位取个性化参数：`place`（目的地）与 `day`（这一版稿子的天数）。
 
@@ -330,6 +340,8 @@ def next_questions(
     language: str = DEFAULT_LANGUAGE,
     slots: dict | None = None,
     subject: str = "",
+    avoid: list[str] | None = None,
+    offset: int = 0,
 ) -> list[str]:
     """返回这一轮之后「接着可以问」的建议（0–3 条）。
 
@@ -337,6 +349,12 @@ def next_questions(
     - 有目的地 → 换用带 `{place}` 的那套文案；
     - 行程稿 → 天数取这一版稿子的天数（见 `_context`），带小孩/带长者时换掉第一条；
     - 常识答复 → 会话兴趣命中时，把最后一条泛推荐换成更贴兴趣的追问。
+
+    `avoid` / `offset` 解决的是「建议栏像死的」（2026-10-09 用户反馈）：
+    - `avoid`：**刚做过的那条**（通常是用户刚点的那一句）不再原样出现 —— 点完还看到
+      同一条，用户会以为点了没反应。只在摘掉后仍剩 ≥2 条时生效，不掏空建议栏。
+    - `offset`：行程那套并入备用池（`nq.plan_extra`）后**按轮次轮换窗口**。只有 3 条
+      模板时，同一会话连出几版稿建议栏一字不差；轮换后相邻两版肉眼可辨地不同。
     """
     keys = _KEY_BY_DECISION.get(decision or "")
     if not keys:
@@ -351,7 +369,25 @@ def next_questions(
     raw = t(key, language, place=place, day=day)
     if raw == key:  # i18n 缺这条 → 宁可不给，也不要露出 key
         return []
-    items = [_tidy(s, place) for s in (x.strip() for x in raw.split(_SEP)) if s]
+    items = _render_items(raw, place)
+
+    # 行程稿：并入备用池并按轮次轮换。话题套（topic）不轮换 —— 它是按这一轮主体选出来的，
+    # 轮换会把最贴题的那条转走。
+    if decision == "plan" and not topic:
+        extra_raw = t("nq.plan_extra", language, place=place, day=day)
+        if extra_raw and extra_raw != "nq.plan_extra":
+            pool = items + _render_items(extra_raw, place)
+            if offset and len(pool) > MAX_QUESTIONS:
+                k = offset % (len(pool) - MAX_QUESTIONS + 1)
+                pool = pool[k:] + pool[:k]
+            items = pool
+
+    seen = {_norm(a) for a in (avoid or []) if a}
+    if seen:
+        kept = [x for x in items if _norm(x) not in seen]
+        if len(kept) >= 2:
+            items = kept
+    items = items[:MAX_QUESTIONS]
 
     # 上下文个性化：只换**一条**，位置见上面 i18n 的注释。
     if decision == "plan":

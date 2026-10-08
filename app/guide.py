@@ -6,7 +6,27 @@
 |---|---|---|---|
 | realtime | 会变的事实（今天几点升旗） | 否 | 时效闸门 + 权威入口 |
 | knowledge | 不变的事实（西湖多大） | 是（一次） | 三道闸：未核实标注 + 复核入口 + 时效拒答 |
-| **guide** | 都不是 —— 寒暄 / 闲话 / 元问题 | 是（一次） | 无 —— 它本来就不含可核实的事实 |
+| **guide** | 都不是 —— 寒暄 / 闲话 / 元问题 | **仅 `meta` 调**（其余直答） | 无 —— 它本来就不含可核实的事实 |
+
+**哪几类不调模型（2026-10-09 修「输入你好要等很久」）
+------------------------------------------------
+寒暄的七类里，`greeting` / `thanks` / `farewell` / `cancel` / `chitchat` 是**封闭式社交套话**：
+它们的正确答复与用户**具体说了什么**无关 —— 「你好」的合适回复就是那句招呼 + 能力邀请，
+i18n 定稿（`gd.reply.*`）**就是答案本身**，而且 zh/en/ja/ko 四语言齐全
+（`app/i18n.py::detect_language` 只判得出这四种，非中日韩的拉丁文本一律归 `en`）——
+所以「用定稿直答」在语言覆盖上**零损失**。
+
+实测（2026-10-09，真模型 ecnu-max + `prompts/guide.md`）把这件事证死了：
+
+| | 结果 |
+|---|---|
+| 模型为「你好」写的引导语 | 与定稿**几乎逐字相同**（只换了几个连接词） |
+| 它的耗时 | 中位约 1s，**但有 2.7 / 3.0 / 6.9 / 11.1s 的长尾** |
+
+也就是说，为一个可以直答的套话付出了最高 11 秒的等待。这与 `recall` 已确立的规则同源
+（见 `app/graph.py::guide_node`）：**当确定性来源就是权威答案时，不要问模型。**
+保留 `meta`（你是谁 / 能做什么）是模型调用 —— 它是这七类里唯一的**真实问句**，
+值得一次润色；它走快档且超时收到 6s，超时即退回定稿。
 
 真 bug（这一层的存在理由）
 ------------------------
@@ -48,6 +68,19 @@ STARTER_SEP = "|"
 def starters(language: str = DEFAULT) -> list[str]:
     raw = t("gd.starters", language)
     return [s.strip() for s in raw.split(STARTER_SEP) if s.strip()]
+
+
+# 封闭式社交套话：问候 / 致谢 / 道别 / 取消 / **纯笑声闲话**。它们的答复是固定的，定稿即答案
+# （理由与实测见模块顶部「哪几类不调模型」）。**新增 kind 时先问一句：
+# 它的回复会随用户说的话变化吗？** 不会，就别往这里加模型调用。
+SCRIPTED_KINDS = ("greeting", "thanks", "farewell", "cancel", "chitchat")
+
+
+def scripted_reply(intent: SocialIntent, language: str = DEFAULT) -> str | None:
+    """套话类直接给定稿（0 模型调用）；`meta` 等其余返回 None，交给 `compose_guide`。"""
+    if intent.kind not in SCRIPTED_KINDS:
+        return None
+    return t(f"gd.reply.{intent.kind}", language) or t("gd.reply.greeting", language)
 
 
 def build_guide_prompt(

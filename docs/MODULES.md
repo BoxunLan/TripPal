@@ -30,18 +30,18 @@
 
 ```
 ┌─ L3 装配层 ────────────────────────────────────────────────┐
-│  main.py(390)  create_app / 7 端点 / 进度通道              │
-│  graph.py(992) build_graph / PlanState / 10 个节点          │
+│  main.py(405)  create_app / 7 端点 / 进度通道              │
+│  graph.py(1071) build_graph / PlanState / 10 个节点         │
 │  deps.py(55)   Deps 容器 —— 唯一注入点                      │
 └──────────────────────────┬─────────────────────────────────┘
                            │ 只被 L3 使用
 ┌─ L2 领域功能层 ───────────▼─────────────────────────────────┐
-│  slots(1687)   槽位抽取+澄清问题     intent(974)  意图三分类 │
+│  slots(1855)   槽位抽取+澄清问题     intent(1082)  意图三分类 │
 │  knowledge(1464) 常识问答复核入口     generate(412) 行程生成  │
 │  validate(409)  预算/事实/护栏校验    realtime(185) 实时事实  │
-│  retrieve(170)  分层检索+工具        guide(126) 寒暄引导    │
+│  retrieve(170)  分层检索+工具        guide(159) 寒暄引导    │
 │  classifier(122) 场景分类           router(97)  路线+叠加层 │
-│  followups(367) 追问建议                                    │
+│  followups(403) 追问建议                                    │
 └──────────────────────────┬─────────────────────────────────┘
                            │ 只依赖协议，不依赖实现
 ┌─ L1 基础设施适配层 ────────▼─────────────────────────────────┐
@@ -51,7 +51,7 @@
 └──────────────────────────┬─────────────────────────────────┘
                            │
 ┌─ L0 底座 ──────────────────▼─────────────────────────────────┐
-│  config(190) 配置    schemas(461) 数据契约    i18n(854) 多语言│
+│  config(203) 配置    schemas(461) 数据契约    i18n(886) 多语言│
 │  pricing(68) 计价（零依赖纯函数）                            │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -74,12 +74,12 @@
 | 模块 | 行数 | 职责 | 主要对外入口 | 主要依赖 | 拆分级 |
 |---|---|---|---|---|---|
 | `pricing` | 68 | 把种子里的 `cost`+`cost_unit` 折算成整趟金额 | `line_total(meta,days,pax)` | 无 | **L0** |
-| `i18n` | 854 | 语言判定 + 用户可见文案 + 提示词语言段 | `detect_language` `t` `output_language_directive` | 无 | **L0** |
+| `i18n` | 886 | 语言判定 + 用户可见文案 + 提示词语言段 | `detect_language` `t` `output_language_directive` | 无 | **L0** |
 | `schemas` | 461 | 全部请求/响应/中间结构的 pydantic 契约 | 各类 BaseModel | `i18n` | **L0**（建议整份拿走） |
-| `slots` | 1687 | 中文口语槽位抽取、澄清问题、表单直填通道 | `extract_slots` `slots_from_form` `merge_slots` `missing_slots` | `config` `i18n` | **L1** |
-| `intent` | 974 | 三分类前门：实时事实 / 常识 / 寒暄（确定性，不调模型） | `detect_realtime_intent` `detect_knowledge_intent` `detect_social_intent` `carry_over_subject` | `config` `slots` | **L1** |
-| `followups` | 367 | 每轮后的「接着可以问」建议 | `next_questions` | `i18n` | **L1** |
-| `prompts` | 204 | 提示词模板加载 + 叠加层拼装 | `load_prompt` `build_generate_prompt` … | `config` `i18n` `schemas` | **L1** |
+| `slots` | 1855 | 中文口语槽位抽取、澄清问题、表单直填通道 | `extract_slots` `slots_from_form` `merge_slots` `missing_slots` | `config` `i18n` | **L1** |
+| `intent` | 1082 | 三分类前门：实时事实 / 常识 / 寒暄（确定性，不调模型） | `detect_realtime_intent` `detect_knowledge_intent` `detect_social_intent` `carry_over_subject` | `config` `slots` | **L1** |
+| `followups` | 403 | 每轮后的「接着可以问」建议 | `next_questions` | `i18n` | **L1** |
+| `prompts` | 210 | 提示词模板加载 + 叠加层拼装 | `load_prompt` `build_generate_prompt` … | `config` `i18n` `schemas` | **L1** |
 | `classifier` | 122 | 场景分类（调模型） | `classify` | `llm` `prompts` `slots` | **L2** |
 | `router` | 97 | 分类结果 → 路线 + 叠加层 | `build_route` | `prompts` `schemas` | **L2** |
 | `retrieve` | 170 | 分层检索 + 信息类工具调用 | `retrieve_context` `run_info_tools` | `store` `embedder` | **L2** |
@@ -87,15 +87,15 @@
 | `validate` | 409 | 预算 / 事实 / 护栏三项校验 | `run_validation` `check_budget` `check_fact` | `pricing` `tools` | **L2** |
 | `realtime` | 185 | 实时事实检索 + 过期闸门 + 响应组装 | `search_realtime_facts` `build_realtime_response` | `store` | **L2** |
 | `knowledge` | 1464 | 常识问答：检索相关条目 + 模型作答 + 复核入口 | `search_knowledge` `answer_question` `build_answer_response` | `llm` `store` `intent` | **L2** |
-| `guide` | 126 | 寒暄引导语 | `compose_guide` `build_guide_response` | `llm` | **L2** |
-| `llm` | 124 | **协议** `LLMClient` + OpenAI 兼容实现 | `build_llm` `ChatLLM` | `config` | **L1**（可直接复用或自实现） |
+| `guide` | 159 | 寒暄引导语：**套话直答（问候/致谢/道别/取消/纯笑声 chitchat，不调模型）** + `meta` 走模型 | `scripted_reply` `compose_guide` `build_guide_response` | `llm` | **L2** |
+| `llm` | 234 | **协议** `LLMClient` + OpenAI 兼容实现（分档超时 / 档位记忆 / 逐次日志） | `build_llm` `ChatLLM` | `config` | **L1**（可直接复用或自实现） |
 | `embed` | 122 | **协议** `Embedder` + hash/API 两种实现 | `build_embedder` `HashingEmbedder` | 无 | **L0/L1** |
 | `store` | 302 | **协议** `VectorStore` + 内存/pgvector 实现 | `build_store` `InMemoryVectorStore` | `embed` `schemas` | **L1** |
 | `tools` | 216 | 工具白名单 + 3 个内置工具 | `ToolBox.call` `evidence_map` | `schemas` | **L1** |
 | `session` | 214 | 会话记忆：槽位 + 承接材料 + 最近轮 | `SessionStore` 类 | `slots` | **L1** |
 | `deps` | 55 | **依赖容器 —— 唯一注入点** | `Deps` `build_deps` | — | **L3** |
-| `graph` | 992 | 编排：10 个节点 + 3 条旁路 | `build_graph` `PlanState` | 15 个模块 | **L3** |
-| `main` | 390 | HTTP 出口：7 端点 + NDJSON/轮询进度 | `create_app` | `graph` `deps` | **L3** |
+| `graph` | 1071 | 编排：10 个节点 + 3 条旁路 | `build_graph` `PlanState` | 15 个模块 | **L3** |
+| `main` | 405 | HTTP 出口：7 端点 + NDJSON/轮询进度 | `create_app` | `graph` `deps` | **L3** |
 | `fakes` | 348 | 离线 LLM 替身（无密钥无网络跑全链路） | `FakeLLM` | `config` `slots` | 测试用，可剥 |
 
 > 「主要依赖」列混写了两类，都写出来是因为融合方两类都要准备：
@@ -110,7 +110,7 @@
 | 你想要的功能 | 要拿的模块 | 拆分级 | 备注 |
 |---|---|---|---|
 | 中文口语槽位抽取（天数/人数/预算/来源国…） | `slots` + `routes.yaml` 的 `destinations`/`slot_extraction` | ★★★ | 纯函数，零 web 依赖，**单独可用** |
-| 多语言输出（zh/en/ja/ko 判定 + 文案） | `i18n` | ★★★ | 零依赖，854 行一次性拿走 |
+| 多语言输出（zh/en/ja/ko 判定 + 文案） | `i18n` | ★★★ | 零依赖，886 行一次性拿走 |
 | 意图前门（事实 / 常识 / 寒暄 / 行程 四分流） | `intent` + `slots` | ★★★ | 确定性，不调模型，**零成本** |
 | 实时事实问答（带过期闸门） | `intent` + `realtime` + `store` | ★★ | 需要你的数据带 `fresh_until` |
 | 常识问答复核入口 | `intent` + `knowledge` + `llm` + `store` | ★★ | 需要 LLM 客户端 + 向量库 |

@@ -299,13 +299,22 @@ TRAVEL_VECTOR_BACKEND=memory TRAVEL_LLM_PROVIDER=fake ./.venv/Scripts/python.exe
 | `TRAVEL_LLM_API_KEY` | — | 共享 key（分类/生成都用它） |
 | `TRAVEL_LLM_BASE_URL` | `https://api.openai.com/v1` | OpenAI 兼容端点 |
 | `TRAVEL_CLASSIFIER_MODEL` / `TRAVEL_GENERATOR_MODEL` | — | 两个角色可分别指定 |
-| `TRAVEL_LLM_TIMEOUT_S` | `60` | **单次**模型调用超时 |
+| `TRAVEL_LLM_TIMEOUT_CLASSIFIER_S` | `15` | 分类（小模型）单次超时；正常 2–4s，给短才不至于端点卡死时白等 |
+| `TRAVEL_LLM_TIMEOUT_GENERATOR_S` | `180` | 行程生成单次超时；正常 45–105s（长 JSON），必须留足余量 |
+| `TRAVEL_LLM_TIMEOUT_ANSWER_S` | `90` | 常识作答单次超时 |
+| `TRAVEL_LLM_TIMEOUT_GUIDE_S` | `6` | **仅 `meta`**（你是谁/能做什么）单次超时；问候/致谢/道别/取消是套话，已改定稿直答，**根本不调模型** |
 | `TRAVEL_EMBEDDING_MODEL` | 空 = 本地 hash | 空字符串是**刻意**的离线开关 |
 | `TRAVEL_EMBEDDING_DIM` | `1024` | 必须与建表 `vector(N)` 一致 |
 | `TRAVEL_VECTOR_BACKEND` | `pg` | `memory`（无需 docker） / `pg`（pgvector） |
 | `DATABASE_URL` | `postgresql://travel:travel@localhost:5433/travel` | 仅 pg 用 |
 | `TRAVEL_ROUTES` | `routes.yaml` | 路由表位置 |
 | `TRAVEL_SEED_DIR` | `seed/` | 知识库位置 |
+
+> **超时按档位，不共用一个数**（2026-10-09）。旧的 `TRAVEL_LLM_TIMEOUT_S` 已废止：
+> 分类正常只要 2–4s、生成正常要 45–105s，一个 60s 同时造成「小模型卡死白等 60s」和
+> 「正常生成被误判超时再重跑」。档位 = 角色 + 任务，见 `app/llm.py` 顶部。
+> `response_format` 仍是 `json_schema → json_object → 纯文本` 三档**降级**，但客户端会
+> 记住最近成功的那一档、下次直接从它开始；每次尝试都打日志（失败与偏慢的进 WARNING）。
 
 ### 5.3 自检
 
@@ -331,7 +340,7 @@ curl -s http://127.0.0.1:8000/health
 | 2 | **会话记忆是进程内的**（`SessionStore` + 审计 JSONL 落 `.workbuddy/audit/`），**重启即丢** | 多副本/`--workers>1` 时同一用户会「记忆漂移」。要稳定就固定单实例，或把会话外置（需改造） |
 | 3 | `/plan/start` 的任务表是**进程内 dict**（保留最近 50 个） | `task_id` 必须回**同一个 worker** 轮询。多实例部署下这条会随机 404 |
 | 4 | `/plan` 是 `def`（同步），FastAPI 放线程池跑 | 单次耗时见下条，并发上限≈线程池大小（anyio 默认 40）。高并发要自己加信号量或改异步 |
-| 5 | 真模型**单链路耗时波动很大**：实测 **46.0s**（一次通过）～ **181.7s**（回炉一轮），上限约 3 次模型调用 × 单次 60s | 调用方超时至少 180s、建议 300s，别无脑套 30s |
+| 5 | 真模型**单链路耗时波动很大**：实测 **11.3s**（一次通过）～ **181.7s**（回炉一轮）。2026-10-09 起模型调用超时按档位给（分类 15s / 生成 180s），单请求内最多 2–3 次尝试，最坏 ≈ 2×180s + 回炉 | 调用方超时至少 180s、建议 300s，别无脑套 30s |
 | 6 | **重试没有幂等键** | 重试 = 重新跑一遍链路、重新计费。要么按 `session_id` 去重，要么把 `/plan/start` 的 `task_id` 存下来复用 |
 | 7 | 检索查询**恒为中文**（知识库是中文语料），`output_language` 只管输出正文 | 别指望传英文 `message` 会去检索英文语料 |
 | 8 | `settings` 走 `lru_cache`，`routes.yaml` 进程内只读一次 | 改配置必须重启；热更新要另做 |

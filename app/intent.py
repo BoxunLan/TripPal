@@ -71,6 +71,90 @@ _QUERY_STOP = re.compile(
 )
 _MAX_SUBJECT = 16
 
+# **非中文问句不遵循「主体在命中片段之前」这条中文语序**。英文疑问句的主体常在命中词
+# **之后**（What are the opening hours of the **Forbidden City**），或在被疑问骨架包住的
+# 那一截里（What is **West Lake** famous for）。真 bug（2026-10-08 外文探针实测，两处同源）：
+#   · 实时闸门：「What are the opening hours of the Forbidden City?」切出的头只剩疑问 + 助
+#     动词，主体成了「What are the」；
+#   · 常识闸门：卡片标题成了「About “West Lake famous”」。
+# 判据：切出来的头**全是英文功能词**（疑问 / 助动词 / 冠词 / 介词 / 代词）时它就不是主体。
+# 只对**无汉字**的输入生效，中文问句一字不动。
+_EN_FUNCTION_WORDS = {
+    "what", "what's", "whats", "which", "who", "whom", "whose", "when", "where", "why", "how",
+    "is", "are", "was", "were", "am", "be", "been", "being",
+    "do", "does", "did", "done", "can", "could", "will", "would", "shall", "should", "may",
+    "might", "must",
+    "the", "a", "an", "of", "to", "in", "on", "at", "for", "and", "or", "but", "with", "about",
+    "i", "you", "we", "they", "he", "she", "it", "there", "here", "this", "that", "these", "those",
+    "please", "tell", "me", "my", "your", "their", "its", "our", "any", "some", "like", "get",
+}
+# 英文问句**尾部**常拖的谓词 / 定语：「West Lake **famous** **for**」。剥掉它，主体才落到
+# 实体本身（「West Lake」）。与 `_FUNCTION_SKELETON` 同一用途，只是这一侧管英文尾巴。
+_EN_TAIL_PREDICATE = {
+    "famous", "known", "popular", "renowned", "best", "good", "great", "worth", "famous-for",
+}
+
+
+def _looks_english(text: str) -> bool:
+    """纯拉丁字母问句（无汉字）—— 走「非中文」兜底，不套中文语序。日文有汉字，不走这条。"""
+    return bool(text) and not _HAN.search(text)
+
+
+def _en_only_function_words(text: str) -> bool:
+    """切出来的片段**全是英文功能词**（「What are the」）→ 它不是主体。"""
+    tokens = [t.strip(".,!?;:'\"()").lower() for t in (text or "").split()]
+    tokens = [t for t in tokens if t]
+    return bool(tokens) and all(t in _EN_FUNCTION_WORDS for t in tokens)
+
+
+def _en_starts_with_function(text: str) -> bool:
+    """片段**以功能词开头**（「there to do in Beijing」）→ 主体其实在句尾那一截。"""
+    tokens = (text or "").split()
+    return bool(tokens) and tokens[0].strip(".,!?;:'\"()").lower() in _EN_FUNCTION_WORDS
+
+
+# 英文**疑问词**开头才算「命中片段是疑问骨架，主题在它后面」。
+# 刻意**不用**「以任意功能词开头」当判据：`do people speak english` 以 `do` 开头，
+# 但它的主题词就是命中的那一段本身（`english`）—— 按「功能词开头」会把主体改成
+# 后面那一截（`China`），问语言却列出防骗条目（真回归 2026-10-08，两条语言测试红了）。
+_EN_INTERROGATIVE_START = {
+    "what", "what's", "whats", "which", "who", "whom", "whose",
+    "where", "when", "why", "how",
+}
+
+
+def _en_interrogative_start(text: str) -> bool:
+    tokens = (text or "").split()
+    return bool(tokens) and tokens[0].strip(".,!?;:'\"()").lower() in _EN_INTERROGATIVE_START
+
+
+def _strip_en_tail(text: str) -> str:
+    """剥掉英文主体末尾的功能词 / 谓词（famous / known / popular / for / about …）。"""
+    tokens = (text or "").split()
+    while tokens:
+        t = tokens[-1].strip(".,!?;:'\"()").lower()
+        if t in _EN_FUNCTION_WORDS or t in _EN_TAIL_PREDICATE:
+            tokens.pop()
+        else:
+            break
+    return " ".join(tokens).strip()
+
+
+def _strip_en_head(text: str) -> str:
+    """剥掉英文主体**开头**的功能词（「are at the National Museum…」→「National Museum…」）。
+
+    英文疑问式砍掉触发词之后，剩下那一截常以系动词 + 介词开头
+    （`What exhibitions are at the …`）。中文语序里没有这一段，所以 `_HEAD_NOISE` 不管它。
+    """
+    tokens = (text or "").split()
+    while tokens:
+        t = tokens[0].strip(".,!?;:'\"()").lower()
+        if t in _EN_FUNCTION_WORDS:
+            tokens.pop(0)
+        else:
+            break
+    return " ".join(tokens).strip()
+
 # 度量问句的主语常拖一个尾巴：「天安门高多少米」→ 切在「多少米」前 → 主语「天安门高」。
 # 不洗掉它，知识库相关性闸门就再也对不上「天安门」（正文里写的是「天安门广场」，
 # 没有「天安门高」这个串）。只剥末尾，不动中间。
@@ -480,6 +564,13 @@ def detect_realtime_intent(
     destination, country, _names, surface = resolve_destinations(message, settings)
     place = destination
     subject = _subject(message, match.start(), surface)
+    # **非中文**问句不套中文语序（主体在命中词之前）。真 bug（2026-10-08 外文探针实测）：
+    # 「What are the opening hours of the Forbidden City?」命中「opening hours」，之前那一截
+    # 只剩疑问 + 助动词，主体成了「What are the」。这时退到解析出的**地名**（中文）——
+    # 主体 == 地点，相关性闸门改走 destination 匹配，检索照旧收得到条目
+    # （见 `app/realtime.py::_is_relevant`）。解析不出地名才退到命中片段本身。
+    if _looks_english(message) and _en_only_function_words(subject):
+        subject = place or surface or match.group(0)
     relevance = str(trigger.get("relevance") or "subject")
     if relevance == "matched":
         # 政策类的主体就是**命中那条政策名本身**（「过境免签」「单方面免签」），
@@ -828,9 +919,21 @@ def detect_knowledge_intent(
         # 「支付怎么弄」，卡片标题与答案双双跑偏（问景点，答了支付）。
         own_subject = "" if hit.group(0) in _FUNCTION_SKELETON else hit.group(0)
         # 命中的是纯疑问骨架（「为什么」「Why do」）→ 这一句的主体在**它后面**那一截。
-        if hit.group(0).strip().lower() in _INTERROGATIVE_FRAME:
+        # 非中文再加一条：英文触发词本身常是疑问式的一部分（「What food」「What exhibitions」
+        # 里的 what …），后面那一截才是主题。真 bug（2026-10-08 外文探针实测：主体成了
+        # 「What food」/「What exhibitions」）。
+        if hit.group(0).strip().lower() in _INTERROGATIVE_FRAME or (
+            _looks_english(text) and _en_interrogative_start(hit.group(0))
+        ):
             tail = _TAIL_NOISE.sub("", _clean_fragment(text[hit.end():])).strip()
             if tail:
+                # **非中文**：英文语序与中文相反，「命中之后那一截」会拖着谓语与介词
+                # （「What is West Lake famous for?」→「West Lake famous for」）。真 bug
+                # （2026-10-08 外文探针实测，卡片标题成了「About “West Lake famous”」）。
+                # 判据：先剥末尾的功能词 / 谓词（famous / known / for），再剥开头那一段
+                # 系动词 + 介词（is / are at the）；剥空了才退到解析出的地名。
+                if _looks_english(text):
+                    tail = _strip_en_head(_strip_en_tail(tail)) or surface or tail
                 subject = tail
                 own_subject = tail
     else:
@@ -915,7 +1018,7 @@ SOCIAL_KEY = "social"
 class SocialIntent:
     """寒暄类输入的结构化判定。"""
 
-    kind: str      # greeting / thanks / farewell / meta
+    kind: str      # greeting / thanks / farewell / cancel / chitchat / meta / recall
     matched: str   # 命中的原话片段（便于排查误判）
 
 
@@ -959,8 +1062,13 @@ def detect_social_intent(
         if re.search(pattern, text, re.IGNORECASE):
             return None
 
-    # ② 短句
-    if len(text) > int(cfg.get("max_chars") or 24):
+    # ② 短句。阈值分语言：中文按字符（24），非中文按同一量级给更宽的上限（48）——
+    # 一个英文/法文词就好几个字母，用中文的字符阈值会把纯客套的整句挡在门外
+    # （见 `routes.yaml` 的 `max_chars_latin`）。
+    limit = int(cfg.get("max_chars") or 24)
+    if not _HAN.search(text):
+        limit = int(cfg.get("max_chars_latin") or limit * 2)
+    if len(text) > limit:
         return None
 
     # ① 命中

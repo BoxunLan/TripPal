@@ -31,7 +31,7 @@ from .classifier import classify
 from .deps import Deps
 from .followups import next_questions
 from .generate import GenerationError, assemble_checklist, assemble_citations, generate_plan
-from .guide import build_guide_response, compose_guide
+from .guide import build_guide_response, compose_guide, scripted_reply
 from .i18n import detect_language, t
 from .intent import (
     KnowledgeIntent,
@@ -71,12 +71,14 @@ from .schemas import (
 from .slots import (
     answer_from_itinerary,
     apply_delegation_defaults,
+    budget_adjust_direction,
     build_clarify_question,
     clear_trip_slots,
     extract_slots,
     first_missing,
     is_ack_only,
     is_budget_adjust,
+    is_budget_underuse,
     is_delegating,
     is_itinerary_question,
     is_itinerary_recall,
@@ -257,6 +259,10 @@ def build_graph(deps: Deps):
     def clarify_node(state: PlanState) -> PlanState:
         message = state["message"]
         session = deps.sessions.get(state["session_id"])
+        # 上一轮追问的是哪几项（`Session.record` 在出答复时写入）。这一轮要拿它判断
+        # 「用户刚刚是不是在回答我的问题」—— 见下面预算调整分支里的 `budget_fresh`。
+        # 必须在任何 `update_slots` 之前读：`update_slots` 是合并语义，会把上一轮的值冲掉。
+        prev_missing = set(session.missing_slots or [])
         extracted = extract_slots(message, settings)
         # 信息来源的优先级：**本句 > 表单 > 会话历史**。
         # 本句最优先是因为它最新、最明确；表单是用户在点发送前刚填的（也是这一轮的意图），
@@ -464,18 +470,68 @@ def build_graph(deps: Deps):
                 "delegation_note": note,
             }
 
-        # 模糊的预算调整诉求（「太贵了，能便宜点吗」「再贵点也行」）：想改、但没给数。
+        # 模糊的预算调整诉求（「太贵了，能便宜点吗」「开销太少，多花点」）：想改、但没给数。
         # 旧行为是槽位齐全 → 直接重出一份稿，模型自己**编一个用户没说过的数字**
         # （实测：原预算 8000，重出成 1128 元）。那不是"调整"，是替用户拍了板。
         # 追问一句目标预算，既省一轮来回，也不会把价压到用户没要求的位置。
-        if (is_budget_adjust(message) and "budget" not in extracted
-                and merged.get("budget")):
+        #
+        # 2026-10-09 用户实测「提高开销反被改成穷游」（2260 → 2190 → 2160，标题滑成"穷游"），
+        # 暴露两个必须分开处理的形态：
+        #   ① **方向**：「太贵了」问"想控制在多少以内"，「开销太少」问"想提到多少" ——
+        #      旧实现只有降向文案（词表也只有"便宜 / 省"这一半），对提高方向是**反着问**。
+        #   ② **已给预算 + 抱怨没花完**（「我有 11111 元怎么花不完」）：他不缺数字，
+        #      再问一句就是明知故问 —— 直接带原稿把开销抬上去。
+        #
+        # ② 必须放在 `"budget" not in extracted` **之外**：这类句子通常**带着**那个数
+        # （11111 会被槽位抽取器抓进 `extracted`），塞进下层条件就会被挡回普通生成、
+        # 又"重排一份更省的" —— 正是本次 bug 的复现路径。
+        #
+        # 2026-10-09 第三个形态（用户实测）：「提高开销」→ 追问卡里填好预算 → 点
+        # **「按填写的信息重发本句」** → 又看到同一句追问，点几次都是它（死循环）。
+        # 原因是判据只看「**原话里**有没有数」：重发时原话仍是「提高开销」（前端刻意保留
+        # 原话，只把表单值一起带上），于是在这一步永远判「没给数」→ 再问一次 →
+        # 用户再点再重发…… 实测连续 3 次返回同一个 clarify。
+        #
+        # `budget_fresh` = 「用户**这一轮**确实把数字交上来了」，两条来源：
+        #   - 本句自己说了数（本句 > 表单，见上面的优先级注释）；
+        #   - 表单里填了数，**且上一轮追问的正是预算** ← 这个附加条件是必须的：
+        #     「行程信息卡」是**常驻**的，上一次填过的预算会一直留在表单里。只看
+        #     「表单里有预算」的话，常驻旧值会冒充「他已经给了数」，用户说「提高开销」时
+        #     系统会直接拿旧值改稿、不再问他到底想提到多少 —— 又一个反着来的行为。
+        #     反过来，少了这一支，重发本句就永远填不上这个槽（就是上面那个死循环）。
+        budget_fresh = ("budget" in extracted) or (
+            "budget" in overrides and "budget" in prev_missing
+        )
+        if (is_budget_adjust(message) and merged.get("budget")
+                and (budget_fresh or is_budget_underuse(message))
+                and session.last_itinerary):
+            # 数字到手了（本句说的 / 刚在追问卡里填的 / 抱怨没花完但预算本就有了）
+            # → 不再问，直接带原稿把这一版改出来。
+            revised = apply_delegation_defaults(dict(merged))
+            revised["plan_revision"] = (message or "").strip()
+            deps.sessions.update_slots(state["session_id"], revised)
+            return {
+                "decision": "continue",
+                "slots": revised,
+                "missing_slots": [],
+                "plan_revision": (message or "").strip(),
+                "previous_itinerary": dict(session.last_itinerary or {}),
+            }
+
+        if (is_budget_adjust(message) and merged.get("budget")
+                and not budget_fresh):
+            # 想改、但确实没给数 → 追问一句目标预算（按方向选文案）
+            question_key = (
+                "clarify.budget_raise"
+                if budget_adjust_direction(message) == "raise"
+                else "clarify.budget_adjust"
+            )
             deps.sessions.update_slots(state["session_id"], merged)
             return {
                 "decision": "clarify",
                 "slots": merged,
                 "missing_slots": ["budget"],
-                "clarify_question": t("clarify.budget_adjust", output_language(state)),
+                "clarify_question": t(question_key, output_language(state)),
             }
 
         miss = missing_slots(merged, required)
@@ -617,11 +673,15 @@ def build_graph(deps: Deps):
 
     # ------------------------------------------------------------- guide（旁路）
     def guide_node(state: PlanState) -> PlanState:
-        """寒暄旁路：不检索、不调工具，只让通用模型回一句引导语。
+        """寒暄旁路：不检索、不调工具，只回一句把人引到旅行话题的话。
 
         它不产生任何可核实的事实断言 —— 所以没有时效闸门、也没有「未经核实」标注。
         模型不可用时 `compose_guide` 返回空串，`output` 会退回 i18n 里的定稿话术；
         绝不能因为模型挂掉就退化成那四连问（降级，但不是降级成错误的东西）。
+
+        **三类输入不调模型**（前两类都在下面短路，第三类在 `guide.py` 里）：
+        `recall`（记忆类元问题）、`greeting` / `thanks` / `farewell` / `cancel` / `chitchat`
+        （封闭式套话 / 纯笑声闲话）。
         """
         intent = state["social_intent"]
         language = output_language(state)
@@ -630,6 +690,13 @@ def build_graph(deps: Deps):
         # 答歪；而这句问话是用户**在验证系统记不记得住**，答错比不答更糟。
         if intent.kind == "recall":
             return {"guide_reply": _recall_reply(state["session_id"], language)}
+        # 「你好 / 谢谢 / 再见 / 算了 / 哈哈哈」这类**封闭式套话 / 纯笑声**同理不调模型：
+        # 回复与用户具体说了什么无关，定稿就是答案本身。实测（2026-10-09）模型写的引导语与
+        # 定稿几乎逐字相同，却出现过 11.1s 的长尾 —— 一句「你好」不该等大模型。
+        scripted = scripted_reply(intent, language)
+        if scripted is not None:
+            return {"guide_reply": scripted}
+        # 只剩 `meta`（你是谁 / 能做什么）—— 七类里唯一的真实问句，值得一次润色。
         reply = compose_guide(
             settings=settings,
             llm=deps.llm,
@@ -923,11 +990,23 @@ def build_graph(deps: Deps):
             # 命中片段也要参与认话题：找店句「哪里能吃到本地人常去的**馆子**」的主体
             # 是定语（「本地人常」），真正的话题词在命中片段里 —— 只看主体会认不出饮食。
             nq_subject = f"{nq_subject} {nq_matched}".strip()
+            # 天数取**这一版稿子**的天数，不取 `state["slots"]`（2026-10-09 用户反馈
+            # 「可以接着问模块是死的」）：改稿分支（「再加一天」）里 state 的槽位可能没有
+            # days，`_context` 就退回写死的 3 —— 实测 5 天的稿子建议栏写着「把第 3 天…」，
+            # 跟眼前的稿子对不上，看起来就像模块没在跟着稿子走。
+            nq_slots = dict(state.get("slots") or {})
+            n_plan_days = len(response.itinerary.days) if hasattr(response, "itinerary") else 0
+            if n_plan_days:
+                nq_slots["days"] = n_plan_days
             nq = next_questions(
                 decision=nq_decision,
                 language=output_language(state),
-                slots=state.get("slots") or {},
+                slots=nq_slots,
                 subject=nq_subject,
+                # 刚做过的那条不再原样出现（用户点完还看到同一条，就像点了没反应）。
+                avoid=[state.get("message") or ""],
+                # 轮次当轮换偏移，让相邻两版的建议栏不再一字不差。
+                offset=deps.sessions.get(session_id).turn,
             )
             if nq:
                 response = response.model_copy(update={"next_questions": nq})
