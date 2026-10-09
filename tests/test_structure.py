@@ -147,9 +147,12 @@ def test_web_ui_is_served_at_root(client):
     # 防回归：addResult 曾写成 `appendChild(d.firstElementChild)` 之后又读
     # `d.firstElementChild` —— 节点已被移走所以是 null，抛 TypeError。
     # 对话式界面（2026-10-06）改成先求值再交给 appendChild：
-    # `holder.appendChild(card.firstElementChild)`，全文只应出现一次取节点。
-    assert "holder.appendChild(card.firstElementChild)" in html
-    assert html.count("firstElementChild") == 1
+    # `holder.appendChild(card.firstElementChild)`。
+    # 判据不是「只许出现一次」—— 2026-10-09 加了会话重放（`appendAiCard`），
+    # 卡片插入点变成两处（send 跑完 / 重放），两处都必须是同一个正确写法。
+    assert html.count("firstElementChild") == 2
+    assert html.count(".appendChild(card.firstElementChild)") == 2
+    assert "firstElementChild.scrollIntoView" not in html   # 历史 bug 的原始形态
     assert "scrollBottom" in html
 
 

@@ -30,7 +30,10 @@ SUPPORTED = (ZH, EN, JA, KO)
 LANGUAGE_NAMES = {ZH: "简体中文", EN: "English", JA: "日本語", KO: "한국어"}
 
 _KANA = re.compile(r"[\u3040-\u30ff]")
-_HANGUL = re.compile(r"[\uac00-\ud7af\u1100-\u11ff]")
+# 谚文音节（AC00–D7AF）+ 字母（1100–11FF）+ **兼容字母（3131–318F）**。
+# 最后一段是 2026-10-09 补的：`ㅋㅋ` / `ㅎㅎ` / `ㅠㅠ` 用的是兼容字母，
+# 原先落在范围外 → 被判成 en，韩语用户笑一声收到英文回复。
+_HANGUL = re.compile(r"[\uac00-\ud7af\u1100-\u11ff\u3131-\u318f]")
 _CJK = re.compile(r"[\u4e00-\u9fff]")
 
 
@@ -176,6 +179,15 @@ _UI: dict[str, dict[str, str]] = {
         EN: "Sure — roughly what would you like to keep it under (in CNY)?",
         JA: "かしこまりました。ご予算はどのくらいを目安にしますか（人民元）？",
         KO: "알겠습니다. 예산을 어느 정도로 맞출까요(위안)?",
+    },
+    # **提高**方向的那一半（「开销太少，多花点」「提高开销」）。与上面那条分开写，
+    # 因为方向相反、问法也必须相反：用户说"提高"，问"想控制在多少以内"是把话说反了
+    # （2026-10-09 用户实测：说了提高开销，系统一路把计划改成穷游）。
+    "clarify.budget_raise": {
+        ZH: "好，那这次大概想把预算提到多少（人民币）？",
+        EN: "Sure — roughly how high would you like the budget to go (in CNY)?",
+        JA: "かしこまりました。ご予算はどのくらいまで上げますか（人民元）？",
+        KO: "알겠습니다. 예산을 어느 정도까지 올릴까요(위안)?",
     },
     # 「随便 / 都行 / 你看着办」时用常规默认补上骨架缺口，并把默认值**明说**出来。
     # 这句进的是行程响应的 suggestions 首条，用户看得到、也随时能改。
@@ -465,6 +477,17 @@ _UI: dict[str, dict[str, str]] = {
         JA: "わかりました。今回は見送りますね。また計画したくなったら声をかけてください。",
         KO: "알겠습니다. 이번 건은 잠시 접어둘게요. 다시 계획하고 싶으시면 말씀해 주세요.",
     },
+    # 纯笑声 / 字母数字梗（「哈哈哈」「呵呵」「233」）。第九形态 —— 与问候同源：
+    # 不是排行程的请求，答复与用户笑的那声无关，定稿即答案，不调模型。
+    "gd.reply.chitchat": {
+        ZH: "哈哈，看你心情不错。想安排点什么旅行的事吗？说说想去哪儿，或者想了解什么，我来帮你。",
+        EN: "Ha — glad you're in good spirits. Anything travel-related I can help with? "
+            "Tell me where you'd like to go, or what you'd like to know.",
+        JA: "ハハ、ご機嫌ですね。旅行のことで何かお手伝いしましょうか？行きたい場所や"
+            "知りたいことを教えてください。",
+        KO: "하하, 기분 좋으시네요. 여행 관련해서 도와드릴까요? 가고 싶은 곳이나 "
+            "궁금한 점을 말씀해 주세요.",
+    },
     "gd.reply.meta": {
         ZH: "我是旅行助手，主要帮三件事：规划行程、查签证与入境政策、回答目的地问题"
             "（门票、开放时间、怎么玩）。想从哪开始？",
@@ -526,6 +549,16 @@ _UI: dict[str, dict[str, str]] = {
         EN: "Make day {day} more relaxed|Switch to cheaper hotels|Add one more day",
         JA: "{day} 日目をもう少しゆったりに|宿をもう少し安く|もう 1 日追加",
         KO: "{day}일차를 좀 더 여유롭게|숙소를 더 저렴하게|하루 더 추가",
+    },
+    # 备用池（2026-10-09 用户反馈「可以接着问模块是死的」）：只有上面 3 条时，
+    # 同一会话连出几版稿，建议栏一字不差；刚点过的那条还会**原样再出现**。
+    # 并入这 3 条后按轮次**轮换窗口**（见 followups.next_questions 的 offset），
+    # 相邻两版的建议栏就不再相同；`avoid` 再把「刚做过的那条」摘掉。
+    "nq.plan_extra": {
+        ZH: "把第 {day} 天换成室内的|少走点路，交通方便些|加一顿当地特色餐",
+        EN: "Swap day {day} for indoor options|Less walking, easier transport|Add a local specialty meal",
+        JA: "{day} 日目を屋内中心に|移動を少なめに|ご当地の名物を 1 食追加",
+        KO: "{day}일차를 실내 위주로|이동을 줄여서|지역 특색 음식 한 끼 추가",
     },
     "nq.answer": {
         ZH: "按这个帮我排进行程|附近还有哪些值得去",

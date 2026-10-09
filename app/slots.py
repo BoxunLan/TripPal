@@ -321,6 +321,81 @@ def _match_nationality_loose(text: str) -> str | None:
 
 
 # ---------------------------------------------------------------- 各槽位抽取
+# ---------------------------------------------------------------- 月日（不带年）
+# 「10月20日」「10月20号」「10月20日に出発」这类**不带年**的出发日：既有的整日期规则硬要求
+# 4 位年，整条落空。而 date_range 是**全部规划场景的必填槽** → 系统会反复追问出发日，
+# 「你写了日期、我没听见」的第二种形态（真 bug 2026-10-08 用户实测：日语会话卡在追问环节）。
+# 年份靠推断：今年的这一天还没到就是今年，已经过了取下一年（用户在做**将来**的行程）。
+_MONTH_DAY_RE = re.compile(r"(?<!\d)(\d{1,2})\s*月\s*(\d{1,2})\s*[日号號]")
+# 斜杠简写：「10/20 出发」「10/20」——日语也常用。守卫必须严：紧跟时长/人数/金额/「的」
+# 一律不算日期，否则「1/2 的预算」「3/4 天」会被读成 1 月 2 日 / 3 月 4 日（错值比缺值危险）。
+_SLASH_MONTH_DAY_RE = re.compile(
+    r"(?<![\d/])(\d{1,2})\s*/\s*(\d{1,2})(?![\d/])"
+    r"(?!\s*(?:天|日|人|名|个|位|公里|千米|小时|時間|分钟|岁|元|块|万|萬|千|预算|予算|的))"
+)
+# 相对月：「来月の20日」「下个月20号」「本月20号」—— 日期词里没有月份数字。
+_REL_MONTH_DAY_RE = re.compile(
+    r"(今月|本月|这个月|這個月|当月|當月|来月|來月|下个月|下個月|下月)"
+    r"\s*(?:の)?\s*(\d{1,2})\s*[日号號]"
+)
+_REL_MONTH_NEXT = ("来月", "來月", "下个月", "下個月", "下月")
+
+
+def _resolve_year_for(mo: int, d: int) -> int | None:
+    """把「M 月 D 日」补成具体年份：还没过就是今年，已经过了就是下一年。非法月日 → None。"""
+    from datetime import date
+
+    today = date.today()
+    try:
+        cand = date(today.year, mo, d)
+    except ValueError:
+        return None
+    if cand < today:
+        try:
+            date(today.year + 1, mo, d)
+        except ValueError:
+            return None
+        return today.year + 1
+    return today.year
+
+
+def _month_day(text: str) -> tuple[int | None, int, int, str] | None:
+    """抽「月日」，返回 `(年, 月, 日, 命中原文)`；月份数字缺失时用相对月词推。"""
+    from datetime import date
+
+    m = _REL_MONTH_DAY_RE.search(text or "")
+    if m:
+        word, d = m.group(1), int(m.group(2))
+        today = date.today()
+        y, mo = today.year, today.month
+        if word in _REL_MONTH_NEXT:
+            mo += 1
+            if mo > 12:
+                mo, y = 1, y + 1
+        elif d < today.day:          # 「本月 20 号」而今天已过 20 号 → 指下个月
+            mo += 1
+            if mo > 12:
+                mo, y = 1, y + 1
+        try:
+            date(y, mo, d)
+        except ValueError:
+            return None
+        return y, mo, d, m.group(0)
+    m = _MONTH_DAY_RE.search(text or "")
+    if m:
+        mo, d = int(m.group(1)), int(m.group(2))
+        if not (1 <= mo <= 12 and 1 <= d <= 31):
+            return None
+        return _resolve_year_for(mo, d), mo, d, m.group(0)
+    m = _SLASH_MONTH_DAY_RE.search(text or "")
+    if m:
+        mo, d = int(m.group(1)), int(m.group(2))
+        if not (1 <= mo <= 12 and 1 <= d <= 31):
+            return None
+        return _resolve_year_for(mo, d), mo, d, m.group(0)
+    return None
+
+
 def _extract_date_range(message: str, patterns: list[str]) -> tuple[int | None, str | None, str | None]:
     """返回 (天数, date_range 文本, 出发日期)。"""
     days: int | None = None
@@ -338,8 +413,20 @@ def _extract_date_range(message: str, patterns: list[str]) -> tuple[int | None, 
                 date_text = m.group(0)
             except (IndexError, ValueError):
                 pass
+    # 不带年的月日（10月20日 / 10月20号 / 10月20日に出発 / 来月の20日）。放在整日期之后、
+    # 时长规则之前：既保证「带年」的写法优先，也让识别到的那段**先从时长扫描串里摘掉**
+    # —— 否则日语的「10月20日」会在下面的裸「N日」模式里被读成 **20 天**（错值比缺值更危险）。
+    scan = message
+    if start_date is None:
+        md = _month_day(message)
+        if md:
+            y, mo, d, raw = md
+            date_text = raw
+            if y is not None:
+                start_date = f"{y:04d}-{mo:02d}-{d:02d}"
+            scan = message.replace(raw, " ")
     for pat in patterns[1:]:
-        m = re.search(pat, message)
+        m = re.search(pat, scan)
         if not m:
             continue
         n = _num(m.group(1))
@@ -579,7 +666,9 @@ def _extract_budget(message: str, patterns: list[str]) -> tuple[float | None, fl
 # 三道闸以外的金额照旧交给显式规则（「预算 X」等），这里只在显式规则没抽到时兜底。
 _BARE_AMOUNT_RE = re.compile(
     r"(?<![\d一两二三四五六七八九十百千萬万])"
-    r"(\d+(?:\.\d+)?|[一两二三四五六七八九十百千萬万]+)"
+    # 量级**必须进捕获组**：「3万元」若只抓到「3」，_cn_amount 拿到的是 3 → 低于下限被丢，
+    # 整条预算照旧落空（用户报了预算却被反复追问）。真 bug 2026-10-08。
+    r"(\d+(?:\.\d+)?[百千萬万佰仟]?|[一两二三四五六七八九十百千萬万佰仟]+)"
     # 要么带人民币量词（三千块 / 5000 元），要么带约数标记（一千多 / 五千来块）。
     # **不能**允许裸数词：否则任何数字都会变成预算。
     r"\s*(?:(?:多|来)\s*(?:块钱|块|元)?|(?:块钱|块|元整|元|人民币))"
@@ -680,6 +769,16 @@ _CHILD_WORD = r"(?:小孩子|小朋友|小孩|孩子|儿童|婴幼儿|幼儿|婴
 _ELDER_WORD = r"(?:老年人|老人家|老人|长者|父母|爸妈|爷爷|奶奶|外公|外婆|岳父|岳母)"
 
 _PARTY_COUNT_RES: list[tuple[str, re.Pattern[str]]] = [
+    # 量词**本身就是人数单位**：「2名」「3位」「2名様」—— 句中一个「人」字都没有。
+    # 日语里「2名」是最标准的人数说法（中文也常说「2名」），旧表要求量词后面必须再跟一个
+    # 身份词（_ADULT_WORD），于是整条落空。真 bug（2026-10-08 用户实测）：会话中途改说日语
+    # 答「2名です」，追问原样重复、连问两轮纹丝不动 —— 卡在追问环节。
+    # 负向断言只排「量词后紧跟身份词」的情形（那三种由下面三条负责），避免重复计数；
+    # `(?<!第)` 排掉「第2位」这类名次。
+    ("adult", re.compile(
+        rf"(?<!第)(?<!第\s)({_PARTY_NUM})\s*(?:名|位)"
+        rf"(?!\s*(?:{_ADULT_WORD}|{_CHILD_WORD}|{_ELDER_WORD}))"
+    )),
     ("adult", re.compile(rf"({_PARTY_NUM})\s*{_PARTY_CLASSIFIER}\s*{_ADULT_WORD}")),
     ("child", re.compile(rf"({_PARTY_NUM})\s*{_PARTY_CLASSIFIER}\s*{_CHILD_WORD}")),
     ("elder", re.compile(rf"({_PARTY_NUM})\s*{_PARTY_CLASSIFIER}\s*{_ELDER_WORD}")),
@@ -1390,14 +1489,33 @@ ACK_ONLY_RE = re.compile(
     r"(?:\s*[呀啊吧了呢哈~～]*)?[!！。.~～]*",
     re.IGNORECASE,
 )
-# 模糊的预算调整诉求（「太贵了，能便宜点吗」「再贵点也行」）：用户要改预算，但**没给数**。
-# 单独出来，是因为它的正确应对与前两类都不同：不是放手（他有具体偏好），
+# 模糊的预算调整诉求（「太贵了，能便宜点吗」「开销太少，多花点」）：用户要改**花多少**，
+# 但**没给数**。单独出来，是因为它的正确应对与前两类都不同：不是放手（他有具体偏好），
 # 也不该直接重出稿（那会让模型自己编一个他从没说过的数）—— 该追问一句目标预算。
+#
+# ⚠️ 词表必须**两侧都覆盖**（贵 / 省），单向漏词会把整条诉求静默吞掉。
+# 真 bug（2026-10-09 用户实测）：用户说「提高开销」，三个判据全灭 → 走了普通生成、
+# 从零重排，开销反而一路降（2260 → 2190 → 2160），标题从「预算优化」滑成「穷游」。
+# 用户说「提高」系统给「穷游」—— 不是没听懂，是词表里只有「便宜 / 省」那一半。
+# 而且用户说的是**「开销」不是「预算」**，所以「开销 / 花费 / 花销」也必须进表。
 BUDGET_SOFT_RE = re.compile(
+    # —— 降低方向 ——
     r"便宜(?:一?点|一些|些|点)|贵(?:了|一?点|一些|些)|省(?:一?点|一些|些)|"
-    r"降(?:低|一?点|一些)|压(?:缩|低)(?:预算|价)|提高预算|预算(?:高|低|多|少)(?:一?点|一些|些)?|"
+    r"降(?:低|一?点|一些)|压(?:缩|低)(?:预算|价|开销|花费)|少花(?:点|一点|一些)?|"
+    # —— 提高方向（旧表完全没有这一半）——
+    r"提高(?:预算|开销|花费|花销)|增加(?:预算|开销|花费)|涨(?:预算|价)|加(?:点|些)?预算|"
+    r"(?:预算|开销|花费|花销)(?:太?少|不够|低了|偏低)|(?:预算|开销)再?高(?:点|一点|一些)|"
+    r"多花(?:点|一点|一些)|花(?:多|贵)(?:点|一点|一些)|贵(?:点|一点|一些)|"
+    r"预算(?:高|低|多|少)(?:一?点|一些|些)?|"
+    # —— 抱怨「钱没花完」（用户已给预算，诉求是用足它）——
+    r"花不完|用不完|没花完|没用完|花不出去|不够花|"
+    # —— 英文 ——
     r"cheaper|less\s+expensive|too\s+expensive|too\s+pricey|more\s+expensive|"
-    r"もう少し安く|高すぎ|予算を下げ|더\s*저렴|너무\s*비싸",
+    r"too\s+cheap|not\s+expensive\s+enough|spend\s+more|increase\s+the\s+budget|"
+    r"raise\s+the\s+budget|use\s+up\s+the\s+budget|"
+    # —— 日 / 韩 ——
+    r"もう少し安く|高すぎ|予算を下げ|予算を上げ|もっと使|安すぎ|"
+    r"더\s*저렴|너무\s*비싸|예산을\s*올|더\s*쓰",
     re.IGNORECASE,
 )
 
@@ -1419,6 +1537,56 @@ def is_ack_only(message: str) -> bool:
 def is_budget_adjust(message: str) -> bool:
     """用户是在要求**调整**预算（而不是给出预算、也不是放手让你定）。"""
     return bool(BUDGET_SOFT_RE.search(message or ""))
+
+
+# 调整的**方向**。同一条诉求，问法必须相反 ——「太贵了」该问"想控制在多少以内"，
+# 「开销太少」该问"想提到多少"。旧实现只有一套降向文案，对提高方向是**反着问**：
+# 用户说"提高开销"，系统回"想控制在多少"，语义正好拧过来（2026-10-09 用户实测）。
+_BUDGET_RAISE_RE = re.compile(
+    r"提高|增加|上调|调高|涨|加(?:点|些)?预算|多花|花(?:多|贵)(?:点|一点|一些)?|"
+    r"(?:预算|开销|花费|花销)(?:太?少|不够|低了|偏低)|贵(?:点|一点|一些)|"
+    r"再?高(?:点|一点|一些)|花不完|用不完|没花完|没用完|不够花|"
+    r"too\s+cheap|spend\s+more|increase|raise|more\s+expensive|higher|use\s+up|"
+    r"予算を上げ|もっと|安すぎ|예산을\s*올|더\s*쓰",
+    re.IGNORECASE,
+)
+_BUDGET_LOWER_RE = re.compile(
+    r"便宜|省(?:一?点|一些|些)?|降低|降(?:一?点|一些)|压缩|压(?:低|缩)|下调|调低|"
+    r"少花|贵(?:了)|太贵|减少|"
+    r"cheaper|less\s+expensive|too\s+expensive|too\s+pricey|reduce|lower|"
+    r"安く|高すぎ|予算を下げ|저렴|비싸|절약",
+    re.IGNORECASE,
+)
+# 抱怨「钱没花完 / 太省了」：用户**已经给了预算**，诉求是"把它用足"，不是"换个预算"。
+# 这类不该再追问一句目标数（他给了），该直接带原稿把开销抬上去。
+BUDGET_UNDERUSE_RE = re.compile(
+    r"花不完|用不完|没花完|没用完|花不出去|不够花|太省|省太多|"
+    r"spend\s+it\s+all|use\s+it\s+all|not\s+using\s+(?:\w+\s+)?enough",
+    re.IGNORECASE,
+)
+
+
+def budget_adjust_direction(message: str) -> str | None:
+    """预算调整的**方向**：`'raise'` / `'lower'` / `None`（没方向，或根本不是调整）。
+
+    两侧同时命中（「预算高一点低一点都行」这类含糊句）时返回 None —— 不猜，
+    由调用方落回默认文案。
+    """
+    text = message or ""
+    if not is_budget_adjust(text):
+        return None
+    up = bool(_BUDGET_RAISE_RE.search(text))
+    down = bool(_BUDGET_LOWER_RE.search(text))
+    if up and not down:
+        return "raise"
+    if down and not up:
+        return "lower"
+    return None
+
+
+def is_budget_underuse(message: str) -> bool:
+    """用户是不是在抱怨「预算没花完 / 花得太省」（= 要求把开销抬上去）。"""
+    return bool(BUDGET_UNDERUSE_RE.search(message or ""))
 
 
 # ---------------------------------------------------------------- 行程内迭代（市场对标）
@@ -1445,7 +1613,7 @@ _REVISE_VERB_RE = re.compile(
 )
 _ITIN_ASPECT_RE = re.compile(
     r"行程|安排|路线|行程表|计划|景点|玩法|住宿|酒店|民宿|美食|餐厅|吃饭|餐饮|"
-    r"交通|出行|购物|活动|门票|节奏|天数|时间|预算|花费|"
+    r"交通|出行|购物|活动|门票|节奏|天数|时间|预算|花费|开销|花销|总价|"
     # 英文的行程要素词也必须进表 —— 否则「Change the hotel to something cheaper」的
     # 判据②（修改动词 + 要素词）拿不到要素词，会掉进「预算调整」被追问一句目标预算
     # （真 bug 2026-10-06 长会话 C2；连我们自己的关联问题模板「Switch to cheaper hotels」

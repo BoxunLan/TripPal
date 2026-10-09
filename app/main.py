@@ -5,6 +5,7 @@ from __future__ import annotations
 import asyncio
 import json
 import logging
+import os
 import time
 import uuid
 from typing import AsyncIterator
@@ -28,6 +29,19 @@ from .schemas import (
 )
 
 logger = logging.getLogger("travel")
+
+# 「travel」这一族的日志默认**没有任何 handler** —— 只会经 root 的 lastResort 吐出
+# WARNING 及以上，于是 `app/llm.py` 里那些 INFO 级的「每次模型调用（档位 / 耗时 / 超时）」
+# 在服务日志里根本看不见，「下次再慢，看日志就知道」就落空了（2026-10-09 实测确认）。
+# 这里给这个 logger 单独挂 handler，不动 root，免得把 httpx 之类第三方库一起放大。
+# 级别用 TRAVEL_LOG_LEVEL 调（默认 INFO；设 WARNING 就只留失败与偏慢的）。
+if not logger.handlers:
+    _handler = logging.StreamHandler()
+    _handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(name)s %(message)s"))
+    logger.addHandler(_handler)
+logger.setLevel(
+    getattr(logging, os.environ.get("TRAVEL_LOG_LEVEL", "INFO").strip().upper(), logging.INFO)
+)
 
 WEB_INDEX = REPO_ROOT / "web" / "index.html"
 
@@ -328,8 +342,9 @@ def create_app(deps: Deps | None = None) -> FastAPI:
     async def plan_stream(request: PlanRequest) -> StreamingResponse:
         """和 /plan 同一条链路，但每跑完一个节点就推一行 NDJSON。
 
-        存在的理由：真实模型一条链路 15–40s，最长 3 分钟（最多 3 次模型调用 × 单次
-        上限 60s）。这段等待里如果只有客户端计时，浏览器会把不可见标签页的定时器
+        存在的理由：真实模型一条链路 11–115s（2026-10-07 实测 5 条，中位 ~75s），
+        回炉重生成时可达 3 分钟；分档超时为分类 ≤15s、生成 ≤180s。这段等待里如果只有
+        客户端计时，浏览器会把不可见标签页的定时器
         节流到分钟级 —— 用户看到的就是「一直转圈、已等 0s」，无法区分是慢还是挂了。
         由服务端来推事件，进度才是真的。
 

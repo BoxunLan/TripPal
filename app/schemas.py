@@ -337,7 +337,7 @@ class GuideResponse(BaseModel):
     """
 
     type: Literal["guide"] = "guide"
-    kind: str = "greeting"              # greeting / thanks / farewell / meta
+    kind: str = "greeting"              # greeting / thanks / farewell / cancel / chitchat / meta / recall
     message_echo: str = ""              # 用户原话
     reply: str = ""                     # 引导话术（跟输出语言）；空则用 i18n 定稿
     starters: list[str] = Field(default_factory=list)  # 建议提问（点击即发）
