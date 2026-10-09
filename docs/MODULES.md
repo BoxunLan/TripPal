@@ -36,12 +36,12 @@
 └──────────────────────────┬─────────────────────────────────┘
                            │ 只被 L3 使用
 ┌─ L2 领域功能层 ───────────▼─────────────────────────────────┐
-│  slots(1855)   槽位抽取+澄清问题     intent(1082)  意图三分类 │
+│  slots(1861)   槽位抽取+澄清问题     intent(1092)  意图三分类 │
 │  knowledge(1464) 常识问答复核入口     generate(412) 行程生成  │
 │  validate(409)  预算/事实/护栏校验    realtime(185) 实时事实  │
-│  retrieve(170)  分层检索+工具        guide(159) 寒暄引导    │
+│  retrieve(170)  分层检索+工具        guide(195) 寒暄引导    │
 │  classifier(122) 场景分类           router(97)  路线+叠加层 │
-│  followups(403) 追问建议                                    │
+│  followups(460) 追问建议                                    │
 └──────────────────────────┬─────────────────────────────────┘
                            │ 只依赖协议，不依赖实现
 ┌─ L1 基础设施适配层 ────────▼─────────────────────────────────┐
@@ -51,7 +51,7 @@
 └──────────────────────────┬─────────────────────────────────┘
                            │
 ┌─ L0 底座 ──────────────────▼─────────────────────────────────┐
-│  config(203) 配置    schemas(461) 数据契约    i18n(886) 多语言│
+│  config(203) 配置    schemas(505) 数据契约    i18n(900) 多语言│
 │  pricing(68) 计价（零依赖纯函数）                            │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -75,19 +75,19 @@
 |---|---|---|---|---|---|
 | `pricing` | 68 | 把种子里的 `cost`+`cost_unit` 折算成整趟金额 | `line_total(meta,days,pax)` | 无 | **L0** |
 | `i18n` | 886 | 语言判定 + 用户可见文案 + 提示词语言段 | `detect_language` `t` `output_language_directive` | 无 | **L0** |
-| `schemas` | 461 | 全部请求/响应/中间结构的 pydantic 契约 | 各类 BaseModel | `i18n` | **L0**（建议整份拿走） |
-| `slots` | 1855 | 中文口语槽位抽取、澄清问题、表单直填通道 | `extract_slots` `slots_from_form` `merge_slots` `missing_slots` | `config` `i18n` | **L1** |
-| `intent` | 1082 | 三分类前门：实时事实 / 常识 / 寒暄（确定性，不调模型） | `detect_realtime_intent` `detect_knowledge_intent` `detect_social_intent` `carry_over_subject` | `config` `slots` | **L1** |
-| `followups` | 403 | 每轮后的「接着可以问」建议 | `next_questions` | `i18n` | **L1** |
+| `schemas` | 505 | 全部请求/响应/中间结构的 pydantic 契约 | 各类 BaseModel | `i18n` | **L0**（建议整份拿走） |
+| `slots` | 1861 | 中文口语槽位抽取、澄清问题、表单直填通道 | `extract_slots` `slots_from_form` `merge_slots` `missing_slots` | `config` `i18n` | **L1** |
+| `intent` | 1092 | 三分类前门：实时事实 / 常识 / 寒暄（确定性，不调模型） | `detect_realtime_intent` `detect_knowledge_intent` `detect_social_intent` `carry_over_subject` | `config` `slots` | **L1** |
+| `followups` | 460 | 每轮后的「接着可以问」建议（**模型为主、模板兜底** + `clean_chips` 洗净） | `next_questions` `clean_chips` | `i18n` | **L1** |
 | `prompts` | 210 | 提示词模板加载 + 叠加层拼装 | `load_prompt` `build_generate_prompt` … | `config` `i18n` `schemas` | **L1** |
 | `classifier` | 122 | 场景分类（调模型） | `classify` | `llm` `prompts` `slots` | **L2** |
 | `router` | 97 | 分类结果 → 路线 + 叠加层 | `build_route` | `prompts` `schemas` | **L2** |
 | `retrieve` | 170 | 分层检索 + 信息类工具调用 | `retrieve_context` `run_info_tools` | `store` `embedder` | **L2** |
-| `generate` | 412 | 行程生成 + 引用/清单组装 | `generate_plan` `assemble_citations` `assemble_checklist` | `llm` `prompts` | **L2** |
+| `generate` | 413 | 行程生成 + 引用/清单组装 | `generate_plan` `assemble_citations` `assemble_checklist` | `llm` `prompts` | **L2** |
 | `validate` | 409 | 预算 / 事实 / 护栏三项校验 | `run_validation` `check_budget` `check_fact` | `pricing` `tools` | **L2** |
 | `realtime` | 185 | 实时事实检索 + 过期闸门 + 响应组装 | `search_realtime_facts` `build_realtime_response` | `store` | **L2** |
-| `knowledge` | 1464 | 常识问答：检索相关条目 + 模型作答 + 复核入口 | `search_knowledge` `answer_question` `build_answer_response` | `llm` `store` `intent` | **L2** |
-| `guide` | 159 | 寒暄引导语：**套话直答（问候/致谢/道别/取消/纯笑声 chitchat，不调模型）** + `meta` 走模型 | `scripted_reply` `compose_guide` `build_guide_response` | `llm` | **L2** |
+| `knowledge` | 1467 | 常识问答：检索相关条目 + 模型作答 + 复核入口 | `search_knowledge` `answer_question` `build_answer_response` | `llm` `store` `intent` | **L2** |
+| `guide` | 195 | 寒暄引导语：**套话直答（问候/致谢/道别/取消/纯笑声 chitchat，不调模型）** + `meta` 走模型（顺带产出「试着这样问」的 `starters`，模型为主）；兜底 `starters()` 两套 i18n 池子按轮次滑窗 | `scripted_reply` `compose_guide` `build_guide_response` `starters` | `llm` `followups` | **L2** |
 | `llm` | 234 | **协议** `LLMClient` + OpenAI 兼容实现（分档超时 / 档位记忆 / 逐次日志） | `build_llm` `ChatLLM` | `config` | **L1**（可直接复用或自实现） |
 | `embed` | 122 | **协议** `Embedder` + hash/API 两种实现 | `build_embedder` `HashingEmbedder` | 无 | **L0/L1** |
 | `store` | 302 | **协议** `VectorStore` + 内存/pgvector 实现 | `build_store` `InMemoryVectorStore` | `embed` `schemas` | **L1** |

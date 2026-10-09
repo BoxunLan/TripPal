@@ -24,27 +24,27 @@
 | 文件 | 行 | 职责 |
 |---|---|---|
 | `main.py` | 405 | FastAPI 入口，装配依赖、注册路由；含八步进度通道（start + progress 轮询 / stream）与 `GET /session/{id}`（会话快照） |
-| `graph.py` | 1071 | 七节点主干 + `realtime` / `knowledge` / `guide` 三条旁路，条件边；追问承接（`carry_over`）、方位指代（`locative_referent`）、**对话上下文装配 `carry_context`**（上一轮原话 + 答复）、**常识旁路补写会话槽位**（来源国等）与审计落盘 |
-| `intent.py` | 1082 | **意图闸门**：判断这条请求要的是行程、实时事实、静态常识还是寒暄（确定性，不调模型）；含追问承接守卫 `carry_over_subject`、方位指代解引用、**本句是否自带主体**的判据（`_is_degenerate_subject`：残片 / 骨架 / 占位名词 / 指代碎片）与主体切分的残片处理 |
+| `graph.py` | 1121 | 七节点主干 + `realtime` / `knowledge` / `guide` 三条旁路，条件边；追问承接（`carry_over`）、方位指代（`locative_referent`）、**对话上下文装配 `carry_context`**（上一轮原话 + 答复）、**常识旁路补写会话槽位**（来源国等）与审计落盘 |
+| `intent.py` | 1092 | **意图闸门**：判断这条请求要的是行程、实时事实、静态常识还是寒暄（确定性，不调模型）；含追问承接守卫 `carry_over_subject`、方位指代解引用、**本句是否自带主体**的判据（`_is_degenerate_subject`：残片 / 骨架 / 占位名词 / 指代碎片）与主体切分的残片处理 |
 | `realtime.py` | 185 | 实时事实：扫实时层 + 相关性与时效两道闸门 + 答复装配（**不调模型**） |
-| `knowledge.py` | 1464 | 常识问询：扫 scene/general + 地点作用域 + **按问句词面打分排序（IDF，实词先折「V不V」、摘是非问确认尾）** + **模型通用常识作答**（含指代与上一轮上下文 `{{context}}`）+ 复核入口；标题合成 `display_topic`；「沾主体」判定 `_related_keys`；**来源国类比**（`nationality`）与话题判定 `culture_food_topic` |
-| `guide.py` | 159 | 寒暄/元问题旁路：问候/致谢/道别/取消/**纯笑声闲话（chitchat）定稿直答（不调模型）**，仅 `meta` 走 `compose_guide` 润色；「刚才我说了什么」由历史确定性作答（recall） |
-| `followups.py` | 403 | 每轮后的「接着可以问」建议（`next_questions`），确定性生成；**按轮次轮换窗口**（`offset`）并在用户刚用过某条时把它摘掉（`avoid`）—— 否则同一会话连出几版稿，建议栏一字不差 |
-| `slots.py` | 1855 | **确定性**槽位抽取（目的地/天数/预算/同行人/**用户来源国**），含表单直填通道 `slots_from_form`；不调模型 |
+| `knowledge.py` | 1467 | 常识问询：扫 scene/general + 地点作用域 + **按问句词面打分排序（IDF，实词先折「V不V」、摘是非问确认尾）** + **模型通用常识作答**（含指代与上一轮上下文 `{{context}}`）+ 复核入口；标题合成 `display_topic`；「沾主体」判定 `_related_keys`；**来源国类比**（`nationality`）与话题判定 `culture_food_topic` |
+| `guide.py` | 195 | 寒暄/元问题旁路：问候/致谢/道别/取消/**纯笑声闲话（chitchat）定稿直答（不调模型）**，仅 `meta` 走 `compose_guide` 润色，**并在同一次调用里顺带产出「试着这样问」的 `starters`**（模型为主）；兜底 `starters()` 把 `gd.starters` + `gd.starters_extra` **两套 i18n 池子按会话轮次滑窗**（连点两次「你好」示例提问不再一字不差）；「刚才我说了什么」由历史确定性作答（recall） |
+| `followups.py` | 460 | 每轮后的「接着可以问」建议。**模型为主、模板兜底**：`plan`/`answer` 在同一次生成 / 作答调用里顺手写（零额外延迟），本模块的 i18n 模板是兜底；`clean_chips` 洗净模型建议（去空 / 去重 / **复读用户原话一字之差也剔除** / 限长）；兜底路径仍**按轮次轮换窗口**（`offset`）并摘掉刚用过的那条（`avoid`） |
+| `slots.py` | 1861 | **确定性**槽位抽取（目的地/天数/预算/同行人/**用户来源国**），含表单直填通道 `slots_from_form`；不调模型 |
 | `classifier.py` | 122 | 场景分类节点（小模型） |
 | `router.py` | 97 | 置信度门控 + 多标签融合 → `RouteConfig` |
 | `retrieve.py` | 170 | 元数据预过滤 → **全层时效闸门**（`fresh_until` 过期即丢，计 `dropped_stale`）→ 向量召回 → 按层配额截断 |
-| `generate.py` | 412 | Plan-and-Execute 产物组装 |
+| `generate.py` | 413 | Plan-and-Execute 产物组装 |
 | `validate.py` | 409 | 并行三项校验 + 严重分级 |
 | `prompts.py` | 210 | 基座提示词 + 按优先级拼接叠加层 |
-| `schemas.py` | 461 | 全部 Pydantic 模型 |
+| `schemas.py` | 505 | 全部 Pydantic 模型 |
 | `config.py` | 203 | 环境变量 + `routes.yaml` 唯一读取入口 |
 | `store.py` | 302 | 向量库：内存实现 / pgvector 实现 |
 | `embed.py` | 122 | Embedding：本地 hash / 真实 API，含分批 |
 | `llm.py` | 234 | LLM 访问层 |
 | `tools.py` | 216 | 工具白名单：`opening_hours` / `budget_sum` / `visa_policy` |
 | `pricing.py` | 68 | 费用折算口径，`fakes.py` 与 `validate.py` 共用 |
-| `i18n.py` | 886 | 语言判定 + 用户可见文案（含提示词的两个语言段生成器） |
+| `i18n.py` | 900 | 语言判定 + 用户可见文案（含提示词的两个语言段生成器） |
 | `fakes.py` | 348 | 离线假 LLM（`provider=fake`），测试用；含常识作答桩 |
 | `session.py` | 214 | 会话：槽位 + **轮次轨迹（`recent`）+ 最近事实主体/地点/实词**，`GET /session` 读它；审计落 `.workbuddy/audit/turns-*.jsonl`（进程内，重启即丢） |
 | `deps.py` | 55 | 依赖容器（含审计目录与 `SessionStore` 装配） |

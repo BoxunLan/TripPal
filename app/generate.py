@@ -98,13 +98,14 @@ def _coerce_flattened(raw: Any) -> GeneratorOutput | None:
     """
     if not isinstance(raw, dict) or "itinerary" in raw:
         return None
-    inner = {k: v for k, v in raw.items() if k != "suggestions"}
+    # `suggestions` 与 `followups` 是**顶层**的附带数组，不属于 Itinerary ——
+    # 摊平时必须把它们摘出来原样带过去，否则模型写的建议会被当成 Itinerary 的多余字段。
+    carry = {k: raw[k] for k in ("suggestions", "followups") if k in raw}
+    inner = {k: v for k, v in raw.items() if k not in ("suggestions", "followups")}
     if not ({"days", "title", "destination"} & set(inner)):
         return None
     try:
-        return GeneratorOutput.model_validate(
-            {"itinerary": inner, "suggestions": raw.get("suggestions") or []}
-        )
+        return GeneratorOutput.model_validate({"itinerary": inner, **carry})
     except ValidationError:
         return None
 

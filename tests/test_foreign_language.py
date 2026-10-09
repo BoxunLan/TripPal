@@ -135,3 +135,66 @@ def test_foreign_greeting_does_not_swallow_a_real_request(client):
     """带目的地的英文寒暄开头仍走行程链路，不被招呼吞掉。"""
     body = post_plan(client, "Hello, I want to visit Beijing for 3 days", session_id="foreign-mix")
     assert body["type"] != "guide", "带真请求的寒暄被当成纯寒暄吞掉了"
+
+
+# ---------------------------------------------------------------- 实时门：日 / 韩开放时间
+@pytest.mark.parametrize(
+    "message",
+    [
+        "故宮の入場時間は何時ですか",
+        "故宮は何時に開きますか",
+        "자금성 개방 시간은 몇 시예요",
+        "자금성은 몇 시에 문을 여나요",
+    ],
+)
+def test_ja_ko_opening_hours_go_to_the_realtime_gate(deps, message):
+    """日 / 韩的「开放时间」问句必须进实时闸门 —— 与中 / 英同义。
+
+    真 bug（2026-10-09 多语言对话探针实测）：「故宮の入場時間は何時ですか」
+    「자금성 개방 시간은 몇 시예요」两道闸门全灭 → 掉回 clarify 四连问，而**同一句英文**
+    「What are the opening hours of the Forbidden City?」能进本闸门。
+    修法：给实时门 schedule 补日 / 韩的「开放 + 时间」构造。
+    """
+    intent = detect_realtime_intent(message, deps.settings, {})
+    assert intent is not None, f"{message} 没进实时闸门"
+    assert intent.info_type == "schedule", intent.info_type
+
+
+@pytest.mark.parametrize(
+    "message",
+    [
+        "ラッシュ時はいつ",
+        "혼잡한 시간은?",
+        "何時に行けば空いていますか",
+        "지하철 몇 시에 붐벼요",
+    ],
+)
+def test_ja_ko_crowd_questions_are_not_realtime(deps, message):
+    """反向护栏：裸「何時 / 몇 시」问的是**人流 / 什么时段**，归常识门，不许被实时门抢走。"""
+    assert detect_realtime_intent(message, deps.settings, {}) is None, message
+
+
+@pytest.mark.parametrize(
+    "message",
+    ["故宮の入場時間は何時ですか", "자금성 개방 시간은 몇 시예요"],
+)
+def test_ja_ko_opening_hours_never_fall_back_to_clarify(client, message):
+    """端到端：不得落到澄清器（四连问）。"""
+    body = post_plan(
+        client, message, session_id="foreign-open-" + str(abs(hash(message)) % 9999)
+    )
+    assert body["type"] == "realtime", f"{message} 落到了 {body.get('type')}：{body}"
+
+
+def test_japanese_realtime_subject_drops_the_trailing_particle(deps):
+    """日文助词不是主体的一部分：「故宮の入場時間」→ 主体「故宮」，不是「故宮の」。
+
+    真 bug（2026-10-09 多语言对话探针实测）：卡片标题曾写成「关于「故宮の」」。
+    """
+    for message, want in (
+        ("故宮の入場時間は何時ですか", "故宮"),
+        ("故宮は何時に開きますか", "故宮"),
+    ):
+        intent = detect_realtime_intent(message, deps.settings, {})
+        assert intent is not None, message
+        assert intent.subject == want, f"{message} 的主体是 {intent.subject!r}"

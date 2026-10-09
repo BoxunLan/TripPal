@@ -44,7 +44,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from .config import Settings
-from .slots import resolve_destinations
+from .slots import is_budget_adjust, is_plan_revision, resolve_destinations
 
 INTENT_KEY = "realtime_fact"
 
@@ -59,7 +59,10 @@ _HEAD_NOISE = re.compile(
     r"hello|hi|hey|please|can you tell me)[,，、:：\s]*",
     re.IGNORECASE,
 )
-_TAIL_NOISE = re.compile(r"[\s?？!！。，,、;；:：的了吗呢啊呀吧]+$")
+# 日文助词（の / は / が / を / に / で / と / へ / も）与中文助词同职，都要从主体末尾摘掉：
+# 「故宮の入場時間は何時ですか」的主体是「故宮」，不是「故宮の」—— 真 bug（2026-10-09
+# 多语言对话探针实测：卡片标题曾写成「关于「故宮の」」）。
+_TAIL_NOISE = re.compile(r"[\s?？!！。，,、;；:：的了吗呢啊呀吧のはがをにでとへも]+$")
 # matched 里的疑问词/时间词（它们对检索没用，留在 query 里会稀释向量；留在主语里会让
 # 「厦门下周天气」的主语变成「厦门下周」而不是「厦门」，相关性闸门就再也对不上了）
 _QUERY_STOP = re.compile(
@@ -857,6 +860,13 @@ def detect_knowledge_intent(
     for pattern in cfg.get("plan_verbs") or []:
         if re.search(pattern, text, re.IGNORECASE):
             return None
+    # 让路 2.5：**行程内调整**（改预算 / 改某一版的要素）是「对这一版的指令」，不是「问事」
+    # —— 要落到 `graph` 的预算调整 / 改稿分支上。出稿后一旦把上一轮主体推进到目的地
+    # （见 `app/graph.py::output_node`），「太贵了，能便宜点吗」「提高开销」这类短句会被
+    # 承接成目的地 + 常识作答，而不是追问目标预算。真回归（2026-10-09）：
+    # `test_budget_feedback` / `test_dialog_flow` 两条转红。
+    if is_budget_adjust(text) or is_plan_revision(text):
+        return None
 
     hit: re.Match[str] | None = None
     for pattern in triggers:

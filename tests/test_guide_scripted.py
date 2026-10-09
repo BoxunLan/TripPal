@@ -151,3 +151,21 @@ def test_every_scripted_kind_has_a_fallback_in_every_supported_language():
 def test_scripted_kinds_are_exactly_the_social_formulas():
     """把集合本身钉住：增删都要有人看一眼（新增 kind 先问「回复会随用户说的话变吗」）。"""
     assert set(SCRIPTED_KINDS) == {"greeting", "thanks", "farewell", "cancel", "chitchat"}
+
+
+# ---------------------------------------------------------- 提示词主题护栏
+def test_guide_prompt_pins_the_inbound_china_theme():
+    """`meta` 的示例提问必须是「外国游客来中国」，不是中国游客出境。
+
+    真 bug（2026-10-09 探针实测，真模型 ecnu-max）：`guide.md` 规则 7 只说「覆盖不同方向」，
+    模型照着写成了「去日本玩需要办什么签证？/ 出国玩怎么绑卡支付？」—— 与「外国人来华」
+    这个唯一垂直定位冲突。修法是在 `prompts/guide.md` 里把主题写成硬约束。
+    这里钉住那条约束**还在**（改提示词时删掉它，问题只会静默复发）。
+    """
+    from app.config import get_settings
+    from app.prompts import load_prompt
+
+    text = load_prompt(get_settings().prompt_paths.get("guide", "prompts/guide.md"))
+    assert "外国游客来中国" in text, "guide.md 缺「主题恒为外国游客来中国」的硬约束"
+    # 反面词也要点名，否则模型不知道「不能写什么」
+    assert "出境" in text or "去日本" in text, "没把「不要写出境问题」说清楚"

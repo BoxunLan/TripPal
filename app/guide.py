@@ -55,6 +55,7 @@ import json
 from pydantic import ValidationError
 
 from .config import Settings
+from .followups import clean_chips
 from .i18n import DEFAULT, answer_language_directive, t
 from .intent import SocialIntent
 from .llm import LLMError
@@ -63,11 +64,30 @@ from .schemas import GuideDraft, GuideResponse
 
 # 引导末尾附的「建议提问」（点击即发）。文案在 i18n，跟输出语言。
 STARTER_SEP = "|"
+# 每屏显示几条。`gd.starters`（主）+`gd.starters_extra`（备用池）合成一个池子，
+# 按轮次**轮换窗口**取这么多条 —— 只有一套定稿时，连点两次「你好」示例提问一字不差（死板）。
+STARTER_COUNT = 4
 
 
-def starters(language: str = DEFAULT) -> list[str]:
-    raw = t("gd.starters", language)
-    return [s.strip() for s in raw.split(STARTER_SEP) if s.strip()]
+def starters(language: str = DEFAULT, offset: int = 0) -> list[str]:
+    """「试着这样问」的**兜底**文案：模型没给 starters 时才用它（见 `build_guide_response`）。
+
+    `gd.starters` 与 `gd.starters_extra` 合成一个池子，按 `offset` 轮换出一个
+    `STARTER_COUNT` 条的窗口 —— 同一会话连点几次「你好」，示例提问不再一字不差。
+    `offset` 取会话轮次（`graph.output_node` 传 `sessions.turn`）。
+    """
+    pool: list[str] = []
+    for key in ("gd.starters", "gd.starters_extra"):
+        raw = t(key, language)
+        if raw == key:  # i18n 缺这条文案 → 跳过（别把 key 本身当建议）
+            continue
+        pool.extend(s.strip() for s in raw.split(STARTER_SEP) if s.strip())
+    if not pool:
+        return []
+    if offset and len(pool) > STARTER_COUNT:
+        k = offset % (len(pool) - STARTER_COUNT + 1)
+        pool = pool[k:] + pool[:k]
+    return pool[:STARTER_COUNT]
 
 
 # 封闭式社交套话：问候 / 致谢 / 道别 / 取消 / **纯笑声闲话**。它们的答复是固定的，定稿即答案
@@ -111,8 +131,12 @@ def compose_guide(
     intent: SocialIntent,
     message: str = "",
     language: str = DEFAULT,
-) -> str:
-    """让通用模型写一句引导语。**失败不抛异常，返回空串**（调用方退回定稿文案）。"""
+) -> GuideDraft | None:
+    """让通用模型写一句引导语（外加「试着这样问」的示例提问）。
+
+    **失败不抛异常，返回 None**（调用方退回定稿文案与定稿 starters）。
+    返回整个 draft 而不是只返回 reply，是为了把模型顺手写的 `starters` 一并带出去。
+    """
     try:
         raw = llm.complete_json(
             role="generator",
@@ -128,13 +152,15 @@ def compose_guide(
             },
         )
     except LLMError:
-        return ""
+        return None
     if not isinstance(raw, dict):
-        return ""
+        return None
     try:
-        return (GuideDraft.model_validate(raw).reply or "").strip()
+        draft = GuideDraft.model_validate(raw)
     except ValidationError:
-        return ""
+        return None
+    draft.reply = (draft.reply or "").strip()
+    return draft if (draft.reply or draft.starters) else None
 
 
 def build_guide_response(
@@ -144,16 +170,26 @@ def build_guide_response(
     reply: str = "",
     message: str = "",
     language: str = DEFAULT,
+    starters_override: list[str] | None = None,
+    starters_offset: int = 0,
 ) -> GuideResponse:
-    """组装答复。整段用户可见文案跟输出语言。模型没给话术就退回 i18n 定稿。"""
+    """组装答复。整段用户可见文案跟输出语言。模型没给话术就退回 i18n 定稿。
+
+    「试着这样问」以**模型同一次调用里写的几条**为主（`starters_override`），
+    为空才退回 i18n 定稿 —— 定稿现在也只是兜底：`starters()` 会把两套池子按
+    `starters_offset`（会话轮次）轮换，不再是一成不变的那 4 条。
+    """
     text = (reply or "").strip() or t(f"gd.reply.{intent.kind}", language) or t(
         "gd.reply.greeting", language
+    )
+    chips = clean_chips(starters_override, limit=STARTER_COUNT) or starters(
+        language, offset=starters_offset
     )
     return GuideResponse(
         kind=intent.kind,
         message_echo=message,
         reply=text,
-        starters=starters(language),
+        starters=chips,
         note=t("gd.note", language),
         disclaimer=t("gd.disclaimer", language),
     )

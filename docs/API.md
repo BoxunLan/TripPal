@@ -118,6 +118,9 @@ citations=6   validation.passed=True
 next_questions = ["把第 3 天安排得轻松一点", "住宿换成便宜一点的"]
 ```
 
+> **`next_questions`（「接着可以问」）与 `starters`（「试着这样问」）自 2026-10-09 起是「模型为主、模板兜底」**：`plan` / `answer` / `guide` 在同一次模型调用里顺手写（零额外延迟），洗净后使用（去空 / 去重 / 复读用户原话一字之差也剔除）；模型没给 / 不合规 / `realtime` 才退回 `app/followups.py` 的 i18n 定稿。上面样例是**兜底模板**的形态。
+> `starters`（「试着这样问」）的兜底还会把 `gd.starters` + `gd.starters_extra` **两套 i18n 池子按会话轮次滑窗** —— 同一会话连点两次「你好」，示例提问不再一字不差；`meta`（你是谁 / 能做什么）走模型，示例提问随那次调用产出（主题恒为「外国游客来中国」）。
+
 请求 `{"session_id":"demo-stream","message":"天安门几点升旗？"}`（走实时旁路，无需模型，毫秒级）：
 
 ```json

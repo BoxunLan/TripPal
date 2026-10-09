@@ -122,3 +122,38 @@ def test_budget_survives_word_order_and_bare_amount(text, want):
 def test_bare_amount_does_not_eat_scene_prices():
     """反向护栏：「门票 3 万元」是单价，不是整趟预算。"""
     assert _slots("门票3万元").get("budget") is None
+
+
+# ------------------------------------------------------------------ ⑤ 韩文「월 / 일」日期
+def test_korean_month_day_is_a_date_not_a_duration():
+    """韩文「10월 20일」是**某月 20 号**，不是 20 天。
+
+    真 bug（2026-10-09 多语言对话探针实测）：「10월 20일, 2명, 예산 3만 위안」出稿成了
+    「상하이 20일 여행 일정」（20 天行程）—— 与 2026-10-08 修掉的日语「10月20日 → 20 天」
+    同源，当时只覆盖了中文 / 日文，韩文的 월 / 일 漏了。
+    """
+    slots = _slots("10월 20일, 2명, 예산 3만 위안")
+    assert slots.get("days") is None, "「20일」是某月 20 号，不是 20 天"
+    assert slots.get("date_range") == "10월 20일"
+    assert str(slots.get("start_date") or "").endswith("-10-20"), slots.get("start_date")
+
+
+def test_korean_month_day_without_space():
+    """韩文也常不写空格：「10월20일」。"""
+    slots = _slots("10월20일, 2명")
+    assert slots.get("days") is None
+    assert str(slots.get("start_date") or "").endswith("-10-20")
+
+
+def test_korean_relative_month_day():
+    """「다음 달 20일」= 下月 20 日；「이번 달 20일」= 本月 20 日（의 是属格助词）。"""
+    for text in ("다음 달 20일, 2명", "다음 달의 20일", "이번 달 20일, 2명"):
+        slots = _slots(text)
+        assert slots.get("days") is None, text
+        assert slots.get("start_date"), text
+
+
+def test_korean_duration_still_works():
+    """反向护栏：韩文真正的时长（「5일」「3박 4일」）不能被日期规则误伤。"""
+    assert _slots("베이징 5일 여행").get("days") == 5
+    assert _slots("3박 4일").get("days") == 4

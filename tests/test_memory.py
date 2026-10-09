@@ -240,3 +240,26 @@ def test_remember_fact_ignores_empty_values(deps):
 
     assert store.get("s").last_fact_subject == "上海"
     assert store.get("s").last_fact_place == "中国"
+
+
+# ---------------------------------------------------------------- 出稿推进话题
+def test_a_plan_advances_the_topic_for_the_next_followup(client):
+    """行程出稿后，省略式追问要接到**这一版行程**上，而不是更早那轮的事实主体。
+
+    真 bug（2026-10-09 多语言对话探针实测）：「西湖有多大」→「北京玩 3 天」出稿 →
+    「那要预约吗」被答成了**西湖** —— 出稿没推进 `last_fact_subject`，承接停在了两轮之前。
+    """
+    session = "mem-plan-topic"
+    first = post_plan(client, "上海博物馆要预约吗", session_id=session)
+    plan = post_plan(
+        client, "想去北京玩 3 天，两个人，预算 3000，帮我排个行程", session_id=session
+    )
+    after = post_plan(client, "那要预约吗？", session_id=session)
+
+    assert first["type"] == "answer" and first["subject"] == "上海博物馆", first
+    assert plan["type"] == "plan", plan
+    assert after["type"] == "answer", f"追问掉回槽位体检了：{after}"
+    assert after["subject"] == "北京", f"追问停在了更早那轮的主体上：{after['subject']!r}"
+
+    snap = client.get(f"/session/{session}").json()
+    assert snap["last_fact_subject"] == "北京", snap

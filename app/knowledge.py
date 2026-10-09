@@ -1461,4 +1461,7 @@ def build_answer_response(
         note=note,
         plan_hint=t("rt.plan_hint", language),
         disclaimer=t("kn.disclaimer", language),
+        # 「接着可以问」以**模型同一次作答里写的那几条**为主（不额外调模型）；
+        # 为空时 `app/graph.py` 退回定稿模板。见 `prompts/answer.md` 规则 9。
+        next_questions=list(draft.followups or []),
     )

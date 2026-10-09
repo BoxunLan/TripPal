@@ -29,7 +29,7 @@ from langgraph.graph import END, StateGraph
 
 from .classifier import classify
 from .deps import Deps
-from .followups import next_questions
+from .followups import clean_chips, next_questions
 from .generate import GenerationError, assemble_checklist, assemble_citations, generate_plan
 from .guide import build_guide_response, compose_guide, scripted_reply
 from .i18n import detect_language, t
@@ -169,6 +169,9 @@ class PlanState(TypedDict, total=False):
     # 旁路 3：判定为寒暄 / 闲话 / 元问题时的意图与模型给出的引导语
     social_intent: SocialIntent
     guide_reply: str
+    # 「试着这样问」的示例提问：模型在同一次寒暄调用里写的（见 `app/guide.py`）。
+    # 为空 = 退回 i18n 定稿 `gd.starters`。
+    guide_starters: list[str]
     classification: SceneClassificationResult
     route_config: RouteConfig
     context: RetrievedContext
@@ -697,14 +700,17 @@ def build_graph(deps: Deps):
         if scripted is not None:
             return {"guide_reply": scripted}
         # 只剩 `meta`（你是谁 / 能做什么）—— 七类里唯一的真实问句，值得一次润色。
-        reply = compose_guide(
+        draft = compose_guide(
             settings=settings,
             llm=deps.llm,
             intent=intent,
             message=state["message"],
             language=language,
         )
-        return {"guide_reply": reply}
+        if draft is None:
+            # 模型没给 / 挂了 → 空 patch，`output` 退 i18n 定稿（reply 与 starters 都是）。
+            return {}
+        return {"guide_reply": draft.reply, "guide_starters": list(draft.starters or [])}
 
     # ------------------------------------------------------------- classify
     def classify_node(state: PlanState) -> PlanState:
@@ -809,7 +815,11 @@ def build_graph(deps: Deps):
         )
         tools.update(outcome.tool_results)
         repaired = GeneratorOutput(
-            itinerary=outcome.itinerary, suggestions=state["draft"].suggestions
+            itinerary=outcome.itinerary,
+            suggestions=state["draft"].suggestions,
+            # 校验重建 draft 时**必须**把模型写的 followups 带上 —— 少了它，建议栏会
+            # 悄悄退回模板（真 bug 2026-10-09 实测：模型建议写到了 draft，却到不了 output）。
+            followups=list(getattr(state["draft"], "followups", []) or []),
         )
         findings: list[str] = []
         for check in outcome.report.checks:
@@ -878,6 +888,10 @@ def build_graph(deps: Deps):
                 reply=state.get("guide_reply") or "",
                 message=state["message"],
                 language=output_language(state),
+                starters_override=list(state.get("guide_starters") or []),
+                # 示例提问兜底按轮次轮换窗口（模型没给 starters 的套话类才用得到）——
+                # 同一会话连点两次「你好」，示例提问不再一字不差。见 `app/guide.py:starters`。
+                starters_offset=deps.sessions.get(session_id).turn,
             )
         elif decision == "clarify" and state.get("draft") is None:
             response = ClarifyResponse(
@@ -957,6 +971,21 @@ def build_graph(deps: Deps):
                 )
                 # 记下**完整响应**，供「行程再给我看看」原样重放（见 `Session.last_plan`）。
                 deps.sessions.remember_plan(session_id, response.model_dump(mode="json"))
+                # 行程出稿后，把「上一轮的事实主体」推进到这一版的**目的地**。
+                # 省略式追问（「那要预约吗」）承接的是「最近在聊的那个地方」；出稿不推进
+                # 话题，它就会接到**更早**那一轮的事实主体上。真 bug（2026-10-09 多语言
+                # 对话探针实测）：会话「西湖有多大」→「北京玩 3 天」出稿 →「那要预约吗」
+                # 被答成了**西湖**（主体停在两轮之前）。
+                plan_dest = (getattr(response.itinerary, "destination", "") or "").strip()
+                if not plan_dest:
+                    plan_dest = str(
+                        deps.sessions.get(session_id).slots.get("destination") or ""
+                    ).strip()
+                if plan_dest:
+                    # terms 也一并重置：留着上一轮（西湖）的实词会把检索拉偏。
+                    deps.sessions.remember_fact(
+                        session_id, subject=plan_dest, place=plan_dest, terms=[plan_dest]
+                    )
                 # 让会话槽位的天数跟着**稿子**走。迭代里「去掉第 4 天」只改稿、不改槽位，
                 # 不跟的话下一句「再加一天」会按旧的 5 天算（真 bug 2026-10-06 长会话 E2）。
                 # `date_range` 只在它是「N 天」这种时长写法时才跟着改（日期区间不动）。
@@ -968,8 +997,11 @@ def build_graph(deps: Deps):
                         patch["date_range"] = f"{n_days} 天"
                     deps.sessions.update_slots(session_id, patch)
 
-        # 关联问题推荐（市场对标）：答完给 2–3 条「接着可以问」的可点建议。
-        # 确定性生成、不调模型（推荐语不该飘），按决策类型取模板（见 app/followups.py）。
+        # 关联问题推荐（市场对标）：答完给 2–4 条「接着可以问」的可点建议。
+        # **模型为主、模板兜底**（2026-10-09 用户反馈「改的自由点儿，别死板」）：
+        # plan / answer 两条路本来就在调模型，于是让**同一次调用**顺手写建议（零额外
+        # 延迟），跟着这一轮的真实内容走；模型没给 / 格式不合法 / realtime（不调模型）
+        # 才退回 `app/followups.py` 的定稿模板。guide 的「试着这样问」在 guide.py 同理。
         nq_decision = {
             "continue": "plan",
             "recall": "plan",
@@ -977,39 +1009,57 @@ def build_graph(deps: Deps):
             "knowledge": "answer",
         }.get(str(decision))
         if nq_decision and hasattr(response, "next_questions"):
-            # `subject` 用来认话题（饮食 / 交通 / 支付…），认得出就整套换成同话题的建议 ——
-            # 少了它，饮食话题连问四轮建议栏一字不差（真 bug 2026-10-06 菜品探针实测）。
-            nq_subject = ""
-            nq_matched = ""
-            if state.get("knowledge_intent") is not None:
-                nq_subject = state["knowledge_intent"].subject
-                nq_matched = getattr(state["knowledge_intent"], "matched", "") or ""
-            elif state.get("realtime_intent") is not None:
-                nq_subject = state["realtime_intent"].subject
-                nq_matched = getattr(state["realtime_intent"], "matched", "") or ""
-            # 命中片段也要参与认话题：找店句「哪里能吃到本地人常去的**馆子**」的主体
-            # 是定语（「本地人常」），真正的话题词在命中片段里 —— 只看主体会认不出饮食。
-            nq_subject = f"{nq_subject} {nq_matched}".strip()
-            # 天数取**这一版稿子**的天数，不取 `state["slots"]`（2026-10-09 用户反馈
-            # 「可以接着问模块是死的」）：改稿分支（「再加一天」）里 state 的槽位可能没有
-            # days，`_context` 就退回写死的 3 —— 实测 5 天的稿子建议栏写着「把第 3 天…」，
-            # 跟眼前的稿子对不上，看起来就像模块没在跟着稿子走。
-            nq_slots = dict(state.get("slots") or {})
-            n_plan_days = len(response.itinerary.days) if hasattr(response, "itinerary") else 0
-            if n_plan_days:
-                nq_slots["days"] = n_plan_days
-            nq = next_questions(
-                decision=nq_decision,
-                language=output_language(state),
-                slots=nq_slots,
-                subject=nq_subject,
-                # 刚做过的那条不再原样出现（用户点完还看到同一条，就像点了没反应）。
+            # 模型写的建议：plan 取 `state["draft"].followups`；answer 那份已由
+            # `build_answer_response` 落到 `response.next_questions`。先洗净：去空 /
+            # 去重 / 去复读用户原话（`clean_chips`）。
+            if nq_decision == "plan":
+                model_chips = list(getattr(state.get("draft"), "followups", []) or [])
+            else:
+                model_chips = list(getattr(response, "next_questions", []) or [])
+            nq = clean_chips(
+                model_chips,
                 avoid=[state.get("message") or ""],
-                # 轮次当轮换偏移，让相邻两版的建议栏不再一字不差。
-                offset=deps.sessions.get(session_id).turn,
+                limit=3,
             )
             if nq:
+                # 模型给了 → 直接用它，不再叠模板（叠上去两边会打架、还盖掉最贴题的那条）。
                 response = response.model_copy(update={"next_questions": nq})
+            else:
+                # `subject` 用来认话题（饮食 / 交通 / 支付…），认得出就整套换成同话题的建议
+                # —— 少了它，饮食话题连问四轮建议栏一字不差（真 bug 2026-10-06 科目探针实测）。
+                nq_subject = ""
+                nq_matched = ""
+                if state.get("knowledge_intent") is not None:
+                    nq_subject = state["knowledge_intent"].subject
+                    nq_matched = getattr(state["knowledge_intent"], "matched", "") or ""
+                elif state.get("realtime_intent") is not None:
+                    nq_subject = state["realtime_intent"].subject
+                    nq_matched = getattr(state["realtime_intent"], "matched", "") or ""
+                # 命中片段也要参与认话题：找店句「哪里能吃到本地人常去的**馆子**」的主体
+                # 是定语（「本地人常」），真正的话题词在命中片段里 —— 只看主体会认不出饮食。
+                nq_subject = f"{nq_subject} {nq_matched}".strip()
+                # 天数取**这一版稿子**的天数，不取 `state["slots"]`（2026-10-09 用户反馈
+                # 「可以接着问模块是死的」）：改稿分支（「再加一天」）里 state 的槽位可能没有
+                # days，`_context` 就退回写死的 3 —— 实测 5 天的稿子建议栏写着「把第 3 天…」，
+                # 跟眼前的稿子对不上，看起来就像模块没在跟着稿子走。
+                nq_slots = dict(state.get("slots") or {})
+                n_plan_days = (
+                    len(response.itinerary.days) if hasattr(response, "itinerary") else 0
+                )
+                if n_plan_days:
+                    nq_slots["days"] = n_plan_days
+                nq = next_questions(
+                    decision=nq_decision,
+                    language=output_language(state),
+                    slots=nq_slots,
+                    subject=nq_subject,
+                    # 刚做过的那条不再原样出现（用户点完还看到同一条，就像点了没反应）。
+                    avoid=[state.get("message") or ""],
+                    # 轮次当轮换偏移，让相邻两版的建议栏不再一字不差。
+                    offset=deps.sessions.get(session_id).turn,
+                )
+                if nq:
+                    response = response.model_copy(update={"next_questions": nq})
 
         # 记进会话：类型 + 主体 + 答复摘要。主体是**下一句追问要承接的东西**，
         # 摘要给「刚才我说了什么」之外还留了余地（页面「会话记忆」面板也看得到）。
