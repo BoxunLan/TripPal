@@ -15,6 +15,26 @@ Severity = Literal["none", "warn", "repair", "block"]
 FusionPolicy = Literal["weighted_union", "priority_override"]
 
 
+def _as_str_list(v: Any) -> list[str]:
+    """把**模型自由发挥**的字符串数组收干净：单串 → 单元素数组；非串 / 空项 / 重复项丢掉。
+
+    为什么在 schema 上收、而不是在调用处收：这几个字段只是「建议栏」，格式一歪（给了字符串、
+    给了 null、夹了空串）不该把整篇行程判废 —— 建议栏不该对正文有否决权。
+    """
+    if v is None:
+        return []
+    if isinstance(v, str):
+        v = [v]
+    if not isinstance(v, (list, tuple, set)):
+        return []
+    out: list[str] = []
+    for x in v:
+        s = str(x).strip()
+        if s and s not in out:
+            out.append(s)
+    return out
+
+
 # --------------------------------------------------------------------------
 # 1. SceneClassificationResult
 # --------------------------------------------------------------------------
@@ -196,6 +216,15 @@ class GeneratorOutput(BaseModel):
 
     itinerary: Itinerary
     suggestions: list[str] = Field(default_factory=list)
+    # 「接着可以问」的建议：**让模型在写行程的同一次调用里顺手写 2–4 条**（不额外调模型 →
+    # 不拖慢响应）。`app/graph.py` 优先用它，为空才退回 `app/followups.py` 的定稿模板 ——
+    # 即「模型自由发挥为主、模板兜底」。写法与语言要求见 `prompts/base.md` 规则 12。
+    followups: list[str] = Field(default_factory=list)
+
+    @field_validator("followups", mode="before")
+    @classmethod
+    def _norm_followups(cls, v: Any) -> list[str]:
+        return _as_str_list(v)
 
 
 # --------------------------------------------------------------------------
@@ -270,6 +299,14 @@ class AnswerDraft(BaseModel):
     answer: str = ""
     confidence: Literal["high", "medium", "low"] = "low"
     unknown_reason: str = ""
+    # 「接着可以问」：让模型在同一次作答里顺手写 2–4 条下一步问题（不额外调模型）。
+    # 为空时 `app/graph.py` 退回定稿模板；规则见 `prompts/answer.md` 规则 9。
+    followups: list[str] = Field(default_factory=list)
+
+    @field_validator("followups", mode="before")
+    @classmethod
+    def _norm_followups(cls, v: Any) -> list[str]:
+        return _as_str_list(v)
 
 
 class AnswerResponse(BaseModel):
@@ -318,11 +355,18 @@ class AnswerResponse(BaseModel):
 class GuideDraft(BaseModel):
     """寒暄引导的**模型输出契约**（提示词见 `prompts/guide.md`）。
 
-    只有一个字段，因为这一层的任务只有一个：回一句自然的话并邀请提问。
+    `reply` 是那句引导语；`starters` 是「试着这样问」的两三条示例提问 —— 同样由模型在
+    这一次调用里顺手写（不额外调模型）。为空则退回 i18n 的定稿 `gd.starters`。
     它不复述事实、不给数字，所以没有 `confidence` / `unknown_reason` 那套。
     """
 
     reply: str = ""
+    starters: list[str] = Field(default_factory=list)
+
+    @field_validator("starters", mode="before")
+    @classmethod
+    def _norm_starters(cls, v: Any) -> list[str]:
+        return _as_str_list(v)
 
 
 class GuideResponse(BaseModel):
@@ -337,7 +381,7 @@ class GuideResponse(BaseModel):
     """
 
     type: Literal["guide"] = "guide"
-    kind: str = "greeting"              # greeting / thanks / farewell / meta
+    kind: str = "greeting"              # greeting / thanks / farewell / cancel / chitchat / meta / recall
     message_echo: str = ""              # 用户原话
     reply: str = ""                     # 引导话术（跟输出语言）；空则用 i18n 定稿
     starters: list[str] = Field(default_factory=list)  # 建议提问（点击即发）

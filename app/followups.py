@@ -8,8 +8,11 @@
 
 设计取舍
 --------
-- **确定性生成，不调模型**：推荐语不该由模型自由发挥（会飘、会跑题），也不该拖慢
-  旁路（实时/常识两条路本来就不调生成模型）。模板在 i18n，跟输出语言。
+- **模型为主、模板兜底**（2026-10-09 用户反馈「改的自由点儿，别死板」）：plan / answer /
+  guide 三条路本来就在调模型，于是让**同一次调用**顺手写 2–4 条建议（零额外延迟），
+  建议栏因此跟着这一轮的真实内容走，而不是永远那几句。本模块的 i18n 模板退居**兜底**
+  —— 模型没给、格式不合法、或 realtime（这条本来就不调模型）时才用它。
+  模型给的建议必须先过 `clean_chips`（去空 / 去重 / 去复读用户原话 / 限长）。
 - **只做「下一步」**：不给完整问句清单，2–3 条足够；行程那条刻意演示**迭代句式**
   （「把第 3 天放宽」「住宿换便宜点」），顺带教会用户新上线的改稿能力。
 - 寒暄（guide）不做：它已经有 `starters`（建议提问），两套会打架。
@@ -18,6 +21,7 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 
 from .i18n import DEFAULT as DEFAULT_LANGUAGE
 from .i18n import t
@@ -243,6 +247,69 @@ def _render(key: str, language: str, **kw) -> str:
     return "" if raw == key else raw
 
 
+def _render_items(raw: str, place: str) -> list[str]:
+    """把一条 `|` 分隔的 i18n 文案切成若干条建议（去掉空项、收掉悬空介词）。"""
+    return [_tidy(s, place) for s in (x.strip() for x in (raw or "").split(_SEP)) if s]
+
+
+def _norm(s: str) -> str:
+    """比较建议 / 用户原话是否「同一条」用：折叠空白 + 忽略大小写。"""
+    return re.sub(r"\s+", " ", (s or "").strip()).lower()
+
+
+# 模型给的一条建议能有多长：长于此判为「把整段回答塞进来了」，丢掉。
+_CHIP_MAX_CHARS = 60
+
+
+def _is_repeat(a: str, b: str) -> bool:
+    """a 是不是「几乎就是」b（用户刚说的那句）。
+
+    用**字符多重集重叠率**判，而不是精确相等 —— 实测用户打「住宿换便宜一点的」、
+    建议栏回「住宿换成便宜一点的」，只差一个字，精确比较抓不住（真 bug 2026-10-09
+    探针实测：那条被原样又推了一次，看起来就像「点了没反应」）。
+    只对**足够长**的原话做，短问候不参与（否则「你好」会把「你好，帮我排行程」误伤）。
+    """
+    na, nb = _norm(a), _norm(b)
+    if not na or not nb:
+        return False
+    if na == nb:
+        return True
+    short, long_ = (na, nb) if len(na) <= len(nb) else (nb, na)
+    if len(short) < 5:
+        return False
+    common = sum((Counter(short) & Counter(long_)).values())
+    return common / len(short) >= 0.8
+
+
+def clean_chips(
+    items: list[str] | None, *, avoid: list[str] | None = None, limit: int = MAX_QUESTIONS
+) -> list[str]:
+    """把**模型给的**建议洗净：去空 / 去重复 / 去复读用户原话 / 限长限量。
+
+    模型自由发挥就必须过这一道：它会写空串、写重复、把用户刚说的那句原样还回来、
+    偶尔塞一整段话进来。洗完为空 = 调用方退回模板（见 `next_questions`）。
+    """
+    avoid = [a for a in (avoid or []) if a]
+    seen = {_norm(a) for a in avoid}
+    out: list[str] = []
+    for raw in items or []:
+        raw_s = str(raw or "")
+        if "\n" in raw_s or "\r" in raw_s:
+            continue  # 一整段话被塞进来了（建议栏是一行 chip，不是段落）
+        s = re.sub(r"\s+", " ", raw_s.strip())
+        if not s or len(s) > _CHIP_MAX_CHARS:
+            continue
+        if _norm(s) in seen:
+            continue
+        if any(_is_repeat(s, a) for a in avoid):
+            continue
+        out.append(s)
+        seen.add(_norm(s))  # 输入内部也要去重：模型很爱把同一条写两遍
+        if len(out) >= limit:
+            break
+    return out
+
+
 def _context(slots: dict | None) -> tuple[str, int]:
     """从会话槽位取个性化参数：`place`（目的地）与 `day`（这一版稿子的天数）。
 
@@ -330,6 +397,8 @@ def next_questions(
     language: str = DEFAULT_LANGUAGE,
     slots: dict | None = None,
     subject: str = "",
+    avoid: list[str] | None = None,
+    offset: int = 0,
 ) -> list[str]:
     """返回这一轮之后「接着可以问」的建议（0–3 条）。
 
@@ -337,6 +406,12 @@ def next_questions(
     - 有目的地 → 换用带 `{place}` 的那套文案；
     - 行程稿 → 天数取这一版稿子的天数（见 `_context`），带小孩/带长者时换掉第一条；
     - 常识答复 → 会话兴趣命中时，把最后一条泛推荐换成更贴兴趣的追问。
+
+    `avoid` / `offset` 解决的是「建议栏像死的」（2026-10-09 用户反馈）：
+    - `avoid`：**刚做过的那条**（通常是用户刚点的那一句）不再原样出现 —— 点完还看到
+      同一条，用户会以为点了没反应。只在摘掉后仍剩 ≥2 条时生效，不掏空建议栏。
+    - `offset`：行程那套并入备用池（`nq.plan_extra`）后**按轮次轮换窗口**。只有 3 条
+      模板时，同一会话连出几版稿建议栏一字不差；轮换后相邻两版肉眼可辨地不同。
     """
     keys = _KEY_BY_DECISION.get(decision or "")
     if not keys:
@@ -351,7 +426,25 @@ def next_questions(
     raw = t(key, language, place=place, day=day)
     if raw == key:  # i18n 缺这条 → 宁可不给，也不要露出 key
         return []
-    items = [_tidy(s, place) for s in (x.strip() for x in raw.split(_SEP)) if s]
+    items = _render_items(raw, place)
+
+    # 行程稿：并入备用池并按轮次轮换。话题套（topic）不轮换 —— 它是按这一轮主体选出来的，
+    # 轮换会把最贴题的那条转走。
+    if decision == "plan" and not topic:
+        extra_raw = t("nq.plan_extra", language, place=place, day=day)
+        if extra_raw and extra_raw != "nq.plan_extra":
+            pool = items + _render_items(extra_raw, place)
+            if offset and len(pool) > MAX_QUESTIONS:
+                k = offset % (len(pool) - MAX_QUESTIONS + 1)
+                pool = pool[k:] + pool[:k]
+            items = pool
+
+    seen = {_norm(a) for a in (avoid or []) if a}
+    if seen:
+        kept = [x for x in items if _norm(x) not in seen]
+        if len(kept) >= 2:
+            items = kept
+    items = items[:MAX_QUESTIONS]
 
     # 上下文个性化：只换**一条**，位置见上面 i18n 的注释。
     if decision == "plan":

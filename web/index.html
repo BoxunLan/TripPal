@@ -151,6 +151,17 @@ a{color:var(--acc)}
 .sendbtn:hover{background:var(--acc-2)}
 .sendbtn:disabled{background:var(--line);color:var(--dim);cursor:default}
 .sendbtn svg{width:17px;height:17px}
+/* 「停止」：提问进行中才出现，和「发送」同一个位置 —— 用户要能中断一次问错的提问
+   （不然只能干等几分钟，等它把一整版稿子排完）。 */
+.stopbtn{width:34px;height:34px;flex:none;border-radius:50%;border:1px solid var(--bad);background:var(--bad-soft);
+  color:var(--bad);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.stopbtn:hover{background:var(--bad);color:#fff}
+.stopbtn[hidden]{display:none}
+.stopbtn svg{width:15px;height:15px}
+/* 处理中点「接着可以问」时闪一下「停止」：那一下就等于「点了我没反应」，
+   得让用户知道现在唯一有意义的动作是中断这一轮。 */
+@keyframes stoppulse{0%,100%{transform:scale(1)}50%{transform:scale(1.28)}}
+.stopbtn.pulse{animation:stoppulse .4s ease-in-out 3}
 .cnote{color:var(--dim);font-size:11.5px;text-align:center;margin:9px 0 0}
 
 /* 行程信息卡：展开在输入框**上方**，像 DeepSeek 的附件预览 ——
@@ -431,6 +442,9 @@ table.v th{background:var(--bg-sunk);color:var(--mut);font-weight:500;white-spac
               </select>
             </span>
           </div>
+          <button class="stopbtn" id="stop" hidden title="停止本次提问" aria-label="停止本次提问">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/></svg>
+          </button>
           <button class="sendbtn" id="send" title="发送" aria-label="发送">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
           </button>
@@ -467,8 +481,13 @@ const results = $("results");
 const thread = $("thread");
 let busy = false;
 let lastMsg = "";          // 「重新生成」用的上一句
-// 请求超时。真实模型单条 15–40s，给到 90s 足够；超过就放弃等待，别让用户干转圈。
-const REQ_TIMEOUT_MS = 90000;
+// 当前这一轮请求的中断句柄 + 「是不是用户主动停的」。
+// 主动停和超时都是 AbortError，但给用户看的话完全不同：一个是「你停的」，
+// 一个是「服务端没在时限内返回」—— 混成一句会把责任推错边。
+let currentCtrl = null;
+let userAborted = false;
+// 请求超时。分档超时下最慢的一档是生成（180s），页面给足余量，别提前掐断。
+const REQ_TIMEOUT_MS = 300000;
 // 轮询间隔。比 SSE/NDJSON 笨，但每段都是独立小请求，任何中间层都缓冲不了它。
 const POLL_MS = 400;
 
@@ -821,7 +840,7 @@ function renderAnswer(body, ms) {
    不检索、不调工具、不追问槽位。「建议提问」做成可点 chip，点一下直接发。 */
 function renderGuide(body, ms) {
   const starters = body.starters || [];
-  const KIND = {greeting: "问候", thanks: "致谢", farewell: "道别", meta: "关于我"};
+  const KIND = {greeting: "问候", thanks: "致谢", farewell: "道别", cancel: "取消", chitchat: "闲聊", meta: "关于我", recall: "会话记忆"};
   return `<article class="card">
     <div class="body">
       <div class="answerbox"><div class="ans">${esc(body.reply || "")}</div></div>
@@ -850,7 +869,8 @@ function scrollBottom(smooth) {
 }
 
 function addUser(text) {
-  $("hero").hidden = true;
+  const hero = $("hero");
+  if (hero) hero.hidden = true;   // 重放一段对话时 results 里没有首屏，这里不能假设它存在
   const d = document.createElement("div");
   d.className = "msg user";
   d.innerHTML = `<div class="bubble">${esc(text)}</div>`;
@@ -1115,6 +1135,17 @@ function applyQuickFields(scope) {
   });
 }
 
+// 响应体 → 卡片 HTML。抽出来是为了**重现对话**（会话列表点击时）能复用同一套渲染：
+// 重放出来的卡片与首次出现的完全一致 —— 追问卡的快捷补充、建议栏、引用链接都还是活的。
+function bodyHtml(body, ms) {
+  return body.type === "clarify" ? renderClarify(body, ms) :
+    body.type === "realtime" ? renderRealtime(body, ms) :
+    body.type === "answer" ? renderAnswer(body, ms) :
+    body.type === "guide" ? renderGuide(body, ms) :
+    body.type === "degraded" ? renderDegraded(body, ms) :
+    renderPlan(body, ms);
+}
+
 /* ---------------- 发送 ---------------- */
 async function send() {
   const msg = $("msg").value.trim();
@@ -1146,6 +1177,9 @@ async function send() {
   // 超时兜底：请求挂住时至少要有「已放弃等待」这句，而不是无限转圈。
   const t0 = performance.now();
   const ctrl = new AbortController();
+  // 把句柄挂到模块作用域，供「停止」按钮中断（超时和手动停共用同一个 AbortController）。
+  currentCtrl = ctrl;
+  userAborted = false;
   const kill = setTimeout(() => ctrl.abort(), REQ_TIMEOUT_MS);
   // 本地计时是兜底而非主力：标签页不可见时 setInterval 会被节流到分钟级，
   // 只靠它会一直显示 0s。真正的「在动」由服务端每一步的结果驱动。
@@ -1166,13 +1200,7 @@ async function send() {
     const out = await fetchPlan(payload, holder, ctrl);
     const ms = out.ms || Math.round(performance.now() - t0);
     const body = out.body;
-    const html =
-      body.type === "clarify" ? renderClarify(body, ms) :
-      body.type === "realtime" ? renderRealtime(body, ms) :
-      body.type === "answer" ? renderAnswer(body, ms) :
-      body.type === "guide" ? renderGuide(body, ms) :
-      body.type === "degraded" ? renderDegraded(body, ms) :
-      renderPlan(body, ms);
+    const html = bodyHtml(body, ms);
     const card = document.createElement("div");
     card.innerHTML = html;
     // think 块要留着（跑完折叠成「已深度思考」），所以先摘出来再重建内容。
@@ -1182,35 +1210,49 @@ async function send() {
     if (think) holder.appendChild(think);
     holder.appendChild(card.firstElementChild);
     addActions(holder);
+    rememberTurn(sid, msg, body, ms);   // 先把正文存进本地会话（会话列表点击时重放它）
     noteTurn(sid, msg, body.type);
     scrollBottom(true);
   } catch (e) {
-    const aborted = e && e.name === "AbortError";
+    // 主动停 / 超时都是 AbortError，靠 `userAborted` 分开 —— 两者的下一步动作不一样：
+    // 主动停要把原话放回输入框（九成是问错了，想改一改再发），超时才是回去重发。
+    const stopped = userAborted;
+    const aborted = !stopped && e && e.name === "AbortError";
     const denied = e && e.status ? `请求被拒（HTTP ${e.status}）` : "";
     const think = holder.querySelector(".think");
     holder.innerHTML = "";
     if (think) holder.appendChild(think);
     const err = document.createElement("div");
     err.innerHTML = `<div class="err">`
-      + (aborted
+      + (stopped
+        ? `<b>已停止本次提问</b><br>
+           原话已放回下面的输入框 —— 改完再发就行。<br>
+           服务端那一次后台任务可能还会跑完（页面不等它了），但<b>不会影响你下一句</b>：
+           换一句重发用的仍是同一个会话，槽位照旧累积。`
+        : aborted
         ? `<b>超过 ${REQ_TIMEOUT_MS / 1000} 秒未返回，已放弃等待</b><br>
            展开上面的「已深度思考」看进度条停在哪一步，卡的就是那一步（通常是 generate 在等模型）。<br>
-           一条链路最多调 3 次模型（分类 + 生成 + 回环重生成），单次上限 60 秒，
-           所以最坏情况要 3 分钟 —— 页面等不了那么久，先放弃了。<br>
-           可以直接点「重新生成」再发一次（第二次通常快很多，命中同样的检索结果）；
-           也可以在系统浏览器直接打开 <span class="mono">http://127.0.0.1:8000/</span>
-           排除预览面板的因素。`
+           服务端的分档超时是「分类 ≤15 秒、生成 ≤180 秒」：生成偏慢时单次就能跑 1–2 分钟，
+           再叠一次回炉重生成，整条链路几分钟属于正常 —— 页面给的就是这么久。<br>
+           等不到就点<b>停止</b>，或点「重新生成」再发一次（第二次通常快很多，命中同样的检索结果）。`
         : denied
           ? `<b>${denied}</b><br>${esc(e.message)}`
           : `<b>链路返回错误</b><br>${esc(e.message)}<br>
              确认 <span class="mono">uvicorn app.main:app --port 8000</span> 还在跑。`)
       + `</div>`;
     holder.appendChild(err);
+    if (stopped) {
+      $("msg").value = lastMsg;
+      autoGrow();
+      $("msg").focus();
+    }
     finishThink(holder, Math.round(performance.now() - t0));
   } finally {
     clearTimeout(watch);
     clearTimeout(kill);
     clearInterval(tick);
+    currentCtrl = null;
+    userAborted = false;
     busy = false;
     setSendEnabled(true);
     // 每轮结束刷一次记忆面板：服务端记了什么，页面上就要看得见。
@@ -1218,9 +1260,13 @@ async function send() {
   }
 }
 
+// 提问进行中：把「发送」让位给「停止」。用户要能中断一次问错的提问 ——
+// 不然只能干等它把一整版稿子排完（生成一档最长 180s，加回炉就是几分钟）。
 function setSendEnabled(on) {
   const b = $("send");
-  b.disabled = !on;
+  if (b) b.disabled = !on;
+  const s = $("stop");
+  if (s) s.hidden = on;
 }
 
 // 输入框随内容长高，最多 190px（CSS 里 clamp），超出内部滚动。
@@ -1231,15 +1277,28 @@ function autoGrow() {
 }
 
 /* ==========================================================================
-   会话列表：本地存标题与轮次，切换会话只是换 session_id ——
-   服务端按 sid 存记忆，所以切回去继续追问照样能承接上文。
-   （正文不重放：服务端只留要点，不假装能还原全文。）
+   会话列表：本地存标题与轮次，**外加这一段的正文**（`msgs`），切换会话时重放。
+   服务端按 sid 存记忆（槽位 / 上一轮主体），所以切回去继续追问照样能承接上文；
+   而服务端的 `recent` 只留要点、还原不了全文 —— 所以正文由前端自己留
+   （`rememberTurn`），点会话项时用**同一套 render 函数**重放（`replaySession`）。
    ========================================================================== */
 const LS_KEY = "trippal.sessions";
 let sessions = {};
 try { sessions = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch (e) { sessions = {}; }
 function saveSessions() {
-  try { localStorage.setItem(LS_KEY, JSON.stringify(sessions)); } catch (e) { /* 无痕模式，忽略 */ }
+  try { localStorage.setItem(LS_KEY, JSON.stringify(sessions)); return true; }
+  catch (e) {
+    // 多半是配额满（正文本地留存是体积大户）。丢掉最旧的正文再试，保住标题与轮次；
+    // 无痕模式下写不进去则照旧静默放弃。
+    let trimmed = false;
+    for (const id of Object.keys(sessions)) {
+      const s = sessions[id];
+      if (s && Array.isArray(s.msgs) && s.msgs.length > 8) { s.msgs = s.msgs.slice(-8); trimmed = true; }
+    }
+    if (!trimmed) return false;
+    try { localStorage.setItem(LS_KEY, JSON.stringify(sessions)); return true; }
+    catch (e2) { return false; }
+  }
 }
 const TYPE_NAME = {
   clarify: "追问槽位", realtime: "实时事实", answer: "常识问询",
@@ -1271,18 +1330,65 @@ function noteTurn(sid, text, type) {
   $("topictitle").textContent = s.title;
 }
 
-function newSession() {
-  const id = rid();
-  $("sid").value = id;
-  $("sidshow").textContent = id;
-  $("memory").hidden = true;
-  $("topictitle").textContent = "新的对话";
+/* 把这一轮的正文存进本地会话 —— 会话列表点击时用它**重现**原对话。
+   服务端只留要点（`recent`），还原不了全文；所以正文必须由前端自己留。
+   存的是**响应体本身**（不是渲染后的 HTML）：重放时走同一套 render 函数，
+   卡片里的追问快捷补充 / 建议栏 / 引用链接依然可点。
+   紧跟着的 noteTurn 会一起写盘，这里不单独存。 */
+const MAX_MSGS = 80;   // 单段对话最多留这么多条，避免 localStorage 被撑爆
+function rememberTurn(sid, text, body, ms) {
+  const s = sessions[sid] || {title: text.slice(0, 22), turns: 0, ts: Date.now()};
+  if (!Array.isArray(s.msgs)) s.msgs = [];
+  s.msgs.push({role: "user", text: text});
+  s.msgs.push({role: "ai", body: body, ms: ms});
+  if (s.msgs.length > MAX_MSGS) s.msgs = s.msgs.slice(-MAX_MSGS);
+  sessions[sid] = s;
+}
+
+// 首屏（新对话 / 无正文可重放时的兜底）。**不能留空白** —— 空白会被当成"卡住"。
+function renderHero() {
   results.innerHTML = `<div class="hero" id="hero">
       <h1>来华旅行，问我</h1>
       <p class="lead">行程规划 · 签证与入境 · 支付与网络 · 交通 · 吃喝 · 就医 —— 中英日韩都能问</p>
       <div class="ex" id="exbox"></div>
     </div>`;
   renderExamples();
+}
+
+// 重放时重建一张 AI 卡（与 send() 里跑完的形态一致：卡片 + 操作栏）
+function appendAiCard(body, ms) {
+  const d = document.createElement("div");
+  d.className = "msg ai";
+  d.innerHTML = AVATAR + `<div class="ai-body"></div>`;
+  const holder = d.querySelector(".ai-body");
+  const card = document.createElement("div");
+  card.innerHTML = bodyHtml(body, ms);
+  holder.appendChild(card.firstElementChild);
+  addActions(holder);
+  results.appendChild(d);
+}
+
+/* 重现一段对话：把本地留存的正文逐条放回 results。
+   没有留存（老会话 / 被配额裁掉）→ 显示首屏，而不是留一片空白。 */
+function replaySession(sid) {
+  results.innerHTML = "";
+  const s = sessions[sid];
+  const msgs = (s && s.msgs) || [];
+  if (!msgs.length) { renderHero(); return; }
+  for (const m of msgs) {
+    if (m.role === "user") addUser(m.text);
+    else if (m.role === "ai" && m.body) appendAiCard(m.body, m.ms || 0);
+  }
+  scrollBottom(false);
+}
+
+function newSession() {
+  const id = rid();
+  $("sid").value = id;
+  $("sidshow").textContent = id;
+  $("memory").hidden = true;
+  $("topictitle").textContent = "新的对话";
+  renderHero();
   // 信息卡跟着会话走：换了会话就该是空的，否则会把上一段的目的地/人数带过去
   for (const [fid] of FORM_FIELDS) { const el = $(fid); if (el) el.value = ""; }
   renderSessions();
@@ -1338,6 +1444,13 @@ async function refreshMemory() {
 
 /* ---------------- 事件绑定 ---------------- */
 $("send").addEventListener("click", send);
+// 「停止」：中断当前这一轮（超时和手动停共用同一个 AbortController）。
+// 只置标志位再 abort —— 提示文案在 send() 的 catch 里按 `userAborted` 分支，避免两处各写一套。
+$("stop").addEventListener("click", () => {
+  if (!busy || !currentCtrl) return;
+  userAborted = true;
+  currentCtrl.abort();
+});
 $("msg").addEventListener("input", autoGrow);
 $("msg").addEventListener("keydown", (e) => {
   // Enter 发送、Shift+Enter 换行 —— 与 DeepSeek / ChatGPT 一致
@@ -1380,7 +1493,7 @@ $("slist").addEventListener("click", (e) => {
   // 不假装能重放旧正文（服务端只留要点）。
   $("sid").value = sid;
   $("sidshow").textContent = sid;
-  results.innerHTML = "";
+  replaySession(sid);   // ← 重现这段对话（没有本地正文则显首屏，不留空白）
   $("topictitle").textContent = (sessions[sid] && sessions[sid].title) || "新的对话";
   for (const [fid] of FORM_FIELDS) { const el = $(fid); if (el) el.value = ""; }
   renderSessions();
@@ -1432,7 +1545,17 @@ results.addEventListener("click", (e) => {
   }
   // 「接着可以问」/「试着这样问」：点击即发
   const s = e.target.closest(".sug");
-  if (!s || busy) return;
+  if (!s) return;
+  if (busy) {
+    // 正在跑时点建议不会有反应（同时只允许一轮）。但**不能静默 return** ——
+    // 用户会以为「这个模块是死的」。闪一下「停止」，告诉他此刻有意义的动作是什么。
+    const st = $("stop");
+    if (st && !st.hidden) {
+      st.classList.add("pulse");
+      setTimeout(() => st.classList.remove("pulse"), 1300);
+    }
+    return;
+  }
   $("msg").value = s.dataset.q || "";
   autoGrow();
   send();

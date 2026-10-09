@@ -38,7 +38,15 @@ class LLMSettings:
     generator_api_key: str = ""
     shared_api_key: str = ""
     base_url: str = "https://api.openai.com/v1"
-    timeout_s: float = 60.0
+    # 分档超时（秒）。见 app/llm.py 顶部：「分类」是 2–4s 的小模型短调用，「生成」是
+    # 45–105s 的长 JSON 调用。过去两者共用一个 60s，同时造成「小模型卡死白等 60s」与
+    # 「正常生成被误判超时再重跑」两种慢。这里按档位分别给。
+    classifier_timeout_s: float = 15.0
+    generator_timeout_s: float = 180.0
+    answer_timeout_s: float = 90.0
+    # 寒暄档**最紧**：它现在只服务 `meta`（你是谁/能做什么）一种输入，产出一句话，
+    # 而且定稿文案本身就是完整答复 —— 所以没必要为它多等。超时立刻退回定稿（见 guide.py）。
+    guide_timeout_s: float = 6.0
 
     def key_for(self, role: str) -> str:
         if role == "classifier":
@@ -171,7 +179,12 @@ def get_settings() -> Settings:
             generator_api_key=os.environ.get("TRAVEL_GENERATOR_API_KEY", ""),
             shared_api_key=shared,
             base_url=os.environ.get("TRAVEL_LLM_BASE_URL", "https://api.openai.com/v1"),
-            timeout_s=float(os.environ.get("TRAVEL_LLM_TIMEOUT_S", "60")),
+            # 旧的 TRAVEL_LLM_TIMEOUT_S 已废止（一刀切 60s 正是「有时候慢」的根因之一），
+            # 改为四个分档变量。见 app/llm.py 顶部说明。
+            classifier_timeout_s=float(os.environ.get("TRAVEL_LLM_TIMEOUT_CLASSIFIER_S", "15")),
+            generator_timeout_s=float(os.environ.get("TRAVEL_LLM_TIMEOUT_GENERATOR_S", "180")),
+            answer_timeout_s=float(os.environ.get("TRAVEL_LLM_TIMEOUT_ANSWER_S", "90")),
+            guide_timeout_s=float(os.environ.get("TRAVEL_LLM_TIMEOUT_GUIDE_S", "6")),
         ),
         embedding=EmbeddingSettings(
             model=os.environ.get("TRAVEL_EMBEDDING_MODEL", ""),
